@@ -1,0 +1,434 @@
+classes:
+  -   name: Barbarian
+      hp_start: [12, 1d12]
+      stat_priority_1: STR
+      stat_priority_2: CON
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tools: non
+      sav_throws: [STR, CON]
+      skills: 2
+      sk_pool: [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
+      equipment1: [Greataxe, martial Melee Weapon]
+      equipment2: [Handaxes (x2), simple Weapon]
+      equipment:  [Explorers Pack, Javelins (x4)]
+  -   name: Bard
+      hp_start: [8, 1d8]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords]
+      tools: Bard
+      sav_throws: [DEX, CHA]
+      skills: 3
+      sk_pool: all
+      equipment1: [Raiper, Longsword, simple Weapon]
+      equipment2: [Diplomat's Pack, Entertainer's Pack]
+      equipment3: [Lute, musical Instrument]
+      equipment: [Leather Armor, Dagger]
+  -   name: Cleric
+      hp_start: [8, 1d8]
+      stat_priority_1: WIS
+      stat_priority_2: CON
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons]
+      tools: non
+      sav_throws: [WIS, CHA]
+      skills: 2
+      sk_pool: [History, Insight, Medicine, Persuasion, Religion]
+      equipment1: [Mace, Warhammer]
+      equipment2: [Scale Mail, Leather Armor, Chain Mail]
+      equipment3: [Light Crossbow and 20 Bolts, simple Weapon]
+      equipment4: [Priest's Pack, Explorer's Pack]
+      equipment: [Shield, Holy Symbol]
+  -   name: Druid
+      hp_start: [8, 1d8]
+      stat_priority_1: WIS
+      stat_priority_2: INT
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Clubs, Daggers, Darts, Javelins, Maces, Quarterstaffs, Scimitars, Sickles, Slings, Spears]
+      tools: [Herbalism Kit]
+      sav_throws: [INT, WIS]
+      skills: 2
+      sk_pool: [Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival]
+      equipment1: [Shield, simple Weapon]
+      equipment2: [Scimitar, simple Melee Weapon]
+      equipment: [Leather Armor, Explorer's Pack, Druidic Focus]
+  -   name: Fighter
+      hp_start: [8, 1d8]
+      stat_priority_1: STR
+      stat_priority_2: CON
+      armor_prof: all
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tools: non
+      sav_throws: [STR, CON]
+      skills: 2
+      sk_pool: [Acrobatics, Animal Handling, Atheltics, History, Insight, Intimidation, Perception, Survival]
+      equipment1: [Chain Mail, Leather Armor and Longbow with 20 Arrows]
+      equipment2: [[martial Weapon, Shield], [martial Weapon, martial Weapon]]
+      equipment3: [Light Crossbow with 20 Bolts, Handaxes (x2)]
+      equipment4: [Dungeoneer's Pack, Explorer's Pack]
+  -   name: Monk
+      hp_start: [8, 1d8]
+      stat_priority_1: CON
+      stat_priority_2: INT
+      armor_prof: non
+      weap_prof: [Simple Weapons, Shortswords]
+      tools: Monk
+      sav_throws: [STR, DEX]
+      skills: 2
+      sk_pool: [Acrobatics, Athletics, History, Insight, Religion, Stealth]
+      equipment1: [Shortsword, simple Weapon]
+      equipment2: [Dungeoneer's Pack, Explorer's Pack]
+      equipment: [Darts (x10)]
+  -   name: Paladin
+      hp_start: [10, 1d10]
+      stat_priority_1: STR
+      stat_priority_2: CHA
+      armor_prof: all
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tools: non
+      sav_throws: 2
+      skills: 2
+      sk_pool: [Atheltics, Insight, Intimidation, Medicine, Persuasion, Religion]
+      equipment1: [[martial Weapon, Shield], [martial Weapon, martial Weapon]]
+      equipment2: [Javelins (x5), simple Melee Weapon]
+      equipment3: [Priest's Pack, Explorer's Pack]
+      equipment: [Chain Mail, Holy Symbol]
+  -   name: Ranger
+      hp_start: [10, 1d10]
+      stat_priority_1: DEX
+      stat_priority_2: WIS
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tools: non
+      sav_throws: [STR, DEX]
+      skills: 3
+      sk_pool: [Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival]
+      equipment1: [Scale Mail, Leather Armor]
+      equipment2: [Shortswords (x2), [simple Melee Weapon, simple Melee Weapon]]
+      equipment3: [Dungeoneer's Pack, Explorer's Pack]
+      equipment: [Longbow with Quiver of 20 Arrows]
+  -   name: Rogue
+      hp_start: [8, 1d8]
+      stat_priority_1: DEX
+      stat_priority_2: INT
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords]
+      tools: [Thieve's Tools]
+      sav_throws: [DEX, INT]
+      skills: 4
+      sk_pool: [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
+      equipment1: [Rapier, Shortsword]
+      equipment2: [Shortbow with Quiver of 20 Arrows, Shortsword]
+      equipment3: [Burglar's Pack, Dungeoneer's Pack, Explorer's Pack]
+      equipment: [Leather Armor, Daggers (x2), Thieve's Tools]
+  -   name: Sorcerer
+      hp_start: [6, 1d6]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: non
+      weap_prof: [Daggers, Darts, Slings, Quaterstaffs, Light Crossbows]
+      tools: non
+      sav_throws: [CON, CHA]
+      skills: 2
+      sk_pool: [Arcana, Deception, Insight, Intimidation, Persuasion, Religion]
+      equipment1: [Light Crossbow with 20 Bolts, simple Weapon]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [Dungeoneer's Pack, Explorer's Pack]
+      equipment: [Daggers (x2)]
+  -   name: Warlock
+      hp_start: [8, 1d8]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons]
+      tools: []
+      sav_throws: [WIS, CHA]
+      skills: 2
+      sk_pool: [Arcana, Deception, History, Intimidation, Investigation, Nature, Religion]
+      equipment1: [Light Crossbow with 20 Bolts, simple Weapon]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [Scholar's Pack, Dungeoneer's Pack]
+      equipment: [Leather Armor, simple Weapon, Daggers (x2)]
+  -   name: Wizard
+      hp_start: [6, 1d6]
+      stat_priority_1: INT
+      stat_priority_2: CON
+      armor_prof: non
+      weap_prof: [Daggers, Darts, Slings, Quaterstaffs, Light Crossbows]
+      tools: non
+      sav_throws: [INT, WIS]
+      skills: 2
+      sk_pool: [Arcana, History, Insight, Investigation, Medicine, Religion]
+      equipment1: [Quarterstaff, Dagger]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [Scholar's Pack, Explorer's Pack]
+      equipment: [Spellbook]
+equipment:
+  simple_melee_weapons: [Club, Dagger, Greatclub, Handaxe, Javelin, Light Hammer, Mace, Quarterstaff, Sickle, Spear]
+  simple_ranged_weapons: [Light Crossbow, Dart, Shortbow, Sling]
+  martial_melee_weapons: [Battleaxe, Flail, Glaive, Greataxe, Greatsword, Halberd, Lance, Longsword, Maul, Morningstar, Pike, Rapier, Scimitar, Shortsword, Trident, War Pick, Warhammer, Whip]
+  martial_ranged_weapons: [Blowgun, Hand Crossbow, Heavy Crossbow, Longbow, Net]
+  musical_instruments: [Bagpipes, Drum, Dulcimer, Flute, Lute, Lyre, Horn, Pan Flute, Shawm, Viol]
+languages:
+  -   name: Common
+      speakers: Humans
+      script: Common
+      type: Standard
+  -   name: Dwarvish
+      speakers: Dwarves
+      script: Dwarvish
+      type: Standard
+  -   name: Elvish
+      speakers: Elves
+      script: Elvish
+      type: Standard
+  -   name: Giant
+      speakers: [Giants, Orgres]
+      script: Dwarvish
+      type: Standard
+  -   name: Gnomish
+      speakers: Gnomes
+      script: Dwarvish
+      type: Standard
+  -   name: Goblin
+      speakers: Goblinoids
+      script: Dwarvish
+      type: Standard
+  -   name: Halfling
+      speakers: Halflings
+      script: Common
+      type: Standard
+  -   name: Orc
+      speakers: Orcs
+      script: Dwarvish
+      type: Standard
+  -   name: Abyssal
+      speakers: Demons
+      script: Infernal
+      type: Exotic
+  -   name: Celestial
+      speakers: Celestials
+      script: Celesital
+      type: Exotic
+  -   name: Deep Speech
+      speakers: [Mind Flayers, Beholders]
+      script: N/A
+      type: Exotic
+  -   name: Draconic
+      speakers: [Dragons, Dragonborn]
+      script: Draconic
+      type: Exotic
+  -   name: Infernal
+      speakers: Devils
+      script: Infernal
+      type: Exotic
+  -   name: Primordial
+      speakers: Elementals
+      script: Dwarvish
+      type: Exotic
+  -   name: Sylvan
+      speakers: Fey Creatures
+      script: Elvish
+      type: Exotic
+  -   name: Undercommon
+      speakers: Underdark Traders
+      script: Elvish
+      type: Exotic
+races:
+  -   name: Mountain Dwarf
+      male: [Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal]
+      female: [Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sann!, Torbera, Torgga, Vistra]
+      surname: [Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart]
+      ab_bonus: {STR: 1, CON: 2}
+      age: [50,350]
+      height: [4,5]
+      size: Medium
+      speed: 35
+      speed_penalty: 0
+      darkvision: 60
+      tool_prof: [Smith's Tools, Brewer's Supplies, Mason's Tools]
+      combat_prof: [Battleaxe, Handaxe, Light Hammer, Warhammer, Light Armor, Medium Armor]
+      languages: [Common, Dwarvish]
+      cantrip: 0
+  -   name: Hill Dwarf
+      male: [Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal]
+      female: [Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sann!, Torbera, Torgga, Vistra]
+      surname: [Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart]
+      ab_bonus: {WIS: 1, CON: 2}
+      age: [50,350]
+      height: [4,5]
+      size: Medium
+      speed: 35
+      speed_penalty: 0
+      darkvision: 60
+      tool_prof: [Smith's Tools, Brewer's Supplies, Mason's Tools]
+      combat_prof: [Battleaxe, Handaxe, Light Hammer, Warhammer]
+      languages: [Common, Dwarvish]
+      cantrip: 0
+  -   name: High Elf
+      male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+      female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+      surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+      ab_bonus: {INT: 1, DEX: 2}
+      age: [100,750]
+      height: [5,6]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [None]
+      combat_prof: [Longsword, Shortsword, Shortbow, Longbow]
+      languages: [Common, Elvish, any]
+      cantrip: 1
+  -   name: Wood Elf
+      male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+      female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+      surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+      ab_bonus: {WIS: 1, DEX: 2}
+      age: [100,750]
+      height: [5,6]
+      size: Medium
+      speed: 35
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [None]
+      combat_prof: [Longsword, Shortsword, Shortbow, Longbow]
+      languages: [Common, Elvish]
+      cantrip: 0
+  -   name: Drow Elf
+      male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+      female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+      surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+      ab_bonus: {CHA: 1, DEX: 2}
+      age: [100,750]
+      height: [5,6]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 120
+      tool_prof: [None]
+      combat_prof: [Rapier, Shortsword, Hand Crossbow]
+      languages: [Common, Elvish]
+      cantrip: Drow
+  -   name: Lightfoot Halfling
+      male: [Alton, Ander, Cade, Corrin, Eldon, Errich, Finnan, Garret, Lindal, Lyle, Merrie, Milo, Osborn, Perrin, Reed, Roscoe, Wellby]
+      female: [Andry, Bree, Callie, Cora, Euphemia, Jillian, Kithri, Lavinia, Lidda, Merla, Nedda, Paela, Portia, Seraphina, Shaena, Trym, Vani, Verna]
+      surname: [Brushgather, Goodbarrel, Greenbottle, High-hill, Hilltopple, Leagallow, Tealeaf, Thorngage, Tosscobble, Underbough]
+      ab_bonus: {DEX: 2, CHA: 1}
+      age: [20,200]
+      height: [3,3]
+      size: Small
+      speed: 25
+      speed_penalty: 1
+      darkvision: 0
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common, Halfling]
+      cantrip: 0
+  -   name: Stout Halfling
+      male: [Alton, Ander, Cade, Corrin, Eldon, Errich, Finnan, Garret, Lindal, Lyle, Merrie, Milo, Osborn, Perrin, Reed, Roscoe, Wellby]
+      female: [Andry, Bree, Callie, Cora, Euphemia, Jillian, Kithri, Lavinia, Lidda, Merla, Nedda, Paela, Portia, Seraphina, Shaena, Trym, Vani, Verna]
+      surname: [Brushgather, Goodbarrel, Greenbottle, High-hill, Hilltopple, Leagallow, Tealeaf, Thorngage, Tosscobble, Underbough]
+      ab_bonus: {DEX: 2, CON: 1}
+      age: [20,200]
+      height: [3,3]
+      size: Small
+      speed: 25
+      speed_penalty: 1
+      darkvision: 0
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common, Halfling]
+      cantrip: 0
+  -   name: Human
+      male: [Aseir, Bardeid, Haseid, Khemed, Mehmen, Sudeiman, Zasheir, Darvin, Dorn, Evendur, Gorstag, Grim, Helm, Malark, Morn, Randal, Stedd, Bor, Fodel, Glar, Grigor, Igan, Ivor, Kosef, Mival, Orel, Pavel, Sergor, Ander, Blath, Bran, Frath, Geth, Lander, Luth, Malcer, Star, Taman, Urth, Aoth, Bareris, Ehput-Ki, Kethoth, Mumed, Ramas, So-Kehur, Thazar-De, Urhur, An, Chen, Chi, Fai, Jiang, Jun, Lian, Long, Meng, Shan, Shui, Wen, Anton, Diero, Marcon, Pieron, Rimardo, Romero, Salazar, Umbero]
+      female: [Atala, Ceidil, Hama, jasmal, Meilil, Seipora, Yasheira, Zasheida, Arveene, Esvele, Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele, Alethra, Kara, Katernin, Mara, Natali, Olma, Tana, Zora, Amafrey, Betha, Cefrey, Kethra, Mara, Olga, Silifrey, Westra, Arizima, Chathi, Nephis, Nulara, Murithi, Sefris, Thola, Umara, Zolis, Borivik, Faurgar, Jandar, Kanithar, Madislak, Ralmevik, Shaumar, Vladislak, Fyevarra, Hulmarra, Immith, Imzel, Navarra, Shevarra, Tammith, Yuldra, Bai, Chao, Jia, Lei, Mei, Qiao, Shui, Tai, Balama, Dona, Faila, Jalana, Luisa, Marta, Quara, Selise, Vonda]
+      surname: [Basha, Dumein, Jassan, Khalid, Mostana, Pashar, Rein, Amblecrown, Buckman, Dundragon, Evenwood, Greycastle, Tallstag, Bersk, Chernin, Dotsk, Kulenov, Marsk, Nemetsk, Shemov, Starag, Brightwood, Helder, Hornraven, Lackman, Stormwind, Windrivver, Chergoba, Dyernina, Iltazyara, Murnyethara, Stayanoga, Ulmokin, Agosto, Astoria, Calabra, Domine, Palone, Marivaldi, Pisacar, Ramonda, Chien, Huang, Kao, Kung, Lao, Ling, Mei, Pin, Shin, Sum, Tan, Wan, Ankhalab, Anskuld, Fezim, Hahpet, Nathandem, Sepret, Uuthrakt]
+      ab_bonus: {STR: 1, DEX: 1, CON: 1, INT: 1, WIS: 1, CHA: 1}
+      age: [18,80]
+      height: [5,6]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 0
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common]
+      cantrip: 0
+  -   name: Dragonborn
+      male: [Arjhan, Balasar, Bharash, Donaar, Ghesh, Heskan, Kriv, Medrash, Mehen, Nadarr, Pandjed, Patrin, Rhogar, Shamash, Shedinn, Tarhun, Torinn]
+      female: [Akra, Biri, Daar, Farideh, Harann, Havilar, Jheri, Kava, Korinn, Mishann, Nala, Perra, Raiann, Sora, Surina, Thava, Uadjit]
+      surname: [Clethtinthiallor, Daardendrian, Delmirev, Drachedandion, Fenkenkabradon, Kepeshkmolik, Kerrhylon, Kimbatuul, Linxakasendalor, Myastan, Nemmonis, Norixius, Ophinshtalajiir, Prexijandilin, Shestendeliath, Turnuroth, Verthisathurgiesh, Yarjerit]
+      ab_bonus: {STR: 2, CHA: 1}
+      age: [10,70]
+      height: [6,7]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 0
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common, Draconic]
+      cantrip: Dragonborn
+  -   name: Rock Gnome
+      male: [Alston, Alvyn, Boddynock, Broce, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble, Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo, Sindri, Warryn, Wrenn, Zook]
+      female: [Bimpnottin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shami1, Tana, Waywocket, Zanna]
+      surname: [Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen]
+      ab_bonus: {INT: 2, CON: 1}
+      age: [40,500]
+      height: [3,4]
+      size: Small
+      speed: 25
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [Artisan's Tools]
+      combat_prof: [None]
+      languages: [Common, Gnomish]
+  -   name: Half-Elf
+      male: [Anton, Diero, Marcon, Pieron, Rimardo, Romero, Salazar, Umbero, An, Chen, Chi, Fai, Jiang, Jun, Lian, Long, Meng, Shan, Shui, Wen]
+      female: [Fyevarra, Hulmarra, Immith, Imzel, Navarra, Shevarra, Tammith, Yuldra, Arveene, Esvele, Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele]
+      surname: [Amakiir, Amastacia, Galanodel, Holimion, Ilphelkiir, Liadon, Meliamne, Nallo, Siannodel, Xiloscient]
+      ab_bonus: Half-Elf
+      age: [20, 180]
+      height: [5,6]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [None]
+      combat_prof: Half-Elf
+      languages: [Common, Elvish, any]
+      cantrip: 0
+  -   name: Half-Orc
+      male: [Dench, Feng, Gell, Henk, Holg, Imsh, Keth, Krusk, Mhurren, Ront, Shump, Thokk]
+      female: [Baggi, Emen, Engong, Kansif, Myev, Neega, Ovak, Ownka, Shautha, Sutha, Vola, Volen, Yevelda]
+      surname: [""]
+      ab_bonus: {STR: 2, CON: 2}
+      age: [14,70]
+      height: [5,7]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common, Orc]
+      cantrip: 0
+  -   name: Tiefling
+      male: [Akmenos, Amnon, Barakas, Damakos, Ekemon, Iados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai]
+      female: [Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta]
+      surname: [Art, Carrion, Chant, Creed, Despair, Excellence, Fear, Glory, Hope, Ideal, Music, Nowhere, Open, Poetry, Quest, Random, Reverence, Sorrow, Temerity, Torment, Weary]
+      ab_bonus: {INT: 1, CHA: 2}
+      age: [18,90]
+      height: [5,6]
+      size: Medium
+      speed: 30
+      speed_penalty: 1
+      darkvision: 60
+      tool_prof: [None]
+      combat_prof: [None]
+      languages: [Common, Tiefling]
+      cantrip: Tiefling
+

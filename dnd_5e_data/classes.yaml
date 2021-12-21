@@ -1,0 +1,302 @@
+burglars_pack: &pack_burg [Backpack, Bag of 1000 Ball Bearings, Ball of String (10ft), Bell, Candles (x5), Crowbar, Hammer, Pitons (x10), Hooded Lanturn, Flask of Oil (x2), Rations (5 Days), Tinderbox, Waterskin]
+diplomats_pack: &pack_diplo [Chest, Cases for Maps/Scrolls (x2), Set of Fine Clothes, Bottle of Ink, Ink Pen, Lamp, Flask of Oil (x2), Sheet of Paper (x5), Vial of Perfume, Sealing Wax, Soup]
+dungeoneers_pack: &pack_dung [Backpack, Crowbar, Hammer, Piton (x10), Torch (x10), Tinderbox, Rations (10 Days), Waterskin]
+entertainers_pack: &pack_ente [Backpack, Bedroll, Costume (x2), Candle (x5), Rations (5 Days), Waterskin, Disguise Kit]
+explorers_pack: &pack_expl [Backpack, Bedroll, Mess Kit, Tinderbox, Torch (x10), Rations (10 Days), Waterskin]
+priests_pack: &pack_prie [Backpack, Blanket, Candle (x10), Tinderbox, Alms Box, Block of Insense (x2), Censer, Vestments, Rations (2 Days), Waterskin]
+scholars_pack: &pack_scho [Backpack, Book of Lore, Bottle of Ink, Ink Pen, Parchment (x10), Little Bag of Sand, Small Knife]
+classes:
+  -   name: Barbarian
+      hp_start: [12, 1d12]
+      stat_priority_1: STR
+      stat_priority_2: CON
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tool_prof: []
+      sav_throws: [STR, CON]
+      skills: 2
+      sk_pool: [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
+      equipment1: [Greataxe, martial Melee Weapon]
+      equipment2: [[Handaxe, Handaxe], simple Weapon]
+      equipment:  [*pack_expl , [Javelin, Javelin, Javelin, Javelin]]
+      wealth: [10, 2, 4]
+      features:
+        - name: Rage
+          desc: |
+                Gain the following benefits for 1 minute if not wearing heavy armour:
+                1. [Advantage] on Strength & Strength saving rolls
+                2. Add [Rage Damange] to any melee strength attacks
+                3. Add resistence to [Bludgeoning], [Piercing] & [Slashing] damage
+                You cannot cast spells if you know any whilst raging. You cannot rage more than your allocated amount. At level 1 this is 2.
+        - name: Unarmoured Defence
+          desc: If you are not wearing armour, AC is 10 + [DEX Mod] + [CON Mod]. Shields can still be equip.
+  -   name: Bard
+      hp_start: [8, 1d8]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords]
+      tool_prof: Bard
+      sav_throws: [DEX, CHA]
+      skills: 3
+      sk_pool: all
+      equipment1: [Raiper, Longsword, simple Weapon]
+      equipment2: [*pack_diplo, *pack_ente]
+      equipment3: [Lute, musical Instrument]
+      equipment: [Leather Armor, Dagger]
+      wealth: [10, 5, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Bardic Inspiration
+          desc: |
+                You can inspire others through stirring words and music.
+                Using a bonus action on your turn, choose one creature besides yourself within earshot (~60 feet).
+                For the next 10 minutes that creature can add a d6 roll to any ability check, attack roll or saving throw it makes.
+      cantrip: 2
+      spells: 4
+      spell_save: [10, CHA]
+      spell_attack: [2, CHA]
+  -   name: Cleric
+      hp_start: [8, 1d8]
+      stat_priority_1: WIS
+      stat_priority_2: CON
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons]
+      tool_prof: []
+      sav_throws: [WIS, CHA]
+      skills: 2
+      sk_pool: [History, Insight, Medicine, Persuasion, Religion]
+      equipment1: [Mace, Warhammer]
+      equipment2: [Scale Mail, Leather Armor, Chain Mail]
+      equipment3: [Light Crossbow and 20 Bolts, simple Weapon]
+      equipment4: [*pack_prie, *pack_expl ]
+      equipment: [Shield, Holy Symbol]
+      wealth: [10, 5, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Divine Domain
+          desc: Choose one domain related your deity. You gain domain spells and other features when you choose it at 1st level.
+      cantrip: 3
+      spells: 2
+      spell_save: [10, WIS]
+      spell_attack: [2, WIS]
+      cleric_domain: [Knowledge, Life, Light, Nature, Tempest, Trickery, War]
+  -   name: Druid
+      hp_start: [8, 1d8]
+      stat_priority_1: WIS
+      stat_priority_2: INT
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Clubs, Daggers, Darts, Javelins, Maces, Quarterstaffs, Scimitars, Sickles, Slings, Spears]
+      tool_prof: [Herbalism Kit]
+      sav_throws: [INT, WIS]
+      skills: 2
+      sk_pool: [Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival]
+      equipment1: [Shield, simple Weapon]
+      equipment2: [Scimitar, simple Melee Weapon]
+      equipment: [Leather Armor, *pack_expl , Druidic Focus]
+      wealth: [10, 2, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Druidic
+          desc: You know Druidic, the tongue of Druids.
+      cantrip: 2
+      spells: 2
+      spell_save: [10, WIS]
+      spell_attack: [2, WIS]
+  -   name: Fighter
+      hp_start: [8, 1d8]
+      stat_priority_1: STR
+      stat_priority_2: CON
+      armor_prof: [Light Armor, Medium Armor, Heavy Armor, Shield]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tool_prof: []
+      sav_throws: [STR, CON]
+      skills: 2
+      sk_pool: [Acrobatics, Animal Handling, Atheltics, History, Insight, Intimidation, Perception, Survival]
+      equipment1: [Chain Mail, [Leather Armor, Longbow, 20 Arrows]]
+      equipment2: [[martial Weapon, Shield], [martial Weapon, martial Weapon]]
+      equipment3: [[Light Crossbow, 20 Bolts], [Handaxe, Handaxe]]
+      equipment4: [*pack_dung, *pack_expl ]
+      equipment: []
+      wealth: [10, 5, 4]
+      features:
+        - name: Fighting Style
+          desc: You adopt a particular style of fighing as your speciality
+        - name: Second Wind
+          desc: On your turn you can use a bonus action to regain hit points equal to 1d10 + fighter level. One use per short or long rest.
+      fighting_style: [Archery, Defence, Dueling, Great Weapon Fighting, Protection, Two-Weapon Fighting]
+  -   name: Monk
+      hp_start: [8, 1d8]
+      stat_priority_1: CON
+      stat_priority_2: INT
+      armor_prof: []
+      weap_prof: [Simple Weapons, Shortswords]
+      tool_prof: Monk
+      sav_throws: [STR, DEX]
+      skills: 2
+      sk_pool: [Acrobatics, Athletics, History, Insight, Religion, Stealth]
+      equipment1: [Shortsword, simple Weapon]
+      equipment2: [*pack_dung, *pack_expl ]
+      equipment: [[Dart, Dart, Dart, Dart, Dart, Dart, Dart, Dart, Dart, Dart]]
+      wealth: [1, 5, 4]
+      features:
+        - name: Unarmoured Defence
+          desc: AC is 10 + DEX MOD + WIS MOD when wearing no armour and equipping no shield
+        - name: Martial Arts
+          desc: |
+                When a) you are unarmed or weilding monk only weapons and b) not wearing any equipment or shield:
+                1) You can use DEX instead of STR for attack and damage rolls for unarmed strikes and monk weapons
+                2) You can roll a d4 in place of the normal damage roll of unarmed strikes and monk weapons
+                3) When you use the attack action with an unarmed strike or monk weapon, you can attack again for your bonus action.
+  -   name: Paladin
+      hp_start: [10, 1d10]
+      stat_priority_1: STR
+      stat_priority_2: CHA
+      armor_prof: [Light Armor, Medium Armor, Heavy Armor, Shield]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tool_prof: []
+      sav_throws: [WIS, CHA]
+      skills: 2
+      sk_pool: [Atheltics, Insight, Intimidation, Medicine, Persuasion, Religion]
+      equipment1: [[martial Weapon, Shield], [martial Weapon, martial Weapon]]
+      equipment2: [[Javelin, Javelin, Javelin, Javelin, Javelin], simple Melee Weapon]
+      equipment3: [*pack_prie, *pack_expl ]
+      equipment: [Chain Mail, Holy Symbol]
+      wealth: [10, 5, 4]
+      features:
+        - name: Divine Sense
+          desc: Become aware of any unhidden [Celestial], [Fiend] or [Undead] within 60 feet. You can decipher what kind of creature, but not its identiy. Can be used [1 + CHA MOD] number of times.
+        - name: Lay on Hands
+          desc: You can heal yourself or another within touching distance by [LEVEL x 5] hit points once per long rest.
+  -   name: Ranger
+      hp_start: [10, 1d10]
+      stat_priority_1: DEX
+      stat_priority_2: WIS
+      armor_prof: [Light Armor, Medium Armor, Shields]
+      weap_prof: [Simple Weapons, Martial Weapons]
+      tool_prof: []
+      sav_throws: [STR, DEX]
+      skills: 3
+      sk_pool: [Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival]
+      equipment1: [Scale Mail, Leather Armor]
+      equipment2: [[Shortsword, Shortsword], [simple Melee Weapon, simple Melee Weapon]]
+      equipment3: [*pack_dung, *pack_expl ]
+      equipment: [[Longbow, 20 Arrows]]
+      wealth: [10, 5, 4]
+      features:
+        - name: Favored Enemy
+          desc: |
+                Choose one type of monster enemey or two types of humanoid enemy. You have [Advantage] on [Survival] checks to track them, and [Intelligence] checks to recall information about them.
+                If they speak a language, you know that language.
+        - name: Natural Explorer
+          desc: |
+                Choose one type of terrain to be particularly familiar with. After travelling in that biome for an hour, gain the following benefits:
+                1) Difficult terrain doesn't slow your party down
+                2) Excluding magical means, the party cannot get lost
+                3) Even if pre-occupied, you remain alert to danger
+                4) If alone, your stealth speed is that of normal walking speed
+                5) Find twice as much food when foraging
+                6) Gain extra information when tracking monsters
+      ranger_enemy: [Aberrations, Beasts, Celestials, Constructs, Dragons, Elementals, Fey, Fiends, Giants, Monstrosities, Oozes, Plants, Undead]
+      ranger_explorer: [Artic, Coast, Desert, Forest, Grassland, Mountain, Swamp]
+  -   name: Rogue
+      hp_start: [8, 1d8]
+      stat_priority_1: DEX
+      stat_priority_2: INT
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords]
+      tool_prof: [Thieve's Tools]
+      sav_throws: [DEX, INT]
+      skills: 4
+      sk_pool: [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
+      equipment1: [Rapier, Shortsword]
+      equipment2: [[Shortbow, 20 Arrows], Shortsword]
+      equipment3: [*pack_burg, *pack_dung, *pack_expl ]
+      equipment: [Leather Armor, Dagger, Dagger, Thieve's Tools]
+      wealth: [10, 4, 4]
+      features:
+        - name: Expertise
+          desc: Double proficiency bonus for either a) 2 skills or b) 1 skill and thieves tools
+        - name: Sneak Attack
+          desc: Once per turn you can deal an extra 1d6 damage to a creature you hit with an [Advantage] attack. Requires a finesse or ranged weapon
+        - name: Thieve's Cant
+          desc: You understand thieve's slang, handsigns & markings
+  -   name: Sorcerer
+      hp_start: [6, 1d6]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: []
+      weap_prof: [Daggers, Darts, Slings, Quaterstaffs, Light Crossbows]
+      tool_prof: []
+      sav_throws: [CON, CHA]
+      skills: 2
+      sk_pool: [Arcana, Deception, Insight, Intimidation, Persuasion, Religion]
+      equipment1: [[Light Crossbow, 20 Bolts], simple Weapon]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [*pack_dung, *pack_expl ]
+      equipment: [Dagger, Dagger]
+      wealth: [10, 3, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Sorcerous Origin
+          desc: Pick an origin which describes your innate magical powers
+      cantrip: 4
+      spells: 2
+      spell_save: [10, CHA]
+      spell_attack: [2, CHA]
+      sorcerer_origin: [Draconic Bloodline, Wild Magic]
+  -   name: Warlock
+      hp_start: [8, 1d8]
+      stat_priority_1: CHA
+      stat_priority_2: CON
+      armor_prof: [Light Armor]
+      weap_prof: [Simple Weapons]
+      tool_prof: []
+      sav_throws: [WIS, CHA]
+      skills: 2
+      sk_pool: [Arcana, Deception, History, Intimidation, Investigation, Nature, Religion]
+      equipment1: [[Light Crossbow, 20 Bolts], simple Weapon]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [*pack_scho , *pack_dung ]
+      equipment: [Leather Armor, simple Weapon, Dagger, Dagger]
+      wealth: [10, 4, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Otherworldy Patron
+          desc: Choose your eldritch side order. We currently have [Archfey], [Fiend] and [The Great Old One] in stock.
+        - name: Pact Magic
+          desc: bs name for warlock spellcasting
+      cantrip: 2
+      spells: 2
+      spell_save: [10, CHA]
+      spell_attack: [10, CHA]
+      warlock_patron: [Archfey, Fiend, The Great Old One]
+  -   name: Wizard
+      hp_start: [6, 1d6]
+      stat_priority_1: INT
+      stat_priority_2: CON
+      armor_prof: []
+      weap_prof: [Daggers, Darts, Slings, Quaterstaffs, Light Crossbows]
+      tool_prof: []
+      sav_throws: [INT, WIS]
+      skills: 2
+      sk_pool: [Arcana, History, Insight, Investigation, Medicine, Religion]
+      equipment1: [Quarterstaff, Dagger]
+      equipment2: [Component Pouch, Arcane Focus]
+      equipment3: [*pack_scho ,  *pack_expl ]
+      equipment: [Spellbook]
+      wealth: [10, 4, 4]
+      features:
+        - name: Spellcasting
+          desc: can do magic like
+        - name: Arcane Recovery
+          desc: After a short rest, recovery spell slots that would otherwise have to be recovered with a long rest.
+      cantrip: 3
+      spells: 2
+      spell_save: [10, INT]
+      spell_attack: [2, INT]

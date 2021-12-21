@@ -1,0 +1,10 @@
+-   name: "Homid"
+    nicknames: ["Apes","Two-Legs","Monkeys"]
+    gnosis: 1
+    gifts: ["Apecraft's Blessings", "City Running", "Master of Fire", "Persuasion", "Smell of Man"]
+-   name: "Metis"
+    nicknames: ["Mules", "Bastards", "Obscenities"]
+    gnosis: 3
+    gifts: ["Create Element", "Primal Anger", "Rat Head", "Sense Wyrm", "Shed"]
+    deformities:
+        - Albino: []

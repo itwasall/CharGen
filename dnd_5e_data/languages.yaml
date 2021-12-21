@@ -1,0 +1,64 @@
+-   name: Common
+    speakers: Humans
+    script: Common
+    type: Standard
+-   name: Dwarvish
+    speakers: Dwarves
+    script: Dwarvish
+    type: Standard
+-   name: Elvish
+    speakers: Elves
+    script: Elvish
+    type: Standard
+-   name: Giant
+    speakers: [Giants, Orgres]
+    script: Dwarvish
+    type: Standard
+-   name: Gnomish
+    speakers: Gnomes
+    script: Dwarvish
+    type: Standard
+-   name: Goblin
+    speakers: Goblinoids
+    script: Dwarvish
+    type: Standard
+-   name: Halfling
+    speakers: Halflings
+    script: Common
+    type: Standard
+-   name: Orc
+    speakers: Orcs
+    script: Dwarvish
+    type: Standard
+-   name: Abyssal
+    speakers: Demons
+    script: Infernal
+    type: Exotic
+-   name: Celestial
+    speakers: Celestials
+    script: Celesital
+    type: Exotic
+-   name: Deep Speech
+    speakers: [Mind Flayers, Beholders]
+    script: N/A
+    type: Exotic
+-   name: Draconic
+    speakers: [Dragons, Dragonborn]
+    script: Draconic
+    type: Exotic
+-   name: Infernal
+    speakers: Devils
+    script: Infernal
+    type: Exotic
+-   name: Primordial
+    speakers: Elementals
+    script: Dwarvish
+    type: Exotic
+-   name: Sylvan
+    speakers: Fey
+    script: Elvish
+    type: Exotic
+-   name: Undercommon
+    speakers: Underdark Traders
+    script: Elvish
+    type: Exotic

@@ -1,0 +1,252 @@
+-   name: Mountain Dwarf
+    male: [Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal]
+    female: [Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sann!, Torbera, Torgga, Vistra]
+    surname: [Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart]
+    ab_bonus: {STR: 1, CON: 2}
+    age: [50,350]
+    height: [48,2,4]
+    weight: [130,2,6]
+    size: Medium
+    speed: 35
+    speed_penalty: 0
+    darkvision: 60
+    armor_prof: [Light Armor, Medium Armor]
+    weap_prof: [Battleaxe, Handaxe, Light Hammer, Warhammer]
+    tool_prof: [Smith's Tools, Brewer's Supplies, Mason's Tools]
+    languages: [Common, Dwarvish]
+    cantrip: 0
+    alignment_weights: [[3,2,1], [3,2,1]]
+-   name: Hill Dwarf
+    male: [Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal]
+    female: [Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sann!, Torbera, Torgga, Vistra]
+    surname: [Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart]
+    ab_bonus: {WIS: 1, CON: 2}
+    age: [50,350]
+    height: [42,2,4]
+    weight: [115,2,6]
+    size: Medium
+    speed: 35
+    speed_penalty: 0
+    darkvision: 60
+    armor_prof: []
+    weap_prof: [Battleaxe, Handaxe, Light Hammer, Warhammer]
+    tool_prof: [Smith's Tools, Brewer's Supplies, Mason's Tools]
+    languages: [Common, Dwarvish]
+    cantrip: 0
+    alignment_weights: [[3,2,1], [3,2,1]]
+-   name: High Elf
+    male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+    female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+    surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+    ab_bonus: {INT: 1, DEX: 2}
+    age: [100,750]
+    height: [54,2,10]
+    weight: [90,1,4]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: [Longsword, Shortsword, Shortbow, Longbow]
+    tool_prof: []
+    languages: [Common, Elvish, any]
+    cantrip: 1
+    alignment_weights: [[1,2,3], [3,2,1]]
+-   name: Wood Elf
+    male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+    female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+    surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+    ab_bonus: {WIS: 1, DEX: 2}
+    age: [100,750]
+    height: [54,2,10]
+    weight: [100,1,4]
+    size: Medium
+    speed: 35
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: [Longsword, Shortsword, Shortbow, Longbow]
+    tool_prof: []
+    languages: [Common, Elvish]
+    cantrip: 0
+    alignment_weights: [[1,2,3], [3,2,1]]
+-   name: Drow Elf
+    male: [Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carrie, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis]
+    female: [Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia]
+    surname: [Amakiir (Gemflower), Amastacia (Starflower), Galanodel (Moonwhisper), Holimion (Diamonddew), Ilphelkiir (Gemblossom), Liadon (Silverfrond), Meliamne (Oakenheel), Nallo (Nightbreeze), Siannodel (Moonbrook), Xiloscient (Goldpetal)]
+    ab_bonus: {CHA: 1, DEX: 2}
+    age: [100,750]
+    height: [53,2,4]
+    weight: [75,1,6]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 120
+    armor_prof: []
+    weap_prof: [Rapier, Shortsword, Hand Crossbow]
+    tool_prof: []
+    languages: [Common, Elvish]
+    cantrip: Drow
+    alignment_weights: [[1,2,3], [1,1,3]]
+-   name: Lightfoot Halfling
+    male: [Alton, Ander, Cade, Corrin, Eldon, Errich, Finnan, Garret, Lindal, Lyle, Merrie, Milo, Osborn, Perrin, Reed, Roscoe, Wellby]
+    female: [Andry, Bree, Callie, Cora, Euphemia, Jillian, Kithri, Lavinia, Lidda, Merla, Nedda, Paela, Portia, Seraphina, Shaena, Trym, Vani, Verna]
+    surname: [Brushgather, Goodbarrel, Greenbottle, High-hill, Hilltopple, Leagallow, Tealeaf, Thorngage, Tosscobble, Underbough]
+    ab_bonus: {DEX: 2, CHA: 1}
+    age: [20,200]
+    height: [31,2,4]
+    weight: [35,1,1]
+    size: Small
+    speed: 25
+    speed_penalty: 1
+    darkvision: 0
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Halfling]
+    cantrip: 0
+    alignment_weights: [[3,1,1], [3,1,1]]
+-   name: Stout Halfling
+    male: [Alton, Ander, Cade, Corrin, Eldon, Errich, Finnan, Garret, Lindal, Lyle, Merrie, Milo, Osborn, Perrin, Reed, Roscoe, Wellby]
+    female: [Andry, Bree, Callie, Cora, Euphemia, Jillian, Kithri, Lavinia, Lidda, Merla, Nedda, Paela, Portia, Seraphina, Shaena, Trym, Vani, Verna]
+    surname: [Brushgather, Goodbarrel, Greenbottle, High-hill, Hilltopple, Leagallow, Tealeaf, Thorngage, Tosscobble, Underbough]
+    ab_bonus: {DEX: 2, CON: 1}
+    age: [20,200]
+    height: [31,2,4]
+    weight: [35,1,1]
+    size: Small
+    speed: 25
+    speed_penalty: 1
+    darkvision: 0
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Halfling]
+    cantrip: 0
+    alignment_weights: [[3,1,1], [3,1,1]]
+-   name: Human
+    male: [Aseir, Bardeid, Haseid, Khemed, Mehmen, Sudeiman, Zasheir, Darvin, Dorn, Evendur, Gorstag, Grim, Helm, Malark, Morn, Randal, Stedd, Bor, Fodel, Glar, Grigor, Igan, Ivor, Kosef, Mival, Orel, Pavel, Sergor, Ander, Blath, Bran, Frath, Geth, Lander, Luth, Malcer, Star, Taman, Urth, Aoth, Bareris, Ehput-Ki, Kethoth, Mumed, Ramas, So-Kehur, Thazar-De, Urhur, An, Chen, Chi, Fai, Jiang, Jun, Lian, Long, Meng, Shan, Shui, Wen, Anton, Diero, Marcon, Pieron, Rimardo, Romero, Salazar, Umbero]
+    female: [Atala, Ceidil, Hama, jasmal, Meilil, Seipora, Yasheira, Zasheida, Arveene, Esvele, Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele, Alethra, Kara, Katernin, Mara, Natali, Olma, Tana, Zora, Amafrey, Betha, Cefrey, Kethra, Mara, Olga, Silifrey, Westra, Arizima, Chathi, Nephis, Nulara, Murithi, Sefris, Thola, Umara, Zolis, Borivik, Faurgar, Jandar, Kanithar, Madislak, Ralmevik, Shaumar, Vladislak, Fyevarra, Hulmarra, Immith, Imzel, Navarra, Shevarra, Tammith, Yuldra, Bai, Chao, Jia, Lei, Mei, Qiao, Shui, Tai, Balama, Dona, Faila, Jalana, Luisa, Marta, Quara, Selise, Vonda]
+    surname: [Basha, Dumein, Jassan, Khalid, Mostana, Pashar, Rein, Amblecrown, Buckman, Dundragon, Evenwood, Greycastle, Tallstag, Bersk, Chernin, Dotsk, Kulenov, Marsk, Nemetsk, Shemov, Starag, Brightwood, Helder, Hornraven, Lackman, Stormwind, Windrivver, Chergoba, Dyernina, Iltazyara, Murnyethara, Stayanoga, Ulmokin, Agosto, Astoria, Calabra, Domine, Palone, Marivaldi, Pisacar, Ramonda, Chien, Huang, Kao, Kung, Lao, Ling, Mei, Pin, Shin, Sum, Tan, Wan, Ankhalab, Anskuld, Fezim, Hahpet, Nathandem, Sepret, Uuthrakt]
+    ab_bonus: {STR: 1, DEX: 1, CON: 1, INT: 1, WIS: 1, CHA: 1}
+    age: [18,80]
+    height: [56,2,10]
+    weight: [110,2,4]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 0
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common]
+    cantrip: 0
+    alignment_weights: [[2,2,2], [2,2,2]]
+-   name: Dragonborn
+    male: [Arjhan, Balasar, Bharash, Donaar, Ghesh, Heskan, Kriv, Medrash, Mehen, Nadarr, Pandjed, Patrin, Rhogar, Shamash, Shedinn, Tarhun, Torinn]
+    female: [Akra, Biri, Daar, Farideh, Harann, Havilar, Jheri, Kava, Korinn, Mishann, Nala, Perra, Raiann, Sora, Surina, Thava, Uadjit]
+    surname: [Clethtinthiallor, Daardendrian, Delmirev, Drachedandion, Fenkenkabradon, Kepeshkmolik, Kerrhylon, Kimbatuul, Linxakasendalor, Myastan, Nemmonis, Norixius, Ophinshtalajiir, Prexijandilin, Shestendeliath, Turnuroth, Verthisathurgiesh, Yarjerit]
+    ab_bonus: {STR: 2, CHA: 1}
+    age: [10,70]
+    height: [66,2,8]
+    weight: [175,2,6]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 0
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Draconic]
+    cantrip: Dragonborn
+    alignment_weights: [[3,1,3], [3,1,3]]
+-   name: Rock Gnome
+    male: [Alston, Alvyn, Boddynock, Broce, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble, Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo, Sindri, Warryn, Wrenn, Zook]
+    female: [Bimpnottin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shami1, Tana, Waywocket, Zanna]
+    surname: [Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen]
+    ab_bonus: {INT: 2, CON: 1}
+    age: [40,500]
+    height: [35,2,4]
+    weight: [35,1,1]
+    size: Small
+    speed: 25
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: []
+    tool_prof: [Artisan's Tools]
+    languages: [Common, Gnomish]
+    cantrip: 0
+    alignment_weights: [[3,1,3], [3,1,1]]
+-   name: Forest Gnome
+    male: [Alston, Alvyn, Boddynock, Broce, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble, Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo, Sindri, Warryn, Wrenn, Zook]
+    female: [Bimpnottin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shami1, Tana, Waywocket, Zanna]
+    surname: [Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen]
+    ab_bonus: {INT: 2, DEX: 1}
+    age: [40,500]
+    height: [35,2,4]
+    weight: [35,1,1]
+    size: Small
+    speed: 25
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Gnomish]
+    cantrip: ForestGnome
+    alignment_weights: [[3,1,3], [3,1,1]]
+-   name: Half-Elf
+    male: [Anton, Diero, Marcon, Pieron, Rimardo, Romero, Salazar, Umbero, An, Chen, Chi, Fai, Jiang, Jun, Lian, Long, Meng, Shan, Shui, Wen]
+    female: [Fyevarra, Hulmarra, Immith, Imzel, Navarra, Shevarra, Tammith, Yuldra, Arveene, Esvele, Jhessail, Kerri, Lureene, Miri, Rowan, Shandri, Tessele]
+    surname: [Amakiir, Amastacia, Galanodel, Holimion, Ilphelkiir, Liadon, Meliamne, Nallo, Siannodel, Xiloscient]
+    ab_bonus: Half-Elf
+    age: [20, 180]
+    height: [57,2,8]
+    weight: [110,2,4]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Elvish, any]
+    cantrip: 0
+    alignment_weights: [[1,2,3], [1,3,1]]
+-   name: Half-Orc
+    male: [Dench, Feng, Gell, Henk, Holg, Imsh, Keth, Krusk, Mhurren, Ront, Shump, Thokk]
+    female: [Baggi, Emen, Engong, Kansif, Myev, Neega, Ovak, Ownka, Shautha, Sutha, Vola, Volen, Yevelda]
+    surname: [""]
+    ab_bonus: {STR: 2, CON: 2}
+    age: [14,70]
+    height: [58,2,10]
+    weight: [140,2,6]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Orc]
+    cantrip: 0
+    alignment_weights: [[1,1,3], [1,2,3]]
+-   name: Tiefling
+    male: [Akmenos, Amnon, Barakas, Damakos, Ekemon, Iados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai]
+    female: [Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta]
+    surname: [Art, Carrion, Chant, Creed, Despair, Excellence, Fear, Glory, Hope, Ideal, Music, Nowhere, Open, Poetry, Quest, Random, Reverence, Sorrow, Temerity, Torment, Weary]
+    ab_bonus: {INT: 1, CHA: 2}
+    age: [18,90]
+    height: [57,2,8]
+    weight: [110,2,4]
+    size: Medium
+    speed: 30
+    speed_penalty: 1
+    darkvision: 60
+    armor_prof: []
+    weap_prof: []
+    tool_prof: []
+    languages: [Common, Tiefling]
+    cantrip: Tiefling
+    alignment_weights: [[1,3,2], [1,2,3]]

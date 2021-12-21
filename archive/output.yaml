@@ -1,0 +1,104 @@
+ability_mods:
+  CHA: 1
+  CON: 1
+  DEX: 0
+  INT: -1
+  STR: -2
+  WIS: 2
+ability_scores:
+  CHA: 13
+  CON: 13
+  DEX: 11
+  INT: 9
+  STR: 7
+  WIS: 14
+actions:
+  Standard Actions:
+  - Attack
+  - Cast a Spell
+  - Dash
+  - Disengage
+  - Dodge
+  - Help
+  - Hide
+  - Ready
+  - Search
+  - Use an Object
+  - Two-Weapon Fighting
+  - Interact with an Object
+age: 10
+armor_class: 0
+attacks:
+  Mace:
+  - 1
+  - 6
+  - bludgeoning
+equipment:
+- Alms Box
+- Backpack
+- Blanket
+- Block of Insense (x2)
+- Candle (x10)
+- Censer
+- Holy Symbol
+- Leather Armor
+- Light Crossbow and 20 Bolts
+- Mace
+- Rations (2 Days)
+- Shield
+- Tinderbox
+- Vestments
+- Waterskin
+height: 6'0"
+hit_dice: 1d8
+hit_points: 9
+initiative: 0
+job: Cleric
+name: Shamash Shestendeliath
+proficiencies:
+  armor:
+  - Light Armor
+  - Medium Armor
+  - Shields
+  languages:
+  - Common
+  - Draconic
+  tools:
+  - Navigator's Tools
+  - Vehicles (Sea)
+  weapons:
+  - Simple Weapons
+proficiency_bonus: 2
+race: Dragonborn
+saving_throws:
+  CHA: 3
+  CON: 1
+  DEX: 0
+  INT: -1
+  STR: -2
+  WIS: 4
+skills:
+  Acrobatics: 0
+  Animal Handling: 2
+  Arcana: -1
+  Athletics: 0
+  Deception: 1
+  History: -1
+  Insight: 4
+  Intimidation: 1
+  Investigation: -1
+  Medicine: 2
+  Nature: -1
+  Perception: 4
+  Persuasion: 3
+  Religion: -1
+  Sleight of Hand: 0
+  Stealth: 0
+  Survival: 2
+speed:
+  Climbing: 0
+  Flying: 0
+  Walking: 0
+spell_attack_bonus: 0
+spell_save_dc: 0
+spellcasting_ability: ''

@@ -1,0 +1,305 @@
+club:
+  name: Club
+  cost: [1, silver]
+  damage: [1, 4, bludgeoning]
+  weight_lbs: 2
+  properties:
+    weight: light
+dagger:
+  name: Dagger
+  cost: [2, gold]
+  damage: [1, 4, piercing]
+  weight_lbs: 1
+  properties:
+    finesse: yes
+    weight: light
+    range: [20, 60]
+    thrown: yes
+greatclub:
+  name: Greatclub
+  cost: [2, silver]
+  damage: [1, 8, bludgeoning]
+  weight_lbs: 10
+  properties:
+    two_handed: yes
+handaxe:
+  name: Handaxe
+  cost: [5, gold]
+  damage: [1, 6, slashing]
+  weight_lbs: 2
+  properties:
+    thrown: yes
+    range: [30, 120]
+javelin:
+  name: Javelin
+  cost: [5, silver]
+  damage: [1, 6, piercing]
+  weight_lbs: 2
+  properties:
+    weight: light
+    thrown: yes
+    range: [20, 60]
+light_hammer:
+  name: Light Hammer
+  cost: [2, gold]
+  damage: [1, 4, bludgeoning]
+  weight_lbs: 2
+  properties:
+    weight: light
+    thrown: yes
+    range: [20, 60]
+mace:
+  name: Mace
+  cost: [5, gold]
+  damage: [1, 6, bludgeoning]
+  weight_lbs: 4
+  properties:
+    no_properties: yes
+quarterstaff:
+  name: Quarterstaff
+  cost: [2, silver]
+  damage: [1, 6, bludgeoning]
+  weight_lbs: 4
+  properties:
+    two_handed: versatile
+    versatile: [1, 8]
+sickle:
+  name: Sickle
+  cost: [1, gold]
+  damage: [1, 4, slashing]
+  weight_lbs: 2
+  properties:
+    weight: light
+spear:
+  name: Spear
+  cost: [1, gold]
+  damage: [1, 6, piercing]
+  weight_lbs: 3
+  properties:
+    range: [20, 60]
+    thrown: yes
+    two_handed: versatile
+    versatile: [1, 8]
+
+light_crossbow:
+  name: Light Crossbow
+  cost: [25, gold]
+  damage: [1, 8, piercing]
+  weight_lbs: 5
+  properties:
+    ammunition: yes
+    range: [80, 320]
+    loading: yes
+    two_handed: yes
+dart:
+  name: Dart
+  cost: [5, copper]
+  damage: [1, 4, piercing]
+  weight_lbs: 0.25
+  properties:
+    thrown: yes
+    range: [20, 60]
+    finesse: yes
+shortbow:
+  name: Shortbow
+  cost: [25, gold]
+  damage: [1, 6, piercing]
+  weight_lbs: 2
+  properties:
+    ammunition: yes
+    range: [80,320]
+    two_handed: yes
+sling:
+  name: Sling
+  cost: [1, silver]
+  damage: [1, 4, bludgeoning]
+  weight_lbs: 0
+  properties:
+    ammunition: yes
+    range: [30, 120]
+
+battleaxe:
+  name: Battleaxe
+  cost: [10, gold]
+  damage: [1, 8, slashing]
+  weight_lbs: 4
+  properties:
+    two_handed: versatile
+    versatile: [1, 10]
+flail:
+  name: Flail
+  cost: [10, gold]
+  damage: [1, 8, bludgeoning]
+  weight_lbs: 2
+  properties:
+    no_properties: yes
+glaive:
+  name: Glaive
+  cost: [20, gold]
+  damage: [1, 10, slashing]
+  weight_lbs: 6
+  properties:
+    weight: heavy
+    reach: yes
+    two_handed: yes
+greataxe:
+  name: Greataxe
+  cost: [30, gold]
+  damage: [1, 12, slashing]
+  weight_lbs: 7
+  properties:
+    weight: heavy
+    two_handed: yes
+greatsword:
+  name: Greatsword
+  cost: [50, gold]
+  damage: [2, 6, slashing]
+  weight_lbs: 6
+  properties:
+    weight: heavy
+    two_handed: yes
+halberd:
+  name: Halberd
+  cost: [20, gold]
+  damage: [1, 10, slashing]
+  weight_lbs: 6
+  properties:
+    weight: heavy
+    reach: yes
+    two_handed: yes
+lance:
+  name: Lance
+  cost: [10, gold]
+  damage: [1, 12, piercing]
+  weight_lbs: 6
+  properties:
+    reach: yes
+    special: lance
+longsword:
+  name: Longsword
+  cost: [15, gold]
+  damage: [1, 8, slashing]
+  weight_lbs: 5
+  properties:
+    two_handed: versatile
+    versatile: [1, 10]
+maul:
+  name: maul
+  cost: [10, gold]
+  damage: [2, 6, bludgeoning]
+  weight_lbs: 10
+  properties:
+    weight: heavy
+    two_handed: yes
+morningstar:
+  name: Morningstar
+  cost: [15, gold]
+  damage: [1, 8, piercing]
+  weight_lbs: 4
+  properties:
+    no_properties: yes
+pike:
+  name: Pike
+  cost: [5, gold]
+  damage: [1, 10, piercing]
+  weight_lbs: 18
+  properties:
+    weight: heavy
+    reach: yes
+    two_handed: yes
+rapier:
+  name: Rapier
+  cost: [25, gold]
+  damage: [1, 8, piercing]
+  weight_lbs: 2
+  properties:
+    finesse: yes
+scimitar:
+  name: Scimitar
+  cost: [10, gold]
+  damage: [1, 6, slashing]
+  weight_lbs: 3
+  properties:
+    weight: light
+    finesse: yes
+shortsword:
+  name: Shortsword
+  cost: [10, gold]
+  damage: [1, 6, piercing]
+  weight_lbs: 2
+  properties:
+    weight: light
+    finesse: yes
+trident:
+  name: Trident
+  cost: [5, gold]
+  damage: [1, 6, piercing]
+  weight_lbs: 4
+  properties:
+    thrown: yes
+    range: [20, 60]
+    two_handed: versatile
+    versatile: [1, 8]
+war_pick:
+  name: War Pick
+  cost: [5, gold]
+  damage: [1, 8, piercing]
+  weight_lbs: 2
+  properties:
+    no_properties: yes
+warhammer:
+  name: Warhammer
+  cost: [15, gold]
+  damage: [1, 8, bludgeoning]
+  weight_lbs: 2
+  properties:
+    two_handed: versatile
+    versatile: [1, 10]
+whip:
+  name: Whip
+  cost: [2, gold]
+  damage: [1, 4, slashing]
+  weight_lbs: 3
+  properties:
+    finesse: yes
+    reach: yes
+blowgun:
+  name: Blowgun
+  cost: [10, gold]
+  damage: [1, 1, piercing]
+  weight_lbs: 1
+  properties:
+    ammunition: yes
+    range: [25, 100]
+    loading: yes
+hand_crossbow:
+  name: Hand Crossbow
+  cost: [75, gold]
+  damage: [1, 6, piercing]
+  weight_lbs: 3
+  properties:
+    ammunition: yes
+    range: [30, 120]
+    weight: light
+    loading: yes
+heavy_crossbow:
+  name: Heavy Crossbow
+  cost: [50, gold]
+  damage: [1, 10, piercing]
+  weight_lbs: 18
+  properties:
+    ammunition: yes
+    range: [100, 400]
+    weight: heavy
+    loading: yes
+    two_handed: yes
+longbow:
+  name: Longbow
+  cost: [50, gold]
+  damage: [1, 8, piercing]
+  weight_lbs: 2
+  properties:
+    ammunition: yes
+    range: [150, 600]
+    weight: heavy
+    two_handed: yes

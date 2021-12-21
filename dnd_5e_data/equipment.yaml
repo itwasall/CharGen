@@ -1,0 +1,20 @@
+#equipment:
+simple_melee_weapons: &w_sm [Club, Dagger, Greatclub, Handaxe, Javelin, Light Hammer, Mace, Quarterstaff, Sickle, Spear]
+simple_ranged_weapons: &w_sr [Light Crossbow, Dart, Shortbow, Sling]
+martial_melee_weapons: &w_mm [Battleaxe, Flail, Glaive, Greataxe, Greatsword, Halberd, Lance, Longsword, Maul, Morningstar, Pike, Rapier, Scimitar, Shortsword, Trident, War Pick, Warhammer, Whip]
+martial_ranged_weapons: &w_mr [Blowgun, Hand Crossbow, Heavy Crossbow, Longbow, Net]
+musical_instruments: &mus [Bagpipes, Drum, Dulcimer, Flute, Lute, Lyre, Horn, Pan Flute, Shawm, Viol]
+artisans_tool_prof: &art [Alchemist's Supplies, Brewer's Supplies, Calligrapher's Supplies, Carpenter's Tools, Cartographer's Tools, Cobbler's Tools, Cook's Utensils, Glassblower's Tools, Jeweler's Tools, Leatherworker's Tools, Mason's Tools, Painter's Supplies, Potter's Tools, Smith's Tools, Tinker's Tools, Weaver's Tools, Woodcarver's Tools, Disguise Kit, Forgery Kit]
+weapons:
+  - *w_sm
+  - *w_sr
+  - *w_mm
+  - *w_mr
+packs:
+  burglars_pack: &pack_burg [Backpack, Bag of 1000 Ball Bearings, Ball of String (10ft), Bell, Candles (x5), Crowbar, Hammer, Pitons (x10), Hooded Lanturn, Flask of Oil (x2), Rations (5 Days), Tinderbox, Waterskin]
+  diplomats_pack: &pack_diplo [Chest, Cases for Maps/Scrolls (x2), Set of Fine Clothes, Bottle of Ink, Ink Pen, Lamp, Flask of Oil (x2), Sheet of Paper (x5), Vial of Perfume, Sealing Wax, Soup]
+  dungeoneers_pack: &pack_dung [Backpack, Crowbar, Hammer, Piton (x10), Torch (x10), Tinderbox, Rations (10 Days), Waterskin]
+  entertainers_pack: &pack_ente [Backpack, Bedroll, Costume (x2), Candle (x5), Rations (5 Days), Waterskin, Disguise Kit]
+  explorers_pack: &pack_expl [Backpack, Bedroll, Mess Kit, Tinderbox, Torch (x10), Rations (10 Days), Waterskin]
+  priests_pack: &pack_prie [Backpack, Blanket, Candle (x10), Tinderbox, Alms Box, Block of Insense (x2), Censer, Vestments, Rations (2 Days), Waterskin]
+  scholars_pack: &pack_scho [Backpack, Book of Lore, Bottle of Ink, Ink Pen, Parchment (x10), Little Bag of Sand, Small Knife]

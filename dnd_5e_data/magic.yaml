@@ -1,0 +1,219 @@
+Bard:
+  cantrip:
+    - Blade Ward
+    - Dancing Lights
+    - Friends
+    - Light
+    - Mage Hand
+    - Mending
+    - Message
+    - Minor Illusion
+    - Prestidigitation
+    - True Strike
+    - Vicious Mockery
+  one:
+    - Animal Friendship
+    - Bane
+    - Charm Person
+    - Comprehend Languages
+    - Cure Wounds
+    - Detect Magic
+    - Disguise Self
+    - Dissonant Whispers
+    - Faerie Fire
+    - Feather Fall
+    - Healing Word
+    - Heroism
+    - Identify
+    - Illusory Script
+    - Longstrider
+    - Silent Image
+    - Sleep
+    - Speak with Animals
+    - Tasha's Hideous Laugh
+    - Thunderwave
+    - Unseen Servant
+Cleric:
+  cantrip:
+    - Guidance
+    - Light
+    - Mending
+    - Resistance
+    - Sacred Flame
+    - Spare the Dying
+    - Thaumaturgy
+  one:
+    - Bane
+    - Bless
+    - Command
+    - Create or Destroy Water
+    - Cure Wounds
+    - Detect Evil and Good
+    - Detect Magic
+    - Detect Poison and Disease
+    - Guiding Bolt
+    - Healing Word
+    - Inflict Wounds
+    - Protection from Evil and Good
+    - Purify Food and Drink
+    - Sanctuary
+    - Shield of Faith
+  Knowledge:
+    - Command
+    - Identify
+  Life:
+    - Bless
+    - Cure Wounds
+  Light:
+    - Burning Hands
+    - Faerie Fire
+  Nature:
+    - Animal Friendship
+    - Speak with Animals
+  Tempest:
+    - Fog Cloud
+    - Thunderwave
+  Trickery:
+    - Charm Person
+    - Disguise Self
+  War:
+    - Divine Favour
+    - Shield of Faith
+Druid:
+  cantrip:
+    - Druidcraft
+    - Guidance
+    - Mending
+    - Poison Spray
+    - Produce Flame
+    - Resistance
+    - Shillelagh
+    - Thorn Whip
+  one:
+    - Animal Friendship
+    - Charm Person
+    - Create or Destroy Water
+    - Cure Wounds
+    - Detect Magic
+    - Detect Poison and Disease
+    - Entangle
+    - Faerie Fire
+    - Fog Cloud
+    - Good berry
+    - Healing Word
+    - Jump
+    - Longstrider
+    - Purify Food and Drink
+    - Speak with Animals
+    - Thunderwave
+Sorcerer:
+  cantrip:
+     - Acid Splash
+     - Blade Ward
+     - Chill Touch
+     - Dancing Lights
+     - Fire Bolt
+     - Friends
+     - Light
+     - Mage Hand
+     - Mending
+     - Message
+     - Minor Illusion
+     - Poison Spray
+     - Prestidigitation
+     - Ray of Frost
+     - Shocking Grasp
+     - True Strike
+  one:
+     - Burning Hands
+     - Charm Person
+     - Chromatic Orb
+     - Color Spray
+     - Comprehend Languages
+     - Detect Magic
+     - Disguise Self
+     - Expeditious Retreat
+     - False Life
+     - Feather Fall
+     - Fog Cloud
+     - Jump
+     - Mage Armor
+     - Magic Missile
+     - Ray of Sickness
+     - Shield
+     - Silent Image
+     - Sleep
+     - Thunderwave
+     - Witch Bolt
+Warlock:
+  cantrip:
+     - Blade Ward
+     - Chill Touch
+     - Eldritch Blast
+     - Friends
+     - Mage Hand
+     - Minor Illusion
+     - Poison Spray
+     - Prestidigitation
+     - True Strike
+  one:
+     - Armor of Agathys
+     - Arms of Hadar
+     - Charm Person
+     - Comprehend Languages
+     - Expeditious Retreat
+     - Hellish Rebuke
+     - Hex
+     - Illusory Script
+     - Protection from Evil and Good
+     - Unseen Servant
+     - Witch Bolt
+Wizard:
+  cantrip:
+     - Acid Splash
+     - Blade Ward
+     - Chill Touch
+     - Dancing Lights
+     - Fire Bolt
+     - Friends
+     - Light
+     - Mage Hand
+     - Mending
+     - Message
+     - Minor Illusion
+     - Poison Spray
+     - Prestidigitation
+     - Ray of Frost
+     - Shocking Grasp
+     - True Strike
+  one:
+     - Alarm
+     - Burning Hands
+     - Charm Person
+     - Chromatic Orb
+     - Color Spray
+     - Comprehend Languages
+     - Detect Magic
+     - Disguise Self
+     - Expeditious Retreat
+     - False Life
+     - Feather Fall
+     - Find Familiar
+     - Fog Cloud
+     - Grease
+     - Identify
+     - Illusory Script
+     - Jump
+     - Longstrider
+     - Mage Armor
+     - Magic Missile
+     - Protection from Evil and Good
+     - Ray of Sickness
+     - Shield
+     - Silent Image
+     - Sleep
+     - Tasha's Hideous Laughter
+     - Tenser's Floating Disk
+     - Thunderwave
+     - Unseen Servant
+     - Witch Bolt

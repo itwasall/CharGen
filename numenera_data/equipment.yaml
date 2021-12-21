@@ -1,0 +1,72 @@
+packs:
+  explorers_pack:
+    - 50ft Rope
+    - Day's Rations
+    - Day's Rations
+    - Day's Rations
+    - Spike
+    - Spike
+    - Spike
+    - Hammer
+    - Warm Clothes
+    - Study Boots
+    - Torch
+    - Torch
+    - Torch
+    - Minor Glowglobe
+    - Minor Glowglobe
+weapons:
+  damage_values: {light: 2, med: 4, heavy: 6}
+  light_weapons:
+    - Blowgun
+    - Buzzer
+    - Club
+    - Dagger
+    - Dart Thrower
+    - Forearm Blade
+    - Knife
+    - Punching Dagger
+    - Rapier
+    - Razor Ring
+    - Sisk
+    - Whip
+  medium_weapons:
+    - Battleaxe
+    - Bow
+    - Arrow
+    - Broadsword
+    - Crank Crossbow
+    - Crossbow
+    - Flail
+    - Hammer
+    - Javelin
+    - Mace
+    - Polearm
+    - Quarterstaff
+    - Spear
+    - Verred
+    - Yulk
+  heavy_weapons:
+    - Greataxe
+    - Greatsword
+    - Heavy Crossbow
+    - Maul
+    - Sword-staff
+  ammunition:
+    - Arrow
+    - Crossbow Bolt
+    - Dart
+    - Buzzer Magazine
+armour:
+  defence_values: {light: 1, med: 2, heavy: 3}
+  light_armour:
+    - Leather Jerkin
+    - Hides and Furs
+  medium_armour:
+    - Beastskin
+    - Brigadine
+    - Chainmail Hauberk
+  heavy_armour:
+    - Plate Armour
+    - Scale Armour
+

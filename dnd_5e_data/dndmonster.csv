@@ -1,0 +1,762 @@
+Monster,Size,Type,Alignment,CR,Source
+Aboleth,Large,Aberration,Lawful Evil,10,Monster Manual
+Beholder,Large,Aberration,Lawful Evil,13,Monster Manual
+Blue Slaad,Large,Aberration,Chaotic Neutral,7,Monster Manual
+Chuul,Large,Aberration,Chaotic Evil,4,Monster Manual
+Cloaker,Large,Aberration,Chaotic Neutral,8,Monster Manual
+Death Kiss,Large,Aberration,Neutral Evil,10,Volo's Guide to Monsters
+Elder Brain,Large,Aberration,Lawful Evil,14,Volo's Guide to Monsters
+Flumph,Small,Aberration,Lawful Good,1/8,Monster Manual
+Gauth,Medium,Aberration,Lawful Evil,6,Volo's Guide to Monsters
+Gazer,Tiny,Aberration,Neutral Evil,1/2,Volo's Guide to Monsters
+Gibbering Mouther,Medium,Aberration,Neutral,2,Monster Manual
+Grell,Medium,Aberration,Neutral Evil,3,Monster Manual
+Intellect Devourer,Tiny,Aberration,Lawful Evil,2,Monster Manual
+Ixitxachitl,Small,Aberration,Chaotic Evil,1/4,Out of the Abyss
+Ixitxachitl Cleric,Small,Aberration,Chaotic Evil,1/4,Out of the Abyss
+Mind Flayer,Medium,Aberration,Lawful Evil,7,Monster Manual
+Mind Flayer Arcanist,Medium,Aberration,Lawful Evil,8,Monster Manual
+Mind Flayer Psion,Medium,Aberration,Lawful Evil,8,Volo's Guide to Monsters
+Mindwitness,Large,Aberration,Lawful Evil,5,Volo's Guide to Monsters
+Morkoth,Medium,Aberration,Chaotic Evil,11,Volo's Guide to Monsters
+Neogi,Small,Aberration,Lawful Evil,3,Volo's Guide to Monsters
+Neogi Hatchling,Tiny,Aberration,Lawful Evil,1/8,Volo's Guide to Monsters
+Neogi Master,Medium,Aberration,Lawful Evil,4,Volo's Guide to Monsters
+Neothelid,Gargantuan,Aberration,Chaotic Evil,13,Volo's Guide to Monsters
+Nothic,Medium,Aberration,Neutral Evil,2,Monster Manual
+Otyugh,Large,Aberration,Neutral,5,Monster Manual
+Red Slaad,Large,Aberration,Chaotic Neutral,5,Monster Manual
+Slaad Tadpole,Tiny,Aberration,Chaotic Neutral,1/8,Monster Manual
+Spectator,Medium,Aberration,Lawful Neutral,3,Monster Manual
+Ulitharid,Large,Aberration,Lawful Evil,9,Volo's Guide to Monsters
+Vampiric Ixitxachitl,Medium,Aberration,Chaotic Evil,2,Out of the Abyss
+Vampiric Ixitxachitl Cleric,Medium,Aberration,Chaotic Evil,2,Out of the Abyss
+Death Slaad,Medium,Aberration (shapechanger),Chaotic Evil,10,Monster Manual
+Gray Slaad,Medium,Aberration (shapechanger),Chaotic Neutral,9,Monster Manual
+Green Slaad,Large,Aberration (shapechanger),Chaotic Neutral,8,Monster Manual
+Allosaurus,Large,Beast,Unaligned,2,Monster Manual
+Ankylosaurus,Huge,Beast,Unaligned,3,Monster Manual
+Ape,Medium,Beast,Unaligned,1/2,Monster Manual
+Aurochs,Large,Beast,Unaligned,2,Volo's Guide to Monsters
+Axe Beak,Large,Beast,Unaligned,1/4,Monster Manual
+Baboon,Small,Beast,Unaligned,0,Monster Manual
+Badger,Tiny,Beast,Unaligned,0,Monster Manual
+Bat,Tiny,Beast,Unaligned,0,Monster Manual
+Black Bear,Medium,Beast,Unaligned,1/2,Monster Manual
+Blood Hawk,Small,Beast,Unaligned,1/8,Monster Manual
+Boar,Medium,Beast,Unaligned,1/4,Monster Manual
+Brontosaurus,Gargantuan,Beast,Unaligned,5,Volo's Guide to Monsters
+Brown Bear,Large,Beast,Unaligned,1,Monster Manual
+Camel,Large,Beast,Unaligned,1/8,Monster Manual
+Cat,Tiny,Beast,Unaligned,0,Monster Manual
+Cave Bear,Large,Beast,Unaligned,2,Monster Manual
+Constrictor Snake,Large,Beast,Unaligned,1/4,Monster Manual
+Cow,Large,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Crab,Tiny,Beast,Unaligned,0,Monster Manual
+Crag Cat,Large,Beast,Unaligned,1,Storm King's Thunder
+Cranium Rat,Tiny,Beast,Lawful Evil,0,Volo's Guide to Monsters
+Crocodile,Large,Beast,Unaligned,1/2,Monster Manual
+Deep Rothe,Medium,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Deer,Medium,Beast,Unaligned,0,Monster Manual
+Deinonychus,Medium,Beast,Unaligned,1,Volo's Guide to Monsters
+Dimetrodon,Medium,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Dire Wolf,Large,Beast,Unaligned,1,Monster Manual
+Dolphin,Medium,Beast,Unaligned,1/8,Volo's Guide to Monsters
+Draft Horse,Large,Beast,Unaligned,1/4,Monster Manual
+Eagle,Small,Beast,Unaligned,0,Monster Manual
+Elephant,Huge,Beast,Unaligned,4,Monster Manual
+Elk,Large,Beast,Unaligned,1/4,Monster Manual
+Female Steeder,Large,Beast,Unaligned,1,Out of the Abyss
+Flying Snake,Tiny,Beast,Unaligned,1/8,Monster Manual
+Frog,Tiny,Beast,Unaligned,0,Monster Manual
+Giant Ape,Huge,Beast,Unaligned,7,Monster Manual
+Giant Badger,Medium,Beast,Unaligned,1/4,Monster Manual
+Giant Bat,Large,Beast,Unaligned,1/4,Monster Manual
+Giant Boar,Large,Beast,Unaligned,2,Monster Manual
+Giant Centipede,Small,Beast,Unaligned,1/4,Monster Manual
+Giant Constrictor Snake,Huge,Beast,Unaligned,2,Monster Manual
+Giant Crab,Medium,Beast,Unaligned,1/8,Monster Manual
+Giant Crayfish,Large,Beast,Unaligned,2,Yawning Portal
+Giant Crocodile,Huge,Beast,Unaligned,5,Monster Manual
+Giant Eagle,Large,Beast,Neutral Good,1,Monster Manual
+Giant Elk,Huge,Beast,Unaligned,2,Monster Manual
+Giant Fire Beetle,Small,Beast,Unaligned,0,Monster Manual
+Giant Fly,Large,Beast,Unaligned,0,Monster Manual
+Giant Frog,Medium,Beast,Unaligned,1/4,Monster Manual
+Giant Goat,Large,Beast,Unaligned,1/2,Monster Manual
+Giant Hyena,Large,Beast,Unaligned,1,Monster Manual
+Giant Lightning Eel,Large,Beast,Unaligned,3,Yawning Portal
+Giant Lizard,Large,Beast,Unaligned,1/4,Monster Manual
+Giant Octopus,Large,Beast,Unaligned,1,Monster Manual
+Giant Owl,Large,Beast,Neutral,1/4,Monster Manual
+Giant Poisonous Snake,Medium,Beast,Unaligned,1/4,Monster Manual
+Giant Rat,Small,Beast,Unaligned,1/8,Monster Manual
+Giant Rat (Diseased),Small,Beast,Unaligned,1/8,Monster Manual
+Giant Scorpion,Large,Beast,Unaligned,3,Monster Manual
+Giant Sea Horse,Large,Beast,Unaligned,1/2,Monster Manual
+Giant Shark,Huge,Beast,Unaligned,5,Monster Manual
+Giant Spider,Large,Beast,Unaligned,1,Monster Manual
+Giant Subterranean Lizard,Huge,Beast,Unaligned,4,Yawning Portal
+Giant Toad,Large,Beast,Unaligned,1,Monster Manual
+Giant Vulture,Large,Beast,Neutral Evil,1,Monster Manual
+Giant Wasp,Medium,Beast,Unaligned,1/2,Monster Manual
+Giant Weasel,Medium,Beast,Unaligned,1/8,Monster Manual
+Giant Wolf Spider,Medium,Beast,Unaligned,1/4,Monster Manual
+Goat,Medium,Beast,Unaligned,0,Monster Manual
+Hadrosaurus,Large,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Hawk,Tiny,Beast,Unaligned,0,Monster Manual
+Hulking Crab,Huge,Beast,Unaligned,5,Storm King's Thunder
+Hunter Shark,Large,Beast,Unaligned,2,Monster Manual
+Hyena,Medium,Beast,Unaligned,0,Monster Manual
+Jackal,Small,Beast,Unaligned,0,Monster Manual
+Killer Whale,Huge,Beast,Unaligned,3,Monster Manual
+Lion,Large,Beast,Unaligned,1,Monster Manual
+Lizard,Tiny,Beast,Unaligned,0,Monster Manual
+Male Steeder,Medium,Beast,Unaligned,1/4,Out of the Abyss
+Mammoth,Huge,Beast,Unaligned,6,Monster Manual
+Mastiff,Medium,Beast,Unaligned,1/8,Monster Manual
+Mule,Medium,Beast,Unaligned,1/8,Monster Manual
+Octopus,Small,Beast,Unaligned,0,Monster Manual
+Owl,Tiny,Beast,Unaligned,0,Monster Manual
+Ox,Large,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Panther,Medium,Beast,Unaligned,1/4,Monster Manual
+Plesiosaurus,Large,Beast,Unaligned,2,Monster Manual
+Poisonous Snake,Tiny,Beast,Unaligned,1/8,Monster Manual
+Polar Bear,Large,Beast,Unaligned,2,Monster Manual
+Pony,Medium,Beast,Unaligned,1/8,Monster Manual
+Pteranodon,Medium,Beast,Unaligned,1/4,Monster Manual
+Quetzalcoatlus,Huge,Beast,Unaligned,2,Volo's Guide to Monsters
+Quipper,Tiny,Beast,Unaligned,0,Monster Manual
+Rat,Tiny,Beast,Unaligned,0,Monster Manual
+Raven,Tiny,Beast,Unaligned,0,Monster Manual
+Reef Shark,Medium,Beast,Unaligned,1/2,Monster Manual
+Rhinoceros,Large,Beast,Unaligned,2,Monster Manual
+Riding Horse,Large,Beast,Unaligned,1/4,Monster Manual
+Rothe,Large,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Saber-Toothed Tiger,Large,Beast,Unaligned,2,Monster Manual
+Scorpion,Tiny,Beast,Unaligned,0,Monster Manual
+Sea Horse,Tiny,Beast,Unaligned,0,Monster Manual
+Spider,Tiny,Beast,Unaligned,0,Monster Manual
+Stegosaurus,Huge,Beast,Unaligned,4,Volo's Guide to Monsters
+Stench Kow,Large,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Stirge,Tiny,Beast,Unaligned,1/8,Monster Manual
+Tiger,Large,Beast,Unaligned,1,Monster Manual
+Tressym,Tiny,Beast,Chaotic Neutral,0,Storm King's Thunder
+Triceratops,Huge,Beast,Unaligned,5,Monster Manual
+Tyrannosaurus Rex,Huge,Beast,Unaligned,8,Monster Manual
+Velociraptor,Tiny,Beast,Unaligned,1/4,Volo's Guide to Monsters
+Vulture,Medium,Beast,Unaligned,0,Monster Manual
+Warhorse,Large,Beast,Unaligned,1/2,Monster Manual
+Weasel,Tiny,Beast,Unaligned,0,Monster Manual
+Wolf,Medium,Beast,Unaligned,1/4,Monster Manual
+Couatl,Medium,Celestial,Lawful Good,4,Monster Manual
+Deva,Medium,Celestial,Lawful Good,10,Monster Manual
+Ki-rin,Huge,Celestial,Lawful Good,12,Volo's Guide to Monsters
+Pegasus,Large,Celestial,Chaotic Good,2,Monster Manual
+Planetar,Large,Celestial,Lawful Good,16,Monster Manual
+Solar,Large,Celestial,Lawful Good,21,Monster Manual
+Unicorn,Large,Celestial,Lawful Good,5,Monster Manual
+Empyrean,Huge,Celestial (titan),Chaotic Good (75%) Or Neutral Evil (25%),23,Monster Manual
+Animated Armor,Medium,Construct,Unaligned,1,Monster Manual
+Animated Table,Large,Construct,Unaligned,2,Yawning Portal
+Baba Lysaga's Creeping Hut,Gargantuan,Construct,Unaligned,11,Curse of Strahd
+Broom of Animated Attack,Small,Construct,Unaligned,1/4,Curse of Strahd
+Clay Golem,Large,Construct,Unaligned,9,Monster Manual
+Duodrone,Medium,Construct,Construct,1/4,Monster Manual
+Flesh Golem,Medium,Construct,Neutral,5,Monster Manual
+Flying Sword,Small,Construct,Unaligned,1/4,Monster Manual
+Guardian Portrait,Medium,Construct,Unaligned,1,Curse of Strahd
+Helmed Horror,Medium,Construct,Unaligned,4,Monster Manual
+Homunculus,Tiny,Construct,Neutral,0,Monster Manual
+Iron Golem,Large,Construct,Unaligned,16,Monster Manual
+Monodrone,Medium,Construct,Construct,1/8,Monster Manual
+Pentadrone,Medium,Construct,Construct,2,Monster Manual
+Pidlwick II,Small,Construct,Neutral Evil,1/4,Curse of Strahd
+Quadrone,Medium,Construct,Construct,1,Monster Manual
+Rug of Smothering,Large,Construct,Unaligned,2,Monster Manual
+Scarecrow,Medium,Construct,Chaotic Evil,1,Monster Manual
+Shield Guardian,Large,Construct,Unaligned,7,Monster Manual
+Stone Golem,Large,Construct,Unaligned,10,Monster Manual
+Strahd's Animated Armor,Medium,Construct,Lawful Evil,6,Curse of Strahd
+Tridrone,Medium,Construct,Construct,1/2,Monster Manual
+Adult Black Dragon,Huge,Dragon,Chaotic Evil,14,Monster Manual
+Adult Blue Dragon,Huge,Dragon,Lawful Evil,16,Monster Manual
+Adult Brass Dragon,Huge,Dragon,Chaotic Good,13,Monster Manual
+Adult Bronze Dragon,Huge,Dragon,Lawful Good,15,Monster Manual
+Adult Copper Dragon,Huge,Dragon,Chaotic Good,14,Monster Manual
+Adult Gold Dragon,Huge,Dragon,Lawful Good,17,Monster Manual
+Adult Green Dragon,Huge,Dragon,Lawful Evil,15,Monster Manual
+Adult Red Dragon,Huge,Dragon,Chaotic Evil,17,Monster Manual
+Adult Silver Dragon,Huge,Dragon,Lawful Good,16,Monster Manual
+Adult White Dragon,Huge,Dragon,Chaotic Evil,13,Monster Manual
+Ambush Drake,Medium,Dragon,Unaligned,1/2,Hoard of the Dragon Queen
+Ancient Black Dragon,Gargantuan,Dragon,Chaotic Evil,21,Monster Manual
+Ancient Blue Dragon,Gargantuan,Dragon,Lawful Evil,23,Monster Manual
+Ancient Brass Dragon,Gargantuan,Dragon,Chaotic Good,20,Monster Manual
+Ancient Bronze Dragon,Gargantuan,Dragon,Lawful Good,22,Monster Manual
+Ancient Copper Dragon,Gargantuan,Dragon,Chaotic Good,21,Monster Manual
+Ancient Gold Dragon,Gargantuan,Dragon,Lawful Good,24,Monster Manual
+Ancient Green Dragon,Gargantuan,Dragon,Lawful Evil,22,Monster Manual
+Ancient Red Dragon,Gargantuan,Dragon,Chaotic Evil,24,Monster Manual
+Ancient Silver Dragon,Gargantuan,Dragon,Lawful Good,23,Monster Manual
+Ancient White Dragon,Gargantuan,Dragon,Chaotic Evil,20,Monster Manual
+Black Dragon Wyrmling,Medium,Dragon,Chaotic Evil,2,Monster Manual
+Black Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+Blue Dragon Wyrmling,Medium,Dragon,Lawful Evil,3,Monster Manual
+Blue Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+Brass Dragon Wyrmling,Medium,Dragon,Chaotic Good,1,Monster Manual
+Bronze Dragon Wyrmling,Medium,Dragon,Lawful Good,2,Monster Manual
+Copper Dragon Wyrmling,Medium,Dragon,Chaotic Good,1,Monster Manual
+Dragon Turtle,Gargantuan,Dragon,Neutral,17,Monster Manual
+Faerie Dragon (Blue),Tiny,Dragon,Chaotic Good,2,Monster Manual
+Faerie Dragon (Green),Tiny,Dragon,Chaotic Good,2,Monster Manual
+Faerie Dragon (Indigo),Tiny,Dragon,Chaotic Good,2,Monster Manual
+Faerie Dragon (Orange),Tiny,Dragon,Chaotic Good,1,Monster Manual
+Faerie Dragon (Red),Tiny,Dragon,Chaotic Good,1,Monster Manual
+Faerie Dragon (Violet),Tiny,Dragon,Chaotic Good,2,Monster Manual
+Faerie Dragon (Yellow),Tiny,Dragon,Chaotic Good,1,Monster Manual
+Gold Dragon Wyrmling,Medium,Dragon,Lawful Good,3,Monster Manual
+Green Dragon Wyrmling,Medium,Dragon,Lawful Evil,2,Monster Manual
+Green Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+"Iymrith, Ancient Blue Dragon",Gargantuan,Dragon,Lawful Evil,23,Monster Manual
+Pseudodragon,Tiny,Dragon,Neutral Good,1/4,Monster Manual
+Red Dragon Wyrmling,Medium,Dragon,Chaotic Evil,4,Monster Manual
+Red Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+Silver Dragon Wyrmling,Medium,Dragon,Lawful Good,2,Monster Manual
+White Dragon Wyrmling,Medium,Dragon,Chaotic Evil,2,Monster Manual
+White Guard Drake,Medium,Dragon,Unaligned,2,Volo's Guide to Monsters
+Wyvern,Large,Dragon,Unaligned,6,Monster Manual
+Young Black Dragon,Large,Dragon,Chaotic Evil,7,Monster Manual
+Young Blue Dragon,Large,Dragon,Lawful Evil,9,Monster Manual
+Young Brass Dragon,Large,Dragon,Chaotic Good,6,Monster Manual
+Young Bronze Dragon,Large,Dragon,Lawful Good,8,Monster Manual
+Young Copper Dragon,Large,Dragon,Chaotic Good,7,Monster Manual
+Young Gold Dragon,Large,Dragon,Lawful Good,10,Monster Manual
+Young Green Dragon,Large,Dragon,Lawful Evil,8,Monster Manual
+Young Red Dragon,Large,Dragon,Chaotic Evil,10,Monster Manual
+Young Red Shadow Dragon,Large,Dragon,Chaotic Evil,13,Monster Manual
+Young Silver Dragon,Large,Dragon,Lawful Good,9,Monster Manual
+Young White Dragon,Large,Dragon,Chaotic Evil,6,Monster Manual
+Air Elemental,Large,Elemental,Neutral,5,Monster Manual
+Air Elemental Myrmidon,Medium,Elemental,Neutral,7,Prince of the Apocalypse
+Azer,Medium,Elemental,Lawful Neutral,2,Monster Manual
+Dao,Large,Elemental,Neutral Evil,11,Monster Manual
+Djinni,Large,Elemental,Chaotic Good,11,Monster Manual
+Dust Mephit,Small,Elemental,Neutral Evil,1/2,Monster Manual
+Earth Elemental,Large,Elemental,Neutral,5,Monster Manual
+Earth Elemental Myrmidon,Medium,Elemental,Neutral,7,Prince of the Apocalypse
+Efreeti,Large,Elemental,Lawful Evil,11,Monster Manual
+Fire Elemental,Large,Elemental,Neutral,5,Monster Manual
+Fire Elemental Myrmidon,Medium,Elemental,Neutral,7,Prince of the Apocalypse
+Fire Snake,Medium,Elemental,Neutral Evil,1,Monster Manual
+Flail Snail,Large,Elemental,Unaligned,3,Volo's Guide to Monsters
+Galeb Duhr,Medium,Elemental,Neutral,6,Monster Manual
+Gargoyle,Medium,Elemental,Chaotic Evil,2,Monster Manual
+Ice Mephit,Small,Elemental,Neutral Evil,1/2,Monster Manual
+Imix,Huge,Elemental,Neutral Evil,19,Prince of the Apocalypse
+Invisible Stalker,Medium,Elemental,Neutral,6,Monster Manual
+Maegera the Dawn Titan,Gargantuan,Elemental,Chaotic Evil,23,Storm King's Thunder
+Magma Mephit,Small,Elemental,Neutral Evil,1/2,Monster Manual
+Magmin,Small,Elemental,Chaotic Neutral,1/2,Monster Manual
+Marid,Large,Elemental,Chaotic Neutral,11,Monster Manual
+Mud Mephit,Small,Elemental,Neutral Evil,1/4,Monster Manual
+Ogremoch,Gargantuan,Elemental,Neutral Evil,20,Prince of the Apocalypse
+Olhydra,Huge,Elemental,Neutral Evil,18,Prince of the Apocalypse
+Salamander,Large,Elemental,Neutral Evil,5,Monster Manual
+Smoke Mephit,Small,Elemental,Neutral Evil,1/4,Monster Manual
+Steam Mephit,Small,Elemental,Neutral Evil,1/4,Monster Manual
+Water Elemental,Large,Elemental,Neutral,5,Monster Manual
+Water Elemental Myrmidon,Medium,Elemental,Neutral,7,Prince of the Apocalypse
+Water Weird,Large,Elemental,Neutral,3,Monster Manual
+Xorn,Medium,Elemental,Neutral,5,Monster Manual
+Yan-C-Bin,Huge,Elemental,Neutral Evil,18,Prince of the Apocalypse
+Annis Hag,Large,Fey,Chaotic Evil,6,Volo's Guide to Monsters
+Bheur Hag,Medium,Fey,Chaotic Evil,7,Volo's Guide to Monsters
+Blink Dog,Medium,Fey,Lawful Good,1/4,Monster Manual
+Boggle,Small,Fey,Chaotic Neutral,1/8,Volo's Guide to Monsters
+Darkling,Small,Fey,Chaotic Neutral,1/2,Volo's Guide to Monsters
+Darkling Elder,Medium,Fey,Chaotic Neutral,2,Volo's Guide to Monsters
+Dryad,Medium,Fey,Neutral,1,Monster Manual
+Green Hag,Medium,Fey,Neutral Evil,3,Monster Manual
+Korred,Small,Fey,Chaotic Neutral,7,Volo's Guide to Monsters
+Meenlock,Small,Fey,Neutral Evil,2,Volo's Guide to Monsters
+Nereid,Medium,Fey,Any Chaotic Alignment,2,Yawning Portal
+Pixie,Tiny,Fey,Neutral Good,1/4,Monster Manual
+Quickling,Tiny,Fey,Chaotic Evil,1,Volo's Guide to Monsters
+Redcap,Small,Fey,Chaotic Evil,3,Volo's Guide to Monsters
+Satyr,Medium,Fey,Chaotic Neutral,1/2,Monster Manual
+Sea Hag,Medium,Fey,Chaotic Evil,2,Monster Manual
+Siren,Medium,Fey,Chaotic Good,3,Yawning Portal
+Sprite,Tiny,Fey,Neutral Good,1/4,Monster Manual
+Yeth Hound,Large,Fey,Neutral Evil,4,Volo's Guide to Monsters
+Cambion,Medium,Fiend,Any Evil Alignment,5,Monster Manual
+Devourer,Large,Fiend,Chaotic Evil,13,Volo's Guide to Monsters
+Hell Hound,Medium,Fiend,Lawful Evil,3,Monster Manual
+Night Hag,Medium,Fiend,Neutral Evil,5,Monster Manual
+Nightmare,Large,Fiend,Neutral Evil,3,Monster Manual
+Rakshasa,Medium,Fiend,Lawful Evil,13,Monster Manual
+Tiamat,Gargantuan,Fiend,Chaotic Evil,30,Hoard of the Dragon Queen
+Vargouille,Tiny,Fiend,Chaotic Evil,1,Volo's Guide to Monsters
+Babau,Medium,Fiend (demon),Chaotic Evil,4,Volo's Guide to Monsters
+Balor,Huge,Fiend (demon),Chaotic Evil,19,Monster Manual
+Baphomet,Huge,Fiend (demon),Chaotic Evil,23,Out of the Abyss
+Barlgura,Large,Fiend (demon),Chaotic Evil,5,Monster Manual
+Chasme,Large,Fiend (demon),Chaotic Evil,6,Monster Manual
+Demogorgon,Huge,Fiend (demon),Chaotic Evil,26,Out of the Abyss
+Draegloth,Large,Fiend (demon),Chaotic Evil,7,Volo's Guide to Monsters
+Dretch,Small,Fiend (demon),Chaotic Evil,1/4,Monster Manual
+Fraz-Urb'luu,Large,Fiend (demon),Chaotic Evil,23,Out of the Abyss
+Glabrezu,Large,Fiend (demon),Chaotic Evil,9,Monster Manual
+Goristro,Huge,Fiend (demon),Chaotic Evil,17,Monster Manual
+Hezrou,Large,Fiend (demon),Chaotic Evil,8,Monster Manual
+Juiblex,Huge,Fiend (demon),Chaotic Evil,23,Out of the Abyss
+Manes,Small,Fiend (demon),Chaotic Evil,1/8,Monster Manual
+Marilith,Large,Fiend (demon),Chaotic Evil,16,Monster Manual
+Maw Demon,Medium,Fiend (demon),Chaotic Evil,1,Volo's Guide to Monsters
+Nalfeshnee,Large,Fiend (demon),Chaotic Evil,13,Monster Manual
+Orcus,Huge,Fiend (demon),Chaotic Evil,26,Out of the Abyss
+Quasit,Tiny,Fiend (demon),Chaotic Evil,1,Monster Manual
+Shadow Demon,Medium,Fiend (demon),Chaotic Evil,4,Monster Manual
+Shoosuva,Large,Fiend (demon),Chaotic Evil,8,Volo's Guide to Monsters
+Vrock,Large,Fiend (demon),Chaotic Evil,6,Monster Manual
+Yeenoghu,Huge,Fiend (demon),Chaotic Evil,24,Out of the Abyss
+Yochlol,Medium,Fiend (demon),Chaotic Evil,10,Monster Manual
+Zuggtmoy,Large,Fiend (demon),Chaotic Evil,23,Out of the Abyss
+Tanarukk,Medium,"Fiend (demon, Orc)",Chaotic Evil,5,Volo's Guide to Monsters
+Graz'zt,Large,"Fiend (demon, Shapechanger)",Chaotic Evil,24,Out of the Abyss
+Barbed Devil,Medium,Fiend (devil),Lawful Evil,5,Monster Manual
+Bearded Devil,Medium,Fiend (devil),Lawful Evil,3,Monster Manual
+Bone Devil,Large,Fiend (devil),Lawful Evil,12,Monster Manual
+Bone Devil Polearm,Large,Fiend (devil),Lawful Evil,12,Monster Manual
+Chain Devil,Medium,Fiend (devil),Lawful Evil,11,Monster Manual
+Erinyes,Medium,Fiend (devil),Lawful Evil,12,Monster Manual
+Horned Devil,Large,Fiend (devil),Lawful Evil,11,Monster Manual
+Ice Devil,Large,Fiend (devil),Lawful Evil,14,Monster Manual
+Ice Devil Spear,Large,Fiend (devil),Lawful Evil,14,Monster Manual
+Imp,Tiny,Fiend (devil),Lawful Evil,1,Monster Manual
+Lemure,Medium,Fiend (devil),Lawful Evil,0,Monster Manual
+Pit Fiend,Large,Fiend (devil),Lawful Evil,20,Monster Manual
+Spined Devil,Small,Fiend (devil),Lawful Evil,2,Monster Manual
+Barghest,Large,Fiend (shapechanger),Neutral Evil,4,Volo's Guide to Monsters
+Succubus/Incubus,Medium,Fiend (shapechanger),Neutral Evil,4,Monster Manual
+Arcanaloth,Medium,Fiend (yugoloth),Neutral Evil,12,Monster Manual
+Mezzoloth,Medium,Fiend (yugoloth),Neutral Evil,5,Monster Manual
+Nycaloth,Large,Fiend (yugoloth),Neutral Evil,9,Monster Manual
+Ultroloth,Medium,Fiend (yugoloth),Neutral Evil,13,Monster Manual
+Cloud Giant,Huge,Giant,Neutral Good (50%) Or Neutral Evil (50%),9,Monster Manual
+Cyclops,Huge,Giant,Chaotic Neutral,6,Monster Manual
+Ettin,Large,Giant,Chaotic Evil,4,Monster Manual
+Fire Giant,Huge,Giant,Lawful Evil,9,Monster Manual
+Fomorian,Huge,Giant,Chaotic Evil,8,Monster Manual
+Frost Giant,Huge,Giant,Neutral Evil,8,Monster Manual
+Half-Ogre (Ogrillon),Large,Giant,Any Chaotic Alignment,1,Monster Manual
+Hill Giant,Huge,Giant,Chaotic Evil,5,Monster Manual
+Ogre,Large,Giant,Chaotic Evil,2,Monster Manual
+Oni,Large,Giant,Lawful Evil,7,Monster Manual
+Stone Giant,Huge,Giant,Neutral,7,Monster Manual
+Storm Giant,Huge,Giant,Chaotic Good,13,Monster Manual
+Troll,Large,Giant,Chaotic Evil,5,Monster Manual
+Blagothkus,Huge,Giant (cloud Giant),Neutral Evil,9,Hoard of the Dragon Queen
+Cloud Giant Smiling One,Huge,Giant (cloud Giant),Chaotic Neutral,11,Volo's Guide to Monsters
+Fire Giant Dreadnought,Huge,Giant (fire Giant),Lawful Evil,14,Volo's Guide to Monsters
+Frost Giant Everlasting One,Huge,Giant (frost Giant),Chaotic Evil,12,Volo's Guide to Monsters
+Mouth of Grolantor,Huge,Giant (hill Giant),Chaotic Evil,6,Volo's Guide to Monsters
+Stone Giant Dreamwalker,Huge,Giant (stone Giant),Chaotic Neutral,10,Volo's Guide to Monsters
+Storm Giant Quintessent,Huge,Giant (storm Giant),Chaotic Good,16,Volo's Guide to Monsters
+Sea Spawn,Medium,Humanoid,Neutral Evil,1,Volo's Guide to Monsters
+Aarakocra,Medium,Humanoid (aarakocra),Neutral Good,1/4,Monster Manual
+Abjurer,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Acolyte,Medium,Humanoid (any Race),Any Alignment,1/4,Monster Manual
+Apprentice Wizard,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Archdruid,Medium,Humanoid (any Race),Any Alignment,12,Volo's Guide to Monsters
+Archer,Medium,Humanoid (any Race),Any Alignment,3,Volo's Guide to Monsters
+Archmage,Medium,Humanoid (any Race),Any Alignment,12,Monster Manual
+Assassin,Medium,Humanoid (any Race),Any Non-good Alignment,8,Monster Manual
+Bandit,Medium,Humanoid (any Race),Any Non-lawful Alignment,1/8,Monster Manual
+Bandit Captain,Medium,Humanoid (any Race),Any Non-lawful Alignment,2,Monster Manual
+Bard,Medium,Humanoid (any Race),Any Alignment,2,Volo's Guide to Monsters
+Berserker,Medium,Humanoid (any Race),Any Chaotic Alignment,2,Monster Manual
+Blackguard,Medium,Humanoid (any Race),Any Non-good Alignment,8,Volo's Guide to Monsters
+Champion,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Commoner,Medium,Humanoid (any Race),Any Alignment,0,Monster Manual
+Conjurer,Medium,Humanoid (any Race),Any Alignment,6,Volo's Guide to Monsters
+Cult Fanatic,Medium,Humanoid (any Race),Any Non-good Alignment,2,Monster Manual
+Cultist,Medium,Humanoid (any Race),Any Non-good Alignment,1/8,Monster Manual
+Diviner,Medium,Humanoid (any Race),Any Alignment,8,Volo's Guide to Monsters
+Druid,Medium,Humanoid (any Race),Any Alignment,2,Monster Manual
+Enchanter,Medium,Humanoid (any Race),Any Alignment,5,Volo's Guide to Monsters
+Evoker,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Gladiator,Medium,Humanoid (any Race),Any Alignment,5,Monster Manual
+Guard,Medium,Humanoid (any Race),Any Alignment,1/8,Monster Manual
+Illusionist,Medium,Humanoid (any Race),Any Alignment,3,Volo's Guide to Monsters
+Knight,Medium,Humanoid (any Race),Any Alignment,3,Monster Manual
+Kraken Priest,Medium,Humanoid (any Race),Any Evil Alignment,5,Volo's Guide to Monsters
+Mage,Medium,Humanoid (any Race),Any Alignment,6,Monster Manual
+Martial Arts Adept,Medium,Humanoid (any Race),Any Alignment,3,Volo's Guide to Monsters
+Master Thief,Medium,Humanoid (any Race),Any Alignment,5,Volo's Guide to Monsters
+Necromancer,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Noble,Medium,Humanoid (any Race),Any Alignment,1/8,Monster Manual
+Priest,Medium,Humanoid (any Race),Any Alignment,2,Monster Manual
+Scout,Medium,Humanoid (any Race),Any Alignment,1/2,Monster Manual
+Spy,Medium,Humanoid (any Race),Any Alignment,1,Monster Manual
+Swashbuckler,Medium,Humanoid (any Race),Any Non-lawful Alignment,3,Volo's Guide to Monsters
+Thug,Medium,Humanoid (any Race),Any Non-good Alignment,1/2,Monster Manual
+Transmuter,Medium,Humanoid (any Race),Any Alignment,5,Volo's Guide to Monsters
+Tribal Warrior,Medium,Humanoid (any Race),Any Alignment,1/8,Monster Manual
+Veteran,Medium,Humanoid (any Race),Any Alignment,3,Monster Manual
+War Priest,Medium,Humanoid (any Race),Any Alignment,9,Volo's Guide to Monsters
+Warlock of the Archfey,Medium,Humanoid (any Race),Any Alignment,4,Volo's Guide to Monsters
+Warlock of the Fiend,Medium,Humanoid (any Race),Any Alignment,7,Volo's Guide to Monsters
+Warlock of the Great Old One,Medium,Humanoid (any Race),Any Alignment,6,Volo's Guide to Monsters
+Warlord,Medium,Humanoid (any Race),Any Alignment,12,Volo's Guide to Monsters
+Bullywug,Medium,Humanoid (bullywug),Neutral Evil,1/4,Monster Manual
+Pharblex Spattergoo,Medium,Humanoid (bullywug),Chaotic Evil,3,Hoard of the Dragon Queen
+Sirac of Suzail,Medium,Humanoid (chondathan Human),Lawful Good,0,Storm King's Thunder
+Grisha,Medium,Humanoid (damaran Human),Chaotic Evil,2,Out of the Abyss
+Miros Xelbrin,Medium,Humanoid (damaran Human),Neutral Good,0,Storm King's Thunder
+Derro,Small,Humanoid (derro),Chaotic Evil,1/4,Out of the Abyss
+Derro Savant,Small,Humanoid (derro),Chaotic Evil,3,Out of the Abyss
+Droki,Small,Humanoid (derro),Chaotic Evil,2,Out of the Abyss
+Narrak,Small,Humanoid (derro),Chaotic Evil,2,Out of the Abyss
+Duergar,Medium,Humanoid (dwarf),Lawful Evil,1,Monster Manual
+Duergar Darkhaft,Medium,Humanoid (dwarf),Lawful Evil,2,Out of the Abyss
+Duergar Kavalrachni,Medium,Humanoid (dwarf),Lawful Evil,2,Out of the Abyss
+Duergar Keeper of the Flame,Medium,Humanoid (dwarf),Lawful Evil,2,Out of the Abyss
+Duergar Soulblade,Medium,Humanoid (dwarf),Lawful Evil,1,Out of the Abyss
+Duergar Spy,Medium,Humanoid (dwarf),Lawful Evil,2,Yawning Portal
+Duergar Stone Guard,Medium,Humanoid (dwarf),Lawful Evil,2,Out of the Abyss
+Duergar Xarron,Medium,Humanoid (dwarf),Lawful Evil,2,Out of the Abyss
+Miraj Vizann,Medium,Humanoid (earth Genasi),Neutral Evil,6,Prince of the Apocalypse
+Aerisi Kalinoth,Medium,Humanoid (elf),Neutral Evil,7,Prince of the Apocalypse
+Drow,Medium,Humanoid (elf),Neutral Evil,1/4,Monster Manual
+Drow Elite Warrior,Medium,Humanoid (elf),Neutral Evil,5,Monster Manual
+Drow Mage,Medium,Humanoid (elf),Neutral Evil,7,Monster Manual
+Drow Priestess of Lolth,Medium,Humanoid (elf),Neutral Evil,8,Monster Manual
+Neronvain,Medium,Humanoid (elf),Neutral Evil,9,Hoard of the Dragon Queen
+Nezznar the Black Spider,Medium,Humanoid (elf),Neutral Evil,2,lost-mine-of-phandelver
+Rahadin,Medium,Humanoid (elf),Lawful Evil,10,Curse of Strahd
+Bastian Thermandar,Medium,Humanoid (fire Genasi),Neutral Evil,8,Prince of the Apocalypse
+Firenewt Warlock of Imix,Medium,Humanoid (firenewt),Neutral Evil,1,Volo's Guide to Monsters
+Firenewt Warrior,Medium,Humanoid (firenewt),Neutral Evil,1/2,Volo's Guide to Monsters
+Githyanki Knight,Medium,Humanoid (gith),Lawful Evil,8,Monster Manual
+Githyanki Warrior,Medium,Humanoid (gith),Lawful Evil,3,Monster Manual
+Githzerai Monk,Medium,Humanoid (gith),Lawful Neutral,2,Monster Manual
+Githzerai Zerth,Medium,Humanoid (gith),Lawful Neutral,6,Monster Manual
+Flind,Medium,Humanoid (gnoll),Chaotic Evil,9,Volo's Guide to Monsters
+Gnoll,Medium,Humanoid (gnoll),Chaotic Evil,1/2,Monster Manual
+Gnoll Fang of Yeenoghu,Medium,Humanoid (gnoll),Chaotic Evil,4,Monster Manual
+Gnoll Flesh Gnawer,Medium,Humanoid (gnoll),Chaotic Evil,1,Volo's Guide to Monsters
+Gnoll Hunter,Medium,Humanoid (gnoll),Chaotic Evil,1/2,Volo's Guide to Monsters
+Gnoll Pack Lord,Medium,Humanoid (gnoll),Chaotic Evil,2,Monster Manual
+Deep Gnome (Svirfneblin),Small,Humanoid (gnome),Neutral Good,1/2,Monster Manual
+Jamna Gleamsilver,Small,Humanoid (gnome),Neutral,1,Hoard of the Dragon Queen
+The Pudding King,Small,"Humanoid (gnome, Shapechanger)",Chaotic Evil,4,Out of the Abyss
+Bugbear,Medium,Humanoid (goblinoid),Chaotic Evil,1,Monster Manual
+Bugbear Chief,Medium,Humanoid (goblinoid),Chaotic Evil,3,Monster Manual
+Goblin,Small,Humanoid (goblinoid),Neutral Evil,1/4,Monster Manual
+Goblin Boss,Small,Humanoid (goblinoid),Neutral Evil,1,Monster Manual
+Hobgoblin,Medium,Humanoid (goblinoid),Lawful Evil,1/2,Monster Manual
+Hobgoblin Captain,Medium,Humanoid (goblinoid),Lawful Evil,3,Monster Manual
+Hobgoblin Devastator,Medium,Humanoid (goblinoid),Lawful Evil,4,Volo's Guide to Monsters
+Hobgoblin Iron Shadow,Medium,Humanoid (goblinoid),Lawful Evil,2,Volo's Guide to Monsters
+Hobgoblin Warlord,Medium,Humanoid (goblinoid),Lawful Evil,6,Monster Manual
+Nilbog,Small,Humanoid (goblinoid),Chaotic Evil,1,Volo's Guide to Monsters
+Grimlock,Medium,Humanoid (grimlock),Neutral Evil,1/4,Monster Manual
+Grung,Small,Humanoid (grung),Lawful Evil,1/4,Volo's Guide to Monsters
+Grung Elite Warrior,Small,Humanoid (grung),Lawful Evil,2,Volo's Guide to Monsters
+Grung Wildling,Small,Humanoid (grung),Lawful Evil,1,Volo's Guide to Monsters
+Rezmir,Medium,Humanoid (half-black Dragon),Neutral Evil,7,Hoard of the Dragon Queen
+Langdedrosa Cyanwrath,Medium,Humanoid (half-dragon),Lawful Evil,4,Hoard of the Dragon Queen
+Talis the White,Medium,Humanoid (half-elf),Lawful Evil,5,Hoard of the Dragon Queen
+Windharrow,Medium,Humanoid (half-elf),Neutral Evil,3,Prince of the Apocalypse
+Wiggan Nettlebee,Small,Humanoid (halfling),Neutral Evil,2,Prince of the Apocalypse
+Dralmorrer Borngray,Medium,Humanoid (high Elf),Neutral Evil,3,Hoard of the Dragon Queen
+Azbara Jos,Medium,Humanoid (human),Lawful Evil,4,Hoard of the Dragon Queen
+Barovian Witch,Medium,Humanoid (human),Chaotic Evil,1/2,Curse of Strahd
+Black Earth Guard,Medium,Humanoid (human),Neutral Evil,2,Prince of the Apocalypse
+Black Earth Priest,Medium,Humanoid (human),Neutral Evil,3,Prince of the Apocalypse
+Burrowshark,Medium,Humanoid (human),Neutral Evil,4,Prince of the Apocalypse
+Captain Othelstan,Medium,Humanoid (human),Lawful Evil,5,Hoard of the Dragon Queen
+Crushing Wave Priest,Medium,Humanoid (human),Neutral Evil,2,Prince of the Apocalypse
+Crushing Wave Reaver,Medium,Humanoid (human),Neutral Evil,1/2,Prince of the Apocalypse
+Dark Tide Knight,Medium,Humanoid (human),Lawful Evil,3,Prince of the Apocalypse
+Dragonclaw,Medium,Humanoid (human),Neutral Evil,1,Hoard of the Dragon Queen
+Dragonfang,Medium,Humanoid (human),Neutral Evil,5,Hoard of the Dragon Queen
+Dragonsoul,Medium,Humanoid (human),Neutral Evil,7,Hoard of the Dragon Queen
+Dragonwing,Medium,Humanoid (human),Neutral Evil,2,Hoard of the Dragon Queen
+Elizar Dryflagon,Medium,Humanoid (human),Neutral Evil,5,Prince of the Apocalypse
+Eternal Flame Guardian,Medium,Humanoid (human),Chaotic Evil,2,Prince of the Apocalypse
+Eternal Flame Priest,Medium,Humanoid (human),Neutral Evil,3,Prince of the Apocalypse
+Evil Mage,Medium,Humanoid (human),Lawful Evil,1,lost-mine-of-phandelver
+Ezmerelda d'Avenir,Medium,Humanoid (human),Chaotic Good,8,Curse of Strahd
+Fathomer,Medium,Humanoid (human),Neutral Evil,2,Prince of the Apocalypse
+Feathergale Knight,Medium,Humanoid (human),Lawful Evil,1,Prince of the Apocalypse
+Flamewrath,Medium,Humanoid (human),Chaotic Evil,6,Prince of the Apocalypse
+Frulam Mondath,Medium,Humanoid (human),Lawful Evil,2,Hoard of the Dragon Queen
+Gar Shatterkeel,Medium,Humanoid (human),Neutral Evil,9,Prince of the Apocalypse
+Half-Red Dragon Veteran,Medium,Humanoid (human),Any Alignment,5,Monster Manual
+Hellenrae,Medium,Humanoid (human),Lawful Evil,5,Prince of the Apocalypse
+Howling Hatred Initiate,Medium,Humanoid (human),Neutral Evil,1/8,Prince of the Apocalypse
+Howling Hatred Priest,Medium,Humanoid (human),Neutral Evil,2,Prince of the Apocalypse
+Hurricane,Medium,Humanoid (human),Lawful Evil,2,Prince of the Apocalypse
+Izek Strazni,Medium,Humanoid (human),Neutral Evil,5,Curse of Strahd
+Madam Eva,Medium,Humanoid (human),Chaotic Neutral,10,Curse of Strahd
+One-Eyed Shiver,Medium,Humanoid (human),Chaotic Evil,3,Prince of the Apocalypse
+Oreioth,Medium,Humanoid (human),Chaotic Evil,2,Prince of the Apocalypse
+Rath Modar,Medium,Humanoid (human),Lawful Evil,6,Hoard of the Dragon Queen
+Razerblast,Medium,Humanoid (human),Chaotic Evil,5,Prince of the Apocalypse
+Redbrand Ruffian,Medium,Humanoid (human),Neutral Evil,1/2,lost-mine-of-phandelver
+Rictavio,Medium,Humanoid (human),Lawful Good,5,Curse of Strahd
+Sacred Stone Monk,Medium,Humanoid (human),Lawful Evil,1/2,Prince of the Apocalypse
+Severin,Medium,Humanoid (human),Neutral Evil,11,Hoard of the Dragon Queen
+Sharwyn Hucrele,Medium,Humanoid (human),Neutral Evil,1/2,Yawning Portal
+Sildar Hallwinter,Medium,Humanoid (human),Neutral Good,1,lost-mine-of-phandelver
+Sir Braford,Medium,Humanoid (human),Neutral Evil,1/2,Yawning Portal
+Skyweaver,Medium,Humanoid (human),Chaotic Evil,3,Prince of the Apocalypse
+Stonemelder,Medium,Humanoid (human),Neutral Evil,4,Prince of the Apocalypse
+Thayan Warrior,Medium,Humanoid (human),Any Non-good Alignment,2,Yawning Portal
+Thurl Merosska,Medium,Humanoid (human),Lawful Evil,3,Hoard of the Dragon Queen
+Uthgardt Shaman,Medium,Humanoid (human),Neutral Evil,2,Storm King's Thunder
+Baba Lysaga,Medium,"Humanoid (human, Shapechanger)",Chaotic Evil,11,Curse of Strahd
+Werebear,Medium,"Humanoid (human, Shapechanger)",Neutral Good,5,Monster Manual
+Wereboar,Medium,"Humanoid (human, Shapechanger)",Neutral Evil,4,Monster Manual
+Wererat,Medium,"Humanoid (human, Shapechanger)",Lawful Evil,2,Monster Manual
+Wereraven,Medium,"Humanoid (human, Shapechanger)",Lawful Good,2,Curse of Strahd
+Weretiger,Medium,"Humanoid (human, Shapechanger)",Neutral,4,Monster Manual
+Werewolf,Medium,"Humanoid (human, Shapechanger)",Chaotic Evil,3,Monster Manual
+Beldora,Medium,Humanoid (illuskan Human),Chaotic Good,0,Storm King's Thunder
+Darz Helgar,Medium,Humanoid (illuskan Human),Neutral,0,Storm King's Thunder
+Duvessa Shane,Medium,Humanoid (illuskan Human),Lawful Good,0,Storm King's Thunder
+Sir Baric Nylef,Medium,Humanoid (illuskan Human),Lawful Good,0,Storm King's Thunder
+Darathra Shendrel,Medium,Humanoid (illuskan Humanoid),Lawfull Good,0,Storm King's Thunder
+Kenku,Medium,Humanoid (kenku),Chaotic Neutral,1/4,Monster Manual
+Kobold,Small,Humanoid (kobold),Lawful Evil,1/8,Monster Manual
+Kobold Dragonshield,Small,Humanoid (kobold),Lawful Evil,1,Volo's Guide to Monsters
+Kobold Inventor,Small,Humanoid (kobold),Lawful Evil,1/4,Volo's Guide to Monsters
+Kobold Scale Sorcerer,Small,Humanoid (kobold),Lawful Evil,1,Volo's Guide to Monsters
+Winged Kobold,Small,Humanoid (kobold),Lawful Evil,1/4,Monster Manual
+Yusdrayl,Small,Humanoid (kobold),Lawful Evil,1,Yawning Portal
+Kuo-Toa,Medium,Humanoid (kuo-toa),Neutral Evil,1/4,Monster Manual
+Kuo-Toa Archpriest,Medium,Humanoid (kuo-toa),Neutral Evil,6,Monster Manual
+Kuo-Toa Monitor,Medium,Humanoid (kuo-toa),Neutral Evil,2,Monster Manual
+Kuo-Toa Whip,Medium,Humanoid (kuo-toa),Neutral Evil,1,Monster Manual
+Lizard King/Queen,Medium,Humanoid (lizardfolk),Chaotic Evil,4,Monster Manual
+Lizardfolk,Medium,Humanoid (lizardfolk),Neutral,1/2,Monster Manual
+Lizardfolk Shaman,Medium,Humanoid (lizardfolk),Neutral,2,Monster Manual
+Merfolk,Medium,Humanoid (merfolk),Neutral,1/8,Monster Manual
+Mongrelfolk,Medium,Humanoid (mongrelfolk),Any Alignment,1/4,Curse of Strahd
+Orc,Medium,Humanoid (orc),Chaotic Evil,1/2,Monster Manual
+Orc Blade of Ilneval,Medium,Humanoid (orc),Chaotic Evil,4,Volo's Guide to Monsters
+Orc Claw of Luthic,Medium,Humanoid (orc),Chaotic Evil,2,Volo's Guide to Monsters
+Orc Eye of Gruumsh,Medium,Humanoid (orc),Chaotic Evil,2,Monster Manual
+Orc Hand of Yurtrus,Medium,Humanoid (orc),Chaotic Evil,2,Volo's Guide to Monsters
+Orc Nurtured One of Yurtrus,Medium,Humanoid (orc),Chaotic Evil,1/2,Volo's Guide to Monsters
+Orc Red Fang of Shargaas,Medium,Humanoid (orc),Chaotic Evil,3,Volo's Guide to Monsters
+Orc War Chief,Medium,Humanoid (orc),Chaotic Evil,4,Monster Manual
+Orog,Medium,Humanoid (orc),Chaotic Evil,2,Monster Manual
+Quaggoth,Medium,Humanoid (quaggoth),Chaotic Neutral,2,Monster Manual
+Quaggoth Thonot,Medium,Humanoid (quaggoth),Chaotic Neutral,3,Monster Manual
+Ghald,Large,Humanoid (sahuagin),Lawful Evil,7,Prince of the Apocalypse
+Sahuagin,Medium,Humanoid (sahuagin),Lawful Evil,1/2,Monster Manual
+Sahuagin Baron,Medium,Humanoid (sahuagin),Lawful Evil,5,Monster Manual
+Sahuagin Priestess,Medium,Humanoid (sahuagin),Lawful Evil,2,Monster Manual
+Deep Scion,Medium,Humanoid (shapechanger),Neutral Evil,3,Volo's Guide to Monsters
+Jackalwere,Medium,Humanoid (shapechanger),Chaotic Evil,1/2,Monster Manual
+Augrek Brighthelm,Medium,Humanoid (shield Dwarf),Lawful Good,0,Storm King's Thunder
+Drannin Splithelm,Medium,Humanoid (shield Dwarf),Neutral Evil,7,Prince of the Apocalypse
+Zi Liang,Medium,Humanoid (shou Human),Chaotic Good,0,Storm King's Thunder
+Oren Yogilvy,Small,Humanoid (strongheart Halfling),Chaotic Good,0,Storm King's Thunder
+Narth Tezrin,Medium,Humanoid (tethyrian Human),Chaotic Good,0,Storm King's Thunder
+Thri-kreen,Medium,Humanoid (thri-kreen),Chaotic Neutral,1,Monster Manual
+Thri-kreen (Psionic),Medium,Humanoid (thri-kreen),Chaotic Neutral,1,Monster Manual
+Vanifer,Medium,Humanoid (tiefling),Neutral Evil,9,Prince of the Apocalypse
+Troglodyte,Medium,Humanoid (troglodyte),Chaotic Evil,1/4,Monster Manual
+Troglodyte Champion of Laogzed,Medium,Humanoid (troglodyte),Chaotic Evil,3,Out of the Abyss
+Markham Southwell,Medium,Humanoid (turami Human),Lawful Good,0,Storm King's Thunder
+Naxene Drathkala,Medium,Humanoid (turami Human),Neutral Good,0,Storm King's Thunder
+Shalvus Martholio,Medium,Humanoid (turami Human),Neutral,0,Storm King's Thunder
+Shoalar Quanderil,Medium,Humanoid (water Genasi),Lawful Evil,4,Prince of the Apocalypse
+Xvart,Small,Humanoid (xvart),Chaotic Evil,1/8,Volo's Guide to Monsters
+Xvart Speaker,Small,Humanoid (xvart),Chaotic Evil,1/8,Volo's Guide to Monsters
+Xvart Warlock of Raxivort,Small,Humanoid (xvart),Chaotic Evil,1,Volo's Guide to Monsters
+Yuan-ti Broodguard,Medium,Humanoid (yuan-ti),Neutral Evil,2,Volo's Guide to Monsters
+Yuan-ti Pureblood,Medium,Humanoid (yuan-ti),Neutral Evil,1,Monster Manual
+Abominable Yeti,Huge,Monstrosity,Chaotic Evil,9,Monster Manual
+Androsphinx,Large,Monstrosity,Lawful Neutral,17,Monster Manual
+Ankheg,Large,Monstrosity,Unaligned,2,Monster Manual
+Banderhobb,Large,Monstrosity,Neutral Evil,5,Volo's Guide to Monsters
+Basilisk,Medium,Monstrosity,Unaligned,3,Monster Manual
+Behir,Huge,Monstrosity,Neutral Evil,11,Monster Manual
+Bulette,Large,Monstrosity,Unaligned,5,Monster Manual
+Carrion Crawler,Large,Monstrosity,Unaligned,2,Monster Manual
+Catoblepas,Large,Monstrosity,Unaligned,5,Volo's Guide to Monsters
+Cave Fisher,Medium,Monstrosity,Unaligned,3,Volo's Guide to Monsters
+Centaur,Large,Monstrosity,Neutral Good,2,Monster Manual
+Chimera,Large,Monstrosity,Chaotic Evil,6,Monster Manual
+Chitine,Small,Monstrosity,Chaotic Evil,1/2,Volo's Guide to Monsters
+Choldrith,Medium,Monstrosity,Chaotic Evil,3,Volo's Guide to Monsters
+Cockatrice,Small,Monstrosity,Unaligned,1/2,Monster Manual
+Darkmantle,Small,Monstrosity,Unaligned,1/2,Monster Manual
+Death Dog,Medium,Monstrosity,Neutral Evil,1,Monster Manual
+Displacer Beast,Large,Monstrosity,Lawful Evil,3,Monster Manual
+Drider,Large,Monstrosity,Chaotic Evil,6,Monster Manual
+Drider Spellcaster,Large,Monstrosity,Chaotic Evil,6,Monster Manual
+Ettercap,Medium,Monstrosity,Neutral Evil,2,Monster Manual
+Froghemoth,Huge,Monstrosity,Unaligned,10,Volo's Guide to Monsters
+Giant Strider,Large,Monstrosity,Neutral Evil,1,Volo's Guide to Monsters
+Girallon,Large,Monstrosity,Unaligned,4,Volo's Guide to Monsters
+Gorgon,Large,Monstrosity,Unaligned,5,Monster Manual
+Grick,Medium,Monstrosity,Neutral,2,Monster Manual
+Grick Alpha,Large,Monstrosity,Neutral,7,Monster Manual
+Griffon,Large,Monstrosity,Unaligned,2,Monster Manual
+Guardian Naga,Large,Monstrosity,Lawful Good,10,Monster Manual
+Gynosphinx,Large,Monstrosity,Lawful Neutral,11,Monster Manual
+Harpy,Medium,Monstrosity,Chaotic Evil,1,Monster Manual
+Hippogriff,Large,Monstrosity,Unaligned,1,Monster Manual
+Hook Horror,Large,Monstrosity,Neutral,3,Monster Manual
+Hydra,Huge,Monstrosity,Unaligned,8,Monster Manual
+Ice Toad,Medium,Monstrosity,Neutral,1,Hoard of the Dragon Queen
+Kalka-Kylla,Large,Monstrosity,Neutral,3,Yawning Portal
+Lamia,Large,Monstrosity,Chaotic Evil,4,Monster Manual
+Leucrotta,Large,Monstrosity,Chaotic Evil,3,Volo's Guide to Monsters
+Malformed Kraken,Huge,Monstrosity,Chaotic Evil,10,Yawning Portal
+Manticore,Large,Monstrosity,Lawful Evil,3,Monster Manual
+Marlos Urnrayle,Medium,Monstrosity,Neutral Evil,8,Prince of the Apocalypse
+Medusa,Medium,Monstrosity,Lawful Evil,6,Monster Manual
+Merrow,Large,Monstrosity,Chaotic Evil,2,Monster Manual
+Minotaur,Large,Monstrosity,Chaotic Evil,3,Monster Manual
+Owlbear,Large,Monstrosity,Unaligned,3,Monster Manual
+Peryton,Medium,Monstrosity,Chaotic Evil,2,Monster Manual
+Phase Spider,Large,Monstrosity,Unaligned,3,Monster Manual
+Piercer,Large,Monstrosity,Unaligned,1/2,Monster Manual
+Purple Worm,Gargantuan,Monstrosity,Unaligned,15,Monster Manual
+Purple Wormling,Large,Monstrosity,Unaligned,2,Storm King's Thunder
+Remorhaz,Huge,Monstrosity,Unaligned,11,Monster Manual
+Roc,Gargantuan,Monstrosity,Unaligned,11,Monster Manual
+Roper,Large,Monstrosity,Neutral Evil,5,Monster Manual
+Rust Monster,Medium,Monstrosity,Unaligned,1/2,Monster Manual
+Sea Lion,Large,Monstrosity,Unaligned,5,Yawning Portal
+Shadow Mastiff,Medium,Monstrosity,Neutral Evil,2,Volo's Guide to Monsters
+Spirit Naga,Large,Monstrosity,Chaotic Evil,8,Monster Manual
+Tlincalli,Large,Monstrosity,Neutral Evil,5,Volo's Guide to Monsters
+Trapper,Large,Monstrosity,Unaligned,3,Volo's Guide to Monsters
+Umber Hulk,Large,Monstrosity,Chaotic Evil,5,Monster Manual
+Winter Wolf,Large,Monstrosity,Neutral Evil,3,Monster Manual
+Worg,Large,Monstrosity,Neutral Evil,1/2,Monster Manual
+Yakfolk Priest,Large,Monstrosity,Neutral Evil,4,Storm King's Thunder
+Yakfolk Warrior,Large,Monstrosity,Neutral Evil,3,Storm King's Thunder
+Yestabrod,Large,Monstrosity,Chaotic Evil,4,Out of the Abyss
+Yeti,Large,Monstrosity,Chaotic Evil,3,Monster Manual
+Young Remorhaz,Large,Monstrosity,Unaligned,5,Monster Manual
+Doppelganger,Medium,Monstrosity (shapechanger),Unaligned,3,Monster Manual
+Mimic,Medium,Monstrosity (shapechanger),Neutral,2,Monster Manual
+Yuan-ti Abomination,Large,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,7,Monster Manual
+Yuan-ti Anathema,Huge,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,12,Volo's Guide to Monsters
+Yuan-ti Malison Type 1,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,3,Monster Manual
+Yuan-ti Malison Type 2,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,3,Monster Manual
+Yuan-ti Malison Type 3,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,3,Monster Manual
+Yuan-ti Mind Whisperer,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,4,Volo's Guide to Monsters
+Yuan-ti Nightmare Speaker,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,4,Volo's Guide to Monsters
+Yuan-ti Pit Master,Medium,"Monstrosity (shapechanger, Yuan-ti)",Neutral Evil,5,Volo's Guide to Monsters
+Kraken,Gargantuan,Monstrosity (titan),Chaotic Evil,23,Monster Manual
+Tarrasque,Gargantuan,Monstrosity (titan),Unaligned,30,Monster Manual
+Black Pudding,Large,Ooze,Unaligned,4,Monster Manual
+Gelatinous Cube,Large,Ooze,Unaligned,2,Monster Manual
+Gray Ooze,Medium,Ooze,Unaligned,1/2,Monster Manual
+Gray Ooze (Psychic),Medium,Ooze,Unaligned,1/2,Monster Manual
+Ochre Jelly,Large,Ooze,Unaligned,2,Monster Manual
+Slithering Tracker,Medium,Ooze,Chaotic Evil,3,Volo's Guide to Monsters
+White Maw,Gargantuan,Ooze,Chaotic Neutral,10,Yawning Portal
+Awakened Shrub,Small,Plant,Unaligned,0,Monster Manual
+Awakened Tree,Huge,Plant,Unaligned,2,Monster Manual
+Awakened Zurkhwood,Huge,Plant,Unaligned,2,Out of the Abyss
+Bridesmaid of Zuggtmoy,Medium,Plant,Chaotic Evil,1/8,Out of the Abyss
+Chamberlain of Zuggtmoy,Large,Plant,Chaotic Evil,2,Out of the Abyss
+Chuul Spore Servant,Large,Plant,Unaligned,4,Out of the Abyss
+Drow Spore Servant,Medium,Plant,Unaligned,1/8,Out of the Abyss
+Duergar Spore Servant,Medium,Plant,Unaligned,1/2,Out of the Abyss
+Gas Spore,Large,Plant,Unaligned,1/2,Monster Manual
+Hook Horror Spore Servant,Medium,Plant,Unaligned,3,Out of the Abyss
+Kelpie,Medium,Plant,Neutral Evil,4,Yawning Portal
+Lifferlas,Huge,Plant,Unaligned,0,Storm King's Thunder
+Myconid Adult,Medium,Plant,Lawful Neutral,1/2,Monster Manual
+Myconid Sovereign,Large,Plant,Lawful Neutral,2,Monster Manual
+Myconid Sprout,Small,Plant,Lawful Neutral,0,Monster Manual
+Needle Blight,Medium,Plant,Neutral Evil,1/4,Monster Manual
+Quaggoth Spore Servant,Medium,Plant,Unaligned,1,Monster Manual
+Shambling Mound,Large,Plant,Unaligned,5,Monster Manual
+Shrieker,Medium,Plant,Unaligned,0,Monster Manual
+Thorn Slinger,Large,Plant,Unaligned,1/2,Yawning Portal
+Thorny,Medium,Plant,Neutral,1,Volo's Guide to Monsters
+Treant,Huge,Plant,Chaotic Good,9,Monster Manual
+Tree Blight,Huge,Plant,Neutral Evil,7,Curse of Strahd
+Twig Blight,Small,Plant,Neutral Evil,1/8,Monster Manual
+Vegepygmy,Small,Plant,Neutral,1/4,Volo's Guide to Monsters
+Vegepygmy Chief,Small,Plant,Neutral,2,Volo's Guide to Monsters
+Vine Blight,Medium,Plant,Neutral Evil,1/2,Monster Manual
+Violet Fungus,Medium,Plant,Unaligned,1/4,Monster Manual
+Wood Woad,Medium,Plant,Lawful Neutral,5,Volo's Guide to Monsters
+Swarm of Bats,Medium,Swarm,Unaligned,1/4,Monster Manual
+Swarm of Beetles,Medium,Swarm,Unaligned,1/2,Monster Manual
+Swarm of Centipedes,Medium,Swarm,Unaligned,1/2,Monster Manual
+Swarm of Cranium Rats,Medium,Swarm,Lawful Evil,5,Volo's Guide to Monsters
+Swarm of Insects,Medium,Swarm,Unaligned,1/2,Monster Manual
+Swarm of Poisonous Snakes,Medium,Swarm,Unaligned,2,Monster Manual
+Swarm of Quippers,Medium,Swarm,Unaligned,1,Monster Manual
+Swarm of Rats,Medium,Swarm,Unaligned,1/4,Monster Manual
+Swarm of Ravens,Medium,Swarm,Unaligned,1/4,Monster Manual
+Swarm of Rot Grubs,Medium,Swarm,Unaligned,1/2,Volo's Guide to Monsters
+Swarm of Spiders,Medium,Swarm,Unaligned,1/2,Monster Manual
+Swarm of Wasps,Medium,Swarm,Unaligned,1/2,Monster Manual
+Adult Blue Dracolich,Huge,Undead,Lawful Evil,17,Monster Manual
+Alhoon,Medium,Undead,Any Evil Alignment,10,Volo's Guide to Monsters
+Avatar of Death,Medium,Undead,Neutral Evil,0,Monster Manual
+Banshee,Medium,Undead,Chaotic Evil,4,Monster Manual
+Beholder Zombie,Large,Undead,Neutral Evil,5,Monster Manual
+Bodak,Medium,Undead,Chaotic Evil,6,Volo's Guide to Monsters
+Bone Naga (Guardian),Large,Undead,Lawful Evil,4,Monster Manual
+Bone Naga (Spirit),Large,Undead,Lawful Evil,4,Monster Manual
+Centaur Mummy,Large,Undead,Lawful Evil,6,Yawning Portal
+Crawling Claw,Tiny,Undead,Neutral Evil,0,Monster Manual
+Death Knight,Medium,Undead,Chaotic Evil,17,Monster Manual
+Death Tyrant,Large,Undead,Lawful Evil,14,Monster Manual
+Deathlock Wight,Medium,Undead,Neutral Evil,3,Yawning Portal
+Demilich,Tiny,Undead,Neutral Evil,18,Monster Manual
+Dread Warrior,Medium,Undead,Neutral Evil,1,Yawning Portal
+Flameskull,Tiny,Undead,Neutral Evil,4,Monster Manual
+Ghast,Medium,Undead,Chaotic Evil,2,Monster Manual
+Ghost,Medium,Undead,Any Alignment,4,Monster Manual
+Ghoul,Medium,Undead,Chaotic Evil,1,Monster Manual
+Gnoll Witherling,Medium,Undead,Chaotic Evil,1/4,Volo's Guide to Monsters
+Greater Zombie,Medium,Undead,Neutral Evil,5,Yawning Portal
+Illithilich,Medium,Undead,Any Evil Alignment,22,Volo's Guide to Monsters
+Lich,Medium,Undead,Any Evil Alignment,21,Monster Manual
+Minotaur Skeleton,Large,Undead,Lawful Evil,2,Monster Manual
+Mormesk the Wraith,Medium,Undead,Neutral Evil,3,lost-mine-of-phandelver
+Mummy,Medium,Undead,Lawful Evil,3,Monster Manual
+Mummy Lord,Medium,Undead,Lawful Evil,15,Monster Manual
+Naergoth Bladelord,Medium,Undead,Neutral Evil,11,Hoard of the Dragon Queen
+Ogre Zombie,Large,Undead,Neutral Evil,2,Monster Manual
+Ooze Master,Huge,Undead,Lawful Evil,10,Yawning Portal
+Phantom Warrior,Medium,Undead,Any Alignment,1,Curse of Strahd
+Poltergeist,Medium,Undead,Chaotic Evil,2,Monster Manual
+Revenant,Medium,Undead,Neutral,5,Monster Manual
+Shadow,Medium,Undead,Chaotic Evil,1/2,Monster Manual
+Skeleton,Medium,Undead,Lawful Evil,1/4,Monster Manual
+Spawn of Kyuss,Medium,Undead,Chaotic Evil,5,Volo's Guide to Monsters
+Specter,Medium,Undead,Chaotic Evil,1,Monster Manual
+Strahd Zombie,Medium,Undead,Unaligned,1,Curse of Strahd
+Tarul Var,Medium,Undead,Neutral Evil,13,Yawning Portal
+Vampire Spawn,Medium,Undead,Neutral Evil,5,Monster Manual
+Vampiric Mist,Medium,Undead,Chaotic Evil,3,Yawning Portal
+Vladimir Horngaard,Medium,Undead,Lawful Evil,7,Curse of Strahd
+Warhorse Skeleton,Large,Undead,Lawful Evil,1/2,Monster Manual
+Wight,Medium,Undead,Neutral Evil,3,Monster Manual
+Will-o'-Wisp,Tiny,Undead,Chaotic Evil,2,Monster Manual
+Wraith,Medium,Undead,Neutral Evil,5,Monster Manual
+Zombie,Medium,Undead,Neutral Evil,1/4,Monster Manual
+Strahd von Zarovich,Medium,Undead (shapechanger),Lawful Evil,15,Curse of Strahd
+Vampire,Medium,Undead (shapechanger),Lawful Evil,13,Monster Manual
+Vampire Spellcaster,Medium,Undead (shapechanger),Lawful Evil,15,Monster Manual
+Vampire Warrior,Medium,Undead (shapechanger),Lawful Evil,15,Monster Manual

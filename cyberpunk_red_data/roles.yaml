@@ -1,0 +1,20 @@
+- name: Rockerboy
+  role_ability: Charismatic Impact
+- name: Solo
+  role_ability: Combat Awareness
+- name: Netrunner
+  role_ability: Interface
+- name: Tech
+  role_ability: Maker
+- name: Medtech
+  role_ability: Medicine
+- name: Media
+  role_ability: Credibility
+- name: Exec
+  role_ability: Teamwork
+- name: Lawmen
+  role_ability: Backup
+- name: Fixer
+  role_ability: Operator
+- name: Nomad
+  role_ability: Moto
