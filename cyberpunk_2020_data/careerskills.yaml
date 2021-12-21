@@ -1,0 +1,15 @@
+solo: [Combat Sense, Awareness/Notice, Handgun, Brawling, Melee, Weapons Tech, Rifle, Althetics, Submachinegun, Stealth]
+nomad: [Family, Awareness/Notice, Endurance, Melee, Rifle, Drive, Basic Tech, Wilderness Survival, Brawling, Athletics]
+rockerboy: [Charasmatic Leadership, Awareness/Notice, Perform, Wardrobe & Style, Composition, Brawling, Play Instrument, Streetwise, Pursuasion, Seduction]
+corporate: [Resources, Awareness/Notice, Human Perception, Education, Library Search, Social, Persuasion, Stock Market, Wardrobe & Style, Personal Grooming]
+techie: [Jury Rig, Awareness/Notice, Basic Tech, CyberTech, Teaching, Education, Electronics, GyroTech, AeroTech, WeaponsTech, Electronic Security]
+med_tech: [Medical Tech, Awareness/Notice, Basic Tech, Diagnose Illness, Education, Cryotank Operation, Library Search, Pharamaceuticals, Zoologym, Human Perception]
+media: [Credibility, Awareness/Notice, Composition, Education, Persuasion, Human Perception, Social, Streetwise, Photo & Film, Interview]
+cop: [Authority, Awareness/Notice, Handgun, Human Perception, Athletics, Education, Brawling, Melee, INterrogation, Streetwise]
+fixer: [Streetdeal, Awareness/Notice, Forgery, Handgun, Brawling, Melee, Pick Lock, Pick Pocket, Intimidate, Persuasion]
+netrunner: [Interface, Awareness/Notice, Basic Tech, Education, System Knowledge, CyberTech, Cyberdeck Design, Composition, Electronics, Programming]
+
+# FIRESTORM SHOCKWAVE
+panzerboy: [Vehicle Zen, Driving, Awareness/Notice, Operate Heavy Machinary, Motorcycle, Handgun, Submachinegun, "Pilot: Hovercraft", Basic Tech, Brawling, Heavy Weapons, Rifle, "Expert: Navigation"]
+aerojack: [Aircraft Sense, "Pilot: Gyro", "Pilot: Fixed Wing", "Pilot: Dirigible", "Pilot: Vectored Thrust Vehicle", Basic Tech, Awareness/Notice, AeroTech, AVTech, Handgun, Brawling, Athletics, "Expert: Navigation"]
+pa_trooper: [ACPA Combat Stance, Melee, Awareness/Notice, Basic Tech, Rifle, Athletics, Heavy Weapons, PA Tech, Brawling, Martial Arts, Stealth]

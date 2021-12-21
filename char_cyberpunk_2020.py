@@ -1,5 +1,5 @@
 from math import floor
-from random import choice, choices, randint
+from random import choice, choices, randint, shuffle
 
 character = {
     "name": "",
@@ -12,15 +12,17 @@ character = {
         "Cool": 0,
         "Attractiveness": 0,
         "Luck": 0,
-        "Movement Allowance": 0, 
-        "BODY": 0,
-        "EMP": [0, 0],
+        "Movement Allowance": 0,
+        "Body Type": 0,
+        "Empathy": [0, 0],
     },
     "movement_stats":{
         "Run": 0,
         "Leap": 0
     },
     "humanity": 0,
+    "save": 0,
+    "body_type_modifier": ["", 0],
     "armor": {
         "head": 0,
         "torso": 0,
@@ -29,9 +31,6 @@ character = {
         "right_leg": 0,
         "left_leg": 0
     },
-    "save": 0,
-    "body_type": 0,
-    "body_type_modifier": 0,
     "skills": {
         "Special_Abilities": {
             "Authority": 0,
@@ -205,7 +204,7 @@ character = {
 def roll(throws, sides=0):
     if isinstance(throws, str):
         throw_parse = throws.split("d")
-        return (sum(randint(1, int(throw_parse[1]) for _ in range(int(throw_parse[0])))))
+        return (sum(randint(1, int(throw_parse[1])) for _ in range(int(throw_parse[0]))))
     else:
         return sum(randint(1,sides) for _ in range(throws))
 
@@ -240,3 +239,37 @@ def calc_movement_stats(movement_allowance):
     run = movement_allowance * 3
     leap = floor(movement_allowance/4)
     return run, leap
+
+def calc_body_type_modifier(body_type):
+    body_type_mod_list = {0: ["Very Weak", 0], 1: ["Very Weak", 0], 2: ["Very Weak", 0],
+                          3: ["Weak", -1], 4: ["Weak", -1],
+                          5: ["Average", -2], 6: ["Average", -2], 7: ["Average", -2],
+                          8: ["Strong", -3], 9: ["Strong", -3],
+                          10: ["Very Strong", -4]}
+    return body_type_mod_list[body_type]
+
+def calc_save_number(body_type):
+    return body_type
+
+def calc_humanity(empathy):
+    return empathy * 10
+
+def gen_fast_char():
+    fast_npc = {'stats':{}}
+    fast_npc_stats = ["INT", "REF", "COOL", "LUCK", "ATTR", "TECH", "BODY", "MA", "EMP"]
+    stat_rolls = []
+    while len(stat_rolls) < 9:
+        # For fast NPC generation, you roll 2d6 for each stat, rerolling anything higher than an eleven
+        fast_npc_stat_roll = roll("2d6")
+        if fast_npc_stat_roll >= 11:
+            continue
+        else:
+            stat_rolls.append(fast_npc_stat_roll)
+    for it, stat in enumerate(fast_npc_stats):
+        fast_npc['stats'][stat] = stat_rolls[it]
+    return fast_npc
+
+
+
+if __name__ == "__main__":
+    print(gen_fast_char())
