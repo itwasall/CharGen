@@ -1,0 +1,335 @@
+light_pistols:
+  BudgetArms C-13:
+    Type: P
+    Weapon Accuracy: -1
+    Concealability: Pocket
+    Availability: Excellent
+    Damage: 1d6
+    Ammo: 5mm
+    Shots: 8
+    ROF: 2
+    Reliability: Standard
+    Range: 50m
+    Cost: 75
+  Dai Lung Cybermag 15:
+    Type: P
+    Weapon Accuracy: -1
+    Concealability: Pocket
+    Availability: Common
+    Damage: 1d6+1
+    Ammo: 6mm
+    Shots: 10
+    ROF: 2
+    Reliability: Unreliable
+    Range: 50m
+    Cost: 50
+  Federated Arms X-22:
+    Type: P
+    Weapon Accuracy: -1
+    Concealability: Pocket
+    Availability: Excellent
+    Damage: 1d6 + 1
+    Ammo: 6mm
+    Shots: 10
+    ROF: 2
+    Reliability: Standard
+    Range: 50
+    Cost: 150
+medium_autopistols:
+  Militech Arms Avenger:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 2d6 +1
+    Ammo: 9mm
+    Shots: 10
+    ROF: 2
+    Reliability: Very Reliable
+    Range: 50m
+    Cost: 250
+  Dai Lung Streetmaster:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 2d6 + 3
+    Ammo: 10mm
+    Shots: 12
+    ROF: 2
+    Reliability: Unreliable
+    Range: 50m
+    Cost: 250
+  Federated Arms X-9mm:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 2d6 + 1
+    Ammo: 9mm
+    Shots: 12
+    ROF: 2
+    Reliability: Standard
+    Range: 50
+    Cost: 300
+heavy_autopistols:
+  BudgetArms Auto 3:
+    Type: P
+    Weapon Accuracy: -1
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 3d6
+    Ammo: 11mm
+    Shots: 8
+    ROF: 2
+    Reliability: Unreliable
+    Range: 50
+    Cost: 350
+  Sternmeyer Type 35:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Common
+    Damage: 3d6
+    Ammo: 11mm
+    Shots: 8
+    ROF: 2
+    Reliability: Very Reliable
+    Range: 50m
+    Cost: 400
+very_heavy_autopistols:
+  Armalite 44:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 4d6 + 1
+    Ammo: 12mm
+    Shots: 8
+    ROF: 1
+    Reliability: Standard
+    Range: 50m
+    cost: 450
+  Colt AMT Model 2000:
+    Type: P
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Common
+    Damage: 4d6 + 1
+    Ammo: 12mm
+    Shots: 8
+    ROF: 1
+    Reliability: Very Reliable
+    Range: 50m
+    Cost: 500
+light_submachineguns:
+  Uzi Miniauto 9:
+    Type: SMG
+    Weapon Accuracy: +1
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 2d6 + 1
+    Ammo: 9mm
+    Shots: 30
+    ROF: 35
+    Reliability: Very Reliable
+    Range: 150m
+    Cost: 475
+  H&K MP-2013:
+    Type: SMG
+    Weapon Accuracy: +1
+    Concealability: Jacket
+    Availability: Common
+    Damage: 2d6 + 3
+    Ammo: 10mm
+    Shots: 35
+    ROF: 32
+    Reliability: Standard
+    Range: 150m
+    Cost: 450
+  Federation Arms Tech Assault II:
+    Type: SMG
+    Weapon Accuracy: +1
+    Concealability: Jacket
+    Availability: Common
+    Damage: 1d6 + 1
+    Ammo: 6mm
+    Shots: 50
+    ROF: 25
+    Reliability: Standard
+    Range: 150
+    Cost: 400
+medium_submachineguns:
+  Arasaka Minami 10:
+    Type: SMG
+    Weapon Accuracy: 0
+    Concealability: Jacket
+    Availability: Excellent
+    Damage: 2d6 + 3
+    Ammo: 10mm
+    Shots: 40
+    ROF: 20
+    Reliability: Very Reliable
+    Range: 200
+    Cost: 500
+  H&K MPK-9:
+    Type: SMG
+    Weapon Accuracy: +1
+    Concealability: Jacket
+    Availability: Common
+    Damage: 2d6 + 1
+    Ammo: 9mm
+    Shots: 35
+    ROF: 25
+    Reliability: Standard
+    Range: 200m
+    Cost: 520
+heavy_submachineguns:
+  Sternmeyer SMG 21:
+    Type: SMG
+    Weapon Accuracy: -1
+    Concealability: Long Coat
+    Availability: Excellent
+    Damage: 3d6
+    Ammo: 11mm
+    Shots: 30
+    ROF: 15
+    Reliability: Very Reliable
+    Range: 200m
+    Cost: 500
+  H&K MPK-11:
+    Type: SMG
+    Weapon Accuracy: 0
+    Concealability: Long Coat
+    Availability: Excellent
+    Damage: 4d6 + 1
+    Ammo: 12mm
+    Shots: 30
+    ROF: 20
+    Reliability: Standard
+    Range: 200m
+    Cost: 700
+  Ingram MAC 14:
+    Type: SMG
+    Weapon Accuracy: -2
+    Concealability: Long Coat
+    Availability: Excellent
+    Damage: 4d6 + 1
+    Ammo: 12mm
+    Shots: 20
+    ROF: 10
+    Reliability: Standard
+    Range: 200m
+    Cost: 650
+assault_rifles:
+  Militech Ronin Light Assault:
+    Type: RIF
+    Weapon Accuracy: +1
+    Concealability: "None"
+    Availability: Common
+    Damage: 5d6
+    Ammo: 5.56mm
+    Shots: 35
+    ROF: 30
+    Reliability: Very Reliable
+    Range: 400m
+    Cost: 450
+  AKR-20 Medium Assault:
+    Type: RIF
+    Weapon Accuracy: 0
+    Concealability: "None"
+    Availability: Common
+    Damage: 5d6
+    Ammo: 5.56mm
+    Shots: 30
+    ROF: 30
+    Reliability: Standard
+    Range: 400m
+    Cost: 500
+  FN-RAL Heavy Assault Rifle:
+    Type: RIF
+    Weapon Accuracy: -1
+    Concealability: "None"
+    Availability: Common
+    Damage: 6d6 + 2
+    Ammo: 7.62mm
+    Shots: 30
+    ROF: 30
+    Reliability: Very Reliable
+    Range: 400m
+    Cost: 600
+  Kalishnikov A-80 Heavy Assault Rifle:
+    Type: RIF
+    Weapon Accuracy: -1
+    Concealability: "None"
+    Availability: Excellent
+    Damage: 6d6 + 2
+    Ammo: 7.62m
+    Shots: 35
+    ROF: 25
+    Reliability: Standard
+    Range: 400m
+    Cost: 550
+shotguns:
+  Arasaka Rapid Assault 12:
+    Type: SHT
+    Weapon Accuracy: -1
+    Concealability: "None"
+    Availability: Common
+    Damage: 4d6
+    Ammo: 00 Buckshot
+    Shots: 20
+    ROF: 10
+    Reliability: Standard
+    Range: 50m
+    Cost: 900
+  Sternmeyer Stakeout 10:
+    Type: SHT
+    Weapon Accuracy: -2
+    Concealability: "None"
+    Availability: Rare
+    Damage: 4d6
+    Ammo: 00 Buckshot
+    Shots: 10
+    ROF: 2
+    Reliability: Standard
+    Range: 50m
+    Cost: 450
+heavy_weapons:
+  Barrett-Arasaka Light 20mm:
+    Type: HVY
+    Weapon Accuracy: 0
+    Concealability: "None"
+    Availability: Rare
+    Damage: 4d10
+    Ammo: AP 20/9mm
+    Shots: 10
+    ROF: 1
+    Reliability: Very Reliable
+    Range: 450
+    Cost: 2_000
+  Scorpion 16 Missile Launcher:
+    Type: HVY
+    Weapon Accuracy: -1
+    Concealability: "None"
+    Availability: Rare
+    Damage: 7d10
+    Ammo: Missle
+    Shots: 1
+    ROF: 1
+    Reliability: Very Reliable
+    Range: 1,000m
+    Cost: 3_000
+  Militech Arms RPG-A:
+    Type: HVY
+    Weapon Accuracy: -2
+    Concealability: "None"
+    Availability: Rare
+    Damage: 6d10
+    Ammo: Missle
+    Shots: 1
+    ROF: 1
+    Reliability: Very Reliable
+    Range: 750m
+    Cost: 1_500
+
