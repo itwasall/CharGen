@@ -1,0 +1,52 @@
+clothes: [Biker Leathers, Blue Jeans, Corporate Suits, Jumpsuits, Miniskirts, High Fashion, Cammos, Normal Clothes, Nude, Bag Lady chic]
+hairstyle: [Mohawk, Long & Ratty, Short & Spiked, Wild & All over, Bald, Striped, Tinted, Neat & Short, Short & Curly, Long & Straight]
+affections: [Tatoos, Mirroshades, Ritual Scars, Spiked Gloves, Nose Rings, Earrings, Long Fingernails, Spike Heeled Boots, Weird Contact Lenses, Fingerless Gloves]
+ethnic_origins: [Anglo-American, African, Japanese, Central & Eastern European, Pacific Islander, Chinese/Southeast Asian, Black American, Hispanic American, Central/South American, Western European]
+ethnic_origins_languages:
+  - [English]
+  - [Bantu, Fante, Kongo, Ashanti Zulu Swahili]
+  - [Japanese, Korean]
+  - [Bulgarian, Russian, Czech, Polish, Ukranian, Slovak]
+  - [Microneasian, Tagalog, Polynesian, Malayan, Sudanese, Indonesian, Hawaiian]
+  - [Burmese, Cantonese, Mandarin, Thai, Tibetan, Vietnamese]
+  - [English, Blackfolk]
+  - [Spanish, English]
+  - [Spanish, Portuguese]
+  - [French, German, English, Spanish, Italian, Greek, Danish, Dutch, Norwegian, Swedish, Finnish]
+family_ranking: [Corporate Executive, Corporate Manager, Corporate Technician, Nomand Pack, Pirate Fleet, Gang Family, Crime Lord, Combat Zone Poor, Urban Homeless, Arcology Family]
+parents_something_happened: [
+  Your parent(s) died in warfare,
+  Your parent(s) died in an accident,
+  Your parent(s) were murdered,
+  Your parent(s) have amnesia and don't remember you,
+  You never knew your parent(s),
+  Your parent(s) are in hiding to protect you,
+  You were left with relatives for safekeeping,
+  You grew up on the Street and never had parents,
+  Your parent(s) gave you up for adoption,
+  Your parent(s) sold you for money
+]
+family_tragedy: [
+  Family lost everything through betrayal,
+  Family lost everything through bad management,
+  Family exiled or otherwise driven from their original home/nation/corporation,
+  Family is imprisoned and you alone escaped,
+  Family vanished. You are the only remaining member,
+  Family was murdered/killed and you were the only srvivor,
+  "Family is involved in a longterm conspiracy, organisation or association, such as a crime family revolutionary group",
+  Your family was scattered to the winds due to misfortune,
+  Your family is cursed with a hereditary fued that has lasted for generations,
+  You are the inheritor of a family debt; you must honor this dbet before moving on with your life
+]
+childhood_environment: [
+  Spent on all the Street, with no adult supervison,
+  Spend in a safe Corporate Surburbia,
+  In a Nomad Pack moving from town to town,
+  In a decaying, once upscale neighborhood,
+  In a defended Corporate Zone in the central City,
+  In the heart of the Combat Zone,
+  In a small village or town far from the City,
+  In a large arcology city,
+  In an aquatic Pirate Pack,
+  On a corporate controlled Farm or Research Facility
+]

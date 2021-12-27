@@ -1,5 +1,13 @@
 from math import floor
 from random import choice, choices, randint, shuffle
+import yaml
+
+data_careerskills = yaml.safe_load(open('cyberpunk_2020_data\careerskills.yaml', 'rt'))
+data_languages = yaml.safe_load(open('cyberpunk_2020_data\languages.yaml', 'rt'))
+data_martial_arts = yaml.safe_load(open('cyberpunk_2020_data\martial_arts.yaml', 'rt'))
+data_origins_and_style = yaml.safe_load(open('cyberpunk_2020_data\origins_and_style.yaml', 'rt'))
+data_weapons = yaml.safe_load(open('cyberpunk_2020_data\weapons.yaml', 'rt'))
+
 
 character = {
     "name": "",
@@ -234,6 +242,31 @@ def gen_stats(stat_gen_type):
         raise Exception
     return total_stats
 
+def gen_family_background():
+    family_ranking_list = data_origins_and_style['family_ranking']
+    parents_something_happened_list = data_origins_and_style['parents_something_happened']
+    family_tragedy_list = data_origins_and_style['family_tragedy']
+    childhood_environment_list = data_origins_and_style['childhood_environment']
+    family_status_list = ['Family status is in danger, and you risk losing everything', 'Family status is OK, even if parents are missing or dead']
+    parents = ['Both parents are living', 'Something has happened to one or both parents']
+    family_background = {}
+
+    family_ranking = choice(family_ranking_list)
+    family_background['Family Ranking'] = family_ranking
+    parent_status = choices(parents, [6, 3])
+    if parent_status == parents[1]:
+        parents_something_happened = choice(parents_something_happened_list)
+        family_background['Something Happened to Parents'] = parents_something_happened
+    family_status = choices(family_status_list, [6, 3])
+    family_background['Family Status'] = family_status
+    if family_status == family_status_list[0]:
+        family_tragedy = choice(family_tragedy_list)
+        family_background['Family Tragedy'] = family_tragedy
+    childhood_environment = choice(childhood_environment_list)
+    family_background['Childhood Environment'] = childhood_environment
+    return family_background
+
+
 
 def calc_movement_stats(movement_allowance):
     run = movement_allowance * 3
@@ -294,4 +327,4 @@ SKILL EXCEPTIONS:
 """
 
 if __name__ == "__main__":
-    print(gen_fast_char())
+    print(gen_family_background())
