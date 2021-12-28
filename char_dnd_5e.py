@@ -2,6 +2,8 @@ import yaml
 import random
 from random import choice, randint, choices
 from math import ceil, floor
+from cli_ui import info
+import cli_ui
 
 
 with open('dnd_5e_data/classes.yaml') as f_classes:
@@ -75,8 +77,8 @@ def job(race):
 def alignment(race):
     alignments_1 = ['Lawful ', 'Neutral ', 'Chaotic ']
     alignments_2 = ['Good', 'Neutral', 'Evil']
-    alignment_weights = race['alignment_weights']
-    character_alignment = str(choices(alignments_1, alignment_weights[0])[0]) + str(choices(alignments_2, alignment_weights[1])[0])
+    character_alignment = str(choices(alignments_1, race['alignment_weights'][0])[0]) + \
+                          str(choices(alignments_2, race['alignment_weights'][1])[0])
     return character_alignment
 
 def ability_scores(race, job):
@@ -231,7 +233,10 @@ def EXCEPT_tool_prof_bard(race, job):
     return tool_prof
 
 def hp(race, job, mod):
-    job_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)}, "1d8": {'name':'1d8', 'calc': dice(8,1)}, "1d10":{'name':'1d10', 'calc': dice(10,1)}, "1d12": {'name':'1d12', 'calc': dice(12,1)}}
+    job_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)}, 
+                "1d8": {'name':'1d8', 'calc': dice(8,1)}, 
+                "1d10":{'name':'1d10', 'calc': dice(10,1)}, 
+                "1d12": {'name':'1d12', 'calc': dice(12,1)}}
     hit_points = job['hp_start'][0] + mod['CON']
     hit_die = job_dice[job['hp_start'][1]]
     return hit_points, hit_die
@@ -246,7 +251,11 @@ def equiping(job, equip):
     martial_weapons = [melee for melee in martial_melee_weapons] + [ranged for ranged in martial_ranged_weapons]
     equipment = []
     tests = ['equipment1', 'equipment2', 'equipment3', 'equipment4']
-    item_check_list = {'simple Weapon':simple_weapons, 'simple Melee Weapon':simple_melee_weapons, 'martial Weapon':martial_weapons, 'martial Melee Weapon':martial_melee_weapons, 'musical Instrument':musical_instruments}
+    item_check_list = {'simple Weapon':simple_weapons, 
+                       'simple Melee Weapon':simple_melee_weapons, 
+                       'martial Weapon':martial_weapons, 
+                       'martial Melee Weapon':martial_melee_weapons, 
+                       'musical Instrument':musical_instruments}
 
     for test in tests:
         try:
@@ -313,7 +322,18 @@ def background(lang, skills, tools, equipment, race):
     return background, skills, tools, equipment, lang
 
 def actions(equipment, job, race):
-    standard_actions = {'Standard Actions': ['Attack', 'Cast a Spell', 'Dash', 'Disengage', 'Dodge', 'Help', 'Hide', 'Ready', 'Search', 'Use an Object', 'Two-Weapon Fighting', 'Interact with an Object']}
+    standard_actions = {'Standard Actions': ['Attack', 
+                                             'Cast a Spell', 
+                                             'Dash', 
+                                             'Disengage', 
+                                             'Dodge', 
+                                             'Help', 
+                                             'Hide', 
+                                             'Ready', 
+                                             'Search', 
+                                             'Use an Object',
+                                             'Two-Weapon Fighting', 
+                                             'Interact with an Object']}
     weapon_attacks = {}
     for item in equipment:
         for weapon in weapons.values():
@@ -326,7 +346,12 @@ def magical(job, race, ab_mod):
     spell_list = []
     spell_save = 0
     spell_atk = 0
-    no_magic = ['Barbarian', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue']
+    no_magic = ['Barbarian', 
+                'Fighter', 
+                'Monk', 
+                'Paladin', 
+                'Ranger', 
+                'Rogue']
     if job['name'] in no_magic:
         return spell_list, cantrip_list, spell_save, spell_atk
     else:
@@ -361,8 +386,22 @@ def EXCEPT_magical_cleric(job, spell_list):
                 spell_list.append(i)
     return spell_list
 
+def print_format_profs(prof_name, prof_list):
+    dupe_check = []
+    info(cli_ui.bold, prof_name)
+    if len(char_tool_prof) == 0:
+        info(cli_ui.green, "None", cli_ui.reset)
+    for k in prof_list:
+        if k in dupe_check:
+            continue
+        else:
+            dupe_check.append(k)
+            info(cli_ui.green, k, cli_ui.reset)
+
+
 
 def char_gen():
+    global char_arm_prof, char_wea_prof, char_tool_prof, char_lang, char_equipment
     char_race = choice(races)
     char_age, char_height, char_weight = age_height_weight(char_race)
     char_name = name(char_race)
@@ -378,27 +417,33 @@ def char_gen():
     char_actions, char_attack_actions = actions(char_equipment, char_job, char_race)
     char_magic, char_cantrip, char_spell_sav, char_spell_atk = magical(char_job, char_race, char_ab_mod)
 
-    print(f'{char_name}, former', char_background['name'])
+    info(cli_ui.bold, '==== INFORMATION =====')
+    info(cli_ui.yellow, f'{char_name}', cli_ui.reset, 'the', cli_ui.magenta, char_race['name'])
     print(char_alignment)
-    print(char_race['name'], char_age, char_height, char_weight)
-    print(char_job['name'])
-    print(f'Ability Scores: {char_ab_score}')
-    print(f'Ability Score Modifiers: {char_ab_mod}')
-    print(f'Saving Throws: {char_ab_sav}')
-    print(f'Skill Proficiencies: {char_skill_prof}')
-    print(f'Armor Proficiencies: {char_arm_prof}')
-    print(f'Weapon Proficiencies: {char_wea_prof}')
-    print(f'Tool Proficiencies: {char_tool_prof}')
-    print(f'Languages: {char_lang}')
-    print(f'Health: {char_hit_points}')
-    print("Hit Die:", char_hit_die['name'])
-    print(f"Starting Wealth: {char_wealth}")
-    print("Equipement", char_equipment)
-    print("Standard Actions:", char_actions)
-    print("Weapon Attacks:", char_attack_actions)
-    print("Magic status: ", char_magic)
-    print("Cantrips:", char_cantrip)
-    print("Spell Save/Attack: ", char_spell_sav, char_spell_atk)
+    print(f'{char_age} years old', char_height, char_weight)
+    print('Formally',char_job['name'])
+    info(cli_ui.yellow, "Health/Hit Dice:  ", cli_ui.green, f'{char_hit_points}/{char_hit_die["name"]}', cli_ui.reset)
+    info(cli_ui.yellow, "Spell Save/Attack:", cli_ui.green, f'{char_spell_sav}/{char_spell_atk}', cli_ui.reset)
+    info(cli_ui.bold, '=== ABILITY SCORES ===')
+    for k, d in char_ab_score.items():
+        info(cli_ui.green, k, cli_ui.reset, d, cli_ui.yellow, f'   ({char_ab_mod[k]})', cli_ui.reset, cli_ui.green , f'  Save:', cli_ui.reset, f'{char_ab_sav[k]}')
+    info(cli_ui.bold, '=== PROFICIENCIES ====')
+    info(cli_ui.bold, 'Skills')
+    for k, d in char_skill_prof.items():
+        info(cli_ui.yellow, f'+{d}', cli_ui.reset, '- ', cli_ui.green, k, cli_ui.reset)
+    print_format_profs('Weapons', char_wea_prof)
+    print_format_profs('Armor', char_arm_prof)
+    print_format_profs('Tools', char_tool_prof)
+    print_format_profs('Languages', char_lang)
+    info(cli_ui.bold, '=== EQUIPMENT ========')
+    info(cli_ui.bold, "Starting wealth", cli_ui.reset)
+    info(cli_ui.green, char_wealth, cli_ui.reset, 'bronze pieces')
+    print_format_profs('Equipment', char_equipment)
+    info(cli_ui.bold, '=== ACTIONS ==========')
+    print_format_profs('Attacks', char_attack_actions)
+    print_format_profs('Other Actions', char_actions)
+    print_format_profs('Magic Actions', char_magic)
+    print_format_profs('Cantrips', char_cantrip)
 
 if __name__ == "__main__":
     char_gen()
