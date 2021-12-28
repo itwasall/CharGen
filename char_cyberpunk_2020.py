@@ -7,6 +7,7 @@ data_languages = yaml.safe_load(open('cyberpunk_2020_data\languages.yaml', 'rt')
 data_martial_arts = yaml.safe_load(open('cyberpunk_2020_data\martial_arts.yaml', 'rt'))
 data_origins_and_style = yaml.safe_load(open('cyberpunk_2020_data\origins_and_style.yaml', 'rt'))
 data_weapons = yaml.safe_load(open('cyberpunk_2020_data\weapons.yaml', 'rt'))
+data_motivations = yaml.safe_load(open('cyberpunk_2020_data\motivations.yaml', 'rt'))
 
 
 character = {
@@ -210,6 +211,15 @@ character = {
 
 
 def roll(throws, sides=0):
+    """Dice rolling funciton
+
+    Args:
+        throws (str or int): Must be [int] if sides != 0. Can accept "1d6" type notation.
+        sides (int, optional): Defaults to 0. Used when throws is an int and dice size needs to be determined
+
+    Returns:
+        sum of rolls
+    """
     if isinstance(throws, str):
         throw_parse = throws.split("d")
         return (sum(randint(1, int(throw_parse[1])) for _ in range(int(throw_parse[0]))))
@@ -217,6 +227,11 @@ def roll(throws, sides=0):
         return sum(randint(1,sides) for _ in range(throws))
 
 def gen_stats(stat_gen_type):
+    """Generates stat pool based on stat generation type
+    Types:
+        - random: Roll 9D10s, total results
+        - fast: Roll 9D10s, rerolling any >2's
+        - cinematic: Predetermined number of stat points based on cinematic type"""
     stat_gen_type = stat_gen_type.lower()
     if stat_gen_type == "random":
         # Random type ~ Roll 9D10s, total results
@@ -243,6 +258,7 @@ def gen_stats(stat_gen_type):
     return total_stats
 
 def gen_family_background():
+    """Generates family background based on options in Corebook"""
     family_ranking_list = data_origins_and_style['family_ranking']
     parents_something_happened_list = data_origins_and_style['parents_something_happened']
     family_tragedy_list = data_origins_and_style['family_tragedy']
@@ -251,29 +267,59 @@ def gen_family_background():
     parents = ['Both parents are living', 'Something has happened to one or both parents']
     family_background = {}
 
-    family_ranking = choice(family_ranking_list)
-    family_background['Family Ranking'] = family_ranking
-    parent_status = choices(parents, [6, 3])
-    if parent_status == parents[1]:
-        parents_something_happened = choice(parents_something_happened_list)
-        family_background['Something Happened to Parents'] = parents_something_happened
-    family_status = choices(family_status_list, [6, 3])
-    family_background['Family Status'] = family_status
-    if family_status == family_status_list[0]:
-        family_tragedy = choice(family_tragedy_list)
-        family_background['Family Tragedy'] = family_tragedy
-    childhood_environment = choice(childhood_environment_list)
-    family_background['Childhood Environment'] = childhood_environment
+    # Family Ranking
+    family_background['Family Ranking'] = choice(family_ranking_list)
+
+    # Are parents alive or dead?
+    family_background['Parental Status'] = choices(parents, [6, 3])[0]
+    if family_background['Parental Status'] == parents[1]:
+        # If parent(s) are not alive
+        family_background['Something Happened to Parents'] = choice(parents_something_happened_list)
+
+    # Is family status in danger?
+    family_background['Family Status'] = choices(family_status_list, [6, 3])[0]
+    if family_background['Family Status'] == family_status_list[0]:
+        # Family status is in danger
+        family_background['Family Tragedy'] = choice(family_tragedy_list)
+
+    # How you grew up
+    family_background['Childhood Environment'] = choice(childhood_environment_list)
     return family_background
 
+def gen_motivations():
+    """Generates character motivations based on options in Corebook"""
+    personality_traits_list = data_motivations['personality_traits']
+    person_valued_most_list = data_motivations['person_valued_most']
+    thing_valued_most_list = data_motivations['thing_valued_most']
+    disp_towards_others_list = data_motivations['disp_towards_others']
+    possession_valued_most_list = data_motivations['possession_valued_most']
+
+    motivations = {}
+
+    motivations['Personality'] = choice(personality_traits_list)
+    motivations['Person you value most'] = choice(person_valued_most_list)
+    motivations['Thing you value most'] = choice(thing_valued_most_list)
+    motivations['Disposition towards others'] = choice(disp_towards_others_list)
+    motivations['Most valued possession'] = choice(possession_valued_most_list)
+
+    return motivations
+
+def gen_life_events():
+    age = roll("2d6") + 16
+    for adult_year in range(age-16):
+        event_roll = roll("1d10")
+        if event_roll <= 3:
+            
 
 
 def calc_movement_stats(movement_allowance):
+    """Calculates run + leap values from [arg]movement_allowance input var"""
     run = movement_allowance * 3
     leap = floor(movement_allowance/4)
     return run, leap
 
 def calc_body_type_modifier(body_type):
+    """Calculates BTM value from [arg]body_type input var"""
     body_type_mod_list = {0: ["Very Weak", 0], 1: ["Very Weak", 0], 2: ["Very Weak", 0],
                           3: ["Weak", -1], 4: ["Weak", -1],
                           5: ["Average", -2], 6: ["Average", -2], 7: ["Average", -2],
@@ -282,12 +328,15 @@ def calc_body_type_modifier(body_type):
     return body_type_mod_list[body_type]
 
 def calc_save_number(body_type):
+    """Calculates save number value from [arg]body_type input var"""
     return body_type
 
 def calc_humanity(empathy):
+    """Calculates humanity value from [arg]empathy input var"""
     return empathy * 10
 
 def gen_fast_char():
+    """Generates an NPC based on the 'Fast NPC' rules laid out in the Corebook"""
     fast_npc = {'stats':{}}
     fast_npc_stats = ["INT", "REF", "COOL", "LUCK", "ATTR", "TECH", "BODY", "MA", "EMP"]
     stat_rolls = []
@@ -303,6 +352,7 @@ def gen_fast_char():
     return fast_npc
 
 def starting_cash(role, special_ability_level):
+    """Generates starting cash amount based on [arg1]role and [arg2]special_ability_level input vars"""
     occupations = {'Rocker': {1: 1_000, 2: 1_000, 3: 1_000, 4: 1_000, 5:1_000, 6: 1_500, 7: 2_000, 8: 5_000, 9: 8_000, 10: 12_000},
                    'Solo': {1: 2_000, 2: 2_000, 3: 2_000, 4: 2_000, 5:2_000, 6: 3_000, 7: 4_500, 8: 7_000, 9: 9_000, 10: 12_000},
                    'Cop': {1: 1_000, 2: 1_000, 3: 1_000, 4: 1_000, 5:1_000, 6: 1_200, 7: 3_000, 8: 5_000, 9: 7_000, 10: 9_000},
@@ -323,8 +373,9 @@ SKILL EXCEPTIONS:
     [Rocker] with [Oratory] of 6+ get to add +1 when using their [Charasmatic Leadership] ability
     [Physics] skill requires [Mathematics] skill of +4
     [Zoology] of +8 grants a +1 advantage to any [Wilderness Survival] skill
-
 """
 
 if __name__ == "__main__":
-    print(gen_family_background())
+    x = gen_motivations()
+    for i in x.keys():
+        print(f"{i}: {x[i]}")
