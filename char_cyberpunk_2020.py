@@ -198,17 +198,23 @@ character = {
     "weapons": {
         "weapon_name": {
             "weapon_type": "",
-            "WA": "",
-            "conc": "",
+            "weapon_accuray": "",
+            "conceilability": "",
             "availability": "",
             "damage": "",
-            "no_shots": 0,
+            "magazine_size": 0,
             "rate_of_fire": 0,
-            "rel": ""
+            "reliability": ""
         }
     }
 }
 
+# ====== FLAGS ======
+global LIFE_EVENT_ILLNESS, LIFE_EVENT_ACCIDENT_DISFIGUREMENT
+LIFE_EVENT_ILLNESS = 0
+LIFE_EVENT_ACCIDENT_DISFIGUREMENT = 0
+
+# ===== GEN =========
 
 def roll(throws, sides=0):
     """Dice rolling funciton
@@ -306,10 +312,59 @@ def gen_motivations():
 
 def gen_life_events():
     age = roll("2d6") + 16
+    life_events = {}
     for adult_year in range(age-16):
         event_roll = roll("1d10")
         if event_roll <= 3:
-            
+            life_events[f'Age {adult_year + 16}'] = gen_life_events_bpbw()
+        elif event_roll <= 6:
+            life_events[f'Age {adult_year + 16}'] = gen_life_events_fae()
+        elif event_roll <= 8:
+            life_events[f'Age {adult_year + 16}'] = gen_life_events_ri()
+        else:
+            life_events[f'Age {adult_year + 16}'] = 'Nothing happened that year'
+
+
+def gen_life_events_bpbw():
+    global LIFE_EVENT_ILLNESS, LIFE_EVENT_ACCIDENT_DISFIGUREMENT
+
+    coinflip = choice(['Heads', 'Tails'])
+    life_event = {}
+    if coinflip == 'Heads':
+        # Disaster strikes!
+        event_roll = roll("1d10")
+        if event_roll == 1:
+            financial_loss_or_debt_roll = roll("100d10")
+            life_event['Financial loss or Debt'] = f"You have lost {financial_loss_or_debt_roll} eurodollars. If you can't pay this now, you have a debt to pay, in cash - or blood"
+        elif event_roll == 2:
+            imprisonment_roll = roll("1d10")
+            imprisonment_type = choice('in prison', 'held hostage')
+            life_event['Imprisonment'] = f"You have been {imprisonment_type} for {imprisonment_roll} months this year"
+        elif event_roll == 3:
+            life_event['Illness or Addiction'] = "You have contracted either an illness or drug habit in this time."
+            LIFE_EVENT_ILLNESS += 1
+        elif event_roll == 4:
+            betrayal = choices(['You are being blackmailed', 'A secret was exposed', 'You were betrayed by a close friend in romance', 'You were betrayed by a close friend in your career path'], [3, 4, 2, 1])
+            life_event['Betrayal'] = f"You've been betrayed! {betrayal}."
+        elif event_roll == 5:
+            accident = choices(['You were terribly disfigured', f'You were hospitalised for {roll("1d10")} months this year', f'You have lost {roll("1d10")} months of memory this year', 'You constantly relive nightmares of the accident each night and wake up screaming'], [4, 2, 2, 2])
+            if accident == 'You were terribly disfigured':
+                LIFE_EVENT_ACCIDENT_DISFIGUREMENT -= 5
+            life_event['Accident'] = f"You've had an accident. {accident}"
+        elif event_roll == 6:
+            who_got_killed = choice('Friend', 'Lover', 'Relative')
+            killed = choices(['They died accidentally', 'They were murdered by unknown parties', 'They were murdered and you know who did it. You just need the proof'], [5, 3, 2])
+            life_event[f'{who_got_killed} died'] = f"You lost a {who_got_killed} that meant a lot to you. {killed}."
+        elif event_roll == 7:
+            false_accusation = choices(['the accusation is theft', "it's cowardice", "it's murder", "it's rape", "it's lying or betrayal"], [3, 2, 3, 1, 1])
+
+def gen_life_events_fae():
+    pass
+
+def gen_life_events_ri():
+    pass
+
+
 
 
 def calc_movement_stats(movement_allowance):

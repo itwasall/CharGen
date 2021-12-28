@@ -1,4 +1,4 @@
-import math
+from math import ceil
 import yaml
 
 skills = yaml.safe_load(open('tbz_data/skills.yaml'))
@@ -9,7 +9,6 @@ for i in skills['skills']:
 
 for k, d in dict_skills.items():
     print(k, dict_skills[k])
-ceil = math.ceil
 
 
 class Character():
