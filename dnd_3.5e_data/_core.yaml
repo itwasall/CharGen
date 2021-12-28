@@ -1,0 +1,464 @@
+#####################
+# Init Info
+languages_nonsecret: &languages_nonsecret [Abyssal, Aquan, Auran, Celestial, Common, Draconic, Dwarven, Elven, Giant, Gnome, Goblin, Gnoll, Halfling ,Ignan, Infernal, Orc, Sylvan, Terran, Undercommon]
+languages_secret: &languages_secret [Druid]
+languages_all: &languages_all [*languages_secret, *languages_nonsecret]
+#####################
+# BONUSES
+
+
+#####################
+# RACES
+
+Human: &Human {
+  name: Human,
+  ability_adjustments: {None},
+  favored_class: None,
+  height: [60, 72], # Height in inches, [lower limit, upper limit]
+  weight: [125, 250],  # Weight in lbs, [lower limit, upper limit]
+  age: [15,60],
+  racial_language: None,
+  size: Medium,
+  base_speed: 30,
+  bonuses: [
+  extra_feat,
+  extra_skill_points: 4,
+  extra_language: *languages_nonsecret
+
+  ]
+}
+Dwarf: &Dwarf {
+  name: Dwarf,
+  ability_adjustments: {Con: 2, Cha: -2},
+  favored_class: Fighter,
+  height: [48, 54],
+  weight: [120, 230],
+  age: [40, 400],
+  racial_language: Dwarvish,
+  size: Medium,
+  base_speed: 20,
+  bonuses: [
+  darkvision: 60,
+  stonecutting: +2 Search bonus to unusual stonework,
+  dwarven_weapons: Dwarf's treat dwarven waraxes and dwarven urgoshes as martial weapons,
+  stability: +4 ability check against being knocked down,
+  poison_res: +2 saving throw against poison,
+  spell_res: +2 saving throw against magic,
+  orc_atk: +2 attack against Orcs,
+  goblin_atk: +1 attack against Goblinoids,
+  giant_def: +4 to AC against Giants,
+  craft_bonus_dwarf: +2 Craft bonus to stonework items,
+  appraise_bonus_dwarf: +2 Appraise bonus to metal and stonework items,
+  extra_language: [Giant, Gnome, Goblin, Orc, Terran, Undercommon]
+  ]
+}
+Elf: &Elf {
+  name: Elf,
+  ability_adjustments: {Dex: 2, Con: -2},
+  favored_class: Wizard,
+  height: [54, 66],
+  weight: [95, 135],
+  age: [110, 700],
+  racial_language: Elvish,
+  size: Medium,
+  base_speed: 30,
+  bonuses:[
+    weapon_prof_longsword: Recieves martial weapon proficiency for longswords,
+    weapon_prof_rapier: Recieves martial weapon proficiency for rapier,
+    weapon_prof_longbow: Recieves martial weapon proficiency for longbow,
+    weapon_prof_shortbow: Recieves martial weapon proficiency for shortbow,
+    listen_check: +2 to Listen checks,
+    search_check: +2 to Search checks,
+    spot_check: +2 to spot checks,
+    extra_language: [Draconic, Gnoll, Gnome, Goblin, Orc, Sylvan]
+    ]
+}
+Gnome: &Gnome {
+  name: Gnome,
+  ability_adjustments: {Con: 2, Str: -2},
+  favored_class: Bard,
+  height: [36, 42],
+  weight: [40, 45],
+  age: [40, 350],
+  racial_language: Gnomish,
+  size: Small,
+  base_speed: 20,
+  bonuses:[
+  lowlight_vision: Can see twice as far in starlight, moonlight, torchlight and similar conditions,
+  gnomish_weapons: Gnomes treat gnome hooked hammers as martial weapons rather than exotic,
+  illusion_res: +2 on saving throws against Illusions,
+  illusion_buff: +1 to Difficulty class of all illusion spells cast by gnomes,
+  kobold_atk: +1 attack against Kobolds,
+  goblin_atk: +1 attack against Goblinoids,
+  giant_def: +4 to AC against Giants,
+  listen_check: +2 to Listen checks,
+  craft_bonus_gnome: +2 Craft bonus to alchemical items,
+
+  ]
+}
+Half-Elf: &Half-Elf {
+  name: Half-Elf,
+  ability_adjustments: {None},
+  favored_class: None,
+  height: [60, 72],
+  weight: [100, 180],
+  age: [20, 180],
+  racial_language: Elvish,
+  size: Medium,
+  base_speed: Wizard,
+  bonuses:[
+  immune_sleep: Immunity to sleep magic,
+  enchant_res: +2 on saving throws against Enchantment magic,
+  lowlight_vision: Can see twice as far in starlight, moonlight, torchlight and similar conditions,
+  listen_check_half: +1 to Listen checks,
+  search_check_half: +1 to Search checks,
+  spot_check_half: +1 to spot checks,
+  diplomacy_check: +2 to diplomacy checks,
+  gather_info_check: +2 to gather information checks,
+  extra_language: *languages_nonsecret
+  ]
+}
+Half-Orc: &Half-Orc {
+  name: Half-Orc,
+  ability_adjustments: {Str: 2, Int: -2, Cha: -2},
+  favored_class: Barbarian,
+  height: [72, 84],
+  weight: [180, 250],
+  age: [14, 75],
+  racial_language: Orcish,
+  size: Medium,
+  base_speed: 30,
+  bonuses:[
+  darkvision: 60,
+  orc_blood: Have orcs blood,
+  extra_language: [Draconic, Giant, Gnoll, Goblin, Abyssal],
+  ]
+}
+Halfling: &Halfling {
+  name: Halfling,
+  ability_adjustments: {Dex: 2, Str: -2},
+  favored_class: Rogue,
+  racial_language: Halfling,
+  height: [],
+  weight: [],
+  age: [],
+  size:,
+  base_speed:,
+  bonuses:[]
+}
+
+#####################
+# CLASSES
+
+# alignment requirements
+allalign: &allalign [LG, NG, CG, LN, TN, CN, LE, NE, CE]
+nonlawful: &nonlawful [NG, CG, TN, CN, NE, CE]
+has_neutral: &has_neutral [LN, CN, NG, TN, NE]
+has_lawful: &has_lawful [LG, LN, LE]
+
+Barbarian: &Barbarian {
+  name: Barbarian,
+  alignment: *nonlawful,
+  hitdice: 1d12,
+  skill_points: [4, Int_Mod, 4], # (n1 + Mod) * n2
+  weapon_prof: [Simple Weapons, Martial Weapons],
+  armor_prof: [Light Armor, Medium Armor, Heavy Armor (No Tower)],
+  bonuses: [
+    fast_movement, # +10ft to base speed
+    illiteracy, # A Barbarian can spend 2 skill points to learn how to read and write
+    ]
+}
+Bard: &Bard {
+  name: Bard,
+  alignment: *nonlawful,
+  hitdice: 1d6,
+}
+Cleric: &Cleric {
+  name: Cleric,
+  alignment: *allalign,
+  hitdice: 1d8,
+  bonuses: [
+  speak_abyssal,
+  speak_celestial,
+  speak_infernal
+  ]
+}
+Druid: &Druid {
+  name: Druid,
+  alignment: *has_neutral,
+  hitdice: 1d8,
+  bonuses:[
+  speak_slyvan
+  ]
+}
+Fighter: &Fighter {
+  name: Fighter,
+  alignment: *allalign, 
+  hitdice: 1d10,
+  } 
+Monk: &Monk {
+  name: Monk,
+  alignment: *has_lawful,
+  hitdice: 1d8,
+} 
+Paladin: &Paladin {
+  name: Paladin, 
+  alignment: [LG], 
+  hitdice: 1d10,
+} 
+Ranger: &Ranger {
+  name: Ranger,
+  alignment: *allalign,
+  hitdice: 1d8,
+} 
+Rogue: &Rogue {
+  name: Rogue,
+  alignment: *allalign,
+  hitdice: 1d6,
+} 
+Sorcerer: &Sorcerer {
+  name: Sorcerer,
+  alignment: *allalign,
+  hitdice: 1d4,
+} 
+Wizard: &Wizard {
+  name: Wizard,
+  alignment: *allalign,
+  hitdice: 1d4,
+  bonuses:[
+  speak_draconic
+  ]
+}  
+
+#####################
+# SKILLS
+
+skills: {
+  Appraise: {
+    jobs: [Bard, Rogue],
+      untrained: Yes,
+      ability: Int,
+      },
+  Balance: {
+    jobs: [Bard, Monk, Rogue],
+      untrained: Yes,
+      ability: Dex,
+      },
+  Bluff: {
+    jobs: [Bard, Rogue, Sorcerer],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Climb: {
+    jobs: [Barbarian, Bard, Fighter, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Str,
+      },
+  Concerntration: {
+    jobs: [Bard, Cleric, Druid, Monk, Paladin, Ranger, Sorcerer, Wizard],
+      untrained: Yes,
+      ability: Con,
+      },
+  Craft: { 
+    jobs: [Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Wizard],
+      untrained: Yes,
+      ability: Int,
+      },
+  Decipher Script: {
+    jobs: [Bard, Rogue, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Diplomacy: {
+    jobs: [Bard, Cleric, Druid, Monk, Paladin, Rogue],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Disable Device: {
+    jobs: [Rogue],
+      untrained: No,
+      ability: Int,
+      },
+  Disguise: {
+    jobs: [Bard, Rogue],
+      untrained: Yes,
+      ability: Int ,
+      },
+  Escape Artist: {
+    jobs: [Bard, Monk, Rogue],
+      untrained: Yes,
+      ability: Dex,
+      },
+  Forgery: {
+    jobs: [Rogue],
+      untrained: Yes,
+      ability: Int,
+      },
+  Gather Information:  {
+    jobs: [Bard, Rogue],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Handle Animal: {
+    jobs: [Barbarian, Druid, Fighter, Paladin, Ranger],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Heal:  {
+    jobs: [Cleric, Druid, Paladin, Ranger],
+      untrained: Yes,
+      ability: Int,
+      },
+  Hide: {
+    jobs: [Bard, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Dex,
+      },
+  Intimidate: {
+    jobs: [Barbarian, Fighter, Rogue],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Jump: {
+    jobs: [Barbarian, Bard, Fighter, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Str ,
+      },
+  Knowledge (arcana): {
+    jobs: [Bard, Cleric, Monk, Sorcerer, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (architecture and engineering): {
+    jobs: [Bard, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (dungeoneering): {
+    jobs: [Bard, Ranger, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (geography) : {
+    jobs: [Bard, Ranger, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (history) : {
+    jobs: [Bard, Cleric, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (local) : {
+    jobs: [Bard, Rogue, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (nature) : {
+    jobs: [Bard, Druid, Ranger, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (nobility and royalty) : {
+    jobs: [Bard, Paladin, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (religion): {
+    jobs: [Bard, Cleric, Monk, Paladin, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Knowledge (the planes): {
+    jobs: [Bard, Cleric, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Listen : {
+    jobs: [Barbarian, Bard, Druid, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Wis,
+      },
+  Move Silently : {
+    jobs: [Bard, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Dex,
+      },
+  Open Lock : {
+    jobs: [Rogue],
+      untrained: No,
+      ability: Dex,
+      },
+  Perform : {
+    jobs: [Bard, Monk, Rogue],
+      untrained: Yes,
+      ability: Cha,
+      },
+  Profession : {
+    jobs: [Bard, Cleric, Druid, Monk, Paladin, Ranger, Rogue, Sorcerer, Wizard],
+      untrained: No,
+      ability: Wis,
+      },
+  Ride : {
+    jobs: [Barbarian, Druid, Fighter, Paladin, Ranger],
+      untrained: Yes,
+      ability: Dex,
+      },
+  Search : {
+    jobs: [Ranger, Rogue],
+      untrained: Yes,
+      ability: Int,
+      },
+  Sense Motive : {
+    jobs: [Bard, Monk, Paladin, Rogue] ,
+      untrained: Yes,
+      ability: Wis,
+      },
+  Sleight of Hand : {
+    jobs: [Bard, Rogue],
+      untrained: No,
+      ability: Dex,
+      },
+  Speak Language : {
+    jobs: [Bard],
+      untrained: No,
+      ability: None,
+      },
+  Spellcraft : {
+    jobs: [Bard, Cleric, Druid, Sorcerer, Wizard],
+      untrained: No,
+      ability: Int,
+      },
+  Spot : {
+    jobs: [Druid, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Wis,
+      },
+  Survival : {
+    jobs: [Barbarian, Druid, Ranger],
+      untrained:  Yes,
+      ability: Wis,
+      },
+  Swim : {
+    jobs: [Barbarian, Bard, Druid, Fighter, Monk, Ranger, Rogue],
+      untrained: Yes,
+      ability: Str,
+      },
+  Tumble : {
+    jobs: [Bard, Monk, Rogue],
+      untrained: No,
+      ability: Dex,
+      },
+  Use Magic Device : {
+    jobs: [Bard, Rogue],
+      untrained: No,
+      ability: Cha,
+      },
+  Use Rope: {
+    jobs: [Ranger, Rogue],
+      untrained: Yes,
+      ability: Dex,
+      }
+    }
+jobs: [*Barbarian, *Bard, *Cleric, *Druid, *Fighter, *Monk, *Paladin, *Ranger, *Rogue, *Sorcerer, *Wizard]
+races: [*Human, *Dwarf, *Elf, *Gnome, *Half-Elf, *Half-Orc, *Halfling]

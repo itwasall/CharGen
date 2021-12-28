@@ -1,0 +1,120 @@
+blackwing:
+  - name: Blackwing
+    cost: 10
+    cost_type: Annelid
+    effect: [Flight]
+    location: Back
+    food: Fresh fruit or vegetables
+blood_hulker:
+  - name: Blood Hulker
+    cost: 10
+    cost_type: Level
+    effect: [Body_Add, Agility_Minus]
+    location: Muscular System
+    food: None
+chitinshells:
+  - name: Chitinshells
+    cost: 2
+    cost_type: Level
+    effect: [Vitality_Add]
+    location: All
+    food: Fruit or vegetables
+corpse_puppeteer:
+  - name: Corpse Puppeteer
+    cost: 30
+    cost_type: Annelid
+    effect: [Control_Dead]
+    location: Cerebellum
+demon_of_battle:
+  - name: Demon of Battle
+    cost: 80
+    cost_type: One
+    effect: [Demon]
+    location: Cerebellum
+digger_wasps:
+  - name: Digger Wasps
+    cost: 3
+    cost_type: Level
+    effect: [Wasp_swarm]
+    location: Any large area of skin
+    food: None
+dissolver:
+  - name: Dissolver
+    cost: 2
+    cost_type: Level
+    effect: [Acid_Spit]
+    location: Stomach
+    food: Dissolver food
+eye_stalker:
+  - name: Eye Stalker
+    cost: 10
+    cost_type: Level
+    effect: [Sense_Add]
+    location: Hand, Head, Fingertips
+    food: None
+hundred_face_worm:
+  - name: Hundred Face Worm
+    cost: 15
+    cost_type: One
+    effect: [Face_Change]
+    location: Face
+    food: None
+immortality_strain:
+  - name: Immortality Strain
+    cost: 50
+    cost_type: One
+    effect: [Immortality]
+    location: Unknown
+    food: None
+itamistrain:
+  - name: Itamistrain
+    cost: 15
+    cost_type: One
+    effect: [Vitality_Add]
+    location: Nervous System
+    food: None
+mindglower:
+  - name: Mindglower
+    cost: 3
+    cost_type: Level
+    effect: [Soul_Add, Light]
+    location: Fingertips
+    food: Water
+mouth_creeper:
+  - name: Mouth Creeper
+    cost: 15
+    cost_type: One
+    effect: [Defend]
+    location: Digestive Tract
+    food: 200g Animal Meat
+mynah_bug:
+  - name: Mynah Bug
+    cost: 10
+    cost_type: One
+    effect: [Duplicate_Sound]
+    location: Throat
+    food: Whatever host eats
+rejuvenation_worms:
+  - name: Rejuvenation Worms
+    cost: 5
+    cost_type: Level
+    effect: [Healing]
+    location: Everywhere
+    food: Rotting meat
+spinal_mites:
+  - name: Spinal Mites
+    cost: 5
+    cost_type: Level
+    effect: [Agility_Add]
+    location: Nervous System
+    food: None
+talonfang_bugs:
+  - name: Talonfang Bugs
+    cost: 3
+    cost_type: Level
+    effect: [Claws]
+    location: Limbs
+    food: Human or animal blood
+
+
+

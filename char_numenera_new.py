@@ -21,7 +21,7 @@ class job_class(yaml.YAMLObject):
         self.defaults = defaults
         pass
 
-data_jobs = open('numenera_data\\classes.yaml', 'r')
+data_jobs = open('numenera_data/classes.yaml', 'r')
 jobs = {}
 for job in yaml.load_all(data_jobs, Loader=yaml.FullLoader):
     jobs[job.name] = job.stats, job.stats_pool, job.stat_pool_weights, job.effort, job.edge, job.background, job.player_intrusions, job.connection, job.equipment, job.money, job.abilities, job.skills, job.actions, job.defaults

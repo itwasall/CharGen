@@ -1,0 +1,236 @@
+blackwing:
+  - name: Blackwing
+    cost: 10
+    cost_type: Annelid
+    effect: [Flight]
+    location: Back
+    food: Fresh fruit or vegetables
+blood_hulker:
+  - name: Blood Hulker
+    cost: 10
+    cost_type: Level
+    effect: [Body_Add, Agility_Minus]
+    location: Muscular System
+    food: None
+chitinshells:
+  - name: Chitinshells
+    cost: 2
+    cost_type: Level
+    effect: [Vitality_Add]
+    location: All
+    food: Fruit or vegetables
+corpse_puppeteer:
+  - name: Corpse Puppeteer
+    cost: 30
+    cost_type: Annelid
+    effect: [Control_Dead]
+    location: Cerebellum
+demon_of_battle:
+  - name: Demon of Battle
+    cost: 80
+    cost_type: One
+    effect: [Demon]
+    location: Cerebellum
+digger_wasps:
+  - name: Digger Wasps
+    cost: 3
+    cost_type: Level
+    effect: [Wasp_swarm]
+    location: Any large area of skin
+    food: None
+dissolver:
+  - name: Dissolver
+    cost: 2
+    cost_type: Level
+    effect: [Acid_Spit]
+    location: Stomach
+    food: Dissolver food
+eye_stalker:
+  - name: Eye Stalker
+    cost: 10
+    cost_type: Level
+    effect: [Sense_Add]
+    location: Hand, Head, Fingertips
+    food: None
+hundred_face_worm:
+  - name: Hundred Face Worm
+    cost: 15
+    cost_type: One
+    effect: [Face_Change]
+    location: Face
+    food: None
+immortality_strain:
+  - name: Immortality Strain
+    cost: 50
+    cost_type: One
+    effect: [Immortality]
+    location: Unknown
+    food: None
+itamistrain:
+  - name: Itamistrain
+    cost: 15
+    cost_type: One
+    effect: [Vitality_Add]
+    location: Nervous System
+    food: None
+mindglower:
+  - name: Mindglower
+    cost: 3
+    cost_type: Level
+    effect: [Soul_Add, Light]
+    location: Fingertips
+    food: Water
+mouth_creeper:
+  - name: Mouth Creeper
+    cost: 15
+    cost_type: One
+    effect: [Defend]
+    location: Digestive Tract
+    food: 200g Animal Meat
+mynah_bug:
+  - name: Mynah Bug
+    cost: 10
+    cost_type: One
+    effect: [Duplicate_Sound]
+    location: Throat
+    food: Whatever host eats
+rejuvenation_worms:
+  - name: Rejuvenation Worms
+    cost: 5
+    cost_type: Level
+    effect: [Healing]
+    location: Everywhere
+    food: Rotting meat
+spinal_mites:
+  - name: Spinal Mites
+    cost: 5
+    cost_type: Level
+    effect: [Agility_Add]
+    location: Nervous System
+    food: None
+talonfang_bugs:
+  - name: Talonfang Bugs
+    cost: 3
+    cost_type: Level
+    effect: [Claws]
+    location: Limbs
+    food: Human or animal blood
+
+
+
+hard_luck:
+  - type: General
+    name: Hard Luck
+    cost: 5
+    skills: 
+skills:
+  - skill_name: Unarmed Combat
+    property: General
+    primary: Body
+    attributes: [Body, Senses, Knowledge, Spirit, Station]
+  - skill_name: Wormcharm
+    property: Specialist
+    primary: Body
+    attributes: [Body, Agility, Senses, Knowledge, Empathy, Station] 
+    skill_name: Movement
+    property: General
+    primary: Agility
+    attributes: [Body, Agility, Station]
+  - skill_name: Melee Weapons
+    property: General
+    primary: Agility
+    attributes: [Agility, Senses, Knowledge, Spirit, Station]
+  - skill_name: Evasion
+    property: General
+    primary: Agility
+    attributes: [Agility, Spirit, Station]
+  - skill_name: Stealth
+    property: General
+    primary: Agility
+    attributes: [Agility, Senses, Spirit]
+  - skill_name: Ninjustu
+    property: Elite
+    primary: Agility
+    attributes: [Agility]
+  - skill_name: Criminal Arts
+    property: Specialist
+    primary: Agility
+    attributes: [Agility, Senses, Knowledge, Spirit, Empathy, Station]
+  - skill_name: First Aid
+    property: General
+    primary: Senses
+    attributes: [Senses, Knowledge]
+  - skill_name: Notice
+    property: General
+    primary: Senses
+    attributes: [Senses, Spirit]
+  - skill_name: Marksman
+    property: General
+    primary: Senses
+    attributes: [Senses, Knowledge, Spirit]
+  - skill_name: Forgery
+    property: Specialist
+    primary: Senses
+    attributes: [Agility, Senses, Knowledge, Empathy, Station]
+  - skill_name: Information
+    property: General
+    primary: Knowledge
+    attributes: [Knowledge, Station]
+  - skill_name: Onmyojutstu
+    property: Specialist
+    primary: Knowledge
+    attributes: [Knowledge, Station]
+  - skill_name: Art of War
+    property: Specialist
+    primary: Knowledge
+    attributes: [Knowledge]
+  - skill_name: Willpower
+    property: General
+    primary: Spirit
+    attributes: [Body, Senses, Knowledge, Spirit, Empathy, Station]
+  - skill_name: Resonance
+    property: Elite
+    primary: Spirit
+    attributes: [Body, Spirit, Empathy, Station]
+  - skill_name: Interface
+    property: Elite
+    primary: Spirit
+    attributes: [Spirit]
+  - skill_name: Buddhist Magic
+    property: Specialist
+    primary: Spirit
+    attributes: [Spirit]
+  - skill_name: Persuasion
+    property: General
+    primary: Empathy
+    attributes: [Body, Agility, Senses, Knowledge, Spirit, Empathy, Station]
+  - skill_name: Pillow Arts
+    property: General
+    primary: Empathy
+    attributes: [Senses, Knowledge, Spirit, Empathy, Station]
+  - skill_name: Perform
+    property: Specialist
+    primary: Empathy
+    attributes: [Body, Agility, Senses, Knowledge, Empathy, Station]
+  - skill_name: Etiquette
+    property: Specialist
+    primary: Station
+    attributes: [Agility, Senses, Knowledge, Empathy, Station]
+  - skill_name: Shinto
+    property: Specialist
+    primary: Station
+    attributes: [Station]
+  - skill_name: Art of Rule
+    property: Elite
+    primary: Station
+    attributes: [Knowledge, Empathy, Station]
+  - skill_name: Strategy
+    property: Specialist
+    primary: Station
+    attributes: [Knowledge, Empathy, Station]
+- weapon_type: "special_weapons"
+  kiai_cost: 10
+- weapon_type: "gemblades"
+  kiai_cost: 3
+- weapon_type: "gunpower weapons"
+  kiai_cost: 2

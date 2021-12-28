@@ -1,0 +1,5 @@
+hard_luck:
+  - type: General
+    name: Hard Luck
+    cost: 5
+    skills: 
