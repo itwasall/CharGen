@@ -1,6 +1,6 @@
-- weapon_type: "special_weapons"
+- weapon_type: "Special Weapons"
   kiai_cost: 10
-- weapon_type: "gemblades"
+- weapon_type: "Gemblades"
   kiai_cost: 3
-- weapon_type: "gunpower weapons"
+- weapon_type: "Gunpower Weapons"
   kiai_cost: 2

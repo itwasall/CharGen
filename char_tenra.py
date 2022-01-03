@@ -1,5 +1,6 @@
 from math import ceil
 import yaml
+from typing import List, Tuple
 
 skills = yaml.safe_load(open('tbz_data/skills.yaml'))
 dict_skills = {}
@@ -12,34 +13,66 @@ for k, d in dict_skills.items():
 
 
 class Character():
-    def __init__(self):
-        self.name = ""
-        self.age = 0
-        self.sex = ""
-        self.concept = ""
-        self.archetypes = ""
-        self.karma_cost = 0
-        self.attribute_cost = 0
-        self.attr_body = 0
-        self.attr_agility = 0
-        self.attr_senses = 0
-        self.attr_knowledge = 0
-        self.attr_spirit = 0
-        self.attr_empathy  = 0
-        self.attr_station = 0
-        self.vitality = self.attr_body + self.attr_spirit
-        self.soul = 2 * (self.attr_spirit + self.attr_knowledge)
-        self.kiai_spent = 0
-        self.kiai_current = 0
-        self.karma_total = 0
-        self.karma_armourRider = 0
-        self.karma_armourMeikyo = 0
-        self.fates = {}
-        self.wound_light = self.attr_body
-        self.wound_heavy = ceil(self.attr_body / 2)
-        self.wound_critial = ceil(self.attr_body / 4)
-        self.wounds = [self.wound_light, self.wound_heavy, self.wound_critial]
-        self.weapons = {}
-        self.possessions = []
+    def __init__(
+            self,
+            name: str,
+            main_archetype: str,
+            archetypes: List[str],
+            attribute_cost: int,
+            karma: int,
+            attribute_body: int,
+            attribute_agility: int,
+            attribute_senses: int,
+            attribute_knowledge: int,
+            attribute_spirit: int,
+            attribute_empathy: int,
+            attribute_station: int,
+            vitality: int,
+            soul: int,
+            wounds: Tuple[int, int, int, int],
+            equipment: List[str],
+            rider_karma: int = 0,
+            meikyo_karma: int = 0,
+            armour_attribute_body: int = 0,
+            armour_attribute_agility: int = 0,
+            armour_attribute_senses: int = 0,
 
-test = Character()
+
+    ):
+        self.name = name
+        self.main_archetype = main_archetype
+        self.archetypes = archetypes
+        self.attribute_cost = attribute_cost
+        self.karma = karma
+        self.attribute_body = attribute_body
+        self.attribute_agility = attribute_agility
+        self.attribute_senses = attribute_senses
+        self.attribute_knowledge = attribute_knowledge
+        self.attribute_spirit = attribute_spirit
+        self.attribute_empathy = attribute_empathy
+        self.attribute_station = attribute_station
+        self.attributes = [
+            self.attribute_body,
+            self.attribute_agility,
+            self.attribute_senses,
+            self.attribute_knowledge,
+            self.attribute_spirit,
+            self.attribute_empathy,
+            self.attribute_station
+        ]
+        self.vitality = vitality
+        self.soul = soul
+        self.wounds = wounds
+
+        self.rider_karma = rider_karma
+        self.meikyo_karma = meikyo_karma
+
+        self.armour_attribute_body = armour_attribute_body
+        self.armour_attribute_agility = armour_attribute_agility
+        self.armour_attribute_senses = armour_attribute_senses
+        self.armour_attributes = [
+            self.armour_attribute_body,
+            self.armour_attribute_agility,
+            self.armour_attribute_senses
+        ]
+
