@@ -28,7 +28,7 @@ general:
     skills: [[Pillow Arts, 3], [Perform, 2]]
     attr_pen: 1
     m_attr: [Spirit, Station]
-    station_requirement: 5
+    station_req: 5
     equipment: "!equip_kabukimono"
     equip_cost: 12
     weapons:
@@ -152,13 +152,115 @@ war:
     station_req: 4
     equipment: [15 additional soulgems]
     equip_cost: 10
-
+    weapons:
+      Beast-Slayer (Masterwork Soulgem Greatsword):
+        damage: 7
+        rate_of_fire: 5
+        ammo: 8
+    special_abilities: no
+    fate: [Taboo, Killing]
+    desc: You are a young gifted swordmaster, and the sword you carry has been passed down in your family for generations.
+    notes: In choosing this archetype, it doesn't mean that you will absolutely never fight (or even kill). It's just that at some point, you have vowed to never kill again. Will that vow stand when provoked?
   Paragon:
+    karma_cost: 20
+    skills: [[Art of War - Ki Manipulation, 4]]
+    attr_pen: 0
+    m_attr: [Agility, Spirit, Station]
+    station_req: 3
+    equipment: Secret Martial Manuscripts
+    equip_cost: 0
+    weapons:
+      Katana:
+        damage: 3
+    special_abilities: no
+    fate: [Goal, "To know what is true strength"]
+    desc: You are a disciple of the art of Ki Manipulation, one of the many arts of war in Tenra. Amoung those who follow the path of the weapon master, your name is well-known
+    notes: Player is free to choose from another art of war instead of Ki Manipulation
   Mercenary:
+    karma_cost: 30
+    skills: [[Melee Weapons, 3],[Marksman, 3],[Information, 3]]
+    attr_pen: 0
+    m_attr: [Body, Agility]
+    equipment: no
+    equip_cost: 0
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Ambition]
+    desc: In war, there are many soliders-for-hire like yourself. For you, and those like you, the battlefield is your life.
+    notes: Because your equipment depends on your fighting style, no data is given here. Choose your weapons from the weapons rules section.
   Soulgem Rifleman:
+    karma_cost: 15
+    skills: [[Marksman, 3], [Notice, 2]]
+    attr_pen: 0
+    m_attr: [Senses, Station]
+    station_req: 4
+    equipment: [25 additional soulgems]
+    equip_cost: 10
+    weapons:
+      Soulgem Rifle:
+        damange: 5
+        rate_of_fire: 2
+        range: 100m
+        ammo: 8
+    special_abilities: no
+    fate: [Goal, Attain ulitimate skill]
+    desc: In the mordern battlefield, gunpowder weapons have begun to replace the older soulgem ones. While other warriors have been swayed by the mass destruction these weaspons enable and blast everything in sight, you patiently wait, killing your enemy with a single precise shot.
+    notes: no
   Gunlancer:
+    karma_cost: 56
+    skills: [[Marksman, 4], [Notice, 3], [Pursuit/Hunt, 2], [Stealth, 2]]
+    attr_pen: 1
+    m_attr: [Agility, Senses]
+    station_req: 6
+    equipment: [Gunlance, 10 additional soulgems]
+    equip_cost: 12
+    weapons:
+      Gunlance Ranged:
+        damage: 10
+        rate_of_fire: 1
+        range: 400m
+        ammo: 8
+      Gunlance Melee:
+        attack_name: Explosive Striker
+        damage: [4, 6]
+        rate_of_fire: 1
+        ammo: [1, 6]
+    special_abilities: no
+    fate: [Taboo, Disloyalty]
+    desc: You are an elite solider, skilled in both sharpshooting and tracking
+    notes: no
   Lordless Soldier:
+    karma_cost: 13
+    skills: [[Melee Weapons, 3], [Marksman, 2], [Stealth, 2]]
+    attr_pen: 0
+    m_attr: [Spirit, Station]
+    station_req: 4
+    equipment: Broken breastplate (memento)
+    equip_cost: 3
+    weapons:
+      Rifle:
+        damage: 5
+        rate_of_fire: 1
+        range: 50
+        ammo: 3
+    special_abilities: no
+    fate: [Emotion, Suspicious of power]
+    desc: Defeated in battle, you are the only surviving solider of your homeland (region or country). You don't even remember what the war was for anymore. Will you search for another lord to employ you as a solier? Or perhaps you have other plans...
   Assassin:
+    karma_cost: 20
+    skills: [[Melee Weapons, 3], [Information ,2]]
+    attr_pen: 1
+    m_attr: Spirit
+    station_req: 5
+    equipment: "Fey blade Katana 'Nameless'"
+    equip_cost: 10
+    weapons:
+      Nameless:
+        damage: 7
+    special_abilities: no
+    fate: [Emotion, Emptiness]
+    desc: You only know how to live as an assassin. However, recently you have begun to hate that piece inside of you that only knows the ways of killing
+    notes: Your katana is known as a 'fey blade', a magical, wicked and rumored cursed weapon. The nature of the origin and curse behind the weapon are up to the player.
   Dragoon:
   Ayakashi Hunter:
   Weapon Collector:
