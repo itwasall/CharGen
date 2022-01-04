@@ -930,11 +930,82 @@ specialist_agent:
     notes: The Amafuda pass allows you and your companions transport anywhere on Tenra.
 species:
   Oni:
+    karma_cost: 35
+    skills: [[Resonance, 4], [Movement, 3]]
+    attr_pen: 0
+    m_attr: [Spirit, Empathy]
+    equipment: [Laz-Dii-Go (oni medallion)]
+    equip_cost: 0
+    weapons: no
+    special_abilities: Oni Resonance Powers
+    fate: [Goal, Coexist with humans]
+    desc: Oni are the original inhabitants of Tenra, but have been steadily pushed from tehri native lands, and now face extinction at the hands of humans.
+    notes: Spirit must be your highest ability. See the oni sections on resonance abilities for more details
   Half-Oni:
+    karma_cost: 5
+    skills: [[Resonance, 2], [Information, 3]]
+    attr_pen: 0
+    m_attr: [Spirit Empathy]
+    equipment: no
+    equip_cost: 0
+    weapons: no
+    special_abilities: Resonance
+    fate: [Emotion, Half-Oni Inferiority Complex]
+    desc: Although it is possible for a human and oni to bear children together, the life of that child often ends in tragedy. You always have the option of cutting off your horns. Without horns, you are virtually indistinguishable from humans. However without your horns, you cannot use the resonance power of Alu
+    notes: See the characters and rules sections on the oni people. Note that half-oni can only use the resonance powers of Alu and Dii, and cannot use advanced resonance abilities
   Oni Nussa:
+    karma_cost: 25
+    skills: [[Movement, 3], [Willpower, 3], [Resonance, 2], [Information, 2]]
+    attr_pen: 0
+    m_attr: [Knowledge]
+    equipment: [Laz-Dii-Go (oni medallion)]
+    equip_cost: 0
+    weapons: no
+    special_abilities: Oni Resonance Powers
+    fate: [Emotion, Hatred of the oni]
+    desc: You are a Nussa, a hornless oni. The reasons behind cutting off your horn are your own to decide, and now you look otherwise human. You can fit into human society with no problem, yet you're still not completely a human, nor are you a full oni.
+    notes: See the Oni sections for background on the oni people and rules regarding resonance. Remember that you can only use powers related to your heartgem (Dii).
   Oni-Blooded:
+    karma_cost: 5
+    skills: [[Resonance, 2], [Etiquette, 3]]
+    attr_pen: 0
+    m_attr: [Spirit, Empathy]
+    station_req: 2
+    equipment: [A charm or relic]
+    equip_cost: 0
+    weapons:
+      Small Knife:
+        damage: 2
+    special_abilities: Resonance
+    fate: [Emotion, Looking up to the oni]
+    desc: You are a half-oni born from paretns who had oni blood. Your horns were unnoticable, and you've lived your life as a human. However, one day you discovered your secret and soon embarked on a journey. Or perhaps someone else discovered your secret, and you are being followed. In any case, although you have never met another oni before, you want to find an oni tribe and meet your people
+    notes: See the Oni section for rules on resonance powers. Half-oni cannot use special Tae Rayi (resonance) powers until they learn them from an oni elder
   Kugutsu:
+    karma_cost: 20
+    skills: [[Perform, 3], [Pillow Arts, 3], [Etiquette, 3], [Persuasion, 2]]
+    attr_pen: 0
+    m_attr: [Empathy, Station]
+    equipment: no
+    equip_cost: 0
+    weapons: no
+    special_abilities: The Butterfly Dream
+    fate: [Secret, No one knows you are a kugutsu]
+    desc: "Kugutsu are living dolls, raised over a long period of time to resemble humans. Kugutsu are extremely valuable in Tenra, worth the price of fiefs and kingdoms."
+    notes: "Kugutsu cannot be samurai, shinobi, or any other being which requires the implantation of soulgems in living tissue. Also, Empathy must be your highest ability at the time of characer creation. For more information on kugutsu, see the kugutsu section of the rules"
   Kugutsu Runaway:
+    karma_cost: 30
+    skills: [[Perception, 3], [Pursuit, 3], [Persuasion, 3]]
+    attr_pen: 0
+    m_attr: [Senses, Empathy]
+    equipment: [A memento from your past, small knife]
+    equip_cost: 0
+    weapons:
+      Small Knife:
+        damage: 2
+    special_abilities: The Butterfly Dream
+    fate: [Emotion, Loneliness]
+    desc: You've lost the group you belonged to. Whether you ran away from your master, or your master died or was lost somehow, you long for a connection to people again. There is no one left who knows who you are, and there are no friends who you can confide in. Perhaps one day you will find companionship again.
+    notes: See the Kugutsu section for rules The Butterfly Dream
   Half-Ayakashi:
   Ayakashi:
 advanced:
