@@ -669,10 +669,97 @@ specialist_kijin:
     notes: See the mechanica list for more details, and the kijin section for other possible kijin loadouts
 specialist_kongohki:
   Kongohki:
+    karma_cost: 70
+    skills: [[Marksman, 3], [Melee Weapons, 3], [Unarmed Combat, 3], [Stealth, 3]]
+    attr_pen: 18
+    m_attr: Spirit
+    station_req: 3
+    equipment: [Gale Speed Rollers, Lifepulse]
+    equip_cost: 25
+    weapons:
+      Ninja Soulgem Sword:
+        damage: 3
+        rof: 3
+        ammo: 6
+      Double-edged Soulgem Sword:
+        damage: 2
+        rof: 2
+        ammo: 6
+      Hooked Fang Dagger:
+        damage: 1
+    special_abilities: Kongohki Overdrive Flashback
+    fate: [Kongohki, Sealed Memory]
+    desc: Kongohki are made from binding the soul of an asura (a soul who died under extreme stress or Karma and did not move on to the afterlife) inside a meikyo soul mirror. The violent soul of the asura is harnessed in a very delicate procedure which ends up suppressing all of its memories. It is this tormented soul that gives the kongohki its strength. However, if this balance deteriorates, you will remember your former identity, and likely go crazy (or become an asura again) in the process
+    notes: At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
   Kimen Kongohki:
+    karma_cost: 40
+    skills: [[Marksman, 3], [Unarmed Combat, 3], [Stealth, 2]]
+    attr_pen: 18
+    m_attr: [Spirit, Station]
+    station_req: 2
+    equipment: [Gale Speed Rollers, Brilliant Flower of Destruction]
+    equip_cost: 20
+    weapons:
+      Explosive Spiker:
+        damage: [3, 5]
+        rof: 1
+        ammo: 3
+      Thunder Mortar:
+        damage: 7
+        rof: 1
+        range: 4000m
+        ammo: 1
+      Shuriken:
+        damage: 1
+        rof: 5
+        range: 15m
+        ammo: A lot
+    special_abilities: Kongohki Overdrive Flashback
+    fate: [Kongohki, Sealed Memory]
+    desc: Kimen Kongohki are made from wiping the memories of a fallen Asura soul, then binding it into a kimenkyo calculation engine. While the soul bound to the kimenkyo doesn't surge in power as it accumulates Karma like the meikyo-based Kongohki, they are still powerful steel demons on the battlefield. When the soul manifests itself, the kimen kongohki can still fly into a powerful rage or other emotional state.
+    notes: At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
   Runaway Kongohki:
+    karma_cost: 55
+    skills: [[Unarmed Combat, 3], [Marksman, 3], [Melee Weapons, 2], [Stealth, 2]]
+    attr_pen: 18
+    m_attr: [Spirit, Station]
+    station_req: 4
+    equipment: [Eyes of Distant Death, Heaven's Fire, 20 soulgems]
+    equip_cost: 30
+    weaopns:
+      Soulgem Vajra Claws:
+        damage: 3
+        rof: 3
+        ammo: 6
+      Explosive Spiker:
+        damage: [3, 5]
+        rof: 1
+        ammo: 3
+      Heavy Repeater:
+        damage: 3
+        rof: 5
+        range: 50m
+        ammo: 30
+    special_abilities: Kongohki Overdrive Flashback
+    fate: [Emotion, Fear of Yourself]
+    desc: Kongohki are made from inserting the soul of an asura inside a meikyo. These memories are normally sealed a way behind magical locks. You, however, know who you are, and what you have become: a human soul now residing within a metal body. Your mind is now slowly being consumed by the wild emotions of your former self. Whether you embrace who you were or find a new life is up to you
+    notes: At character creation you have the following attribute scores: Body 8, Agility 8, Senses 7 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
 specialist_ninja:
   Shinobi:
+    karma_cost: 55
+    skills: [[Ninjutsu, 4], [Pursuit/Hunt, 3]]
+    attr_pen: 0
+    m_attr: [Agility, Senses, Spirit, Station]
+    equipment: [Shinobi Seal, ninga tools, disguise kit, Ninjutsu abilities]
+    equip_cost: 20
+    weapons:
+      Shuriken:
+        damage: 1
+        rof: 5
+        range: 15m
+        ammo: A lot
+    special_abilities: Shinobi Dark Arts
+      
   Ninja Apprentice:
   Infiltrator:
 specialist_annelidist:
