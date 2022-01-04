@@ -2,8 +2,8 @@ general:
   Hard Luck:
     karma_cost: 5
     skills: [[Pursuit/Hunt, 3], [First Aid, 2]]
-    attr_pen: 0
-    m_attr: Empathy
+    attribute_penalty: 0
+    primary_attributes: Empathy
     equipment: Memento Item
     equip_cost: 0
     weapons: [Broken Sword]
@@ -14,8 +14,8 @@ general:
   Doctor/Healer:
     karma_cost: 10
     skills: [[First Aid, 3], [Notice, 2]]
-    attr_pen: 0
-    m_attr: Knowledge
+    attribute_penalty: 0
+    primary_attributes: Knowledge
     equipemnt: Medicine Box
     equip_cost: 5
     weapons: no
@@ -26,15 +26,15 @@ general:
   Kabukimono/Punk:
     karma_cost: 15
     skills: [[Pillow Arts, 3], [Perform, 2]]
-    attr_pen: 1
-    m_attr: [Spirit, Station]
+    attribute_penalty: 1
+    primary_attributes: [Spirit, Station]
     station_req: 5
     equipment: "!equip_kabukimono"
     equip_cost: 12
     weapons:
       Scarlet-Steel Gemblade:
         damage: 5
-        rof: 3
+        rate_of_fire: 3
         ammo: 12
     special_abilities: no
     fate: [Emotion, Must be the centre of attention]
@@ -43,8 +43,8 @@ general:
   Travelling Performer:
     karma_cost: 10
     skills: [[Perform, 3], [Notice, 2], [Information, 2]]
-    attr_pen: 0
-    m_attr: Empathy
+    attribute_penalty: 0
+    primary_attributes: Empathy
     equipment: [Instrument, Costume]
     equip_cost: 0
     weapons: no
@@ -55,14 +55,14 @@ general:
   Thief:
     karma_cost: 25
     skills: [[Movement, 3], [Stealth, 3], [Forgery, 2], [Criminal Arts, 2]]
-    attr_pen: 0
-    m_attr: Agility
+    attribute_penalty: 0
+    primary_attributes: Agility
     equipment: Theif tools
     equip_cost: 0
     weapons:
       Throwing Knife:
         damage: 2
-        rof: 3
+        rate_of_fire: 3
         range: 10m
         ammo: A lot
     special_abilities: no
@@ -72,8 +72,8 @@ general:
   Playboy/Harlot/Concubine:
     karma_cost: 15
     skills: [[Pillow Arts, 3], [Information, 3]]
-    attr_pen: 0
-    m_attr: Empathy
+    attribute_penalty: 0
+    primary_attributes: Empathy
     equipment: [Silk Kimono, Make-up Kit]
     equip_cost: 0
     weapons: no
@@ -84,8 +84,8 @@ general:
   Vassal Servant:
     karma_cost: 5
     skills: [[Etiquette, 3], [First Aid, 2]]
-    attr_pen: 0
-    m_attr: Station
+    attribute_penalty: 0
+    primary_attributes: Station
     station_req: 3
     equipment: [Vassel Uniform, Formal Attire]
     equip_cost: 0
@@ -101,8 +101,8 @@ general:
   Wanderer:
     karma_cost: 20
     skills: [[Information, 3], [Notice, 3], [First Aid, 2]]
-    attr_pen: 0
-    m_attr: Empathy
+    attribute_penalty: 0
+    primary_attributes: Empathy
     equipment: [Walking Stick, Traveling clothes]
     equip_cost: 0
     weapons: no
@@ -113,15 +113,15 @@ general:
   Court Servant:
     karma_cost: 10
     skills: [[Etiquette, 3], [Art of Rule, 2]]
-    attr_pen: 0
-    m_attr: Station
+    attribute_penalty: 0
+    primary_attributes: Station
     station_req: 4
     equipment: [25 additional soulgems]
     equip_cost: 5
     weapons:
       Great Gemblade Katana:
         damage: 5
-        rof: 2
+        rate_of_fire: 2
         ammo: 6
     special_abilities: no
     fate: [Emotion, Loyalty to your domain]
@@ -129,15 +129,15 @@ general:
   Aristocrat/Princess:
     karma_cost: 20
     skills: [[Etiquette, 3], [Art of Rule, 3]]
-    attr_pen: 0
-    m_attr: [Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Station]
     station_req: 2
     equipment: [Fancy Clothes, Gold Jewelry (worht 10 ryo)]
     equip_cost: 5
     weapons:
       Soulgem Short Sword:
         damage: 2
-        rof: 2
+        rate_of_fire: 2
         ammo: 4
     special_abilities: no
     fate: [Emotion, Loyalty to domain]
@@ -147,15 +147,15 @@ war:
   Swordmaster:
     karma_cost: 30
     skills: [[Melee Weapons, 4]]
-    attr_pen: 1
-    m_attr: Agility
+    attribute_penalty: 1
+    primary_attributes: Agility
     station_req: 4
     equipment: [15 additional soulgems]
     equip_cost: 10
     weapons:
       Beast-Slayer (Masterwork Soulgem Greatsword):
         damage: 7
-        rof: 5
+        rate_of_fire: 5
         ammo: 8
     special_abilities: no
     fate: [Taboo, Killing]
@@ -164,8 +164,8 @@ war:
   Paragon:
     karma_cost: 20
     skills: [[Art of War - Ki Manipulation, 4]]
-    attr_pen: 0
-    m_attr: [Agility, Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Spirit, Station]
     station_req: 3
     equipment: Secret Martial Manuscripts
     equip_cost: 0
@@ -179,8 +179,8 @@ war:
   Mercenary:
     karma_cost: 30
     skills: [[Melee Weapons, 3],[Marksman, 3],[Information, 3]]
-    attr_pen: 0
-    m_attr: [Body, Agility]
+    attribute_penalty: 0
+    primary_attributes: [Body, Agility]
     equipment: no
     equip_cost: 0
     weapons: no
@@ -191,15 +191,15 @@ war:
   Soulgem Rifleman:
     karma_cost: 15
     skills: [[Marksman, 3], [Notice, 2]]
-    attr_pen: 0
-    m_attr: [Senses, Station]
+    attribute_penalty: 0
+    primary_attributes: [Senses, Station]
     station_req: 4
     equipment: [25 additional soulgems]
     equip_cost: 10
     weapons:
       Soulgem Rifle:
         damange: 5
-        rof: 2
+        rate_of_fire: 2
         range: 100m
         ammo: 8
     special_abilities: no
@@ -209,21 +209,21 @@ war:
   Gunlancer:
     karma_cost: 56
     skills: [[Marksman, 4], [Notice, 3], [Pursuit/Hunt, 2], [Stealth, 2]]
-    attr_pen: 1
-    m_attr: [Agility, Senses]
+    attribute_penalty: 1
+    primary_attributes: [Agility, Senses]
     station_req: 6
     equipment: [Gunlance, 10 additional soulgems]
     equip_cost: 12
     weapons:
       Gunlance Ranged:
         damage: 10
-        rof: 1
+        rate_of_fire: 1
         range: 400m
         ammo: 8
       Gunlance Melee:
         attack_name: Explosive Striker
         damage: [4, 6]
-        rof: 1
+        rate_of_fire: 1
         ammo: [1, 6]
     special_abilities: no
     fate: [Taboo, Disloyalty]
@@ -232,15 +232,15 @@ war:
   Lordless Soldier:
     karma_cost: 13
     skills: [[Melee Weapons, 3], [Marksman, 2], [Stealth, 2]]
-    attr_pen: 0
-    m_attr: [Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Station]
     station_req: 4
     equipment: Broken breastplate (memento)
     equip_cost: 3
     weapons:
       Rifle:
         damage: 5
-        rof: 1
+        rate_of_fire: 1
         range: 50
         ammo: 3
     special_abilities: no
@@ -249,8 +249,8 @@ war:
   Assassin:
     karma_cost: 20
     skills: [[Melee Weapons, 3], [Information ,2]]
-    attr_pen: 1
-    m_attr: Spirit
+    attribute_penalty: 1
+    primary_attributes: Spirit
     station_req: 5
     equipment: "Fey blade Katana 'Nameless'"
     equip_cost: 10
@@ -264,15 +264,15 @@ war:
   Dragoon:
     karma_cost: 40
     skills: [[Melee Weapons, 3], [Marksman, 3], [Art of War - Typhoon Rider Style, 3]]
-    attr_pen: 1
-    m_attr: [Agility, Senses, Station]
+    attribute_penalty: 1
+    primary_attributes: [Agility, Senses, Station]
     station_req: 5
     equipment: [A favourite horse companion, Howling Dragon (custom soulgem rifle), 15 additional soulgems]
     equip_cost: 17
     weapons:
       Howling Dragon:
         damage: 7
-        rof: 4
+        rate_of_fire: 4
         range: 100m
         ammo: 10
     special_abilities: no
@@ -282,15 +282,15 @@ war:
   Ayakashi Hunter:
     karma_cost: 25
     skills: [[Notice, 2], [Hunt/Pursuit, 3]]
-    attr_pen: 1
-    m_attr: [Spirit, Station]
+    attribute_penalty: 1
+    primary_attributes: [Spirit, Station]
     station_req: 6
     equipment: [Black monk robes, "Vajra Blade - a vajra symbol-shaped yoroi shortsword with Taoist demon-warding runes carved into it"]
     equip_cost: 10
     weapons:
       Vajra Blade:
         damage: 8
-        rof: 2
+        rate_of_fire: 2
         ammo: 4
     special_abilities: no
     fate: [Hatred, Ayakashi]
@@ -299,15 +299,15 @@ war:
   Weapon Collector:
     karma_cost: 19
     skills: [[Information, 3]]
-    attr_pen: 5
-    m_attr: no
+    attribute_penalty: 5
+    primary_attributes: no
     station_req: 5
     equipment: ["A collection of unique, disturbing, fey and customised weapons"]
     equip_cost: 19
     weapons:
       Triple Comet Blade:
         damage: 3
-        rof: 3
+        rate_of_fire: 3
         range: 5
         ammo: 3
       Fey Spiked Tetsubo:
@@ -316,12 +316,12 @@ war:
         damage: 6
       Divine Lotus (Gunpowder Chaingun):
         damage: 4
-        rof: 7
+        rate_of_fire: 7
         range: 30m
         ammo: 14
       Tiger Kick (Soulgem Kongohki Foot-laws):
         damage: 4
-        rof: 5
+        rate_of_fire: 5
         ammo: 10
       Katana (many, many katana):
         damage: 3
@@ -333,8 +333,8 @@ specialist_armour_riders:
   Yoroi Armour Rider:
     karma_cost: 60
     skills: [[Interface, 4], [Notice, 2]]
-    attr_pen: 1
-    m_attr: [Empathy, Station]
+    attribute_penalty: 1
+    primary_attributes: [Empathy, Station]
     station_req: 8
     equipment: [Yoroi "Devourer", interface helm, soulcord, meikyo mirror, uniform, 50 additional soulgems]
     equipment_special:
@@ -349,16 +349,16 @@ specialist_armour_riders:
         weapons:
           Yoroi Gemblade Katana:
             damage: 9
-            rof: 6
+            rate_of_fire: 6
             ammo: 12
           Howling Dragon Mortar:
             damage: 9
-            rof: 4
+            rate_of_fire: 4
             range: 1000m
             ammo: 6
           Explosive Spiker:
             damage: [7,9]
-            rof: 1
+            rate_of_fire: 1
             range: 0
             ammo: 9
     equip_cost: 35
@@ -372,8 +372,8 @@ specialist_armour_riders:
   Kimen Armour Rider:
     karma_cost: 23
     skills: [[Interface, 2], [Notice, 2], [Information, 2]]
-    attr_pen: 1
-    m_attr: [Spirit, Station]
+    attribute_penalty: 1
+    primary_attributes: [Spirit, Station]
     station_req: 6
     equipment: [Kimen-yoroi, interface helm, food and water provisions]
     equipment_special:
@@ -389,19 +389,19 @@ specialist_armour_riders:
             damage: 9
           Heavy Repeater:
             damage: 3
-            rof: 5
+            rate_of_fire: 5
             range: 50m
             ammo: [30, 3 karma]
           Great Cannon:
             damage: 10
-            rof: 1
+            rate_of_fire: 1
             range: 120m
             ammo: [1, 3 karma]
     equip_cost: 23
     weapons:
       Holdout Pistol:
         damage: 3
-        rof: 3
+        rate_of_fire: 3
         range: 10m
         ammo: 6
     special_abilities: no
@@ -411,8 +411,8 @@ specialist_armour_riders:
   Former Armour Rider:
     karma_cost: 10
     skills: [[Interface, 3], [Etiquette, 2], [Art of Rule, 2]]
-    attr_pen: 0
-    m_attr: Empathy
+    attribute_penalty: 0
+    primary_attributes: Empathy
     equipment: no
     equip_cost: 0
     weapons: no
@@ -423,15 +423,15 @@ specialist_armour_riders:
   Armour Hunter:
     karma_cost: 30
     skills: [[Melee Weapons, 4]]
-    attr_pen: 1
-    m_attr: [Agility, Station]
+    attribute_penalty: 1
+    primary_attributes: [Agility, Station]
     station_req: 6
     equipment: [Zakt-8 Ultimate edge, 5 additional soulgems]
     equip_cost: 10
     weapons:
       Zakt-8:
         damage: 6
-        rof: 8
+        rate_of_fire: 8
         ammo: 8
     special_abilities: no
     fate: [Emotion, Look up to the strong]
@@ -441,8 +441,8 @@ specialist_onmyoji:
   Onmyoji Taoist Sorcerer:
     karma_cost: 50
     skills: [[Onmyojutsu, 4], [Etiquette, 3]]
-    attr_pen: 0
-    m_attr: [Knowledge, Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Knowledge, Spirit, Station]
     equipment: [Kimenkyo and abacus, Ink and brush, 10 prayer strips, 5 soulgems]
     equip_cost: 15
     weapons: no
@@ -453,8 +453,8 @@ specialist_onmyoji:
   Onmyoji Apprentice:
     karma_cost: 10
     skills: [[Onmyojutsu, 2], [Etiquette, 2], [Evasion, 2]]
-    attr_pen: 0
-    m_attr: [Knowledge, Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Knowledge, Spirit, Station]
     equipment: ["Taoist sorcery tools (various scrolls, charts and medallions", 1 talisman]
     equip_cost: 10
     weapons: no
@@ -465,8 +465,8 @@ specialist_onmyoji:
   Talisman User:
     karma_cost: 30
     skills: [[Notice, 3]]
-    attr_pen: 0
-    m_attr: Spirit
+    attribute_penalty: 0
+    primary_attributes: Spirit
     equipment: [3 talisman]
     equipment_special:
       talisman:
@@ -497,8 +497,8 @@ specialist_onmyoji:
   Shiki Slinger:
     karma_cost: 20
     skills: [[Onmyojutsu, 3], [Art of Rule, 2]]
-    attr_pen: 0
-    m_attr: [Knowledge, Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Knowledge, Spirit, Station]
     equipment: [Kimenkyo calculation device, abacus, ink and brush, 10 shiki strips, 5 soulgems]
     equip_cost: 15
     weapons: no
@@ -509,8 +509,8 @@ specialist_onmyoji:
   Kijin Shiki Slinger:
     karma_cost: 30
     skills: [[Onmyojutsu, 3], [Criminal Arts, 3]]
-    attr_pen: 3
-    m_attr: [Agility, Knowledge]
+    attribute_penalty: 3
+    primary_attributes: [Agility, Knowledge]
     equipment: [Kimenkyo and abacus, brush and ink, 10 prayer strips, 5 soulgems, a number of mechanica]
     equipment_special:
       mechanica: [Darksight, Sha Sensors, Mechanica Arm, Kairen Fingers]
@@ -524,8 +524,8 @@ specialist_samurai:
   Samurai:
     karma_cost: 45
     skills: [[Willpower, 3], [Notice, 2], [First Aid, 2]]
-    attr_pen: 0
-    m_attr: [Agility, Spirit]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Spirit]
     station_req: 2
     equipment: [Samurai Build]
     equipment_special:
@@ -548,8 +548,8 @@ specialist_samurai:
   Fallen Samurai:
     karma_cost: 70
     skills: [[Melee Weapons, 4]]
-    attr_pen: 0
-    m_attr: [Agility, Spirit]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Spirit]
     station_req: 3
     equipment: [Samurai Build]
     equipment_special:
@@ -569,8 +569,8 @@ specialist_monk:
   Buddhist Monk:
     karma_cost: 35
     skills: [[Buddhist Magic, 4], [Persuasion, 3]]
-    attr_pen: 0
-    m_attr: [Spirit, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Empathy]
     station_req: 2
     equipment: [Ritual components, Monk's robes]
     equip_cost: 0
@@ -584,8 +584,8 @@ specialist_monk:
   Fallen Monk:
     karma_cost: 10
     skills: [[Buddhist Magic, 3], [Persuasion, 2], [Information, 2]]
-    attr_pen: 0
-    m_attr: [Spirit, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Empathy]
     station_req: 2
     equipment: [Clothes, Monk robes, Magic components]
     equip_cost: 0
@@ -599,8 +599,8 @@ specialist_monk:
   The Fist of Acala:
     karma_cost: 35
     skills: [[Unarmed Combat, 4], [Art of War - Fist of Acala the Immovable, 3]]
-    attr_pen: 0
-    m_attr: Body
+    attribute_penalty: 0
+    primary_attributes: Body
     equipment: [Black Monk's Robes]
     equip_cost: 0
     weapons:
@@ -613,8 +613,8 @@ specialist_monk:
   Fist of Merciful Kannon:
     karma_cost: 35
     skills: [[Unarmed Combat, 4], [Art of War - Fist of the Merciful Kannon the Thousand-Armed, 4]]
-    attr_pen: 0
-    m_attr: Agility
+    attribute_penalty: 0
+    primary_attributes: Agility
     equipment: no
     equip_cost: 0
     weapons:
@@ -627,15 +627,15 @@ specialist_monk:
   Devoted Warrior Monk:
     karma_cost: 30
     skills: [[Melee Weapons, 3], [Etiquette, 3], [Persuasion, 2]]
-    attr_pen: 0
-    m_attr: [Body, Spirit, Empathy, Station]
+    attribute_penalty: 0
+    primary_attributes: [Body, Spirit, Empathy, Station]
     station_req: 6
     equipment: [25 additional soulgems]
     equip_cost: 10
     weapons:
       Soulgem Spear:
         damage: 5
-        rof: 5
+        rate_of_fire: 5
         ammo: 20
     special_abilities: no
     fate: [Goal, Save all sentient beings]
@@ -645,8 +645,8 @@ specialist_kijin:
   Kijin:
     karma_cost: 15
     skills: [[Unarmed Combat, 3], [Marksman, 3]]
-    attr_pen: 5
-    m_attr: [Body, Senses]
+    attribute_penalty: 5
+    primary_attributes: [Body, Senses]
     equipment: [Kijin Mechanica]
     equipment_special:
       mechanica: [Mechnica Sensor, Eyes of Distant Death, Darksight, Mechanica Arms, Five-barrel Gatling, Vajra Claws, Grudge Blade, Weapon Interface]
@@ -654,12 +654,12 @@ specialist_kijin:
     weapons:
       Five-barrel Gatling:
         damage: 3
-        rof: 5
+        rate_of_fire: 5
         range: 20m
         ammo: 30
       Vajra Claws:
         damage: 3
-        rof: 3
+        rate_of_fire: 3
         ammo: 6
       Grudge Blade:
         damage: 5
@@ -671,19 +671,19 @@ specialist_kongohki:
   Kongohki:
     karma_cost: 70
     skills: [[Marksman, 3], [Melee Weapons, 3], [Unarmed Combat, 3], [Stealth, 3]]
-    attr_pen: 18
-    m_attr: Spirit
+    attribute_penalty: 18
+    primary_attributes: Spirit
     station_req: 3
     equipment: [Gale Speed Rollers, Lifepulse]
     equip_cost: 25
     weapons:
       Ninja Soulgem Sword:
         damage: 3
-        rof: 3
+        rate_of_fire: 3
         ammo: 6
       Double-edged Soulgem Sword:
         damage: 2
-        rof: 2
+        rate_of_fire: 2
         ammo: 6
       Hooked Fang Dagger:
         damage: 1
@@ -694,24 +694,24 @@ specialist_kongohki:
   Kimen Kongohki:
     karma_cost: 40
     skills: [[Marksman, 3], [Unarmed Combat, 3], [Stealth, 2]]
-    attr_pen: 18
-    m_attr: [Spirit, Station]
+    attribute_penalty: 18
+    primary_attributes: [Spirit, Station]
     station_req: 2
     equipment: [Gale Speed Rollers, Brilliant Flower of Destruction]
     equip_cost: 20
     weapons:
       Explosive Spiker:
         damage: [3, 5]
-        rof: 1
+        rate_of_fire: 1
         ammo: 3
       Thunder Mortar:
         damage: 7
-        rof: 1
+        rate_of_fire: 1
         range: 4000m
         ammo: 1
       Shuriken:
         damage: 1
-        rof: 5
+        rate_of_fire: 5
         range: 15m
         ammo: A lot
     special_abilities: Kongohki Overdrive Flashback
@@ -721,23 +721,23 @@ specialist_kongohki:
   Runaway Kongohki:
     karma_cost: 55
     skills: [[Unarmed Combat, 3], [Marksman, 3], [Melee Weapons, 2], [Stealth, 2]]
-    attr_pen: 18
-    m_attr: [Spirit, Station]
+    attribute_penalty: 18
+    primary_attributes: [Spirit, Station]
     station_req: 4
     equipment: [Eyes of Distant Death, Heaven's Fire, 20 soulgems]
     equip_cost: 30
     weaopns:
       Soulgem Vajra Claws:
         damage: 3
-        rof: 3
+        rate_of_fire: 3
         ammo: 6
       Explosive Spiker:
         damage: [3, 5]
-        rof: 1
+        rate_of_fire: 1
         ammo: 3
       Heavy Repeater:
         damage: 3
-        rof: 5
+        rate_of_fire: 5
         range: 50m
         ammo: 30
     special_abilities: Kongohki Overdrive Flashback
@@ -748,14 +748,14 @@ specialist_ninja:
   Shinobi:
     karma_cost: 55
     skills: [[Ninjutsu, 4], [Pursuit/Hunt, 3]]
-    attr_pen: 0
-    m_attr: [Agility, Senses, Spirit, Station]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Senses, Spirit, Station]
     equipment: [Shinobi Seal, ninga tools, disguise kit, Ninjutsu abilities]
     equip_cost: 20
     weapons:
       Shuriken:
         damage: 1
-        rof: 5
+        rate_of_fire: 5
         range: 15m
         ammo: A lot
     special_abilities: [[Shinobi Dark Arts, 4], [School of the Shore, 4]]
@@ -765,8 +765,8 @@ specialist_ninja:
   Ninja Apprentice:
     karma_cost: 5
     skills: [[NInjutsu, 2], [Willpower, 2], [First Aid, 2], [Evasion, 2]]
-    attr_pen: 0
-    m_attr: [Agility, Senses, Spirit]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Senses, Spirit]
     station_req: 2
     equipment: [Ninja tools]
     equip_cost: 0
@@ -780,8 +780,8 @@ specialist_ninja:
   Infiltrator:
     karma_cost: 10
     skills: [[Ninjutsu, 3], [Movement, 2], [Stealth, 2]]
-    attr_pen: 0
-    m_attr: [Agility, Senses, Spirit]
+    attribute_penalty: 0
+    primary_attributes: [Agility, Senses, Spirit]
     equipment: Ninja Tools
     equip_cost: 0
     weapons:
@@ -795,8 +795,8 @@ specialist_annelidist:
   Annelidist:
     karma_cost: 65
     skills: [[Wormcharm, 4]]
-    attr_pen: 0
-    m_attr: [Body, Senses]
+    attribute_penalty: 0
+    primary_attributes: [Body, Senses]
     equipment: [Annelids, annelid food, trap, cage]
     equipment_special:
       Annelids:
@@ -816,8 +816,8 @@ specialist_annelidist:
   Annelid Infested:
     karma_cost: 10
     skills: [[Wormcharm, 2]]
-    attr_pen: 0
-    m_attr: [Body, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Body, Empathy]
     equipment: [Annelids]
     equipment_special:
       Annelids:
@@ -832,8 +832,8 @@ specialist_annelidist:
   Annelid Hunter:
     karma_cost: 80
     skills: [[Wormcharm, 3]]
-    attr_pen: 0
-    m_attr: [Body, Senses]
+    attribute_penalty: 0
+    primary_attributes: [Body, Senses]
     equipment: [Annelids]
     equipment_special:
       Annelids:
@@ -846,12 +846,12 @@ specialist_annelidist:
         damage: 6
       Acid Spit:
         damage: 4
-        rof: 1
+        rate_of_fire: 1
         range: 5m
         affliction: Acid 4
       Electrostatic Cannon:
         damage: 8
-        rof: 1
+        rate_of_fire: 1
         range: 18m
         defensive_only: yes
     special_abilities: no
@@ -862,8 +862,8 @@ specialist_agent:
   Taira Agent Gyoshi/Miko:
     karma_cost: 35
     skills: [[Interface, 3], [Shinto, 2]]
-    attr_pen: 0
-    m_attr: [Knowledge, Station]
+    attribute_penalty: 0
+    primary_attributes: [Knowledge, Station]
     equipment: [Amafuda Pass, Meikyo soul mirror, interface helm]
     equip_cost: 30
     weapons: no
@@ -874,8 +874,8 @@ specialist_agent:
   Meikyo Puppeteer:
     karma_cost: 50
     skills: [[Interface, 3]]
-    attr_pen: 5
-    m_attr: [Spirit, Station]
+    attribute_penalty: 5
+    primary_attributes: [Spirit, Station]
     station_req: 5
     equipment: [Meikyo, soulcord, splicer interface helm, Kimen-Kongohki, Battlefield Mastery, Lifepulse Extend, Brilliant Flower of Destruction]
     equipment_special:
@@ -888,12 +888,12 @@ specialist_agent:
         weapons:
           Comet Blade:
             damage: 3
-            rof: 1
+            rate_of_fire: 1
             range: 5m
             ammo: 1
           Heavy Repeater:
             damage: 1
-            rof: 5
+            rate_of_fire: 5
             range: 50m
             ammo: 30
     equip_cost: 90
@@ -906,8 +906,8 @@ specialist_agent:
   Priesthood Double Agent:
     karma_cost: 30
     skills: [[Stealth, 2], [Interface, 2], [Shinto, 2]]
-    attr_pen: 0
-    m_attr: Station
+    attribute_penalty: 0
+    primary_attributes: Station
     equipment: [Amafuda pass, meikyo mirror, interface helm]
     equip_cost: 30
     weapons: no
@@ -918,8 +918,8 @@ specialist_agent:
   Priesthood Zealot:
     karma_cost: 10
     skills: [[Etiquette, 3], [First Aid, 2]]
-    attr_pen: 0
-    m_attr: [Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Empathy]
     station_req: 2
     equipment: [Amafuda Pass]
     equip_cost: 5
@@ -932,8 +932,8 @@ species:
   Oni:
     karma_cost: 35
     skills: [[Resonance, 4], [Movement, 3]]
-    attr_pen: 0
-    m_attr: [Spirit, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Empathy]
     equipment: [Laz-Dii-Go (oni medallion)]
     equip_cost: 0
     weapons: no
@@ -944,8 +944,8 @@ species:
   Half-Oni:
     karma_cost: 5
     skills: [[Resonance, 2], [Information, 3]]
-    attr_pen: 0
-    m_attr: [Spirit Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Spirit Empathy]
     equipment: no
     equip_cost: 0
     weapons: no
@@ -956,8 +956,8 @@ species:
   Oni Nussa:
     karma_cost: 25
     skills: [[Movement, 3], [Willpower, 3], [Resonance, 2], [Information, 2]]
-    attr_pen: 0
-    m_attr: [Knowledge]
+    attribute_penalty: 0
+    primary_attributes: [Knowledge]
     equipment: [Laz-Dii-Go (oni medallion)]
     equip_cost: 0
     weapons: no
@@ -968,8 +968,8 @@ species:
   Oni-Blooded:
     karma_cost: 5
     skills: [[Resonance, 2], [Etiquette, 3]]
-    attr_pen: 0
-    m_attr: [Spirit, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Empathy]
     station_req: 2
     equipment: [A charm or relic]
     equip_cost: 0
@@ -983,8 +983,8 @@ species:
   Kugutsu:
     karma_cost: 20
     skills: [[Perform, 3], [Pillow Arts, 3], [Etiquette, 3], [Persuasion, 2]]
-    attr_pen: 0
-    m_attr: [Empathy, Station]
+    attribute_penalty: 0
+    primary_attributes: [Empathy, Station]
     equipment: no
     equip_cost: 0
     weapons: no
@@ -995,8 +995,8 @@ species:
   Kugutsu Runaway:
     karma_cost: 30
     skills: [[Perception, 3], [Pursuit, 3], [Persuasion, 3]]
-    attr_pen: 0
-    m_attr: [Senses, Empathy]
+    attribute_penalty: 0
+    primary_attributes: [Senses, Empathy]
     equipment: [A memento from your past, small knife]
     equip_cost: 0
     weapons:
@@ -1007,11 +1007,120 @@ species:
     desc: You've lost the group you belonged to. Whether you ran away from your master, or your master died or was lost somehow, you long for a connection to people again. There is no one left who knows who you are, and there are no friends who you can confide in. Perhaps one day you will find companionship again.
     notes: See the Kugutsu section for rules The Butterfly Dream
   Half-Ayakashi:
+    karma_cost: 45
+    skills: [[Movement, 3], [Notice, 2]]
+    attribute_penalty: 0
+    primary_attributes: [Spirit]
+    equipment: [Yohjutsu Abilities]
+    equipment_special:
+      Yohjutsu Abilities:
+        Natural Weapon: Part of your body can be used as a melee weapon (claws)
+        Projectile Attack: Part of your body can be used to make projectile attacks (flame breath)
+        Flight: You can fly up to speeds of 1.2km/minute and can carray up to an additional 60kg
+        Incorporeal: For 3 Soul per round, you can turn incorporeal and pass through solid objects
+        Superchange: You can alter your appearance and maintain it until you use another yohjutsu ability
+    equip_cost: 45
+    weapons:
+      Claws:
+        damage: 5
+      Flame Breath:
+        damage: 5
+        rate_of_fire: 3
+        range: 5m
+    special_abilities: Weaknesses
+    fate: [Secret, You are a half-ayakashi]
+    desc: You were born as a result of the forbidden love between a human and ayakashi. Whether you take this to be a curse or a blessing is up to you.
+    notes: For details on ayakashi powers see the rules section. The GM or player is free to change the default weakness if they wish. The half-ayakashi is not considered a full species, so it can be combined with oni archetypes
   Ayakashi:
+    karma_cost: 50
+    skills: [[Marksman, 3], [Willpower, 3]]
+    attribute_penalty: 3
+    primary_attributes: [Spirit Empathy]
+    equipment: [Yohjutsu Abilities]
+    equipment_special:
+      Yohjutsu Abilities:
+        Projectile Attack: Part of your body can be used as a ranged weapon (lighting)
+        Superspeed: Any sucesses rolled on Body, Agility and Senses can be rerolled and added to your total successes for that check. This abiltiy can be activated a number of times in a session equal to Body+Spirit
+        Incorporeal: For 3 Soul per round, you can turn incorporeal and pass through solid objects
+        Superchange: You can alter your appearance and maintain it until you use another yohjutsu ability
+        Multiple Forms: You can create three images of yourself which act independently
+    equip_cost: 80
+    weapons:
+      Lightning Attack:
+        damage: 15
+        rate_of_fire: 9
+        range: 100m
+    special_abilities: Weaknesses
+    fate: [Emotion, Curiosity towards people]
+    desc: You are an ayakashi with human features and an inhuman mind. You look at teh world differently than humands do. You keep the face you are not human a secret, for if the humans around you know what you are, life would become uncomfortable to say the least
+    notes: The GM or player is free to change the weakenss of this ayakashi
 advanced:
   Elder:
+    karma_cost: 15
+    skills: [[Information, 3], [Etiquette, 3]]
+    attribute_penalty: 0
+    primary_attributes: [Empathy]
+    station_req: 2
+    equipment: [Ornate tobacco pipe, elegant seal of office]
+    equip_cost: 2
+    weapons:
+      Ornate Pipe:
+        damage: 2
+    special_abilities: no
+    fate: [Emotion, Times are changing]
+    desc: A person who has lived for many, many long years. You often reflect on the wonderful things that happened in the past while attempting to come to terms with the new and changing times.
+    notes: The seal of office is a wooden block with elegant tassles about the sie of one's hand, carved with a royal symbol of the office or kingdom served, and acts as proof of your rank and office (think of it as a police badge). It is also a hollow container which ontains a stamp for signing documents of that office.
   Kagemusha:
+    karma_cost: 15
+    skills: [[Etiquette, 3], [Art of Rule, 3]]
+    attribute_penalty: 0
+    primary_attributes: [Spirit, Station]
+    equipment: no
+    equip_cost: 0
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Loyalty to your Master]
+    desc: You were raised by your vassal lord or regent since you were a child, and are his most trusted companion. Chosen in part for your similar appearance to your master, you sometimes take his place in dangerous situations, ready to die for him in a heartbeat.
   Kugutsu Maker:
+    karma_cost: 25
+    skills: [[Kugutsu Craft, 3], [Etiquette, 3]]
+    attribute_penalty: 0
+    primary_attributes: [Senses, Spirit, Empathy]
+    equipment: ["Unfinished Kugutsu (Abilities: 0)"]
+    equip_cost: 10
+    weapons: no
+    special_abilities: no
+    fate: [Goal, "Knowing the meaning of true beauty"]
+    desc: You are a kugutsushi, a craftsman who specialises in creating the beautiful living dolls known as kugutsu. Wars have been known to break out among regents and vassal lords just to own one of your creations
+    notes: Kugutsu Craft is a skill unique to this archetype. Write it on your character sheet under the Knowledge attribute
   Tactician:
+    karma_cost: 35
+    skills: [[Strategy, 4], [Art of Rule, 3]]
+    attribute_penalty: 0
+    primary_attributes: [Station]
+    station_req: 2
+    equipment: [War fan, brush, ink bottle]
+    equip_cost: 0
+    weapons:
+      War Fan:
+        damage: 2
+        rate_of_fire: 1
+        range: 5m
+        ammo: 1
+    special_abilities: no
+    fate: [Emotion, Hatred of war]
+    desc: As a Tactician, you are the advisor to the general on tactic and strategies on the battlefield
+    notes: See the skills section for an explanation of the use of teh Strategy skill
   Kuze Order Member:
+    karma_cost: 50
+    skills: [[Any, 4], [Shinto, 2]]
+    attribute_penalty: 0
+    primary_attributes: [Station]
+    equipment: [Meikyo soul mirror]
+    equip_cost: 25
+    weapons: no
+    special_abilities: no
+    fate: [Loyalty, [Blue Dragon Monk, Adamantine Monk]]
+    desc: You follow the leader of your order, and would protect him with your life
+    notes: This archetype is only appropriate for Kuze-themed scenarios. Also, 'Any single skill' means that the player cna chose any basic or specialist skill to take at the rank of Master (4)
 
