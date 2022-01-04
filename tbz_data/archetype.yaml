@@ -34,7 +34,7 @@ general:
     weapons:
       Scarlet-Steel Gemblade:
         damage: 5
-        rate_of_fire: 3
+        rof: 3
         ammo: 12
     special_abilities: no
     fate: [Emotion, Must be the centre of attention]
@@ -62,7 +62,7 @@ general:
     weapons:
       Throwing Knife:
         damage: 2
-        rate_of_fire: 3
+        rof: 3
         range: 10m
         ammo: A lot
     special_abilities: no
@@ -100,7 +100,7 @@ general:
     notes: Where and when will you die? NOthing else occupies your mind. You seek nothing other than to die in peace. However, you also have the ability to escape or change that seemingly unbreakable fate . Free free to sublimate this Fate at any time to uncheck the Dead Box when you find something worth living for.
   Wanderer:
     karma_cost: 20
-    skills: [Information, 3], [Notice, 3], [First Aid, 2]]
+    skills: [[Information, 3], [Notice, 3], [First Aid, 2]]
     attr_pen: 0
     m_attr: Empathy
     equipment: [Walking Stick, Traveling clothes]
@@ -121,7 +121,7 @@ general:
     weapons:
       Great Gemblade Katana:
         damage: 5
-        rate_of_fire: 2
+        rof: 2
         ammo: 6
     special_abilities: no
     fate: [Emotion, Loyalty to your domain]
@@ -137,7 +137,7 @@ general:
     weapons:
       Soulgem Short Sword:
         damage: 2
-        rate_of_fire: 2
+        rof: 2
         ammo: 4
     special_abilities: no
     fate: [Emotion, Loyalty to domain]
@@ -155,7 +155,7 @@ war:
     weapons:
       Beast-Slayer (Masterwork Soulgem Greatsword):
         damage: 7
-        rate_of_fire: 5
+        rof: 5
         ammo: 8
     special_abilities: no
     fate: [Taboo, Killing]
@@ -199,7 +199,7 @@ war:
     weapons:
       Soulgem Rifle:
         damange: 5
-        rate_of_fire: 2
+        rof: 2
         range: 100m
         ammo: 8
     special_abilities: no
@@ -217,13 +217,13 @@ war:
     weapons:
       Gunlance Ranged:
         damage: 10
-        rate_of_fire: 1
+        rof: 1
         range: 400m
         ammo: 8
       Gunlance Melee:
         attack_name: Explosive Striker
         damage: [4, 6]
-        rate_of_fire: 1
+        rof: 1
         ammo: [1, 6]
     special_abilities: no
     fate: [Taboo, Disloyalty]
@@ -240,7 +240,7 @@ war:
     weapons:
       Rifle:
         damage: 5
-        rate_of_fire: 1
+        rof: 1
         range: 50
         ammo: 3
     special_abilities: no
@@ -262,13 +262,181 @@ war:
     desc: You only know how to live as an assassin. However, recently you have begun to hate that piece inside of you that only knows the ways of killing
     notes: Your katana is known as a 'fey blade', a magical, wicked and rumored cursed weapon. The nature of the origin and curse behind the weapon are up to the player.
   Dragoon:
+    karma_cost: 40
+    skills: [[Melee Weapons, 3], [Marksman, 3], [Art of War - Typhoon Rider Style, 3]]
+    attr_pen: 1
+    m_attr: [Agility, Senses, Station]
+    station_req: 5
+    equipment: [A favourite horse companion, Howling Dragon (custom soulgem rifle), 15 additional soulgems]
+    equip_cost: 17
+    weapons:
+      Howling Dragon:
+        damage: 7
+        rof: 4
+        range: 100m
+        ammo: 10
+    special_abilities: no
+    fate: [Emotion, Love of riding (name of mount)]
+    desc: Heavy cavalry was once the flower of the battlefield in Tenra, but combat has gone through great changes recently. Geuns have largely replaced spears, adn warlords now make use of machines in teh battlefiedl. This is the new age for the elite cavalr once know as the "Dragoon". Once feared above all, they are now often seen as holding on to archaic methods.
+    notes: Choose a name and description for your horse. You may also choose an alternate Art of War. Maneuvers using the horse are made using the rider's Movement skill. The horse has no stats of its own here; it is an extension of the warrior. It makes no unique attacks, and presumably it will die with it's rider.
   Ayakashi Hunter:
+    karma_cost: 25
+    skills: [[Notice, 2], [Hunt/Pursuit, 3]]
+    attr_pen: 1
+    m_attr: [Spirit, Station]
+    station_req: 6
+    equipment: [Black monk robes, "Vajra Blade - a vajra symbol-shaped yoroi shortsword with Taoist demon-warding runes carved into it"]
+    equip_cost: 10
+    weapons:
+      Vajra Blade:
+        damage: 8
+        rof: 2
+        ammo: 4
+    special_abilities: no
+    fate: [Hatred, Ayakashi]
+    desc: You are a wandering demon hunter who travels from twon to town, making a living from slaying ayakashi for money.
+    notes: no
   Weapon Collector:
+    karma_cost: 19
+    skills: [[Information, 3]]
+    attr_pen: 5
+    m_attr: no
+    station_req: 5
+    equipment: ["A collection of unique, disturbing, fey and customised weapons"]
+    equip_cost: 19
+    weapons:
+      Triple Comet Blade:
+        damage: 3
+        rof: 3
+        range: 5
+        ammo: 3
+      Fey Spiked Tetsubo:
+        damage: 7
+      Double-ended Katana:
+        damage: 6
+      Divine Lotus (Gunpowder Chaingun):
+        damage: 4
+        rof: 7
+        range: 30m
+        ammo: 14
+      Tiger Kick (Soulgem Kongohki Foot-laws):
+        damage: 4
+        rof: 5
+        ammo: 10
+      Katana (many, many katana):
+        damage: 3
+    special_abilities: no
+    fate: [Goal, Collect unique weapons]
+    desc: You have made a life-goal out of questing for and collecting unique weapons. You walk into battle like a living arsenal.
+    notes: no
 specialist_armour_riders:
   Yoroi Armour Rider:
+    karma_cost: 60
+    skills: [[Interface, 4], [Notice, 2]]
+    attr_pen: 1
+    m_attr: [Empathy, Station]
+    station_req: 8
+    equipment: [Yoroi "Devourer", interface helm, soulcord, meikyo mirror, uniform, 50 additional soulgems]
+    armour:
+      name: Yoroi "Devourer"
+      attributes:
+        body: 7
+        agility: 7
+        senses: 7
+      vitality: 14
+      wounds: [7, 4, 2, 1]
+      equipment: [Gale Speed Rollers, Humanoid Head, 2 Arms, 2 Legs]
+      weapons:
+        Yoroi Gemblade Katana:
+          damage: 9
+          rof: 6
+          ammo: 12
+        Howling Dragon Mortar:
+          damage: 9
+          rof: 4
+          range: 1000m
+          ammo: 6
+        Explosive Spiker:
+          damage: [7,9]
+          rof: 1
+          range: 0
+          ammo: 9
+    equip_cost: 35
+    weapons:
+      Shortsword:
+        damage: 2
+    special_abilities: Armour Damage
+    fate: [Emotion, Affection for your armour]
+    desc: Yoroi armour pilots are generally chosen from the children of nobles such as vassal lords or from potential shrine maidens. Such children have not yet accumulated much Karma, and are therefore ideal to interface with an armour's meikyo.
+    notes: See the armour rules regarding damage and Karma accumultion
   Kimen Armour Rider:
+    karma_cost: 23
+    skills: [[Interface, 2], [Notice, 2], [Information, 2]]
+    attr_pen: 1
+    m_attr: [Spirit, Station]
+    station_req: 6
+    equipment: [Kimen-yoroi, interface helm, food and water provisions]
+    armour:
+      name: Kimen Yoroi 'Iron Demon Mark II'
+      attributes:
+        body: 5
+        agility: 8
+        senses: 8
+      vitality: 10
+      equipment: [Gale Speed Rollers, Eyes of Distant Death]
+      weapons:
+        Yoroi Greatsword:
+          damage: 9
+        Heavy Repeater:
+          damage: 3
+          rof: 5
+          range: 50m
+          ammo: [30, 3 karma]
+        Great Cannon:
+          damage: 10
+          rof: 1
+          range: 120m
+          ammo: [1, 3 karma]
+    equip_cost: 23
+    weapons:
+      Holdout Pistol:
+        damage: 3
+        rof: 3
+        range: 10m
+        ammo: 6
+    special_abilities: no
+    fate: [Emotion, Pride in your armour]
+    desc: Kimen armours are mass-produced machines operated by those who have accumulated Karma (usually adults and late teenagers). Riders of these armours are often selected from soliders with considerable combat experience. They are also chosen for missions which make us of such experience, like military campaigns, skirmishes, and protections missions.
+    notes: For more details on yoroi armours, place see the armour rules section for details
   Former Armour Rider:
+    karma_cost: 10
+    skills: [[Interface, 3], [Etiquette, 2], [Art of Rule, 2]]
+    attr_pen: 0
+    m_attr: Empathy
+    equipment: no
+    equip_cost: 0
+    weapons: no
+    special_abilities: no
+    fate: [Hated, Yoroi Armours]
+    desc: Not all yoroi armour pilots are able to continue to ride their armours forever. Most who are forced to abandon their yoroi, for whatever reason, cannot cope with the change. But such is war.
+    notes: Se the armour rules section for more details
   Armour Hunter:
+    karma_cost: 30
+    skills: [[Melee Weapons, 4]]
+    attr_pen: 1
+    m_attr: [Agility, Station]
+    station_req: 6
+    equipment: [Zakt-8 Ultimate edge, 5 additional soulgems]
+    equip_cost: 10
+    weapons:
+      Zakt-8:
+        damage: 6
+        rof: 8
+        ammo: 8
+    special_abilities: no
+    fate: [Emotion, Look up to the strong]
+    desc: You are a yoroi armour hunter, a member of an elite force of anti-armou personnel. Your vassal lord, having no yoroi technology of their own, spares no expense hiring specialists like you to combat enemy armours.
+    notes: no
 specialist_onmyoji:
   Onmyoji Taoist Sorcerer:
   Onmyoji Apprentice:

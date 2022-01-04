@@ -1,3 +1,5 @@
 kabukimono_equipment: [Flashy Clothes, Soulgem Blade (+5 - soulgem blade - large - oddly shaped), 10 additional soulgems]
-vassel_servant_special_ability: "Fated to die. You are already dead. Your Dead Box is already filled, because it is your fate to die. Add 3 extra dice to all rolls. As long as your Fate remains listed as “Seeking Death” you cannot die unless knocked unconscious."
+vassel_servant_special_ability: {Fated to die: You are already dead. Your Dead Box is already filled, because it is your fate to die. Add 3 extra dice to all rolls. As long as your Fate remains listed as “Seeking Death” you cannot die unless knocked unconscious.}
+yoroi_armour_rider_equipment: {Gale Speed Rollers: [Increases speed by 3x, Provides +2 dice to Evasion checks]}
+yoroi_armour_rider_special_ability: {Armour Damage: "When you are inside your armour, you can choose to absorb some of the wound damage (but not to Vitality) the yoroi would normally take: Distribute this damage to the pilot's wound gauge instead. See the armour rules for details"}
 
