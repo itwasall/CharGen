@@ -513,11 +513,7 @@ specialist_onmyoji:
     m_attr: [Agility, Knowledge]
     equipment: [Kimenkyo and abacus, brush and ink, 10 prayer strips, 5 soulgems, a number of mechanica]
     equipment_special:
-      mechanica:
-        Darksight: [You can see in darkness, Add 2 dice to all sense rolls while in darkness]
-        Sha sensors: ["By looking at a shiki or samurai you can attempt a Knowledge: Onmyojutsu roll to determine the level of its abilities"]
-        Mechanica Arm: [Hei-class (One arm), +3 damage in combat]
-        Kairen Fingers: [When using onmyojutsu (or Buddhist magic or ninjutsu), add +3 dice to each roll]
+      mechanica: [Darksight, Sha Sensors, Mechanica Arm, Kairen Fingers]
     equip_cost: 15
     weapons: no
     special_abilities: no
@@ -569,15 +565,108 @@ specialist_samurai:
       Katana:
         damage: 3
     special_abilities: Samurai Transformation
-
 specialist_monk:
   Buddhist Monk:
+    karma_cost: 35
+    skills: [[Buddhist Magic, 4], [Persuasion, 3]]
+    attr_pen: 0
+    m_attr: [Spirit, Empathy]
+    station_req: 2
+    equipment: [Ritual components, Monk's robes]
+    equip_cost: 0
+    weapons:
+      Iron Staff:
+        damage: 2
+    special_abilities: no
+    fate: [Taboo, Disobeying the precepts]
+    desc: "As a monk, you must keep the following religious precepts: 1) Prohibition against taking another life 2) Prohibition against stealing 3) Prohibition against consuming alcohol 4) Prohibition against sexual misconduct 5) Prohibition against speaking falsely"
+    notes: You are free to choose any sect, but Ebon Mountain is the default sect for this archetype
   Fallen Monk:
+    karma_cost: 10
+    skills: [[Buddhist Magic, 3], [Persuasion, 2], [Information, 2]]
+    attr_pen: 0
+    m_attr: [Spirit, Empathy]
+    station_req: 2
+    equipment: [Clothes, Monk robes, Magic components]
+    equip_cost: 0
+    weapons:
+      Iron Staff:
+        damage: 2
+    special_abilities: no
+    fate: [Goal, Revel in danger]
+    desc: Whether for some sort of religious practise or simple depravity, you have forsaken the Buddhist precept and left the cloistered priesthood for the outside world. You now do as you please.
+    notes: Read the Buddhism rules section for information on Buddhist magic and abilities. You are free to choose any sect, but Ebon Mountain is the default for this archetype
   The Fist of Acala:
+    karma_cost: 35
+    skills: [[Unarmed Combat, 4], [Art of War - Fist of Acala the Immovable, 3]]
+    attr_pen: 0
+    m_attr: Body
+    equipment: [Black Monk's Robes]
+    equip_cost: 0
+    weapons:
+      Martial Arts:
+        damage: 4
+    special_abilities: no
+    fate: [Taboo, Fighting]
+    desc: You are the studen of the Fist of Acala the Immovable Lord of Light. Usually a practitioner of the style is a Buddhist monk but this is not required
+    notes: You are free to change your martial arts style to another. Make changes to the damage rating of thhe martial arts as apporpriate. Also, the taboo is not meant to be a straightjacket. It can be bent or broken
   Fist of Merciful Kannon:
+    karma_cost: 35
+    skills: [[Unarmed Combat, 4], [Art of War - Fist of the Merciful Kannon the Thousand-Armed, 4]]
+    attr_pen: 0
+    m_attr: Agility
+    equipment: no
+    equip_cost: 0
+    weapons:
+      Martial Arts:
+        damage: 10
+    special_abilities: no
+    fate: [Goal, To be the strongest in Tenra]
+    desc: You are a martial artist of the Fist of Merciful Kannon the THousand-Armed. Nothing can match the speed of your strikes.
+    notes: You are free to change the martial arts style. For more information on the martial arts of Buddhist monks, see the Buddhist rules section.
   Devoted Warrior Monk:
+    karma_cost: 30
+    skills: [[Melee Weapons, 3], [Etiquette, 3], [Persuasion, 2]]
+    attr_pen: 0
+    m_attr: [Body, Spirit, Empathy, Station]
+    station_req: 6
+    equipment: [25 additional soulgems]
+    equip_cost: 10
+    weapons:
+      Soulgem Spear:
+        damage: 5
+        rof: 5
+        ammo: 20
+    special_abilities: no
+    fate: [Goal, Save all sentient beings]
+    desc: You believe that if you continue to fight for your sect, you can someday save all humanity. You are a warrior-monk of the powerful Phoenix order. The iron discipline and unbending loyalty to the sect has made you and your fellow warrior-monks a miliary force to reckon with
+    notes: See the Buddhist Monk game section for background on the warrior-monks of the Phoenix Order
 specialist_kijin:
   Kijin:
+    karma_cost: 15
+    skills: [[Unarmed Combat, 3], [Marksman, 3]]
+    attr_pen: 5
+    m_attr: [Body, Senses]
+    equipment: [Kijin Mechanica]
+    equipment_special:
+      mechanica: [Mechnica Sensor, Eyes of Distant Death, Darksight, Mechanica Arms, Five-barrel Gatling, Vajra Claws, Grudge Blade, Weapon Interface]
+    equip_cost: 0
+    weapons:
+      Five-barrel Gatling:
+        damage: 3
+        rof: 5
+        range: 20m
+        ammo: 30
+      Vajra Claws:
+        damage: 3
+        rof: 3
+        ammo: 6
+      Grudge Blade:
+        damage: 5
+    special_abilities: no
+    fate: [Emotion, Sympathy towards the weak]
+    desc: Kijin are a recent development in Tenra; humans who have replaced weak, lost or disabled body parts with machine. However, there are some who even replace working body parts with mechanica. You can choose if your mechanica were replacements of broken limbs after a war, or healthy limbs after a decision to replace them.
+    notes: See the mechanica list for more details, and the kijin section for other possible kijin loadouts
 specialist_kongohki:
   Kongohki:
   Kimen Kongohki:
