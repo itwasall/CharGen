@@ -1,11 +1,17 @@
 abl_armour_damage: &armour_damage {Armour Damage: "When you are inside your armour, you can choose to absorb some of the wound damage (but not to Vitality) the yoroi would normally take: Distribute this damage to the pilot's wound gauge instead. See the armour rules for details"}
 abl_fated_to_die: &fated_to_die {Fated to die: You are already dead. Your Dead Box is already filled, because it is your fate to die. Add 3 extra dice to all rolls. As long as your Fate remains listed as “Seeking Death” you cannot die unless knocked unconscious.}
-abl_samurai_transformation: &samurai_transformation {Samurai Transformation: [This ability consumes 5 Soul every time it is used, Activation takes one action. Enhanced samurai ability scores can be used after the activation action has taken place, Duration of the transformation is equal to the Spirit of the samurai, The character may transform as many times as the Soul activation cost will allow]}
-abl_kongohki_overdrive_flashback: &kongohki_overdrive_flashback {Kongohki Overdrive Flashback: [As long as your Fate remains as “Sealed Memory”, whenever the number of your Aiki tokens exceed your Empathy score, you receive a flashback scene from your former life. The flashback consists of dreamlike, fragmentary images—somewhat like a movie trailer. The contents of the flashback are up to the GM. If a flashback occurs in mid battle, the character cannot take actions for that round.]}
+abl_samurai_transformation: &samurai_transformation {Samurai Transformation: "This ability consumes 5 Soul every time it is used, Activation takes one action. Enhanced samurai ability scores can be used after the activation action has taken place, Duration of the transformation is equal to the Spirit of the samurai, The character may transform as many times as the Soul activation cost will allow"}
+abl_kongohki_overdrive_flashback: &kongohki_overdrive_flashback {Kongohki Overdrive Flashback: "As long as your Fate remains as “Sealed Memory”, whenever the number of your Aiki tokens exceed your Empathy score, you receive a flashback scene from your former life. The flashback consists of dreamlike, fragmentary images—somewhat like a movie trailer. The contents of the flashback are up to the GM. If a flashback occurs in mid battle, the character cannot take actions for that round."}
+abl_shinobi_dark_arts: &shinobi_dark_arts {Shinobi Dark Arts: Decreases Soul costs of ninjutsu use by Shinobi Dark Arts level to a minimum of 1.}
+abl_ninjutsu_shore: &ninjutsu_shore {School of the Shore: {2: [Possessed by the Inner Wolf, Path of the Split Arrow, Path of the Falling Leaves], 3: [Possessed by the Inner Demon, Shadow Flight, Ninja Duplication Technique], 4: [Mind's Eye, Shadow Stich Technique, Shadowless Replication Technique]}}
 kabukimono_equipment: [Flashy Clothes, Soulgem Blade (+5 - soulgem blade - large - oddly shaped), 10 additional soulgems]
 vassel_servant_special_ability: *fated_to_die
 yoroi_armour_rider_equipment: {Gale Speed Rollers: [Increases speed by 3x, Provides +2 dice to Evasion checks]}
 yoroi_armour_rider_special_ability: *armour_damage
 samurai_special_ability: *samurai_transformation
 fallen_samurai_special_ability: *samurai_transformation
-kongohki_special_ability: *abl_kongohki_overdrive_flashback
+kongohki_special_ability: *kongohki_overdrive_flashback
+kimen_kongohki_special_ability: *kongohki_overdrive_flashback
+runaway_kongohki_special_ability: *kongohki_overdrive_flashback
+shinobi_special_ability: [*shinobi_dark_arts, *ninjutsu_shore]
+ninja_apprentice_special_ability: *ninjutsu_shore

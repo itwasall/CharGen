@@ -690,7 +690,7 @@ specialist_kongohki:
     special_abilities: Kongohki Overdrive Flashback
     fate: [Kongohki, Sealed Memory]
     desc: Kongohki are made from binding the soul of an asura (a soul who died under extreme stress or Karma and did not move on to the afterlife) inside a meikyo soul mirror. The violent soul of the asura is harnessed in a very delicate procedure which ends up suppressing all of its memories. It is this tormented soul that gives the kongohki its strength. However, if this balance deteriorates, you will remember your former identity, and likely go crazy (or become an asura again) in the process
-    notes: At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
+    notes: "At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation"
   Kimen Kongohki:
     karma_cost: 40
     skills: [[Marksman, 3], [Unarmed Combat, 3], [Stealth, 2]]
@@ -717,7 +717,7 @@ specialist_kongohki:
     special_abilities: Kongohki Overdrive Flashback
     fate: [Kongohki, Sealed Memory]
     desc: Kimen Kongohki are made from wiping the memories of a fallen Asura soul, then binding it into a kimenkyo calculation engine. While the soul bound to the kimenkyo doesn't surge in power as it accumulates Karma like the meikyo-based Kongohki, they are still powerful steel demons on the battlefield. When the soul manifests itself, the kimen kongohki can still fly into a powerful rage or other emotional state.
-    notes: At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
+    notes: "At character creation you have the following attribute scores: Body 7, Agility 9, Senses 9 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation"
   Runaway Kongohki:
     karma_cost: 55
     skills: [[Unarmed Combat, 3], [Marksman, 3], [Melee Weapons, 2], [Stealth, 2]]
@@ -742,8 +742,8 @@ specialist_kongohki:
         ammo: 30
     special_abilities: Kongohki Overdrive Flashback
     fate: [Emotion, Fear of Yourself]
-    desc: Kongohki are made from inserting the soul of an asura inside a meikyo. These memories are normally sealed a way behind magical locks. You, however, know who you are, and what you have become: a human soul now residing within a metal body. Your mind is now slowly being consumed by the wild emotions of your former self. Whether you embrace who you were or find a new life is up to you
-    notes: At character creation you have the following attribute scores: Body 8, Agility 8, Senses 7 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation
+    desc: "Kongohki are made from inserting the soul of an asura inside a meikyo. These memories are normally sealed a way behind magical locks. You, however, know who you are, and what you have become: a human soul now residing within a metal body. Your mind is now slowly being consumed by the wild emotions of your former self. Whether you embrace who you were or find a new life is up to you"
+    notes: "At character creation you have the following attribute scores: Body 8, Agility 8, Senses 7 and 22 points to spend on other attributes. You cannot add or subtract points from those three attributes at character creation"
 specialist_ninja:
   Shinobi:
     karma_cost: 55
@@ -758,19 +758,176 @@ specialist_ninja:
         rof: 5
         range: 15m
         ammo: A lot
-    special_abilities: Shinobi Dark Arts
-      
+    special_abilities: [[Shinobi Dark Arts, 4], [School of the Shore, 4]]
+    fate: [Misfortune, Property of the clan]
+    desc: You represent the elite of the ninja, the shinobi. In Tenra, the shadowy histories of the ninja armies are surrounded by war and conspiracy, blood washed with more blood.
+    notes: "The default style for the Shinobi is Migawari-Ryu (School of the Shore), but any other style can be substituted"
   Ninja Apprentice:
+    karma_cost: 5
+    skills: [[NInjutsu, 2], [Willpower, 2], [First Aid, 2], [Evasion, 2]]
+    attr_pen: 0
+    m_attr: [Agility, Senses, Spirit]
+    station_req: 2
+    equipment: [Ninja tools]
+    equip_cost: 0
+    weapons:
+      Ninja Sword:
+        damage: 3
+    special_abilities: School of the Shore
+    fate: [Emotion, Yearning for Freedom]
+    desc: Ninja apprentices are the loweset ranking and most numerous ninja in Tenra. Sometimes referred to as genin or 'low ninja', they are the workhorses and errand-boys of their ninja camp.
+    notes: See the hinobi section for rules on ninjutsu. The character may choose any stufle, but Migawari-Ryu (School of the Shore) is the default style for this archetype
   Infiltrator:
+    karma_cost: 10
+    skills: [[Ninjutsu, 3], [Movement, 2], [Stealth, 2]]
+    attr_pen: 0
+    m_attr: [Agility, Senses, Spirit]
+    equipment: Ninja Tools
+    equip_cost: 0
+    weapons:
+      Ninja Sword:
+        damage: 3
+    special_abilities: Ninjutsu
+    fate: [Other, Skeptic]
+    desc: You are a ninja or spy employed by a vassal lord, an intelligence operative for your domain
+    notes: See the ninjutsu rules for more details. Choose any school of ninjutsu
 specialist_annelidist:
   Annelidist:
+    karma_cost: 65
+    skills: [[Wormcharm, 4]]
+    attr_pen: 0
+    m_attr: [Body, Senses]
+    equipment: [Annelids, annelid food, trap, cage]
+    equipment_special:
+      Annelids:
+        Talonfang Bugs: 5
+        Rejuvenation Worms: [3, 15 rejuvenation points]
+        Mouth Creepers: 1
+    weapons:
+      Talonfang Bugs:
+        damage: 5
+      Mouth Creeper:
+        damage: 1
+        affliction: Poison
+    special_abilities: no
+    fate: [Emotion, Affection for Annelids]
+    desc: You are an annelidist or 'mushi-tsukai', a host to a varity of parasitic insects native to Tenra known as 'annelids'. You allow them to live off your body, and in turn they provide you with various benefits
+    notes: See the annelidist rules for more details on mouth creeper poison
   Annelid Infested:
+    karma_cost: 10
+    skills: [[Wormcharm, 2]]
+    attr_pen: 0
+    m_attr: [Body, Empathy]
+    equipment: [Annelids]
+    equipment_special:
+      Annelids:
+        Chitinshells: [5, +5 permanent Vitality]
+        Rejuvenation Worms: [2, 10 rejuvenation points]
+    equip_cost: 20
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Hatred of Annelids]
+    desc: The annelids you now house inside your body were once give nto you by an annelidist, who offered you a choice. If only you could relive that moment you would surely have made a different choice
+    notes: See the annelidist rules section for details
   Annelid Hunter:
+    karma_cost: 80
+    skills: [[Wormcharm, 3]]
+    attr_pen: 0
+    m_attr: [Body, Senses]
+    equipment: [Annelids]
+    equipment_special:
+      Annelids:
+        Demon-of-Battle Annelid: "When activated, adds +5 to Body and Agility and +6 to senses. Vitality increases by 10 poiints and 20 rejuvenation points"
+    equip_cost: 80
+    weapons:
+      Clawed Hands:
+        damage: 8
+      Clawed Feet:
+        damage: 6
+      Acid Spit:
+        damage: 4
+        rof: 1
+        range: 5m
+        affliction: Acid 4
+      Electrostatic Cannon:
+        damage: 8
+        rof: 1
+        range: 18m
+        defensive_only: yes
+    special_abilities: no
+    fate: [Emotion, Hatred of Annelids]
+    desc: Demon-of-Battle annelids live a parasitic existence insde the brain of their host. Whenever the parasite senses danger it causes two antennae to erupt from the forehead of the host. It then transforms the host's body, by pulling the resident sha energy, transforming the host's skin into chitin plates
+    notes: "In order for the transformation to successfully take place, you must make a Spirit: Wormcharm check (difficulty 3), or a Spirit: Willpower check (difficulty 4). If you fail the check you blindly attack anything that was perceived by the annelid to be an enemy and continue to attack until the enemy is defeated. The player can choose to active the annelid at any time but so can the GM, against the players will."
 specialist_agent:
   Taira Agent Gyoshi/Miko:
+    karma_cost: 35
+    skills: [[Interface, 3], [Shinto, 2]]
+    attr_pen: 0
+    m_attr: [Knowledge, Station]
+    equipment: [Amafuda Pass, Meikyo soul mirror, interface helm]
+    equip_cost: 30
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Loyalty to the court]
+    desc: "The two Imperial Courts are the organisations which rule over Tenra from the shadows. And while Taira-ranking gyoshi priests and miko maidens are their agents, the average commoners also have a say in whom from their villages and towns are chosen to attain this rank"
+    notes: See the Shinto Agent character section for more information on the Priesthood and agent duties. Feel free to test your loyalty or change it in-game
   Meikyo Puppeteer:
+    karma_cost: 50
+    skills: [[Interface, 3]]
+    attr_pen: 5
+    m_attr: [Spirit, Station]
+    station_req: 5
+    equipment: [Meikyo, soulcord, splicer interface helm, Kimen-Kongohki, Battlefield Mastery, Lifepulse Extend, Brilliant Flower of Destruction]
+    equipment_special:
+      Kimen-Kongohki "Dark Raven":
+        attributes:
+          body: 8
+          agility: 8
+          senses: 8
+        vitality: 18
+        weapons:
+          Comet Blade:
+            damage: 3
+            rof: 1
+            range: 5m
+            ammo: 1
+          Heavy Repeater:
+            damage: 1
+            rof: 5
+            range: 50m
+            ammo: 30
+    equip_cost: 90
+    weapons: no
+    special_abilities: Kongohki Overdrive Flashback
+    fate: [Emotion, Hatred of Kongohki]
+    desc: Meikyo puppeteers interface with other meikyo and kimenkyo using their own meikyo soul-mirror and interface helm. In this way, they can push heir own soul into the shell of a kimen-kongohki and manipulate its body as if it were an extension of their own arms and legs. They can control armour or kongohki from afar in this manner
+    notes: While controlling Dark Raven or nother armours or kongohki, you cannot take any actions, half-actions or perform any defensive maneuvers yourself.
+    notes_extra: "Interface Helm Notes: An interface helm is a mask or helmet which connects to the user's meikyo soul-mirror, and allows the user to interface with a specific kimenkyo or meikyo from afar. Once the puppeteer interfaces with another unit, they go into a trance, cannot move, adn are no longer aware of their environment except through the senses of the kongohki or armour they control"
   Priesthood Double Agent:
+    karma_cost: 30
+    skills: [[Stealth, 2], [Interface, 2], [Shinto, 2]]
+    attr_pen: 0
+    m_attr: Station
+    equipment: [Amafuda pass, meikyo mirror, interface helm]
+    equip_cost: 30
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Hatred of the Priesthood]
+    desc: While you are a member of the Priesthood, you also have a connection to an outside agent or group involved with overthrowing or subverting the Priesthood (Makuu Nindo, Gamou Dounan, etc)
+    notes: The Amafuda pass allows you and your companions transport anywhere on Tenra. Your betrayal willl not affect your ability to use Shinto magic.
   Priesthood Zealot:
+    karma_cost: 10
+    skills: [[Etiquette, 3], [First Aid, 2]]
+    attr_pen: 0
+    m_attr: [Empathy]
+    station_req: 2
+    equipment: [Amafuda Pass]
+    equip_cost: 5
+    weapons: no
+    special_abilities: no
+    fate: [Emotion, Loyalty twoards the Priesthood]
+    desc: You grew up in a town taht the Priesthood saved from destruction. You are working to eventually become an agent of the organisation, or perhaps you just plan to continue working outside the organisation for the betterment. You believe with all your heart that their goals and movtives are for the protetion and betterment of all of Tenra. Of course, you have no special insight into the inner workings of the Priesthood, nor do you know what their plans are. Not until you become a full-fledged member, or until an agent recognises your potential and allows you a deeper understanding of their actions.
+    notes: The Amafuda pass allows you and your companions transport anywhere on Tenra.
 species:
   Oni:
   Half-Oni:
