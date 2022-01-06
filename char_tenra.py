@@ -35,7 +35,6 @@ class Character():
             armour_attribute_agility: int = 0,
             armour_attribute_senses: int = 0,
 
-
     ):
         self.name = name
         self.main_archetype = main_archetype
@@ -74,6 +73,7 @@ class Character():
             self.armour_attribute_senses
         ]
 
+
 arc = yaml.safe_load(open('tbz_data/archetype.yaml', 'rt'))
 global ARCHETYPE_FLAGS
 ARCHETYPE_FLAGS = {'SHINOBI_VOID': False, 'SAMURAI_VOID': False}
@@ -81,8 +81,9 @@ ARCHETYPE_FLAGS = {'SHINOBI_VOID': False, 'SAMURAI_VOID': False}
 
 def gen_archetypes():
     global ARCHETYPE_FLAGS
-    species_roll = roll("1d2")
     archetype_count = 0
+
+    species_roll = roll("1d2")
     if species_roll > 1:
         species_key = choice(list(arc['species'].keys()))
         if species_key == 'Kugutsu':
@@ -93,5 +94,6 @@ def gen_archetypes():
     else:
         archetype_species = None
     print(archetype_species)
+
 
 gen_archetypes()
