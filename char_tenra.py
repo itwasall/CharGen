@@ -1,15 +1,13 @@
 from math import ceil
 import yaml
 from typing import List, Tuple
+from random import randint, choice, choices
 
-skills = yaml.safe_load(open('tbz_data/skills.yaml'))
-dict_skills = {}
 
-for i in skills['skills']:
-    dict_skills[i['skill_name']] = i
-
-for k, d in dict_skills.items():
-    print(k, dict_skills[k])
+def roll(throws, sides=0):
+    if isinstance(throws, str):
+        throws, sides = throws.split("d")
+    return sum(randint(1, int(sides)) for _ in range(int(throws)))
 
 
 class Character():
@@ -76,3 +74,24 @@ class Character():
             self.armour_attribute_senses
         ]
 
+arc = yaml.safe_load(open('tbz_data/archetype.yaml', 'rt'))
+global ARCHETYPE_FLAGS
+ARCHETYPE_FLAGS = {'SHINOBI_VOID': False, 'SAMURAI_VOID': False}
+
+
+def gen_archetypes():
+    global ARCHETYPE_FLAGS
+    species_roll = roll("1d2")
+    archetype_count = 0
+    if species_roll > 1:
+        species_key = choice(list(arc['species'].keys()))
+        if species_key == 'Kugutsu':
+            ARCHETYPE_FLAGS['SHINOBI_VOID'] = True
+            ARCHETYPE_FLAGS['SAMURAI_VOID'] = True
+        archetype_species = [species_key, arc['species'][species_key]]
+        archetype_count += 1
+    else:
+        archetype_species = None
+    print(archetype_species)
+
+gen_archetypes()
