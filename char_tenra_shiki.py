@@ -153,11 +153,9 @@ def generate_shiki(shiki_level: int, knowledge_stat: int, verbose: bool = False)
         if shiki_ability_roll.startswith('The shiki becomes a runaway'):
             RUNAWAY = True
             shiki_power_chart.pop('The shiki becomes a runaway')
-            level_count.pop('The shiki becomes a runaway')
         if shiki_ability_roll.startswith('The shiki becomes a chimera'):
             CHIMERA = True
             shiki_power_chart.pop('The shiki becomes a chimera')
-            level_count.pop('The shiki becomes a chimera')
         if shiki_ability_roll.startswith('Roll again, and double the ability and cost rolled'):
             ROLL_DOUBLE = True
             shiki_power_chart.pop('Roll again, and double the ability and cost rolled')
