@@ -1,6 +1,7 @@
 from typing import List, Dict
 
 from random import choice, randint
+from math import floor
 
 def roll(string):
     throws, sides = string.split('d')
@@ -66,13 +67,14 @@ def generate_shiki(shiki_level: int, knowledge_stat: int):
     """
     Generates a shiki talisman based on the chart provided in the book
     Args:
-        shiki_level: The onmyojutsu or shiki crafting skill level of character
-        knowledge_stat: The knowledge stat of character
+        shiki_level (int): The onmyojutsu or shiki crafting skill level of character
+        knowledge_stat (int) : The knowledge stat of character
 
     Returns:
 
     """
-    if shiki_level == 1: shiki_level += 1 # Avoiding multiplying by zero below
+    if shiki_level == 1:
+        shiki_level += 1 # Avoiding multiplying by zero below
     max_creation_points: int = (shiki_level - 1) * knowledge_stat
     used_creation_points: int = 0
     talisman_abilities: List = []
@@ -85,28 +87,84 @@ def generate_shiki(shiki_level: int, knowledge_stat: int):
     ROLL_THRICE_MORE = False
     print(max_creation_points)
     while used_creation_points < max_creation_points:
-        print(f'new roll, creation points remaining: {max_creation_points - used_creation_points}')
-        """ While there are creation points still left to spend"""
-        shiki_ability_roll: str = choice(list(shiki_power_chart.keys()))
+        # If shiki became a runaway or chimera, stop
+        if CHIMERA or RUNAWAY:
+            break
+
+        shiki_ability_roll = choice(list(shiki_power_chart.keys()))
         level, creation_point_cost = shiki_power_chart[shiki_ability_roll][roll('1d6')]
 
+        # If the previous roll was a 'Double' or 'Half' special roll
+        if ROLL_HALF or ROLL_DOUBLE:
+            # Ignoring the unlevelled abilities, in case of a divide by zero
+            if shiki_ability_roll == 'Gaseous Form' or shiki_ability_roll == 'Shapechange':
+                pass
+            else:
+                if ROLL_HALF:
+                    level = floor(level / 2)
+                    creation_point_cost = floor(creation_point_cost / 2)
+                elif ROLL_DOUBLE:
+                    level = level * 2
+                    creation_point_cost = creation_point_cost * 2
+            ROLL_HALF = False
+            ROLL_DOUBLE = False
+        print(f'rolled {shiki_ability_roll} at level {level} for cost {creation_point_cost}')
+
+        # Because most abilities appear multiple times on the chart with different level/cost requirements
+        #   their names were appended with a '- 2' in order to avoid dupe keys. This gets rid of that so
+        #   totals can be accurate
         if shiki_ability_roll.endswith("- 2"):
             shiki_ability_roll = shiki_ability_roll[:-4]
 
+
         used_creation_points += creation_point_cost
         if shiki_ability_roll in list(level_count.keys()):
+            # These abilities can only be gotten once, so we just continue to the next role. The creation
+            #   point cost is refunded back into the pool beforehand
+            if shiki_ability_roll == 'Gaseous Form' or shiki_ability_roll == 'Shapechange':
+                used_creation_points += creation_point_cost
+                continue
             level_count[shiki_ability_roll][0] += level
-            level_count[shiki_ability_roll][1] += used_creation_points
+            level_count[shiki_ability_roll][1] += creation_point_cost
         else:
             level_count[shiki_ability_roll] = [level, creation_point_cost]
 
+        # If the "roll three more times then stop" ability was previously rolled, this increments
+        #   that counter until a break at 3
+        if ROLL_THRICE_MORE > 0:
+            ROLL_THRICE_MORE += 1
+            if ROLL_THRICE_MORE == 3:
+                break
+
+        # If the "roll once more then stop" ability was previously rolled, break here. This is after the
+        #   next ability has been added to the list
         if ROLL_ONCE_MORE:
             break
 
+        # Here are all the flag checks, with the flag-raising abilities being popped from the list as they
+        #   are rolled.
         if shiki_ability_roll.startswith('Roll once more and stop'):
             ROLL_ONCE_MORE = True
+            shiki_power_chart.pop('Roll once more and stop')
+        if shiki_ability_roll.startswith('The shiki becomes a runaway'):
+            RUNAWAY = True
+            shiki_power_chart.pop('The shiki becomes a runaway')
+        if shiki_ability_roll.startswith('The shiki becomes a chimera'):
+            CHIMERA = True
+            shiki_power_chart.pop('The shiki becomes a chimera')
+        if shiki_ability_roll.startswith('Roll again, and double the ability and cost rolled'):
+            ROLL_DOUBLE = True
+            shiki_power_chart.pop('Roll again, and double the ability and cost rolled')
+        if shiki_ability_roll.startswith('Roll again, and halve the ability and cost rolled'):
+            ROLL_HALF = True
+            shiki_power_chart.pop('Roll again, and halve the ability and cost rolled')
+        if shiki_ability_roll.startswith('Roll three more times and stop'):
+            ROLL_THRICE_MORE = 1
+            # Just to make sure the three extra rolls aren't going to be stopped by a lack of points
+            max_creation_points += 1000
+            shiki_power_chart.pop('Roll three more times and stop')
 
-    print(level_count)
+    print(level_count, used_creation_points)
 
-generate_shiki(3, 9)
+generate_shiki(3, 8)
 
