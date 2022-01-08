@@ -21,4 +21,5 @@ Very WIP
 
 ## Tenra Bansho Zero
 Recording data - archetypes 100% done
+
                - shiki talisman generation - data done, generation WIP
