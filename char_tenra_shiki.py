@@ -63,7 +63,7 @@ shiki_power_chart = {
 }
 
 
-def generate_shiki(shiki_level: int, knowledge_stat: int):
+def generate_shiki(shiki_level: int, knowledge_stat: int, verbose: bool = False):
     """
     Generates a shiki talisman based on the chart provided in the book
     Args:
@@ -85,7 +85,9 @@ def generate_shiki(shiki_level: int, knowledge_stat: int):
     RUNAWAY = False
     ROLL_ONCE_MORE = False
     ROLL_THRICE_MORE = False
-    print(max_creation_points)
+    if verbose:
+        print(max_creation_points)
+
     while used_creation_points < max_creation_points:
         # If shiki became a runaway or chimera, stop
         if CHIMERA or RUNAWAY:
@@ -108,7 +110,8 @@ def generate_shiki(shiki_level: int, knowledge_stat: int):
                     creation_point_cost = creation_point_cost * 2
             ROLL_HALF = False
             ROLL_DOUBLE = False
-        print(f'rolled {shiki_ability_roll} at level {level} for cost {creation_point_cost}')
+        if verbose:
+            print(f'rolled {shiki_ability_roll} at level {level} for cost {creation_point_cost}')
 
         # Because most abilities appear multiple times on the chart with different level/cost requirements
         #   their names were appended with a '- 2' in order to avoid dupe keys. This gets rid of that so
@@ -146,25 +149,40 @@ def generate_shiki(shiki_level: int, knowledge_stat: int):
         if shiki_ability_roll.startswith('Roll once more and stop'):
             ROLL_ONCE_MORE = True
             shiki_power_chart.pop('Roll once more and stop')
+            level_count.pop('Roll once more and stop')
         if shiki_ability_roll.startswith('The shiki becomes a runaway'):
             RUNAWAY = True
             shiki_power_chart.pop('The shiki becomes a runaway')
+            level_count.pop('The shiki becomes a runaway')
         if shiki_ability_roll.startswith('The shiki becomes a chimera'):
             CHIMERA = True
             shiki_power_chart.pop('The shiki becomes a chimera')
+            level_count.pop('The shiki becomes a chimera')
         if shiki_ability_roll.startswith('Roll again, and double the ability and cost rolled'):
             ROLL_DOUBLE = True
             shiki_power_chart.pop('Roll again, and double the ability and cost rolled')
+            level_count.pop('Roll again, and double the ability and cost rolled')
         if shiki_ability_roll.startswith('Roll again, and halve the ability and cost rolled'):
             ROLL_HALF = True
             shiki_power_chart.pop('Roll again, and halve the ability and cost rolled')
-        if shiki_ability_roll.startswith('Roll three more times and stop'):
+            level_count.pop('Roll again, and halve the ability and cost rolled')
+        if shiki_ability_roll.startswith('Roll three more times then stop'):
             ROLL_THRICE_MORE = 1
             # Just to make sure the three extra rolls aren't going to be stopped by a lack of points
             max_creation_points += 1000
-            shiki_power_chart.pop('Roll three more times and stop')
+            shiki_power_chart.pop('Roll three more times then stop')
+            level_count.pop('Roll three more times then stop')
 
-    print(level_count, used_creation_points)
+    shiki = {'Name': 'Custom Shiki',
+             'Creation Points': used_creation_points
+             }
+    for item in level_count:
+        if item == 'Gaseous Form' or item == 'Shapechange':
+            shiki[item] = True
+        else:
+            shiki[item] = level_count[item][0]
 
-generate_shiki(3, 8)
+    return shiki
+
+print(generate_shiki(3, 8))
 
