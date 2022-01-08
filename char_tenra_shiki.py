@@ -1,13 +1,14 @@
+from typing import List, Dict
+
 from random import choice, randint
 
 def roll(string):
     throws, sides = string.split('d')
     return sum(randint(1, int(sides)) for _ in range(int(throws)))
 
-ability_chart_0s ={1: 0,      2: 0,       3: 0,       4: 0,       5: 0,        6: 0}
+ability_chart_0s ={1: [0, 0], 2: [0,  0], 3: [0,  0], 4: [0,  0], 5: [ 0,  0], 6: [0, 0]}
 ability_chart_03 ={1: [0, 3], 2: [0,  3], 3: [0,  3], 4: [0,  3], 5: [  0, 3], 6: [0,  3]}
 ability_chart_05 ={1: [0, 5], 2: [0,  5], 3: [0,  5], 4: [0,  5], 5: [  0, 5], 6: [0,  5]}
-ability_chart_1s ={1: 1,      2: 1,       3: 1,       4: 1,       5: 1,        6: 1}
 ability_chart_1 = {1: [1, 1], 2: [2,  2], 3: [3,  3], 4: [4,  4], 5: [ 5,  5], 6: [6,  6]}
 ability_chart_1a ={1: [1, 1], 2: [3,  3], 3: [5,  5], 4: [5,  5], 5: [10, 10], 6: [15, 15]}
 ability_chart_1b ={1: [1, 1], 2: [1,  1], 3: [3,  3], 4: [3,  3], 5: [10, 10], 6: [15, 15]}
@@ -32,7 +33,7 @@ shiki_power_chart = {
     'Roll again, and double the ability and cost rolled': ability_chart_0s,
     'Poison': ability_chart_3,
     'Flying': ability_chart_1,
-    'Possession': ability_chart_3a,
+    'Possession - 2': ability_chart_3a,
     'Shapechange': ability_chart_05,
     'Prolong Summoning - 2': ability_chart_3a,
     'Phantasm': ability_chart_3,
@@ -55,12 +56,57 @@ shiki_power_chart = {
     'Combat Ability - 2': ability_chart_3b,
     'Shiki Destroyer - 2': ability_chart_5a,
     'Gaseous Form - 2': ability_chart_03,
-    'Additional Damage': ability_chart_2a,
+    'Additional Damage - 2': ability_chart_2a,
     'Soulfind - 2': ability_chart_1,
     'Roll three more times then stop': ability_chart_0s
 }
 
-shiki_ability_roll = choice(list(shiki_power_chart.keys()))
-shiki_power_roll = shiki_power_chart[shiki_ability_roll][roll('1d6')]
 
-print(shiki_ability_roll, shiki_power_roll)
+def generate_shiki(shiki_level: int, knowledge_stat: int):
+    """
+    Generates a shiki talisman based on the chart provided in the book
+    Args:
+        shiki_level: The onmyojutsu or shiki crafting skill level of character
+        knowledge_stat: The knowledge stat of character
+
+    Returns:
+
+    """
+    if shiki_level == 1: shiki_level += 1 # Avoiding multiplying by zero below
+    max_creation_points: int = (shiki_level - 1) * knowledge_stat
+    used_creation_points: int = 0
+    talisman_abilities: List = []
+    level_count: Dict = {}
+    ROLL_DOUBLE = False
+    ROLL_HALF = False
+    CHIMERA = False
+    RUNAWAY = False
+    ROLL_ONCE_MORE = False
+    ROLL_THRICE_MORE = False
+    print(max_creation_points)
+    while used_creation_points < max_creation_points:
+        print(f'new roll, creation points remaining: {max_creation_points - used_creation_points}')
+        """ While there are creation points still left to spend"""
+        shiki_ability_roll: str = choice(list(shiki_power_chart.keys()))
+        level, creation_point_cost = shiki_power_chart[shiki_ability_roll][roll('1d6')]
+
+        if shiki_ability_roll.endswith("- 2"):
+            shiki_ability_roll = shiki_ability_roll[:-4]
+
+        used_creation_points += creation_point_cost
+        if shiki_ability_roll in list(level_count.keys()):
+            level_count[shiki_ability_roll][0] += level
+            level_count[shiki_ability_roll][1] += used_creation_points
+        else:
+            level_count[shiki_ability_roll] = [level, creation_point_cost]
+
+        if ROLL_ONCE_MORE:
+            break
+
+        if shiki_ability_roll.startswith('Roll once more and stop'):
+            ROLL_ONCE_MORE = True
+
+    print(level_count)
+
+generate_shiki(3, 9)
+
