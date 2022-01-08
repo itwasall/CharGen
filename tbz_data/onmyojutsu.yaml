@@ -1,0 +1,174 @@
+summoning_shiki:
+  'Combat Shiki: Ranged':
+    creation_points: 22
+    soul_cost: 12
+    ranged_attack:
+      damage: 3
+      rof: 2
+      range: 10m
+    combat_ability: 3
+    additional_damage: 3
+    flight: [1, 200m/minute]
+    attribute_rating: 7
+    skill_rating: 2
+    vitality: 7
+    sense_link: no
+  'Combat Shiki: Melee':
+    creation_points: 21
+    soul_cost: 11
+    combat_ability: 5
+    additional_damage: 3
+    attribute_rating: 9
+    skill_rating: 2
+    vitality: 9
+    sense_link: yes
+  'Combat Shiki: Weak':
+    creation_points: 14
+    soul_cost: 7
+    combat_ability: 2
+    additional_damage: 2
+    poison: 1
+    attribute_rating: 5
+    skill_rating: 1
+    vitality: 5
+    sense_link: yes
+  Farsight Shiki:
+    creation_points: 12
+    soul_cost: 6
+    flight: [7,1400m/minute]
+    soul_find: [2, 30m]
+    prolong_summoning: [1, Knowledge x 2 minute]
+    attribute_rating: 2
+    skill_rating: 1
+    vitality: 2
+    sense_link: yes
+  Strategy Shiki:
+    creation_points: 19
+    soul_cost: 10
+    transmutation: [3, 3m^3 Material]
+    flight: [1, 200m/minute]
+    attribute_rating: 4
+    skill_rating: 2
+    vitality: 4
+    sense_link: no
+  Infiltrator Shiki:
+    creation_points: 23
+    soul_cost: 12
+    poison: 3
+    prolong_summoning: [3, Spirit x 4 minute]
+    shapechange: yes
+    attribute_rating: 4
+    skill_rating: 2
+    vitality: 4
+    sense_link: yes
+  Nightmare Shiki:
+    creation_points: 27
+    soul_cost: 14
+    flight: [1, 200m/minute]
+    gaseous_form: yes
+    phantasm: 6
+    possession: 1
+    prolong_summoning: [1, Knowledge x 2 minute]
+    attribute_rating: 5
+    skill_rating: 2
+    vitality: 5
+    sense_link: yes
+talisman_shiki:
+  Combat Shiki:
+    creation_points: 19
+    soul_cost: 10
+    combat_ability: 2
+    additional_damage: 5
+    possession: 1
+    attribute_rating: 6
+    skill_rating: 2
+    vitality: 6
+    sense_link: yes
+  Bomber Shiki:
+    creation_points: 8
+    soul_cost: 4
+    explode:
+      level: 5
+      damage: 5
+      range: 5m
+    possession: 1
+    attribute_rating: 2
+    skill_rating: 1
+    vitality: 4
+    sense_link: no
+  Kamikaze Shiki:
+    creation_points: 20
+    soul_cost: 10
+    soul_find: [4, 40m radius]
+    prolong_summoning: [2, Spirit x 3 minute]
+    flight: [1, 200m/minute]
+    explode:
+      level: 6
+      damage: 6
+      range: 6m
+    possession: 1
+    attribute_rating: 5
+    skill_rating: 2
+    vitality: 4
+    base_damage: 1
+    sense_link: yes
+  Assassin Shiki:
+    creation_points: 27
+    soul_cost: 14
+    flight: [1, 200m/minute]
+    gaseous_form: yes
+    phantasm: 6
+    possession: 1
+    prolong_summoning: [1, Knowledge x 2 minute]
+    attribute_rating: 5
+    skill_rating: 2
+    vitality: 5
+    sense_link: yes
+  Reconnaisance Shiki:
+    creation_points: 16
+    soul_cost: 8
+    flight: [1, 200m/minute]
+    gaseous_form: yes
+    soul_find: [6, 60m radius]
+    possession: 1
+    prolong_summoning: [1, Spirit x 2 minute]
+    attribute_rating: 3
+    skill_rating: 2
+    vitality: 3
+    sense_link: yes
+  Espionage Shiki:
+    creation_points: 17
+    soul_cost: 9
+    possession: 1
+    shapechange: yes
+    prolong_summoning: [3, Spirit x 4 minute]
+    attribute_rating: 3
+    skill_rating: 1
+    vitality: 3
+    sense_link: yes
+  Samurai/Shiki-Killer Shiki:
+    creation_points: 20
+    soul_cost: 10
+    shiki_destroyer: 3
+    flight: [2, 400m/minute]
+    possession: 1
+    attribute_rating: 4
+    skill_rating: 2
+    vitality: 4
+    sense_link: yes
+  Shiki Weapon:
+    creation_points: 20
+    soul_cost: 10
+    additional_damage: 6
+    shapechange: yes
+    possession: 1
+    attribute_rating: 4
+    skill_rating: 2
+    vitality: 4
+    sense_link: yes
+    weapon_damage: yes
+
+
+
+
+
