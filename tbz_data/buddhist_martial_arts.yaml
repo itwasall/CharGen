@@ -31,4 +31,34 @@ senju_kannon_ken:
   advanced_rank:
     name: Thousand Hands
     effect:
-      - This technique is a devastating feint used in combat to
+      - This technique is a devastating feint used in combat to distract an enemy and open them to greater amounts of damage. It can only be used when the monk is attacking, not defending. If the practitioner's attack succeeds, then the difference between the attacker and defender's succcesses is multiplied by 2, after which other weapon or martial arts damage is applied normally.
+      - Unarmed Combat damage increases to +4
+  master_rank:
+    name: Palm of Kannon
+    effect:
+      - The monk can use THousand Hands for defense as well as attacks.
+      - Unarmed Combat damage increases to +10
+  supreme_rank:
+    name: Thousand Unsettled Hands of War
+    effect:
+      - For one round, a monk can take their Emaptthy attribute score and add that many dice to any Body, Agility or Senses roll made that round. This technique costs a number of Soul sequal to the Empathy attribute score of the monk. The monk can spend less Soul if they wish for a reduced effect.
+seishaku_kei-i_ken:
+  name: Celestial Form Kung Fu
+  skill: Unarmed Combat
+  skilled_rank:
+    name: The North Star
+    effect:
+      - It takes one action to prepare this art, but afterwards all actions with Unarmed Combat do +2 damage for the rest of the combat
+  advanced_ranked:
+    name: The Feral Wolf
+    effect:
+      - First, the practiitioner must have engaged The North Star ability in this combat scene. After that, an additional action is required to prepare The Feral Wolf, but afterwards all actions with Unarmed Combat do +6 damage for the rest of combat
+  master_rank:
+    name: The Heveanly Gate
+    effect:
+      - This art is only available in combat once the practitioner has engaged The Feral Wolf in the same combat scene. An additional action is required to prepare The Heavenly Gate, but afterwards all actions with Unarmed Combat do +15 damage for the rest of combat.
+  supreme_rank:
+    name: The Broken Army
+    effect:
+      - This ultimate art is only available in combat once the practitioer has engaged The Heavenly Gate in this combat scene. An additional full action is required to prepare The Broken Army, but afterwards all actions with Unarmed Combat do +40 damage for the rest of the combat.
+
