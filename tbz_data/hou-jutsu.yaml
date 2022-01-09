@@ -41,19 +41,19 @@ tama-gaeshi:
   effect: Summon the soul of the deceased back to this world
   soul_cost: Equal to the target's Spirit attribute score
   summon_spirit_effects:
-    0 or less successes:
+    "0 or less successes":
       attitude: Enraged
       effect: Must attempt a subdue spell to calm the spirit
-    1 success:
+    "1 success":
       attitude: Combative
       effect: "May attack depending on who the spirit is: the spirit is restless"
-    2 successes:
+    "2 successes":
       attitude: Uncooperative
       effect: Spirit only says one or two sentences
-    3 successes:
+    "3 successes":
       attidue: Cooperative
       effect: Spirit will engage in a brief conversation
-    4 successes:
+    "4 successes":
       attitude: Friendly
       effect: Spirit will engage in pleasant, casual conversation
 shaku-baku:
@@ -68,3 +68,12 @@ mitama-gaeshi:
   name: Meikyo Cleansing
   effect: Educes meikyo Karam, sends meikyo-bound souls to the Afterlife
   soul_cost: Depends on the monk
+akuryou-taisan:
+  name: Exorcism
+  effect: Dispels a possessing ayakashi or spirit
+  soul_cost: Depends on the ayakashi, shiki or samurai
+fudou_bakujuu:
+  name: Binding Prayer of Acala
+  effect: Binds an opponent in place
+  soul_cost: The opponent's Spirit attribute score
+

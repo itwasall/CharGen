@@ -1,0 +1,34 @@
+fudoh_myoh-oh_ken:
+  name: Fist of Acala the Immovable Lord of Light
+  skill: Unarmed Combat
+  skilled_rank:
+    name: Fist of Earth
+    effect: 
+      - The monk can use their Spirit attribute instead of Bodt when using Unarmed Combat to attack or defend
+      - Unarmed Combat damage increases to +2
+  advanced_rank:
+    name: The Unmoving Fist
+    effect:
+      - This allows for a split-second but extremely risky counterattack, reading the enemy's movements beofre their attack lands. The side which ends up losing the attack (the one with fewer successes) is treated as if they had 0 successes for that attack. This results in a devastating amount of damage to the attacker (or defender, if their split-second counterattack is not performed precisely). This technique can only be used when the monk is being attacked (as a defense), not when attacking.
+      - Unarmed Combat damage increases to +4
+  master_rank:
+    name: Fist of the Lord of Light
+    effect:
+      - The monk can use The Unmoving Fist for attacks as well as defense
+      - Unarmed Combat damage increases to +10
+  supreme_rank:
+    name: Fist of Acala
+    effect:
+      - For one round, a monk can take their Spirit attribute score and add that many dice to any Body, Agility or Senses roll made that round. This technique costs a number of Soul equal to the Spirit attribute score of the monk. The monk can spend less Soul if they wish for a reduced effect.
+senju_kannon_ken:
+  name: The Hands of Merciful Kannon the Thousand-Armed
+  skill: Unarmed Combat
+  skilled_rank:
+    name: Palm of Wind
+    effect:
+      - The monk can use their Empathy attribute instead of Body when using Unarmed Combat to attack or defend.
+      - Unarmed Combat damage increases to +2
+  advanced_rank:
+    name: Thousand Hands
+    effect:
+      - This technique is a devastating feint used in combat to
