@@ -1,0 +1,70 @@
+iyashi:
+  name: Healing Prayer
+  effect: Heal Wounds and Vitality on oneself or another
+  soul_cost: 5
+  wound_penalties:
+    light: 1
+    heavy: 2
+    critial: 3
+    dead: "-"
+kidan:
+  name: Spirit Burst
+  effect: Build up spiritual energy in your hands, then release it as an attack
+  soul_cost:
+    Skilled: 1
+    Advanced: 3
+    Master: 5
+    Supreme: 7
+  attack: yes
+  damage:
+    Skilled: Spirit / 4
+    Advanced: Spirit / 2
+    Master: Spirit
+    Supreme: Spirit * 2
+  rate_of_fire:
+    Skilled: 1
+    Advanced: Spirit / 2
+    Master: Spirit
+    Supreme: Spirit * 2
+  range:
+    Skilled: Spirit m
+    Advanced: 5 + Spirit m
+    Master: 10 + Spirit m
+    Supreme: 15 + Spirit m
+oujuu_sakusei:
+  name: Soulgem Creation
+  effect: Creat soulgems
+  soul_cost: 0
+  requirements: 3 hour ceremony
+tama-gaeshi:
+  name: Summon Spirit
+  effect: Summon the soul of the deceased back to this world
+  soul_cost: Equal to the target's Spirit attribute score
+  summon_spirit_effects:
+    0 or less successes:
+      attitude: Enraged
+      effect: Must attempt a subdue spell to calm the spirit
+    1 success:
+      attitude: Combative
+      effect: "May attack depending on who the spirit is: the spirit is restless"
+    2 successes:
+      attitude: Uncooperative
+      effect: Spirit only says one or two sentences
+    3 successes:
+      attidue: Cooperative
+      effect: Spirit will engage in a brief conversation
+    4 successes:
+      attitude: Friendly
+      effect: Spirit will engage in pleasant, casual conversation
+shaku-baku:
+  name: Subdue Spirit
+  effect: Help or force a troubled or lost spirit from this plane into the Afterlife
+  soul_cost: 0
+tama-fuuji:
+  name: Meikyo Seal
+  effect: Seal a summoned soul inside a meikyo soul mirro
+  soul_cost: The target's Spirit attribute score
+mitama-gaeshi:
+  name: Meikyo Cleansing
+  effect: Educes meikyo Karam, sends meikyo-bound souls to the Afterlife
+  soul_cost: Depends on the monk

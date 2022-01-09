@@ -1,0 +1,31 @@
+standard_samurai:
+  karma_cost: 35
+  soulgems_implanted: 15
+  soul_cost: 5
+  combat_ability: 3
+  regeneration: 1
+  soulfind: 1
+  possession: 1
+enhanced_samurai:
+  karma_cost: 50
+  soulgems_implanted: 10
+  soul_cost: 10
+  combat_ability: 5
+  regeneration: 2
+  possession: 1
+nimble_destroyer:
+  karma_cost: 50
+  soulgems_implanted: 20
+  soul_cost: 10
+  additional_damage: 5
+  combat_ability: 3
+  regeneration: 2
+  possession: 1
+wings_of_chitin:
+  karma_cost: 43
+  soulgems_implanted: 15
+  soul_cost: 7
+  combat_ability: 3
+  flight: 5
+  regeneration: 1
+  possession: 1

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34eef8fa-e044-4d1f-84f0-0a6be0cc8fbb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/char_tenra_shiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_tenra_shiki.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbz_data/hou-jutsu.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbz_data/samurai.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
