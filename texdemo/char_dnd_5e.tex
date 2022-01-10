@@ -1,0 +1,70 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[hmargin=0.5in, vmargin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{wasysym}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{asapsym}
+
+\setlength\parindent{0pt}
+
+\newcommand{\f}{$\fullmoon$}
+\newcommand{\sectionheader}[1]{\hrulefill\hspace{14pt}{#1}{\hspace{14pt}\hrulefill}}
+\newcommand{\chardetails}[1]{{#1}\hspace{14pt}\hrulefill\par}
+\newcommand{\skill}[1]{\footnotesize\textit{#1}}
+\newcommand{\bo}[1]{\textbf{#1}}
+
+\begin{document}
+\twocolumn[
+    \sectionheader{This is a header}
+    \bigskip
+    \begin{description}
+        \item\chardetails{Name}
+        \item\chardetails{Race}
+        \item\chardetails{Level/Exp}
+        \item\chardetails{Alignment}
+    \end{description}
+]
+\begin{multicols}{2}
+    \begin{tabular}{lllcp{10pt}}
+        \toprule
+            Attribute & Score/ & Trained \\ & Prof Bonus & \\
+        \midrule
+            \bo{Strength} & \bo{10} & \\
+            \skill{Athletics} & {$\pm$}0 & \f \\
+        \midrule
+            \bo{Dexterity} & \bo{10} & \\
+            \skill{Acrobatics} & {$\pm$}0 & \f \\
+            \skill{Sleight of Hand} & {$\pm$}0 & \f \\
+            \skill{Stealth} & {$\pm$}0 & \f \\
+        \midrule
+            \bo{Constitution} & \bo{10} & \\
+        \midrule
+            \bo{Intelligence} & \bo{10} & \\
+            \skill{Arcana} & {$\pm$}0 & \f \\
+            \skill{History} & {$\pm$}0 & \f \\
+            \skill{Investigation} & {$\pm$}0 & \f \\
+            \skill{Nature} & {$\pm$}0 & \f \\
+            \skill{} & {$\pm$}0 & \f \\
+        \midrule
+            \bo{Wisdom} & \bo{10} & \\
+            \skill{Animal Handling} & {$\pm$}0 & \f \\
+            \skill{Insight} & {$\pm$}0 & \f \\
+            \skill{Medicine} & {$\pm$}0 & \f \\
+            \skill{Perception} & {$\pm$}0 & \f \\
+            \skill{Survival} & {$\pm$}0 & \f \\
+        \midrule
+            \bo{Charisma} & \bo{10} & \\
+            \skill{Deception} & {$\pm$}0 & \f \\
+            \skill{Intimidation} & {$\pm$}0 & \f \\
+            \skill{Performance} & {$\pm$}0 & \f \\
+            \skill{Persuasion} & {$\pm$}0 & \f \\
+    \end{tabular}
+    \begin{tabular*}{4}{ll}
+        
+        Hit points & & \\
+        Current hit points & & \\
+    \end{tabular*}
+\end{multicols}
+\end{document}

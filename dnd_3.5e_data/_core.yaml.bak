@@ -195,7 +195,7 @@ Fighter: &Fighter {
   name: Fighter,
   alignment: *allalign, 
   hitdice: 1d10,
-} 
+  } 
 Monk: &Monk {
   name: Monk,
   alignment: *has_lawful,
