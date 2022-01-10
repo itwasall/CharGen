@@ -1,0 +1,50 @@
+Mechanica Sensors:
+  replaces: Right eyeball or surrounding area
+  classes:
+    Kou:
+      notice_bonus: 8
+      attribute_penalty: 3
+      mechanica_slots: 3
+    Otsu:
+      notice_bonus: 5
+      attribute_penalty: 2
+      mechanica_slots: 2
+    Hei:
+      notice_bonus: 3
+      attribute_penalty: 1
+      mechanica_slots: 1
+    Rotating Visor:
+      notice_bonus: 4
+      attribute_penalty: 3
+      mechanica_slots: 6
+  slots:
+    Darksight:
+      desc: You can see in darkness. Add 2 dice to all Sense rolls while in darkness
+    Eyes of Distant Death:
+      desc: Your senses are enhanced, allowing you to see farther than naturally possible for humans. Add 2 dice to all Marksman rolls
+    Sha Sensor:
+      desc: You can sense the strength of sha energies around you. When you see a shiki (a summoned shiki or samurai) you can determine what shiki abilities it has, as well as the power level of those abilities by making a successful Senses: Onmyojutsu roll. The difficulty level for the roll is equal to 1/10th of the shiki's total creation points, rounded up.
+    Flash Burst:
+      desc: You can emit a quick burst of light from your eyes. Those who see the light are temporarily blinded. This takes a half action to use. Once you have declared the use of Flash Burst, your next attack is automatically considered a surprise attack.
+      soul_cost: 4
+    Protective Vision:
+      desc: Your eyes are completely protected against blinding light. You are immune to light attacks which affect the eyes, including Flash Burst.
+    Soulfinder:
+      desc: You can detect the presense of living creatures equal to or greater than human size within a radius equal to 10 x Senses in meters
+      heart_engine: yes
+    Eye-needles:
+      desc: Tiny needles (usually poisoned) can be projected from your mechanica sensors. An attack with these needles is always considered a surprise attack. Use the Marksman skill when attacking.
+      damage: 1
+      rate_of_fire: 1
+      range: 3m
+      ammo: 1
+      conditional: "Poisoned Needles: Upon a successful attack, the opponent must make a succesful Willpower check (difficulty level 2) or be paralyzed for 2 rounds. If the character has access to other poisons, another poison can be substituted for the default poison. Purchasing a poisoned needle costs 10 Kiai. Poisoned needles can be purchased during an intermission"
+    Enhanced Auditory:
+      desc: This function grealy amplifies the found around you, enabling you to hear sounds otherwise impossible to pick up. Your can apply your Mechanica sensors Notice skill bonus to hearing as well as sight
+    Surround Vision:
+      desc: Your peripheral vision is extended, allowing you to see 360 degrees around you for a maximum range of 20 meters. Add 2 dice when defending against surprise attacks
+    Lightning Bolt Eyes:
+      replaces: Both eyes or surrounding area
+      attribute_penalty: 2
+      desc:
+
