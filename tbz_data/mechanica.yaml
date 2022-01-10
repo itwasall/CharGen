@@ -1,50 +1,179 @@
-Mechanica Sensors:
-  replaces: Right eyeball or surrounding area
-  classes:
-    Kou:
-      notice_bonus: 8
-      attribute_penalty: 3
-      mechanica_slots: 3
-    Otsu:
-      notice_bonus: 5
-      attribute_penalty: 2
-      mechanica_slots: 2
-    Hei:
-      notice_bonus: 3
-      attribute_penalty: 1
-      mechanica_slots: 1
-    Rotating Visor:
-      notice_bonus: 4
-      attribute_penalty: 3
-      mechanica_slots: 6
-  slots:
-    Darksight:
-      desc: You can see in darkness. Add 2 dice to all Sense rolls while in darkness
-    Eyes of Distant Death:
-      desc: Your senses are enhanced, allowing you to see farther than naturally possible for humans. Add 2 dice to all Marksman rolls
-    Sha Sensor:
-      desc: You can sense the strength of sha energies around you. When you see a shiki (a summoned shiki or samurai) you can determine what shiki abilities it has, as well as the power level of those abilities by making a successful Senses: Onmyojutsu roll. The difficulty level for the roll is equal to 1/10th of the shiki's total creation points, rounded up.
-    Flash Burst:
-      desc: You can emit a quick burst of light from your eyes. Those who see the light are temporarily blinded. This takes a half action to use. Once you have declared the use of Flash Burst, your next attack is automatically considered a surprise attack.
-      soul_cost: 4
-    Protective Vision:
-      desc: Your eyes are completely protected against blinding light. You are immune to light attacks which affect the eyes, including Flash Burst.
-    Soulfinder:
-      desc: You can detect the presense of living creatures equal to or greater than human size within a radius equal to 10 x Senses in meters
-      heart_engine: yes
-    Eye-needles:
-      desc: Tiny needles (usually poisoned) can be projected from your mechanica sensors. An attack with these needles is always considered a surprise attack. Use the Marksman skill when attacking.
-      damage: 1
-      rate_of_fire: 1
-      range: 3m
-      ammo: 1
-      conditional: "Poisoned Needles: Upon a successful attack, the opponent must make a succesful Willpower check (difficulty level 2) or be paralyzed for 2 rounds. If the character has access to other poisons, another poison can be substituted for the default poison. Purchasing a poisoned needle costs 10 Kiai. Poisoned needles can be purchased during an intermission"
-    Enhanced Auditory:
-      desc: This function grealy amplifies the found around you, enabling you to hear sounds otherwise impossible to pick up. Your can apply your Mechanica sensors Notice skill bonus to hearing as well as sight
-    Surround Vision:
-      desc: Your peripheral vision is extended, allowing you to see 360 degrees around you for a maximum range of 20 meters. Add 2 dice when defending against surprise attacks
-    Lightning Bolt Eyes:
-      replaces: Both eyes or surrounding area
-      attribute_penalty: 2
-      desc:
+slot_sensors: &Mechanica_Sensors
+  Mechanica Sensors:
+    replaces: Right eyeball or surrounding area
+    classless: no
+    classes:
+      Kou: [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
+      Otsu: [5, 2, 1]
+      Hei: [3, 1, 1]
+      Rotating Visor: [4, 3, 6]
+slot_arms: &Mechanica_Arms
+  Mechanica Arms:
+    replaces: One or both arms
+    classless: no
+    classes:
+      Kou: [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+      Otsu: [5, 2, 2]
+      Hei: [3, 1, 1]
+slots:
+# Sensor (eye) based mechanica
+  Darksight:
+    desc: You can see in darkness. Add 2 dice to all Sense rolls while in darkness
+    slot: *Mechanica_Sensors
+  Eyes of Distant Death:
+    desc: Your senses are enhanced, allowing you to see farther than naturally possible for humans. Add 2 dice to all Marksman rolls
+    slot: *Mechanica_Sensors
+  Sha Sensor:
+    desc: "You can sense the strength of sha energies around you. When you see a shiki (a summoned shiki or samurai) you can determine what shiki abilities it has, as well as the power level of those abilities by making a successful Senses: Onmyojutsu roll. The difficulty level for the roll is equal to 1/10th of the shiki's total creation points, rounded up."
+    slot: *Mechanica_Sensors
+  Flash Burst:
+    desc: You can emit a quick burst of light from your eyes. Those who see the light are temporarily blinded. This takes a half action to use. Once you have declared the use of Flash Burst, your next attack is automatically considered a surprise attack.
+    slot: *Mechanica_Sensors
+    soul_cost: 4
+  Protective Vision:
+    desc: Your eyes are completely protected against blinding light. You are immune to light attacks which affect the eyes, including Flash Burst.
+    slot: *Mechanica_Sensors
+  Soulfinder:
+    desc: You can detect the presense of living creatures equal to or greater than human size within a radius equal to 10 x Senses in meters
+    slot: *Mechanica_Sensors
+    heart_engine: yes
+  Eye-needles:
+    desc: Tiny needles (usually poisoned) can be projected from your mechanica sensors. An attack with these needles is always considered a surprise attack. Use the Marksman skill when attacking.
+    slot: *Mechanica_Sensors
+    damage: 1
+    rate_of_fire: 1
+    range: 3m
+    ammo: 1
+    conditional: "Poisoned Needles: Upon a successful attack, the opponent must make a succesful Willpower check (difficulty level 2) or be paralyzed for 2 rounds. If the character has access to other poisons, another poison can be substituted for the default poison. Purchasing a poisoned needle costs 10 Kiai. Poisoned needles can be purchased during an intermission"
+  Enhanced Auditory:
+    desc: This function grealy amplifies the found around you, enabling you to hear sounds otherwise impossible to pick up. Your can apply your Mechanica sensors Notice skill bonus to hearing as well as sight
+    slot: *Mechanica_Sensors
+  Surround Vision:
+    desc: Your peripheral vision is extended, allowing you to see 360 degrees around you for a maximum range of 20 meters. Add 2 dice when defending against surprise attacks
+    slot: *Mechanica_Sensors
+# Other Head-Based Mechanica
+  Lightning Bolt Eyes:
+    slot:
+      Other Head-Based:
+        replaces: Both eyes or surrounding area
+        classless: yes
+        attribute_penalty: 2
+    heart_engine: yes
+    desc: This mechanica converts Sha energy into electricity, allowing you to project a bolt of powerful lightning from your eyes. Because this is an incorporeal energy attack, it may only be defended against by use of the Evasion skill. Use the Marksman skill when attacking.
+    damage: 5
+    rate_of_fire: 1
+    range: 100m
+    ammo: Unlimited
+  Mechanica Kabuto:
+    slot:
+      Other Head-Based:
+        replaces: Head
+        classless: yes
+        attribute_penalty: 5
+    heart_engine: yes
+    desc: The character's entire head is replaced with mechanica with built in sensors. This mechanica can release waves of sha energy, mullifying the effects of the darksight, farsight, Sha sensor and lifeforce sensor. Furthermore, detection powers provided by a shiki are useless in trackinga user with a mechanica kabuto, all within a 100 meter radius.
+  Brain Enhancement:
+    slot:
+      Other Head-Based:
+        replaces: Head (attachment)
+        classless: yes
+        attribute_penalty: 2
+    desc: This tiny mechanica is attached directly to the brain. By releasing a special solution into the brain, the user's maximum Soul pool is permanently increassed by 15 points.
+  Interface Helm Implant:
+    slot:
+      Other Head-Based:
+        replaces: Forehead
+        classless: yes
+        attribute_penalty: 3
+    desc: A yoroi interface helment is implanted directly onto your skull, connected directly to your brain. This provides a +2 bonus on all Interface rolls when connected to a Meikyo or Kimenkyo mirror
+  Renju Voice:
+    slot:
+      Other Head-Based:
+        replaces: Lower jaw
+        classless: yes
+        attribute_penalty: 3
+    desc: "Two disks which can spin at a high velocity are implanted onto the character's lower jaw. Two faces of ancient Kamiyo script are imprinted on each disk. The spinning disks strengthen Sha energy fields around the character, improving their ability with certain language-related magical skills. When they spin they release a high-pitched wailing, ranging from a shrill screech to a low cry. Add 2 dice when making skill checks with Onmyojutsu, Buddhist Magic, and Ninjutsu"
+  Supreme Nervous SYstem:
+    slot:
+      Other Head-Based:
+        replaces: Nervous System
+        classless: yes
+        attribute_penalty: 2
+    desc: Your entire nervous system has been laced by thin fibers of scarlet steel, greatly enhancing the character's reflexes and reaction speed. This provides you with a +5 bonus to initatie in combat scenes
+# Arm based mechanica
+  Projectile Fist:
+    slot: *Mechanica_Arms
+    desc: Using the explosive power of gunpowder, your metal fist can be launched from your arm. Use the Marksman skill instead of Unarmed Combat when firing your fist. The fist is attached to your arm by a 5-meter long metal cord. It returns back to your arm automatically after an attack
+    damage: 4
+    rate_of_fire: 1
+    range: 5m
+    ammo: 1
+  Burning Scourge:
+    slot: *Mechanica_Arms
+    desc: A metal whip capable of generating intense heat, can be released from your forearm. Use the Melee Weapons skill when attacking. It takes a half-action to release the scourge from your arm
+    damage: 5
+    range: 5m
+  Explosive Striker:
+    slot: *Mechanica_Arms
+    desc: A small spear, claw or blade is attached to the underside of your forearm. Although not a true ranged weapon, a small gunpowder explosion thrusts the spear into your opponent upon impact. Use the Unarmed Combat skill when attacking. The bonus in parentheses is for when gunpowder is used
+    damage: [3, 5]
+    rate_of_fire: 1
+    ammo: 3
+  Vajra Claws:
+    slot: *Mechanica_Arms
+    desc: Five razor-sharp soulgem-powered claws extend from your fingertips. They can be retracted into your hand when not in use. Extending them takes a half-action. Use the Unarmed Combat skill when attacking.
+    damage: 3
+    rate_of_fire: 3
+    ammo: 6
+  Ikari Blossom Drill:
+    slot: *Mechanica_Arms
+    desc: A spear or drill attached to your forearm can spin around, boring into your enemy upon impact. This is powered by gunpowder and uses the Unarmed Combat skill. The bonus in the parentheses is for when gunpowder is used.
+    damage: [2, 4]
+    rate_of_fire: 1
+    ammo: 6
+  White Heat Palm:
+    slot: *Mechanica_Arms
+    heart_engine: yes
+    desc: This horrible weapon, also known as the Incinerator Palm, uses the character's own inner power to heat this metal palm to a white-ho state, incinerating their enemies upon impact. Use the Unarmed Combat skill to attack. Using this function expends one point of Soul for every bonus point of damage you wish it to do. It takes a half-action (at which time Soul is consumed) to gather enough power before the attack action. After the attack action, the incinerator palm's damage returns to 0 again, requiring an additional soul charge for further damage bonuses.
+    damage: Soul points expended
+  Five-barrel Gatling:
+    slot: *Mechanica_Arms
+    desc: Your fingertips are actually gun-barrels powered by gunpowder. Use the Markman skill when attacking. This costs 2 mechanica slots
+    damage: 3
+    rate_of_fire: 5
+    range: 20m
+    ammo: 30
+  Grudge Blade:
+    slot: *Mechanica_Arms
+    desc: A long retractable blade is installed in yor forearm. It takes a half-action to fully extend the blade. Use the Melee Weapons skill when attacking.
+    damage: 5
+  Omega Snake Blades:
+    slot: *Mechanica_Arms
+    desc: Sharp, long blades extend from your fingers and wrists and spin around, creating a whirlwind of blades that pierce and slice through the enemy. They have a Rate of Fire as if they were a projectile weapon (though the jijin uses the Unarmed Combat skill to fight with them)
+    damage: 4
+    rate_of_fire: 4
+  Extra Arm Slot:
+    slot: *Mechanica_Arms
+    desc: You take a -2 penalty to your combar arm damage bonus but gain an extra slot for mechanica. This does not expend a slot in itself.
+  Arm Storage Compartment:
+    slot: *Mechanica_Arms
+    desc: You have a small storage compartment in your arm, in which food or a smal weapon can be stored.
+  Steel War Fan:
+    slot: *Mechanica_Arms
+    desc: A round fan or shield-like object extends from your arm. When defending using the Unarmed Combat skill you can add an amount of dice equal to your combat arm damage bonus. Hwever, you cannot make a counter attack when defending in this manner; this mechanica is only used for defense.
+  Keiren Fingers:
+    slot: *Mechanica_Arms
+    desc: Your fingers are mult-jointed, allowing you to perform the intricate hand movements required in casting magical spells and summonings with far les effort. Add +3 to all Onmyojutsu, Buddhist Magic, and Ninjutsu skill rolls. The fingers are delicate, however, and will be temporarily disabled if the character uses Unarmed Combat with that hand to make an attack. They can be used again after the next intermission.
+  Shoulder Spikes:
+    slot: *Mechanica_Arms
+    desc: Long sharp horns protrude from your upper arms or shoulders. Use the Unarmed Combat skill when attacking.
+    damage: 8
+  Lizard Bomb Arm:
+    slot: *Mechanica_Arms
+    desc: Just like a lizard can detach its tail in danger, you can detach one of your Mechnica Arms. This arm is loaded with gunpowder and an explosive deice. Once dropped or thrown (thenactivated), it does 20 points of damage to all within a 10-meter raidus.
+  Extendable Arm:
+    slot: *Mechanica_Arms
+    desc: The joints of your Combat Arm are extendable, allowing you to make melee and unarmed attacks up to 4 meters away with them. This has no effect on ranged attacks.
+
+
 
