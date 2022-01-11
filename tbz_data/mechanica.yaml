@@ -1,28 +1,32 @@
 slot_sensors: &Mechanica_Sensors
   Mechanica Sensors:
     replaces: Right eyeball or surrounding area
-    classless: no
     classes:
-      Kou: [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
+      Kou:  [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
       Otsu: [5, 2, 1]
-      Hei: [3, 1, 1]
+      Hei:  [3, 1, 1]
       Rotating Visor: [4, 3, 6]
 slot_arms: &Mechanica_Combat_Arms
   Mechanica Combat Arms:
     replaces: One or both arms
-    classless: no
     classes:
-      Kou: [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+      Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
       Otsu: [5, 2, 2]
-      Hei: [3, 1, 1]
+      Hei:  [3, 1, 1]
 slot_torso: &Mechanica_Machine_Torso
   Mechanica Machine Torso:
     replaces: Torso
-    classless: no
     classes:
-      Kou: [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+      Kou:  [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
       Otsu: [10, 2, 2]
-      Hei: [5, 1, 1]
+      Hei:  [5, 1, 1]
+slot_legs: &Mechanica_Legs
+  Mechanica Legs:
+    replaces: Both Legs
+    classes:
+      Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+      Otsu: [5, 2, 2]
+      Hei:  [3, 1, 1]
 slots:
 # Sensor (eye) based mechanica
   Darksight:
@@ -62,9 +66,8 @@ slots:
 # Other Head-Based Mechanica
   Lightning Bolt Eyes:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Both eyes or surrounding area
-        classless: yes
         attribute_penalty: 2
     heart_engine: yes
     desc: This mechanica converts Sha energy into electricity, allowing you to project a bolt of powerful lightning from your eyes. Because this is an incorporeal energy attack, it may only be defended against by use of the Evasion skill. Use the Marksman skill when attacking.
@@ -74,38 +77,34 @@ slots:
     ammo: Unlimited
   Mechanica Kabuto:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Head
-        classless: yes
         attribute_penalty: 5
     heart_engine: yes
-    desc: The character's entire head is replaced with mechanica with built in sensors. This mechanica can release waves of sha energy, mullifying the effects of the darksight, farsight, Sha sensor and lifeforce sensor. Furthermore, detection powers provided by a shiki are useless in trackinga user with a mechanica kabuto, all within a 100 meter radius.
+    desc: The character's entire head is replaces with mechanica with built in sensors. This mechanica can release waves of sha energy, mullifying the effects of the darksight, farsight, Sha sensor and lifeforce sensor. Furthermore, detection powers provided by a shiki are useless in trackinga user with a mechanica kabuto, all within a 100 meter radius.
   Brain Enhancement:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Head (attachment)
-        classless: yes
         attribute_penalty: 2
     desc: This tiny mechanica is attached directly to the brain. By releasing a special solution into the brain, the user's maximum Soul pool is permanently increassed by 15 points.
   Interface Helm Implant:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Forehead
-        classless: yes
         attribute_penalty: 3
     desc: A yoroi interface helment is implanted directly onto your skull, connected directly to your brain. This provides a +2 bonus on all Interface rolls when connected to a Meikyo or Kimenkyo mirror
   Renju Voice:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Lower jaw
-        classless: yes
         attribute_penalty: 3
     desc: "Two disks which can spin at a high velocity are implanted onto the character's lower jaw. Two faces of ancient Kamiyo script are imprinted on each disk. The spinning disks strengthen Sha energy fields around the character, improving their ability with certain language-related magical skills. When they spin they release a high-pitched wailing, ranging from a shrill screech to a low cry. Add 2 dice when making skill checks with Onmyojutsu, Buddhist Magic, and Ninjutsu"
   Supreme Nervous SYstem:
     slot:
-      Other Head-Based:
+      NoSlot:
         replaces: Nervous System
-        classless: yes
+        
         attribute_penalty: 2
     desc: Your entire nervous system has been laced by thin fibers of scarlet steel, greatly enhancing the character's reflexes and reaction speed. This provides you with a +5 bonus to initatie in combat scenes
 # Arm based mechanica
@@ -185,9 +184,8 @@ slots:
 # Other Arm Mechanica
   Demonic Lightning Cannon:
     slot:
-      Other Arm:
-        replaced: One full arm
-        classless: yes
+      NoSlot:
+        replaces: One full arm
         attribute_penalty: 2
     desc: This weapon replaces the hand and forearm. It gathers and transforms Sha energy into electricity, sending a powerful bolt of lightning from teh barrel. Only the Evade skill can be used when defending against this attack.
     damage: 8
@@ -196,29 +194,26 @@ slots:
     ammo: Unlimited
   Cyclone Gatling Repeater:
     slot:
-      Other Arm:
-        replaced: One full arm
-        classless: yes
+      NoSlot:
+        replaces: One full arm
         attribute_penalty: 2
-    desc: Your entire arm is replaced with a large cylindrical gunpowder Gatling gun. The gun's barrel spins around, releasing a barrage of ammunition at its targets and obliterating the enemy. This uses the Marksman skill
+    desc: Your entire arm is replaces with a large cylindrical gunpowder Gatling gun. The gun's barrel spins around, releasing a barrage of ammunition at its targets and obliterating the enemy. This uses the Marksman skill
     damage: 2
     rate_of_fire: 10
     range: 20m
     ammo: 150
   Kaminari Fist Thunderburst:
     slot:
-      Other Arm:
-        replaced: One arm (forearm and fist)
-        classless: yes
+      NoSlot:
+        replaces: One arm (forearm and fist)
         attribute_penalty: 3
         station_req: 5
     desc: This consists of a powerful metal fist with a specialised hheart engine embedded within. If the heart engine is activated, it sends out powerful energy which significantly increasess the strength of an unarmed strike. However, using this attack also damages the user. When this abilit is used, the Kaminari Fist is destroyed and the character takes 1 point of damage. The fist can be repaired during an intermission for another 30 points of Karma. This damage must be distributed to Critial Wounds. The fist normally does +5 damage, but increases to +20 when the heart engine is activated and the fist destroyed
     damage: [5, 20]
   Crab Claws:
     slot:
-      Other Arm:
-        replaced: One full arm
-        classless: yes
+      NoSlot:
+        replaces: One full arm
         attribute_penalty: 5
     heart_engine: yes
     desc: This weapon, replacing the character's entire arm, gets its name from its resemblance to a crab claw. In addition to being used as a melee weapon it can also create and explode an enormous ball of Sha energy. This energy ball affects everything in its 100 meter-wide blast radius (extending forward from the claw), friend or foe. Because the energy takes time to regenerate, this ability can be used only once every Act.
@@ -294,17 +289,42 @@ slots:
 # Other Torso-Based Mechanica
   Zero-Type Reflective Armour:
     slot:
-      Other Torso:
+      NoSlot:
         replaces: Skin
-        classless: yes
         attribute_penalty: 3
     desc: Your skin is replaced with a smooth mirror-like material resembling the underbelly of a snake. This special reflective material will protect against all energy attacks such as electricity or fire, and magical energy attacks like Buddhist magic. All damage take from such attacks (after Evasion rolls are made, as appropriate) is reduced by half
   Type-3 Charmeleon Flesh Dragon Scale:
     slot:
-      Other Torso:
+      NoSlot:
         replaces: Skin
-        classless: yes
         attribute_penalty: 1
     heart_engine: yes
     desc: Your flesh is replaced with a hard metallic armour. The character can use the energy from the heart engine to activeate the dragon scale's camouflage function. When activated, an aura of energy surrounds the character, allowing them to blind into their surroundings. Add 5 dice to all Stealth rolls.
 # Leg Mechanica
+  Roller Type:
+    slot: *Mechanica_Legs
+    desc: The bottoms of your metal feet are fitted with wheels, allowing you to move at great speeds. You can use them as a combat action to move up to your Agility score x 40 meters for 1 round, and can add 2 dice to all Evasion skill checks
+  Aquatic Fins:
+    slot: *Mechanica_Legs
+    desc: Your legs are fitted with retractable fins to aid underwater movement. Add +2 dice to all physical action rolls made underwater.
+  Booster Module:
+    slot: *Mechanica_Legs
+    desc: By releasing a small gunpowder explosion from your feet or legs, you can fly (basically an extended jump) for a limited period of time. Your maximum range in one round equals your Agility attribute score x 40 meters, and up to 20 meters in height. This device also adds 2 dice to Evasion skill checks, and can be used as a weapon, like a gun. Use the Marksman skill when making an attack. The bonus in the parentheses is for when the gunpowder burst is used.  Booster Module:
+    damage: [2, 4] # Kicking
+    rate_of_fire: 1
+    ammo: 3
+  Leg Incinerators:
+    slot: *Mechanica_Legs
+    desc: The leg version of the White Heat Palm. Using your inner power you can hear your feet and legs to a white-hot state, incinerating your enemies. Use the Unarmed Combat skill to attack. Using this function expends 1 Soul point, plus one more Soul for every extra point of damage bonus you wish to receive for your next attack. It takes a half-action (at which time Soul is consumed) to gather enough power before the attack action. After the attack is complete, the damage bonus resets to zero, requiring more Soul to be expended for further damage bonuses.
+    heart_engine: yes
+    damage: Soul points expended
+  Shock Absorbers:
+    slot: *Mechanica_Legs
+    desc: This mechanica was developed to lessen the damage caused to kijin soldiers dropped down onto their enemies from aerial yoroi troop carrier ships. These shock absorbers reduce all falling damage by half.
+  Leg Storage Compartment:
+    slot: *Mechanica_Legs
+    desc: You have a small storage comparment in one of your legs which food or a small weapon can be stored.
+  Lizard Bomb Leg:
+    slot: *Mechanica_Legs
+    desc: Just like a lizard can detach it's tail in danger, you can detach one of your Mechancia Legs. The leg is loaded with gunpowder and an explosive device, and once dropped or thrown (then activated) it does 20 points of damage to all within a 10-meter radius.
+
