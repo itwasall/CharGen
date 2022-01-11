@@ -227,6 +227,7 @@ slots:
     rate_of_fire: [5,  1]
     range: [10m, 100m]
     ammo: [no, 1]
+# Machine Torso Mechanica
   Heart Engine:
     slot: *Mechanica_Machine_Torso
     additional_attribute_penalty: 2
@@ -280,7 +281,30 @@ slots:
   Glorious Death Bomb:
     slot: *Mechanica_Machine_Torso
     desc: This is the kijin version of the Konhoki/Armour ability 'Brilliant Flower of Destruction'. By shattering your heart engine that powers your torso, you release an explosive blast. Everything within a 15-meter raidus takes 30 strainge points of damage. This also damages yourself, and your Dead Bo is checked when this is used.
-
-
-
-
+  Smoke Screen:
+    slot: *Mechanica_Machine_Torso
+    desc: A thick cloud of smoke can be released from your torso. If used indoors, enough smoke is created to fill an entire room. All within the room are unable to see. If used outdoors, the cloud dissapates after one round. This function can only be used once per scene.
+  Flame Caster:
+    slot: *Mechanica_Machine_Torso
+    desc: A flamethrower is installed within the chest. Use the Marksman skill when attacking.
+    damage: 10
+    rate_of_fire: 1
+    range: 5m
+    ammo: 3
+# Other Torso-Based Mechanica
+  Zero-Type Reflective Armour:
+    slot:
+      Other Torso:
+        replaces: Skin
+        classless: yes
+        attribute_penalty: 3
+    desc: Your skin is replaced with a smooth mirror-like material resembling the underbelly of a snake. This special reflective material will protect against all energy attacks such as electricity or fire, and magical energy attacks like Buddhist magic. All damage take from such attacks (after Evasion rolls are made, as appropriate) is reduced by half
+  Type-3 Charmeleon Flesh Dragon Scale:
+    slot:
+      Other Torso:
+        replaces: Skin
+        classless: yes
+        attribute_penalty: 1
+    heart_engine: yes
+    desc: Your flesh is replaced with a hard metallic armour. The character can use the energy from the heart engine to activeate the dragon scale's camouflage function. When activated, an aura of energy surrounds the character, allowing them to blind into their surroundings. Add 5 dice to all Stealth rolls.
+# Leg Mechanica
