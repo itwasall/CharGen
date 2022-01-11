@@ -7,14 +7,22 @@ slot_sensors: &Mechanica_Sensors
       Otsu: [5, 2, 1]
       Hei: [3, 1, 1]
       Rotating Visor: [4, 3, 6]
-slot_arms: &Mechanica_Arms
-  Mechanica Arms:
+slot_arms: &Mechanica_Combat_Arms
+  Mechanica Combat Arms:
     replaces: One or both arms
     classless: no
     classes:
       Kou: [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
       Otsu: [5, 2, 2]
       Hei: [3, 1, 1]
+slot_torso: &Mechanica_Machine_Torso
+  Mechanica Machine Torso:
+    replaces: Torso
+    classless: no
+    classes:
+      Kou: [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+      Otsu: [10, 2, 2]
+      Hei: [5, 1, 1]
 slots:
 # Sensor (eye) based mechanica
   Darksight:
@@ -101,79 +109,178 @@ slots:
         attribute_penalty: 2
     desc: Your entire nervous system has been laced by thin fibers of scarlet steel, greatly enhancing the character's reflexes and reaction speed. This provides you with a +5 bonus to initatie in combat scenes
 # Arm based mechanica
-  Projectile Fist:
-    slot: *Mechanica_Arms
+  Projecitile Fist:
+    slot: *Mechanica_Combat_Arms
     desc: Using the explosive power of gunpowder, your metal fist can be launched from your arm. Use the Marksman skill instead of Unarmed Combat when firing your fist. The fist is attached to your arm by a 5-meter long metal cord. It returns back to your arm automatically after an attack
     damage: 4
     rate_of_fire: 1
     range: 5m
     ammo: 1
   Burning Scourge:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: A metal whip capable of generating intense heat, can be released from your forearm. Use the Melee Weapons skill when attacking. It takes a half-action to release the scourge from your arm
     damage: 5
     range: 5m
   Explosive Striker:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: A small spear, claw or blade is attached to the underside of your forearm. Although not a true ranged weapon, a small gunpowder explosion thrusts the spear into your opponent upon impact. Use the Unarmed Combat skill when attacking. The bonus in parentheses is for when gunpowder is used
     damage: [3, 5]
     rate_of_fire: 1
     ammo: 3
   Vajra Claws:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Five razor-sharp soulgem-powered claws extend from your fingertips. They can be retracted into your hand when not in use. Extending them takes a half-action. Use the Unarmed Combat skill when attacking.
     damage: 3
     rate_of_fire: 3
     ammo: 6
   Ikari Blossom Drill:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: A spear or drill attached to your forearm can spin around, boring into your enemy upon impact. This is powered by gunpowder and uses the Unarmed Combat skill. The bonus in the parentheses is for when gunpowder is used.
     damage: [2, 4]
     rate_of_fire: 1
     ammo: 6
   White Heat Palm:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     heart_engine: yes
     desc: This horrible weapon, also known as the Incinerator Palm, uses the character's own inner power to heat this metal palm to a white-ho state, incinerating their enemies upon impact. Use the Unarmed Combat skill to attack. Using this function expends one point of Soul for every bonus point of damage you wish it to do. It takes a half-action (at which time Soul is consumed) to gather enough power before the attack action. After the attack action, the incinerator palm's damage returns to 0 again, requiring an additional soul charge for further damage bonuses.
     damage: Soul points expended
   Five-barrel Gatling:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Your fingertips are actually gun-barrels powered by gunpowder. Use the Markman skill when attacking. This costs 2 mechanica slots
     damage: 3
     rate_of_fire: 5
     range: 20m
     ammo: 30
   Grudge Blade:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: A long retractable blade is installed in yor forearm. It takes a half-action to fully extend the blade. Use the Melee Weapons skill when attacking.
     damage: 5
   Omega Snake Blades:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Sharp, long blades extend from your fingers and wrists and spin around, creating a whirlwind of blades that pierce and slice through the enemy. They have a Rate of Fire as if they were a projectile weapon (though the jijin uses the Unarmed Combat skill to fight with them)
     damage: 4
     rate_of_fire: 4
   Extra Arm Slot:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: You take a -2 penalty to your combar arm damage bonus but gain an extra slot for mechanica. This does not expend a slot in itself.
   Arm Storage Compartment:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: You have a small storage compartment in your arm, in which food or a smal weapon can be stored.
   Steel War Fan:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: A round fan or shield-like object extends from your arm. When defending using the Unarmed Combat skill you can add an amount of dice equal to your combat arm damage bonus. Hwever, you cannot make a counter attack when defending in this manner; this mechanica is only used for defense.
   Keiren Fingers:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Your fingers are mult-jointed, allowing you to perform the intricate hand movements required in casting magical spells and summonings with far les effort. Add +3 to all Onmyojutsu, Buddhist Magic, and Ninjutsu skill rolls. The fingers are delicate, however, and will be temporarily disabled if the character uses Unarmed Combat with that hand to make an attack. They can be used again after the next intermission.
   Shoulder Spikes:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Long sharp horns protrude from your upper arms or shoulders. Use the Unarmed Combat skill when attacking.
     damage: 8
   Lizard Bomb Arm:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: Just like a lizard can detach its tail in danger, you can detach one of your Mechnica Arms. This arm is loaded with gunpowder and an explosive deice. Once dropped or thrown (thenactivated), it does 20 points of damage to all within a 10-meter raidus.
   Extendable Arm:
-    slot: *Mechanica_Arms
+    slot: *Mechanica_Combat_Arms
     desc: The joints of your Combat Arm are extendable, allowing you to make melee and unarmed attacks up to 4 meters away with them. This has no effect on ranged attacks.
+# Other Arm Mechanica
+  Demonic Lightning Cannon:
+    slot:
+      Other Arm:
+        replaced: One full arm
+        classless: yes
+        attribute_penalty: 2
+    desc: This weapon replaces the hand and forearm. It gathers and transforms Sha energy into electricity, sending a powerful bolt of lightning from teh barrel. Only the Evade skill can be used when defending against this attack.
+    damage: 8
+    rate_of_fire: 1
+    range: 300m
+    ammo: Unlimited
+  Cyclone Gatling Repeater:
+    slot:
+      Other Arm:
+        replaced: One full arm
+        classless: yes
+        attribute_penalty: 2
+    desc: Your entire arm is replaced with a large cylindrical gunpowder Gatling gun. The gun's barrel spins around, releasing a barrage of ammunition at its targets and obliterating the enemy. This uses the Marksman skill
+    damage: 2
+    rate_of_fire: 10
+    range: 20m
+    ammo: 150
+  Kaminari Fist Thunderburst:
+    slot:
+      Other Arm:
+        replaced: One arm (forearm and fist)
+        classless: yes
+        attribute_penalty: 3
+        station_req: 5
+    desc: This consists of a powerful metal fist with a specialised hheart engine embedded within. If the heart engine is activated, it sends out powerful energy which significantly increasess the strength of an unarmed strike. However, using this attack also damages the user. When this abilit is used, the Kaminari Fist is destroyed and the character takes 1 point of damage. The fist can be repaired during an intermission for another 30 points of Karma. This damage must be distributed to Critial Wounds. The fist normally does +5 damage, but increases to +20 when the heart engine is activated and the fist destroyed
+    damage: [5, 20]
+  Crab Claws:
+    slot:
+      Other Arm:
+        replaced: One full arm
+        classless: yes
+        attribute_penalty: 5
+    heart_engine: yes
+    desc: This weapon, replacing the character's entire arm, gets its name from its resemblance to a crab claw. In addition to being used as a melee weapon it can also create and explode an enormous ball of Sha energy. This energy ball affects everything in its 100 meter-wide blast radius (extending forward from the claw), friend or foe. Because the energy takes time to regenerate, this ability can be used only once every Act.
+    # [Claw Melee, Sha Cannon]
+    damage: [7, 9]
+    rate_of_fire: [5,  1]
+    range: [10m, 100m]
+    ammo: [no, 1]
+  Heart Engine:
+    slot: *Mechanica_Machine_Torso
+    additional_attribute_penalty: 2
+    desc: A Heart Engine is installed in your mechanical body, providing a power source to a variety of mechanica. This can only be installed at character creation
+  Kimenkyo:
+    slot: *Mechanica_Machine_Torso
+    additional_attribute_penalty: 2
+    desc: With a kimenkyo mirror installed in your body to help amplify and control fine motor movement, you can use your Interface skill rank to perform any general skill (but not other specialised skills). This can only be installed at character creation.
+  Rib Cage Spider:
+    slot: *Mechanica_Machine_Torso
+    desc: When grappling an oponent, 8 spiny blades can be extended from your chest, impaling your victim. Use the Unarmed Combat skill when attacking.
+    damage: 2
+    rate_of_fire: 6
+    ammo: 6
+  Dragon Cannon:
+    slot: *Mechanica_Machine_Torso
+    desc: A lesser version of the immense yoroi armour soulgem mortal is installed on your shoulder or chest. This large weapon takes up 2 mechanica slots. Use the Marksman skill when attacking
+    extra_slot_usage: 1
+    damage: 9
+    rate_of_fire: 1
+    range: 1000m
+    ammo: 6
+  Supreme Howler Mortar Cannon:
+    slot: *Mechanica_Machine_Torso
+    heart_engine: yes
+    additional_attribute_penalty: 1
+    desc: This is a long-range yoroi mortar which can be installed on teh shoulder or in the chest. Use the Marksman skill when attacknig. It does 12 points of damage to anything in its blast radius. This can be reduced with an Evasion roll. The ammo is replenished every intermission.
+    damage: 12
+    rate_of_fire: 1
+    range: 2000m
+    ammo: 1
+  Inner Eye:
+    slot: *Mechanica_Machine_Torso
+    heart_engine: yes
+    desc: This device allows you to manipulate the inner energies of your Heart Engine. You can siphon your Soul to refule your Vitality score at a 1:1 ration
+  Torso Storage Compartment:
+    slot: *Mechanica_Machine_Torso
+    desc: You have a small storage comparment in your torso in which food or a small weapon can be stored.
+  Extra Torso Slot:
+    slot: *Mechanica_Machine_Torso
+    desc: You can take a -4 to your machine torso Vitality bonus but gain an extra slot for mechanica. This does not expend a slot in inself. Your Vitality bonus cannot be reduced below zero.
+  Extra Arm Attachment:
+    slot: *Mechanica_Machine_Torso
+    desc: You can attatch another arm to your torso. Add attribute costs of the extra limbs as normal.
+  Reinforced Lungs:
+    slot: *Mechanica_Machine_Torso
+    desc: You can hold your breath and swim underwater fora number of hours equal to your Spirit attribute. During strenuous activity such as underwater combat, you can only hold your breath for a number of round equal to your Spirit score
+  Flight Booster:
+    slot: *Mechanica_Machine_Torso
+    desc: Using a burst of power from a soulgem, you can fly for 2 hournds. The max range in one round equals your Agility attribute score x 40 meters
+  Glorious Death Bomb:
+    slot: *Mechanica_Machine_Torso
+    desc: This is the kijin version of the Konhoki/Armour ability 'Brilliant Flower of Destruction'. By shattering your heart engine that powers your torso, you release an explosive blast. Everything within a 15-meter raidus takes 30 strainge points of damage. This also damages yourself, and your Dead Bo is checked when this is used.
+
 
 
 
