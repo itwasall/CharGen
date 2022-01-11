@@ -1,62 +1,64 @@
-sensor: &Mechanica_Sensors
-  Mechanica Sensors:
-    replaces: Right eyeball or surrounding area
-    classes:
-      Kou:  [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
-      Otsu: [5, 2, 1]
-      Hei:  [3, 1, 1]
-      Rotating Visor: [4, 3, 6]
-arm: &Mechanica_Combat_Arms
-  Mechanica Combat Arms:
-    replaces: One or both arms
-    classes:
-      Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-      Otsu: [5, 2, 2]
-      Hei:  [3, 1, 1]
-torso: &Mechanica_Machine_Torso
-  Mechanica Machine Torso:
-    replaces: Torso
-    classes:
-      Kou:  [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-      Otsu: [10, 2, 2]
-      Hei:  [5, 1, 1]
-leg: &Mechanica_Legs
-  Mechanica Legs:
-    replaces: Both Legs
-    classes:
-      Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-      Otsu: [5, 2, 2]
-      Hei:  [3, 1, 1]
-weapon_interface: &Mechanica_WeaponInterface
-  Weapon Interface:
-      replaces: Varies
-      classes:
-        Kou: [4, 2] # Damage bonus, Attribute penalty
-        Otsu: [2, 1]
+sensor: 
+  replaces: Right eyeball or surrounding area
+  classes:
+    Kou:  [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
+    Otsu: [5, 2, 1]
+    Hei:  [3, 1, 1]
+    Rotating Visor: [4, 3, 6]
+arm: 
+  replaces: One or both arms
+  classes:
+    Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+    Otsu: [5, 2, 2]
+    Hei:  [3, 1, 1]
+torso: 
+  replaces: Torso
+  classes:
+    Kou:  [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+    Otsu: [10, 2, 2]
+    Hei:  [5, 1, 1]
+leg: 
+  replaces: Both Legs
+  classes:
+    Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
+    Otsu: [5, 2, 2]
+    Hei:  [3, 1, 1]
+weapon_interface: 
+  replaces: Varies
+  classes:
+    Kou: [4, 2] # Damage bonus, Attribute penalty
+    Otsu: [2, 1]
+homeopathic_bullet_skin:
+  replaces: skin
+  classes:
+    Kou: [30, 4, 'Light'] # Damage reduction, Attribute Penalty, Wound level
+    Otsu: [20, 2, 'Heavy']
+    Hei: [10, 1, 'Critial']
+
 slots:
   # Sensor (eye) based mechanica
   Darksight:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: You can see in darkness. Add 2 dice to all Sense rolls while in darkness
   Eyes of Distant Death:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: Your senses are enhanced, allowing you to see farther than naturally possible for humans. Add 2 dice to all Marksman rolls
   Sha Sensor:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: "You can sense the strength of sha energies around you. When you see a shiki (a summoned shiki or samurai) you can determine what shiki abilities it has, as well as the power level of those abilities by making a successful Senses: Onmyojutsu roll. The difficulty level for the roll is equal to 1/10th of the shiki's total creation points, rounded up."
   Flash Burst:
-    slot: *Mechanica_Sensors
+    slot: sensor
     soul_cost: 4
     desc: You can emit a quick burst of light from your eyes. Those who see the light are temporarily blinded. This takes a half action to use. Once you have declared the use of Flash Burst, your next attack is automatically considered a surprise attack.
   Protective Vision:
     desc: Your eyes are completely protected against blinding light. You are immune to light attacks which affect the eyes, including Flash Burst.
-    slot: *Mechanica_Sensors
+    slot: sensor
   Soulfinder:
-    slot: *Mechanica_Sensors
+    slot: sensor
     heart_engine: yes
     desc: You can detect the presense of living creatures equal to or greater than human size within a radius equal to 10 x Senses in meters
   Eye-needles:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: Tiny needles (usually poisoned) can be projected from your mechanica sensors. An attack with these needles is always considered a surprise attack. Use the Marksman skill when attacking.
     weapon:
       damage: 1
@@ -65,10 +67,10 @@ slots:
       ammo: 1
     conditional: "Poisoned Needles: Upon a successful attack, the opponent must make a succesful Willpower check (difficulty level 2) or be paralyzed for 2 rounds. If the character has access to other poisons, another poison can be substituted for the default poison. Purchasing a poisoned needle costs 10 Kiai. Poisoned needles can be purchased during an intermission"
   Enhanced Auditory:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: This function grealy amplifies the found around you, enabling you to hear sounds otherwise impossible to pick up. Your can apply your Mechanica sensors Notice skill bonus to hearing as well as sight
   Surround Vision:
-    slot: *Mechanica_Sensors
+    slot: sensor
     desc: Your peripheral vision is extended, allowing you to see 360 degrees around you for a maximum range of 20 meters. Add 2 dice when defending against surprise attacks
   # Other Head-Based Mechanica
   Lightning Bolt Eyes:
@@ -116,7 +118,7 @@ slots:
     desc: Your entire nervous system has been laced by thin fibers of scarlet steel, greatly enhancing the character's reflexes and reaction speed. This provides you with a +5 bonus to initatie in combat scenes
   # Arm based mechanica
   Projecitile Fist:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Using the explosive power of gunpowder, your metal fist can be launched from your arm. Use the Marksman skill instead of Unarmed Combat when firing your fist. The fist is attached to your arm by a 5-meter long metal cord. It returns back to your arm automatically after an attack
     weapon:
       damage: 4
@@ -124,40 +126,40 @@ slots:
       range: 5m
       ammo: 1
   Burning Scourge:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: A metal whip capable of generating intense heat, can be released from your forearm. Use the Melee Weapons skill when attacking. It takes a half-action to release the scourge from your arm
     weapon:
       damage: 5
       range: 5m
   Explosive Striker:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: A small spear, claw or blade is attached to the underside of your forearm. Although not a true ranged weapon, a small gunpowder explosion thrusts the spear into your opponent upon impact. Use the Unarmed Combat skill when attacking. The bonus in parentheses is for when gunpowder is used
     weapon:
       damage: [3, 5]
       rate_of_fire: 1
       ammo: 3
   Vajra Claws:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Five razor-sharp soulgem-powered claws extend from your fingertips. They can be retracted into your hand when not in use. Extending them takes a half-action. Use the Unarmed Combat skill when attacking.
     weapon:
       damage: 3
       rate_of_fire: 3
       ammo: 6
   Ikari Blossom Drill:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: A spear or drill attached to your forearm can spin around, boring into your enemy upon impact. This is powered by gunpowder and uses the Unarmed Combat skill. The bonus in the parentheses is for when gunpowder is used.
     weapon:
       damage: [2, 4]
       rate_of_fire: 1
       ammo: 6
   White Heat Palm:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     heart_engine: yes
     desc: This horrible weapon, also known as the Incinerator Palm, uses the character's own inner power to heat this metal palm to a white-ho state, incinerating their enemies upon impact. Use the Unarmed Combat skill to attack. Using this function expends one point of Soul for every bonus point of damage you wish it to do. It takes a half-action (at which time Soul is consumed) to gather enough power before the attack action. After the attack action, the incinerator palm's damage returns to 0 again, requiring an additional soul charge for further damage bonuses.
     weapon:
       damage: Soul points expended
   Five-barrel Gatling:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Your fingertips are actually gun-barrels powered by gunpowder. Use the Markman skill when attacking. This costs 2 mechanica slots
     weapon:
       damage: 3
@@ -165,41 +167,41 @@ slots:
       range: 20m
       ammo: 30
   Grudge Blade:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: A long retractable blade is installed in yor forearm. It takes a half-action to fully extend the blade. Use the Melee Weapons skill when attacking.
     weapon:
       damage: 5
   Omega Snake Blades:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Sharp, long blades extend from your fingers and wrists and spin around, creating a whirlwind of blades that pierce and slice through the enemy. They have a Rate of Fire as if they were a projectile weapon (though the jijin uses the Unarmed Combat skill to fight with them)
     weapon:
       damage: 4
       rate_of_fire: 4
   Extra Arm Slot:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: You take a -2 penalty to your combar arm damage bonus but gain an extra slot for mechanica. This does not expend a slot in itself.
   Arm Storage Compartment:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: You have a small storage compartment in your arm, in which food or a smal weapon can be stored.
   Steel War Fan:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: A round fan or shield-like object extends from your arm. When defending using the Unarmed Combat skill you can add an amount of dice equal to your combat arm damage bonus. Hwever, you cannot make a counter attack when defending in this manner; this mechanica is only used for defense.
   Keiren Fingers:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Your fingers are mult-jointed, allowing you to perform the intricate hand movements required in casting magical spells and summonings with far les effort. Add +3 to all Onmyojutsu, Buddhist Magic, and Ninjutsu skill rolls. The fingers are delicate, however, and will be temporarily disabled if the character uses Unarmed Combat with that hand to make an attack. They can be used again after the next intermission.
   Shoulder Spikes:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Long sharp horns protrude from your upper arms or shoulders. Use the Unarmed Combat skill when attacking.
     weapon:
       damage: 8
   Lizard Bomb Arm:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: Just like a lizard can detach its tail in danger, you can detach one of your Mechnica Arms. This arm is loaded with gunpowder and an explosive deice. Once dropped or thrown (thenactivated), it does 20 points of damage to all within a 10-meter raidus.
     weapon:
       damage: 20
       range: 10m
   Extendable Arm:
-    slot: *Mechanica_Combat_Arms
+    slot: arm
     desc: The joints of your Combat Arm are extendable, allowing you to make melee and unarmed attacks up to 4 meters away with them. This has no effect on ranged attacks.
   # Other Arm Mechanica
   Demonic Lightning Cannon:
@@ -248,22 +250,22 @@ slots:
       ammo: [no, 1]
   # Machine Torso Mechanica
   Heart Engine:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     additional_attribute_penalty: 2
     desc: A Heart Engine is installed in your mechanical body, providing a power source to a variety of mechanica. This can only be installed at character creation
   Kimenkyo:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     additional_attribute_penalty: 2
     desc: With a kimenkyo mirror installed in your body to help amplify and control fine motor movement, you can use your Interface skill rank to perform any general skill (but not other specialised skills). This can only be installed at character creation.
   Rib Cage Spider:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: When grappling an oponent, 8 spiny blades can be extended from your chest, impaling your victim. Use the Unarmed Combat skill when attacking.
     weapon:
       damage: 2
       rate_of_fire: 6
       ammo: 6
   Dragon Cannon:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: A lesser version of the immense yoroi armour soulgem mortal is installed on your shoulder or chest. This large weapon takes up 2 mechanica slots. Use the Marksman skill when attacking
     extra_slot_usage: 1
     weapon:
@@ -272,7 +274,7 @@ slots:
       range: 1000m
       ammo: 6
   Supreme Howler Mortar Cannon:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     heart_engine: yes
     additional_attribute_penalty: 1
     desc: This is a long-range yoroi mortar which can be installed on the shoulder or in the chest. Use the Marksman skill when attacknig. It does 12 points of damage to anything in its blast radius. This can be reduced with an Evasion roll. The ammo is replenished every intermission.
@@ -282,35 +284,35 @@ slots:
       range: 2000m
       ammo: 1
   Inner Eye:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     heart_engine: yes
     desc: This device allows you to manipulate the inner energies of your Heart Engine. You can siphon your Soul to refule your Vitality score at a 1:1 ration
   Torso Storage Compartment:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: You have a small storage comparment in your torso in which food or a small weapon can be stored.
   Extra Torso Slot:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: You can take a -4 to your machine torso Vitality bonus but gain an extra slot for mechanica. This does not expend a slot in inself. Your Vitality bonus cannot be reduced below zero.
   Extra Arm Attachment:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: You can attatch another arm to your torso. Add attribute costs of the extra limbs as normal.
   Reinforced Lungs:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: You can hold your breath and swim underwater fora number of hours equal to your Spirit attribute. During strenuous activity such as underwater combat, you can only hold your breath for a number of round equal to your Spirit score
   Flight Booster:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: Using a burst of power from a soulgem, you can fly for 2 hournds. The max range in one round equals your Agility attribute score x 40 meters
   Glorious Death Bomb:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: This is the kijin version of the Konhoki/Armour ability 'Brilliant Flower of Destruction'. By shattering your heart engine that powers your torso, you release an explosive blast. Everything within a 15-meter raidus takes 30 strainge points of damage. This also damages yourself, and your Dead Bo is checked when this is used.
     weapon:
       damage: 30
       range: 15m
   Smoke Screen:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: A thick cloud of smoke can be released from your torso. If used indoors, enough smoke is created to fill an entire room. All within the room are unable to see. If used outdoors, the cloud dissapates after one round. This function can only be used once per scene.
   Flame Caster:
-    slot: *Mechanica_Machine_Torso
+    slot: torso
     desc: A flamethrower is installed within the chest. Use the Marksman skill when attacking.
     weapon:
       damage: 10
@@ -333,38 +335,38 @@ slots:
     desc: Your flesh is replaced with a hard metallic armour. The character can use the energy from the heart engine to activeate the dragon scale's camouflage function. When activated, an aura of energy surrounds the character, allowing them to blind into their surroundings. Add 5 dice to all Stealth rolls.
   # Leg Mechanica
   Roller Type:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: The bottoms of your metal feet are fitted with wheels, allowing you to move at great speeds. You can use them as a combat action to move up to your Agility score x 40 meters for 1 round, and can add 2 dice to all Evasion skill checks
   Aquatic Fins:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: Your legs are fitted with retractable fins to aid underwater movement. Add +2 dice to all physical action rolls made underwater.
   Booster Module:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: By releasing a small gunpowder explosion from your feet or legs, you can fly (basically an extended jump) for a limited period of time. Your maximum range in one round equals your Agility attribute score x 40 meters, and up to 20 meters in height. This device also adds 2 dice to Evasion skill checks, and can be used as a weapon, like a gun. Use the Marksman skill when making an attack. The bonus in the parentheses is for when the gunpowder burst is used.
     weapon:
       damage: [2, 4] # Kicking
       rate_of_fire: 1
       ammo: 3
   Leg Incinerators:
-    slot: *Mechanica_Legs
+    slot: leg
     heart_engine: yes
     desc: The leg version of the White Heat Palm. Using your inner power you can hear your feet and legs to a white-hot state, incinerating your enemies. Use the Unarmed Combat skill to attack. Using this function expends 1 Soul point, plus one more Soul for every extra point of damage bonus you wish to receive for your next attack. It takes a half-action (at which time Soul is consumed) to gather enough power before the attack action. After the attack is complete, the damage bonus resets to zero, requiring more Soul to be expended for further damage bonuses.
     damage: Soul points expended
   Shock Absorbers:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: This mechanica was developed to lessen the damage caused to kijin soldiers dropped down onto their enemies from aerial yoroi troop carrier ships. These shock absorbers reduce all falling damage by half.
   Leg Storage Compartment:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: You have a small storage comparment in one of your legs which food or a small weapon can be stored.
   Lizard Bomb Leg:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: Just like a lizard can detach it's tail in danger, you can detach one of your Mechancia Legs. The leg is loaded with gunpowder and an explosive device, and once dropped or thrown (then activated) it does 20 points of damage to all within a 10-meter radius.
   Dragon Claws:
-    slot: *Mechanica_Legs
+    slot: leg
     desc: Huge menacing claws are built into your feet. In addition ot being a weapon, it can also be used as an aid in climbing, allowing you to stand upright on a horizontal surface such as a wall. Use the Unarmed Combat skill when attacking.
     damage: 5
   Supreme Howler Mortar Cannon:
-    slot: *Mechanica_Legs
+    slot: leg
     heart_engine: yes
     additional_attribute_penalty: 1
     desc: This immense long-range oroi mortar is installed on the bottom of the foot. Use the Marksman skill when attacking. It does 12 points of damage to anything in a 4-meter blast radius. This can be reduced with an Evasion roll. The ammo can be replenished every intermission.
@@ -381,7 +383,7 @@ slots:
         attribute_penalty: 3
     desc: Using the lated in advanced surgical techniques, a hole is cut inot the skull and a small gunpowder bomb is installed. The bomb can be set to detonate under certain predetermined conditions, as decided by the Player or GM. Upon detonation, the character's Dead Box becomes checked. The player can also choose to die instantly.
   Weapon Interface:
-    slot: *Mechanica_WeaponInterface
+    slot: weapon_interface
     desc: A mechanica weapon is connected directly to your nervous system, allowing you to manipulate it as easily as one of your own limbs. You must chose one already installed mechanica weapon when Weapon Interface is installed. It provides you with bonuses, depending on its class, to the appropriate weapon.
   Weapon Attachment:
     slot:
@@ -407,13 +409,8 @@ slots:
         range: 20m
         ammo: 80
   Homeopathic Bullet Skin:
-    slot:
-      Homeopathic Bullet Skin:
-        replaces: Skin
-        classes:
-          Kou: [30, 'Light', 4] # Damage reduction, Wound level, Attribute Penalty
-          Otsu: [20, 'Heavy', 2]
-          Hei: [10, 'Critial', 1]
+    slot: homeopathic_bullet_skin
+    desc: All of your skin is replaced with a special material imbedded with mechanica readers and gunpowder chambers. When the character is hit by any kind of weapon, the internal gunpowder chamber explodes outwards, canceling the force and shock of the incoming attack. However, some of the damage from the counter-explosion will affect the user. When this mechanica is activated, all points of damage for a single attack, up to a certain amount (depending on the skin) is completely nullified. In return, all the Wounds of a certain level must be filled in. This is a one-time-use mechanica, it can only be repurchased with Karma during Intermissions.
 load_outs:
   Young Solider:
     focus: Basic mechanica for combat

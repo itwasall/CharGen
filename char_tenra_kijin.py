@@ -12,6 +12,12 @@ mechanica_data = yaml.safe_load(open('tbz_data/mechanica.yaml', 'rt'))
 
 mechanica = [mechanica_data['sensor'], mechanica_data['arm'], mechanica_data['torso'], mechanica_data['leg'], mechanica_data['weapon_interface']]
 
+slots = {i:mechanica_data['slots'][i] for i in mechanica_data['slots']}
+
+for slot in slots.keys():
+    print(slots[slot]['slot'])
+
+
 part_names = ['sensor', 'arm', 'torso', 'leg', 'weapon_interface']
 
 def gen_kijin(parts=None):
