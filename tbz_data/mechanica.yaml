@@ -1,40 +1,92 @@
-sensor: 
-  replaces: Right eyeball or surrounding area
-  classes:
-    Kou:  [8, 3, 3] # Notice bonus, Attribute Penalty, Mechanica Slots
-    Otsu: [5, 2, 1]
-    Hei:  [3, 1, 1]
-    Rotating Visor: [4, 3, 6]
-arm: 
-  replaces: One or both arms
-  classes:
-    Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-    Otsu: [5, 2, 2]
-    Hei:  [3, 1, 1]
-torso: 
-  replaces: Torso
-  classes:
-    Kou:  [20, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-    Otsu: [10, 2, 2]
-    Hei:  [5, 1, 1]
-leg: 
-  replaces: Both Legs
-  classes:
-    Kou:  [8, 4, 4] # Notice bonus, Attribute Penalty, Mechanica slots
-    Otsu: [5, 2, 2]
-    Hei:  [3, 1, 1]
-weapon_interface: 
-  replaces: Varies
-  classes:
-    Kou: [4, 2] # Damage bonus, Attribute penalty
-    Otsu: [2, 1]
-homeopathic_bullet_skin:
-  replaces: skin
-  classes:
-    Kou: [30, 4, 'Light'] # Damage reduction, Attribute Penalty, Wound level
-    Otsu: [20, 2, 'Heavy']
-    Hei: [10, 1, 'Critial']
-
+mechanica:
+  sensor:
+    replaces: Right eyeball or surrounding area
+    classes:
+      Kou:
+        notice_bonus: 8
+        attribute_penalty: 3
+        mechanica_slots: 3
+      Otsu:
+        notice_bonus: 5
+        attribute_penalty: 2
+        mechanica_slots: 1
+      Hei:
+        notice_bonus: 3
+        attribute_penalty: 1
+        mechanica_slots: 1
+      Rotating Visor:
+        notice_bonus: 4
+        attribute_penalty: 3
+        mechanica_slots: 6
+  arm:
+    replaces: One or both arms
+    classes:
+      Kou:
+        notice_bonus: 8
+        attribute_penalty: 4
+        mechanica_slots: 4
+      Otsu:
+        notice_bonus: 5
+        attribute_penalty: 2
+        mechanica_slots: 2
+      Hei:
+        notice_bonus: 3
+        attribute_penalty: 1
+        mechanica_slots: 1
+  torso:
+    replaces: Torso
+    classes:
+      Kou:
+        notice_bonus: 20
+        attribute_penalty: 4
+        mechanica_slots: 4
+      Otsu:
+        notice_bonus: 10
+        attribute_penalty: 2
+        mechanica_slots: 2
+      Hei:
+        notice_bonus: 5
+        attribute_penalty: 1
+        mechanica_slots: 1
+  leg:
+    replaces: Both Legs
+    classes:
+      Kou:
+        notice_bonus: 8
+        attribute_penalty: 4
+        mechanica_slots: 4
+      Otsu:
+        notice_bonus: 5
+        attribute_penalty: 2
+        mechanica_slots: 2
+      Hei:
+        notice_bonus: 3
+        attribute_penalty: 1
+        mechanica_slots: 1
+  weapon_interface:
+    replaces: Varies
+    classes:
+      Kou:
+        damage_bonus: 4
+        attribute_penalty: 2
+      Otsu:
+        damage_bonus: 2
+        attribute_penalty: 1
+  homeopathic_bullet_skin:
+    replaces: skin
+    classes:
+      Kou:
+        damage_reduction: 30
+        attribute_penalty: 4
+        wound_level: 'Light'
+      Otsu:
+        damage_reduction: 20
+        attribute_penalty: 2
+        wound_level: 'Heavy'
+      Hei:
+        damage_reduction: 10
+        attribute_penalty: 1
+        wound_level: 'Critical'
 slots:
   # Sensor (eye) based mechanica
   Darksight:
@@ -74,10 +126,9 @@ slots:
     desc: Your peripheral vision is extended, allowing you to see 360 degrees around you for a maximum range of 20 meters. Add 2 dice when defending against surprise attacks
   # Other Head-Based Mechanica
   Lightning Bolt Eyes:
-    slot:
-      NoSlot:
-        replaces: Both eyes or surrounding area
-        attribute_penalty: 2
+    slot: no_slot
+    replaces: Both eyes or surrounding area
+    attribute_penalty: 2
     heart_engine: yes
     desc: This mechanica converts Sha energy into electricity, allowing you to project a bolt of powerful lightning from your eyes. Because this is an incorporeal energy attack, it may only be defended against by use of the Evasion skill. Use the Marksman skill when attacking.
     weapon:
@@ -86,35 +137,30 @@ slots:
       range: 100m
       ammo: Unlimited
   Mechanica Kabuto:
-    slot:
-      NoSlot:
-        replaces: Head
-        attribute_penalty: 5
+    slot: no_slot
+    replaces: Head
+    attribute_penalty: 5
     heart_engine: yes
     desc: The character's entire head is replaces with mechanica with built in sensors. This mechanica can release waves of sha energy, mullifying the effects of the darksight, farsight, Sha sensor and lifeforce sensor. Furthermore, detection powers provided by a shiki are useless in trackinga user with a mechanica kabuto, all within a 100 meter radius.
   Brain Enhancement:
-    slot:
-      NoSlot:
-        replaces: Head (attachment)
-        attribute_penalty: 2
+    slot: no_slot
+    replaces: Head (attachment)
+    attribute_penalty: 2
     desc: This tiny mechanica is attached directly to the brain. By releasing a special solution into the brain, the user's maximum Soul pool is permanently increassed by 15 points.
   Interface Helm Implant:
-    slot:
-      NoSlot:
-        replaces: Forehead
-        attribute_penalty: 3
+    slot: no_slot
+    replaces: Forehead
+    attribute_penalty: 3
     desc: A yoroi interface helment is implanted directly onto your skull, connected directly to your brain. This provides a +2 bonus on all Interface rolls when connected to a Meikyo or Kimenkyo mirror
   Renju Voice:
-    slot:
-      NoSlot:
-        replaces: Lower jaw
-        attribute_penalty: 3
+    slot: no_slot
+    replaces: Lower jaw
+    attribute_penalty: 3
     desc: "Two disks which can spin at a high velocity are implanted onto the character's lower jaw. Two faces of ancient Kamiyo script are imprinted on each disk. The spinning disks strengthen Sha energy fields around the character, improving their ability with certain language-related magical skills. When they spin they release a high-pitched wailing, ranging from a shrill screech to a low cry. Add 2 dice when making skill checks with Onmyojutsu, Buddhist Magic, and Ninjutsu"
   Supreme Nervous SYstem:
-    slot:
-      NoSlot:
-        replaces: Nervous System
-        attribute_penalty: 2
+    slot: no_slot
+    replaces: Nervous System
+    attribute_penalty: 2
     desc: Your entire nervous system has been laced by thin fibers of scarlet steel, greatly enhancing the character's reflexes and reaction speed. This provides you with a +5 bonus to initatie in combat scenes
   # Arm based mechanica
   Projecitile Fist:
@@ -205,10 +251,9 @@ slots:
     desc: The joints of your Combat Arm are extendable, allowing you to make melee and unarmed attacks up to 4 meters away with them. This has no effect on ranged attacks.
   # Other Arm Mechanica
   Demonic Lightning Cannon:
-    slot:
-      NoSlot:
-        replaces: One full arm
-        attribute_penalty: 2
+    slot: no_slot
+    replaces: One full arm
+    attribute_penalty: 2
     desc: This weapon replaces the hand and forearm. It gathers and transforms Sha energy into electricity, sending a powerful bolt of lightning from the barrel. Only the Evade skill can be used when defending against this attack.
     weapon:
       damage: 8
@@ -216,10 +261,9 @@ slots:
       range: 300m
       ammo: Unlimited
   Cyclone Gatling Repeater:
-    slot:
-      NoSlot:
-        replaces: One full arm
-        attribute_penalty: 2
+    slot: no_slot
+    replaces: One full arm
+    attribute_penalty: 2
     desc: Your entire arm is replaces with a large cylindrical gunpowder Gatling gun. The gun's barrel spins around, releasing a barrage of ammunition at its targets and obliterating the enemy. This uses the Marksman skill
     weapon:
       damage: 2
@@ -227,27 +271,30 @@ slots:
       range: 20m
       ammo: 150
   Kaminari Fist Thunderburst:
-    slot:
-      NoSlot:
-        replaces: One arm (forearm and fist)
-        attribute_penalty: 3
-        station_req: 5
+    slot: no_slot
+    replaces: One arm (forearm and fist)
+    attribute_penalty: 3
+    station_req: 5
     desc: This consists of a powerful metal fist with a specialised hheart engine embedded within. If the heart engine is activated, it sends out powerful energy which significantly increasess the strength of an unarmed strike. However, using this attack also damages the user. When this abilit is used, the Kaminari Fist is destroyed and the character takes 1 point of damage. The fist can be repaired during an intermission for another 30 points of Karma. This damage must be distributed to Critial Wounds. The fist normally does +5 damage, but increases to +20 when the heart engine is activated and the fist destroyed
     weapon:
       damage: [5, 20]
   Crab Claws:
-    slot:
-      NoSlot:
-        replaces: One full arm
-        attribute_penalty: 5
+    slot: no_slot
+    replaces: One full arm
+    attribute_penalty: 5
     heart_engine: yes
     desc: This weapon, replacing the character's entire arm, gets its name from its resemblance to a crab claw. In addition to being used as a melee weapon it can also create and explode an enormous ball of Sha energy. This energy ball affects everything in its 100 meter-wide blast radius (extending forward from the claw), friend or foe. Because the energy takes time to regenerate, this ability can be used only once every Act.
-    weapon:
-      # [Claw Melee, Sha Cannon]
-      damage: [7, 9]
-      rate_of_fire: [5,  1]
-      range: [10m, 100m]
-      ammo: [no, 1]
+    weapon_multi:
+      Claw:
+        damage: 7
+        rate_of_fire: 5
+        range: 10
+        ammo: "-"
+      Sha Cannon:
+        damage: 9
+        rate_of_fire: 1
+        range: 100m
+        ammo: 1
   # Machine Torso Mechanica
   Heart Engine:
     slot: torso
@@ -321,16 +368,14 @@ slots:
       ammo: 3
   # Other Torso-Based Mechanica
   Zero-Type Reflective Armour:
-    slot:
-      NoSlot:
-        replaces: Skin
-        attribute_penalty: 3
+    slot: no_slot
+    replaces: Skin
+    attribute_penalty: 3
     desc: Your skin is replaced with a smooth mirror-like material resembling the underbelly of a snake. This special reflective material will protect against all energy attacks such as electricity or fire, and magical energy attacks like Buddhist magic. All damage take from such attacks (after Evasion rolls are made, as appropriate) is reduced by half
   Type-3 Charmeleon Flesh Dragon Scale:
-    slot:
-      NoSlot:
-        replaces: Skin
-        attribute_penalty: 1
+    slot: no_slot
+    replaces: Skin
+    attribute_penalty: 1
     heart_engine: yes
     desc: Your flesh is replaced with a hard metallic armour. The character can use the energy from the heart engine to activeate the dragon scale's camouflage function. When activated, an aura of energy surrounds the character, allowing them to blind into their surroundings. Add 5 dice to all Stealth rolls.
   # Leg Mechanica
@@ -376,26 +421,23 @@ slots:
       range: 2000m
       ammo: 1
   # Other Notable Mechanica
-  "'Explosive Corpse' Skull Bomb":
-    slot:
-      NoSlot:
-        replaces: Installed within skull
-        attribute_penalty: 3
+  '"Explosive Corpse" Skull Bomb':
+    slot: no_slot
+    replaces: Installed within skull
+    attribute_penalty: 3
     desc: Using the lated in advanced surgical techniques, a hole is cut inot the skull and a small gunpowder bomb is installed. The bomb can be set to detonate under certain predetermined conditions, as decided by the Player or GM. Upon detonation, the character's Dead Box becomes checked. The player can also choose to die instantly.
   Weapon Interface:
     slot: weapon_interface
     desc: A mechanica weapon is connected directly to your nervous system, allowing you to manipulate it as easily as one of your own limbs. You must chose one already installed mechanica weapon when Weapon Interface is installed. It provides you with bonuses, depending on its class, to the appropriate weapon.
   Weapon Attachment:
-    slot:
-      NoSlot:
-        replaces: Varies
-        attribute_penalty: 0
+    slot: no_slot
+    replaces: Varies
+    attribute_penalty: 0
     desc: This mechanica allows for any weapon from the Weapon List to be attached to a mechanica sensor, mechanica torso or mechanica legs. The Karma cost must be paid for that weapon, after which it can be grafted onto the torso, visor or leg.
   Twin Dragon Warms:
-    slot:
-      NoSlot:
-        replaces: Both Ful Arms
-        attribute_penalty: -4
+    slot: no_slot
+    replaces: Both Ful Arms
+    attribute_penalty: -4
     desc: This is a combination of heavy repating gunpowder rifle and dragon blade, which both use an advanced style mechanica configuation and are attacked to part of the character's arms. This mechanica does not fully replace both arms (You can still use other mechanica arms, and these attachments do not take up any arm mechanica slots), but the large ammunition chamber for the dragon repeater takes up one mechanica slot in your machine torso. The dragon blades use gunpowder in much the same way as soulgem blades do; they can expend up to 8 gunpowder rounds for up to +8 extra damage.
     weapon_multi:
       Dragon Blade:
