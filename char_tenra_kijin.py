@@ -11,14 +11,20 @@ mechanica_data = yaml.safe_load(open('tbz_data/mechanica.yaml', 'rt'))
 
 mechanica = mechanica_data['mechanica']
 
-def gen_parts(mechanica_name):
-    return [part for part in mechanica_data['slots'] if mechanica_data['slots'][part]['slot'] == mechanica_name]
+def gen_parts(mechanica_name, no_part_flag: bool = False):
+    if no_part_flag:
+       return [part for part in mechanica_data['slots'] if ('no_slot' in mechanica_data['slots'][part]['slot'] 
+                                                            and mechanica_name in mechanica_data['slots'][part]['replaces'])]
+    else:
+        return [part for part in mechanica_data['slots'] if mechanica_data['slots'][part]['slot'] == mechanica_name]
 
 sensor_parts = gen_parts('sensor')
 arm_parts = gen_parts('arm')
 torso_parts = gen_parts('torso')
 leg_parts = gen_parts('legs')
-no_parts = gen_parts('no_part')
+no_slot_parts = gen_parts('no_part')
+no_slot_parts_arm = gen_parts('arm', no_part_flag = True)
+no_slot_parts_skin = gen_parts('skin', no_part_flag = True)
 
 
 part_names = ['sensor', 'arm', 'torso', 'leg', 'weapon_interface', 'homeopathic bullet skin']
@@ -31,17 +37,15 @@ def gen_kijin(parts: List = None, verbose: bool = False):
         verbose: bool = There's some debug shit that's disabled by default
     """
     # Removing 'homeopathic bullet skin' from part_names list. Needed earlier, not required now.
-    part_names.pop(part_names.index(len(part_names - 1)))
+    part_names.pop(part_names.index(part_names[-1:][0]))
     mechanica_parts: Tuple = ()
     weapon_interface_guarentee: bool = False
     torso_guarentee: bool = False
     attempt_count = 0
     if not parts:
         # Choosing the number of parts, chances are:
-        #   1 Part: 1/2
-        #   2 Part: 1/4
-        #   3 Part: 1/5
-        #   4 Part: 1/20
+        #   1 Part:  1/2 | 2 Parts: 1/4
+        #   3 Parts: 1/5 | 4 Parts: 1/20
         number_of_parts = choices([1, 2, 3, 4], weights=[50, 25, 20, 5])[0]
         # In order to make each mechanica part have interesting slots, if more than 3 slots are selected, a roll is made with a 2/3 chance of success that
         #   one of those mechanica parts is going to be the Weapon Interface
@@ -61,8 +65,11 @@ def gen_kijin(parts: List = None, verbose: bool = False):
             attempt_count += 1
             if verbose:
                 print(f"attempt: {attempt_count}")
+    else:
+        mechanica_parts = parts
 
     return [i for i in mechanica_parts]
 
 
 print(gen_kijin())
+print(gen_kijin(['arm', 'leg']))

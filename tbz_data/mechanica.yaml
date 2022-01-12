@@ -436,7 +436,7 @@ slots:
     desc: This mechanica allows for any weapon from the Weapon List to be attached to a mechanica sensor, mechanica torso or mechanica legs. The Karma cost must be paid for that weapon, after which it can be grafted onto the torso, visor or leg.
   Twin Dragon Warms:
     slot: no_slot
-    replaces: Both Ful Arms
+    replaces: Both full arms
     attribute_penalty: -4
     desc: This is a combination of heavy repating gunpowder rifle and dragon blade, which both use an advanced style mechanica configuation and are attacked to part of the character's arms. This mechanica does not fully replace both arms (You can still use other mechanica arms, and these attachments do not take up any arm mechanica slots), but the large ammunition chamber for the dragon repeater takes up one mechanica slot in your machine torso. The dragon blades use gunpowder in much the same way as soulgem blades do; they can expend up to 8 gunpowder rounds for up to +8 extra damage.
     weapon_multi:
