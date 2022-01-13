@@ -1,0 +1,46 @@
+starting_items:
+  item_1: [Nothing, Nothing, Backpack for 7 normal-sized items, Sack for 10 normal-sized items, Small wagon, Donkey]
+  item_2: [Rope 30 feet, Presence + 4 torches, lantern with oil for Presence + 6 hours, magnesium strip, random unclean scroll, sharp needle, medicine chest Presence+4 uses (stops bleeding/infection and heals d6 HP), metal file and lockpicks, bear trap (Presence DR14 to spot, d8 damage), bomb (sealed bottle d10 damage), a bottle of red poison d4 doses (Toughness DR12 or d10 damage), silver crucifix]
+  item_3: [Life elixir d4 doses (heals d6 HP and removes infection), Random sacred scroll, "Small but vicious dog (d6+2 HP, bite d4, only obeys you)", "d4 monkeys that ignore but love you (d4+2 HP, punch/bite d4)", Exquisite perfume worth 25s, "Toolbox 10 nails, tongs, hammer, small saw and drill", Heavy chain 15 feet, Grappling hook, Shield (-1 HP damage or have the shield break to ignore one attack), Crowbar (d4 damage), Lard (may function as 5 meals in a pinch), Tent]
+  weapons:
+    - [Femur, 1d4]
+    - [Staff, 1d4]
+    - [Shortsword, 1d4]
+    - [Knife, 1d4]
+    - [Warhammer, 1d6]
+    - [Sword, 1d6]
+    - [Bow, 1d6, Prescence + 10 arrows]
+    - [Unarmed, 1d2]
+    - [Flail, 1d8]
+    - [Crosbow, 1d8, Prescence + 10 bolts]
+    - [Zweihander, 1d10]
+  armour:
+    - [Nothing, 1d0]
+    - [Light Armour, 1d2]
+    - [Medium Armour, 1d4, DR +2 on Agility tests including defence]
+    - [Heavy Armour, 1d6, DR +4 on Agility tests, defence is DR +2, Shield]
+abilities:
+  Agility:
+    skills:
+      - Defend
+      - Balance
+      - Swim
+      - Flee
+  Presence:
+    skills:
+      - Percieve
+      - Aim
+      - Charm
+      - Wield Powers
+  Strength:
+    skills:
+      - Crush
+      - Lift
+      - Strike
+      - Grapple
+  Toughness:
+    skills:
+      - Resist Poison
+      - Resist Cold
+      - Resist Heat
+      - Survive Falling

@@ -764,7 +764,7 @@ specialist_ninja:
     notes: "The default style for the Shinobi is Migawari-Ryu (School of the Shore), but any other style can be substituted"
   Ninja Apprentice:
     karma_cost: 5
-    skills: [[NInjutsu, 2], [Willpower, 2], [First Aid, 2], [Evasion, 2]]
+    skills: [[Ninjutsu, 2], [Willpower, 2], [First Aid, 2], [Evasion, 2]]
     attribute_penalty: 0
     primary_attributes: [Agility, Senses, Spirit]
     station_req: 2
