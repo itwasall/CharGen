@@ -311,7 +311,7 @@ optional_tables:
     - Whistle when 5, 7, 9, 11 or 13 is rolled on a d20.
     - If this can be considered a bad habit.
     - Best friend is a skull.
-    troubling_tales:
+  troubling_tales:
     - Pursued for manslaughter. There is a bounty.
     - Escaped cult member. Terrified and paranoid. Other cultists are everywhere.
     - Have a cursed neverhealing wound.
