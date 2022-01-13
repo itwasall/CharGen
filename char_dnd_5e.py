@@ -1,4 +1,4 @@
-import yaml
+from chargen import yaml_importer
 import random
 from random import choice, randint, choices
 from math import ceil, floor
@@ -6,16 +6,14 @@ from cli_ui import info
 import cli_ui
 
 
-with open('dnd_5e_data/classes.yaml') as f_classes:
-    data_classes = yaml.safe_load(f_classes)
-jobs = data_classes['classes']
-backgrounds = yaml.safe_load(open   ('dnd_5e_data/backgrounds.yaml'))
-equip = yaml.safe_load(open         ('dnd_5e_data/equipment.yaml'))
-lang = yaml.safe_load(open          ('dnd_5e_data/languages.yaml'))
-races = yaml.safe_load(open         ('dnd_5e_data/races.yaml'))
-skills = yaml.safe_load(open        ('dnd_5e_data/skills.yaml'))
-weapons = yaml.safe_load(open       ('dnd_5e_data/weapons.yaml'))
-magic = yaml.safe_load(open         ('dnd_5e_data/magic.yaml'))
+data_classes = yaml_importer('dnd_5e_data/classes.yaml')
+backgrounds = yaml_importer('dnd_5e_data/backgrounds.yaml')
+equip = yaml_importer('dnd_5e_data/equipment.yaml')
+lang = yaml_importer('dnd_5e_data/languages.yaml')
+races = yaml_importer('dnd_5e_data/races.yaml')
+skills = yaml_importer('dnd_5e_data/skills.yaml')
+weapons = yaml_importer('dnd_5e_data/weapons.yaml')
+magic = yaml_importer('dnd_5e_data/magic.yaml')
 
 
 character = {

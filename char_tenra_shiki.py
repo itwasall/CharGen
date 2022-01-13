@@ -1,11 +1,8 @@
 from typing import List, Dict
-
+from chargen import roll
 from random import choice, randint
 from math import floor
 
-def roll(string):
-    throws, sides = string.split('d')
-    return sum(randint(1, int(sides)) for _ in range(int(throws)))
 
 ability_chart_0s ={1: [0, 0], 2: [0,  0], 3: [0,  0], 4: [0,  0], 5: [ 0,  0], 6: [0, 0]}
 ability_chart_03 ={1: [0, 3], 2: [0,  3], 3: [0,  3], 4: [0,  3], 5: [  0, 3], 6: [0,  3]}

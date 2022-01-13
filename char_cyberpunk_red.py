@@ -1,8 +1,8 @@
-import yaml
 from random import randint, choices, choice
+from chargen import yaml_importer
 
-role = yaml.safe_load(open('cyberpunk_red_data//roles.yaml'))
-life = yaml.safe_load(open('cyberpunk_red_data//lifepath.yaml'))
+role = yaml_importer('cyberpunk_red_data//roles.yaml')
+life = yaml_importer('cyberpunk_red_data//lifepath.yaml')
 
 def role_gen():
     char_role = choice(role)

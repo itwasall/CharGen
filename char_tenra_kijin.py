@@ -1,17 +1,10 @@
 from typing import Tuple, List
-import yaml
+from chargen import roll, yaml_importer
 from random import randint, choice, choices, seed
 from itertools import permutations
 from string import printable
 
-
-
-def roll(dice_string: str):
-    throws, sides = dice_string.split('d')
-    return sum(randint(1, sides) for _ in range(throws))
-
-
-mechanica_data = yaml.safe_load(open('tbz_data/mechanica.yaml', 'rt'))
+mechanica_data = yaml_importer('tbz_data/mechanica.yaml')
 mechanica = mechanica_data['mechanica']
 
 

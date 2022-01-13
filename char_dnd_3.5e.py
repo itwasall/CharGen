@@ -3,17 +3,7 @@ import random
 from random import choice, choices, randint
 from math import floor, ceil
 from itertools import repeat
-
-
-def expand(d):
-    ret = {}
-    for k in d:
-        v = d[k]
-        if isinstance(k, range):
-            ret.update({i: v for i in k})
-        else:
-            ret[k] = v
-    return ret
+from chargen import expand, roll, yaml_importer
 
 
 alignments = [
@@ -39,9 +29,8 @@ aa = {
     alignments[7]: "CE",
     alignments[8]: "CN",
 }
-data = yaml.safe_load(
-    open("/home/refrshrs/code/python/CharGen/dnd_3.5e_data/_core.yaml", "rt")
-)
+data = yaml_importer("dnd_3.5e_data/_core.yaml")
+
 races = data["races"]
 jobs = data["jobs"]
 skills = data["skills"]
@@ -55,11 +44,7 @@ class Character:
         self._ability_score_mods()
 
     def __dice_roll(self, diceroll):
-        throws, sides = diceroll.split('d')
-        total = 0
-        for i in range(int(throws)):
-            total += randint(1, int(sides))
-        return total
+        return roll(diceroll)
 
     def _alignment(self, align="R"):
         if align == "R" or align not in alignments:

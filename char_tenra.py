@@ -1,13 +1,7 @@
 from math import ceil
-import yaml
+from chargen import roll, yaml_importer
 from typing import List, Tuple
 from random import randint, choice, choices
-
-
-def roll(throws, sides=0):
-    if isinstance(throws, str):
-        throws, sides = throws.split("d")
-    return sum(randint(1, int(sides)) for _ in range(int(throws)))
 
 
 class Character():
@@ -74,7 +68,7 @@ class Character():
         ]
 
 
-arc = yaml.safe_load(open('tbz_data/archetype.yaml', 'rt'))
+arc = yaml_importer('tbz_data/archetype.yaml')
 global ARCHETYPE_FLAGS
 ARCHETYPE_FLAGS = {'SHINOBI_VOID': False, 'SAMURAI_VOID': False}
 
