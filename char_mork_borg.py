@@ -57,7 +57,6 @@ class Rope:
         return f"{self.name} of {self.length}{self.measurement}"
 
 
-
 backpack = Container('Backpack', 7)
 sack = Container('Sack', 10)
 small_wagon = Container('Small Wagon', 1_000)
@@ -71,24 +70,38 @@ black_poison = Poison('Black Poison', f'Toughness DR14 or {roll("1d6")} damage &
 red_poison = Poison('Red Poison', f'Toughness DR12 or {roll("1d10")} damage', 3)
 
 
-print(toolbox)
-print(heavy_chain)
-print(black_poison)
-
 def gen_starting_items(abilities):
     prescence = abilities['Prescence']
     item_set_1 = ["Nothing", "Nothing", backpack, sack, small_wagon]
     item_set_2 = [rope, f"{prescence + 4} torches", f"Lanturn with oil for {prescence + 6} hours", f"Magnesium Strip", f""]
 
-def gen_character():
+def gen_character(classless: bool = True):
+    if classless:
+        ability_rerolls = 2
     hp, party_initiative = 0, 0
     abilities = {'Agility': 0, 'Prescence': 0, 'Strength': 0, 'Toughness': 0}
 
     for ability in abilities:
-        abilities[ability] = ability_score_bonuses[roll("3d6")]
+        if classless:
+            if ability_rerolls > 0:
+                dice_rolls = [roll('1d6') for _ in range(3)]
+                if ability_score_bonuses[sum(dice_rolls)] < 0:
+                    dice_rolls.pop()
+                    dice_rolls.append(roll('1d6'))
+                    ability_rerolls -= 1
+
+            abilities[ability] = ability_score_bonuses[sum(dice_rolls)]
+        else:
+            abilities[ability] = ability_score_bonuses[sum(roll('1d6') for _ in range(3))]
+
+
+
+
+
     hp = abilities['Toughness'] + roll('1d8')
     if hp < 1:
         hp = 1
+    carrying_capacity = abilities['Strength'] + 8
 
     party_initiative = abilities['Agility'] + roll('1d6')
     init_silver = roll("2d6") * 10
