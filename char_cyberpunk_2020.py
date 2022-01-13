@@ -1,13 +1,14 @@
 from math import floor
 from random import choice, choices, randint, shuffle
+from chargen import roll, yaml_importer
 import yaml
 
-data_careerskills = yaml.safe_load(open('cyberpunk_2020_data\careerskills.yaml', 'rt'))
-data_languages = yaml.safe_load(open('cyberpunk_2020_data\languages.yaml', 'rt'))
-data_martial_arts = yaml.safe_load(open('cyberpunk_2020_data\martial_arts.yaml', 'rt'))
-data_origins_and_style = yaml.safe_load(open('cyberpunk_2020_data\origins_and_style.yaml', 'rt'))
-data_weapons = yaml.safe_load(open('cyberpunk_2020_data\weapons.yaml', 'rt'))
-data_motivations = yaml.safe_load(open('cyberpunk_2020_data\motivations.yaml', 'rt'))
+data_careerskills = yaml_importer('cyberpunk_2020_data\careerskills.yaml')
+data_languages = yaml_importer('cyberpunk_2020_data\languages.yaml')
+data_martial_arts = yaml_importer('cyberpunk_2020_data\martial_arts.yaml')
+data_origins_and_style = yaml_importer('cyberpunk_2020_data\origins_and_style.yaml')
+data_weapons = yaml_importer('cyberpunk_2020_data\weapons.yaml')
+data_motivations = yaml_importer('cyberpunk_2020_data\motivations.yaml')
 
 
 character = {
@@ -215,22 +216,6 @@ LIFE_EVENT_ILLNESS = 0
 LIFE_EVENT_ACCIDENT_DISFIGUREMENT = 0
 
 # ===== GEN =========
-
-def roll(throws, sides=0):
-    """Dice rolling funciton
-
-    Args:
-        throws (str or int): Must be [int] if sides != 0. Can accept "1d6" type notation.
-        sides (int, optional): Defaults to 0. Used when throws is an int and dice size needs to be determined
-
-    Returns:
-        sum of rolls
-    """
-    if isinstance(throws, str):
-        throw_parse = throws.split("d")
-        return (sum(randint(1, int(throw_parse[1])) for _ in range(int(throw_parse[0]))))
-    else:
-        return sum(randint(1,sides) for _ in range(throws))
 
 def gen_stats(stat_gen_type):
     """Generates stat pool based on stat generation type

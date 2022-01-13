@@ -1,6 +1,28 @@
-import char_dnd_5e
+from random import randint
+from yaml import safe_load
 
-t = input('Press 1 for DND 5e character generation\nPress 2 for Numenera\n ')
+def roll(dice_string):
+    """Dice rolling funciton
+    Args:
+        dice_string (str): in the format of "1d6" or "xdy"
+    Returns:
+        sum of rolls
+    """
+    throws, sides = dice_string.split('d')
+    return sum(randint(1, int(sides)) for _ in range(int(throws)))
 
-if t == '1' or t == 1:
-    char_dnd_5e.char_gen()
+
+
+def expand(dictionary):
+    return_dictionary = {}
+    for key in dictionary:
+        value = dictionary[key]
+        if isinstance(key, range):
+            return_dictionary.update({i: value for i in key})
+        else:
+            return_dictionary[key] = value
+    return return_dictionary
+
+
+def yaml_importer(path):
+    return safe_load(open(path, 'rt'))
