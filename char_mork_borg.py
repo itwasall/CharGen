@@ -8,7 +8,7 @@ scrolls = mork_borg_data['scrolls']
 optional_classes = mork_borg_data['optional_classes']
 
 
-ability_score_bonuses = expand({
+ability_scores = expand({
         range(1, 5): -3,
         range(5, 7): -2,
         range(7, 9): -1,
@@ -101,7 +101,7 @@ def gen_starting_items(abilities):
     return_items = []
     if item_1 in [backpack, sack, small_wagon]:
         ADD_PACK = True
-    if ADD_PACK: 
+    if ADD_PACK:
         if item_2 not in NOT_BAGGABLE:
             item_1.add_item(item_2)
         if item_3 not in NOT_BAGGABLE:
@@ -116,7 +116,7 @@ def gen_starting_items(abilities):
         return_items.append(item_1)
     else:
         return [item_1, item_2, item_3]
-            
+
 
 
 
@@ -124,11 +124,12 @@ def gen_starting_items(abilities):
 
 
 def gen_character(character_class = None, rand_class: bool = False):
+
     if rand_class:
         character_class = choice([
             'Fanged Deserter',
             'Gutterborn Scum',
-            'Esoteric Hermit', 
+            'Esoteric Hermit',
             'Wretched Royalty',
             'Heretical Priest',
             'Occult Herbmaster'
@@ -142,20 +143,20 @@ def gen_character(character_class = None, rand_class: bool = False):
     for ability in abilities:
         dice_rolls = [roll('1d6') for _ in range(3)]
         if not character_class:
-            if ability_score_bonuses[sum(dice_rolls)] < 0 and ability_rerolls > 0:
+            if ability_scores[sum(dice_rolls)] < 0 and ability_rerolls > 0:
                 dice_rolls.reverse()
                 dice_rolls.pop()
                 dice_rolls.append(roll('1d6'))
                 ability_rerolls -= 1
 
-            abilities[ability] = ability_score_bonuses[sum(dice_rolls)]
+            abilities[ability] = ability_scores[sum(dice_rolls)]
         elif ability in list(optional_classes[character_class]['abilities'].keys()):
-            abilities[ability] = ability_score_bonuses[sum(dice_rolls)]+ optional_classes[character_class]['abilities'][ability]
+            abilities[ability] = ability_scores[sum(dice_rolls)]+ optional_classes[character_class]['abilities'][ability]
     items = gen_starting_items(abilities)
     return f"Abilities: {abilities}\nItems: {items}"
 
 
-
+"""
 def w():
     hp = abilities['Toughness'] + roll('1d8')
     if hp < 1:
@@ -166,5 +167,5 @@ def w():
     init_silver = roll("2d6") * 10
     init_food = f'{roll("1d4")} days of food'
     return abilities, hp, party_initiative
-
+"""
 print(gen_character(rand_class=True))
