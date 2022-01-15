@@ -164,7 +164,7 @@ Jack:
     amt: 2
     skills:
       Trained in Armor:
-        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Speed Effort cost for wearing armor by 1. Enabler.
+        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Speed Effort cost for wearing armor by 1. Enabler.
       Create Deadly Poison:
         desc: You create one dose of a level 2 poison that inflicts 5 points of damage. You can apply this poison to a weapon, food, or drink as part of the action of creating it. In addition to the normal options for using Effort, you can choose to use Effort to increase the level of the poison; each level of Effort used in this way increases the poison level by 1. If unused, the poison loses its potency after one hour. Action.
         cost: [3, Intellect]

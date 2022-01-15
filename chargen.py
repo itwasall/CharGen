@@ -24,5 +24,5 @@ def expand(dictionary):
     return return_dictionary
 
 
-def yaml_importer(path):
+def yaml_importer(path: str) -> dict:
     return safe_load(open(path, 'rt'))

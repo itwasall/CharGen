@@ -1,11 +1,11 @@
 from typing import List, Tuple
 from chargen import roll, yaml_importer
 
-# character_classes = yaml_importer('numenera_data/classes_new.yaml')
+character_classes = yaml_importer('numenera_data/classes_new.yaml')
 
 character = {
     'Name': str,
-    'Class': str,
+    'Type': str,
     'Focus': str,
     'Descriptor': str,
     'StatPools': {
