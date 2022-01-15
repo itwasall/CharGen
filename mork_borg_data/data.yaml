@@ -174,8 +174,10 @@ optional_classes:
       Illiterate: You are incapable of understanding scrolls. If you begin with one then reroll, eat it or use it as toilet paper
       Built like a bull: Normal agility tests are DR14 instead of DR12
     starting_items:
-      silver: ['2d6', 10] # 2d6 * 10
-      omens: ['1d2']
+      silver: '2d6'
+      omens: '1d2'
+      weapon: 1
+      armour: 1
     uniques:
       Crumpled Monster Mask: Strikes primitive fear into lesser creatures like Goblins, Gnoums and Children. While worn, they check Morale every roound.
       The Brown Scimitar of Galgenbeck: A stinking sword you pulled from a military shit-ditch. 1d6 damage. DR10 attack and defence while you weild it. 1/6 chance a wounded enemy is smitten with potent sepsis, dying in 10 minutes.
@@ -200,10 +202,10 @@ optional_classes:
     traits:
       Stealthy: All Prescence and Agility tests have their DR reduced by 2
     starting_items:
-      silver: ['1d6', 10]
-      omens: ['1d2']
-      weapon: 1d6
-      armour: 1d2
+      silver: '1d6'
+      omens: '1d2'
+      weapon: 6
+      armour: 2
     uniques:
       Coward’s Jab: When attacking by surprise test Agility DR10. On a success you automatically hit once with a light one-handed weapon, dealing normal damage +3.
       Filthy Fingersmith: Your snaky little digits get into pockets and pick locks with a DR8 Agility test. You also begin with lockpicks!
@@ -225,11 +227,11 @@ optional_classes:
     hp: 1d4
     abilities:
       Presence: 2
-      starting_items:
-      silver: ['1d6', 10]
-      omens: ['1d4']
-      weapon: 1d4
-      armour: 1d2
+    starting_items:
+      silver: '1d6'
+      omens: '1d4'
+      weapon: 4
+      armour: 2
       scroll: random
     uniques:
       - Master of Fate: What use are maps when the substance of causality itself is open to you? You know the right way with a DR8 Presence test.
@@ -251,10 +253,10 @@ optional_classes:
           - Two young princes were kidnapped west of Bergen Chrypt and disappeared into the black crevasse of the eastern slopes.
     hp: 1d6
     starting_items:
-      silver: ['4d6', 10]
-      omens: 1d2
-      weapon: 1d8
-      armour: 1d4
+      silver: '4d6'
+      omens: '1d2'
+      weapon: 8
+      armour: 4
     traits:
       Greedy: Take two unique items from the list
     uniques:
@@ -280,10 +282,10 @@ optional_classes:
       Presence: 2
       Strength: -2
     starting_items:
-      silver: ['3d6', 10]
-      omens: 1d4
-      weapon: 1d8
-      armour: 1d2
+      silver: '3d6'
+      omens: '1d4'
+      weapon: 8
+      armour: 2
     traits:
       Armour_Skill: You may use powers while wearing medium armour.
     uniques:
@@ -311,10 +313,10 @@ optional_classes:
       Toughness: 2
       Strength: -2
     starting_items:
-      silver: ['2d6', 10]
-      omens: 1d2
-      weapon: 1d6
-      armour: 1d2
+      silver: '2d6'
+      omens: '1d2'
+      weapon: 6
+      armour: 2
     traits:
       Portable Laboratory: You carry a portable laboratory and continually search for frequently expended ingredients. Daily you have the materials to create two randomly determined decoctions and can brew a total of  1d4 doses. If unused they lose vitality after 24 hours.
     uniques:
