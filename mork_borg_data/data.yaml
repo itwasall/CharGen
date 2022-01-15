@@ -9,13 +9,12 @@ starting_items:
     - [Knife, 1d4]
     - [Warhammer, 1d6]
     - [Sword, 1d6]
-    - [Bow, 1d6, Prescence + 10 arrows]
-    - [Unarmed, 1d2]
+    - [Bow, 1d6]
     - [Flail, 1d8]
-    - [Crosbow, 1d8, Prescence + 10 bolts]
+    - [Crossbow, 1d8]
     - [Zweihander, 1d10]
   armour:
-    - [Nothing, 1d0]
+    - [Nothing, 'None']
     - [Light Armour, 1d2]
     - [Medium Armour, 1d4, DR +2 on Agility tests including defence]
     - [Heavy Armour, 1d6, DR +4 on Agility tests, defence is DR +2, Shield]
@@ -181,7 +180,7 @@ optional_classes:
       Crumpled Monster Mask: Strikes primitive fear into lesser creatures like Goblins, Gnoums and Children. While worn, they check Morale every roound.
       The Brown Scimitar of Galgenbeck: A stinking sword you pulled from a military shit-ditch. 1d6 damage. DR10 attack and defence while you weild it. 1/6 chance a wounded enemy is smitten with potent sepsis, dying in 10 minutes.
       Wizard Teeth: Four weird teeth rattlle within a blackened pouch. Before battle roll 1d6 for each one. For every 6, one of your attacks deals maximum damage.
-      "Old Sigurd's Sling": Sigurd was the strongest man whose throat you ever gnawed. Woven from his long grey hair, this sling has never failed you. 2d4 damage, requires fist-sized rocks which, rehaps regrettably, are everywhere.
+      Old Sigurd's Sling: Sigurd was the strongest man whose throat you ever gnawed. Woven from his long grey hair, this sling has never failed you. 2d4 damage, requires fist-sized rocks which, rehaps regrettably, are everywhere.
       Ancient Gore-Hound: Asthmatic, deluded and on its last legs, this wizened creature still has a superb nose and can sniffle up treasure in the most disgusting debris. Attacks with DR10 (bite 1d6). Defends with DR12, 10HP. Becomes frenzied around Goblins and Berserkers.
       The Shoe of Death's Horse: It looks normal but since finding it in an obscure crypt you are convied this shoe came from the horse of Death himself. In you hands it hits with DR 10, 1d4 damage. 1/6 chance the shoe smashes the skull, instantly killing small-to-medium sized creatures. The shoe returns to your hand like a boomerang
   Gutterborn Scum:
@@ -214,8 +213,8 @@ optional_classes:
       Excretal Stealth: You have an astounding, almost preternatural ability to hide in muck, debris and filth. When hidden in these conditions a DR16 Presence test is required  to notice you.
   Esoteric Hermit:
     flavor_text:
-    desc: The stone of your cave is one with the stars. Silence and perfection. Now the chaos of a fallen world disturbs your rituals and the caul of night grows blacker than your cavern’s gloom. Irritating!
-    flavor_option:
+      desc: The stone of your cave is one with the stars. Silence and perfection. Now the chaos of a fallen world disturbs your rituals and the caul of night grows blacker than your cavern’s gloom. Irritating!
+      flavor_option:
         Eldritch Origins:
           - Awakening, adult, in a ritual circle underneath the northern bridge to Grift.
           - Wandered, memoryless, from the mouth of a cavern at the cliffs of Terion.

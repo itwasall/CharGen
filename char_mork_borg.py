@@ -6,6 +6,10 @@ mork_borg_data = yaml_importer('mork_borg_data/data.yaml')
 starting_items = mork_borg_data['starting_items']
 scrolls = mork_borg_data['scrolls']
 optional_classes = mork_borg_data['optional_classes']
+optional_tables = mork_borg_data['optional_tables']
+names = mork_borg_data['names']
+weapons = mork_borg_data['starting_items']['weapons']
+armour = mork_borg_data['starting_items']['armour']
 
 
 ability_scores = expand({
@@ -39,28 +43,55 @@ class Container:
     def __repr__(self):
         return f"{self.name} of {self.maximum_size} size.\n    Contains: {', '.join(item for item in self.contents)}"
 
+class Scroll:
+    def __init__(self, name: str, desc: str, scroll_type: str):
+        self.name = name
+        self.desc = desc
+        if scroll_type not in ['unclean', 'sacred']:
+            self.scroll_type = 'Invalid'
+        else:
+            self.scroll_type = scroll_type
+
+    def read_desc(self):
+        return self.desc
+
+    def __repr__(self):
+        return f"{self.scroll_type.capitalize()} scroll - {self.name}"
+
+
 backpack = Container('Backpack', 7)
 sack = Container('Sack', 10)
 small_wagon = Container('Small Wagon', 1_000)
 toolbox = Container('Toolbox', 4)
 toolbox.add_items(['10 Nails', 'Hammer', 'Small Saw', 'Tongs'])
 
-def gen_random_scroll(scroll_type: str, current_scrolls: List = None):
+def gen_random_scroll(scroll_type: str):
+    unclean_scrolls = []
+    sacred_scrolls = []
+    for stype in ['unclean', 'sacred']:
+        for scroll in scrolls[stype]:
+            if stype == 'unclean':
+                unclean_scrolls.append(
+                    Scroll(scroll, scrolls[stype][scroll], 'unclean')
+                )
+            else:
+                sacred_scrolls.append(
+                    Scroll(scroll, scrolls[stype][scroll], 'sacred')
+                )
     if scroll_type.lower() not in ["unclean", "sacred"]:
         scroll = None
+    elif scroll_type == 'unclean':
+        scroll = choice(unclean_scrolls)
     else:
-        scroll = choice(list(scrolls[scroll_type].keys()))
-    if current_scrolls:
-        while scroll in current_scrolls:
-            scroll = choice(list(scrolls[scroll_type].keys()))
+        scroll = choice(sacred_scrolls)
     return scroll
 
-def gen_starting_items(abilities):
-    ADD_PACK = False
+def gen_starting_items(abilities, character_class = None):
+    ITEM_1_IS_CONTAINER = False
     prescence = abilities['Prescence']
     item_set_1 = [
-        "Nothing",
-        "Nothing",
+        None,
+        None,
         backpack,
         sack,
         small_wagon,
@@ -73,11 +104,11 @@ def gen_starting_items(abilities):
         f"Magnesium Strip",
         f"{gen_random_scroll('unclean')}",
         "Sharp needle",
-        f"Medicine chest - {prescence+4} uses (stops bleeding/infection and heals 1d6 health"
+        f"Medicine chest - {prescence+4} uses (stops bleeding/infection and heals 1d6 health",
         "Metal file and lockpicks",
         "Bear trap (Presence DR14 to spot, 1d8 damage)",
         "Bomb (sealed bottle, 1d10 damage)",
-        f"A bottle of red poison with {roll('1d4')} doses (Toughness DR12 or 1d10 damage)"
+        f"A bottle of red poison with {roll('1d4')} doses (Toughness DR12 or 1d10 damage)",
         "Silver crucifix"
     ]
     item_set_3 = [
@@ -91,7 +122,7 @@ def gen_starting_items(abilities):
         "grappling hook",
         "shield (-1 HP damage or have the shield break to ignore one attack)",
         "crowbar (1d4 damage)",
-        "lard (may function as 5 meals in a pinch)"
+        "lard (may function as 5 meals in a pinch)",
         "tent"
     ]
     NOT_BAGGABLE = [item_set_2[6], item_set_3[2], item_set_3[3]]
@@ -100,30 +131,30 @@ def gen_starting_items(abilities):
     item_3 = choice(item_set_3)
     return_items = []
     if item_1 in [backpack, sack, small_wagon]:
-        ADD_PACK = True
-    if ADD_PACK:
-        if item_2 not in NOT_BAGGABLE:
-            item_1.add_item(item_2)
-        if item_3 not in NOT_BAGGABLE:
-            item_1.add_item(item_3)
-        if len(item_1.contents) == 2:
-            return_items = item_1
-            return return_items
-        if item_2 in NOT_BAGGABLE:
-            return_items.append(item_2)
-        if item_3 in NOT_BAGGABLE:
-            return_items.append(item_3)
-        return_items.append(item_1)
+        ITEM_1_IS_CONTAINER = True
+    if not character_class:
+        if isinstance(item_2, Scroll) or isinstance(item_3, Scroll):
+            weapon_item = choice(weapons[:6])
+            armour_item = choice(armour[:2])
+        else:
+            weapon_item = choice(weapons)
+            armour_item = choice(armour)
+    if character_class not in ['Feral Deserter']:
+        weapon_roll_limit = optional_classes[character_class]['starting_items']['weapons']
+        armour_roll_limit = optional_classes[character_class]['starting_items']['armour']
+        weapon_item = choice(weapons[:weapon_roll_limit])
+        armour_item = choice(weapons[:armour_roll_limit])
     else:
-        return [item_1, item_2, item_3]
-
-
-
-
+        weapon_item = ['Teeth', '1d6']
+        armour_item = armour[0]
     return [choice(item_set_1), choice(item_set_2)]
 
 
 def gen_character(character_class = None, rand_class: bool = False):
+
+    character_name = choice(names)
+
+    print(character_name)
 
     if rand_class:
         character_class = choice([
@@ -134,6 +165,7 @@ def gen_character(character_class = None, rand_class: bool = False):
             'Heretical Priest',
             'Occult Herbmaster'
         ])
+    print(character_class)
     if not character_class:
         ability_rerolls = 2
     hp, party_initiative = 0, 0
@@ -142,17 +174,21 @@ def gen_character(character_class = None, rand_class: bool = False):
 
     for ability in abilities:
         dice_rolls = [roll('1d6') for _ in range(3)]
+        ability_mod = 0
         if not character_class:
             if ability_scores[sum(dice_rolls)] < 0 and ability_rerolls > 0:
                 dice_rolls.reverse()
                 dice_rolls.pop()
                 dice_rolls.append(roll('1d6'))
                 ability_rerolls -= 1
+        elif character_class not in ['Wretched Royalty'] and ability in list(optional_classes[character_class]['abilities'].keys()):
+            ability_mod = optional_classes[character_class]['abilities'][ability]
+        abilities[ability] = ability_scores[sum(dice_rolls)] + ability_mod
 
-            abilities[ability] = ability_scores[sum(dice_rolls)]
-        elif ability in list(optional_classes[character_class]['abilities'].keys()):
-            abilities[ability] = ability_scores[sum(dice_rolls)]+ optional_classes[character_class]['abilities'][ability]
-    items = gen_starting_items(abilities)
+    if character_class:
+        items = gen_starting_items(abilities, character_class)
+    else:
+        items = gen_starting_items(abilities)
     return f"Abilities: {abilities}\nItems: {items}"
 
 
@@ -168,4 +204,4 @@ def w():
     init_food = f'{roll("1d4")} days of food'
     return abilities, hp, party_initiative
 """
-print(gen_character(rand_class=True))
+print(gen_character(character_class='Wretched Royalty'))
