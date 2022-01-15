@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34eef8fa-e044-4d1f-84f0-0a6be0cc8fbb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/char_mork_borg.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_mork_borg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mork_borg_data/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mork_borg_data/data.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/char_numenera_very_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/char_numenera.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_numenera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/char_numenera_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_numenera_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numenera_data/classes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/numenera_data/classes.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DiscordBot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

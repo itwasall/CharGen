@@ -1,0 +1,192 @@
+Glaive:
+  stat_pool_start: {Might: 11, Speed: 10, Intellect: 7}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 1, Speed: 1, Intellect: 0}
+  starting_equipment:
+    - Clothing
+    - Two Weapons
+    - [Light Armour, Medium Armour]
+    - Two Cyphers
+    - One Oddity
+  shins: 5
+  abilities:
+    Combat Prowess:
+      desc: "You add +1 damage to one type of attack of your choice: melee attacks or ranged attacks. Enabler"
+    Cypher Use:
+      desc: "You can bear two cyphers at a time"
+      amt: 2
+    Trained in Armour:
+      desc: You can wear armour for long periods of time wihout tiring can can compensate for slowed reactions from wearing armor. You reduce the Speed Effort cost for wearing armour by 1. Enabler"
+    Weapons:
+      desc: You can use any weapon without penalty
+    Physical Skills:
+      desc: Choose one of the following skills in which you aren't already trained. You have an inability in crafting numenera, salvaging numenera, and understanding numenera.
+      options: [Balancing, Climbing, Jumping, Swimming]
+  chooseable:
+    amt: 2
+    skills:
+      Aggression:
+        desc: You focus on making attacks to such an extent tahtyou leave yourself vulnerable to your oponents. While this ability is active, you gain an asset on your melee attaks, and your Speed defence rolls against melee and ranged attacks are hindered. This effect lasts for as long as you wish, but it ends if no combat is taking place within range on your senses. Enabler.
+        cost: [2, Might]
+      Fleet of Foot:
+        desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. If you apply alevel of Effort to this ability, you can move a long distance and make an attack as your entire action for a turn, but the attack is hindered. Enabler.
+        cost: [1, Speed]
+      Impressive Display:
+        desc: You perform a feat of strength, speed, or combat, impressing those nearby. For the next minute you gain an asset in all interaction tasks with people who saw you use this ability. Action.
+        cost: [2, Might]
+      Misdirect:
+        desc: When an opponent misses you, you can redirect their attack to another target (a creature or object) of your choosing that’s within immediate range of you. Make an unmodified attack roll against the new target (do not use any of your or the opponent’s modifiers to the attack roll, but you can apply Effort for accuracy). If the attack hits, the target takes damage from your opponent’s attack. Enabler.
+        cost: [3, Speed]
+      No Need for Weapons:
+        desc: When you make an unarmed attack (such as a punch or kick), it counts as a medium weapon instead of a light weapon. Enabler.
+      Trained Without Armor:
+        desc: You are trained in Speed defense actions when not wearing armor. Enabler.
+  connection:
+    - You were in the military and have friends who still serve. Your former commander remembers you well.
+    - You were the personal guard of a wealthy merchant who accused you of theft. You left her service in disgrace.
+    - You were the bouncer in a local bar for a while, and the patrons there remember you.
+    - You trained with a highly respected mentor. He regards you well, but he has many enemies.
+    - You trained in an isolated monastery far away. The monks think of you as a brother, but you’re a stranger to all others.
+    - You have no formal training. Your abilities come to you naturally (or unnaturally).
+    - You spent time on the streets and even were in prison for a while.
+    - You were conscripted into military service, but you deserted before long.
+    - You served as a bodyguard to a powerful criminal who now owes you his life.
+    - You worked as a constable. Everyone knows you, but their opinions of you vary.
+    - Your older sibling is an infamous glaive who has been disgraced.
+    - You served as a caravan guard. You know a smattering of people in many cities and towns.
+    - Your best friend is a sage and a scholar. She is a great source of knowledge.
+    - You and a friend both smoke the same kind of rare, expensive tobacco. The two of you get together weekly to chat and smoke.
+    - Your uncle runs a theater in town. You know all the actors and watch all the shows for free.
+    - Your blacksmith friend sometimes calls on you for help at the forge. However, he pays you well.
+    - Your mentor wrote a book on the martial arts. Sometimes other warriors seek you out to ask about its stranger passages.
+    - A man you fought alongside in the military is now the mayor of a nearby town.
+    - You saved the lives of a family when their house burned down. They’re indebted to you, and their neighbors regard you as a hero.
+    - Your old trainer still expects you to come back and sharpen her blades and clean up after her classes, but when you do, she occasionally shares interesting rumors.
+  background:
+    Intensive Training: You are strong, fast, or both, but what really separates you from the crowd is your training. Perhaps you ascended the highest peak of the Black Riage or sought the deepest sewers beneath Qi to find teachers who could show you how to move, fight, and endure beyond normal human limits. You know a thousand ways to kill a foe, most of them secret to all but a chosen few. You’re privy to techniques and fighting styles that most people in the Ninth World have never seen. You have learned that the impossible is possible— as long as you know the secret. Your body is a weapon, and your weapon is part of your body. You have studied with the masters, and now you carry that regimen as you venture into the world.
+    Inborn Traits: "You’ve trained under excellent instructors and have experience in many dangerous situations, but what makes you different is deep inside, entwined in your genetic heritage. Maybe it was the luck of being born fit. Maybe you’re a hulking brute—a mountainous figure who commands attention when you enter a room. Or maybe your strength is more subtle; you might be the descendant of a bioengineered species bred (or designed) for perfection. Perhaps you’re a mutant with psychic abilities that augment your physical nature; you guide and enhance your attacks with telekinesis, or you use a natural mutation in your brain to control matter on a molecular level to resist blows and inflict harm. Perhaps you’re something wholly new: an aberration or a human so perfect that you’re beyond human. You might be a posthuman—the next step toward the true destiny of the people of the Ninth World"
+    Biomechanical Modification: You might be a fighter, but you’re no archaic stereotype—this is the Ninth World, after all. Although you trained and gained your share of practical experience, you have the numenera on your side as well. Some of your knowledge of fighting techniques is implanted in your brain and spine, wired into your nerves and muscles. Your joints have surgically implanted servo motors. Subdermal plating makes you tougher than should be possible. Your muscle tissue is augmented with artificial fibers. Perhaps your genetic code has been rewritten by engineered viruses, or the tissues in your body have been reworked by nanotech, turning you into an efficient battle machine. Or maybe you’ve been altered by strange science—radioactive treatments of bizarre energies, chemical compounds and drugs, or extradimensional enhancements—that makes you stronger, faster, tougher, and more proficient in attack and defense than anyone around you. Whatever the case, you’re the result of ancient knowledge made manifest in the present, and now you’re shaping the future. Perhaps your modifications are obvious and visible; perhaps they’re not. Regardless, you know that you’re more than merely human.
+  intrusions:
+    Perfect Setup: You’re fighting at least three foes and each one is standing in exactly the right spot for you to use a move you trained in long ago, allowing you to attack all three as a single action. Make a separate attack roll for each foe. You remain limited by the amount of Effort you can apply on one action.       
+    Old Friend: A comrade in arms from your past shows up unexpectedly and provides aid in whatever you’re doing. They are on a mission of their own and can’t stay longer than it takes to help out, chat a while after, and perhaps share a quick meal.
+    Weapon Break: Your foe’s weapon has a weak spot and in the course of the combat quickly becomes damaged and moves two steps down the object damage track.
+Nano:
+  stat_pool_start: {Might: 7, Speed: 9, Intellect: 12}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 0, Intellect: 1}
+  starting_equipment:
+    - Clothing
+    - [One Weapon]
+    - A book about the numenera
+    - Three Cyphers
+    - One Oddity
+  shins: 4
+  abilities:
+    Cypher Use:
+      desc: You can bear three cyphers at a time
+      amt: 3
+    Weapons:
+      desc: You can use light weapons without penalty. You have an inability with medium weapons and heavy weapons; your attacks with edium and heavy weapons are hindered.
+    Skills:
+      desc: You are trained in understanding numenera
+  chooseable:
+    amt: 2
+    skills:
+      Hedge Magic:
+        desc: "You can perform small tricks: temporarily change the color or basic appearance of a small object, cause small objects to float through the air, clean a small area, mend a broken object, prepare (but not create) good, and so on. You can't use Hedge Magic to harm another creature or object. Action."
+        cost: [1, Intellect]
+      Onslaught:
+        desc: You attack a foe using energies that assail either their physical form or their mind. In either case, you must be able to see your target. If the attack is physical, you emit a short-range ray of force that inflicts 4 points of damage. If the attack is mental, you focus your mental energy to blast the thought processes of another creature within short range. This mindslice inflicts 2 points of Intellect damage (and thus ignores Armor). Some creatures without minds (such as automatons) might be immune to your mindslice. Action.
+        cost: [1, Intellect]
+      Push:
+        desc: You push a creature or object an immediate distance in any direction you wish. You must be able to see the target, which must be your size or smaller,  must not be affixed to anything, and must be within short range. The push is quick, and the force is too crude to be manipulated. For example, you can’t use this esotery to pull a lever or even close a door. Action.
+        cost: [2, Intellect]
+      Scan:
+        desc: You scan an area equal in size to a 10-foot (3 m) cube, including all objects or creatures within that area. The area must be within short range. Scanning a creature or object always reveals its level (a measure of how powerful, dangerous, or difficult it is). You also learn whatever facts the GM feels are pertinent about the matter and energy in that area. For example, you might learn that the wooden box contains a device of metal and synth. You might learn that the glass cylinder is full of poisonous gas, and that its metal stand has an electrical field running through it that connects to a metal mesh in the floor. You might learn that the creature standing before you is a mammal with a small brain. However, this esotery doesn’t tell you what the information means. Thus, in the first example, you don’t know what the metal and synth device does. In the second, you don’t know if stepping on the floor causes the cylinder to release the gas. In the third, you might suspect that the creature is not very intelligent, but scans, like looks, can be deceiving. Many materials and energy fields prevent or resist scanning. Action.
+        cost: [2, Intellect]
+      Ward:
+        desc:You have a shield of energy around you at all times that helps deflect attacks. You gain +1 to Armor. Enabler.
+  connection:
+    - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.
+    - You studied in a school infamous for its dark, brooding instructors and graduates.
+    - You learned nano-sorcery (or gained your modifications) in the temple of an obscure god. Its priests and worshippers, although small in number, respect and admire your talents and potential.
+    - While traveling alone, you saved the life of a powerful abhuman brute. Although unwilling to accompany you on your journey, he remains indebted to you.
+    - Your mother was a powerful nano while she lived, helpful to many locals. They look upon you kindly, but they also expect much from you.
+    - You owe money to a number of people around town and don’t have the funds to pay your debts.
+    - You failed disgracefully at your initial studies with your teacher and now proceed on your own.
+    - You learned your skills faster than your teachers had ever seen before. The powers that be took notice and are paying close attention.
+    - You killed a well-known criminal in self-defense, earning the respect of many and the enmity of a dangerous few.
+    - You trained as a glaive, but your skills with the numenera and other types of lore eventually led you down a different path. Your former comrades don’t understand you, but they respect you.
+    - While studying to be a nano, you worked as an assistant for a seamstress, making friends with the owner and the clientele.
+    - Your family owns a large vineyard nearby known to all for its fine wine and fair business dealings.
+    - You trained for a time with a group of Aeon Priests, and they still look upon you with fondness.
+    - You worked the gardens in the palace of an influential noble. She wouldn’t remember you, but you made friends with her young daughter.
+    - An experiment you conducted in the past went horribly awry. The locals remember you as a dangerous and foolhardy individual.
+    - You hail from a distant land where you were well known and regarded, but people here treat you with suspicion.
+    - People you meet seem put off by the strange birthmark on your face.
+    - Your best friend is also a nano. You and she share discoveries and secrets readily.
+    - You know a local merchant very well. Since you give him so much business, he offers you discounts and special treatment.
+    - You belong to a secretive social club that gathers monthly to drink and talk.
+  background:
+    Forbidden Knowledge: You understand the numenera far better than most people do. You know that it isn’t just strange machines buried in old ruins. The numenera is everywhere, beyond the perception of humans. You know that microscopic machines called nanites are threaded through every inch of the world, waiting to be activated. You know that satellites in orbit are broadcasting information, waiting for someone to access it. Having studied long and hard, learning the proper ways to tap into the forces all around you, you know how to activate these machines and make them do what you wish, at least in limited, specific ways. These uses of power are called esoteries. Through various tiny devices that you possess, which probably seem like magic charms to the uninitiated, you “conjure” energy. By accessing the datasphere transmitted across the world, you connect with machines—including the nanites—to change your environment.
+    Psionics: You know that the world is filled with ancient machines and their creations. Some of them are visible, but many are not. It’s not just skill or knowledge that allows you to gain access to them. You have a psychic talent to interface with the machines to produce various effects. Some of these machines are secreted about your person, and others are infused into the environment of the Ninth World. You can’t conjure energy or warp matter on your own, but you have the rare and spectacular ability to control the invisible nano-machines that do it for you. Is this gift the natural result of extreme exposure to technology? Is it the fusion of the biological and the mechanical? Is it the design of a genius architect, generations earlier, who manipulated the genetics of your family? Or is it just a random mutation? In any case, you’re the natural synthesis of human and machine, working as one.
+    Ports and Plugs: "You have a connection with machines for one clear reason: you’re practically a machine yourself. Your nervous system is laced with circuitry, and your body has implanted jacks and ports where you plug in modules and other technological bits that provide your capabilities. When you produce effects or manipulate nanites, you do so through your body’s direct mechanical interface. Your force blasts might come from a device implanted in your palm or fingertip. Your ability to tap into the datasphere might come from the receiver plugged into a port you built in the back of your neck. Obviously, to become a Nano, you have undergone numerous surgeries and procedures (either willingly or unwillingly). You are forever changed. Some people treat you with disdain or derision, but perhaps most of your modifications can be hidden by a hooded cloak or similar garment."
+  intrusions:
+    Advantageous Malfunction: A numenera device that is being used against you malfunctions. It might harm the user or one of their allies for a round, or activate a dramatic and distracting side effect for a few rounds.
+    Convenient Glimmer: A glimmer provides you with a clear answer or suggests a course of action with regard to an urgent question, problem, or obstacle you’re facing.
+    Inexplicably Unbroken: An inactive, ruined, or presumed-destroyed device temporarily activates and performs a useful function relevant to the situation. This is enough to buy you some time for a better solution, alleviate a complication that was interfering with your abilities, or just get you one more use out of a depleted cypher or artifact.
+Jack:
+  stat_pool_start: {Might: 10, Speed: 10, Intellect: 10}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 0, Intellect: 0}
+  edge_points: 1
+  starting_equipment:
+    - Clothing
+    - Two Weapons
+    - Light Armour
+    - Explorer's Pack
+    - Pack of Light Tools
+    - Two Cyphers
+    - One Oddity
+  shins: 8
+  abilities:
+    Cypher Use:
+      desc: You can bear two cyphers at a time
+      amt: 2
+    Skills:
+      desc: Choose one skill (other than attacks or defense) in which you aren't already trained. You are trained in this skill.
+    Flex Skill:
+      desc: At the beginning of each day, choose one task (other than attacks or defense) on which you will concerntrate. For the rest of that day, you're trained in that task. You can't use this ability with a skill you're already trained in to become specialised.
+  chooseable:
+    amt: 2
+    skills:
+      Trained in Armor:
+        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Speed Effort cost for wearing armor by 1. Enabler.
+      Create Deadly Poison:
+        desc: You create one dose of a level 2 poison that inflicts 5 points of damage. You can apply this poison to a weapon, food, or drink as part of the action of creating it. In addition to the normal options for using Effort, you can choose to use Effort to increase the level of the poison; each level of Effort used in this way increases the poison level by 1. If unused, the poison loses its potency after one hour. Action.
+        cost: [3, Intellect]
+      Critter Companion:
+        desc: A level 1 creature accompanies you and follows your instructions. This creature is no larger than a large cat (about 20 pounds, or 9 kg) and is normally some sort of domesticated species. You and the GM must work out the details of your creature, and you’ll probably make rolls for it in combat or when it takes actions. The critter companion acts on your turn. As a level 1 creature, it has a target number of 3 and a 3 health, and it inflicts 1 point of damage. Its movement is based on its creature type (avian, swimmer, and so on). If your critter companion dies, you can search an urban or wild environment for 1d6 days to find a new companion. Enabler.
+      Face Morph:
+        desc: You alter your features and coloration for one hour, hiding your identity or impersonating someone. This affects only your face, not the rest of your body. You can’t perfectly duplicate someone else’s face, but you can be accurate enough to fool someone who knows that person casually. You have an asset in all tasks involving disguise. You must apply a level of Effort to be able to impersonate a different species. Action.
+        cost: [2, Intellect]
+      Fleet of Foot:
+        desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. If you apply a level of Effort to this ability, you can move a long distance and make an attack as your entire action for a turn, but the attack is hindered. Enabler.
+        cost: [1, Speed]
+      Late Inspiration (3 Intellect points):
+        desc: You retry a task you failed within the past one minute, using the same difficulty and modifiers, except this time you have an asset on the task. If this retry fails, you can’t use this ability to retry it again. Enabler.
+        cost: [1, Speed]
+      Link Senses:
+        desc: You touch a willing creature and link its senses to yours for one minute. At any time during that duration, you can concentrate to see, hear, and smell what that creature is experiencing, instead of using your own senses. If you or the creature move out of long range, the connection is broken. Action to initiate.
+        cost: [2, Intellect]
+      Phased Pocket:
+        desc: You connect yourself for one hour to a small space that is out of phase and moves with you. You can access this space as if it were a convenient pocket or bag, but nobody else can perceive or access the space unless they have the ability to interact with transdimensional areas. The space can hold up to 1 cubic foot. The space is a part of you, so you can’t use it to carry more cyphers than your limit, a detonation cypher activated inside the space harms you, and so on. When the connection ends, anything in the space falls out. For each 2 additional Intellect points you spend, the pocket lasts an additional hour. Enabler.
+        cost: [2, Intellect]
+      Vanish:
+        desc: You become invisible for a short amount of time. While invisible, you have an asset on stealth and Speed defense tasks. The invisibility ends at the end of your next turn, or if you do something to reveal your presence or position—attacking, using an ability, moving a large object, and so on. Action.
+        cost: [2, Intellect]
+
+
