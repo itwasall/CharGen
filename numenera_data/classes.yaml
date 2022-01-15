@@ -1,339 +1,338 @@
---- !job
-name: Glaive
-stats:
-  might: 11
-  speed: 10
-  int: 7
-stat_pool: 6
-stat_pool_weights: [3,2,1]
-effort: 1
-edge:
-  might: 1
-  speed: 1
-  int: 0
-background: [Intensive Training, Inborn Traits, Biomechanical Modification]
-player_intrusions:
-  - perfect_setup:
-      name: Perfect Setup
-      description: "Youre fighting at least three foes and each one is standing in exactly the right spot for you to use a move you trained in long ago, allowing you to attack all three as a single action. Make a separate attack roll for each foe. You remain limited by the amount of Effort you can apply on one action."
-  - old_friend:
-      name: Old Friend
-      description: A comrade in arms from your past shows up unexpectedly and provides aid in whatever youre doing. They are on a mission of their own and cant stay longer than it takes to help out, chat a while after, and perhaps share a quick meal.
-  - weapon_break:
-      name: Weapon Break
-      description: Your foes weapon has a weak spot and in the course of the combat quickly becomes damaged and moves two steps down the object damage track.
-connection:
-  - You were in the military and have friends who still serve. Your former commander remembers you well.
-  - You were the personal guard of a wealthy merchant who accused you of theft. You left her service in disgrace.
-  - You were the bouncer in a local bar for a while, and the patrons there remember you.
-  - You trained with a highly respected mentor. He regards you well, but he has many enemies.
-  - You trained in an isolated monastery far away. The monks think of you as a brother, but youre a stranger to all others.
-  - You have no formal training. Your abilities come to you naturally (or unnaturally).
-  - You spent time on the streets and even were in prison for a while.
-  - You were conscripted into military service, but you deserted before long.
-  - You served as a bodyguard to a powerful criminal who now owes you his life.
-  - You worked as a constable. Everyone knows you, but their opinions of you vary.
-  - Your older sibling is an infamous glaive who has been disgraced.
-  - You served as a caravan guard. You know a smattering of people in many cities and towns.
-  - Your best friend is a sage and a scholar. She is a great source of knowledge.
-  - You and a friend both smoke the same kind of rare, expensive tobacco. The two of you get together weekly to chat and smoke.
-  - Your uncle runs a theater in town. You know all the actors and watch all the shows for free.
-  - Your blacksmith friend sometimes calls on you for help at the forge. However, he pays you well.
-  - Your mentor wrote a book on the martial arts. Sometimes other warriors seek you out to ask about its stranger passages.
-  - A man you fought alongside in the military is now the mayor of a nearby town.
-  - You saved the lives of a family when their house burned down. Theyre indebted to you, and their neighbors regard you as a hero.
-  - Your old trainer still expects you to come back and sharpen her blades and clean up after her classes, but when you do, she occasionally shares interesting rumors.
-equipment:
-  - Clothing
-  - [[weapon, weapon], [weapon, Shield]]
-  - [Light Armor, Medium Armor]
-  - explorers_pack
-  - rnd_cypher
-  - rnd_cypher
-  - rnd_oddity
-money: 5
-abilities:
-  - combat:
-      name: Combat Prowess
-      desc: Add +1 Damage to one type of attack of your choice
-      enabler: yes
-  - cypher:
+Glaive: &GlaiveClass
+  stats:
+    might: 11
+    speed: 10
+    int: 7
+  stat_pool: 6
+  stat_pool_weights: [3,2,1]
+  effort: 1
+  edge:
+    might: 1
+    speed: 1
+    int: 0
+  background: [Intensive Training, Inborn Traits, Biomechanical Modification]
+  player_intrusions:
+    - perfect_setup:
+        name: Perfect Setup
+        description: "Youre fighting at least three foes and each one is standing in exactly the right spot for you to use a move you trained in long ago, allowing you to attack all three as a single action. Make a separate attack roll for each foe. You remain limited by the amount of Effort you can apply on one action."
+    - old_friend:
+        name: Old Friend
+        description: A comrade in arms from your past shows up unexpectedly and provides aid in whatever youre doing. They are on a mission of their own and cant stay longer than it takes to help out, chat a while after, and perhaps share a quick meal.
+    - weapon_break:
+        name: Weapon Break
+        description: Your foes weapon has a weak spot and in the course of the combat quickly becomes damaged and moves two steps down the object damage track.
+  connection:
+    - You were in the military and have friends who still serve. Your former commander remembers you well.
+    - You were the personal guard of a wealthy merchant who accused you of theft. You left her service in disgrace.
+    - You were the bouncer in a local bar for a while, and the patrons there remember you.
+    - You trained with a highly respected mentor. He regards you well, but he has many enemies.
+    - You trained in an isolated monastery far away. The monks think of you as a brother, but youre a stranger to all others.
+    - You have no formal training. Your abilities come to you naturally (or unnaturally).
+    - You spent time on the streets and even were in prison for a while.
+    - You were conscripted into military service, but you deserted before long.
+    - You served as a bodyguard to a powerful criminal who now owes you his life.
+    - You worked as a constable. Everyone knows you, but their opinions of you vary.
+    - Your older sibling is an infamous glaive who has been disgraced.
+    - You served as a caravan guard. You know a smattering of people in many cities and towns.
+    - Your best friend is a sage and a scholar. She is a great source of knowledge.
+    - You and a friend both smoke the same kind of rare, expensive tobacco. The two of you get together weekly to chat and smoke.
+    - Your uncle runs a theater in town. You know all the actors and watch all the shows for free.
+    - Your blacksmith friend sometimes calls on you for help at the forge. However, he pays you well.
+    - Your mentor wrote a book on the martial arts. Sometimes other warriors seek you out to ask about its stranger passages.
+    - A man you fought alongside in the military is now the mayor of a nearby town.
+    - You saved the lives of a family when their house burned down. Theyre indebted to you, and their neighbors regard you as a hero.
+    - Your old trainer still expects you to come back and sharpen her blades and clean up after her classes, but when you do, she occasionally shares interesting rumors.
+  equipment:
+    - Clothing
+    - [[weapon, weapon], [weapon, Shield]]
+    - [Light Armor, Medium Armor]
+    - explorers_pack
+    - rnd_cypher
+    - rnd_cypher
+    - rnd_oddity
+  money: 5
+  abilities:
+    - combat:
+        name: Combat Prowess
+        desc: Add +1 Damage to one type of attack of your choice
+        enabler: yes
+    - cypher:
+        name: Cypher Use
+        desc: You can bear two cyphers at a time
+    - train:
+        name: Trained in Armour
+        desc: Wear armour for long periods for time without penalty. [Speed Effort] cost of wearing armour is reduced by 1.
+        enabler: yes
+    - weapons:
+        name: Weapons
+        desc: You can use any weapon without penalty
+  skills:
+    buff:
+      - [Balancing, Climbing, Jumping, Swimming]
+    nerf:
+      - Crafting Numenera
+      - Salvaging Numenera
+      - Understanding Numenera
+  actions:
+    - aggression:
+        name: Aggression
+        cost: [2, 'might']
+        desc: Gain [Asset] in melee attacks, hinder [Speed Defence] rolls against melee and ranged attacks.
+        enabler: yes
+    - fleet:
+        name: Fleet of Foot
+        cost: [1, 'speed']
+        desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. Applying 1 [Effort] allows for moving a long distance AND attacking, but the attack is [Hindered]
+        enabler: yes
+    - impress:
+        name: Impressive Display
+        cost: [2, 'might']
+        desc: You perform a feat of strength, speed or combat, impressing those nearby. For the next minute you gain an [Asset] in all interaction tasks with people who saw you use this ability
+        action: yes
+    - misdirect:
+        name: Misdirect
+        cost: [3, 'speed']
+        desc: When your opponent [Misses], you can redirect their attack to another target of your choosing within [Immidate Range]. Make an [Unmodified Attack Roll] against the new target. If the attack hits, the target takes damage from your opponents attack.
+        enabler: yes
+    - no_need:
+        name: No Need for Weapons
+        cost: No
+        desc: When you make an [Unarmed Attack], it counts as a [Medium Weapon] attack instead of a light weapon
+        enabler: yes
+    - trained:
+        name: Trained Without Armour
+        cost: no
+        desc: You are trained in [Speed Defence] actions when not wearing armour
+        enabler: yes
+  defaults:
+    cyphers:
+      - Density Node
+      - Rejuvenator
+    oddities:
+      - Blob of Clay that takes on various mysterious shapes when left alone
+Nano: &NanoClass
+  stats:
+    might: 7
+    speed: 9
+    intellect: 12
+  stats_pool: 6
+  stat_pool_weights: [7,9,12]
+  effort: 1
+  edge:
+    might: 0
+    speed: 0
+    intellect: 1
+  background: [Forbidden Knowledge, Psionics, Ports and Plugs]
+  player_intrusions:
+    - adv_malfunc:
+        name: Advantageous Malfunction
+        desc: A numenera device that is being used against you  malfunctions. It might harm the user or one of their allies for a round, or activate a dramatic and distracting side effect for a few rounds.
+    - conv_glim:
+        name: Convenient Glimmer
+        desc: A glimmer provides you with a clear answer or suggests a course of action with regard to an urgent question, problem, or obstacle youre facing.
+    - broke:
+        name: Inexplicably Broken
+        desc: An inactive, ruined, or presumed-destroyed device temporarily activates and performs a useful function relevant to the situation. This is enough to buy you some time for a better solution, alleviate a complication that was interfering with your abilities, or just get you one more use out of a depleted cypher or artifact.
+  connection:
+    - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.
+    - You studied in a school infamous for its dark, brooding instructors and graduates.
+    - You learned nano-sorcery (or gained your modifications) in the temple of an obscure god. Its priests and worshippers, although small in number, respect and admire your talents and potential.
+    - While traveling alone, you saved the life of a powerful abhuman brute. Although unwilling to accompany you on your journey, he remains indebted to you.
+    - Your mother was a powerful nano while she lived, helpful to many locals. They look upon you kindly, but they also expect much from you.
+    - You owe money to a number of people around town and dont have the funds to pay your debts.
+    - You failed disgracefully at your initial studies with your teacher and now proceed on your own.
+    - You learned your skills faster than your teachers had ever seen before. The powers that be took notice and are paying close attention.
+    - You killed a well-known criminal in self-defense, earning the respect of many and the enmity of a dangerous few.
+    - You trained as a glaive, but your skills with the numenera and other types of lore eventually led you down a different path. Your former comrades dont understand you, but they respect you.
+    - While studying to be a nano, you worked as an assistant for a seamstress, making friends with the owner and the clientele.
+    - Your family owns a large vineyard nearby known to all for its fine wine and fair business dealings.
+    - You trained for a time with a group of Aeon Priests, and they still look upon you with fondness.
+    - You worked the gardens in the palace of an influential noble. She wouldnt remember you, but you made friends with her young daughter.
+    - An experiment you conducted in the past went horribly awry. The locals remember you as a dangerous and foolhardy individual.
+    - You hail from a distant land where you were well known and regarded, but people here treat you with suspicion.
+    - People you meet seem put off by the strange birthmark on your face.
+    - Your best friend is also a nano. You and she share discoveries and secrets readily.
+    - You know a local merchant very well. Since you give him so much business, he offers you discounts and special treatment.
+    - You belong to a secretive social club that gathers monthly to drink and talk.
+  equipment:
+    - Clothing
+    - weapon
+    - A Book on Numenera
+    - rnd_cypher
+    - rnd_cypher
+    - rnd_cypher
+    - rnd_oddity
+  money: 4
+  abilities:
+    - cypher:
+        name: Expert Cypher Use
+        desc: Bear [3 Cyphers] at a time
+    - weapons:
+        name: Weapons
+        desc: Use [Light Weapons] without penalty. [Inability] with medium and heavy weapons, attacks are [Hindered]
+  skills:
+    buff:
+      - Understanding Numenera
+    nerf:
+      - Medium Weapons
+      - Heavy Weapons
+  actions:
+    - hedge:
+        name: Hedge Magic
+        cost: [1, 'int']
+        desc: Perform a small magical trick. Cannot harm.
+        action: yes
+    - onslaught:
+        name: Onslaught
+        cost: [1, 'int']
+        desc: Attack a foe using non-descript energies. If you choose the attack to be physical, it inflicts [4] points of damage. If you choose the attack to be mental, inflict [2] points of [Intellect Damage] (ignores armour). Some entities without minds may not be affected by the latter.
+        action: yes
+    - push:
+        name: Push
+        cost: [2, 'int']
+        desc: Push a visable target in any direction you see fit. The push is quick, and too crude to be manipulated. Unable to pull levers or close doors.
+        action: yes
+    - scan:
+        name: Scan
+        cost: [2, 'int']
+        desc: Scan within a 10-foot cube. Can detect creature levels and other details at GMs disgression.
+        action: yes
+    - ward:
+        name: Ward
+        cost: no
+        desc: Gain +1 to Armour
+        enabler: yes
+  defaults:
+    cyphers:
+      - Gravity-Nullifying Spray
+      - Telepathy Implant
+      - Teleporter
+    oddities:
+      - Metallic jar that maintains the temperature of the liquid inside indefinitely
+Jack: &JackClass
+  stats:
+    might: 10
+    speed: 10
+    int: 10
+  stats_pool: 6
+  stat_pool_weights: [1,1,1]
+  effort: 1
+  edge:
+    might: 0
+    speed: 0
+    int: 0
+    jack: yes
+  background: [Born Lucky, School of Hard Knocks, A Cobbled Jumble]
+  player_intrusions:
+    familiar:
+      name: Familiar Insight
+      desc: You know this person (or heard about them somewhere) well enough to give insight about their motives or intentions and how best to convince them to see things your way. You know the right words, posturing, inflection, amount of emotional manipulation, or even what sort of joke or agreeable complaint might sway them. This can convince a neutral person to take your side, or a hostile one to hear you out for a little while longer.
+    inspire:
+      name: Inspirational Recall
+      desc: You recall an important detail from a previous encounter (perhaps something you dont even remember noticing at the time) that suggests a successful course of action for your current situation. This might be recognizing a password hidden in an innocuous code or riddle, realizing you saw a suspicious individual near a crime scene, overhearing an important conversation between two NPCs, or understanding that an NPCs subtle glance or gesture had additional connotations indicating what you should do.
+    lucky:
+      name: Lucky Break
+      desc: Something unexpected happens that is to your advantage. A rope your opponent is hanging from might snap, the person youre debating in front of an influential Aeon Priest might trip or forget what they were going to say, or something that was supposed to last only a round or two lasts a little while longer.
+  connection:
+      - You come from a large family and had to fend for yourself from an early age.
+      - Your older sister is a skilled nano. You werent able to follow her path, but the numenera is not unknown to you.
+      - Youre a member of a guild of explorers who specialize in uncovering ancient mysteries.
+      - You worked alongside your father, who was skilled in many things, until he disappeared one day with no explanation.
+      - You grew up on the streets and studied at the school of hard knocks.
+      - You remember little of your past, which has always seemed strange to you.
+      - You came of age in the wild and are used to living rough.
+      - Your family is wealthy but earns little respect from the locals.
+      - Youre friends with many people in the community and are generally well regarded.
+      - You have an annoying rival who always seems to get in your way or foil your plans.
+      - Youre in love with a local shopkeeper, but that person shows little interest in you.
+      - Several expeditions preparing to explore old ruins and odd mysteries would like you to join them because you seem like a promising addition to the team.
+      - Your best friend from childhood is now an Aeon Priest.
+      - You come from a nearby community, but the locals consider the folk of your hometown to be untrustworthy rivals.
+      - Youre close friends with a local married couple, both of whom are experienced nanos.
+      - Youre drinking buddies with a number of the local guards and glaives.
+      - You once saved the child of a local noble from a fire, and she is very grateful.
+      - You used to work with a troupe of traveling minstrels and performers, and they remember you fondly (as do people in the places you visited).
+      - Youre wanted for a crime you didnt commit.
+      - You have a friend with an extensive library, plenty of food and drink, and a comfortable home?and the door is always open to you.
+  equipment:
+    - Clothing
+    - weapon
+    - weapon
+    - Light Armour
+    - explorers_pack
+    - Pack of Light Tools
+    - rnd_cypher
+    - rnd_cypher
+    - rnd_oddity
+  money: 8
+  abilities:
+    cypher:
       name: Cypher Use
       desc: You can bear two cyphers at a time
-  - train:
-      name: Trained in Armour
-      desc: Wear armour for long periods for time without penalty. [Speed Effort] cost of wearing armour is reduced by 1.
-      enabler: yes
-  - weapons:
+    weapons:
       name: Weapons
-      desc: You can use any weapon without penalty
-skills:
-  buff:
-    - [Balancing, Climbing, Jumping, Swimming]
-  nerf:
-    - Crafting Numenera
-    - Salvaging Numenera
-    - Understanding Numenera
-actions:
-  - aggression:
-      name: Aggression
-      cost: [2, 'might']
-      desc: Gain [Asset] in melee attacks, hinder [Speed Defence] rolls against melee and ranged attacks.
-      enabler: yes
-  - fleet:
-      name: Fleet of Foot
-      cost: [1, 'speed']
-      desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. Applying 1 [Effort] allows for moving a long distance AND attacking, but the attack is [Hindered]
-      enabler: yes
-  - impress:
-      name: Impressive Display
-      cost: [2, 'might']
-      desc: You perform a feat of strength, speed or combat, impressing those nearby. For the next minute you gain an [Asset] in all interaction tasks with people who saw you use this ability
-      action: yes
-  - misdirect:
-      name: Misdirect
-      cost: [3, 'speed']
-      desc: When your opponent [Misses], you can redirect their attack to another target of your choosing within [Immidate Range]. Make an [Unmodified Attack Roll] against the new target. If the attack hits, the target takes damage from your opponents attack.
-      enabler: yes
-  - no_need:
-      name: No Need for Weapons
-      cost: No
-      desc: When you make an [Unarmed Attack], it counts as a [Medium Weapon] attack instead of a light weapon
-      enabler: yes
-  - trained:
-      name: Trained Without Armour
-      cost: no
-      desc: You are trained in [Speed Defence] actions when not wearing armour
-      enabler: yes
-defaults:
-  cyphers:
-    - Density Node
-    - Rejuvenator
-  oddities:
-    - Blob of Clay that takes on various mysterious shapes when left alone
-...
---- !job
-name: Nano
-stats:
-  might: 7
-  speed: 9
-  intellect: 12
-stats_pool: 6
-stat_pool_weights: [7,9,12]
-effort: 1
-edge:
-  might: 0
-  speed: 0
-  intellect: 1
-background: [Forbidden Knowledge, Psionics, Ports and Plugs]
-player_intrusions:
-  - adv_malfunc:
-      name: Advantageous Malfunction
-      desc: A numenera device that is being used against you  malfunctions. It might harm the user or one of their allies for a round, or activate a dramatic and distracting side effect for a few rounds.
-  - conv_glim:
-      name: Convenient Glimmer
-      desc: A glimmer provides you with a clear answer or suggests a course of action with regard to an urgent question, problem, or obstacle youre facing.
-  - broke:
-      name: Inexplicably Broken
-      desc: An inactive, ruined, or presumed-destroyed device temporarily activates and performs a useful function relevant to the situation. This is enough to buy you some time for a better solution, alleviate a complication that was interfering with your abilities, or just get you one more use out of a depleted cypher or artifact.
-connection:
-  - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.
-  - You studied in a school infamous for its dark, brooding instructors and graduates.
-  - You learned nano-sorcery (or gained your modifications) in the temple of an obscure god. Its priests and worshippers, although small in number, respect and admire your talents and potential.
-  - While traveling alone, you saved the life of a powerful abhuman brute. Although unwilling to accompany you on your journey, he remains indebted to you.
-  - Your mother was a powerful nano while she lived, helpful to many locals. They look upon you kindly, but they also expect much from you.
-  - You owe money to a number of people around town and dont have the funds to pay your debts.
-  - You failed disgracefully at your initial studies with your teacher and now proceed on your own.
-  - You learned your skills faster than your teachers had ever seen before. The powers that be took notice and are paying close attention.
-  - You killed a well-known criminal in self-defense, earning the respect of many and the enmity of a dangerous few.
-  - You trained as a glaive, but your skills with the numenera and other types of lore eventually led you down a different path. Your former comrades dont understand you, but they respect you.
-  - While studying to be a nano, you worked as an assistant for a seamstress, making friends with the owner and the clientele.
-  - Your family owns a large vineyard nearby known to all for its fine wine and fair business dealings.
-  - You trained for a time with a group of Aeon Priests, and they still look upon you with fondness.
-  - You worked the gardens in the palace of an influential noble. She wouldnt remember you, but you made friends with her young daughter.
-  - An experiment you conducted in the past went horribly awry. The locals remember you as a dangerous and foolhardy individual.
-  - You hail from a distant land where you were well known and regarded, but people here treat you with suspicion.
-  - People you meet seem put off by the strange birthmark on your face.
-  - Your best friend is also a nano. You and she share discoveries and secrets readily.
-  - You know a local merchant very well. Since you give him so much business, he offers you discounts and special treatment.
-  - You belong to a secretive social club that gathers monthly to drink and talk.
-equipment:
-  - Clothing
-  - weapon
-  - A Book on Numenera
-  - rnd_cypher
-  - rnd_cypher
-  - rnd_cypher
-  - rnd_oddity
-money: 4
-abilities:
-  - cypher:
-      name: Expert Cypher Use
-      desc: Bear [3 Cyphers] at a time
-  - weapons:
-      name: Weapons
-      desc: Use [Light Weapons] without penalty. [Inability] with medium and heavy weapons, attacks are [Hindered]
-skills:
-  buff:
-    - Understanding Numenera
-  nerf:
-    - Medium Weapons
-    - Heavy Weapons
-actions:
-  - hedge:
-      name: Hedge Magic
-      cost: [1, 'int']
-      desc: Perform a small magical trick. Cannot harm.
-      action: yes
-  - onslaught:
-      name: Onslaught
-      cost: [1, 'int']
-      desc: Attack a foe using non-descript energies. If you choose the attack to be physical, it inflicts [4] points of damage. If you choose the attack to be mental, inflict [2] points of [Intellect Damage] (ignores armour). Some entities without minds may not be affected by the latter.
-      action: yes
-  - push:
-      name: Push
-      cost: [2, 'int']
-      desc: Push a visable target in any direction you see fit. The push is quick, and too crude to be manipulated. Unable to pull levers or close doors.
-      action: yes
-  - scan:
-      name: Scan
-      cost: [2, 'int']
-      desc: Scan within a 10-foot cube. Can detect creature levels and other details at GMs disgression.
-      action: yes
-  - ward:
-      name: Ward
-      cost: no
-      desc: Gain +1 to Armour
-      enabler: yes
-defaults:
-  cyphers:
-    - Gravity-Nullifying Spray
-    - Telepathy Implant
-    - Teleporter
-  oddities:
-    - Metallic jar that maintains the temperature of the liquid inside indefinitely
-...
---- !job
-name: Jack
-stats:
-  might: 10
-  speed: 10
-  int: 10
-stats_pool: 6
-stat_pool_weights: [1,1,1]
-effort: 1
-edge:
-  might: 0
-  speed: 0
-  int: 0
-  jack: yes
-background: [Born Lucky, School of Hard Knocks, A Cobbled Jumble]
-player_intrusions:
-  familiar:
-    name: Familiar Insight
-    desc: You know this person (or heard about them somewhere) well enough to give insight about their motives or intentions and how best to convince them to see things your way. You know the right words, posturing, inflection, amount of emotional manipulation, or even what sort of joke or agreeable complaint might sway them. This can convince a neutral person to take your side, or a hostile one to hear you out for a little while longer.
-  inspire:
-    name: Inspirational Recall
-    desc: You recall an important detail from a previous encounter (perhaps something you dont even remember noticing at the time) that suggests a successful course of action for your current situation. This might be recognizing a password hidden in an innocuous code or riddle, realizing you saw a suspicious individual near a crime scene, overhearing an important conversation between two NPCs, or understanding that an NPCs subtle glance or gesture had additional connotations indicating what you should do.
-  lucky:
-    name: Lucky Break
-    desc: Something unexpected happens that is to your advantage. A rope your opponent is hanging from might snap, the person youre debating in front of an influential Aeon Priest might trip or forget what they were going to say, or something that was supposed to last only a round or two lasts a little while longer.
-connection:
-    - You come from a large family and had to fend for yourself from an early age.
-    - Your older sister is a skilled nano. You werent able to follow her path, but the numenera is not unknown to you.
-    - Youre a member of a guild of explorers who specialize in uncovering ancient mysteries.
-    - You worked alongside your father, who was skilled in many things, until he disappeared one day with no explanation.
-    - You grew up on the streets and studied at the school of hard knocks.
-    - You remember little of your past, which has always seemed strange to you.
-    - You came of age in the wild and are used to living rough.
-    - Your family is wealthy but earns little respect from the locals.
-    - Youre friends with many people in the community and are generally well regarded.
-    - You have an annoying rival who always seems to get in your way or foil your plans.
-    - Youre in love with a local shopkeeper, but that person shows little interest in you.
-    - Several expeditions preparing to explore old ruins and odd mysteries would like you to join them because you seem like a promising addition to the team.
-    - Your best friend from childhood is now an Aeon Priest.
-    - You come from a nearby community, but the locals consider the folk of your hometown to be untrustworthy rivals.
-    - Youre close friends with a local married couple, both of whom are experienced nanos.
-    - Youre drinking buddies with a number of the local guards and glaives.
-    - You once saved the child of a local noble from a fire, and she is very grateful.
-    - You used to work with a troupe of traveling minstrels and performers, and they remember you fondly (as do people in the places you visited).
-    - Youre wanted for a crime you didnt commit.
-    - You have a friend with an extensive library, plenty of food and drink, and a comfortable home?and the door is always open to you.
-equipment:
-  - Clothing
-  - weapon
-  - weapon
-  - Light Armour
-  - explorers_pack
-  - Pack of Light Tools
-  - rnd_cypher
-  - rnd_cypher
-  - rnd_oddity
-money: 8
-abilities:
-  cypher:
-    name: Cypher Use
-    desc: You can bear two cyphers at a time
-  weapons:
-    name: Weapons
-    desc: You can use light and medium weapons without penalty. You have inability in heavy weapons; attacks are [Hindered]
-  flex:
-    name: Flex Skill
-    desc: At day start, choose a skill (other than attack or defence) to concerntrate on. For the rest of the day you will be trained in that skill. Cannot choose skills already trained in.
-skills:
-  buff: []
-  nerf: []
-  jack: yes # Choose one skill you are aren't already trained in. Cannot be attack or defence
-actions:
-  - train:
-      name: Trained In Armour
-      desc: Can wear armour for long periods of time without penalty
-      enabler: yes
-  - poison:
-      name: Create Deadly Poison
-      cost: [3, 'int']
-      desc: Create one dose of level 2 poison that inflicts 5 points of damage
-      action: yes
-  - critter:
-      name: Critter Companion
-      desc: A level 1 creature accompanies you and follows your instructions. Is level 1 with a target number of 3, health of 3 and damage of 1
-      enabler: yes
-  - morph:
-      name: Face Morph
-      cost: [2, 'int']
-      desc: You alter your facial appearance for 1 hour, in order to hide yourself or impersonate someone.
-      action: yes
-  - fleet:
-      name: Fleet of Foot
-      cost: [1, 'speed']
-      desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. Applying 1 [Effort] allows for moving a long distance AND attacking, but the attack is [Hindered]
-      enabler: yes
-  - inspiration:
-      name: Late Inspiration
-      cost: [3, 'int']
-      desc: You can retry a task you failed within the past minute, using the same difficulty and modifiers but now you have an [Asset] on the task. Cannot be retried again if failed.
-      enabler: yes
-  - sense:
-      name: Link Senses
-      cost: [2, 'int']
-      desc: Touch a willing creature to link senses for 1 minute.
-      action: yes
-  - phase:
-      name: Phased Pocket
-      cost: [2, 'int']
-      desc: Marry poppins bag
-      enabler: yes
-  - vanish:
-      name: Vanish
-      cost: [2, 'int']
-      desc: You become invisible for a short amount of time
-      action: yes
-defaults:
-  cyphers:
-    - Machine Controlled Implant
-    - Visage Changer
-  oddities:
-    - Small square cage that puts whatever single creature is inside it into stasis
+      desc: You can use light and medium weapons without penalty. You have inability in heavy weapons; attacks are [Hindered]
+    flex:
+      name: Flex Skill
+      desc: At day start, choose a skill (other than attack or defence) to concerntrate on. For the rest of the day you will be trained in that skill. Cannot choose skills already trained in.
+  skills:
+    buff: []
+    nerf: []
+    jack: yes # Choose one skill you are aren't already trained in. Cannot be attack or defence
+  actions:
+    - train:
+        name: Trained In Armour
+        desc: Can wear armour for long periods of time without penalty
+        enabler: yes
+    - poison:
+        name: Create Deadly Poison
+        cost: [3, 'int']
+        desc: Create one dose of level 2 poison that inflicts 5 points of damage
+        action: yes
+    - critter:
+        name: Critter Companion
+        desc: A level 1 creature accompanies you and follows your instructions. Is level 1 with a target number of 3, health of 3 and damage of 1
+        enabler: yes
+    - morph:
+        name: Face Morph
+        cost: [2, 'int']
+        desc: You alter your facial appearance for 1 hour, in order to hide yourself or impersonate someone.
+        action: yes
+    - fleet:
+        name: Fleet of Foot
+        cost: [1, 'speed']
+        desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. Applying 1 [Effort] allows for moving a long distance AND attacking, but the attack is [Hindered]
+        enabler: yes
+    - inspiration:
+        name: Late Inspiration
+        cost: [3, 'int']
+        desc: You can retry a task you failed within the past minute, using the same difficulty and modifiers but now you have an [Asset] on the task. Cannot be retried again if failed.
+        enabler: yes
+    - sense:
+        name: Link Senses
+        cost: [2, 'int']
+        desc: Touch a willing creature to link senses for 1 minute.
+        action: yes
+    - phase:
+        name: Phased Pocket
+        cost: [2, 'int']
+        desc: Marry poppins bag
+        enabler: yes
+    - vanish:
+        name: Vanish
+        cost: [2, 'int']
+        desc: You become invisible for a short amount of time
+        action: yes
+  defaults:
+    cyphers:
+      - Machine Controlled Implant
+      - Visage Changer
+    oddities:
+      - Small square cage that puts whatever single creature is inside it into stasis
+classes:
+  - *GlaiveClass
+  - *JackClass
+  - *NanoClass
 #Arkus:
 #Wright:
 #Delve:

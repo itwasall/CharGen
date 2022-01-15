@@ -47,13 +47,13 @@ class Character:
         return roll(diceroll)
 
     def _alignment(self, align="R"):
-        if align == "R" or align not in alignments:
+        if align in ["R"] or align not in alignments:
             self.alignment = choice(alignments)
         else:
             self.alignment = align
 
     def _race(self, race="R"):
-        if race == "R" or race not in [r["name"] for r in races]:
+        if race in ["R"] or race not in [r["name"] for r in races]:
             self.race = choice(races)
         else:
             for r in races:
@@ -63,7 +63,7 @@ class Character:
 
     def _job(self, job):
         abbr_align = aa[self.alignment]
-        if job == "R" or job == "r" or job not in [j["name"] for j in jobs]:
+        if job.capitalize() in ["R"] or job not in [j["name"] for j in jobs]:
             self.job = choice(jobs)
             while abbr_align not in self.job['alignment']:
                 self.job = choice(jobs)
@@ -97,8 +97,7 @@ class Character:
 
     def _ability_score_mods(self):
         self.str_mod = expand(
-            {
-                1: -5,
+            {   1: -5,
                 range(2, 4): -4,
                 range(4, 6): -3,
                 range(6, 8): -2,
@@ -108,11 +107,9 @@ class Character:
                 range(14, 16): 2,
                 range(16, 18): 3,
                 range(18, 20): 4,
-            }
-        )
+             })
         self.dex_mod = expand(
-            {
-                range(1, 4): -5,
+            {   range(1, 4): -5,
                 range(4, 6): -3,
                 range(6, 8): -2,
                 range(8, 10): -1,
@@ -121,8 +118,7 @@ class Character:
                 range(14, 16): 2,
                 range(16, 18): 3,
                 range(18, 20): 4,
-            }
-        )
+            })
         self.con_mod = expand(
             {
                 range(1, 8): -2,
