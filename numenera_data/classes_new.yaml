@@ -1,3 +1,16 @@
+# FIELD EXPLANATION
+# desc :: description
+# trained :: used for skills, denote "trained" level of competency
+# inability :: used for skills, denotes the opposite of "trained"
+# amt :: shorthand for amount
+# *community :: An anchor for &community, see below
+# *light_weapon :: an anchor for &light_weapon, see below
+# iotum_appending :: Used to denote an additional prerequisite before committing action
+# iotum_substitute :: Used to denote iotum as an alternate way to pay the cost of a particular action
+
+bs_im_not_rewriting:
+  community_ability_header: &community While you are present within a community, and actively and personally working on behalf of that community
+  use_light_wpn_only: &light_weapon You can use light weapons without penalty. You have an inabilty with medium and heavy weapons, your attacks with medium and heavy weapons are hindered.
 Glaive:
   stat_pool_start: {Might: 11, Speed: 10, Intellect: 7}
   additional_points: 6
@@ -20,9 +33,13 @@ Glaive:
       desc: You can wear armour for long periods of time wihout tiring can can compensate for slowed reactions from wearing armor. You reduce the Speed Effort cost for wearing armour by 1. Enabler"
     Weapons:
       desc: You can use any weapon without penalty
-    Physical Skills:
+    Skills:
       desc: Choose one of the following skills in which you aren't already trained. You have an inability in crafting numenera, salvaging numenera, and understanding numenera.
       options: [Balancing, Climbing, Jumping, Swimming]
+      inability: [Crafting Numenera, Salvaging Numenera, Understanding Numenera]
+    Community Ability:
+      Defender:
+        desc: [*community, the community's effective rank for damage inflicted is +1. Enabler]
   chooseable:
     amt: 2
     skills:
@@ -88,9 +105,14 @@ Nano:
       desc: You can bear three cyphers at a time
       amt: 3
     Weapons:
-      desc: You can use light weapons without penalty. You have an inability with medium weapons and heavy weapons; your attacks with edium and heavy weapons are hindered.
+      desc: *light_weapon
+      inability: [Medium Weapons, Heavy Weapons]
     Skills:
       desc: You are trained in understanding numenera
+      trained: [Understanding Numenera]
+    Community Ability:
+      Scholar:
+        desc: [*community, the community's health and infrastructure are both increased by +1. Enabler.]
   chooseable:
     amt: 2
     skills:
@@ -110,7 +132,7 @@ Nano:
         desc:You have a shield of energy around you at all times that helps deflect attacks. You gain +1 to Armor. Enabler.
   connection:
     - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.
-    - You studied in a school infamous for its dark, brooding instructors and graduates.
+    - You studied in a school infamous for its dark, brooding instructors and graduates.]
     - You learned nano-sorcery (or gained your modifications) in the temple of an obscure god. Its priests and worshippers, although small in number, respect and admire your talents and potential.
     - While traveling alone, you saved the life of a powerful abhuman brute. Although unwilling to accompany you on your journey, he remains indebted to you.
     - Your mother was a powerful nano while she lived, helpful to many locals. They look upon you kindly, but they also expect much from you.
@@ -156,10 +178,17 @@ Jack:
     Cypher Use:
       desc: You can bear two cyphers at a time
       amt: 2
+    Weapons:
+      desc: You can use light and medium weapons without penalty. You have an inability with heavy weapons; your attacks with heavy weapons are hindered
+      inability: [Heavy Weapons]
     Skills:
       desc: Choose one skill (other than attacks or defense) in which you aren't already trained. You are trained in this skill.
+      trained: [_Jack]
     Flex Skill:
       desc: At the beginning of each day, choose one task (other than attacks or defense) on which you will concerntrate. For the rest of that day, you're trained in that task. You can't use this ability with a skill you're already trained in to become specialised.
+    Community Ability:
+      Fixer:
+        desc: [*community, the community's effect rank for health and infrastructure is +1. You choose which is modified during any given community action. Enabler.]
   chooseable:
     amt: 2
     skills:
@@ -217,3 +246,178 @@ Jack:
     Familiar Insight: YOu know this person (or heard about them somehwere) well enough to give insight about their motives or intentions, and how best to convince them to see things your way. You know the right words, posturing, inflection, amount of emotional manipulation, or even what sort of joke or agreeable complaint might sway them. This can convince a neutral person to take your side, or a hostile one to hear you out for a little while longer.
     Inspirational Recall: You recall an important detail from a previous encounter (perhaps something you don’t even remember noticing at the time) that suggests a successful course of action for your current situation. This might be recognizing a password hidden in an innocuous code or riddle, realizing you saw a suspicious individual near a crime scene, overhearing an important conversation between two NPCs, or understanding that an NPC’s subtle glance or gesture had additional connotations indicating what you should do.
     Lucky Break: Something unexpected happens that is to your advantage. A rope your opponent is hanging from might snap, the person you’re debating in front of an influential Aeon Priest might trip or forget what they were going to say, or something that was supposed to last only a round or two lasts a little while longer.
+Arkus:
+  stat_pool_start: {Might: 8, Speed: 9, Intellect: 11}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 0, Intellect: 1}
+  starting_equipment:
+    - stylish clothing
+    - Light Weapon
+    - Two Cyphers
+    - One Oddity
+  shins: 9
+  abilities:
+    Cypher Use:
+      desc: You can bear two cyphers at a time
+      amt: 2
+    Weapons:
+      desc: *light_weapon
+      inability: [Medium Weapons, Heavy Weapons]
+    Skills:
+      desc: You are trained in persuasion. In addition, you are trained in another interaction skill in which you are not already trained. You have an inability in crafting numenera, salvaging numenera, and understanding numenera. Enabler.
+      trained: [Persuasion, _Arkus]
+      option: [Negotiation, Deceiving, Public Speaking, Intimidation, Seeing Through Deception]
+      inability: [Crafting Numenera, Salvaging Numenera, Understanding Numenera]
+    Community Ability:
+      Leader:
+        desc: [*community, the community's rank is +1 for all purposes except damage inflicted. Enabler]
+    Demeanor of Command:
+      desc: You emote confidence, knowledge, and charisma to all who see you for the next hour. Your demeanor is such that those who see you automatically understand that you are someone important, accomplished, and with authority. When you speak, strangers that are not already attacking give you at least a round to have your say. If speaking to a group that can understand you, you can attempt to have them produce their leader or ask that they take you to their leader. You gain a free level of Effort that can be applied to one persuasion task you attempt during this period. Action to initiate.
+      cost: [2, Intellect]
+  chooseable:
+    amt: 2
+    skills:
+      Anecdote:
+        desc: You can lift the spirits of a group of creatures and help them bond together by entertaining them with an uplifting or pointed anecdote. For the next hour, those who pay attention to your story are trained in a task you choose that’s related to the anecdote, as long as it’s not an attack or defense task. Action to initiate, one minute to complete.
+        cost: [2, Intellect]
+      Babel:
+        desc: Once each day, choose one language that you’ve encountered on which you will concentrate. For the rest of that day, you can speak that language with reasonable facility. You don’t lose the use of any other languages you know normally during this period. Action to initiate, ten minutes to complete.
+        cost: [3, Intellect]
+      Connection With an Organization:
+        desc: You have a general connection with an important organization, such as the Order of Truth, the Angulan Knights, the aristocracy of a region, a merchant guild, and so on. Tasks related to interacting with members of that group gain an asset. Further, you can use this connection to learn about events related to that organization’s focus. For instance, if you have a connection with the Angulan Knights, you may learn of events related to mutants in the area. You and the GM should work out the details together. You can choose this ability more than once and choose a new organization each time. Enabler.
+      Goad:
+        desc: You can attempt to goad a target into a belligerent—and probably foolish—reaction that requires the target to try to close the distance between you and attempt to physically strike you on its next turn. They attempt this action even if this would cause them to break formation or to give up cover or a tactically superior position. Whether the target strikes you or fails to do so, they come to their senses immediately afterward, after which further tasks attempting to goad the target again are hindered. Action to initiate.
+        cost: [1, Intellect]
+      Powerful Rhetoric:
+        desc: After engaging a creature in conversation for at least a minute, you can attempt to influence how that creature is perceived, promoting it as a friend, dismissing it as a fool, or denouncing it as an enemy. Your words are so well chosen that even you and it are affected, because your conviction and its doubt are paramount. The accuracy of your assessment isn’t important as long as you keep up the rhetoric. From then on (or until you change your rhetoric or the creature offers a convincing defense to those who’ve heard your label), the friend’s social interactions gain an asset, the fool’s social interactions are hindered, or the enemy’s defenses are hindered. Action to initiate, one minute to complete.
+        cost: [1, Intellect]
+      Trained Without Armor:
+        desc: You are trained in Speed defense actions when not wearing armor. Enabler.
+      Understanding:
+        desc: You observe or study a creature or object. Your next interaction with that creature or object gains one asset. Action.
+        cost: [1, Intellect]
+  connection:
+    - You were in the military and had command over several others who still serve.
+    - You were the head of a wealthy merchant family that lost everything in a disaster.
+    - You owned a tavern for a while, but you sold it to a friend so you could seek greater challenges.
+    - You learned at the feet of an incredibly talented leader who went into hiding for fear of assassination.
+    - Your first love is involved in the ruling council of the community where you spent much of your youth.
+    - One of your grandparents was a minor official, but they were ousted and run out of town on suspicion of corruption.
+    - You spent some time leading a group of violent rebels but thought better of your actions later.
+    - You once promised to help a negotiation with a group of abhumans that turned out badly.
+    - A flock of traveling murdens always seek you out when they’re nearby because you once helped them.
+    - You are a member of a small secret society.
+    - Your ex-best friend tried to have you arrested on trumped-up charges, so you left town.
+    - You have traveled extensively, and during that time, you accumulated quite a collection of strange souvenirs.
+    - You grew up in a large, thriving city and still have many friends and contacts back there.
+    - You spoke up for a person you thought was wrongly accused of a crime. They were released partly based on your testimony, but you later came to have doubts.
+    - As an orphan, you had a difficult childhood, and your entry into adulthood was challenging.
+    - You headed a small church, and though you left to pursue your own strange journey, the congregation still tries to lure you back to the pulpit.
+    - Before they died, your parent was a respected member of the Order of Truth. Those who knew your parent are fond of you, but they also expect great things from you.
+    - As a political refugee, you are often treated with suspicion.
+    - When you were a diplomat working for a large city, you made friends with several visiting envoys, some of whom you still contact.
+    - You were married but lost your spouse in a horrific accident. The protection you failed to offer them is something you’d like to provide to save others.
+  background:
+    Inborn Traits: You were born this way. Everyone always took to you. You always seemed to know the right thing to say. It all came naturally. Your voice was pleasant, your eyes shining and honest, and your face attractive. These qualities have always been strong enough that you could rely on them. While others studied a craft, learned to fight or steal, or tinkered with the numenera, you found that you could usually get what you needed and wanted by talking to people. Now, all this might come from a heritage of quality forebears, or it could come from something more. A silver-tongued Arkus like yourself might have inherited these qualities from your family, or you might benefit from subtle mutations that alter your voice and mannerisms to be perfect for influencing others. You don’t really know. You just know that you’ve always been this way and that, while you look just like everyone else, you’re different. Of course, no one ever need know that but you.
+    Enhancements: You might be a leader, but you don’t fit the mold. Although you gained your share of practical experience in learning how to influence others, you have the numenera on your side as well. Some of your knowledge of rhetoric and ability to speak at an enhanced volume is due to biomechanical bits implanted in your brain and spine, wired into your nerves and muscles. Your vocal cords are woven with subtle resonant threads. Subdermal plating makes your appearance more symmetrical and pleasing. Your facial muscles are interlaced with small elements that give you complete control over your micro expressions. Alternatively, your genetic code could have been rewritten by engineered viruses, or the tissues in your body could have been reworked by nanotech, turning you into a paragon that others are drawn to. Or maybe you’ve been altered by strange science—radioactive treatments of bizarre energies, chemical compounds and drugs, or extradimensional enhancements—that makes you smarter and more able to see the implications of long-term planning than anyone around you. Whatever the case, you’re the result of ancient knowledge made manifest in the present, and now you’re shaping the future. Perhaps your modifications are obvious and visible; perhaps they’re not. Regardless, you know that you’re more than merely human.
+    Training and Experience: You are eloquent, good-looking, or both, but what really separates you from the crowd is your training. Perhaps you worked as an intern with the Aeon Priests in Qi that work behind the scenes to lead the Order of Truth, where they taught you how to speak eloquently, debate convincingly, and synthesize the best plans from all those put forth. You know a thousand different ways to argue and influence. You learned how to read people to ascertain their moods, distinguish their truths from their lies, and determine what they want and what they need to hear. You got a lot of practice using your skills in public, starting small at first but working your way up to leading community movements and taking charge of short-term community projects.
+  intrusions:
+    Friendly NPC: An NPC you don’t know, someone you don’t know that well, or someone you know but who hasn’t been particularly friendly in the past chooses to help you, though doesn’t necessarily explain why. Maybe they’ll ask you for a favor in return afterward, depending on how much trouble they go to.
+    Perfect Suggestion: A follower or other already-friendly NPC suggests a course of action with regard to an urgent question, problem, or obstacle you’re facing.
+    Unexpected Gift: An NPC hands you a physical gift you were not expecting, one that helps put the situation at ease if things seem strained, or provides you with a new insight for understanding the context of the situation if there’s something you’re failing to understand or grasp.
+Wright:
+  stat_pool_start: {Might: 9, Speed: 7, Intellect: 12}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 0, Intellect: 1}
+  starting_equipment:
+    - clothing
+    - One Weapon
+    - Explorer's Pack
+    - a book on crafting
+    - Three Cyphers
+    - One Oddity
+    - a box of crafting tools
+    - 4 units of io
+    - 4 units of responsive synth
+    - 6 units of parts
+  shins: 5
+  abilities:
+    Cypher Use:
+      desc: You can bear three cyphers at a time
+      amt: 3
+    Weapons:
+      desc: *light_weapon
+      inability: [Medium Weapons, Heavy Weapons]
+    Skills:
+      desc: You are trained in crafting numenera. In addition, you are trained in a crafting skill in which you are not already traine. Choose one of the following. You have an inability in salvaging numenera and understanding numenera. Enabler.
+      option: [Salvaging Numenera, Understanding Numenera, Engineering, Woodcrafting, Armoring, Weaponsmithing]
+      inability: [Salvaging Numenera, Understanding Numenera]
+    Community Ability:
+      Builder:
+        desc: [*community, +3 is added to the community's infrastrcture. Enabler]
+    Always Tinkering:
+      desc: If you have any tools or materials at all, and you are carrying fewer cyphers than your limit, you can create a cypher if you have an hour of time to spend. The new cypher is random and always 2 levels lower than normal (minimum 1). It's also tempermental and fragile. There are called tempermental cyphers. If you give it to anyone else to you, it falls apart immediately, useless. Action to initate, one hour to complete.
+    Numenera Plans:
+      desc: You start with two numenera plans of yhour choice. Enabler
+      amt: 2
+  chooseable:
+    amt: 2
+    skills:
+      Additional Numenera Plans:
+        desc: You gain two additional numenera plans. You can take this ability multiple times. Enabler.
+      Deconstruct:
+        desc: You take the time to closely study a bit of scrap, machine, cypher, artifact, or other numenera object or structure before attempting to salvage iotum from it. If the salvage source possesses iotum that can be salvaged (as determined by the GM), the salvage task gains an asset. In addition, you gain one additional iotum from the salvage attempt, which means one additional roll on the Iotum Result Table. Action to initiate, ten minutes to complete.
+        cost: [3, Intellect]
+      Extra Use:
+        desc: You attempt to gain an extra use from an installation or artifact without triggering a depletion roll. The difficulty of the task is equal to the level of the installation or artifact. If you crafted the installation or artifact, you gain an asset to the task. On a failure, the depletion roll occurs normally. You could also try to use a cypher without burning it out, but the task is hindered. A failed attempt to gain an additional use from a cypher destroys it before it can produce the desired effect. Action.
+        cost: [3, Intellect]
+      Natural Crafter:
+        desc: All commonplace objects or structures you craft are effectively 1 level higher than an average example of that object or structure. For instance, if you craft a defensive wall that would normally be level 4, its effective level is 5. Enabler.
+      Right Tool for the Job:
+        desc: If you have at least 1 unit of iotum, you can fashion a temporary device that provides an asset to one physical, noncombat task, identified ahead of time. For example, if you need to climb a wall, you could create some sort of climbing assistance device; if you need to break out of a cell, you can tune iotum in your possession to serve as a lockpick; if you need to create a small distraction, you could trigger an iotum to make a loud bang and flash; and so on. Once fashioned, the adapted iotum lasts for about a minute or until used for the intended purpose. This use destroys the iotum. Action to prepare the iotum; action to initiate.
+        cost: [1, Intellect]
+        iotum_appending: 1
+      Scan for Iotum:
+        desc: Using a device or some kind of unique sense, you scan an area equal in size to a 10-foot (3 m) cube, including all objects or structures. The area must be within immediate range. The difficulty of the task is equal to the level of the object or structure being scanned. Scanning in this fashion grants an asset to initial salvage tasks in the area to determine if anything is worth salvaging. This ability doesn’t improve your ability to find a specific kind of iotum, only to discover whether there is iotum within the salvage source in the first place. That said, many materials and energy fields prevent or resist scanning. Action.
+        cost: [2, Intellect]
+      Scramble Machine:
+        desc: You render one machine within short range unable to function for one round. Alternatively, you can hinder any action by the machine (or by someone attempting to use the machine) for one minute. Action.
+        cost: [2, Intellect]
+      Trained in Armor:
+        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Speed Effort cost for wearing armor by 1. If you choose this as one of your starting inspired techniques, you start the game with armor of your choice. Enabler.
+      Trigger Iotum Ray:
+        desc: If you have at least 1 unit of iotum, you can trigger it to release a shortrange ray of force that inflicts 3 points of damage. This does not destroy the iotum. Alternatively, you can choose to have this destroy the iotum, in which case there is no Intellect cost. Action.
+        cost: [1, Intellect]
+        iotum_substitute: 1
+  background:
+      Unusual Upbringing: From a very early age, you had access to machines and tools, and you were encouraged to learn how to use them. Perhaps you were raised by a Nano or an Aeon Priest who thought building was more important than playing. Maybe your parents were obsessed with the numenera. Or perchance you were incubated and trained by machines who needed human ingenuity and creativity to solve a problem they couldn’t overcome. You stacked gears and circuits instead of wooden blocks, and your earliest drawings were schematics for toys you wanted to build. Your bedtime stories were about automatons, nanites, and electronics, and your dreams were filled with the wondrous things you would create with an endless supply of iotum and parts. When you grew older and prepared to set out on your own, you asked those who raised you what great work you could build for them as thanks for what they taught you—something contributing to their research, a device to overcome an infirmity, or even a new self-willed automaton to  join them. Now you search for a suitable plan, the iotum to craft it, or both.
+      Unexpected Brilliance: "Your mind developed early, way before your peers. Your parents realized it and delighted in challenging you with puzzles and projects. You could fix household items, and eventually you found your true passion: taking apart oddities, scrap, and depleted cyphers. You figured out how to make broken machines work again, and honed your ability to recognize what a jumble of parts could do if you put them together in just the right configuration. Most people respected and appreciated your talent, some tried to exploit you, and a few feared you, but your incredible mind made sure you always came out ahead—or gave you enough of a head start to get away from serious trouble. Whence did your brilliance spring? Just an accident of nurture and nature? Did you have a great-grandparent who was equally skilled? Or is your facility with objects and structures something inherent in you, such as a mutation in your brain that gives you insights that others can’t imagine? It’s a mystery, and one you’d like 	to solve one day. But only after you finish your current list of crafting projects."
+      Mechanical Indoctrination: The Prophecy was clear. If the machine that squatted at the center of town could not be awoken by midnight during the next eclipse, the Spear of God would strike like a burning sword from the void and blast everyone and everything to drit. You were one of the ones selected to awaken the Red Cube. You were schooled, drilled, and cypher-fed all manner of information, plans, knowledge, and even some physical know-how dripped into your blood by strange machines the city elders kept in dark basements. Others who were selected weakened and eventually died under the brutal regime of learning. It was rough on you, too, but where so many others failed, you succeeded. You learned. And with that knowledge, you repaired the machine and saved the city. But in the aftermath, you were different, both physically and psychologically. You weren’t taught how to craft things— it was programmed into you, hard-coded into your flesh and mind with drugs and technology, conditioned into your psyche with rep titive drills. You don’t know if the motivations of your captors/doctors/ instructors were noble or nefarious, but the end result is that building things is as natural for you as breathing. You can assemble basic components when you’re half asleep just by using muscle memory. You may even have subdermal implants that convert nutrition and bodily wastes into components you need. You  might feel like you were robbed of a normal childhood, or you might celebrate your strange education and embrace opportunities to learn and experience childish things with adult senses and intellect. In some ways, you are an organic machine built to create and repair other machines, but your skills are what allow you to survive and thrive in the Ninth World. Your goal may be to destroy those who created  you, better understand their motives, or push  orward their agenda.
+  intrusions:
+      Device Perfection: A device or installation works even better than you expected it would, at least in this instance. Maybe the range is twice as long, the duration is 100% longer, or the effect itself is 50% stronger.
+      Crafting Insight: You are inspired, and you  finish crafting the object or structure earlier than was expected (maybe even halving the total time).
+      Tinkering Vision: When using your Always Tinkering special ability, you discover that the materials you’re using are of unexpectedly high quality, giving you specific options to choose from. So instead of gaining a random cypher, you gain the cypher of your choice (though it’s still a temperamental cypher, so it’s 2 levels lower than normal and you can’t give it to someone else without destroying it).
+  connection:
+    - Your mother praised your artistic talent as a child, but you chose to give it up in favor of crafting.
+    - You lost your brother when you were young. Your only memory of him is a doll you yet keep.
+    - You retain a pet automaton about the size of a breadbox with wheels that you had even as a child.
+    - You are known as a seller of strange gadgets and once even made your living doing so.
+    - You once created a machine for distilling spirits that your friends still tell stories about.
+    - You had a partner who also enjoyed crafting, but there was an accident and they died.
+    - You created a device that caused you to disappear for three months. You later reappeared with no memory of what had happened and a star-shaped scar on your left temple.
+    - You’re a member of a secret organization of wrights who occasionally share messages and plans.
+    - You once owned a plan for crafting a dread destroyer, but it was stolen.
+    - One of your creations accidentally triggered a local incident with the iron wind. At least, that’s what some accused you of after it was all over and the dead were counted. You don’t think it was your fault, but you wonder.
+    - You had an apprentice you were teaching your craft to, but they left you in the middle of your most important project, causing it to fail.
+    - Your best friend from your youth is now a hated outlaw, though others say they are a hero. You’re not sure where the truth lies.
+    - You once met the Amber Pope in Qi and received a verbal invitation to return one day.
+    - On a few occasions, you’ve found just the iotum you needed to proceed in your work. You don’t know who or what has been responsible for providing them.
+    - You were a member of the Convergence, until you thought better of it. You still know one or two members.
+    - Religion has always been part of your life, though only recently have you thought to question it.
+    - A great musician in a nearby large city claims they owe their success to an instrument you crafted.
+    - You know where dozens, perhaps even hundreds, of plan seeds are located, but you haven’t been able to mount an expedition to locate and secure the cache yet.
+    - You were accused of murdering your brother. You fled to where you are now.
+    - You were trained by a master wright who left the world in a magnificent starcraft they built.
+
