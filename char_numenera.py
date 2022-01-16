@@ -27,4 +27,3 @@ character = {
     'Oddities': List[str], # [Oddity description]
 }
 
-print(character)
