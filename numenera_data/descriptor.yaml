@@ -1,358 +1,358 @@
 Charming:
-	desc: You’re a smooth talker and a charmer. Whether through seemingly supernatural means or just a way with words, you can convince others to do as you wish. Most likely, you’re physically attractive or at least highly charismatic, and others enjoy listening to your voice. You probably pay attention to your appearance, keeping yourself well groomed. You make friends easily. You play up the personality facet of your Intellect stat; intelligence is not your strong suit. You’re personable, not necessarily studious or strong-willed.
-	pool_bonus: [2, Intellect]
-	skill:
-    	- You'retrained in all tasks involving positive or pleasant social interaction
-    	- You're trained when using esoteries or special abilities that influence the minds of others
-	contact: You have an important contact who is in an influential position, such as a minor noble, the captain of the town guard, an Aeon Priest, or the head of a large gang of thieves. You and the GM should work out the details together.
-	inability:
-		- You were never good at studying or retaining facts. Any task involving lore, knowledge or understanding is hindered
-		- Your willpower is not one of your stong points. Whenever you try to resis a mental attack, you're hindered
-	equipment:
-		shins: 10
-	initial_link:
-		- You convinced one of the other PCs to tell you what they were doing.
-		- You instigated the whole thing and convinced the others to join you.
-		- One of the other PCs did a favor for you, and now you’re repaying that obligation by helping them with the task at hand.
-		- There is reward involved, and you need the money.
+    desc: You’re a smooth talker and a charmer. Whether through seemingly supernatural means or just a way with words, you can convince others to do as you wish. Most likely, you’re physically attractive or at least highly charismatic, and others enjoy listening to your voice. You probably pay attention to your appearance, keeping yourself well groomed. You make friends easily. You play up the personality facet of your Intellect stat; intelligence is not your strong suit. You’re personable, not necessarily studious or strong-willed.
+    pool_bonus: [2, Intellect]
+    skill:
+        - You'retrained in all tasks involving positive or pleasant social interaction
+        - You're trained when using esoteries or special abilities that influence the minds of others
+    contact: You have an important contact who is in an influential position, such as a minor noble, the captain of the town guard, an Aeon Priest, or the head of a large gang of thieves. You and the GM should work out the details together.
+    inability:
+        - You were never good at studying or retaining facts. Any task involving lore, knowledge or understanding is hindered
+        - Your willpower is not one of your stong points. Whenever you try to resis a mental attack, you're hindered
+    equipment:
+        shins: 10
+    initial_link:
+        - You convinced one of the other PCs to tell you what they were doing.
+        - You instigated the whole thing and convinced the others to join you.
+        - One of the other PCs did a favor for you, and now you’re repaying that obligation by helping them with the task at hand.
+        - There is reward involved, and you need the money.
 Clever:
-	desc: You’re quick-witted, thinking well on your feet. You understand people, so you can fool them but are rarely fooled. Because you easily see things for what they are, you get the lay of the land swiftly, size up threats and allies, and assess situations with accuracy. Perhaps you’re physically attractive, or maybe you use your wit to overcome any physical or mental imperfections.
-	pool_bonus: [2, Intellect]
-	skill:
-		- You’re trained in all interactions involving lies or trickery.
-		- You’re trained in defense rolls to resist mental effects.
-		- You’re trained in all tasks involving, identifying, or assessing danger, lies, quality, importance, function, or power.
-	inability:
-		- You were never good at studying or retaining trivial knowledge. Any task involving lore, knowledge, or understanding is hindered.
-	equipment:
-		shins: 10
-	initial_link:
-		- You convinced one of the other PCs to tell you what they were doing.
-		- From afar, you observed that something interesting was going on.
-		- You talked your way into the situation because you thought it might earn some money.
-		- You suspect that the other PCs won’t succeed without you.
+    desc: You’re quick-witted, thinking well on your feet. You understand people, so you can fool them but are rarely fooled. Because you easily see things for what they are, you get the lay of the land swiftly, size up threats and allies, and assess situations with accuracy. Perhaps you’re physically attractive, or maybe you use your wit to overcome any physical or mental imperfections.
+    pool_bonus: [2, Intellect]
+    skill:
+        - You’re trained in all interactions involving lies or trickery.
+        - You’re trained in defense rolls to resist mental effects.
+        - You’re trained in all tasks involving, identifying, or assessing danger, lies, quality, importance, function, or power.
+    inability:
+        - You were never good at studying or retaining trivial knowledge. Any task involving lore, knowledge, or understanding is hindered.
+    equipment:
+        shins: 10
+    initial_link:
+        - You convinced one of the other PCs to tell you what they were doing.
+        - From afar, you observed that something interesting was going on.
+        - You talked your way into the situation because you thought it might earn some money.
+        - You suspect that the other PCs won’t succeed without you.
 Graceful:
-	desc: You have a perfect sense of balance, moving and speaking with grace and beauty. You’re quick, lithe, flexible, and dexterous. Your body is perfectly suited to dance, and you use that advantage in combat to dodge blows. You might wear garments that enhance your agile movement and sense of style.
-	pool_bonus: [2, Speed]
-	skill:
-		- You’re trained in all tasks involving balance and careful movement.
-		- You’re trained in all tasks involving physical performing arts.
-		- You’re trained in all Speed defense tasks.
-	initial_link:
-		- Against your better judgment, you joined the other PCs because you saw that they were in danger.
-		- One of the other PCs convinced you that joining the group would be in your best interest.
-		- You’re afraid of what might happen if the other PCs fail.
-		- There is reward involved, and you need the money.
+    desc: You have a perfect sense of balance, moving and speaking with grace and beauty. You’re quick, lithe, flexible, and dexterous. Your body is perfectly suited to dance, and you use that advantage in combat to dodge blows. You might wear garments that enhance your agile movement and sense of style.
+    pool_bonus: [2, Speed]
+    skill:
+        - You’re trained in all tasks involving balance and careful movement.
+        - You’re trained in all tasks involving physical performing arts.
+        - You’re trained in all Speed defense tasks.
+    initial_link:
+        - Against your better judgment, you joined the other PCs because you saw that they were in danger.
+        - One of the other PCs convinced you that joining the group would be in your best interest.
+        - You’re afraid of what might happen if the other PCs fail.
+        - There is reward involved, and you need the money.
 Intelligent:
-	desc: You’re quite smart. Your memory is sharp, and you easily grasp concepts that others might struggle with. This aptitude doesn’t necessarily mean that you’ve had years of formal education, but you have learned a great deal in your life, primarily because you pick things up quickly and retain so much.
-	pool_bonus: [2, Intellect]
-	skill:
-		- You’re trained in an area of knowledge of your choice.
-		- You’re trained in all actions that involve remembering or memorizing things you experience directly. For example, instead of being good at recalling details of geography that you read about in a book, you can remember a path through a set of tunnels that you’ve explored before.
-	initial_link:
-		- One of the other PCs asked your opinion of the mission, knowing that if you thought it was a good idea, it probably was.
-		- You saw value in what the other PCs were doing.
-		- You believed that the task might lead to important and interesting discoveries.
-		- A colleague requested that you take part in the mission as a favor.
+    desc: You’re quite smart. Your memory is sharp, and you easily grasp concepts that others might struggle with. This aptitude doesn’t necessarily mean that you’ve had years of formal education, but you have learned a great deal in your life, primarily because you pick things up quickly and retain so much.
+    pool_bonus: [2, Intellect]
+    skill:
+        - You’re trained in an area of knowledge of your choice.
+        - You’re trained in all actions that involve remembering or memorizing things you experience directly. For example, instead of being good at recalling details of geography that you read about in a book, you can remember a path through a set of tunnels that you’ve explored before.
+    initial_link:
+        - One of the other PCs asked your opinion of the mission, knowing that if you thought it was a good idea, it probably was.
+        - You saw value in what the other PCs were doing.
+        - You believed that the task might lead to important and interesting discoveries.
+        - A colleague requested that you take part in the mission as a favor.
 Learned:
-	desc: You have studied, either on your own or with an instructor. You know many things and are an expert on a few topics, such as history, biology, geography, the numenera, nature, or any other area of study. Learned characters typically carry a few books around with them and spend their spare time reading.
-	pool_bonus: [2, Intellect]
-	skill:
-		- You’re trained in three areas of knowledge of your choice.
-	inability:
-		- You have few social graces. Any task involving charm, persuasion, or etiquette is hindered.
-	equipment:
-		- Two additional books on topics of your choice.
-	initial_link:
-		- One of the other PCs asked you to come along because of your knowledge.
-		- You need money to fund your studies.
-		- You believed that the task might lead to important and interesting discoveries.
-		- A colleague requested that you take part in the mission as a favor.
+    desc: You have studied, either on your own or with an instructor. You know many things and are an expert on a few topics, such as history, biology, geography, the numenera, nature, or any other area of study. Learned characters typically carry a few books around with them and spend their spare time reading.
+    pool_bonus: [2, Intellect]
+    skill:
+        - You’re trained in three areas of knowledge of your choice.
+    inability:
+        - You have few social graces. Any task involving charm, persuasion, or etiquette is hindered.
+    equipment:
+        - Two additional books on topics of your choice.
+    initial_link:
+        - One of the other PCs asked you to come along because of your knowledge.
+        - You need money to fund your studies.
+        - You believed that the task might lead to important and interesting discoveries.
+        - A colleague requested that you take part in the mission as a favor.
 Mystical/Mechanical:
-	desc: You have a special talent that can be viewed in one of two ways. You might think of yourself as “mystical,” and thus attuned with the mysterious and the paranormal, or you might think of yourself as “mechanical,” and thus adept with devices and machines. In either case, your true talents lie with the numenera. You likely have experience with ancient lore, and you can sense and wield the numenera— though whether that means “magic” or “technology” is up to you (and probably up to those around you as well). Mystical characters often wear jewelry, such as a ring or an amulet, or have tattoos or other marks that show their interests. Mechanical characters tend to carry a lot of tools and treat them almost like talismans.
-	pool_bonus: [2, Intellect]
-	skill:
-		- You’re trained in all actions involving understanding numenera.
-		- You can sense whether the numenera is active in situations where its presence is not obvious. You must study an object or location closely for a minute to get a feel for whether the touch of the ancients is at work.
-		- You can perform the esotery known as Hedge Magic when you have a free hand and can pay the Intellect point cost.
-		- Hedge Magic - You can perform small tricks, such as temporarily change the color or basic appearance of a small object, cause small objects to float through the air, clean a small area, mend a broken object, prepare (but not create) food, and so on. You can’t use Hedge Magic to harm another creature or object. Action.
-	inability:
-		- You have a manner or an aura that others find a bit unnerving. Any task involving charm, persuasion, or deception is hindered.
-	equipment:
-		- One Oddity
-	initial_link:
-		- A dream guided you to this point.
-		- You need money to fund your studies.
-		- You believed the mission would be a great way to learn more about the numenera.
-		- Various signs and portents led you here.
+    desc: You have a special talent that can be viewed in one of two ways. You might think of yourself as “mystical,” and thus attuned with the mysterious and the paranormal, or you might think of yourself as “mechanical,” and thus adept with devices and machines. In either case, your true talents lie with the numenera. You likely have experience with ancient lore, and you can sense and wield the numenera— though whether that means “magic” or “technology” is up to you (and probably up to those around you as well). Mystical characters often wear jewelry, such as a ring or an amulet, or have tattoos or other marks that show their interests. Mechanical characters tend to carry a lot of tools and treat them almost like talismans.
+    pool_bonus: [2, Intellect]
+    skill:
+        - You’re trained in all actions involving understanding numenera.
+        - You can sense whether the numenera is active in situations where its presence is not obvious. You must study an object or location closely for a minute to get a feel for whether the touch of the ancients is at work.
+        - You can perform the esotery known as Hedge Magic when you have a free hand and can pay the Intellect point cost.
+        - Hedge Magic - You can perform small tricks, such as temporarily change the color or basic appearance of a small object, cause small objects to float through the air, clean a small area, mend a broken object, prepare (but not create) food, and so on. You can’t use Hedge Magic to harm another creature or object. Action.
+    inability:
+        - You have a manner or an aura that others find a bit unnerving. Any task involving charm, persuasion, or deception is hindered.
+    equipment:
+        - One Oddity
+    initial_link:
+        - A dream guided you to this point.
+        - You need money to fund your studies.
+        - You believed the mission would be a great way to learn more about the numenera.
+        - Various signs and portents led you here.
 Rugged:
-	desc: You’re a nature lover accustomed to living rough, pitting your wits against the elements. Most likely, you’re a skilled hunter, gatherer, or naturalist. Years of living in the wild have left their mark with a worn countenance, wild hair, or scars. Your clothing is probably much less refined than the garments worn by city dwellers.
-	skill:
-		- You’re trained in all tasks involving climbing, jumping, running, and swimming.
-		- You’re trained in all tasks involving training, riding, or placating natural animals.
-		- You’re trained in all tasks involving identifying or using natural plants.
-	inability:
-		- You have no social graces and prefer animals to people. Any task involving charm, persuasion, etiquette, or deception is hindered.
-	equipment:
-		- Explorer’s pack.
-		- An extra ranged weapon.
-	initial_link:
-		- Against your better judgment, you joined the other PCs because you saw that they were in danger.
-		- One of the other PCs convinced you that joining the group would be in your best interest.
-		- You’re afraid of what might happen if the other PCs fail.
-		- There is reward involved, and you need the money.
+    desc: You’re a nature lover accustomed to living rough, pitting your wits against the elements. Most likely, you’re a skilled hunter, gatherer, or naturalist. Years of living in the wild have left their mark with a worn countenance, wild hair, or scars. Your clothing is probably much less refined than the garments worn by city dwellers.
+    skill:
+        - You’re trained in all tasks involving climbing, jumping, running, and swimming.
+        - You’re trained in all tasks involving training, riding, or placating natural animals.
+        - You’re trained in all tasks involving identifying or using natural plants.
+    inability:
+        - You have no social graces and prefer animals to people. Any task involving charm, persuasion, etiquette, or deception is hindered.
+    equipment:
+        - Explorer’s pack.
+        - An extra ranged weapon.
+    initial_link:
+        - Against your better judgment, you joined the other PCs because you saw that they were in danger.
+        - One of the other PCs convinced you that joining the group would be in your best interest.
+        - You’re afraid of what might happen if the other PCs fail.
+        - There is reward involved, and you need the money.
 Stealthy:
-	desc: You’re sneaky, slippery, and fast. These talents help you hide, move quietly, and pull off tricks that require sleight of hand. Most likely, you’re wiry and small. However, you’re not much of a sprinter— you’re more dexterous than fleet of foot.
-	pool_bonus: [2, Speed]
-	skill:
-		- You’re trained in all stealthy tasks.
-		- You’re trained in all interactions involving lies or trickery.
-		- You’re trained in all esoteries or special abilities involving illusions or trickery.
-	inability:
-		- You’re sneaky but not fast. All movement-related tasks are hindered.
-	initial_link:
-		- You attempted to steal from one of the other PCs. That character caught you and forced you to come along with them.
-		- You were tailing one of the other PCs for reasons of your own, which brought you into the action.
-		- An NPC employer secretly paid you to get involved.
-		- You overheard the other PCs talking about a topic that interested you, so you decided to approach the group.
+    desc: You’re sneaky, slippery, and fast. These talents help you hide, move quietly, and pull off tricks that require sleight of hand. Most likely, you’re wiry and small. However, you’re not much of a sprinter— you’re more dexterous than fleet of foot.
+    pool_bonus: [2, Speed]
+    skill:
+        - You’re trained in all stealthy tasks.
+        - You’re trained in all interactions involving lies or trickery.
+        - You’re trained in all esoteries or special abilities involving illusions or trickery.
+    inability:
+        - You’re sneaky but not fast. All movement-related tasks are hindered.
+    initial_link:
+        - You attempted to steal from one of the other PCs. That character caught you and forced you to come along with them.
+        - You were tailing one of the other PCs for reasons of your own, which brought you into the action.
+        - An NPC employer secretly paid you to get involved.
+        - You overheard the other PCs talking about a topic that interested you, so you decided to approach the group.
 Strong:
-	desc: You’re extremely strong and physically powerful, and you use these qualities well, whether through violence or feats of prowess. You likely have a brawny build and impressive muscles.
-	pool_bonus: [4, Might]
-	skill:
-		- You’re trained in all actions involving breaking inanimate objects.
-		- You’re trained in all jumping actions.
-	equipment:
-		- [Medium weapon, Heavy weapon]
-	initial_link:
-		- Against your better judgment, you joined the other PCs because you saw that they were in danger.
-		- One of the other PCs convinced you that joining the group would be in your best interest.
-		- You’re afraid of what might happen if the other PCs fail.
-		- There is reward involved, and you need the money.
+    desc: You’re extremely strong and physically powerful, and you use these qualities well, whether through violence or feats of prowess. You likely have a brawny build and impressive muscles.
+    pool_bonus: [4, Might]
+    skill:
+        - You’re trained in all actions involving breaking inanimate objects.
+        - You’re trained in all jumping actions.
+    equipment:
+        - [Medium weapon, Heavy weapon]
+    initial_link:
+        - Against your better judgment, you joined the other PCs because you saw that they were in danger.
+        - One of the other PCs convinced you that joining the group would be in your best interest.
+        - You’re afraid of what might happen if the other PCs fail.
+        - There is reward involved, and you need the money.
 Strong-Willed:
-	desc: You’re tough-minded, willful, and independent. No one can talk you into anything or change your mind when you don’t want it changed. This quality doesn’t necessarily make you smart, but it does make you a bastion of willpower and resolve. You likely dress and act with unique style and flair, not caring what others think.
-	stat_pool: [4, Intellect]
-	skill:
-		- You’re trained in resisting mental effects.
-		- You’re trained in tasks requiring incredible focus or concentration.
-	inability:
-		- Willful doesn’t mean brilliant. Any task that involves figuring out puzzles or problems, memorizing things, or using lore is hindered.
-	initial_link:
-		- Against your better judgment, you joined the other PCs because you saw that they were in danger.
-		- One of the other PCs convinced you that joining the group would be in your best interest.
-		- You’re afraid of what might happen if the other PCs fail.
-		- There is reward involved, and you need the money.
+    desc: You’re tough-minded, willful, and independent. No one can talk you into anything or change your mind when you don’t want it changed. This quality doesn’t necessarily make you smart, but it does make you a bastion of willpower and resolve. You likely dress and act with unique style and flair, not caring what others think.
+    stat_pool: [4, Intellect]
+    skill:
+        - You’re trained in resisting mental effects.
+        - You’re trained in tasks requiring incredible focus or concentration.
+    inability:
+        - Willful doesn’t mean brilliant. Any task that involves figuring out puzzles or problems, memorizing things, or using lore is hindered.
+    initial_link:
+        - Against your better judgment, you joined the other PCs because you saw that they were in danger.
+        - One of the other PCs convinced you that joining the group would be in your best interest.
+        - You’re afraid of what might happen if the other PCs fail.
+        - There is reward involved, and you need the money.
 Swift:
-	desc: You move quickly, able to sprint in short bursts and work with your hands with dexterity. You’re great at crossing distances quickly but not always smoothly. You are likely slim and muscular.
-	stat_pool: [4, Speed]
-	skill:
-		- You’re trained in initiative actions (to determine who goes first in combat)
-		- You’re trained in running actions.
-	inability:
-		- You’re fast but not necessarily graceful. Any task involving balance is hindered.
-	initial_link:
-		- Against your better judgment, you joined the other PCs because you saw that they were in danger.
-		- One of the other PCs convinced you that joining the group would be in your best interest.
-		- You’re afraid of what might happen if the other PCs fail.
-		- There is reward involved, and you need the money.
+    desc: You move quickly, able to sprint in short bursts and work with your hands with dexterity. You’re great at crossing distances quickly but not always smoothly. You are likely slim and muscular.
+    stat_pool: [4, Speed]
+    skill:
+        - You’re trained in initiative actions (to determine who goes first in combat)
+        - You’re trained in running actions.
+    inability:
+        - You’re fast but not necessarily graceful. Any task involving balance is hindered.
+    initial_link:
+        - Against your better judgment, you joined the other PCs because you saw that they were in danger.
+        - One of the other PCs convinced you that joining the group would be in your best interest.
+        - You’re afraid of what might happen if the other PCs fail.
+        - There is reward involved, and you need the money.
 Tough:
-	desc: You’re strong and can take a lot of physical punishment. You might have a large frame and a square jaw. Tough characters frequently have visible scars.
-	stat_pool: [1, Armor]
-	skill:
-		- You’re trained in Might defense actions.
-	abilities:
-		Healty: Add 1 to your points you regain when you make a recovery roll
-		Resilient: +1 to Armor
-	equipment:
-		- Light Weapon
-	inital_link:
-		- You’re acting as a bodyguard for one of the other PCs.
-		- One of the PCs is your sibling, and you came along to watch out for them.
-		- You need money because your family is in debt.
-		- You stepped in to defend one of the PCs when they were threatened. While talking to them afterward, you heard about the group’s task.
+    desc: You’re strong and can take a lot of physical punishment. You might have a large frame and a square jaw. Tough characters frequently have visible scars.
+    stat_pool: [1, Armor]
+    skill:
+        - You’re trained in Might defense actions.
+    abilities:
+        Healty: Add 1 to your points you regain when you make a recovery roll
+        Resilient: +1 to Armor
+    equipment:
+        - Light Weapon
+    inital_link:
+        - You’re acting as a bodyguard for one of the other PCs.
+        - One of the PCs is your sibling, and you came along to watch out for them.
+        - You need money because your family is in debt.
+        - You stepped in to defend one of the PCs when they were threatened. While talking to them afterward, you heard about the group’s task.
 Adaptable:
-	desc: You flex and sway with changes both physical and mental. When something bad happens to you, you feel the pain and the loss, but soon, you’re back on your feet and in the action. When you have to learn a new skill, you don’t back away, but instead, you jump in and try your best. Being adaptable means that you’re often cooperative, because you know that, by working together, a group can overcome things that might be impossible for an individual. Some seek you out because of your adaptability, but others don’t see it as a positive trait and instead see you as someone who always changes their mind—someone without a foundation. You laugh at those accusations. That’s just the sort of thing someone would say if they had never changed their mind about anything in their life—a way for that person to feel good about their lack of growth.
-	stat_pool: [2, Any]
-	skill:
-		- You’re trained in pleasant social interactions.
-		- You’re trained in all actions that involve overcoming or ignoring the effects of deprivation, sorrow, or pain. This includes tasks related to ending an ongoing condition such as being dazed, blinded, stunned, and so on. (However, you are not trained in tasks to resist effects that confer those conditions in the first place.)
-	initial_link:
-		- The other PCs were impressed by how quickly you adapted to a bad situation and invited you to join them.
-		- The other PCs were looking for someone else, but you convinced them that you were the perfect person to join them instead.
-		- The other PCs were in a bind, but you were able to convince a third party to let the PCs go about their business—and you with them.
-		- One of the other PCs used to remark on your adaptability when you were younger, and now they’ve asked you to come along on a new outing where your skills are likely to be useful.
+    desc: You flex and sway with changes both physical and mental. When something bad happens to you, you feel the pain and the loss, but soon, you’re back on your feet and in the action. When you have to learn a new skill, you don’t back away, but instead, you jump in and try your best. Being adaptable means that you’re often cooperative, because you know that, by working together, a group can overcome things that might be impossible for an individual. Some seek you out because of your adaptability, but others don’t see it as a positive trait and instead see you as someone who always changes their mind—someone without a foundation. You laugh at those accusations. That’s just the sort of thing someone would say if they had never changed their mind about anything in their life—a way for that person to feel good about their lack of growth.
+    stat_pool: [2, Any]
+    skill:
+        - You’re trained in pleasant social interactions.
+        - You’re trained in all actions that involve overcoming or ignoring the effects of deprivation, sorrow, or pain. This includes tasks related to ending an ongoing condition such as being dazed, blinded, stunned, and so on. (However, you are not trained in tasks to resist effects that confer those conditions in the first place.)
+    initial_link:
+        - The other PCs were impressed by how quickly you adapted to a bad situation and invited you to join them.
+        - The other PCs were looking for someone else, but you convinced them that you were the perfect person to join them instead.
+        - The other PCs were in a bind, but you were able to convince a third party to let the PCs go about their business—and you with them.
+        - One of the other PCs used to remark on your adaptability when you were younger, and now they’ve asked you to come along on a new outing where your skills are likely to be useful.
 Articulate:
-	desc: When you speak, people understand exactly what you’re saying. You’re fluent, coherent, and, some might even say, silver-tongued, though you’d beg to differ. You don’t manipulate people; you just explain things so clearly and with such imaginative examples that those who disagree with you often come around to your point of view. Your eloquence is something that many praise you for, though some hate you for it because, compared to you, they find themselves wanting.
-	stat_pool: [2, Intellect]
-	skill:
-		- You’re trained in persuasion.
-		- You’re trained in all actions that involve making plans, explaining plans, and convincing others to accept your plans.
-	initial_link:
-		- One of the other PCs asked you to explain something to them. Impressed, they asked you to accompany them on a mission.
-		- You were delighted with one of the other PCs’ ability to convey their ideas and asked to come along.
-		- You’ve made some enemies despite—or perhaps because of—your articulate nature, and you need to find friends or, better yet, leave the area for a while.
-		- Another PC asked you to take part in the mission because they felt it would fail without you.
+    desc: When you speak, people understand exactly what you’re saying. You’re fluent, coherent, and, some might even say, silver-tongued, though you’d beg to differ. You don’t manipulate people; you just explain things so clearly and with such imaginative examples that those who disagree with you often come around to your point of view. Your eloquence is something that many praise you for, though some hate you for it because, compared to you, they find themselves wanting.
+    stat_pool: [2, Intellect]
+    skill:
+        - You’re trained in persuasion.
+        - You’re trained in all actions that involve making plans, explaining plans, and convincing others to accept your plans.
+    initial_link:
+        - One of the other PCs asked you to explain something to them. Impressed, they asked you to accompany them on a mission.
+        - You were delighted with one of the other PCs’ ability to convey their ideas and asked to come along.
+        - You’ve made some enemies despite—or perhaps because of—your articulate nature, and you need to find friends or, better yet, leave the area for a while.
+        - Another PC asked you to take part in the mission because they felt it would fail without you.
 Beneficent:
-	desc: Helping others is your calling. It’s why you’re here. Others delight in your outgoing and charitable nature, and you delight in their happiness. You’re at your best when you’re aiding people, either by explaining how they can best overcome a challenge or by demonstrating how to do so yourself.
-	stat_pool: [2, Intellect]
-	skill:
-		- You’re trained in all tasks related to pleasant social interaction, putting other people at ease, and gaining others’ trust.
-	abilities:
-		Devoted: Allies who have spent the last day with you add +1 to their recovery rolls. You also gain this benefit if at least one other ally gains it.
-	initial_link:
-		- Even though you didn’t know most of the other PCs beforehand, you invited yourself on their quest to help them.
-		- You saw the other PCs struggling to overcome a problem and selflessly joined them to help.
-		- You’re nearly certain the other PCs will fail without you.
-		- You had to choose between living your tattered life and helping others. You haven’t looked back since.
+    desc: Helping others is your calling. It’s why you’re here. Others delight in your outgoing and charitable nature, and you delight in their happiness. You’re at your best when you’re aiding people, either by explaining how they can best overcome a challenge or by demonstrating how to do so yourself.
+    stat_pool: [2, Intellect]
+    skill:
+        - You’re trained in all tasks related to pleasant social interaction, putting other people at ease, and gaining others’ trust.
+    abilities:
+        Devoted: Allies who have spent the last day with you add +1 to their recovery rolls. You also gain this benefit if at least one other ally gains it.
+    initial_link:
+        - Even though you didn’t know most of the other PCs beforehand, you invited yourself on their quest to help them.
+        - You saw the other PCs struggling to overcome a problem and selflessly joined them to help.
+        - You’re nearly certain the other PCs will fail without you.
+        - You had to choose between living your tattered life and helping others. You haven’t looked back since.
 Cheerful:
-	desc: Happy and optimistic, you rarely feel down. Usually, you wake up with anticipation for what the day will hold. Your good spirits aren’t necessarily something you try to share with others, because you know that what lies in another’s heart isn’t for you to change. But sometimes your mere presence and lighthearted nature is enough to mend sadness. Of course, sometimes bad things happen to you too, and your basic nature is suppressed for a time. But eventually, your light-heartedness always returns.
-	stat_pool: [4 , Intellect]
-	skill:
-		- You are trained in one activity that most would consider to be a hobby, such as woodworking, singing, writing, and so on.
-		- You are trained in tasks related to making friends, ending conflicts, and making a positive first impression on strangers.
-	inability:
-		- You have a hard time recognizing when others aren’t as bright and forthcoming as you. Tasks to detect falsehoods and disguises are hindered.
-	initial_link:
-		- One of the other PCs asked you to come along because of your pleasant nature in the hopes that it would help bond the group.
-		- You were just trying to be agreeable, but you ended up agreeing to go on a mission.
-		- You woke up with a great idea for an expedition and got the other PCs to join you.
-		- Your cheerfulness saved you from violence when bad elements confronted you. Instead of beating you (or worse), they told you about something that led to your mission.
+    desc: Happy and optimistic, you rarely feel down. Usually, you wake up with anticipation for what the day will hold. Your good spirits aren’t necessarily something you try to share with others, because you know that what lies in another’s heart isn’t for you to change. But sometimes your mere presence and lighthearted nature is enough to mend sadness. Of course, sometimes bad things happen to you too, and your basic nature is suppressed for a time. But eventually, your light-heartedness always returns.
+    stat_pool: [4 , Intellect]
+    skill:
+        - You are trained in one activity that most would consider to be a hobby, such as woodworking, singing, writing, and so on.
+        - You are trained in tasks related to making friends, ending conflicts, and making a positive first impression on strangers.
+    inability:
+        - You have a hard time recognizing when others aren’t as bright and forthcoming as you. Tasks to detect falsehoods and disguises are hindered.
+    initial_link:
+        - One of the other PCs asked you to come along because of your pleasant nature in the hopes that it would help bond the group.
+        - You were just trying to be agreeable, but you ended up agreeing to go on a mission.
+        - You woke up with a great idea for an expedition and got the other PCs to join you.
+        - Your cheerfulness saved you from violence when bad elements confronted you. Instead of beating you (or worse), they told you about something that led to your mission.
 Civic:
-	desc: You put the good of the many over the needs of the few, at least in a sense. You implicitly understand that only through cooperation can groups of people remain happy and productive. Your experience has shown that cooperation generates greater benefits for everyone in the long term—including access to food, protection, and knowledge. As a result, you tend to become especially invested in whatever community you live in or, perhaps one day, found yourself.
-	stat_pool: [2 , Intellect]
-	skill:
-		- You’re trained in tasks related to finding out about both current events and secrets within the community where you live.
-		- You’re trained in all tasks related to aiding a community, including repairing infrastructure, quelling riots, defending against incursions, and so on.
-	abilities:
-		Civic-Minded: You add +1 to the health of any community you are currently living in.
-	equipment:
-		- numenera plan
-	initial_link:
-		- While picking up litter around the community, you overheard the other PCs talking about a mission and asked to join.
-		- You need resources and friends to help you in your civic aspirations later.
-		- It was clear that the mission couldn’t succeed without your civic skills and knowledge.
-		- You thought the community would be endangered if you didn’t come along.
+    desc: You put the good of the many over the needs of the few, at least in a sense. You implicitly understand that only through cooperation can groups of people remain happy and productive. Your experience has shown that cooperation generates greater benefits for everyone in the long term—including access to food, protection, and knowledge. As a result, you tend to become especially invested in whatever community you live in or, perhaps one day, found yourself.
+    stat_pool: [2 , Intellect]
+    skill:
+        - You’re trained in tasks related to finding out about both current events and secrets within the community where you live.
+        - You’re trained in all tasks related to aiding a community, including repairing infrastructure, quelling riots, defending against incursions, and so on.
+    abilities:
+        Civic-Minded: You add +1 to the health of any community you are currently living in.
+    equipment:
+        - numenera plan
+    initial_link:
+        - While picking up litter around the community, you overheard the other PCs talking about a mission and asked to join.
+        - You need resources and friends to help you in your civic aspirations later.
+        - It was clear that the mission couldn’t succeed without your civic skills and knowledge.
+        - You thought the community would be endangered if you didn’t come along.
 Committed:
-	desc: You are wholeheartedly dedicated and loyal to a cause, activity, or job, shrugging off any obstacles that get in your way. When you pick this descriptor, you can work with your GM to figure out what that cause is. For instance, maybe you’re committed to tracking down someone who wronged you long ago. Alternatively, you can wait for a cause to catch your attention in the campaign. Either way, being committed is a personality trait for you, and once you decide to do something, you throw yourself into it with a vengeance.
-	stat_pool: [4 , Might]
-	skill:
-		- You’re trained in tasks related toenduring trials of mind and body.
-	abilities:
-		Dedication Brings Rewards: You tend to practice things over and over. Once between each ten-hour recovery roll, you gain an asset to similar actions involving the same task (such as making attacks against the same foe or operating the same device). The asset doesn’t apply to similar but different tasks (such as attacking a different foe, even if of the same kind, or operating a different but very similar device).
-	inability:
-		- Sometimes you come across as so single-minded that you put people off. Persuasion tasks are hindered
-	initial_link:
-		- Your commitment to your cause seems to overlap some aspect of what the other PCs want to accomplish.
-		- You were looking for something to commit to, and the other PCs had a job they needed to get done.
-		- Obviously, a task like what the PCs had in mind needed someone as committed as you to see it through.
-		- As you completed another mission with great success, you overheard the other PCs talking about a new mission and asked to join.
+    desc: You are wholeheartedly dedicated and loyal to a cause, activity, or job, shrugging off any obstacles that get in your way. When you pick this descriptor, you can work with your GM to figure out what that cause is. For instance, maybe you’re committed to tracking down someone who wronged you long ago. Alternatively, you can wait for a cause to catch your attention in the campaign. Either way, being committed is a personality trait for you, and once you decide to do something, you throw yourself into it with a vengeance.
+    stat_pool: [4 , Might]
+    skill:
+        - You’re trained in tasks related toenduring trials of mind and body.
+    abilities:
+        Dedication Brings Rewards: You tend to practice things over and over. Once between each ten-hour recovery roll, you gain an asset to similar actions involving the same task (such as making attacks against the same foe or operating the same device). The asset doesn’t apply to similar but different tasks (such as attacking a different foe, even if of the same kind, or operating a different but very similar device).
+    inability:
+        - Sometimes you come across as so single-minded that you put people off. Persuasion tasks are hindered
+    initial_link:
+        - Your commitment to your cause seems to overlap some aspect of what the other PCs want to accomplish.
+        - You were looking for something to commit to, and the other PCs had a job they needed to get done.
+        - Obviously, a task like what the PCs had in mind needed someone as committed as you to see it through.
+        - As you completed another mission with great success, you overheard the other PCs talking about a new mission and asked to join.
 Confident:
-	desc: You’re self-assured, which helps in almost every situation—at least situations where violence is not involved. Fortunately, because you’re so self-confident and positive, you’re usually able to steer situations away from violent endings. It’s possible that your confidence makes you seem levelheaded and cool in a tough situation, or your confidence could make you eager to prove your skills when the going gets rough—it’s up to you. Either way, others eventually learn that you’re confident for a good reason.
-	stat_pool: [1, All]
-	skills:
-		- There is some basis for your confidence. You are trained in three nonphysical, non-combat skills of your choice.
-	abilities:
-		Confident Outlook: Sometimes confidence counts as much as or more than competence. When you set your mind to it, you are trained in one task for ten minutes, as long as that task is not an attack or a defense. You can do this once per rest (the ability is renewed each time you make a recovery roll).
-		Failure Has Its Consequence: Sometimes confidence leads to overconfidence and a stark realization of failure. You trigger a GM intrusion on a d20 roll of 1 or 2.
-	initial_link:
-		- You dragged one of the other PCs into it, certain that together you could accomplish anything.
-		- When the other PCs asked for help, you were confident that you could provide whatever was necessary.
-		- How could you not be involved? The mission requires someone with your skills to succeed.
-		- You told another PC that you’ve never failed and probably never would. They took you at your word and brought you along.
+    desc: You’re self-assured, which helps in almost every situation—at least situations where violence is not involved. Fortunately, because you’re so self-confident and positive, you’re usually able to steer situations away from violent endings. It’s possible that your confidence makes you seem levelheaded and cool in a tough situation, or your confidence could make you eager to prove your skills when the going gets rough—it’s up to you. Either way, others eventually learn that you’re confident for a good reason.
+    stat_pool: [1, All]
+    skills:
+        - There is some basis for your confidence. You are trained in three nonphysical, non-combat skills of your choice.
+    abilities:
+        Confident Outlook: Sometimes confidence counts as much as or more than competence. When you set your mind to it, you are trained in one task for ten minutes, as long as that task is not an attack or a defense. You can do this once per rest (the ability is renewed each time you make a recovery roll).
+        Failure Has Its Consequence: Sometimes confidence leads to overconfidence and a stark realization of failure. You trigger a GM intrusion on a d20 roll of 1 or 2.
+    initial_link:
+        - You dragged one of the other PCs into it, certain that together you could accomplish anything.
+        - When the other PCs asked for help, you were confident that you could provide whatever was necessary.
+        - How could you not be involved? The mission requires someone with your skills to succeed.
+        - You told another PC that you’ve never failed and probably never would. They took you at your word and brought you along.
 Cultured:
-	desc: Your excellent education and privileged upbringing has lent you a refined taste. You’re able to discern degrees of difference where others see, hear, or taste the same thing. Your awareness extends to artistic endeavors and general knowledge of the area you reside in and areas far from you (to the extent this knowledge is possible). You’re an example, if you do say so yourself, of the benefits that civilization canf bring to someone. Though that doesn’t mean you can’t appreciate other ways of living.
-	stat_pool: no
-	skill:
-		- You’re trained in all tasks related to knowledge of current events and history. Skill: You’re discerning, trained in all tasks related to perception, detecting differences, and noticing minor flaws (or strengths) in the works of others.
-	abilities:
-		Learned: Being well read and well educated, you have a wide range of talents. You can attempt one task in which you have no training as if you were trained. This ability refreshes every time you make a recovery roll, but the uses never accumulate.
-	inability:
-		- People who are not Cultured may think of you as a snob. Any task involving getting people to believe or trust you is hindered.
-	equipment:
-		- You have a book on a topic of your choice
-		- Set of very fine clothing.
-	initial_link:
-		- You could see that the other PCs would fail without your help.
-		- You convinced one of the other PCs that you had invaluable skills.
-		- You know that expanding your education requires experience as well as study, and you believe that you can learn a lot by joining the other PCs.
-		- Just because you’re cultured doesn’t mean you don’t wish to explore, see new places, and make a name for yourself!
+    desc: Your excellent education and privileged upbringing has lent you a refined taste. You’re able to discern degrees of difference where others see, hear, or taste the same thing. Your awareness extends to artistic endeavors and general knowledge of the area you reside in and areas far from you (to the extent this knowledge is possible). You’re an example, if you do say so yourself, of the benefits that civilization canf bring to someone. Though that doesn’t mean you can’t appreciate other ways of living.
+    stat_pool: no
+    skill:
+        - You’re trained in all tasks related to knowledge of current events and history. Skill: You’re discerning, trained in all tasks related to perception, detecting differences, and noticing minor flaws (or strengths) in the works of others.
+    abilities:
+        Learned: Being well read and well educated, you have a wide range of talents. You can attempt one task in which you have no training as if you were trained. This ability refreshes every time you make a recovery roll, but the uses never accumulate.
+    inability:
+        - People who are not Cultured may think of you as a snob. Any task involving getting people to believe or trust you is hindered.
+    equipment:
+        - You have a book on a topic of your choice
+        - Set of very fine clothing.
+    initial_link:
+        - You could see that the other PCs would fail without your help.
+        - You convinced one of the other PCs that you had invaluable skills.
+        - You know that expanding your education requires experience as well as study, and you believe that you can learn a lot by joining the other PCs.
+        - Just because you’re cultured doesn’t mean you don’t wish to explore, see new places, and make a name for yourself!
 Curious:
-	desc: There once was a time when the prior worlds spoke to the stars, reshaped the creatures of the world, and mastered form and essence. Isn’t that incredible? Each day is a chance to rediscover a secret, a bit of knowledge, a story, r something you can’t even imagine yet. It’s dizzying, when you consider all there is to learn and discover. You’re drawn to explore the ruins of the prior worlds, places that are brand new and unique to the Ninth World, or civilizations that still exist among the stars high overhead. Of course, if you’re going to satisfy your curiosity, you need to be careful. Before plunging directly into the unknown, you learn as much as you can about a new area through inquiry or exploration. Otherwise, you might not live long enough to see everything you want to see and do everything you want to do.
-	stat_pool: [2 , Intellect]
-	skill:
-		- You see things others miss. You are trained in perception.
-		- You’re always investigating something new and building up your knowledge. As a result, you can always find something interesting or engaging about any situation. You’re trained in all tasks related to detecting falsehoods, piercing illusions or disguises, and seeing past facades.
-	equipment:
-		- Three books on whatever subjects you choose.
-	initial_link:
-		- You were curious about what the PCs were doing and followed them.
-		- You heard that the other PCs were going someplace new and begged to go along.
-		- You got in over your head pursuing something fascinating, and the other PCs rescued you.
-		- One of the other PCs fascinates you, perhaps due to a special or weird ability they have.
+    desc: There once was a time when the prior worlds spoke to the stars, reshaped the creatures of the world, and mastered form and essence. Isn’t that incredible? Each day is a chance to rediscover a secret, a bit of knowledge, a story, r something you can’t even imagine yet. It’s dizzying, when you consider all there is to learn and discover. You’re drawn to explore the ruins of the prior worlds, places that are brand new and unique to the Ninth World, or civilizations that still exist among the stars high overhead. Of course, if you’re going to satisfy your curiosity, you need to be careful. Before plunging directly into the unknown, you learn as much as you can about a new area through inquiry or exploration. Otherwise, you might not live long enough to see everything you want to see and do everything you want to do.
+    stat_pool: [2 , Intellect]
+    skill:
+        - You see things others miss. You are trained in perception.
+        - You’re always investigating something new and building up your knowledge. As a result, you can always find something interesting or engaging about any situation. You’re trained in all tasks related to detecting falsehoods, piercing illusions or disguises, and seeing past facades.
+    equipment:
+        - Three books on whatever subjects you choose.
+    initial_link:
+        - You were curious about what the PCs were doing and followed them.
+        - You heard that the other PCs were going someplace new and begged to go along.
+        - You got in over your head pursuing something fascinating, and the other PCs rescued you.
+        - One of the other PCs fascinates you, perhaps due to a special or weird ability they have.
 Earnest:
-	desc: You always speak from the heart, rarely remembering that dissembling can be useful to smooth over awkward interpersonal situations. You’re sincere and feel things deeply. You like to get to the meat of whatever problem prevents you from succeeding, whether it’s a person, a physical obstacle, or a puzzle of some kind.
-	stat_pool: [2 , Intellect]
-	skill:
-		- You’re trained in persuasion.
-		- You have a passion. You are trained in one area of lore or knowledge of your choice.
-		- You’re trained in defense rolls to resist disease and poison.
-		- You’re trained in all tasks involving providing consolation and emotional support to others.
-	inability:
-		- You never could detect a lie. Tasks that involve seeing through lies or trickery are hindered.
-	equipment:
-		shins: 10
-	initial_link:
-		- Another PC told you what they were up to, and you joined them.
-		- Hard times overwhelmed you, and having no funds, you joined the other PCs.
-		- It was either join the other PCs or be kidnapped into a far worse situation.
-		- You suspect that the other PCs won’t succeed without you.
+    desc: You always speak from the heart, rarely remembering that dissembling can be useful to smooth over awkward interpersonal situations. You’re sincere and feel things deeply. You like to get to the meat of whatever problem prevents you from succeeding, whether it’s a person, a physical obstacle, or a puzzle of some kind.
+    stat_pool: [2 , Intellect]
+    skill:
+        - You’re trained in persuasion.
+        - You have a passion. You are trained in one area of lore or knowledge of your choice.
+        - You’re trained in defense rolls to resist disease and poison.
+        - You’re trained in all tasks involving providing consolation and emotional support to others.
+    inability:
+        - You never could detect a lie. Tasks that involve seeing through lies or trickery are hindered.
+    equipment:
+        shins: 10
+    initial_link:
+        - Another PC told you what they were up to, and you joined them.
+        - Hard times overwhelmed you, and having no funds, you joined the other PCs.
+        - It was either join the other PCs or be kidnapped into a far worse situation.
+        - You suspect that the other PCs won’t succeed without you.
 Empirical:
-	desc: You trust only what you can see with your own eyes—and sometimes not even that. You’re most comfortable when you’ve had time to complete your research, find all the facts, and figure out the truth.
-	stat_pool: [4 , Intellect]
-	skill:
-		- You are trained in all actions involved with conducting tests to find proof, discern the truth, or glean information.
-	abilities:
-		Quick Study: When you take a round to study whatever is in front of you and gain the facts, you feel more confident that you’re about to do the right thing. Your next non-combat action gains an asset.
-		Non-Resilient: If you haven’t had time to study something, you have a hard time taking action and moving forward. Whenever you receive a GM intrusion, any action you take in response is hindered.
-	initial_link:
-		- You’ve been studying a topic for a long time, and you think one of the other PCs has some knowledge about said topic.
-		- You need to gather some additional materials for something you are studying, and joining the other PCs seemed like a good way to get it.
-		- Someone told you an impossible story about this area, and you absolutely need to see for yourself to prove them wrong (or begrudgingly let them know they’re right).
-		- You recently read something that suggested there was more knowledge in the world than could be found in study. You’d like to find out if that is true.
+    desc: You trust only what you can see with your own eyes—and sometimes not even that. You’re most comfortable when you’ve had time to complete your research, find all the facts, and figure out the truth.
+    stat_pool: [4 , Intellect]
+    skill:
+        - You are trained in all actions involved with conducting tests to find proof, discern the truth, or glean information.
+    abilities:
+        Quick Study: When you take a round to study whatever is in front of you and gain the facts, you feel more confident that you’re about to do the right thing. Your next non-combat action gains an asset.
+        Non-Resilient: If you haven’t had time to study something, you have a hard time taking action and moving forward. Whenever you receive a GM intrusion, any action you take in response is hindered.
+    initial_link:
+        - You’ve been studying a topic for a long time, and you think one of the other PCs has some knowledge about said topic.
+        - You need to gather some additional materials for something you are studying, and joining the other PCs seemed like a good way to get it.
+        - Someone told you an impossible story about this area, and you absolutely need to see for yourself to prove them wrong (or begrudgingly let them know they’re right).
+        - You recently read something that suggested there was more knowledge in the world than could be found in study. You’d like to find out if that is true.
 Exacting:
-	desc: You expect a lot from others. From your point of view, you are drawing out their very best. Demanding the utmost of those around you can be challenging in and of itself. Many people would rather take things easier because putting in extra effort is hard. But for you, effort is what it’s all about. You expect the most from yourself, so why wouldn’t you expect greatness from those you work with? People sometimes call you demanding, but you take it as a compliment.
-	stat_pool: [4 , Might]
-	skill:
-		- You’re trained in persuasion and intimidation tasks.
-		- You’re trained in tasks to sense when someone isn’t telling the truth.
-	inability:
-		- You’re sometimes accused of being unpleasant. Tasks involving positive social interaction are hindered.
-		- Being so concerned with how those around you are performing their tasks makes you vulnerable to anything that attacks your mind. Intellect defense rolls are hindered.
-	initial_link:
-		- The other PCs demonstrated they could meet your standards, and you offered to accompany them.
-		- Another PC helped you out of a difficult situation, and you accompanied them to repay the debt.
-		- Most people aren’t even worth considering, but the other PCs show promise.
-		- To tell the truth, being exacting all the time also leads to loneliness. You joined the other PCs because you wanted some company.
+    desc: You expect a lot from others. From your point of view, you are drawing out their very best. Demanding the utmost of those around you can be challenging in and of itself. Many people would rather take things easier because putting in extra effort is hard. But for you, effort is what it’s all about. You expect the most from yourself, so why wouldn’t you expect greatness from those you work with? People sometimes call you demanding, but you take it as a compliment.
+    stat_pool: [4 , Might]
+    skill:
+        - You’re trained in persuasion and intimidation tasks.
+        - You’re trained in tasks to sense when someone isn’t telling the truth.
+    inability:
+        - You’re sometimes accused of being unpleasant. Tasks involving positive social interaction are hindered.
+        - Being so concerned with how those around you are performing their tasks makes you vulnerable to anything that attacks your mind. Intellect defense rolls are hindered.
+    initial_link:
+        - The other PCs demonstrated they could meet your standards, and you offered to accompany them.
+        - Another PC helped you out of a difficult situation, and you accompanied them to repay the debt.
+        - Most people aren’t even worth considering, but the other PCs show promise.
+        - To tell the truth, being exacting all the time also leads to loneliness. You joined the other PCs because you wanted some company.
 Forward-Thinking:
-	desc: You take time to think about all angles of a future project or mission, so you can prepare for any and all contingencies. You’re not necessarily bad at thinking on your feet, but you work better when you have time to prepare for a situation. Because you’re forwardthinking, people may come to you for advice. You’re not better at guessing equally weighted outcomes, but then again, you know that  few events are completely random. Things usually happen for a reason, and you excel at identifying such things ahead of time.
-	stat_pool: [2 , Intellect]
-	skill:
-		- You are trained in initiative tasks.
-		- You know how to leverage risk. You’re trained in tasks that involve some element of chance, such as playing games or choosing between two or three apparently equal options.
-	equipment:
-		shins: 30
-	initial_link:
-		- A new danger arose, but you were prepared and responded with a pre-planned contingency.
-		- You showed up when and where you did after due consideration and forethought.
-		- In order to gain the resources you need for some longer-term projects, you need to  accomplish shorter-term goals.
-		- You told one of the other PCs that nothing could surprise you because you’re always thinking ahead. They brought you along to test your claim.
+    desc: You take time to think about all angles of a future project or mission, so you can prepare for any and all contingencies. You’re not necessarily bad at thinking on your feet, but you work better when you have time to prepare for a situation. Because you’re forwardthinking, people may come to you for advice. You’re not better at guessing equally weighted outcomes, but then again, you know that  few events are completely random. Things usually happen for a reason, and you excel at identifying such things ahead of time.
+    stat_pool: [2 , Intellect]
+    skill:
+        - You are trained in initiative tasks.
+        - You know how to leverage risk. You’re trained in tasks that involve some element of chance, such as playing games or choosing between two or three apparently equal options.
+    equipment:
+        shins: 30
+    initial_link:
+        - A new danger arose, but you were prepared and responded with a pre-planned contingency.
+        - You showed up when and where you did after due consideration and forethought.
+        - In order to gain the resources you need for some longer-term projects, you need to  accomplish shorter-term goals.
+        - You told one of the other PCs that nothing could surprise you because you’re always thinking ahead. They brought you along to test your claim.
 Gregarious:
-	desc: You love people, and they generally love you. You know how to interact with large groups and work the crowd. You’re likely to be a leader, a diplomat, or a very successful businessperson. You enjoy being around people, and you’re generally interested in what they have to say and what they think about things. You ask a lot of questions, and you’re generous and kind to those who deserve it (in fact, you’re often willing to give latitude to people who others would have given up on).
-	stat_pool: [2, Intellect]
-	abilities:
-		People Person: When you are within immediate range of at least two allies, the difficulty of one non-combat-related task is eased. You can do this only once, but its use is restored each time you make a recovery roll.
-		Getting the Word: If you spend an hour amid a large group of people, you can glean general rumors, gossip, or opinions they hold.
-	initial_link:
-		- You asked around and learned the other PCs were doing something interesting.
-		- You bought the other PCs a round of drinks, and they welcomed you into their ranks.
-		- You gathered the other PCs together for the task at hand.
-		- Doing anything is better than being alone.
+    desc: You love people, and they generally love you. You know how to interact with large groups and work the crowd. You’re likely to be a leader, a diplomat, or a very successful businessperson. You enjoy being around people, and you’re generally interested in what they have to say and what they think about things. You ask a lot of questions, and you’re generous and kind to those who deserve it (in fact, you’re often willing to give latitude to people who others would have given up on).
+    stat_pool: [2, Intellect]
+    abilities:
+        People Person: When you are within immediate range of at least two allies, the difficulty of one non-combat-related task is eased. You can do this only once, but its use is restored each time you make a recovery roll.
+        Getting the Word: If you spend an hour amid a large group of people, you can glean general rumors, gossip, or opinions they hold.
+    initial_link:
+        - You asked around and learned the other PCs were doing something interesting.
+        - You bought the other PCs a round of drinks, and they welcomed you into their ranks.
+        - You gathered the other PCs together for the task at hand.
+        - Doing anything is better than being alone.
