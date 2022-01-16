@@ -1,3 +1,4 @@
+# Numenera Discovery
 Charming:
     desc: You’re a smooth talker and a charmer. Whether through seemingly supernatural means or just a way with words, you can convince others to do as you wish. Most likely, you’re physically attractive or at least highly charismatic, and others enjoy listening to your voice. You probably pay attention to your appearance, keeping yourself well groomed. You make friends easily. You play up the personality facet of your Intellect stat; intelligence is not your strong suit. You’re personable, not necessarily studious or strong-willed.
     pool_bonus: [2, Intellect]
@@ -169,6 +170,7 @@ Tough:
         - One of the PCs is your sibling, and you came along to watch out for them.
         - You need money because your family is in debt.
         - You stepped in to defend one of the PCs when they were threatened. While talking to them afterward, you heard about the group’s task.
+# Numenera Destiny
 Adaptable:
     desc: You flex and sway with changes both physical and mental. When something bad happens to you, you feel the pain and the loss, but soon, you’re back on your feet and in the action. When you have to learn a new skill, you don’t back away, but instead, you jump in and try your best. Being adaptable means that you’re often cooperative, because you know that, by working together, a group can overcome things that might be impossible for an individual. Some seek you out because of your adaptability, but others don’t see it as a positive trait and instead see you as someone who always changes their mind—someone without a foundation. You laugh at those accusations. That’s just the sort of thing someone would say if they had never changed their mind about anything in their life—a way for that person to feel good about their lack of growth.
     stat_pool: [2, Any]
@@ -262,7 +264,8 @@ Cultured:
     desc: Your excellent education and privileged upbringing has lent you a refined taste. You’re able to discern degrees of difference where others see, hear, or taste the same thing. Your awareness extends to artistic endeavors and general knowledge of the area you reside in and areas far from you (to the extent this knowledge is possible). You’re an example, if you do say so yourself, of the benefits that civilization canf bring to someone. Though that doesn’t mean you can’t appreciate other ways of living.
     stat_pool: no
     skill:
-        - You’re trained in all tasks related to knowledge of current events and history. Skill: You’re discerning, trained in all tasks related to perception, detecting differences, and noticing minor flaws (or strengths) in the works of others.
+        - You’re trained in all tasks related to knowledge of current events and history.
+        - You’re discerning, trained in all tasks related to perception, detecting differences, and noticing minor flaws (or strengths) in the works of others.
     abilities:
         Learned: Being well read and well educated, you have a wide range of talents. You can attempt one task in which you have no training as if you were trained. This ability refreshes every time you make a recovery roll, but the uses never accumulate.
     inability:
@@ -356,11 +359,26 @@ Gregarious:
         - You bought the other PCs a round of drinks, and they welcomed you into their ranks.
         - You gathered the other PCs together for the task at hand.
         - Doing anything is better than being alone.
+Heroic:
+	desc: You are courageous, daring, and altruistic in equal measures. You’re not afraid to face horrors that make others quaver, especially if it means helping someone who couldn’t succeed (or survive) without you. Some say you’re made of the stuff of legends and that your exploits will one day become the stories that inspire a new generation.
+	stat_pool: [2 , Might]
+	skill:
+	- Things tend to go your way. You are trained in tasks involving perception and finding hidden things.
+	abilities:
+		Heroic Guise: You hold yourself in a way that inspires others. You are trained in all social interactions. You’re not better at guessing equally weighted outcomes, but then again, you know that few events are completely random. Things usually happen for a reason, and you excel at identifying such things ahead of time.
+		Hero’s Complication: Although the GM can use GM intrusions on you normally (awarding XP), they can also introduce a GM intrusion on you as if you had rolled a 1 on a d20 roll (without awarding XP) based on how your heroic nature tends to attract danger. Every other time the GM uses this ability to introduce a GM intrusion without giving you XP, your heroic nature works toyour advantage. Your weapon breaks, but that allows you to notice something everyone else missed. A trap catches you, but it also catches your enemies. A new foe enters the fray, but your current foe mistakes it for your ally and attacks it instead of you. You and the GM should determine the advantage together.
+	inability:
+		- You tend to take others at their word. Tasks that involve detecting falsehoods are hindered.
+	initial_link:
+		- You were hunting a great foe and hired the other PCs to accompany you.
+		- The PCs were looking for someone like you to round out their number.
+		- A mentor recommended you to the other PCs.
+		- You killed a mighty foe, and the other PCs were aided (or rescued from captivity) by that act.
 Imaginative:
 	desc: You have a flair for making things up. Whenever something else isn’t occupying your attention, you’re creating an ongoing narrative or mental picture within the confines of your own mind. Sometimes, what you imagine becomes a useful idea or something you write, paint, or draw. Mainly, however, you live inside your own head, content to imagine all the things that the world around you sometimes fails to provide.
 	stat_pool: [2 , Intellect]
 	skill:
-		- You’ve got a flair for art and are trained in one of the following skills: painting, drawing, singing, poetry, writing, sculpting, playing a style of musical instrument, or something similar.
+		- "You’ve got a flair for art and are trained in one of the following skills: painting, drawing, singing, poetry, writing, sculpting, playing a style of musical instrument, or something similar."
 	abilities:
 		Imaginative Solution: When you apply a level of Effort to any Intellect task, you gain a free level of Effort. You can do this one time, although the ability is renewed each time you make a ten-hour recovery roll.
 	initial_link:
@@ -368,7 +386,6 @@ Imaginative:
 		- You needed money, and this seemed like a good way to earn some.
 		- Experience is the best ingredient for even better panoramas of imagination.
 		- It sounded like fun.
-
 Industrious:
 	desc: You’re rarely satisfied with the status quo. You’re always thinking about how you’d like to advance your agenda or improve a situation (whether it’s your situation or someone else’s). Whatever your goal, you come at things with an idea of how you’ll accomplish everything that needs to be done to achieve it.
 	stat_pool: [4 , Speed]
@@ -435,7 +452,7 @@ Lawful:
 		- You gathered the other PCs together to accomplish a lawful task.
 		- You agreed to provide money for the upkeep of an organization you are or were previously affiliated with and find yourself in need of new funds, so you joined the other PCs.
 		- You think the other PCs will help you bring law to areas that suffer lawlessness, once you get them on board with your way of thinking.
-Loyal
+Loyal:
 	desc: It’s in your nature to form strong attachments. And when you attach yourself to a person, a group, or an institution, you can’t do anything else but remain true to it, even in the face of attacks that put you at risk of life and limb. It gives you pleasure to give your aid to others. In the past, some may have accused you of being blindly loyal, which is ridiculous. If someone shows you truly incontrovertible evidence that the person or institution that you’ve given yourself to is not worthy, you’d like to think that you would weigh all the evidence and come to a decision based on the facts and the facts alone.
 	stat_pool: [2 , Intellect]
 	abilities:
@@ -460,7 +477,6 @@ Meddlesome:
 		- One of your mutual friends has gone missing, and you and the other PCs are determined to find them.
 		- You believed that the other PCs’ task might lead to important and maybe even amazing discoveries.
 		- Frightened by something, you fled to safety, but you returned with the other PCs to watch your back.
-NURTURING
 Nurturing:
 	desc: You’re a born caregiver. When you see someone in need, you’re there with an encouraging word, assistance, and an honest desire to see them grow and improve. Some nurturers focus only on children, who of course have the most growing to do, but your focus is wider. You nurture anyone—not only people but institutions and communities, too.
 	stat_pool: [2 , Might]
@@ -548,7 +564,8 @@ Prepared:
 	skill:
 		- You are trained in initiative tasks.
 	abilities:
-		Tool Aficionado: If a tool enables a noncombat task but does not provide an asset, you gain an asset to that task anyway when using a tool. If a tool provides an asset to a non-combat task, you gain one additional asset when using it. Inflexible: You’re not usually surprised, so it’s extra surprising when you are. The first action you take after being surprised or when a foe attacks you before you have acted is  hindered.
+		Tool Aficionado: If a tool enables a noncombat task but does not provide an asset, you gain an asset to that task anyway when using a tool. If a tool provides an asset to a non-combat task, you gain one additional asset when using it. 
+        Inflexible: You’re not usually surprised, so it’s extra surprising when you are. The first action you take after being surprised or when a foe attacks you before you have acted is  hindered.
 	equipment:
 	 - A bag of light tools.
 	initial_link:

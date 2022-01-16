@@ -37,6 +37,7 @@ Glaive:
       desc: Choose one of the following skills in which you aren't already trained. You have an inability in crafting numenera, salvaging numenera, and understanding numenera.
       options: [Balancing, Climbing, Jumping, Swimming]
       inability: [Crafting Numenera, Salvaging Numenera, Understanding Numenera]
+    # Numenera Discovery
     Community Ability:
       Defender:
         desc: [*community, the community's effective rank for damage inflicted is +1. Enabler]
@@ -59,6 +60,26 @@ Glaive:
         desc: When you make an unarmed attack (such as a punch or kick), it counts as a medium weapon instead of a light weapon. Enabler.
       Trained Without Armor:
         desc: You are trained in Speed defense actions when not wearing armor. Enabler.
+      # Numenera Character Options 1
+      Danger Sense:
+        desc: The difficulty of your initiative roll is reduced by one step. Enabler.
+      Goad:
+        desc: After you successfully attack a creature, the difficulty of Speed defense rolls made by all others against attacks by that creature is decreased by one step until the end of the next round. Enabler.
+        cost: [ 2, Might ]
+      Muscles of Iron:
+        desc: For the next ten minutes, all Might-based actions other than attack rolls that you attempt have their difficulty reduced by one step. Enabler.
+        cost: [ 2, Might ]
+      Opportunist:
+        desc: You have an asset on any attack roll you make against a creature that has been attacked at some point during the round and is within immediate range. Enabler.
+      Overwatch:
+        desc: You use a ranged weapon to target a limited area (such as a doorway, a hallway, or the eastern side of the clearing) and make an attack against the next viable target to enter that area. This works like a wait action, but you also negate any benefit the target would have from cover, position, surprise, range, illumination, or visibility. Further, you inflict 1 additional point of damage with the attack. You can remain on overwatch as long as you wish, within reason. Action.
+        cost: [ 1, Intellect ]
+      Quick Draw:
+        desc: You use an action to make an attack with a thrown light weapon. You then draw another light weapon and make another thrown attack against the same target or a different one. Action.
+        cost: [ 2, Speed ]
+      Surging Confidence:
+        desc: When you use an action to make your first recovery roll of the day, you immediately gain another action. Enabler.
+        cost: [ 1, Might ]
   connection:
     - You were in the military and have friends who still serve. Your former commander remembers you well.
     - You were the personal guard of a wealthy merchant who accused you of theft. You left her service in disgrace.
@@ -130,6 +151,31 @@ Nano:
         cost: [2, Intellect]
       Ward:
         desc:You have a shield of energy around you at all times that helps deflect attacks. You gain +1 to Armor. Enabler.
+      # Numenera Character Options 1
+      Aggression:
+        desc:You reach into the mind of a character and unlock his more primitive instincts. Choose one character within short range. That character has an asset on Might-based attack rolls. The effect lasts for one minute. Action to initiate.
+        cost: [ 2, Intellect ]
+      Distortion:
+        desc:You modify how a willing creature reflects light for one minute. Choose a creature within short range. The target rapidly shifts between its normal appearance and a blot of darkness. The target has an asset on Speed defense rolls until the effect wears off. Action to initiate.
+        cost: [ 2, Intellect ]
+      Erase Memories:
+        desc:You reach into a creature’s mind to make it forget. Choose one creature within immediate range and make an Intellect roll. On a success, you erase up to the last five minutes of the creature’s memory. The creature forgets what it experienced during that time. Action.
+        cost: [ 3, Intellect ]
+      Far Step:
+        desc: You leap through the air and land some distance away. You can jump up, down, or across to anywhere you choose within long range if you have a clear and unobstructed path to that location. You land safely. Action.
+        cost: [ 2, Intellect ]
+      Machine Interface:
+        desc: The difficulty of discerning the level, function, and activation of powered numenera devices that you touch is decreased by one step for one minute. Enabler.
+        cost: [ 2, Intellect ]
+      Mental Link:
+        desc:You open a pathway to another creature’s mind via a light touch, which allows you to transmit thoughts and images to each other. In other words, you can communicate with each other without having to speak. The mental link remains regardless of distance and lasts for one hour. Instead of applying Effort to decrease the difficulty of this esotery, you can apply Effort to extend the duration by one hour for each level of Effort. Action to initiate.
+        cost: [ 1, Intellect ]
+      Resonance Field:
+        desc:Faint lines in a color you choose form a tracery over your entire body and emit faint light. The effect lasts for one minute. Whenever a creature within immediate range makes an attack against you, the pattern energizes to block the attack. You can make an Intellect defense roll in place of the defense roll you would normally make. If you do so and you get a minor effect, the creature attacking you takes 1 point of damage. If you get a major effect, the creature attacking you takes 4 points of damage. Action to initiate.
+        cost: [ 1, Intellect ]
+      Sculpt Flesh:
+        desc:You cause a willing creature’s fingers to lengthen into claws and her teeth to grow into fangs by sculpting her flesh. The effect lasts for ten minutes. The damage dealt by the target’s unarmed strikes increases to 4 points. Action.
+        cost: [ 2, Intellect ]
   connection:
     - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.
     - You studied in a school infamous for its dark, brooding instructors and graduates.]
@@ -205,7 +251,7 @@ Jack:
       Fleet of Foot:
         desc: You can move a short distance as part of another action. You can move a long distance as your entire action for a turn. If you apply a level of Effort to this ability, you can move a long distance and make an attack as your entire action for a turn, but the attack is hindered. Enabler.
         cost: [1, Speed]
-      Late Inspiration (3 Intellect points):
+      Late Inspiration:
         desc: You retry a task you failed within the past one minute, using the same difficulty and modifiers, except this time you have an asset on the task. If this retry fails, you can’t use this ability to retry it again. Enabler.
         cost: [1, Speed]
       Link Senses:
@@ -217,6 +263,25 @@ Jack:
       Vanish:
         desc: You become invisible for a short amount of time. While invisible, you have an asset on stealth and Speed defense tasks. The invisibility ends at the end of your next turn, or if you do something to reveal your presence or position—attacking, using an ability, moving a large object, and so on. Action.
         cost: [2, Intellect]
+      # Numenera Character Options 1
+      Combat Ruse:
+        desc: You feint or juke to mislead your foe and foil its defenses. Choose a creature within short range. If you succeed on a Speed roll, the next character to attack that creature before the end of your next turn has an asset to its attack roll. Action.
+        cost: [ 1, Speed ]
+      Decipher:
+        desc: If you spend one minute examining a piece of writing or code in a language you do not understand, you can make an Intellect roll of difficulty 3 (or higher, based on the complexity of the language or code). On a success, you get the gist of what the writing says. Action to initiate.
+        cost: [ 1, Intellect ]
+      Gather Rumors:
+        desc: When you spend a few hours in an inhabited urban environment about the size of a town or larger, the GM must tell you one rumor that pertains to the community. Instead of applying Effort to decrease the difficulty, you can apply Effort to learn additional rumors, with each level of Effort revealing one more rumor. Enabler.
+        cost: [ 1, Intellect ]
+      Rope Trick:
+        desc: You are trained in all tasks requiring a rope. Further, you can set nonlethal traps with a rope that are one level higher than they would normally be to detect or avoid. Enabler.
+      Sabotage:
+        desc: You are particularly good at bypassing locks and dismantling devices. You are trained in lockpicking, the numenera, and any task that involves sabotaging an object. Enabler.
+      Tracer:
+        desc: You touch a creature. For the next hour, you know the creature’s direction relative to your current position, but you don’t know its distance from you. Action to initiate.
+        cost: [ 1, Intellect ]
+      Vision:
+        desc: You can see clearly in dim light, very  dim light, and darkness. Enabler.
   connection:
     - You come from a large family and had to fend for yourself from an early age.
     - Your older sister is a skilled nano. You weren’t able to follow her path, but the numenera is not unknown to you.
@@ -246,6 +311,7 @@ Jack:
     Familiar Insight: YOu know this person (or heard about them somehwere) well enough to give insight about their motives or intentions, and how best to convince them to see things your way. You know the right words, posturing, inflection, amount of emotional manipulation, or even what sort of joke or agreeable complaint might sway them. This can convince a neutral person to take your side, or a hostile one to hear you out for a little while longer.
     Inspirational Recall: You recall an important detail from a previous encounter (perhaps something you don’t even remember noticing at the time) that suggests a successful course of action for your current situation. This might be recognizing a password hidden in an innocuous code or riddle, realizing you saw a suspicious individual near a crime scene, overhearing an important conversation between two NPCs, or understanding that an NPC’s subtle glance or gesture had additional connotations indicating what you should do.
     Lucky Break: Something unexpected happens that is to your advantage. A rope your opponent is hanging from might snap, the person you’re debating in front of an influential Aeon Priest might trip or forget what they were going to say, or something that was supposed to last only a round or two lasts a little while longer.
+# Numenera Destiny
 Arkus:
   stat_pool_start: {Might: 8, Speed: 9, Intellect: 11}
   additional_points: 6
@@ -420,4 +486,223 @@ Wright:
     - You know where dozens, perhaps even hundreds, of plan seeds are located, but you haven’t been able to mount an expedition to locate and secure the cache yet.
     - You were accused of murdering your brother. You fled to where you are now.
     - You were trained by a master wright who left the world in a magnificent starcraft they built.
+Delve:
+  stat_pool_start: {Might: 9, Speed: 9, Intellect: 10}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 1, Intellect: 1}
+  starting_equipment:
+    - clothing
+    - one weapon
+    - [Light Armor, 1 extra unit of responsive synth]
+    - a pack of light tools
+    - Explorer's Pack
+    - Two Cyphers
+    - One Oddity
+  shins: 3
+  abilities:
+    Cypher Use:
+      desc: You can bear two cyphers at a time
+      amt: 2
+    Weapons:
+      desc: You can use light and medium weapons without penalty. You have an inability with heavy weapons; your attacks with heavy weapons are hindered
+      inability: [Heavy Weapons]
+    Skills:
+      desc: You are trained in salvaging numenera. In addition, you are trained in an exploration skill in which you are not already trained. You have an inability in crafting numenera and understanding numenera. Enabler.
+      option: [Navigation, Perception, Sensing Danger, Creature Knowledge, Initiative, Peacefully Opening Comms with Strangers, Tracking]
+      inability: [Salvaging Numenera, Understanding Numenera]
+    Community Ability:
+      Explorer:
+        desc: [*community, the community's effective rank for purposes of finding resources, locating new trade routes, knowing about conditions just beyond the comunity and detecting sneak attacks by enemies is + 1. Enabler]
+  chooseable:
+    amt: 2
+    skills:
+      Additional Training:
+        desc: You are trained in two additional skills in which you are not already trained. Choose from the following. Enabler
+        option: [ navigation, perception, sensing danger, initiative, peacefully opening communications with strangers, and tracking. ]
+      Familiarize:
+        desc: "You can familiarize yourself with a new area if you spend at least one hour studying a region up to a long distance across that you are able to directly access and move about in. Once you’ve familiarized yourself with an area, all your tasks related to perception, navigation, salvaging, defense, and moving about the area gain an asset. Each time you familiarize yourself with a new area, you lose focus on a previous area unless you spend 1 XP to retain the familiarity permanently. Action to initiate, one hour to complete. Find the Way: When you apply Effort to a navigation task because you don’t know the way, are lost, are attempting to blaze a new route, need to choose between two or more otherwise similar paths to take, or something very similar, you can apply a free level of effort. Enabler."
+      Right Tool for the Job:
+        desc: If you have at least 1 unit of iotum, you can fashion a temporary device that provides an asset to a physical, non-combat task (identified ahead of time). For example, if you need to climb a wall, you could create some sort of climbing assistance device; if you need to break out of a cell, you can tune iotum in your possession to serve as a lockpick; if you need to create a small distraction, you could trigger an iotum to make a loud bang and flash; and so on. Once fashioned, the adapted iotum lasts for about a minute or until used for the intended purpose. This use destroys the iotum. Action to prepare the iotum; action to initiate.
+        cost: [ 1, Intellect ]
+        iotum_appending: 1
+      Skill With Defense:
+        desc: "Choose one type of defense task in which you are not already trained: Might, Speed, or Intellect. You are trained in defense tasks of that type. You can select this lore up to three times. Each time you select it, you must choose a different type of defense task. Enabler."
+        option: [ Might, Speed, Intellect ]
+      Trained in Armor:
+        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Speed Effort cost for wearing armor by 1. Enabler.
+      Trained Without Armor:
+        desc: You are trained in Speed defense tasks when not wearing armor. Enabler.
+  background:
+    What Others Fear to Know: Your knowledge of what underlies the numenera is a degree beyond what even most Aeon Priests and Nanos know. Some see it as devilry and ill magic, believing it is knowledge that should remain in the ruins of the past. Mimetic gel, tamed iron, kaon dots, and even data orbs are things that you understand because you found them and were taught by them in turn. The tamed iron nearly killed you because, as you know, it’s a cousin to the iron wind. The data orb was almost your death, because when you connected it to the datasphere, an automaton was dispatched to your location as a security measure. But you survived and learned yet more in the process. In fact, you learned to disassemble both the active devices and the long-dead machines of the prior worlds in order to salvage that which gave them form and substance. This iotum, you learned, was a completely new source of wonder and knowledge.
+    Part Machine: "Is it any wonder you can take apart other devices and machines when you’re at least half mechanical yourself? Your connection with machines is obvious: modules, ports, and other strange tech protrudes from your skin, hinting at deeper connections beneath. Perhaps your skin is shiny or metallic, or maybe it has a coating that absorbs light. You can find your way deeper into ruins of the prior worlds at least partially because you can open ways that others can’t with just a touch. When you salvage iotum from dead cyphers and scrap, you do so by commanding nanites through your ports. Your abilities are at least partially derived from the hidden devices that lace your nervous system. Sometimes, you wonder if the components and iotum that you salvage from other machines also lie within you. How you came to be part machine is a story all its own. Were you always like this? Did you fall into a ruin and  wake up this way? Did you undergo surgeries offered by a strange entity, taking a chance on becoming something more? However it happened, you’re not human, and commoners sometimes look upon you with fear and  uspicion. That’s all right, as long as another Delve doesn’t look upon you as a potential source for components. Sometimes, rather than worry about it, you hide your true nature beneath concealing garments or a hood."
+    Mentor: "You grew up in service to another Delve from whom you learned to train your stamina, patience, and love for the weird. You were taught not to fear things that would make most people weak, sick, or outright dead. Instead, you cherish them as part of a life steeped in discovery. Your mentor taught you to love the wilderness, the unknown, and places of ancient power, in particular—exactly the opposite of how most are raised in the Ninth World. After a time, you and your mentor parted ways—perhaps due to a philosophical disagreement, a scarcity of resources, arare opportunity requiring travel, or some kind of tragedy.  Sometimes you wonder, as you gaze at some new amazing, impossible edifice: what would your mentor think of this?"
+  intrusions:
+    Fortuitous Malfunction: A trap or a dangerous device malfunctions before it can affect you.
+    Serendipitous Landmark: Just when it seems like the path is lost, or you are, a trail marker, landmark, or simply the way the terrain or corridor bends, rises, or falls away suggests to you the best path forward, at least from this point.
+    Weak Strain: The poison or disease turns out not to be as debilitating or deadly as it first seemed, and inflicts only half the damage that it would have otherwise.
+  connections:
+    - You always seem to run into another delve when you explore. Sometimes they help, but sometimes they take the best a ruin has to offer and leave you with drit.
+    - A merchant in a nearby city is always asking you for rare and wondrous items, which you’re pretty sure they resell for a far higher price than they ever give you.
+    - One of your parents was a minor official, with access to many privileges and much information.
+    - Your sibling became a glaive and now serves with a traveling band of specimen collectors in the employ of some organization whose name you can never remember.
+    - Before becoming a full-time explorer, you sometimes sang in taverns for your meals. You even created a few songs that are still sung by other balladeers.
+    - The town you grew up in was destroyed in a disaster that involved a flock of brilliant spheres of light that burst from the earth and rose into the sky, each taking a portion of the town away.
+    - You were taken into slavery as a child but later escaped. You still have scars and bad dreams.
+    - The Amber Gleaners have been attempting to recruit you, but so far you’ve put them off.
+    - You owe money to a number of people and don’t have the funds to pay your debts. Nobody seems interested in taking iotum.
+    - You ran with bandits for a short period, but you left them after thinking better of it. Now, however, they are after you, swearing that no one leaves their group while still breathing.
+    - You taught children for many years, but those days are behind you now.
+    - As an orphan, you had a difficult childhood, and your entry into adulthood was challenging.
+    - You led a double life. Most people know you as a conscientious and daring explorer, but you led another life as a thrill-seeking thief. You don’t indulge much in the latter anymore, but you sometimes dream about your lost cache of “trophies.”
+    - You led a popular uprising in the town where you grew up, and you won. The old leaders were exiled.
+    - You were married, but your partner was stolen by transdimensional beings.
+    - The Order of Truth cut you from the ranks when you consistently failed to finish the tasks they set before you, but you claim it was because your supervisor failed to tell you what those tasks actually were.
+    - As an envoy working in a distant city, you made friends that you still miss today.
+    - You had a pet that you loved dearly, but it was killed in an accident. You’re still searching for how that accident came to be; could it have been a deliberate act by your enemies?
+    - You were best friends with a nano, possibly even lovers, but the iron wind took them away from you.
+    - You’ve often been maligned for your looks. Ungainly, different, of a different species or cultural background—the reason you look different than others is up to you.
+# Numenera Character Options 2
+Glint:
+  stat_pool_start: {Might: 8, Speed: 9, Intellect: 11}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 0, Intellect: 1}
+  starting_equipment:
+    - stylish clothing
+    - Light Weapon
+    - Two Cyphers
+    - One Oddity
+  shins: 9
+  abilities:
+    Cypher Use:
+      desc: You can bear two cyphers at a time
+      amt: 2
+    Weapons:
+      desc: *light_weapon
+      inability: [Medium Weapons, Heavy Weapons]
+    Skills:
+      desc: You are trained in two skills in which you are not already trained. Choose two of the following
+      option: [Deceiving, Public Speaking, Seeing through Deception, Intimidating]
+      amt: 2
+    choosable:
+      amt: 2
+      skill:
+        Coax Information:
+          desc: If you have a conversation with someone (lasting at least a minute), you can get that someone to give you some information you desire during the course of the conversation. If this information is extremely secret or vital, the difficulty may be higher than simply their level (likewise, if it is not very vital, it might be lower). Best of all, if you are successful, the person either doesn’t realize the information slipped out, or they are not alarmed that they gave it to you. Enabler.
+          cost: [ 1, Intellect ]
+        Connection With an Organization:
+          desc: You have a general connection with an important organization, such as the Order of Truth, the Angulan Knights, the Twelfth Ode (a criminal gang), the aristocracy of the region, a merchant guild, and so on. The difficulty of all tasks related to interacting with members of that group is decreased by one step. Further, you can use this connection to get help, lower prices on goods, or whatever is appropriate. You and the GM should work out the details together. You can choose this ability more than once, and choose a new organization each time. Enabler.
+        Contact:
+          desc: You have an important contact who is in an influential position, such as a minor noble, the captain of the town guard, an Aeon Priest, or the head of a large gang of thieves. You and the GM should work out the details together. You can choose this ability more than once, and gain a new contact each time. Enabler.
+        Encouragement:
+          desc: 'While you maintain this ability through ongoing inspiring oration, your allies within short range modify the difficulty of one of the following task types (your choice) by one step to their benefit: defense tasks, attack tasks, or tasks related to any skill that you are trained or specialized in. Action.'
+          cost: [ 1, Intellect ]
+        Fast Talk:
+          desc: When speaking with an intelligent creature who can understand you and isn’t hostile, you convince that creature to take one reasonable action in the next round. A reasonable action should not put the creature or its allies in obvious danger or be wildly out of character, but it might be more than could be accomplished with a simple persuasion task. Action.
+          cost: [ 1, Intellect ]
+        Friendship:
+          desc: You convince a sentient creature to regard you positively, as they would a potential friend. You gain an asset in all future interactions with the creature until you give them a reason to no longer regard you well, at which point this effect ends (and may result in the difficulty of future interactions increasing by one step, because scorn is a powerful emotion). The affected creature isn’t “charmed” supernaturally—they are not compelled or controlled in any way. A target affected by this is simply more likely to perceive you as a friend if you give them a reason to believe this to be so. This isn’t enough to keep a hostile foe from attacking, but it can help in a subsequent interaction task to do that.
+          cost: [ 1, Intellect ]
+        Influence:
+          desc: You can, at a later date (in the course of play), leverage influence over an individual or even a group. Using this influence, the difficulty of tasks related to interacting with this individual or group is decreased by three steps. However, onceyou declare whom you have influence with,  you cannot change it unless you select this ability again when you gain a new tier. Further, depending on the circumstances that you and the GM work out, the influence may be temporary. For example, you might have incriminating evidence over the mayor of a city about his lurid romantic affair with the chief constable. However, if that affair ends, so does your influence. Enabler.
+    background:
+      Genetics: You were born this way. Everyone always took to you. You always seemed to know the right thing to say. It all came naturally. Your voice was pleasant, your eyes shining and honest, your face attractive. These qualities have always been strong enough that you could rely on them. While others learned a craft, or learned to fight, steal, or tinker with the numenera, you found that you could usually get what you needed, and what you wanted, by talking to people. It wasn’t necessarily a con—you liked talking as well as listening, and did that better than anyone else. Now, all this might just come from a heritage of quality forebears, but it could come from something more. A silvertongued Glint like yourself might have inherited those qualities from your family or you might even benefit from some subtle mutations that alter your voice and mannerisms to be perfect for influencing others. You don’t really know. You just know that you’ve always been this way, and that while you look just like everyone else, you’re different. Of course, no one ever need know that but you.
+      Enhancements: Not everything is as it seems. You have numenera components—cybernetic implants or biomechanical modifications that have an intelligence all their own. These components help you determine the right thing to say. They analyze the expressions, gestures, and words of everyone you talk to and provide insights into their mood, reactions, honesty, and vulnerabilities. This all comes to you as second nature—these things are a part of you and have been for quite some time. You are as much a product of the numenera as you are of nature.
+      Training and Experience: You showed plenty of aptitude on your own, but you really began to shine when a mentor took notice of you. Your mentor taught you how to speak and how to listen. From your mentor, you learned how to “read” people to ascertain their moods, distinguish their truths from their lies, and learn what they need and what they need to hear. Your mentor frequently took you out to practice your skills in public. You became more than
+    intrusion: no
+    connections:
+      - You are married, but your spouse has no interest in doing anything but staying at home and working as a tailor.
+      - When you were a teenager, one of your siblings went missing and is presumed dead. The shock rent your family, and it’s something you’ve never gotten over.
+      - You worked as a small-time thief in your younger days, and spent a short time in prison.
+      - You trained as a teenager to be a leatherworker, and still have a strong connection to your old mentor.
+      - You used to work in a mill, and many of your good friends from that time still do.
+      - Your grandparents raised you and instilled in you a number of folksy sayings and ideas.
+      - As an orphan, you had a difficult childhood, and your entry into adulthood was challenging.
+      - You grew up in extreme poverty, among criminals. You still have some connections with the old neighborhood.
+      - You served as an envoy for a powerful and influential woman in the past, and she still looks upon you with favor.
+      - You have an annoying rival who always seems to get in your way or foil your plans.
+      - You’ve worked yourself into the position of spokesperson for an organization of some importance.
+      - Your neighbors were murdered, and the mystery remains unsolved.
+      - You have traveled extensively, and during that time you accumulated quite a collection of strange souvenirs.
+      - Your childhood sweetheart ended up with your now ex-best friend.
+      - You are a member of a small, secret society.
+      - You are part owner of a local bar, where you’re something of a whiz at creating specialty cocktails.
+      - You once ran a con that cheated important people out of money, and they want revenge.
+      - You used to act in a traveling theater, and they remember you fondly (as do people in the places you visited).
+      - One of your parents was a minor official, with access to many privileges and much information.
+      - Your best friend from your youth is now a traveling merchant, and you run into her from time to time.
+# Numenera Character Options 2
+Seeker:
+  stat_pool_start: {Might: 9, Speed: 10, Intellect: 9}
+  additional_points: 6
+  effort: 1
+  edge: {Might: 0, Speed: 1, Intellect: 0}
+  starting_equipment:
+    - clothing
+    - Two Weapons
+    - Three Cyphers
+    - Light Armour
+    - Explorer's Pack
+  shin: 3
+  abilities:
+    Cypher Use:
+      desc: You can bear three cyphers at a time
+      amt: 3
+    Weapons:
+      desc: You can use light and medium weapons without penalty. You have an inability with heavy weapons; your attacks with heavy weapons are hindered
+      inability: [Heavy Weapons]
+    Skills:
+      desc: You are trained in Might Defence and numenera, being able to identify the latters properties
+  chooseable:
+    amt: 2
+    skills:
+      Battle Numenera:
+        desc: When battling an automaton or any other sort of entirely mechanical foe, the difficulty of all Speed defense rolls and attack rolls is decreased by one step. Enabler.
+      Danger Sense:
+        desc: The difficulty of your initiative roll is reduced by one step. Enabler.
+        cost: [ 1, Speed ]
+      Decipher:
+        desc: If you spend one minute examining a piece of writing or code in a language you do not understand, you can make an Intellect roll of difficulty 3  (or higher, based on the complexity of the language or code). On a success, you get the gist of what the writing says. Action to initiate.
+        cost: [ 1, Intellect ]
+      Knowledge Skills:
+        desc: You are trained in two skills in which you are not already trained. Choose two areas of knowledge. You can select this ability multiple times. Each time you select it, you must choose two different skills. Enabler.
+        options: [ History, Geography, Paleontology, Archeology, Geology, Literature, Philosophy, Economics, Astrology ]
+        amt: 2
+      Muscles of Iron:
+        desc: For the next ten minutes, all Might-based actions other than attack rolls that you attempt have their difficulty reduced by one step. Enabler.
+        cost: [ 2, Might ]
+      Physical Skills:
+        desc: You are trained in two skills in which you are not already trained. Choose two of the following. You can select this ability multiple times. Each time you select it, you must choose two different skills. Enabler.
+        option: [ Balancing, Climbing, Jumping, Running, Swimming ]
+        amt: 2
+      Practiced in Armor:
+        desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Might cost and the Speed Pool reduction for wearing armor by 2. Enabler.
+      Trained Without Armor:
+        desc: You are trained in Speed defense tasks when not wearing armor. Enabler.
+    background:
+      Strange Experience: When you were younger, you had a strange  experience that you have not been able to fully understand. Somehow you found yourself in a mysterious location surrounded by the numenera and the trappings of some prior world. You no longer remember everything that happened, but you were bathed with strange energies. Were there other creatures there as well? It’s unclear. Somehow, you escaped and wound up once again in familiar surroundings. You’d like to find that place again and get some answers, but in the meantime there’s no denying that the experience changed you in some ways, both physically and psychologically. You don’t fear such places anymore—you look for them. Such places hold secrets, and that’s what you’re after now.
+      Unnatrual Fortitude: Thanks to one of your ancestors, you have a stamina (both physically and psychologically) that most people can’t imagine. The things that would make most people weak, sick, or outright dead don’t affect you (or at least don’t affect you as strongly). Terrors no one would ever face are things you will confront head-on. You have your inherent nature to thank for that. It is effectively a mutation, due to something that happened to one of your forebears. Perhaps they were an explorer and wandered somewhere they should not have. They survived, however, and it created traits that have passed down to you. (Do your siblings or other relatives have some or all of the same traits or is it a mutation that shows up more randomly? You’ve wondered this in the past— perhaps you’ll find the answer one day.)
+      A Unique Attitude: You were born different. Growing up, your elders tried to instill within you a good, healthy fear of the wilderness, the unknown, and in particular places of ancient power. But none of that made sense to you. You didn’t fear those things. You craved them. It’s not that you have a death wish; it’s that you know that for all the risks, there are great rewards. Something—some little voice deep inside you—assures you that if you look hard enough, delve deep enough, and explore far enough, you’ll find the power to make your dreams come true, the secret to everlasting life, or even greater treasures.
+    connection:
+      - You were caught in an Iron Wind storm years ago and still bear the strange scars.
+      - Your brother is a murderer, wanted by the authorities.
+      - You have made a number of discoveries in your explorations, but opportunities to capitalize upon them haven’t panned out as yet.
+      - You were a musician when you were younger and still like to play.
+      - Your parents were very religious, but you haven’t yet decided to adopt their beliefs fully yet.
+      - You served in the military with honor.
+      - From time to time, you have received assistance from a mysterious organization. You don’t know why.
+      - You studied at a prestigious university when you were younger.
+      - Your best friend from your youth is now an influential official.
+      - You used to be a teacher of young pupils. Your students remember you fondly.
+      - You worked as a small-time criminal until you were caught and served some time in prison.
+      - Your greatest discovery to date was stolen by your archrival.
+      - You belong to an exclusive organization of Seekers whose existence is not widely known.
+      - You were kidnapped as a small child under mysterious circumstances, although you were recovered safely. No one knows what happened while you were missing.
+      - When you were young, you were addicted to narcotics, but you are a recovering addict now.
+      - Your good friend runs a bar in a nearby town.
+      - You own a small side business in addition to exploring the unknown.
+      - You had a pet seskii, but it went missing not long ago.
+      - Your sister is the owner of a store and gives you a hefty discount.
+      - Your father is a high-ranking officer in the military with many connections.
 

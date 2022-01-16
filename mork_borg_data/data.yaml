@@ -1,3 +1,5 @@
+##################
+# STARTING ITEMS
 starting_items:
   item_1: [Nothing, Nothing, Backpack for 7 normal-sized items, Sack for 10 normal-sized items, Small wagon, Donkey]
   item_2: [Rope 30 feet, Presence + 4 torches, lantern with oil for Presence + 6 hours, magnesium strip, random unclean scroll, sharp needle, medicine chest Presence+4 uses (stops bleeding/infection and heals d6 HP), metal file and lockpicks, bear trap (Presence DR14 to spot, d8 damage), bomb (sealed bottle d10 damage), a bottle of red poison d4 doses (Toughness DR12 or d10 damage), silver crucifix]
@@ -100,6 +102,9 @@ shop:
     - [Horse, 80s]
     - [Mule, 10s]
     - [Rat (tame), 8s]
+
+##################
+# ABILITIES
 abilities:
   Agility:
     skills:
@@ -125,6 +130,9 @@ abilities:
       - Resist Cold
       - Resist Heat
       - Survive Falling
+
+##################
+# SCROLLS
 scrolls:
   unclean:
     Palms Open the Southern Gate: A ball of fire hits 1d2 creatures dealing 1d8 damage per creature.
@@ -148,6 +156,9 @@ scrolls:
     Roskoe’s Consuming Glare: 1d4 creatures lose 1d8 HP each.
     Bestial Speech: You may speak with animals for 1d20 minutes.
     Hermetic Step: You find all traps in your path for 2d10 minutes.
+
+##################
+# OPTIONAL CLASSES
 optional_classes:
   Fanged Deserter:
     flavor_text:
@@ -328,6 +339,9 @@ optional_classes:
       - Fernor’s Philtre: Translucent oil, must be dabbed right into the eye. Heals infection and gives +2 on Presence tests for d4 hours.
       - Hyphos’ Enervating Snuff: Berserk! Two attacks per round but defend with DR14. Lasts one fight. Must be snorted, causes sneezing.
       - Black Poison: Toughness DR14 or -d6 HP and blinded for one hour.
+
+##################
+# OPTIONAL TABLES
 optional_tables:
   terrible_traits:
     - Endlessly aggravated
@@ -414,6 +428,9 @@ optional_tables:
     - After dreaming of an underground temple to a forgotten god you understand the songs of insects and worms.
     - Being tracked and observed bya golem after an agreement  which you know has been wiped from your mind.
     - “Burn or be burned” is the fate you accept. Your flesh heals  twice as fast, but your companions twice as slow. You see a many-eyed “guardian angel"
+
+##################
+# OCCULT TREASURE
 occult_treasures:
   - Ash-grey ring a finger-width wide- All that passes through is obliterated
   - The keening music of this small, vile flute animates a fetus-sized meat golem in a nearby corpse.
@@ -425,4 +442,7 @@ occult_treasures:
   - Silver bird cage slays whatever is placed behind its bars, slowly, over one long night- That which is killed reanimates twice as strong, as a raging uncontrollable undead.
   - Black Crown of the Crippled King- Wearing this crooks your body as you become aware that you and every creature within 100 yards gain +10 to your rolls but your maximum HP is halved- Rolls modified to go above 20 count as  crits- The worn crown can only be removed in the pale light of a full moon.
   - Anyone wearing this ancient blindfold becomes invisible to those who breathe though the undead attack them obsessively and nearby corpses awaken in moaning, unholy wrath.
+
+##################
+# NAMES
 names: [Aerg-Tval, Agn, Arvant, Belsum, Belum, Brint, Börda, Daeru, Eldar, Felban, Gotven, Graft, Grin, Grittr, Haerü, Hargha, Harmug, Jotna, Karg, Karva, Katla, Keftar, Klort, Kratar, Kutz, Kvetin, Lygan,Margar, Merkari, Nagl,Niduk, Nifehl,Prü gl, Qillnach, Risten, Svind, Theras, Therg, Torvul, Törn, Urm, Urvarg, Vagal, Vatan, Von, Vrakh, Vresi, Wemut]
