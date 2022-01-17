@@ -153,13 +153,13 @@ Nano:
         desc:You have a shield of energy around you at all times that helps deflect attacks. You gain +1 to Armor. Enabler.
       # Numenera Character Options 1
       Aggression:
-        desc:You reach into the mind of a character and unlock his more primitive instincts. Choose one character within short range. That character has an asset on Might-based attack rolls. The effect lasts for one minute. Action to initiate.
+        desc: You reach into the mind of a character and unlock his more primitive instincts. Choose one character within short range. That character has an asset on Might-based attack rolls. The effect lasts for one minute. Action to initiate.
         cost: [ 2, Intellect ]
       Distortion:
-        desc:You modify how a willing creature reflects light for one minute. Choose a creature within short range. The target rapidly shifts between its normal appearance and a blot of darkness. The target has an asset on Speed defense rolls until the effect wears off. Action to initiate.
+        desc: You modify how a willing creature reflects light for one minute. Choose a creature within short range. The target rapidly shifts between its normal appearance and a blot of darkness. The target has an asset on Speed defense rolls until the effect wears off. Action to initiate.
         cost: [ 2, Intellect ]
       Erase Memories:
-        desc:You reach into a creature’s mind to make it forget. Choose one creature within immediate range and make an Intellect roll. On a success, you erase up to the last five minutes of the creature’s memory. The creature forgets what it experienced during that time. Action.
+        desc: You reach into a creature’s mind to make it forget. Choose one creature within immediate range and make an Intellect roll. On a success, you erase up to the last five minutes of the creature’s memory. The creature forgets what it experienced during that time. Action.
         cost: [ 3, Intellect ]
       Far Step:
         desc: You leap through the air and land some distance away. You can jump up, down, or across to anywhere you choose within long range if you have a clear and unobstructed path to that location. You land safely. Action.
@@ -168,13 +168,13 @@ Nano:
         desc: The difficulty of discerning the level, function, and activation of powered numenera devices that you touch is decreased by one step for one minute. Enabler.
         cost: [ 2, Intellect ]
       Mental Link:
-        desc:You open a pathway to another creature’s mind via a light touch, which allows you to transmit thoughts and images to each other. In other words, you can communicate with each other without having to speak. The mental link remains regardless of distance and lasts for one hour. Instead of applying Effort to decrease the difficulty of this esotery, you can apply Effort to extend the duration by one hour for each level of Effort. Action to initiate.
+        desc: You open a pathway to another creature’s mind via a light touch, which allows you to transmit thoughts and images to each other. In other words, you can communicate with each other without having to speak. The mental link remains regardless of distance and lasts for one hour. Instead of applying Effort to decrease the difficulty of this esotery, you can apply Effort to extend the duration by one hour for each level of Effort. Action to initiate.
         cost: [ 1, Intellect ]
       Resonance Field:
-        desc:Faint lines in a color you choose form a tracery over your entire body and emit faint light. The effect lasts for one minute. Whenever a creature within immediate range makes an attack against you, the pattern energizes to block the attack. You can make an Intellect defense roll in place of the defense roll you would normally make. If you do so and you get a minor effect, the creature attacking you takes 1 point of damage. If you get a major effect, the creature attacking you takes 4 points of damage. Action to initiate.
+        desc: Faint lines in a color you choose form a tracery over your entire body and emit faint light. The effect lasts for one minute. Whenever a creature within immediate range makes an attack against you, the pattern energizes to block the attack. You can make an Intellect defense roll in place of the defense roll you would normally make. If you do so and you get a minor effect, the creature attacking you takes 1 point of damage. If you get a major effect, the creature attacking you takes 4 points of damage. Action to initiate.
         cost: [ 1, Intellect ]
       Sculpt Flesh:
-        desc:You cause a willing creature’s fingers to lengthen into claws and her teeth to grow into fangs by sculpting her flesh. The effect lasts for ten minutes. The damage dealt by the target’s unarmed strikes increases to 4 points. Action.
+        desc: You cause a willing creature’s fingers to lengthen into claws and her teeth to grow into fangs by sculpting her flesh. The effect lasts for ten minutes. The damage dealt by the target’s unarmed strikes increases to 4 points. Action.
         cost: [ 2, Intellect ]
   connection:
     - You served as an apprentice for a nano-sorcerer respected and feared by many people. Now you bear his mark.

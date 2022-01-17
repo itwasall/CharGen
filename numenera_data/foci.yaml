@@ -9,7 +9,7 @@ Bears a Halo of Fire:
   equipment:
     - A device that sprays inanimate objects to make them fire-resistant. All your starting gear has already been treated unless you don’t want it to be. [ARTIFACT]
   abilities:
-	Fire Powers:
+    Fire Powers:
       desc: Your special abilities that would normally use force or other energy (such as electricity) instead use fire. For example, force blasts from Onslaught are blasts of flame, and Flash is a burst of fire. These alterations change nothing except the type of damage and the fact that it might start fires. As another example, Barrier produces a wall of roaring flames. In this case, the alteration changes the esotery so that the barrier is not solid but instead inflicts 1 point of damage to anything that touches it and 4 points of damage to anyone who passes through it. Even fighting moves such as No Need for Weapons might mean your hands and fists are surrounded by flames.
   minor_effect: The target or something near the target catches fire.
   major_effect: An important item on the target’s person is destroyed.

@@ -1,5 +1,3 @@
-from http.cookiejar import FileCookieJar
-from tkinter.tix import Tree
 from typing import List
 from random import randint, choice, choices
 from chargen import roll, expand, yaml_importer
@@ -173,6 +171,8 @@ def check_flags(flag_list: List, rnd=False):
 
 
 def gen_character(character_class=None, rand_class: bool = False, flag_list: List = []):
+    if character_class is None and rand_class == False and flag_list == []:
+        rand_class = randint(0,1)
     global TERRIBLE_TRAITS, BROKEN_BODIES, BAD_HABITS, TROUBLING_TALES, ability_re_rolls
     check_flags(flag_list, rnd=True)
     # Character name
