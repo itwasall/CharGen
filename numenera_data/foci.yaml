@@ -1,0 +1,79 @@
+# Numenera Discovery
+Bears a Halo of Fire:
+  desc: You can create a sheath of flames around your body. You leave scorch marks wherever you go, and you can’t handle combustible objects without first dousing your inherent flames. Your special abilities (such as Nano esoteries) are tainted with flame. Fiery visuals accompany your powers, and in some cases, your predilection for flame actually reshapes your abilities to take on a fiery nature where none existed before. You probably wear red and yellow, or perhaps black. Although most of those who take up this mantle are Nanos, flame-wielding Glaives and Jacks are fearsome indeed
+  connection:
+    - Pick one other PC. Through a quirk of fate, your fire cannot harm that character.
+    - Pick one other PC. You burned this character by accident, and they still have a scar.
+    - Pick one other PC. You’re always trying to impress them with your fire, but you’re not sure why.
+    - Pick one other PC. When you’re near this character, sometimes your flames burn with weird patterns.
+  equipment:
+    - A device that sprays inanimate objects to make them fire-resistant. All your starting gear has already been treated unless you don’t want it to be. [ARTIFACT]
+  abilities:
+	Fire Powers:
+      desc: Your special abilities that would normally use force or other energy (such as electricity) instead use fire. For example, force blasts from Onslaught are blasts of flame, and Flash is a burst of fire. These alterations change nothing except the type of damage and the fact that it might start fires. As another example, Barrier produces a wall of roaring flames. In this case, the alteration changes the esotery so that the barrier is not solid but instead inflicts 1 point of damage to anything that touches it and 4 points of damage to anyone who passes through it. Even fighting moves such as No Need for Weapons might mean your hands and fists are surrounded by flames.
+  minor_effect: The target or something near the target catches fire.
+  major_effect: An important item on the target’s person is destroyed.
+Commands Mental Powers:
+  desc: You have always had special abilities that others didn’t seem to share. Through practice and devotion, you have honed this unique talent so that you can harness the power of your mind to perform deeds. No one can tell that you have this ability just by looking at you, although you wear a crystal or jewel somewhere on your head to help focus your power. Either this focusing object was given to you by someone who recognized your ability, or you came upon it by accident and it triggered your abilities. Some people with mental powers— often called psychics or psionics by ordinary folks—are secretive and a little paranoid. Although Nanos frequently command mental powers, psionic characters of every other type are not uncommon.
+  connection:
+    - Pick one other PC. You have found that this character is particularly tuned into your mental powers. While you’re within short range of them, the two of you are always in telepathic contact, and they are never harmed by your Psychic Bursts.
+    - Pick one other PC. For some reason, you can’t telepathically interact with them.
+    - Pick one other PC. That character and you always enjoy the effect of your Telepathic ability even when you haven’t triggered it.
+    - Pick one other PC. When they stand next to you and use their action to concentrate on helping you, your Telepathic ability extends to a very long range
+  equipment:
+    - Crystal or jewel artifact that, when worn against your forehead or temple, adds 1 point to your Intellect Pool. If you’re ever without the artifact, subtract 5 points from your Intellect Pool; the points are restored if you regain the item. [ARTIFACT]
+  abilities:
+    Mental Esoteries:
+      desc: When you apply Effort to the special abilities that control minds, like the Mind Control esotery, the mind reading esotery or the Crow Control trick of the trade, you get a free level of Effort for that task. Enabler
+  minor_effect: The range or duration of the mental power is double
+  major_effect: You can take another action on the same tiurn
+Controls Beasts:
+
+Controls Gravity:
+
+Employs Magnetism:
+
+Entertains:
+
+Exists Partially Out Of Phase:
+
+Explores Dark Places:
+
+Fights With Panache:
+
+Focuses Mind Over Matter:
+
+Fuses Flesh and Steel:
+
+Howls at the Moon:
+
+Hunts:
+
+Lives in the Wilderness:
+
+Masters Defense:
+
+Masters Weaponry:
+
+Murders:
+
+Rages:
+
+Rides the Lightning:
+
+Speaks with a Silver Tongue:
+
+Talks to Machines:
+
+Wears a Sheen of Ice:
+
+Wields Power with Precision:
+
+Wields Two Weapons at Once:
+
+Works the Back Alleys:
+
+Works Miracles:
+
+
+
