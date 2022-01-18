@@ -1,6 +1,5 @@
 CRAFTS ILLUSIONS
 You use the numenera to create holographic images that appear real. You are, in effect, an artist—a crafter of light and sound.  olographic images can never inflict direct harm or exert real force, but they can fool creatures, changing opinions and even behaviors if you craft them cleverly. You likely dress with flair and color. The appearance of things is important to you, both their beauty and their ugliness. You are a visual performer who can entertain, terrify, or fool  everyone you encounter. A Nano is the most likely character to be an illusionist, but Jacks find illusions to be helpful as well. The rare Glaive illusionist can find ways to use tricks in battle. 
-
 connection:
 -  Pick one other PC. This character is never fooled by your illusions and is never affected by the trickery of your special abilities. You can choose whether or not you know this fact.
 2. Pick one other PC. They have a special angle on your illusions and can sometimes point out potential places of weakness.
@@ -15,7 +14,6 @@ Tier 1: Minor Illusion (1 Intellect point). You create a single image of a creat
 
 EMPLOYS MAGNETISM
 Electromagnetism is a fundamental force in the universe, and it is yours to command. You are a master of metal. You probably wear a lot of metal, perhaps as part of your clothing or armor, as part of your accessories (such as jewelry or piercings), embedded into your body surgically, or in some combination of these options. No one type of character is more likely than any other to employ magnetism, although Glaives who wield weapons and wear armor will find it an interesting complement to their powers.
-
 connection:
 1. Pick one other PC. Whenever you use your powers, the metallic items on that character’s body shudder, rattle, clink, and shake if they are within short range.
 2. Pick one other PC. You worked together in the past, and the job ended badly. 
@@ -148,7 +146,6 @@ Tier 1: Wilderness Life. You are trained in two of the following: climbing, swim
 
 MASTERS DEFENSE
 Protecting yourself is obviously important in dangerous situations, and you are particularly good at it. Cautious and prudent, you learn techniques to defend against all kinds of attacks, both physical and mental. The winner is often the last person standing, and you’ve done all you can to ensure that person will be you. You carry a shield and probably wear the best armor you can find. Glaives make excellent defensive masters, but Jacks and Nanos also find at least some of these skills of great value.
-
 connection:
 1. Pick one other PC. This character protected you from harm recently, and you feel indebted to them for saving your life.
 2. Pick one other PC. This person thinks you are an incredibly selfish person, perhaps based on their belief that you always save yourself first.
@@ -161,604 +158,151 @@ Tier 1: Shield Master. When you use a shield, in addition to the asset it gives 
 
 
 MASTERS WEAPONRY
-You have worked long and hard with one
-particular type of weapon: bows, swords, axes,
-daggers, whips, or whatever you choose. Thus,
-you are an archer, a swordsman, an axe master,
-a mistress of knives, or whatever is appropriate
-to your chosen weapon. A master of the rapier
-is different than a master of the warhammer,
-and an archer is different than a whip wielder.
-You might wear a symbol—a badge, a pin, a
-tattoo, an amulet, certain colors, or the like—
-that indicates the school in which you trained,
-the style of fighting you have mastered, or
-the name of your mentor. Your weapon is
-almost certainly your finest possession. Not
-only is it well cared for and of high quality, but
-you probably keep it in a beautiful scabbard,
-harness, belt, case, or something similar.
-Many Glaives are weapon masters, but
-sometimes a Jack might choose this path,
-particularly with lighter weapons.
-
+You have worked long and hard with one particular type of weapon: bows, swords, axes, daggers, whips, or whatever you choose. Thus, you are an archer, a swordsman, an axe master, a mistress of knives, or whatever is appropriate to your chosen weapon. A master of the rapier is different than a master of the warhammer, and an archer is different than a whip wielder. You might wear a symbol—a badge, a pin, a tattoo, an amulet, certain colors, or the like— that indicates the school in which you trained, the style of fighting you have mastered, or the name of your mentor. Your weapon is almost certainly your finest possession. Not only is it well cared for and of high quality, but you probably keep it in a beautiful scabbard, harness, belt, case, or something similar. Many Glaives are weapon masters, but sometimes a Jack might choose this path, particularly with lighter weapons.
 connection:
-1. Pick one other PC. That character shows
-potential in the use of your weapon. You would
-like to train them, but you’re not necessarily
-qualified to teach (that’s up to you), and they
-might not be interested (that’s up to them).
-2. Pick one other PC. If that person is
-within immediate range when you’re in a
-fight, sometimes they grant you an asset, and
-sometimes they hinder you (50% chance either
-way, determined per fight).
-3. Pick one other PC. You once saved this
-person’s life, and they feel indebted to you. You
-wish they didn’t; it’s all just part of the job.
-4. Pick one other PC. This person recently
-mocked your combat stance. How you deal
-with this (if at all) is up to you.
-Additional Equipment: You have a highquality
-weapon of your choosing.
-Weaponry Powers: If you have
-“supernatural” special abilities (such as
-some esoteries), these look like your chosen
-weapon. So the force blast of the Onslaught
-esotery appears to be a large weapon made of
-force, and the Flash esotery produces a flurry
-of weaponry. These alterations change nothing
-other than the appearance of the effects. As
-another example, Barrier becomes a wall
-of swirling blades of energy. This alteration
-changes the esotery such that it is not a solid
-barrier but rather inflicts 1 point of damage to
-anyone who touches it and 4 points of damage
-to anyone who passes through it.
-Minor Effect Suggestions: The target is so
-dazzled by your expertise that it is dazed for
-one round, hindering all of its tasks.
-Major Effect Suggestions: Make an
-immediate additional attack with the weapon
-as part of your turn.
-Tier 1: Weapon Master. You gain a +1 bonus to
-damage with your chosen weapon. Enabler.
-Weapon Crafter. You are trained in crafting
-tasks associated with your chosen weapon.
-For instance, if your weapon is a bow, you are
-trained in tasks related to crafting bows and
-fletching arrows; if your weapon is a sword,
-you are trained in tasks for forging swords and
-sharpening blades; and so on. Enabler.
+1. Pick one other PC. That character shows potential in the use of your weapon. You would like to train them, but you’re not necessarily qualified to teach (that’s up to you), and they might not be interested (that’s up to them).
+2. Pick one other PC. If that person is within immediate range when you’re in a fight, sometimes they grant you an asset, and sometimes they hinder you (50% chance either way, determined per fight).
+3. Pick one other PC. You once saved this person’s life, and they feel indebted to you. You wish they didn’t; it’s all just part of the job.
+4. Pick one other PC. This person recently mocked your combat stance. How you deal with this (if at all) is up to you.
+Additional Equipment: You have a highquality weapon of your choosing.
+Weaponry Powers: If you have “supernatural” special abilities (such as some esoteries), these look like your chosen weapon. So the force blast of the Onslaught esotery appears to be a large weapon made of force, and the Flash esotery produces a flurry of weaponry. These alterations change nothing other than the appearance of the effects. As another example, Barrier becomes a wall of swirling blades of energy. This alteration changes the esotery such that it is not a solid barrier but rather inflicts 1 point of damage to anyone who touches it and 4 points of damage to anyone who passes through it.
+Minor Effect Suggestions: The target is so dazzled by your expertise that it is dazed for one round, hindering all of its tasks.
+Major Effect Suggestions: Make an immediate additional attack with the weapon as part of your turn.
+Tier 1: Weapon Master. You gain a +1 bonus to damage with your chosen weapon. Enabler. 
+Weapon Crafter. You are trained in crafting tasks associated with your chosen weapon. For instance, if your weapon is a bow, you are trained in tasks related to crafting bows and fletching arrows; if your weapon is a sword, you are trained in tasks for forging swords and sharpening blades; and so on. Enabler.
 
 
 MURDERS
-The murderous assassin is a master of dealing
-death. No one is better at sneaking into a
-location, eliminating a target, and slipping out
-again. Obviously, a professional killer is not
-likely to have a lot of friends.
-You probably wear dark colors—black,
-charcoal grey, or midnight blue—to help
-blend into the shadows. But since you’re also
-a master of disguise, in truth you could look
-like anyone.
-Any character could be an assassin. Jacks
-are the most likely choice, but Nanos with their
-esoteries or Glaives with their combat abilities
-would make efficient killers as well.
-
+The murderous assassin is a master of dealing death. No one is better at sneaking into a location, eliminating a target, and slipping out again. Obviously, a professional killer is not likely to have a lot of friends. You probably wear dark colors—black, charcoal grey, or midnight blue—to help blend into the shadows. But since you’re also a master of disguise, in truth you could look like anyone. Any character could be an assassin. Jacks are the most likely choice, but Nanos with their esoteries or Glaives with their combat abilities would make efficient killers as well.
 connection:
-1. Pick one other PC. That character knows
-your real identity, profession, and background.
-To all others, the truth about you is a closely
-guarded secret.
-2. Pick one other PC. You were recently
-approached by someone who wanted to hire
-you to take that character out. You haven’t yet
-decided whether to take the job or warn them
-that their life is in danger.
-3. Pick two other PCs. One night after
-perhaps too much celebrating, you loudly
-claimed responsibility for a murder you didn’t
-commit. These two characters were the only
-ones who heard. Whether they believe you or
-not is up to them.
-4. Pick one other PC. That character is the
-one who got you started down the path of
-taking lives, whether they know it or not.
-Additional Equipment: You start with a
-disguise kit and three doses of a level 2 blade
-poison that inflicts 5 points of damage.
-Minor Effect Suggestions: No one but the
-foe notices that you make the attack.
-Major Effect Suggestions: If you have poison
-amid your belongings, you were able to apply
-it just before the strike, adding the poison’s
-effects to the normal attack damage.
-Tier 1: Surprise Attack. If attacking from a
-hidden vantage, with surprise, or before an
-opponent has acted, you gain an asset to your
-attack. On a successful hit with this surprise
-attack, you inflict 2 additional points of
-damage. Enabler.
-Natural Assassin. You are trained in stealth
-and disguise tasks. Enabler.
+1. Pick one other PC. That character knows your real identity, profession, and background. To all others, the truth about you is a closely guarded secret.
+2. Pick one other PC. You were recently approached by someone who wanted to hire you to take that character out. You haven’t yet decided whether to take the job or warn them that their life is in danger.
+3. Pick two other PCs. One night after perhaps too much celebrating, you loudly claimed responsibility for a murder you didn’t commit. These two characters were the only ones who heard. Whether they believe you or not is up to them.
+4. Pick one other PC. That character is the one who got you started down the path of taking lives, whether they know it or not.
+Additional Equipment: You start with a disguise kit and three doses of a level 2 blade poison that inflicts 5 points of damage.
+Minor Effect Suggestions: No one but the foe notices that you make the attack.
+Major Effect Suggestions: If you have poison amid your belongings, you were able to apply it just before the strike, adding the poison’s effects to the normal attack damage.
+Tier 1: Surprise Attack. If attacking from a hidden vantage, with surprise, or before an opponent has acted, you gain an asset to your attack. On a successful hit with this surprise attack, you inflict 2 additional points of damage. Enabler.
+Natural Assassin. You are trained in stealth and disguise tasks. Enabler.
 
 
 RAGES
-The berserker is a feared fighter who cannot
-be stopped. You put yourself into a howling
-battle frenzy that can make you a terror on the
-battlefield. You might hail from a less civilized
-society, perhaps even a tribal one.
-You likely wear little or no armor so as not
-to restrict your speed or maneuverability. Your
-clothing is probably simple and utilitarian.
-Glaives make the best berserkers.
-
+The berserker is a feared fighter who cannot be stopped. You put yourself into a howling battle frenzy that can make you a terror on the battlefield. You might hail from a less civilized society, perhaps even a tribal one. You likely wear little or no armor so as not to restrict your speed or maneuverability. Your clothing is probably simple and utilitarian. Glaives make the best berserkers.
 connection:
-1. Choose one other PC. You feel strangely
-protective toward that character and don’t
-want to see them come to harm.
-2. Pick one other PC. That character knows
-a secret about your past that is tied to your
-Frenzy ability.
-3. Pick one other PC. The first time you went
-into a frenzy was in an attempt to save their
-loved one from an attack. You failed, partly
-because of your inexperience.
-4. Choose one other PC. That character is
-terrified by your rage and sometimes can’t
-help but flee at inopportune times.
-Minor Effect Suggestions: When fighting multiple
-foes, you knock one into another, putting both
-off balance and hindering them for one round.
-Major Effect Suggestions: Your foe is terrified
-of your rage and uses its next two actions to flee.
-Tier 1: Frenzy (1 Intellect point). When you
-wish, while in combat, you can enter a state of
-frenzy. While in this state, you can’t use Intellect
-points, but you gain +1 to your Might Edge
-and your Speed Edge. This effect lasts as long
-as you wish, but it ends if no combat is taking
-place within range of your senses. Enabler.
+1. Choose one other PC. You feel strangely protective toward that character and don’t want to see them come to harm.
+2. Pick one other PC. That character knows a secret about your past that is tied to your Frenzy ability.
+3. Pick one other PC. The first time you went into a frenzy was in an attempt to save their loved one from an attack. You failed, partly because of your inexperience.
+4. Choose one other PC. That character is terrified by your rage and sometimes can’t help but flee at inopportune times.
+Minor Effect Suggestions: When fighting multiple foes, you knock one into another, putting both off balance and hindering them for one round.
+Major Effect Suggestions: Your foe is terrified of your rage and uses its next two actions to flee.
+Tier 1: Frenzy (1 Intellect point). When you wish, while in combat, you can enter a state of frenzy. While in this state, you can’t use Intellect points, but you gain +1 to your Might Edge and your Speed Edge. This effect lasts as long as you wish, but it ends if no combat is taking place within range of your senses. Enabler.
 
 
 RIDES THE LIGHTNING
-The ancients harnessed electricity in strange
-and wonderful ways. Through practice and
-inherent ability (or the subtle use of hidden
-or implanted devices), you control the same
-energy. Not only can you create and discharge
-electrical power, but you can eventually learn
-to use it to transport yourself.
-You probably wear tight-fitting clothing that
-allows you to move quickly. Your garments
-might be blue and black, perhaps with a
-lightning-bolt motif.
-Although Nanos seem most suited to
-wielding lightning, Jacks can make good use of
-the varied lightning abilities.
-
+The ancients harnessed electricity in strange and wonderful ways. Through practice and inherent ability (or the subtle use of hidden or implanted devices), you control the same energy. Not only can you create and discharge electrical power, but you can eventually learn to use it to transport yourself. You probably wear tight-fitting clothing that allows you to move quickly. Your garments might be blue and black, perhaps with a lightning-bolt motif. Although Nanos seem most suited to wielding lightning, Jacks can make good use of the varied lightning abilities.
 connection:
-1. Pick one other PC. This character has
-been your friend for a long time, and you
-have learned to bring them along when you
-ride the lightning. If the character is standing
-right next to you, you can take them with you
-when you use the Bolt Rider or Electrical Flight
-powers. (Normally, neither ability allows you to
-transport other creatures.)
-2. Pick two other PCs. You know about an
-important connection between them that even
-they don’t know about.
-3. Pick one other PC. This character has
-interesting ideas about electricity and how
-it can be harnessed. If you are trained with
-machines, after you talk to this character for an
-hour, you gain an asset on any task involving
-identifying, crafting, or repairing a machine
-that uses electricity.
-worst luck with electrical devices of anyone
-you’ve ever met. You want to help them, but
-you aren’t sure how or even whether they will
-be open to your assistance.
-Additional Equipment: You have a bag of
-miscellaneous batteries and power cells.
-Whenever you find a new device that operates
-on batteries or cells (GM’s discretion), there is
-a 75 percent chance that the bag contains one
-that will power the device if it depletes.
-Electrical Abilities: If you have abilities that
-would normally use force or other energy, they
-instead use electricity. For example, a Flash or an
-Onslaught force blast is a blast of lightning. This
-alteration changes nothing other than the type of
-damage and the fact that it might start fires.
-Minor Effect Suggestions: The target is dazed
-by electricity for one round, hindering all of
-its tasks. Electricity can also shut down an
-automaton for one round.
-Major Effect Suggestions: Devices filled
-with electrical power explode. You can target
-and destroy an artifact that a foe is holding
-or wearing.
-Tier 1: Shock (1 Intellect point). Your hands
-crackle with electricity, and the next time
-you touch a creature, you inflict 3 points of
-damage. Alternatively, if you wield a weapon,
-for ten minutes it crackles with electricity and
-inflicts 1 additional point of damage per attack.
-Action for touch; enabler for weapon.
-Charge (1+ Intellect points). You can charge
-an artifact or other device (except a cypher) so
-that it can be used once. The cost is 1 Intellect
-point plus 1 point per level of the device. Action.
+1. Pick one other PC. This character has been your friend for a long time, and you have learned to bring them along when you ride the lightning. If the character is standing right next to you, you can take them with you when you use the Bolt Rider or Electrical Flight powers. (Normally, neither ability allows you to transport other creatures.)
+2. Pick two other PCs. You know about an important connection between them that even they don’t know about.
+3. Pick one other PC. This character has interesting ideas about electricity and how it can be harnessed. If you are trained with machines, after you talk to this character for an hour, you gain an asset on any task involving identifying, crafting, or repairing a machine that uses electricity.
+4. Pick one other PC. This character worst luck with electrical devices of anyone you’ve ever met. You want to help them, but you aren’t sure how or even whether they will be open to your assistance.
+Additional Equipment: You have a bag of miscellaneous batteries and power cells. Whenever you find a new device that operates on batteries or cells (GM’s discretion), there is a 75 percent chance that the bag contains one that will power the device if it depletes.
+Electrical Abilities: If you have abilities that would normally use force or other energy, they instead use electricity. For example, a Flash or an Onslaught force blast is a blast of lightning. This alteration changes nothing other than the type of damage and the fact that it might start fires.
+Minor Effect Suggestions: The target is dazed by electricity for one round, hindering all of its tasks. Electricity can also shut down an automaton for one round.
+Major Effect Suggestions: Devices filled with electrical power explode. You can target and destroy an artifact that a foe is holding or wearing.
+Tier 1: Shock (1 Intellect point). Your hands crackle with electricity, and the next time you touch a creature, you inflict 3 points of damage. Alternatively, if you wield a weapon, for ten minutes it crackles with electricity and inflicts 1 additional point of damage per attack. Action for touch; enabler for weapon.
+Charge (1+ Intellect points). You can charge an artifact or other device (except a cypher) so that it can be used once. The cost is 1 Intellect point plus 1 point per level of the device. Action.
 
 
 SPEAKS WITH A
 SILVER TONGUE
-You are poetry incarnate. The words flow from
-your tongue like liquid metal. Your voice is
-golden and captivating. With enough time and
-focus, you can convince almost anyone to do
-almost anything for you, with you, or in spite
-of you. Words—words are what matter. You
-believe they have power. There’s a chance you
-don’t care much about your appearance, as
-long as you can say what you want to say.
-Some might call you the “face” because
-when your friends or allies need to put
-forth their best face, they send you. You’re a
-charmer. The word “charisma” was coined for
-people like you—there’s just something about
-you that people seem to like.
-Since words are important to you, you may
-have covered your skin with tattooed words or
-have written things on your outfit. You might
-play an instrument, write books, or compose
-songs in your spare time.
-Jacks, with their ability to take a related flex
-skill each day, make excellent speakers, but
-Nanos and Glaives might choose this route to
-inspire their companions.
-
+You are poetry incarnate. The words flow from your tongue like liquid metal. Your voice is golden and captivating. With enough time and focus, you can convince almost anyone to do almost anything for you, with you, or in spite of you. Words—words are what matter. You believe they have power. There’s a chance you don’t care much about your appearance, as long as you can say what you want to say. Some might call you the “face” because when your friends or allies need to put forth their best face, they send you. You’re a charmer. The word “charisma” was coined for people like you—there’s just something about you that people seem to like. Since words are important to you, you may have covered your skin with tattooed words or have written things on your outfit. You might play an instrument, write books, or compose songs in your spare time. Jacks, with their ability to take a related flex skill each day, make excellent speakers, but Nanos and Glaives might choose this route to inspire their companions.
 connection:
-1. Pick one other PC. That character
-seems overly affected by your words. You’ve
-accidentally made them cry or laugh just by
-talking to them.
-2. Pick one other PC. That character believes
-that you speak falsely and is never affected by
-your words.
-3. Pick one other PC. You’d like to get to
-know them better, but don’t want to use your
-skills to do so.
-4. Pick one other PC. That character would
-like to learn your storytelling techniques, and
-you’re trying to decide whether to teach them.
-Additional Equipment: You have a book in
-which you keep notes of your favorite words,
-inspirational stories, and speech anecdotes.
-Minor Effect Suggestions: The next time you
-attempt to influence, persuade, or deceive the
-same foe, the task is eased.
-Major Effect Suggestions: You speak
-with extra conviction, increasing the effect,
-duration, or range of your action.
-Tier 1: Poetic License. You are trained in all
-social interactions, including persuasion,
-deception, and intimidation. You also know
-two languages other than the Truth. Enabler.
+1. Pick one other PC. That character seems overly affected by your words. You’ve accidentally made them cry or laugh just by talking to them.
+2. Pick one other PC. That character believes that you speak falsely and is never affected by your words.
+3. Pick one other PC. You’d like to get to know them better, but don’t want to use your skills to do so.
+4. Pick one other PC. That character would like to learn your storytelling techniques, and you’re trying to decide whether to teach them.
+Additional Equipment: You have a book in which you keep notes of your favorite words, inspirational stories, and speech anecdotes.
+Minor Effect Suggestions: The next time you attempt to influence, persuade, or deceive the same foe, the task is eased.
+Major Effect Suggestions: You speak with extra conviction, increasing the effect, duration, or range of your action.
+Tier 1: Poetic License. You are trained in all social interactions, including persuasion, deception, and intimidation. You also know two languages other than the Truth. Enabler.
 
 
 TALKS TO MACHINES
-Since you were young, you had an affinity for
-machines. It seemed almost like you were
-speaking to them.
-You were. You have the ability to use your
-organic brain like an intelligent machine,
-interfacing “wirelessly” with any electronic device.
-You can control and influence them in ways that
-others can’t. Intelligent machines are your friends
-and companions. You have also learned to repair
-machines of all kinds because the better they
-work, the better off you are as well.
-You likely wear a tool belt full of various
-implements, and machine oils stain your
-clothes and fingertips.
-All types of characters can spend their time
-talking to machines, although this practice is
-best suited to Nanos.
-
+Since you were young, you had an affinity for machines. It seemed almost like you were speaking to them. You were. You have the ability to use your organic brain like an intelligent machine, interfacing “wirelessly” with any electronic device. You can control and influence them in ways that others can’t. Intelligent machines are your friends and companions. You have also learned to repair machines of all kinds because the better they work, the better off you are as well. You likely wear a tool belt full of various implements, and machine oils stain your clothes and fingertips. All types of characters can spend their time talking to machines, although this practice is best suited to Nanos.
 connection:
-1. Pick one other PC. That character seems to
-have a terrible relationship with machines—or
-at least the machines that you communicate
-with. If that person is next to a machine that you
-interact with in a friendly manner, that machine
-is treated in all ways as being 1 level lower than
-normal (unless doing so benefits you or them,
-in which case the level does not change).
-2. Pick one other PC. That person seems
-especially leery of you, though this could just
-be your perception.
-3. Pick one other PC. That character has a
-small machine among their equipment but won’t
-tell you any details about it or let you see it.
-4. Pick one other PC. You know that
-this character knows an incriminating or
-embarrassing secret about you, and you hope
-that they do not reveal it.
-Additional Equipment: A bag of small tools.
-Minor Effect Suggestions: The duration of
-influence or control is doubled.
-Major Effect Suggestions: The duration of
-influence or control becomes 28 hours.
-Tier 1: Machine Affinity. You are trained in
-tasks involving electrical machines. Enabler.
-Distant Activation (1 Intellect point). You can
-activate or deactivate any machine you can see
-within short range, even if normally you would
-have to touch or manually operate the device.
-To use this ability, you must understand the
-function of the machine, it must be your size
-or smaller, and it can’t be connected to another
-intelligence (or be intelligent itself). Action.
+1. Pick one other PC. That character seems to have a terrible relationship with machines—or at least the machines that you communicate with. If that person is next to a machine that you interact with in a friendly manner, that machine is treated in all ways as being 1 level lower than normal (unless doing so benefits you or them, in which case the level does not change).
+2. Pick one other PC. That person seems especially leery of you, though this could just be your perception.
+3. Pick one other PC. That character has a small machine among their equipment but won’t tell you any details about it or let you see it.
+4. Pick one other PC. You know that this character knows an incriminating or embarrassing secret about you, and you hope that they do not reveal it.
+Additional Equipment: A bag of small tools. Minor Effect Suggestions: The duration of influence or control is doubled.
+Major Effect Suggestions: The duration of influence or control becomes 28 hours.
+Tier 1: Machine Affinity. You are trained in tasks involving electrical machines. Enabler.
+Distant Activation (1 Intellect point). You can activate or deactivate any machine you can see within short range, even if normally you would have to touch or manually operate the device. To use this ability, you must understand the function of the machine, it must be your size or smaller, and it can’t be connected to another intelligence (or be intelligent itself). Action.
 
 
 WEARS A SHEEN OF ICE
-Through your studies, you have learned to focus
-your natural talents to command the powers
-of ice and cold. People might refer to you as an
-ice mage. Sometimes ice mages are thought
-to come into conflict with those known as fire
-mages, but this is a fallacy believed by ordinary
-folks more than anything based in truth.
-You likely wear white or blue garments that
-are heavier than they need to be—unless you
-live in a cold region or wintry clime, in which
-case you probably wear less clothing than other
-people do because the cold doesn’t bother you.
-Most ice mages are Nanos, but a Glaive
-armored in ice, perhaps wielding an ice sword,
-would be quite impressive.
-
+Through your studies, you have learned to focus your natural talents to command the powers of ice and cold. People might refer to you as an ice mage. Sometimes ice mages are thought to come into conflict with those known as fire mages, but this is a fallacy believed by ordinary folks more than anything based in truth. You likely wear white or blue garments that are heavier than they need to be—unless you live in a cold region or wintry clime, in which case you probably wear less clothing than other people do because the cold doesn’t bother you. Most ice mages are Nanos, but a Glaive armored in ice, perhaps wielding an ice sword, would be quite impressive.
 connection:
-1. Pick one other PC. Due to a quirk of the
-numenera, if that character is standing next to
-you when you use your Ice Armor ability, they
-are also protected by a sheen of ice. (They do
-not get the added protection of your Resilient
-Ice Armor ability.)
-2. Pick one other PC. For a reason unknown
-to you, their very presence seems to heat the
-air around you, making it more difficult to
-command the powers of ice and cold. If they
-are within immediate range, their presence
-occasionally hinders your attempts to hit a
-target with a focus ability.
-3. Pick one other PC. That person is
-especially susceptible to the cold that radiates
-from you. How they handle that vulnerability is
-up to them.
-4. Pick one other PC. The two of you have a
-long history and almost always disagree about
-the best way to handle situations.
-Additional Equipment: You have a bladed
-weapon made of stronglass that looks like ice.
-Ice Abilities: If you possess abilities that
-would normally use force or other energy, they
-instead use cold and ice. For example, a force
-blast is a ray of frost. This alteration changes
-nothing other than the type of damage. As
-another example, Barrier creates a wall of ice.
-This alteration changes nothing except the
-wall’s appearance and the fact that it takes 2
-additional points of damage from fire.
-Minor Effect Suggestions: The surface
-around the target becomes slick and difficult
-to stand on.
-Major Effect Suggestions: The target is
-covered in ice that slows its movement and
-hinders its tasks for one minute.
-Tier 1: Ice Armor (1 Intellect point). When
-you wish it, your body is covered in a sheen
-of ice for ten minutes that gives you +1 to
-Armor. While the sheen is active, you feel no
-discomfort from normal cold temperatures
-and have an additional +2 to Armor versus
-cold damage specifically. Enabler.
-
+1. Pick one other PC. Due to a quirk of the numenera, if that character is standing next to you when you use your Ice Armor ability, they are also protected by a sheen of ice. (They do not get the added protection of your Resilient Ice Armor ability.)
+2. Pick one other PC. For a reason unknown to you, their very presence seems to heat the air around you, making it more difficult to command the powers of ice and cold. If they are within immediate range, their presence occasionally hinders your attempts to hit a target with a focus ability.
+3. Pick one other PC. That person is especially susceptible to the cold that radiates from you. How they handle that vulnerability is up to them.
+4. Pick one other PC. The two of you have a long history and almost always disagree about the best way to handle situations.
+Additional Equipment: You have a bladed weapon made of stronglass that looks like ice.
+Ice Abilities: If you possess abilities that would normally use force or other energy, they instead use cold and ice. For example, a force blast is a ray of frost. This alteration changes nothing other than the type of damage. As another example, Barrier creates a wall of ice. This alteration changes nothing except the wall’s appearance and the fact that it takes 2 additional points of damage from fire.
+Minor Effect Suggestions: The surface around the target becomes slick and difficult to stand on.
+Major Effect Suggestions: The target is covered in ice that slows its movement and hinders its tasks for one minute.
+Tier 1: Ice Armor (1 Intellect point). When you wish it, your body is covered in a sheen of ice for ten minutes that gives you +1 to Armor. While the sheen is active, you feel no discomfort from normal cold temperatures and have an additional +2 to Armor versus cold damage specifically. Enabler.
 
 WIELDS POWER
 WITH PRECISION
-Not only are you blessed with a great
-command of the numenera, but you are also
-trained to exploit esoteries in ways that elevate
-you above other Nanos. Some people believe
-that those who perform esoteries are born
-with the ability, but you know that skill and
-intelligence play important roles. The ancients
-created the numenera through knowledge,
-discovery, and intellect, and to use it properly,
-you must follow the same path.
-You probably wear spectacles and dapper
-outfits, carrying extra books, notebooks, and
-pens so you can continually focus on your
-studies and experiments.
-Nanos usually receive this instruction and focus,
-but some Jacks do as well. Glaives never do.
-
+Not only are you blessed with a great command of the numenera, but you are also trained to exploit esoteries in ways that elevate you above other Nanos. Some people believe that those who perform esoteries are born with the ability, but you know that skill and intelligence play important roles. The ancients created the numenera through knowledge, discovery, and intellect, and to use it properly, you must follow the same path. You probably wear spectacles and dapper outfits, carrying extra books, notebooks, and pens so you can continually focus on your studies and experiments. Nanos usually receive this instruction and focus, but some Jacks do as well. Glaives never do.
 connection:
-1. Pick one other PC. You’ve placed an
-immutable, one-time ward that renders them
-immune to the esoteries you perform unless
-they want to be affected.
-2. Pick one other PC. Due to some quirk
-of the numenera, you can occasionally (and
-accidentally) share your powers with them,
-which gives them an asset on any task they
-attempt using their esoteries.
-3. Pick one other PC. That character
-doesn’t seem to trust or like you, but you feel
-compelled to win them over.
-4. Pick one other PC. You’ve noticed that
-they have a book in their possession that you’d
-very much like to study, but you’re unsure how
-to ask them about it.
-Additional Equipment: You have an
-additional book about the numenera.
-Minor Effect Suggestions: The special ability
-overwhelms and dazzles the target for one
-round, hindering it.
-Major Effect Suggestions: The special ability
-terrifies the target, who uses its next two turns
-to flee.
-Tier 1: Genius. Your Intellect Pool increases by
-5 points. Enabler.
+1. Pick one other PC. You’ve placed an immutable, one-time ward that renders them immune to the esoteries you perform unless they want to be affected.
+2. Pick one other PC. Due to some quirk of the numenera, you can occasionally (and accidentally) share your powers with them, which gives them an asset on any task they attempt using their esoteries.
+3. Pick one other PC. That character doesn’t seem to trust or like you, but you feel compelled to win them over.
+4. Pick one other PC. You’ve noticed that they have a book in their possession that you’d very much like to study, but you’re unsure how to ask them about it.
+Additional Equipment: You have an additional book about the numenera.
+Minor Effect Suggestions: The special ability overwhelms and dazzles the target for one round, hindering it.
+Major Effect Suggestions: The special ability terrifies the target, who uses its next two turns to flee.
+Tier 1: Genius. Your Intellect Pool increases by 5 points. Enabler.
 
 
 WIELDS TWO
 WEAPONS AT ONCE
-You bear steel with both hands, ready to take
-on any foe. You fight with two weapons in
-melee, sometimes called dual wielding. A
-fearsome warrior, quick and strong, you believe
-that the best defense is a strong offense.
-You probably sheathe one weapon on each
-side or both crossed behind your back. They
-are likely your most prized possessions, and
-you might have names for them.
-Many Glaives and Jacks train to fight with
-two weapons at once. Very rarely would other
-characters spend the time required to learn
-such a purely physical art, but it’s possible.
-
+You bear steel with both hands, ready to take on any foe. You fight with two weapons in melee, sometimes called dual wielding. A fearsome warrior, quick and strong, you believe that the best defense is a strong offense. You probably sheathe one weapon on each side or both crossed behind your back. They are likely your most prized possessions, and you might have names for them. Many Glaives and Jacks train to fight with two weapons at once. Very rarely would other characters spend the time required to learn such a purely physical art, but it’s possible.
 connection:
-1. Pick one other PC. You have trained with
-this character so much that if the two of you
-stand back to back in a fight, you both gain an
-asset to Speed defense tasks.
-2. Pick one other PC. This character always
-seems to inadvertently foil your actions, or
-at least make them more difficult. If they are
-within immediate range, actions related to this
-focus are hindered.
-3. Pick one other PC. You recently had a
-weapon go missing, and you’re becoming
-convinced that they took it. Whether or not
-they did is up to them.
-4. Pick one other PC. You used to dislike
-them immensely, but as you get to know this
-person, you’re growing more fond of them
-against your better judgment.
-Additional Equipment: You start with an
-additional light melee weapon.
-Minor Effect Suggestions: The target is
-intimidated and flees as its next action.
-Major Effect Suggestions: You can make
-an immediate additional attack with one of
-your weapons.
-Tier 1: Dual Light Wield. You can use two light
-weapons at the same time, making two separate
-attacks on your turn as a single action. You
-remain limited by the amount of Effort you can
-apply on one action, but because you make
-separate attacks, your opponent’s Armor applies
-to both. Anything that modifies your attack
-or damage applies to both attacks, unless it’s
-specifically tied to one of the weapons. Enabler.
-
+1. Pick one other PC. You have trained with this character so much that if the two of you stand back to back in a fight, you both gain an asset to Speed defense tasks.
+2. Pick one other PC. This character always seems to inadvertently foil your actions, or at least make them more difficult. If they are within immediate range, actions related to this focus are hindered.
+3. Pick one other PC. You recently had a weapon go missing, and you’re becoming convinced that they took it. Whether or not they did is up to them.
+4. Pick one other PC. You used to dislike them immensely, but as you get to know this person, you’re growing more fond of them against your better judgment.
+Additional Equipment: You start with an additional light melee weapon.
+Minor Effect Suggestions: The target is intimidated and flees as its next action.
+Major Effect Suggestions: You can make an immediate additional attack with one of your weapons.
+Tier 1: Dual Light Wield. You can use two light weapons at the same time, making two separate attacks on your turn as a single action. You remain limited by the amount of Effort you can apply on one action, but because you make separate attacks, your opponent’s Armor applies to both. Anything that modifies your attack or damage applies to both attacks, unless it’s specifically tied to one of the weapons. Enabler.
 
 WORKS THE BACK ALLEYS
-The thief, the burglar, the pickpocket: these
-are the dangerous individuals who haunt the
-back alleys of every community. You are a
-thief in a city or town, making your livelihood
-at the expense of the wealthy. Your talents,
-however, prepare you for all kinds of pursuits,
-even when you’re not crouching in an alley or
-climbing into a window.
-Usually, you dress to blend in with the crowd.
-When you’re on a mission, black, form-fitting
-clothing allows you to swim in the shadows.
-Most thieves are Jacks, but Nanos make
-interesting burglars as well. A Glaive thief likely
-adds a little more physicality to their crimes.
-
+The thief, the burglar, the pickpocket: these are the dangerous individuals who haunt the back alleys of every community. You are a thief in a city or town, making your livelihood at the expense of the wealthy. Your talents, however, prepare you for all kinds of pursuits, even when you’re not crouching in an alley or climbing into a window. Usually, you dress to blend in with the crowd. When you’re on a mission, black, form-fitting clothing allows you to swim in the shadows. Most thieves are Jacks, but Nanos make interesting burglars as well. A Glaive thief likely adds a little more physicality to their crimes.
 connection:
-1. Pick one other PC. The character knew
-you beforehand and convinced you to leave
-your life of crime for other pursuits—at least
-temporarily.
-2. Pick one other PC. A while back, you
-attempted to “borrow” something from this
-person, but they caught you in the process.
-You managed to convince them that it was a
-simple misunderstanding, but they may not
-entirely trust you.
-3. Pick one other PC. You never seem to be
-able to hide so that this person can’t see you.
-4. Pick one other PC. This character knows
-your real identity (if it’s a secret) or that you
-work secretly as a thief (if it’s a secret) and has
-kept the knowledge safe so far. It’s up to them
-whether they continue to do so.
-Additional Equipment: You start with a bag
-of light tools.
-Minor Effect Suggestions: You can
-immediately attempt to hide after this action.
-Major Effect Suggestions: You can immediately
-take a second action during this turn.
-Tier 1: Thief. You are trained in sneaking,
-pickpocketing, and lockpicking tasks. Enabler.
+1. Pick one other PC. The character knew you beforehand and convinced you to leave your life of crime for other pursuits—at least temporarily.
+2. Pick one other PC. A while back, you attempted to “borrow” something from this person, but they caught you in the process. You managed to convince them that it was a simple misunderstanding, but they may not entirely trust you.
+3. Pick one other PC. You never seem to be able to hide so that this person can’t see you.
+4. Pick one other PC. This character knows your real identity (if it’s a secret) or that you work secretly as a thief (if it’s a secret) and has kept the knowledge safe so far. It’s up to them whether they continue to do so.
+Additional Equipment: You start with a bag of light tools.
+Minor Effect Suggestions: You can immediately attempt to hide after this action.
+Major Effect Suggestions: You can immediately take a second action during this turn.
+Tier 1: Thief. You are trained in sneaking, pickpocketing, and lockpicking tasks. Enabler.
 
 
 WORKS MIRACLES
-You manipulate matter and time to help others
-and are beloved by everyone you encounter.
-Some people consider you a representative of
-the gods or a power from beyond this world.
-Perhaps they’re right—transdimensional
-experiments in the prior worlds might be what
-created the energies that you now wield.
-You probably wear simple clothes—nothing
-too flashy or stylish. There’s no need to call
-more attention to yourself.
-A Glaive who can heal himself is an
-interesting and dangerous proposition.
-
+You manipulate matter and time to help others and are beloved by everyone you encounter. Some people consider you a representative of the gods or a power from beyond this world. Perhaps they’re right—transdimensional experiments in the prior worlds might be what created the energies that you now wield. You probably wear simple clothes—nothing too flashy or stylish. There’s no need to call more attention to yourself. A Glaive who can heal himself is an interesting and dangerous proposition. 
 connection:
-1. Pick one other PC. This character
-quietly suspects that you’re a messiah or
-supernatural being.
-2. Pick one other PC. This person knows
-a secret of yours, and you desperately hope
-that they do not tell anyone. You can choose
-whether or not you’re aware of their suspicion.
-3. Pick one other PC. This character believes
-that you cured someone close to them of
-a deadly disease, and they are grateful. You
-aren’t sure whether you actually helped or if
-that person wasn’t as sick as was thought.
-4. Pick one other PC. You secretly believe
-that this person might be a hypochondriac,
-and you’re never sure whether they actually
-need your help.
-Minor Effect Suggestions: The target is
-healed for 1 additional point.
-Major Effect Suggestions: The target is
-healed for 2 additional points.
-Tier 1: Healing Touch (1 Intellect point). With
-a touch, you restore 1d6 points to one stat
-Pool of any creature. This ability is a difficulty
-2 Intellect task. Each time you attempt to heal
-the same creature, the task difficulty increases
-by one step. The difficulty returns to 2 after
-that creature rests for ten hours. Action.
-
+1. Pick one other PC. This character quietly suspects that you’re a messiah or supernatural being.
+2. Pick one other PC. This person knows a secret of yours, and you desperately hope that they do not tell anyone. You can choose whether or not you’re aware of their suspicion.
+3. Pick one other PC. This character believes that you cured someone close to them of a deadly disease, and they are grateful. You aren’t sure whether you actually helped or if that person wasn’t as sick as was thought.
+4. Pick one other PC. You secretly believe that this person might be a hypochondriac, and you’re never sure whether they actually need your help.
+Minor Effect Suggestions: The target is healed for 1 additional point.
+Major Effect Suggestions: The target is healed for 2 additional points.
+Tier 1: Healing Touch (1 Intellect point). With a touch, you restore 1d6 points to one stat Pool of any creature. This ability is a difficulty 2 Intellect task. Each time you attempt to heal the same creature, the task difficulty increases by one step. The difficulty returns to 2 after that creature rests for ten hours. Action. 
 ========================================================
 ========================================================
 ========================================================
@@ -766,1803 +310,396 @@ DESTINY
 
 
 ABSORBS ENERGY
-Every movement is an expression of energy.
-You can harness this kinetic energy and
-transform it into other kinds of energy. At
-first, once you absorb energy, you must use it
-before you can absorb any more. You can use
-the absorbed energy as a weapon, or you can
-infuse an object with dangerous energy that
-is released upon touch. Eventually, you will be
-able to use the energy for nonviolent purposes,
-such as healing or invigorating creatures.
-Glaives often gain the biggest benefit from
-being energy absorbers, as they are the ones
-most often being struck in combat, and many
-of the initial uses of absorbed energy are for
-combat. However, Wrights can potentially use
-some of that energy to improve their crafting
-abilities.
-
+Every movement is an expression of energy. You can harness this kinetic energy and transform it into other kinds of energy. At first, once you absorb energy, you must use it before you can absorb any more. You can use the absorbed energy as a weapon, or you can infuse an object with dangerous energy that is released upon touch. Eventually, you will be able to use the energy for nonviolent purposes, such as healing or invigorating creatures. Glaives often gain the biggest benefit from being energy absorbers, as they are the ones most often being struck in combat, and many of the initial uses of absorbed energy are for combat. However, Wrights can potentially use some of that energy to improve their crafting abilities.
 connection:
-1. Pick one other PC. For reasons unknown
-to you, this character is completely immune to
-the energy you release, whether you use it for
-help or harm.
-character years ago, but you don’t think they
-knew you.
-3. Pick one other PC. You’re always trying to
-impress them, but you’re not even sure why.
-4. Pick one other PC. This character has a
-habit that annoys you, but you’re otherwise
-quite impressed with their abilities.
-Minor Effect Suggestions: The energy you
-release is even more potent than you thought.
-Your opponent’s actions are hindered next round.
-Major Effect Suggestions: The energy you
-release is even more potent than you thought.
-Your opponent loses their next action.
-Tier 1: Absorb Kinetic Energy. You absorb a portion
-of the energy of a physical attack or impact. You
-negate 1 point of damage you would have suffered
-and store that point as energy. Once you have
-absorbed 1 point of energy, you continue to negate
-1 point of damage from any incoming blow
-or impact, but the residual energy bleeds off
-with a flare of harmless light (you cannot store
-more than 1 point at a time). Enabler.
+1. Pick one other PC. For reasons unknown to you, this character is completely immune to the energy you release, whether you use it for help or harm.
+2. Pick one other PC. You used to know this character years ago, but you don’t think they knew you.
+3. Pick one other PC. You’re always trying to impress them, but you’re not even sure why.
+4. Pick one other PC. This character has a habit that annoys you, but you’re otherwise quite impressed with their abilities.
+Minor Effect Suggestions: The energy you release is even more potent than you thought. Your opponent’s actions are hindered next round.
+Major Effect Suggestions: The energy you release is even more potent than you thought. Your opponent loses their next action.
+Tier 1: Absorb Kinetic Energy. You absorb a portion of the energy of a physical attack or impact. You negate 1 point of damage you would have suffered and store that point as energy. Once you have absorbed 1 point of energy, you continue to negate 1 point of damage from any incoming blow or impact, but the residual energy bleeds off with a flare of harmless light (you cannot store more than 1 point at a time). Enabler.
 
 
-ACTS WITHOUT
-CONSEQUENCE
-You’re a rebel. You resist the dictates of
-authority, you try to break away from the control
-that society holds over you, and you like to flout
-traditions that you view as backward. That’s
-not to say that you automatically disagree with
-anything or anyone you deal with. It’s more that
-you believe certain institutions and conventions
-are foolish and even hurtful. This is why you
-often press your luck and defy the status quo.
-Often enough, you get away with it.
-In fact, your success is more than a mere
-twist of statistics. You enjoy some kind of
-psychic enhancement, implanted device,
-or attention of a datasphere spirit. You’ve
-also practiced certain skills, behaviors, and
-attitudes that allow blame to slip off you like
-water off a murden.
-Glaives, Jacks, Delves, and Arkai are drawn
-to acting without consequence.
-A character who acts without consequence
-often dresses in flamboyant garments
-designed to draw the eye, as if they’re tempting
-the universe to notice them after all.
-
+ACTS WITHOUT CONSEQUENCES
+You’re a rebel. You resist the dictates of authority, you try to break away from the control that society holds over you, and you like to flout traditions that you view as backward. That’s not to say that you automatically disagree with anything or anyone you deal with. It’s more that you believe certain institutions and conventions are foolish and even hurtful. This is why you often press your luck and defy the status quo. Often enough, you get away with it. In fact, your success is more than a mere twist of statistics. You enjoy some kind of psychic enhancement, implanted device, or attention of a datasphere spirit. You’ve also practiced certain skills, behaviors, and attitudes that allow blame to slip off you like water off a murden. Glaives, Jacks, Delves, and Arkai are drawn to acting without consequence. A character who acts without consequence often dresses in flamboyant garments designed to draw the eye, as if they’re tempting the universe to notice them after all. 
 connection:
-1. Pick one other PC. Through a quirk of fate,
-this character is sometimes blamed for your
-exploits, even if they’re not near you.
-2. Pick one other PC. You recently discovered
-that they always seem to be able to track you
-when you Slip Into Shadow.
-3. Pick one other PC. You saved them from
-certain death by taking a lucky gamble. It
-could’ve gone either way, but in the end, they
-lived. If you’d lost, they would’ve certainly died.
-4. Pick one other PC. They rescued you
-from an awful predicament during one of the
-few times your luck failed you. You’re a bit
-embarrassed that they know you have limits.
-Additional Equipment: Deck of cards and a
-“lucky” oddity of the GM’s choice.
-Weird Ability: You can choose to learn
-Danger Sense instead of one of the abilities
-granted by your type.
-Danger Sense (1 Speed point). Your initiative
-tasks are eased. You pay the cost each time the
-ability is used. Enabler.
-Minor Effect Suggestions: Your foe is
-surprised by or has a bad reaction to you for
-one round, during which time all its tasks are
-hindered.
-Major Effect Suggestions: A foe forgets
-about you unless you draw attention to
-yourself.
-Tier 1: Slip Into Shadow (2+ Intellect points).
-You attempt to slip away from a selected target
-and hide from view in a nearby shadow, behind
-a tree or a furnishing, or into the next room,
-even if in full view of the target. For each level
-of Effort applied, you can attempt to affect one
-additional target, as long as all your targets are
-next to each other. Action to initiate.
-Blameless. You are trained in one of the
-following: deception, stealth, or disguise.
-Enabler.
+1. Pick one other PC. Through a quirk of fate, this character is sometimes blamed for your exploits, even if they’re not near you.
+2. Pick one other PC. You recently discovered that they always seem to be able to track you when you Slip Into Shadow.
+3. Pick one other PC. You saved them from certain death by taking a lucky gamble. It could’ve gone either way, but in the end, they lived. If you’d lost, they would’ve certainly died.
+4. Pick one other PC. They rescued you from an awful predicament during one of the few times your luck failed you. You’re a bit embarrassed that they know you have limits.
+Additional Equipment: Deck of cards and a “lucky” oddity of the GM’s choice.
+Weird Ability: You can choose to learn Danger Sense instead of one of the abilities granted by your type.
+Danger Sense (1 Speed point). Your initiative tasks are eased. You pay the cost each time the ability is used. Enabler.
+Minor Effect Suggestions: Your foe is surprised by or has a bad reaction to you for one round, during which time all its tasks are hindered.
+Major Effect Suggestions: A foe forgets about you unless you draw attention to yourself.
+Tier 1: Slip Into Shadow (2+ Intellect points). You attempt to slip away from a selected target and hide from view in a nearby shadow, behind a tree or a furnishing, or into the next room, even if in full view of the target. For each level of Effort applied, you can attempt to affect one additional target, as long as all your targets are next to each other. Action to initiate.
+Blameless. You are trained in one of the following: deception, stealth, or disguise. Enabler.
 
 
 ADJURES THE LEVIATHAN
-You have the power to command the
-Leviathan—your name for the horrific things
-that wait in the empty ruins or hunt in the
-dark beyond the town walls, creatures with
-long teeth, hellish fury, and a hunger for
-human flesh. The Leviathan is the spirit of the
-predatory, the monstrous, and the sociopathic.
-Sometimes, you suspect the term applies to
-a specific variety of creature, all descended
-from a literal entity called the Leviathan—a
-bloodline you perhaps share in some small
-way, explaining why you can command
-and control these terrible creatures that
-preferentially hunt humans over all other flesh.
-Ninth Worlders are generally unaware of the
-Leviathan, but here and there, you run across
-pockets of people who know of the horrors
-of which you speak. Some believe it is a spirit
-that takes up residence in certain creatures,
-though others suggest the same as you
-believe: it is a strain of life that corrupts and
-changes what it touches. Metaphorically, it’s
-easy to say that all living, nonhuman predators
-are of the Leviathan. But you have a feeling,
-even if you’ve not said it in so many words yet,
-that one day a creature you encounter will be
-the Leviathan.
-Glaives, Jacks, and Delves are eager to
-command creatures that would otherwise try
-to eat them, putting a leash on them.
-
+You have the power to command the Leviathan—your name for the horrific things that wait in the empty ruins or hunt in the dark beyond the town walls, creatures with long teeth, hellish fury, and a hunger for human flesh. The Leviathan is the spirit of the predatory, the monstrous, and the sociopathic. Sometimes, you suspect the term applies to a specific variety of creature, all descended from a literal entity called the Leviathan—a bloodline you perhaps share in some small way, explaining why you can command and control these terrible creatures that preferentially hunt humans over all other flesh. Ninth Worlders are generally unaware of the Leviathan, but here and there, you run across pockets of people who know of the horrors of which you speak. Some believe it is a spirit that takes up residence in certain creatures, though others suggest the same as you believe: it is a strain of life that corrupts and changes what it touches. Metaphorically, it’s easy to say that all living, nonhuman predators are of the Leviathan. But you have a feeling, even if you’ve not said it in so many words yet, that one day a creature you encounter will be the Leviathan. Glaives, Jacks, and Delves are eager to command creatures that would otherwise try to eat them, putting a leash on them. 
 connection:
-1. Pick one other PC. A creature you control
-will take commands both from this character
-and from you. But if it ever receives conflicting
-commands, it turns on you both.
-2. Pick one other PC. You captured a
-creature for this character, but it promptly
-tried to kill them. They still have scars from the
-incident.
-3. Pick one other PC. You are pretty sure you
-can command that PC as a creature if you apply
-enough Effort (though you don’t think you can
-capture the PC). You haven’t tried, and you’re
-not sure you should; it might unlock some
-previously bestial part hidden inside them.
-4. Pick one other PC. You saved them from a
-creature attack, and they owe you their life.
+1. Pick one other PC. A creature you control will take commands both from this character and from you. But if it ever receives conflicting commands, it turns on you both.
+2. Pick one other PC. You captured a creature for this character, but it promptly tried to kill them. They still have scars from the incident.
+3. Pick one other PC. You are pretty sure you can command that PC as a creature if you apply enough Effort (though you don’t think you can capture the PC). You haven’t tried, and you’re not sure you should; it might unlock some previously bestial part hidden inside them.
+4. Pick one other PC. You saved them from a creature attack, and they owe you their life.
 Additional Equipment: A leash.
-Minor Effect Suggestions: One additional
-creature takes no action for a round.
-Major Effect Suggestions: A creature you
-control takes an immediate extra action of your
-choice.
-Tier 1: Adjure Creature (2+ Intellect points). For
-one minute, you can verbally control a living,
-nonhumanoid creature of up to level 2 within
-short range whose motive is some variant
-of “hungers for flesh,” commanding it to do
-simple tasks on your behalf.
-Alternatively, you can force up to three such
-creatures within range to take no actions for as
-long as you focus all your attention on them.
-Every round, each member of the group can
-attempt to escape your control.
-Whichever effect you attempt, you can apply
-Effort to increase the maximum level of the
-affected creature. Thus, to command a level
-4 creature to do simple tasks on your behalf
-(two levels above the normal limit), you must
-apply two levels of Effort. Action to initiate.
-Ninth World Bestiary Knowledge. You
-are trained in the lore of flesh-eating, nonhumanoid
-creatures—recognizing them,
-knowing their weaknesses, and knowing their
-habits and behaviors. Enabler.
+Minor Effect Suggestions: One additional creature takes no action for a round.
+Major Effect Suggestions: A creature you control takes an immediate extra action of your choice.
+Tier 1: Adjure Creature (2+ Intellect points). For one minute, you can verbally control a living, nonhumanoid creature of up to level 2 within short range whose motive is some variant of “hungers for flesh,” commanding it to do simple tasks on your behalf. Alternatively, you can force up to three such creatures within range to take no actions for as long as you focus all your attention on them. Every round, each member of the group can attempt to escape your control. Whichever effect you attempt, you can apply Effort to increase the maximum level of the affected creature. Thus, to command a level 4 creature to do simple tasks on your behalf (two levels above the normal limit), you must apply two levels of Effort. Action to initiate.
+Ninth World Bestiary Knowledge. You are trained in the lore of flesh-eating, nonhumanoid creatures—recognizing them, knowing their weaknesses, and knowing their habits and behaviors. Enabler.
 
 
 AUGMENTS FLESH
 WITH GRAFTS
 Machines can be upgraded and improved, and the human body is just an organic machine. Your goal is to keep improving your physical form, replacing obsolete parts of your body with new grafts and trying to become supremely efficient at your normal and augmented biological processes. Whether you do this with technology or pieces from other creatures depends on what you find in your explorations and your estimation of your flaws and shortcomings. You don’t believe it’s possible to achieve perfection—perfection is an ongoing process, not a final state. If following this path makes you something more than human, so be it. You left behind childish toys and forms to become an adult, so you are willing to leave your humanity behind in order to become something greater. see grafting as a way to increase their physical power and survive attacks from dangerous opponents. Delves often have many opportunities to find and use grafts, and Wrights can use their own knowledge of the numenera to craft custom limbs and other body grafts for themselves.
-
 connection:
-1. Pick one other PC. They have an ability
-you’d like as a graft, and you want to find a
-creature or cypher that duplicates that ability.
-2. Pick one other PC. They once saved
-your life when one of your surgeries had a
-complication.
-3. Pick one other PC. You think they’re
-offended or disgusted by your grafts, and you
-want to demonstrate the value of your abilities.
-4. Pick one other PC. They’re interested
-in grafts, but you’ve rebuffed their requests
-because you think they’d have a fatal reaction
-to the surgery.
-Minor Effect Suggestions: An upgraded
-body part is especially effective or efficient at
-a particular physical task. You gain an asset to
-similar actions involving the same task (such
-as making attacks against the same foe or
-dealing with a physical obstacle).
-Major Effect Suggestions: Your foe is
-especially vulnerable to some aspect of one
-of your implants, like an allergy or radiation
-sensitivity. Make an immediate attack against
-that foe (using the same stat as the action
-that caused the major effect). If the attack
-succeeds, it deals 3 points of damage (ignores
-Armor).
-Tier 1: Autodoctor. You are trained in healing,
-performing surgical procedures, and
-withstanding pain. You can perform surgeries
-on yourself, remaining conscious while you do
-so. Enabler.
+1. Pick one other PC. They have an ability you’d like as a graft, and you want to find a creature or cypher that duplicates that ability.
+2. Pick one other PC. They once saved your life when one of your surgeries had a complication.
+3. Pick one other PC. You think they’re offended or disgusted by your grafts, and you want to demonstrate the value of your abilities.
+4. Pick one other PC. They’re interested in grafts, but you’ve rebuffed their requests because you think they’d have a fatal reaction to the surgery.
+Minor Effect Suggestions: An upgraded body part is especially effective or efficient at a particular physical task. You gain an asset to similar actions involving the same task (such as making attacks against the same foe or dealing with a physical obstacle).
+Major Effect Suggestions: Your foe is especially vulnerable to some aspect of one of your implants, like an allergy or radiation sensitivity. Make an immediate attack against that foe (using the same stat as the action that caused the major effect). If the attack succeeds, it deals 3 points of damage (ignores Armor).
+Tier 1: Autodoctor. You are trained in healing, performing surgical procedures, and withstanding pain. You can perform surgeries on yourself, remaining conscious while you do so. Enabler.
 
 
 BATTLES AUTOMATONS
-Life is for the living—the biological.
-Automatons, animate machines, thinking
-machines, and anything similar are
-abominations. You excel at battling these
-anathemas, cleansing the world of their
-contaminating presence.
-Maybe your desire to battle automatons
-comes from religious zealotry. Maybe it’s
-steeped in revenge for some past crime
-committed by a machine. Maybe you don’t
-know why you’re driven to destroy animate
-machines. Maybe you’re just good at it.
-You probably bear the trophies of former
-“kills” on you, wearing bits of numenera on your
-belt or around your neck. You also likely use
-heavy weaponry, ideal for penetrating armor.
-Glaives are most often automaton fighters,
-particularly those who are quick and nimble,
-able to leap in, cutting a few vital wires here or
-slicing through a component panel there.
-
+Life is for the living—the biological. Automatons, animate machines, thinking machines, and anything similar are abominations. You excel at battling these anathemas, cleansing the world of their contaminating presence. Maybe your desire to battle automatons comes from religious zealotry. Maybe it’s steeped in revenge for some past crime committed by a machine. Maybe you don’t know why you’re driven to destroy animate machines. Maybe you’re just good at it. You probably bear the trophies of former “kills” on you, wearing bits of numenera on your belt or around your neck. You also likely use heavy weaponry, ideal for penetrating armor. Glaives are most often automaton fighters, particularly those who are quick and nimble, able to leap in, cutting a few vital wires here or slicing through a component panel there.
 connection:
-1. Pick one other PC. You suspect that this
-character is put off by your hatred of animate
-machines. You can choose whether or not they
-know of your suspicions.
-2. Pick one other PC. You know that this
-character has suffered at the hands of
-automatons in the past, and perhaps you can
-convince them to help you in your calling.
-Regardless, you feel protective of them.
-3. Pick one other PC. This character does
-not appear to share your feelings about
-automatons. In fact, you believe that they
-might secretly have machine parts.
-4. Pick one other PC. This character comes
-from the same place you do, and you knew
-each other as children.
-Additional Equipment: You have bits
-and pieces that you tore from the husks of
-automatons you have destroyed in the past.
-Anti-Machine Abilities: You are trained in
-understanding numenera. In addition, if your
-type grants you special abilities that inflict
-damage, they inflict 1 additional point of
-damage to automatons and similar beings,
-and 1 fewer point of damage to biological,
-living targets. If you have abilities that
-normally would not work against automatons
-(like mind control), they will now. Enabler.
-Minor Effect Suggestions: Your automaton
-foe experiences an error for one round, during
-which time all tasks it attempts are hindered.
-Major Effect Suggestions: Your automaton
-foe experiences a major error and loses its next
-turn.
-Tier 1: Machine Vulnerabilities. You inflict
-3 additional points of damage against
-automatons and animate machines of all
-kinds. Enabler.
+1. Pick one other PC. You suspect that this character is put off by your hatred of animate machines. You can choose whether or not they know of your suspicions.
+2. Pick one other PC. You know that this character has suffered at the hands of automatons in the past, and perhaps you can convince them to help you in your calling. Regardless, you feel protective of them.
+3. Pick one other PC. This character does not appear to share your feelings about automatons. In fact, you believe that they might secretly have machine parts.
+4. Pick one other PC. This character comes from the same place you do, and you knew each other as children.
+Additional Equipment: You have bits and pieces that you tore from the husks of automatons you have destroyed in the past.
+Anti-Machine Abilities: You are trained in understanding numenera. In addition, if your type grants you special abilities that inflict damage, they inflict 1 additional point of damage to automatons and similar beings, and 1 fewer point of damage to biological, living targets. If you have abilities that normally would not work against automatons (like mind control), they will now. Enabler.
+Minor Effect Suggestions: Your automaton foe experiences an error for one round, during which time all tasks it attempts are hindered.
+Major Effect Suggestions: Your automaton foe experiences a major error and loses its next turn.
+Tier 1: Machine Vulnerabilities. You inflict 3 additional points of damage against automatons and animate machines of all kinds. Enabler.
 
 
 BRANDISHES AN
 EXOTIC SHIELD
-Anyone can use a shield. But few can project
-a protective force field that crackles with
-otherworldly energy. Maybe your ability comes
-from a childhood encounter with a strange
-machine or a metallic nodule that protrudes
-above your flesh along your spine, or perhaps
-it is something that people in your family are
-capable of once every few generations. You use
-your force field to not only protect yourself,
-but to aggressively bash those who would do
-you harm. At first, you can create only a small
-protective plane. But as your skills improve,
-you can learn to throw it at foes and have it
-rebound, heal allies, and release an explosion
-of destructive energy each time it strikes home.
-Glaives and Delves are most likely to choose
-this focus.
-
+Anyone can use a shield. But few can project a protective force field that crackles with otherworldly energy. Maybe your ability comes from a childhood encounter with a strange machine or a metallic nodule that protrudes above your flesh along your spine, or perhaps it is something that people in your family are capable of once every few generations. You use your force field to not only protect yourself, but to aggressively bash those who would do you harm. At first, you can create only a small protective plane. But as your skills improve, you can learn to throw it at foes and have it rebound, heal allies, and release an explosion of destructive energy each time it strikes home. Glaives and Delves are most likely to choose this focus.
 connection:
-1. Pick one other PC. You overheard them
-say that anyone who uses a shield doesn’t
-really know how to fight. You’re looking for an
-opportunity to prove them wrong.
-2. Pick one other PC. Someone related to
-this character gave you the plans to create, or
-themselves created, your shield.
-3. Pick one other PC. You rescued them from
-a bad situation.
-4. Pick one other PC. You’re drawn to them
-and don’t know why. There’s just something
-about them. A shared destiny? Or destined to
-become bitter foes one day?
-Shield Abilities: If you wish, you can replace
-one of your tier 1 type abilities with Force Fall.
-Force Fall (1 Speed point). If you fall, you
-can use your force field shield to absorb the
-impact of landing and gain +5 Armor against
-damage you would otherwise take from the
-fall. Enabler.
-Minor Effect Suggestions: You bash your
-target and knock them prone.
-Major Effect Suggestions: Your bash your
-target, and they are dazed for one minute,
-during which time their tasks are hindered.
-Tier 1: Force Field Shield. You manifest a
-small plane of pure force, which takes on a
-shield-like shape with the barest flicker of a
-thought. You can dismiss it just as easily. To
-use the force shield, you must hold it in one
-of your hands. You are practiced in using your
-exotic shield in one hand as a light melee
-weapon; however, if you attack with both
-your shield and a weapon held in the other
-hand, both attacks are hindered. When you
-are unconscious or sleeping, the force field
-dissipates. Enabler.
-
+1. Pick one other PC. You overheard them say that anyone who uses a shield doesn’t really know how to fight. You’re looking for an opportunity to prove them wrong.
+2. Pick one other PC. Someone related to this character gave you the plans to create, or themselves created, your shield.
+3. Pick one other PC. You rescued them from a bad situation.
+4. Pick one other PC. You’re drawn to them and don’t know why. There’s just something about them. A shared destiny? Or destined to become bitter foes one day?
+Shield Abilities: If you wish, you can replace one of your tier 1 type abilities with Force Fall.
+Force Fall (1 Speed point). If you fall, you can use your force field shield to absorb the impact of landing and gain +5 Armor against damage you would otherwise take from the fall. Enabler.
+Minor Effect Suggestions: You bash your target and knock them prone.
+Major Effect Suggestions: Your bash your target, and they are dazed for one minute, during which time their tasks are hindered.
+Tier 1: Force Field Shield. You manifest a small plane of pure force, which takes on a shield-like shape with the barest flicker of a thought. You can dismiss it just as easily. To use the force shield, you must hold it in one of your hands. You are practiced in using your exotic shield in one hand as a light melee weapon; however, if you attack with both your shield and a weapon held in the other hand, both attacks are hindered. When you are unconscious or sleeping, the force field dissipates. Enabler. 
 
 BREAKS DOWN WALLS
-Through some modification of your body—
-mutation, mechanical enhancement, nanoreinforcement,
-or something else—you have
-the ability to smash through walls, destroy
-weapons, shatter shackles, break devices,
-and otherwise annihilate objects that would
-be difficult or even impossible for others to
-demolish. You’re a breaker. You do not flinch;
-you punch right through that wall, smash that
-machine, and fold the enemy’s metallic sword
-in half in an impressive and intimidating
-display. Depending on the method that gives
-you this ability, your act might be accompanied
-by flashes of energy, sound, or acidic odors.
-Once you display your impressive skills as a
-destroyer, your enemies sometimes surrender
-rather than face an apparent force of nature
-like yourself.
-You likely wear armor, but probably not the
-heaviest armor you can because you don’t
-want anything to slow you down too much.
-Breakers are often Glaives or Delves.
-
+Through some modification of your body— mutation, mechanical enhancement, nanoreinforcement, or something else—you have the ability to smash through walls, destroy weapons, shatter shackles, break devices, and otherwise annihilate objects that would be difficult or even impossible for others to demolish. You’re a breaker. You do not flinch; you punch right through that wall, smash that machine, and fold the enemy’s metallic sword in half in an impressive and intimidating display. Depending on the method that gives you this ability, your act might be accompanied by flashes of energy, sound, or acidic odors. Once you display your impressive skills as a destroyer, your enemies sometimes surrender rather than face an apparent force of nature like yourself. You likely wear armor, but probably not the heaviest armor you can because you don’t want anything to slow you down too much. Breakers are often Glaives or Delves. 
 connection:
-1. Pick one other PC. You accidentally struck
-this character once when you tried to break
-through a wall. It ruined your attempt and gave
-the character a nasty bruise that they claim still
-aches months later.
-2. Pick one other PC. You’re certain this
-character appreciates your abilities and is as
-impressed as you are with the sound of walls
-being smashed. This may or may not actually
-be the case.
-3. Pick one other PC. You and this character
-were childhood friends.
-4. Pick one other PC. This character provides
-excellent covering fire while you break down
-walls. If they use ranged attacks in the same
-round as you make a charge attack, they can
-fire their weapon through the hole you just
-made.
-Additional Equipment: A mechanism of
-some sort is fused with your flesh. You think it
-might have something to do with your ability
-to pierce solid material.
-Minor Effect Suggestions: Your feat of
-destruction thrills you. You gain an asset to
-Speed defense tasks until your next action.
-Major Effect Suggestions: Your feat of
-destruction inspires you. You knock your
-opponent off their feet, and they lose their next
-action.
-Tier 1: Breaker. You are trained in tasks related
-to damaging objects with the goal of breaking,
-piercing, or demolishing them. (It is a Might
-action to damage an object, and on a success,
-the object moves one step down the object
-damage track. If the Might roll exceeds the
-difficulty by two steps, the object instead
-moves two steps down the object damage
-track. If the Might roll exceeds the difficulty by
-four steps, the object moves three steps down
-the object damage track and is immediately
-destroyed. Brittle material reduces the effective
-level of the object, while hard material like
-wood or stone adds 1 to the effective level or 2
-for very hard objects like those made of metal.)
-Enabler.
+1. Pick one other PC. You accidentally struck this character once when you tried to break through a wall. It ruined your attempt and gave the character a nasty bruise that they claim still aches months later.
+2. Pick one other PC. You’re certain this character appreciates your abilities and is as impressed as you are with the sound of walls being smashed. This may or may not actually be the case.
+3. Pick one other PC. You and this character were childhood friends.
+4. Pick one other PC. This character provides excellent covering fire while you break down walls. If they use ranged attacks in the same round as you make a charge attack, they can fire their weapon through the hole you just made.
+Additional Equipment: A mechanism of some sort is fused with your flesh. You think it might have something to do with your ability to pierce solid material.
+Minor Effect Suggestions: Your feat of destruction thrills you. You gain an asset to Speed defense tasks until your next action.
+Major Effect Suggestions: Your feat of destruction inspires you. You knock your opponent off their feet, and they lose their next action.
+Tier 1: Breaker. You are trained in tasks related to damaging objects with the goal of breaking, piercing, or demolishing them. (It is a Might action to damage an object, and on a success, the object moves one step down the object damage track. If the Might roll exceeds the difficulty by two steps, the object instead moves two steps down the object damage track. If the Might roll exceeds the difficulty by four steps, the object moves three steps down the object damage track and is immediately destroyed. Brittle material reduces the effective level of the object, while hard material like wood or stone adds 1 to the effective level or 2 for very hard objects like those made of metal.) Enabler.
 
 
 BUILDS TOMORROW
-One of your favorite pastimes involves
-imagining what the skylines of the previous
-worlds might have looked like. Their inspiring
-heights, strange shapes, colors that human
-eyes can’t see, connections between structures
-that allowed the unknowable peoples of those
-bygone eras to step from one to the next . . .
-Well, you don’t know for certain what it must
-have been like, but you gain just as much
-pleasure imagining the future you will build,
-using the seeds of ancient knowledge as your
-guide for tomorrow.
-Are you a Wright, or are you some other type
-that has a keen interest in crafting? Although
-anyone can try their hand at crafting, someone
-who Builds Tomorrow has an advantage.
-Whatever else you wear, you likely have a
-belt strung with various spare parts, tools, and
-iotum, if you have any on hand.
-
+One of your favorite pastimes involves imagining what the skylines of the previous worlds might have looked like. Their inspiring heights, strange shapes, colors that human eyes can’t see, connections between structures that allowed the unknowable peoples of those bygone eras to step from one to the next . . . Well, you don’t know for certain what it must have been like, but you gain just as much pleasure imagining the future you will build, using the seeds of ancient knowledge as your guide for tomorrow. Are you a Wright, or are you some other type that has a keen interest in crafting? Although anyone can try their hand at crafting, someone who Builds Tomorrow has an advantage. Whatever else you wear, you likely have a belt strung with various spare parts, tools, and iotum, if you have any on hand. 
 connection:
-1. Pick one other PC. This character seems
-able to use all the objects and structures you
-craft with ease, even when you hide how to
-access certain functions.
-2. Pick one other PC. This character knows
-a few things that can help when the objects or
-structures you crafted need repair.
-3. Pick one other PC. This character has a
-special tool that you think would be perfect for
-your own set, but they regard it as a keepsake or
-are otherwise reluctant to give it up, even though
-they don’t seem to know what it’s good for.
-4. Pick one other PC. When you were
-developing a plan from a seed of knowledge
-from the prior worlds, this character was
-burned in an unexpected incident. They still
-have a small scar.
-Additional Equipment: You begin with one
-numenera plan for an installation or cypher of
-your choice and a bag of light tools. You also
-have 3 units of io, 3 units of responsive synth,
-and 3 units of parts.
-Minor Effect Suggestions: You are elated
-with how well an object you crafted is
-functioning, easing Speed defense tasks for
-the next round.
-Major Effect Suggestions: The object or
-structure creates some startling effect that
-causes the foe to lose their next turn.
-Tier 1: Natural Crafter. You are trained in
-crafting numenera. Enabler.
-Seeds of a Plan. You immediately gain two
-new plans to create any object of up to level
-3 plus your tier. Each time you advance a tier,
-you can gain two additional plans of up to level
-3 plus your tier. Enabler.
-Starting Iotum. You have, find, or otherwise
-obtain a cache of iotum sufficient to build one
-installation or cypher that you have a plan for.
-Enabler.
+1. Pick one other PC. This character seems able to use all the objects and structures you craft with ease, even when you hide how to access certain functions.
+2. Pick one other PC. This character knows a few things that can help when the objects or structures you crafted need repair.
+3. Pick one other PC. This character has a special tool that you think would be perfect for your own set, but they regard it as a keepsake or are otherwise reluctant to give it up, even though they don’t seem to know what it’s good for.
+4. Pick one other PC. When you were developing a plan from a seed of knowledge from the prior worlds, this character was burned in an unexpected incident. They still have a small scar.
+Additional Equipment: You begin with one numenera plan for an installation or cypher of your choice and a bag of light tools. You also have 3 units of io, 3 units of responsive synth, and 3 units of parts.
+Minor Effect Suggestions: You are elated with how well an object you crafted is functioning, easing Speed defense tasks for the next round.
+Major Effect Suggestions: The object or structure creates some startling effect that causes the foe to lose their next turn.
+Tier 1: Natural Crafter. You are trained in crafting numenera. Enabler.
+Seeds of a Plan. You immediately gain two new plans to create any object of up to level 3 plus your tier. Each time you advance a tier, you can gain two additional plans of up to level 3 plus your tier. Enabler.
+Starting Iotum. You have, find, or otherwise obtain a cache of iotum sufficient to build one installation or cypher that you have a plan for. Enabler.
 
 
 DANCES WITH
 DARK MATTER
-You’ve felt the edges of something more real
-than the substanceless shadows that dance
-behind the light—something you dubbed
-dark matter. It responded to you, almost like a
-living thing. When you made shadow puppets,
-they were dark matter condensed and became
-briefly real. As you grew older, you learned to
-harness your gift for more than play. You can
-condense dark matter from thin air, pulling it
-from the void spaces or a transdimensional
-pocket that few others can access. You don’t
-fear dark matter, but others should when
-you’re around.
-Nanos, Jacks, and Delves probably get the
-most out of this focus. That said, an Arkus could
-parlay the sense of dread that accompanies
-anyone able to command darkness, bolstering
-their authority among many.
-
+You’ve felt the edges of something more real than the substanceless shadows that dance behind the light—something you dubbed dark matter. It responded to you, almost like a living thing. When you made shadow puppets, they were dark matter condensed and became briefly real. As you grew older, you learned to harness your gift for more than play. You can condense dark matter from thin air, pulling it from the void spaces or a transdimensional pocket that few others can access. You don’t fear dark matter, but others should when you’re around. Nanos, Jacks, and Delves probably get the most out of this focus. That said, an Arkus could parlay the sense of dread that accompanies anyone able to command darkness, bolstering their authority among many. 
 connection:
-1. Pick one other PC. This character also
-likes the dark. You both gain +1 on any die rolls
-when you collaborate on the same task, fight
-the same foe, and so on.
-2. Pick two other PCs. You think you once
-saw them doing something illegal at night.
-You can choose whether or not to share
-that information. The characters can choose
-whether it was really them (it could have been
-neither, one, or both), and they may or may
-not share that information in return.
-3. Pick one other PC. This person always
-seems to see you, even when you’re totally
-cloaked by darkness.
-4. Pick one other PC. This character once
-flashed a cypher in your eyes so brightly
-that you were blinded for several days.
-You recovered, but you keep an eye on this
-character, just in case.
-Minor Effect Suggestions: Darkness is
-drawn to your foe’s eyes, hindering any attacks
-the foe attempts on its next turn.
-Major Effect Suggestions: Darkness thickens
-and momentarily clogs your foe’s throat like a
-wad of felt. Coughing and choking, they lose
-their next turn.
-Tier 1: Ribbons of Dark Matter (2 Intellect
-points). For the next minute, dark matter
-condenses within an area within long range
-that is no bigger than an immediate distance
-in diameter, manifesting as swirling ribbons.
-All tasks attempted by creatures in the area
-are hindered, and leaving the area requires
-the creature’s entire action to move. You can
-dismiss the dark matter early as an action.
-Action to initiate.
+1. Pick one other PC. This character also likes the dark. You both gain +1 on any die rolls when you collaborate on the same task, fight the same foe, and so on.
+2. Pick two other PCs. You think you once saw them doing something illegal at night. You can choose whether or not to share that information. The characters can choose whether it was really them (it could have been neither, one, or both), and they may or may not share that information in return.
+3. Pick one other PC. This person always seems to see you, even when you’re totally cloaked by darkness.
+4. Pick one other PC. This character once flashed a cypher in your eyes so brightly that you were blinded for several days. You recovered, but you keep an eye on this character, just in case.
+Minor Effect Suggestions: Darkness is drawn to your foe’s eyes, hindering any attacks the foe attempts on its next turn.
+Major Effect Suggestions: Darkness thickens and momentarily clogs your foe’s throat like a wad of felt. Coughing and choking, they lose their next turn.
+Tier 1: Ribbons of Dark Matter (2 Intellect points). For the next minute, dark matter condenses within an area within long range that is no bigger than an immediate distance in diameter, manifesting as swirling ribbons. All tasks attempted by creatures in the area are hindered, and leaving the area requires the creature’s entire action to move. You can dismiss the dark matter early as an action. Action to initiate.
 
 
 DEFENDS THE GATE
-You are a defender. Places are special to you,
-and seeing them overrun hurts your soul to
-its core. Perhaps you had a bad experience
-once, where a place that you loved was lost in
-war. After that, you vowed: never again. You
-sought out special training, and more than
-that, a connection to the nanites that some
-possess but most people think of as magic.
-This connection is conferred via mutation, a
-special device, psychic concentration, or some
-other method that links you to the numenera.
-Your connection grows over time, granting you
-the ability to defend a city, a wall, or even just a
-single but all-important gate.
-You probably wear obvious armor, perhaps
-even distinctive in its defensive nature. A few
-spikes and scowling faces worked into the
-pattern might discourage those seeking to get
-past you.
-Glaives are the obvious character to
-prefer this focus, though a Wright defending
-an installation might enjoy the additional
-protection this focus provides.
-
+You are a defender. Places are special to you, and seeing them overrun hurts your soul to its core. Perhaps you had a bad experience once, where a place that you loved was lost in war. After that, you vowed: never again. You sought out special training, and more than that, a connection to the nanites that some possess but most people think of as magic. This connection is conferred via mutation, a special device, psychic concentration, or some other method that links you to the numenera. Your connection grows over time, granting you the ability to defend a city, a wall, or even just a single but all-important gate. You probably wear obvious armor, perhaps even distinctive in its defensive nature. A few spikes and scowling faces worked into the pattern might discourage those seeking to get past you. Glaives are the obvious character to prefer this focus, though a Wright defending an installation might enjoy the additional protection this focus provides. 
 connection:
-1. Pick one other PC. Though you once
-defended this character from a foe’s attack,
-you weren’t completely successful. This
-character still bears a scar (it’s up to them
-where and how prominent that scar is).
-2. Pick one other PC. You defended them
-once from an abhuman’s attack when
-they were debilitated. You were completely
-successful, saving this character’s life.
-3. Pick one other PC. You’re always trying
-to impress this character with your strength,
-ability to withstand pain, capacity for drink,
-and so on. Perhaps they are a rival, perhaps
-you desire their respect, or perhaps you’re
-romantically interested in them.
-4. Pick one other PC. This character seems
-to anticipate your next move almost before you
-begin it. When this character collaborates with
-you on the same task or defends the same
-area, both of you gain an asset to initiative
-tasks.
-Additional Equipment: You have a strange
-device, either handheld or fused to your
-forearm. It might be purely decorative, or it
-might be related to your connection to the
-numenera.
-Minor Effect Suggestions: The target is
-pushed back by your strong defense, so much
-so that it’s dazed for one round, during which
-time its tasks are hindered.
-Major Effect Suggestions: Make an
-additional attack with your weapon on your
-turn.
-Tier 1: Fortified Position (2 Might points). For
-the next minute, you gain +1 Armor and an
-asset to your Might defense tasks, as long as
-you haven’t moved more than an immediate
-distance since your last turn. Action to initiate.
-Rally to Me (2 Intellect points). You cry
-out, blow a battle horn, or otherwise signal
-to everyone within very long range that you
-require aid. All allied creatures who respond
-by moving to within an immediate distance of
-you within the next few rounds gain one asset
-on any one attack or defense task within the
-next hour that you suggest, such as “hold the
-gate,” “charge that group of abhumans,” or
-something similar. Action to initiate.
+1. Pick one other PC. Though you once defended this character from a foe’s attack, you weren’t completely successful. This character still bears a scar (it’s up to them where and how prominent that scar is).
+2. Pick one other PC. You defended them once from an abhuman’s attack when they were debilitated. You were completely successful, saving this character’s life.
+3. Pick one other PC. You’re always trying to impress this character with your strength, ability to withstand pain, capacity for drink, and so on. Perhaps they are a rival, perhaps you desire their respect, or perhaps you’re romantically interested in them.
+4. Pick one other PC. This character seems to anticipate your next move almost before you begin it. When this character collaborates with you on the same task or defends the same area, both of you gain an asset to initiative tasks.
+Additional Equipment: You have a strange device, either handheld or fused to your forearm. It might be purely decorative, or it might be related to your connection to the numenera.
+Minor Effect Suggestions: The target is pushed back by your strong defense, so much so that it’s dazed for one round, during which time its tasks are hindered.
+Major Effect Suggestions: Make an additional attack with your weapon on your turn.
+Tier 1: Fortified Position (2 Might points). For the next minute, you gain +1 Armor and an asset to your Might defense tasks, as long as you haven’t moved more than an immediate distance since your last turn. Action to initiate.
+Rally to Me (2 Intellect points). You cry out, blow a battle horn, or otherwise signal to everyone within very long range that you require aid. All allied creatures who respond by moving to within an immediate distance of you within the next few rounds gain one asset on any one attack or defense task within the next hour that you suggest, such as “hold the gate,” “charge that group of abhumans,” or something similar. Action to initiate.
 
 
 DEFENDS THE WEAK
-Someone has to stand up for the helpless,
-the weak, and the unprotected. You believe
-this duty falls to you, and thus you have spent
-much of your life watching out for the people
-around you. When you see them in trouble,
-you are the first to come to their aid. You might
-give up your last shin to help the hungry, take
-a beating to save a person from the same, or
-rally your friends to take on injustice wherever
-you find it.
-You probably bear many scars from previous
-conflicts, but for each scar, you likely also have
-a token of gratitude. You may have a dried
-flower given to you by a lady you saved from
-brigands, or a bit of metal given to you by a
-starving man you fed.
-Glaives typically take up the cause of the
-weak, having the grit, determination, and
-durability to face down dangerous threats.
-Jacks, however, may pursue these goals as
-vigilantes, while Nanos bring to bear fabulous
-powers in the defense of others. Delves are
-least likely to take up this cause, as they tend
-to be loners. On the other hand, Wrights and
-Arkai, many of whom have the good of others
-in mind at all times, are sometimes drawn to
-more direct methods of defending others.
-
+Someone has to stand up for the helpless, the weak, and the unprotected. You believe this duty falls to you, and thus you have spent much of your life watching out for the people around you. When you see them in trouble, you are the first to come to their aid. You might give up your last shin to help the hungry, take a beating to save a person from the same, or rally your friends to take on injustice wherever you find it. You probably bear many scars from previous conflicts, but for each scar, you likely also have a token of gratitude. You may have a dried flower given to you by a lady you saved from brigands, or a bit of metal given to you by a starving man you fed. Glaives typically take up the cause of the weak, having the grit, determination, and durability to face down dangerous threats. Jacks, however, may pursue these goals as vigilantes, while Nanos bring to bear fabulous powers in the defense of others. Delves are least likely to take up this cause, as they tend to be loners. On the other hand, Wrights and Arkai, many of whom have the good of others in mind at all times, are sometimes drawn to more direct methods of defending others. 
 connection:
-1. Pick one other PC. You failed to protect
-this character at some point in the past, and
-you feel compelled to make up for your failure.
-2. Pick one other PC. This character claimed
-innocence during a long-ago event, and you
-protected them. Now that time has passed,
-you’re not entirely convinced that they were
-blameless.
-3. Pick two other PCs. They seem to think
-that you are more of an arbitrator than you
-really are, and they keep asking you to choose
-which one of them is correct.
-4. Pick one other PC. They believe that one
-of the tokens of gratitude you carry came from
-their father.
+1. Pick one other PC. You failed to protect this character at some point in the past, and you feel compelled to make up for your failure.
+2. Pick one other PC. This character claimed innocence during a long-ago event, and you protected them. Now that time has passed, you’re not entirely convinced that they were blameless.
+3. Pick two other PCs. They seem to think that you are more of an arbitrator than you really are, and they keep asking you to choose which one of them is correct.
+4. Pick one other PC. They believe that one of the tokens of gratitude you carry came from their father.
 Additional Equipment: You have a shield.
-Minor Effect Suggestions: You can draw an
-attack without having to use an action at any
-point before the end of the next round.
-Major Effect Suggestions: You can take an
-extra action, though you can use this action
-only to stand guard.
-Tier 1: Courageous. You are trained in Intellect
-defense tasks and initiative tasks. Enabler.
-Warding Shield. You have +1 to Armor while
-you are using a shield. Enabler.
+Minor Effect Suggestions: You can draw an attack without having to use an action at any point before the end of the next round.
+Major Effect Suggestions: You can take an extra action, though you can use this action only to stand guard.
+Tier 1: Courageous. You are trained in Intellect defense tasks and initiative tasks. Enabler.
+Warding Shield. You have +1 to Armor while you are using a shield. Enabler.
 
 
 DESCENDS FROM NOBILITY
-You descend from privilege, wealth, and
-power. Your family once owned land (perhaps
-they still do), wielded political control, and
-accumulated vast wealth. You’ve stepped
-away from that somewhat, though you still
-carry a noble title, whether you want it or
-not. People sometimes recognize your name,
-and sometimes they recognize you as being
-descended from nobility. But with many areas
-being so isolated from each other, people in an
-area far from where you came from may never
-even have heard of the place where your family
-is known.
-Since you were raised a certain way, you
-probably dress smartly and carry yourself
-in such a way that inspires, endears, or
-intimidates. You have a voice suited to drawing
-attention (unless you choose to disguise it).
-
+You descend from privilege, wealth, and power. Your family once owned land (perhaps they still do), wielded political control, and accumulated vast wealth. You’ve stepped away from that somewhat, though you still carry a noble title, whether you want it or not. People sometimes recognize your name, and sometimes they recognize you as being descended from nobility. But with many areas being so isolated from each other, people in an area far from where you came from may never even have heard of the place where your family is known. Since you were raised a certain way, you probably dress smartly and carry yourself in such a way that inspires, endears, or intimidates. You have a voice suited to drawing attention (unless you choose to disguise it). 
 connection:
-1. Pick one other PC. This character was
-once in service to your parents’ household,
-but you have since grown to think of them as
-a peer.
-2. Pick one other PC. You’re pretty sure that
-they are descended from a rival house, even if
-they don’t know it.
-3. Pick one other PC. You used your
-nobility—your influence, your wealth, or the
-promise of a favor—to intercede on this
-character’s behalf.
-4. Pick one other PC. You were once very
-close with this character in the distant past.
-Additional Equipment: A set of expensive
-clothing suitable for nobility.
-Noble Advantage: If you wish, you can
-swap an ability gained from your type for the
-following.
-Servant. Your name entitles you to a level 2
-follower. One of their modifications must be
-for tasks related to serving as your personal
-assistant. You can ask your servant to deliver
-things for you, run messages, pick up objects
-of interest or items on a list—pretty much
-whatever you want, within reason. They can
-also run interference if you’re trying to avoid
-someone, help hide you from the attention of
-others, help you muscle through a crowd, and
-so on. Enabler.
-Minor Effect Suggestions: The next time you
-attempt to command, captivate, or otherwise
-influence the same foe, the task is eased.
-Major Effect Suggestions: The foe is
-influenced, captivated, or otherwise affected by
-your ability for twice as long as normal.
-Tier 1: Privileged Nobility. You are adept at
-claiming the rewards that a noble background
-can generate. When recognized, you can
-be seated at any eating establishment no
-matter how full, get a room in an inn even if
-that means others are turned out, be let into
-any court or other structure where laws are
-decided or nobility rules, be invited to any gala,
-and get a seat at a private function of any sort.
-In addition, you are trained in persuasion.
-Enabler.
+1. Pick one other PC. This character was once in service to your parents’ household, but you have since grown to think of them as a peer.
+2. Pick one other PC. You’re pretty sure that they are descended from a rival house, even if they don’t know it.
+3. Pick one other PC. You used your nobility—your influence, your wealth, or the promise of a favor—to intercede on this character’s behalf.
+4. Pick one other PC. You were once very close with this character in the distant past.
+Additional Equipment: A set of expensive clothing suitable for nobility.
+Noble Advantage: If you wish, you can swap an ability gained from your type for the following. Servant. Your name entitles you to a level 2 follower. One of their modifications must be for tasks related to serving as your personal assistant. You can ask your servant to deliver things for you, run messages, pick up objects of interest or items on a list—pretty much whatever you want, within reason. They can also run interference if you’re trying to avoid someone, help hide you from the attention of others, help you muscle through a crowd, and so on. Enabler.
+Minor Effect Suggestions: The next time you attempt to command, captivate, or otherwise influence the same foe, the task is eased.
+Major Effect Suggestions: The foe is influenced, captivated, or otherwise affected by your ability for twice as long as normal.
+Tier 1: Privileged Nobility. You are adept at claiming the rewards that a noble background can generate. When recognized, you can be seated at any eating establishment no matter how full, get a room in an inn even if that means others are turned out, be let into any court or other structure where laws are decided or nobility rules, be invited to any gala, and get a seat at a private function of any sort. In addition, you are trained in persuasion. Enabler.
 
 
 EMERGED FROM
 THE OBELISK
-There is a gap in your memory lasting well
-over a year. One moment, you were marveling
-at the appearance of a floating obelisk. The
-next, you were waking up in a shallow crater,
-being helped up by a traveler. They witnessed
-you emerging from the side of that same
-obelisk, then falling and smiting the ground.
-Instead of dying, you made a crater, because
-your body was somehow changed and had
-become crystalline.
-You’ve tried to return to the obelisk in an
-attempt to determine what happened to you,
-but failed. Eventually, you hope to return. Until
-then, you explore, hoping to learn more about
-the numenera in general and master more of
-your own crystalline nature in particular.
-Any character type can have emerged from
-an obelisk, though the crystalline body they
-enjoy is most likely to be appreciated by
-Glaives and Delves.
-
+There is a gap in your memory lasting well over a year. One moment, you were marveling at the appearance of a floating obelisk. The next, you were waking up in a shallow crater, being helped up by a traveler. They witnessed you emerging from the side of that same obelisk, then falling and smiting the ground. Instead of dying, you made a crater, because your body was somehow changed and had become crystalline. You’ve tried to return to the obelisk in an attempt to determine what happened to you, but failed. Eventually, you hope to return. Until then, you explore, hoping to learn more about the numenera in general and master more of your own crystalline nature in particular. Any character type can have emerged from an obelisk, though the crystalline body they enjoy is most likely to be appreciated by Glaives and Delves. 
 connection:
-1. Pick one other PC. When your appearance
-raises concerns among other people who don’t
-know you, this character seems interested in
-giving you support and knowledge to help you
-fit in.
-2. Pick one other PC. They saw you emerge
-from the obelisk and came to your aid.
-3. Pick one other PC. They saw you emerge
-from the obelisk but thought you were a
-numenera device to be salvaged, which is how
-you got off on the wrong foot. It’s up to you
-whether you still hold a grudge.
-4. Pick one other PC. In the past, this
-character has indulged you by listening to
-you wonder about your origins, how to get
-into obelisks, and why you might have been
-ejected.
-Additional Equipment: A 1-pound (450 g)
-chunk of inert amber crystal.
-Minor Effect Suggestions: Your foe is dazed
-for one round, during which time all their tasks
-are hindered.
-Major Effect Suggestions: Your foe loses
-their next turn.
-Tier 1: Crystalline Body. You are composed of
-animate, translucent crystal the color of amber.
-Work with your GM to decide your exact form,
-though it is likely about the shape and size of
-a humanoid. Your crystal body grants you +2
-to Armor and +4 to your Might Pool. However,
-you’re not quick and your Speed defense tasks
-are hindered. Certain conditions, like mundane
-diseases and poisons, do not affect you.
-Enabler.
-Special Healing. Your crystalline body repairs
-itself more slowly than that of living flesh. You
-have only the one-round, one-hour, and tenhour
-recovery rolls available each day; you do
-not have a ten-minute recovery roll available.
-Any ability you have that requires a ten-minute
-recovery roll instead requires a one-hour
-recovery roll. Enabler.
+1. Pick one other PC. When your appearance raises concerns among other people who don’t know you, this character seems interested in giving you support and knowledge to help you fit in.
+2. Pick one other PC. They saw you emerge from the obelisk and came to your aid.
+3. Pick one other PC. They saw you emerge from the obelisk but thought you were a numenera device to be salvaged, which is how you got off on the wrong foot. It’s up to you whether you still hold a grudge.
+4. Pick one other PC. In the past, this character has indulged you by listening to you wonder about your origins, how to get into obelisks, and why you might have been ejected.
+Additional Equipment: A 1-pound (450 g) chunk of inert amber crystal.
+Minor Effect Suggestions: Your foe is dazed for one round, during which time all their tasks are hindered.
+Major Effect Suggestions: Your foe loses their next turn.
+Tier 1: Crystalline Body. You are composed of animate, translucent crystal the color of amber. Work with your GM to decide your exact form, though it is likely about the shape and size of a humanoid. Your crystal body grants you +2 to Armor and +4 to your Might Pool. However, you’re not quick and your Speed defense tasks are hindered. Certain conditions, like mundane diseases and poisons, do not affect you. Enabler.
+Special Healing. Your crystalline body repairs itself more slowly than that of living flesh. You have only the one-round, one-hour, and tenhour recovery rolls available each day; you do not have a ten-minute recovery roll available. Any ability you have that requires a ten-minute recovery roll instead requires a one-hour recovery roll. Enabler.
 
 
 EXPLORES YESTERDAY
-What things were like long ago fires your
-imagination. You are equally thrilled to learn
-about how a dead civilization lived as you are
-to regain a still-functioning oddity, cypher, or
-iotum that the dead civilization used. For you,
-knowledge is an end in itself, but that doesn’t
-make you naive to the dangers exploration
-poses. The opposite is true, which is why
-you’re no slouch when it comes to defending
-yourself. You’re a born excavator and explorer,
-adept at moving and maneuvering, making
-discoveries, and resisting the dangers that
-forgotten places often hold.
-You probably wear
-sensible garments
-that can stand up to
-both rain and sun, as
-well as a hat or head
-wrapping to keep off
-the sun and extra
-water for when the
-trail peters out in the
-middle of nowhere.
-
+What things were like long ago fires your imagination. You are equally thrilled to learn about how a dead civilization lived as you are to regain a still-functioning oddity, cypher, or iotum that the dead civilization used. For you, knowledge is an end in itself, but that doesn’t make you naive to the dangers exploration poses. The opposite is true, which is why you’re no slouch when it comes to defending yourself. You’re a born excavator and explorer, adept at moving and maneuvering, making discoveries, and resisting the dangers that forgotten places often hold. You probably wear sensible garments that can stand up to both rain and sun, as well as a hat or head wrapping to keep off the sun and extra water for when the trail peters out in the middle of nowhere. 
 connection:
-1. Pick one other PC. This character has been
-your partner in previous explorations, and the
-two of you work so well together that you both
-gain +1 to any roll when you collaborate on the
-same task, fight the same foe, and so on.
-2. Pick one other PC. This character nearly
-drowned while following you on one of your
-excavations. It’s up to them whether they trust
-you enough to go exploring with you again.
-3. Pick one other PC. They suspect that you
-were involved with criminals who stole from
-the Amber Gleaners. Whether you were or not
-is up to you.
-4. Pick one other PC. You suspect this
-character possesses secret knowledge of a
-hidden tomb, lost city, or treasure. Whether
-they really do or not remains up to them to
-decide.
-Additional Equipment: Bag of excavation
-tools.
-Minor Effect Suggestions: You can take an
-extra action. You may use this action only
-to perform a movement-related activity or
-a knowledge-based activity, such as trying
-to climb a treacherous cliff or attempting to
-decipher strange cave markings.
-Major Effect Suggestions: Speed defense
-tasks you attempt before the end of the next
-round are eased.
-Tier 1: Trained Excavator. You are trained in
-perception, climbing, and salvaging numenera
-tasks. Enabler.
-
+1. Pick one other PC. This character has been your partner in previous explorations, and the two of you work so well together that you both gain +1 to any roll when you collaborate on the same task, fight the same foe, and so on.
+2. Pick one other PC. This character nearly drowned while following you on one of your excavations. It’s up to them whether they trust you enough to go exploring with you again.
+3. Pick one other PC. They suspect that you were involved with criminals who stole from the Amber Gleaners. Whether you were or not is up to you.
+4. Pick one other PC. You suspect this character possesses secret knowledge of a hidden tomb, lost city, or treasure. Whether they really do or not remains up to them to decide.
+Additional Equipment: Bag of excavation tools.
+Minor Effect Suggestions: You can take an extra action. You may use this action only to perform a movement-related activity or a knowledge-based activity, such as trying to climb a treacherous cliff or attempting to decipher strange cave markings.
+Major Effect Suggestions: Speed defense tasks you attempt before the end of the next round are eased.
+Tier 1: Trained Excavator. You are trained in perception, climbing, and salvaging numenera tasks. Enabler. 
 
 FIGHTS WITH A HORDE
-You were once part of a much larger martial
-society, where you held a position of elevated
-respect. The society might have been a tribe
-of abhumans, a military unit, a secret group
-of warriors that live in a limited dimension,
-or something else. Whatever the specifics
-(which you and your GM should work together
-to decide), you formed close personal ties
-with them and trained to fight in small and
-large groups alike. But at some point, you left,
-perhaps to seek your destiny, because you
-were exiled, or because everyone in the society
-spends a significant time away before returning
-to retire. Though you are gone, the lessons of
-teamwork and leadership that you learned while
-part of that society remain with you.
-Whatever you wear, it likely includes the
-symbol, insignia, or some other reminder of
-the group you left behind.
-
+You were once part of a much larger martial society, where you held a position of elevated respect. The society might have been a tribe of abhumans, a military unit, a secret group of warriors that live in a limited dimension, or something else. Whatever the specifics (which you and your GM should work together to decide), you formed close personal ties with them and trained to fight in small and large groups alike. But at some point, you left, perhaps to seek your destiny, because you were exiled, or because everyone in the society spends a significant time away before returning to retire. Though you are gone, the lessons of teamwork and leadership that you learned while part of that society remain with you. Whatever you wear, it likely includes the symbol, insignia, or some other reminder of the group you left behind. 
 connection:
-1. Pick one other PC. You’re related, either
-siblings or cousins, but were separated when
-you were young.
-2. Pick one other PC. They’re a good fighter,
-but if you could teach them a few things about
-working together, they’d improve.
-3. Pick one other PC. This character doesn’t
-seem to approve of your past association.
-4. Pick one other PC. Long ago, the two of
-you were on opposite sides of a fight. You won,
-thanks to your association with your martial
-society. Whether they remember you or still
-hold a grudge is up to them.
-Additional Equipment: A melee weapon you
-gained from your association with the martial
-society with their symbol or crest on the hilt.
-Minor Effect Suggestions: Your foe is
-knocked to the ground.
-Major Effect Suggestions: Your foe is held
-immobile and can’t take their next turn.
-Tier 1: Teamwork. Through example, acts of
-camaraderie, stories of martial prowess, or
-other forms of instruction, you and your allies
-work better together as a cohesive unit. During
-any round in which you rally your team (by
-spending 2 Intellect points as part of another
-action), you and your allies inflict 1 additional
-point of damage in combat. This benefit applies
-only to allies with whom you have spent
-the last 28 hours. It ends if you leave, but it
-resumes if you return to your allies’ company
-within 28 hours. If you leave for more than
-28 hours, you must spend another 28 hours
-together to reactivate the benefit. Enabler.
+1. Pick one other PC. You’re related, either siblings or cousins, but were separated when you were young.
+2. Pick one other PC. They’re a good fighter, but if you could teach them a few things about working together, they’d improve.
+3. Pick one other PC. This character doesn’t seem to approve of your past association.
+4. Pick one other PC. Long ago, the two of you were on opposite sides of a fight. You won, thanks to your association with your martial society. Whether they remember you or still hold a grudge is up to them.
+Additional Equipment: A melee weapon you gained from your association with the martial society with their symbol or crest on the hilt.
+Minor Effect Suggestions: Your foe is knocked to the ground.
+Major Effect Suggestions: Your foe is held immobile and can’t take their next turn.
+Tier 1: Teamwork. Through example, acts of camaraderie, stories of martial prowess, or other forms of instruction, you and your allies work better together as a cohesive unit. During any round in which you rally your team (by spending 2 Intellect points as part of another action), you and your allies inflict 1 additional point of damage in combat. This benefit applies only to allies with whom you have spent the last 28 hours. It ends if you leave, but it resumes if you return to your allies’ company within 28 hours. If you leave for more than 28 hours, you must spend another 28 hours together to reactivate the benefit. Enabler.
 
 
 FUSES MIND AND MACHINE
-You believe that the finest machine ever
-created is the human brain, and experience
-and training have taught you that any
-machine can be improved. Through the use
-of implants and mechanical enhancements,
-your brain processes input faster, stores more
-information, and eventually can tap right into
-the datasphere. Mentally, you function on an
-entirely different level than your fellows.
-Did you make these improvements yourself?
-Did someone else? Was it with your blessing
-or against your will? Regardless, you are now
-more than just a person. You are both living
-creature and machine. But unlike someone
-who Augments Flesh With Grafts, all of your
-refinements and upgrades are on the inside.
-You don’t need mech eyes or metal arms to be
-enhanced. It’s all about what’s inside your skull.
-Nanos are most often those who fuse their
-mind with machines, but Arkai and Wrights are
-almost as likely to do so.
-
+You believe that the finest machine ever created is the human brain, and experience and training have taught you that any machine can be improved. Through the use of implants and mechanical enhancements, your brain processes input faster, stores more information, and eventually can tap right into the datasphere. Mentally, you function on an entirely different level than your fellows. Did you make these improvements yourself? Did someone else? Was it with your blessing or against your will? Regardless, you are now more than just a person. You are both living creature and machine. But unlike someone who Augments Flesh With Grafts, all of your refinements and upgrades are on the inside. You don’t need mech eyes or metal arms to be enhanced. It’s all about what’s inside your skull. Nanos are most often those who fuse their mind with machines, but Arkai and Wrights are almost as likely to do so. 
 connection:
-1. Pick one other PC. This character knows
-a few things that can help when your implants
-and enhancements malfunction.
-2. Pick one other PC. They seem to find you
-off-putting. You wonder if it’s because you’re
-clearly smarter than they are or if it’s for some
-other reason.
-3. Pick one other PC. This character has a
-small device that can shut down your brain
-with a single switch. However, you don’t think
-they have any idea what it is or what it can do.
-4. Pick one other PC. Within your memory
-circuits, you have data of someone who looks
-just like this character committing terrible
-crimes—hundreds of years ago. You have no
-explanation.
-Additional Equipment: You have an artifact
-that protects your implants and enhancements
-from disruption or intrusion. Resisting such
-attacks is eased.
-Minor Effect Suggestions: You foresee your
-foes’ moves so well that your Speed defense
-rolls for the next round gain an asset.
-Major Effect Suggestions: Processing surge!
-On your next action, you can use points from
-your Intellect Pool on Might or Speed tasks.
-Tier 1: Mechanical Assistance. You gain +4 to
-your Intellect Pool through the use of implants
-and tiny processing devices. Enabler.
-Stored Memories. You are trained in one
-area of knowledge of your choice (history,
-geography, astronomy, and so on). Enabler.
+1. Pick one other PC. This character knows a few things that can help when your implants and enhancements malfunction.
+2. Pick one other PC. They seem to find you off-putting. You wonder if it’s because you’re clearly smarter than they are or if it’s for some other reason.
+3. Pick one other PC. This character has a small device that can shut down your brain with a single switch. However, you don’t think they have any idea what it is or what it can do.
+4. Pick one other PC. Within your memory circuits, you have data of someone who looks just like this character committing terrible crimes—hundreds of years ago. You have no explanation.
+Additional Equipment: You have an artifact that protects your implants and enhancements from disruption or intrusion. Resisting such attacks is eased.
+Minor Effect Suggestions: You foresee your foes’ moves so well that your Speed defense rolls for the next round gain an asset.
+Major Effect Suggestions: Processing surge! On your next action, you can use points from your Intellect Pool on Might or Speed tasks.
+Tier 1: Mechanical Assistance. You gain +4 to your Intellect Pool through the use of implants and tiny processing devices. Enabler.
+Stored Memories. You are trained in one area of knowledge of your choice (history, geography, astronomy, and so on). Enabler.
 
 
 HUNTS ABHUMANS
-Abhumans are a threat to humanity. You know
-this more than anyone. The threat is obvious—
-bestial abhumans attack villages, caravans,
-and travelers all the time in the wilderness. But
-the threat is also far subtler. The progenitors of
-the abhumans were once human. They gave up
-their humanity to become horrific, monstrous
-things. How this happened, or how long ago,
-are things you cannot conceive. But you know
-that they are true, so abhumans must be
-eradicated for the good of all.
-Abhuman hunters are usually Glaives who
-wear tough but practical armor and carry a
-wide variety of weapons. But a Jack, Delve, or
-Nano could join their ranks as well, becoming
-decidedly more warriorlike than their fellows.
-Abhuman hunters spend much of their time
-stalking through the wastelands and desolate
-wilds as well as guarding what few roads and
-paths connect the towns and villages of the
-Ninth World.
-
+Abhumans are a threat to humanity. You know this more than anyone. The threat is obvious— bestial abhumans attack villages, caravans, and travelers all the time in the wilderness. But the threat is also far subtler. The progenitors of the abhumans were once human. They gave up their humanity to become horrific, monstrous things. How this happened, or how long ago, are things you cannot conceive. But you know that they are true, so abhumans must be eradicated for the good of all. Abhuman hunters are usually Glaives who wear tough but practical armor and carry a wide variety of weapons. But a Jack, Delve, or Nano could join their ranks as well, becoming decidedly more warriorlike than their fellows. Abhuman hunters spend much of their time stalking through the wastelands and desolate wilds as well as guarding what few roads and paths connect the towns and villages of the Ninth World. 
 connection:
-1. Pick one other PC. This character has had
-experiences with abhumans in the past, and
-you’d like to know more about them.
-2. Pick one other PC. You are friends, and
-you’d hate to see this character harmed.
-3. Pick one other PC. This character doesn’t
-understand just how dangerous and horrible
-abhumans can be.
-4. Pick one other PC. Abhumans are
-sometimes drawn to certain people. They
-always seem to attack those people first and
-with more fervor. This character appears to be
-one such person.
-Minor Effect Suggestions: Your foe is so
-intimidated by your prowess that it backs away,
-unwilling to attack. It can still defend itself.
-Major Effect Suggestions: Your foe is
-terrified by your skill and flees.
-Tier 1: Tracker and Hunter. You are trained
-in tracking, looking for, interacting with, and
-hiding from abhumans. Enabler.
-Abhuman Fighter. You inflict 2 additional
-points of damage when fighting abhumans.
-Enabler.
+1. Pick one other PC. This character has had experiences with abhumans in the past, and you’d like to know more about them.
+2. Pick one other PC. You are friends, and you’d hate to see this character harmed.
+3. Pick one other PC. This character doesn’t understand just how dangerous and horrible abhumans can be.
+4. Pick one other PC. Abhumans are sometimes drawn to certain people. They always seem to attack those people first and with more fervor. This character appears to be one such person.
+Minor Effect Suggestions: Your foe is so intimidated by your prowess that it backs away, unwilling to attack. It can still defend itself.
+Major Effect Suggestions: Your foe is terrified by your skill and flees.
+Tier 1: Tracker and Hunter. You are trained in tracking, looking for, interacting with, and hiding from abhumans. Enabler.
+Abhuman Fighter. You inflict 2 additional points of damage when fighting abhumans. Enabler.
 
 
 IMPARTS WISDOM
-You’ve studied philosophy and other higher
-truths. But you do more than learn about
-such esoteric teachings; you practice them.
-Every day you consider hard questions or
-questions that everyone else has an easy
-answer for. That’s just the way you live. By
-focusing on things that bear on life, existence,
-and the underlying principles that guide the
-most sublime processes in the universe, you
-know contentment. Others often see in you a
-teacher, a higher being, or perhaps even some
-sort of savior. However, you see yourself as
-merely another student studying at the feet of
-eternity.
-You probably wear bright clothes and
-cloaks with many pockets for collecting bits
-of this and that for study, and you may have
-voluminous bags for your books.
-
+You’ve studied philosophy and other higher truths. But you do more than learn about such esoteric teachings; you practice them. Every day you consider hard questions or questions that everyone else has an easy answer for. That’s just the way you live. By focusing on things that bear on life, existence, and the underlying principles that guide the most sublime processes in the universe, you know contentment. Others often see in you a teacher, a higher being, or perhaps even some sort of savior. However, you see yourself as merely another student studying at the feet of eternity. You probably wear bright clothes and cloaks with many pockets for collecting bits of this and that for study, and you may have voluminous bags for your books. 
 connection:
-1. Pick one other PC. This character also
-yearns for enlightenment. You both gain +1 on
-any die rolls when you collaborate on the same
-task, fight the same foe, and so on.
-2. Pick two other PCs. You have seen them,
-or someone who looked like them, stray from
-the path of wisdom before you became allies.
-You can choose whether or not to share that
-information. These characters can choose
-whether it was really them (it might not have
-been), and they may or may not share that
-information in return.
-3. Pick one other PC. This character never
-seems to learn from you, and you both gain –1
-on any die rolls when you collaborate on the
-same task, fight the same foe, and so on.
-4. Pick one other PC. This character is so
-wrong in everything that you feel obligated to
-try to help them better understand the world.
-Whether or not the character is interested is
-up to them.
-Wisdom Benefits: If you wish, you can
-swap an ability gained from your type for the
-following.
-Philosophic Confusion (1 Intellect point).
-Your esoteric words confuse a creature that
-can understand you, making it stand without
-taking actions as it attempts to pierce the
-puzzle set before it. For as long as you do
-nothing but pontificate (you can’t even move),
-the other creature takes no actions other than
-to defend itself, even over multiple rounds. If
-the creature is attacked, the effect ends. If you
-have a type ability that accomplishes the same
-thing, you can attempt to use either ability on
-two creatures at a time. Action.
-Minor Effect Suggestions: You don’t have to
-use an action ahead of time to use your next
-Learning the Path or Imparting the Path ability.
-Major Effect Suggestions: Intuition flares,
-and you can ask the GM one question about
-what you’re looking at.
-Tier 1: Learning the Path (2 Intellect points).
-You observe or study a creature, object, or
-location for at least one round. The next time
-you interact with it (possibly in the following
-round), a related task (such as persuading the
-creature, attacking it, or defending from its
-attack) is eased. Action.
-Philosophy. You are trained in two areas of
-knowledge of your choice.
+1. Pick one other PC. This character also yearns for enlightenment. You both gain +1 on any die rolls when you collaborate on the same task, fight the same foe, and so on.
+2. Pick two other PCs. You have seen them, or someone who looked like them, stray from the path of wisdom before you became allies. You can choose whether or not to share that information. These characters can choose whether it was really them (it might not have been), and they may or may not share that information in return.
+3. Pick one other PC. This character never seems to learn from you, and you both gain –1 on any die rolls when you collaborate on the same task, fight the same foe, and so on.
+4. Pick one other PC. This character is so wrong in everything that you feel obligated to try to help them better understand the world. Whether or not the character is interested is up to them.
+Wisdom Benefits: If you wish, you can swap an ability gained from your type for the following. Philosophic Confusion (1 Intellect point). Your esoteric words confuse a creature that can understand you, making it stand without taking actions as it attempts to pierce the puzzle set before it. For as long as you do nothing but pontificate (you can’t even move), the other creature takes no actions other than to defend itself, even over multiple rounds. If the creature is attacked, the effect ends. If you have a type ability that accomplishes the same thing, you can attempt to use either ability on two creatures at a time. Action.
+Minor Effect Suggestions: You don’t have to use an action ahead of time to use your next Learning the Path or Imparting the Path ability.
+Major Effect Suggestions: Intuition flares, and you can ask the GM one question about what you’re looking at.
+Tier 1: Learning the Path (2 Intellect points). You observe or study a creature, object, or location for at least one round. The next time you interact with it (possibly in the following round), a related task (such as persuading the creature, attacking it, or defending from its attack) is eased. Action.
+Philosophy. You are trained in two areas of knowledge of your choice.
 
 
 LEADS
-Using charisma, natural leadership, and
-perhaps some training, you command the
-actions of others, who follow you willingly.
-You are a commander, a captain, a leader, or a
-general. Your skills allow you to make people
-do what you want, but you also have the
-wisdom to know what actions would be best
-for your followers and allies.
-Since you need the respect of others, you
-probably dress and carry yourself in such a way
-that inspires, endears, or intimidates. You have
-a voice suited to barking orders that can be
-heard even on a noisy battlefield.
-Arkai are already leaders, so only a few will
-choose to further enhance their expertise.
-Glaives make excellent military leaders, but a
-Jack could easily lead a group of explorers or
-a den of thieves. A Nano might be the head of
-a group of “mages” or scholars, or they might
-have a gang of bodyguards as followers.
-
+Using charisma, natural leadership, and perhaps some training, you command the actions of others, who follow you willingly. You are a commander, a captain, a leader, or a general. Your skills allow you to make people do what you want, but you also have the wisdom to know what actions would be best for your followers and allies. Since you need the respect of others, you probably dress and carry yourself in such a way that inspires, endears, or intimidates. You have a voice suited to barking orders that can be heard even on a noisy battlefield. Arkai are already leaders, so only a few will choose to further enhance their expertise. Glaives make excellent military leaders, but a Jack could easily lead a group of explorers or a den of thieves. A Nano might be the head of a group of “mages” or scholars, or they might have a gang of bodyguards as followers. 
 connection:
-1. Pick one other PC. This character was
-once a follower of yours, but you have since
-grown to think of them as a peer.
-2. Pick one other PC. Independent and
-stubborn, they are not affected by your
-abilities.
-3. Pick one other PC. They introduce you to
-the follower you gain at tier 2.
-4. Pick one other PC. You were once very
-close with this character in the distant past.
-Additional Equipment: You have an artifact
-that allows you to tag up to seven followers.
-By looking into the glass plate on the device,
-you can determine their distance and direction
-relative to you. The tagging process is
-somewhat demeaning, so it is likely that only
-your followers would ever submit to it.
-Minor Effect Suggestions: The next time you
-attempt to command, captivate, or otherwise
-influence the same foe, the task is eased.
-Major Effect Suggestions: The foe is
-influenced, captivated, or otherwise affected by
-your ability for twice as long as normal.
-Tier 1: Natural Charisma. You are trained in
-all social interactions, whether they involve
-charm, learning a person’s secrets, or
-intimidating others. Enabler.
-Good Advice. Anyone can help an ally,
-easing whatever task they’re attempting.
-However, you have the benefit of clarity and
-wisdom. When you help another character,
-they gain an additional asset. Enabler.
+1. Pick one other PC. This character was once a follower of yours, but you have since grown to think of them as a peer.
+2. Pick one other PC. Independent and stubborn, they are not affected by your abilities.
+3. Pick one other PC. They introduce you to the follower you gain at tier 2.
+4. Pick one other PC. You were once very close with this character in the distant past. 
+Additional Equipment: You have an artifact that allows you to tag up to seven followers. By looking into the glass plate on the device, you can determine their distance and direction relative to you. The tagging process is somewhat demeaning, so it is likely that only your followers would ever submit to it.
+Minor Effect Suggestions: The next time you attempt to command, captivate, or otherwise influence the same foe, the task is eased.
+Major Effect Suggestions: The foe is influenced, captivated, or otherwise affected by your ability for twice as long as normal.
+Tier 1: Natural Charisma. You are trained in all social interactions, whether they involve charm, learning a person’s secrets, or intimidating others. Enabler.
+Good Advice. Anyone can help an ally, easing whatever task they’re attempting. However, you have the benefit of clarity and wisdom. When you help another character, they gain an additional asset. Enabler.
 
 
 LEARNS FROM ADVERSITY
-You’ve been around, which means that you’ve
-experienced the pendulum swings that living
-delivers to every creature. No matter the
-heights that someone might attain, situations
-change, disasters happen, friends die, and
-mistakes are made. No matter how brilliant
-you might be, or believe yourself to be,
-those mistakes are often made by you. What
-distinguishes you from others is that you learn
-from those mistakes. You learn from the past
-and use experience as your guide. You’re older
-than many, but you’ve seen some amazing
-things in that time, and you can draw on that
-experience to do amazing things.
-As someone who’s survived the long years
-and trials of life, you probably dress simply
-and practically. Though older than most others
-who risk exploration, you remain fit, lean, and
-probably have either no hair or hair as white as
-the frozen water that’s said to cover the land in
-the far south.
-Glaives, Jacks, and Arkai are most likely to
-prefer the focus Learns From Adversity.
-
+You’ve been around, which means that you’ve experienced the pendulum swings that living delivers to every creature. No matter the heights that someone might attain, situations change, disasters happen, friends die, and mistakes are made. No matter how brilliant you might be, or believe yourself to be, those mistakes are often made by you. What distinguishes you from others is that you learn from those mistakes. You learn from the past and use experience as your guide. You’re older than many, but you’ve seen some amazing things in that time, and you can draw on that experience to do amazing things. As someone who’s survived the long years and trials of life, you probably dress simply and practically. Though older than most others who risk exploration, you remain fit, lean, and probably have either no hair or hair as white as the frozen water that’s said to cover the land in the far south. Glaives, Jacks, and Arkai are most likely to prefer the focus Learns From Adversity. 
 connection:
-1. Pick one other PC. You languished in
-some kind of terrible situation until this
-character plucked you out of it. You learned a
-lot from that experience.
-2. Pick one other PC. They don’t seem to
-think much of your experience.
-3. Pick one or more other PCs. They came
-looking for help with a problem and found you.
-It’s up to them whether they’re satisfied with
-what they found or not.
-4. Pick one other PC. This character believes
-you’re some kind of legend based on a decadeold
-story about you that’s grown in the telling.
-Sometimes, that makes you confident. Other
-times, it’s a lot to live up to.
-Additional Equipment: A book filled with
-knowledge on a topic of your choice.
-Minor Effect Suggestions: The range or
-duration of one of your abilities is doubled.
-Major Effect Suggestions: You can take
-another action on the same turn.
-Tier 1: Quicker Than Most. Experience has
-honed your reaction times, because those who
-act first gain the advantage in most situations.
-You’re trained in tasks related to initiative,
-seeing underlying patterns, and solving
-puzzles. Enabler.
-Toughened Up. Adversity has made you
-tougher. You gain +3 to your Might Pool. Enabler.
+1. Pick one other PC. You languished in some kind of terrible situation until this character plucked you out of it. You learned a lot from that experience.
+2. Pick one other PC. They don’t seem to think much of your experience.
+3. Pick one or more other PCs. They came looking for help with a problem and found you. It’s up to them whether they’re satisfied with what they found or not.
+4. Pick one other PC. This character believes you’re some kind of legend based on a decadeold story about you that’s grown in the telling. Sometimes, that makes you confident. Other times, it’s a lot to live up to.
+Additional Equipment: A book filled with knowledge on a topic of your choice.
+Minor Effect Suggestions: The range or duration of one of your abilities is doubled.
+Major Effect Suggestions: You can take another action on the same turn.
+Tier 1: Quicker Than Most. Experience has honed your reaction times, because those who act first gain the advantage in most situations. You’re trained in tasks related to initiative, seeing underlying patterns, and solving puzzles. Enabler.
+Toughened Up. Adversity has made you tougher. You gain +3 to your Might Pool. Enabler.
 
 
 METES OUT JUSTICE
-There is so much injustice in the world. It
-takes a special person to take it upon himself
-to right wrongs, protect the innocent, and
-punish the guilty. You are such a person.
-Justicars, as they are sometimes called, are
-knights errant who wear armor, bear swords
-and shields, and travel the land looking for
-tyranny, corruption, and oppression. But
-some operate a little less ostentatiously, and
-sometimes justice comes from more subtle
-tactics. A justicar might also be a masked
-vigilante or just a badass who rights wrongs.
-The importance of justice in your life might
-come from religion, your upbringing, or
-your highly developed sense of principles.
-Regardless, you not only adhere to your values,
-but you also believe it is your calling to act
-on them and help make the world more just,
-more fair, and more ethical. You want to see
-wrongdoing punished.
-Although any character can be a justicar,
-Arkai and Glaives most often take on the role.
-
+There is so much injustice in the world. It takes a special person to take it upon himself to right wrongs, protect the innocent, and punish the guilty. You are such a person. Justicars, as they are sometimes called, are knights errant who wear armor, bear swords and shields, and travel the land looking for tyranny, corruption, and oppression. But some operate a little less ostentatiously, and sometimes justice comes from more subtle tactics. A justicar might also be a masked vigilante or just a badass who rights wrongs. The importance of justice in your life might come from religion, your upbringing, or your highly developed sense of principles. Regardless, you not only adhere to your values, but you also believe it is your calling to act on them and help make the world more just, more fair, and more ethical. You want to see wrongdoing punished. Although any character can be a justicar, Arkai and Glaives most often take on the role. 
 connection:
-1. Pick one other PC. You strongly suspect
-that this character has a past that might
-involve serious crimes or wrongdoing. You
-have no proof, however, and you’ve never
-witnessed them doing anything seriously
-wrong.
-2. Pick one other PC. This character seems
-to share your value systems and sees right
-and wrong the same way you do, which is
-refreshing.
-3. Pick one other PC. This character, while
-ethical, defines right and wrong in different
-ways than you do.
-4. Pick one other PC. In the past, you and
-this character witnessed an event that helped
-shape your moral code. They may or may not
-have come away with a similar outlook.
-Additional Equipment: You have a shield to
-help you protect yourself and others.
-Minor Effect Suggestions: You shame or
-intimidate your foe so much that they are
-shaken and use their next turn to flee.
-Major Effect Suggestions: You mark your
-foe permanently with a distinctive scar so that
-their guilt will be known by all.
-Tier 1: Make Judgment. You are trained in
-discerning the truth of a situation, seeing
-through lies, or otherwise overcoming
-deception. Enabler.
-Designation. You assign an innocent or
-guilty label to one creature within immediate
-range, based on your assessment of a given
-situation or a predominant feeling. In other
-words, someone who is labeled innocent can
-be innocent in a certain circumstance, or they
-can be generally innocent of terrible crimes
-(such as murder, major theft, and so on).
-Likewise, you can declare that a creature is
-guilty of a particular crime or of terrible deeds
-in general. The accuracy of your assessment
-isn’t important as long as you believe it to be
-the truth; the GM may require you to give a
-rationale. Henceforth, your tasks to socially
-interact with someone you designate as
-innocent gain an asset, and your attacks against
-those you designate as guilty gain an asset. You
-can change your assessment, but it requires
-another designation action. The benefits of the
-designation last until you change it or until you
-are shown proof that it is wrong. Action.
+1. Pick one other PC. You strongly suspect that this character has a past that might involve serious crimes or wrongdoing. You have no proof, however, and you’ve never witnessed them doing anything seriously wrong.
+2. Pick one other PC. This character seems to share your value systems and sees right and wrong the same way you do, which is refreshing.
+3. Pick one other PC. This character, while ethical, defines right and wrong in different ways than you do.
+4. Pick one other PC. In the past, you and this character witnessed an event that helped shape your moral code. They may or may not have come away with a similar outlook.
+Additional Equipment: You have a shield to help you protect yourself and others.
+Minor Effect Suggestions: You shame or intimidate your foe so much that they are shaken and use their next turn to flee.
+Major Effect Suggestions: You mark your foe permanently with a distinctive scar so that their guilt will be known by all.
+Tier 1: Make Judgment. You are trained in discerning the truth of a situation, seeing through lies, or otherwise overcoming deception. Enabler.
+Designation. You assign an innocent or guilty label to one creature within immediate range, based on your assessment of a given situation or a predominant feeling. In other words, someone who is labeled innocent can be innocent in a certain circumstance, or they can be generally innocent of terrible crimes (such as murder, major theft, and so on). Likewise, you can declare that a creature is guilty of a particular crime or of terrible deeds in general. The accuracy of your assessment isn’t important as long as you believe it to be the truth; the GM may require you to give a rationale. Henceforth, your tasks to socially interact with someone you designate as innocent gain an asset, and your attacks against those you designate as guilty gain an asset. You can change your assessment, but it requires another designation action. The benefits of the designation last until you change it or until you are shown proof that it is wrong. Action.
 
 
 MOVES LIKE A CAT
-You are extremely dexterous. Your speed and
-agility make you almost a thing of wonder.
-Your body is lithe, flexible, and graceful.
-Your training—or perhaps a bit of magic or
-technology—allows you to move quickly and
-smoothly, land safely when you fall, and avoid
-danger.
-You likely wear tight clothing that
-doesn’t hinder you as you move. Likewise,
-you probably don’t allow yourself to be
-overburdened by a lot of equipment. You’ll
-wear armor only if it doesn’t slow you down.
-Glaives are very often catlike, but Jacks can
-be, too.
-
+You are extremely dexterous. Your speed and agility make you almost a thing of wonder. Your body is lithe, flexible, and graceful. Your training—or perhaps a bit of magic or technology—allows you to move quickly and smoothly, land safely when you fall, and avoid danger. You likely wear tight clothing that doesn’t hinder you as you move. Likewise, you probably don’t allow yourself to be overburdened by a lot of equipment. You’ll wear armor only if it doesn’t slow you down. Glaives are very often catlike, but Jacks can be, too. 
 connection:
-1. Pick one other PC. Their occasional
-clumsiness and loud behavior irritate you.
-2. Pick one other PC. This character comes
-from the same place you do, and you knew
-each other as children.
-3. Pick one other PC. You aid them with
-advice and a helping hand when they need it.
-Anytime the two of you are next to each other,
-balancing, climbing, and jumping tasks are
-eased for them.
-4. Pick one other PC. They owe you a
-significant amount of money.
-Minor Effect Suggestions: You restore 2
-points to your Speed Pool.
-Major Effect Suggestions: You can take a
-second action this round.
-Tier 1: Reflexes. You gain +5 to your Speed
-Pool. Enabler.
-Balance. You are trained in balancing.
-Enabler.
+1. Pick one other PC. Their occasional clumsiness and loud behavior irritate you.
+2. Pick one other PC. This character comes from the same place you do, and you knew each other as children.
+3. Pick one other PC. You aid them with advice and a helping hand when they need it. Anytime the two of you are next to each other, balancing, climbing, and jumping tasks are eased for them.
+4. Pick one other PC. They owe you a significant amount of money.
+Minor Effect Suggestions: You restore 2 points to your Speed Pool.
+Major Effect Suggestions: You can take a second action this round.
+Tier 1: Reflexes. You gain +5 to your Speed Pool. Enabler.
+Balance. You are trained in balancing. Enabler.
 
 
 NEEDS NO WEAPONS
-You don’t use weapons—you are a weapon.
-With powerful punches, kicks, and full-body
-moves, you inflict incredible damage on your
-foes. By focusing your energy, the combined
-power of your body and mind allows you to
-do incredible amounts of damage without
-depleting your energy reserves. You might have
-gained your skills through intense training,
-various implants and enhancements, genetic
-mutations, or any combination of these things.
-Whatever the origin of your feats, you likely
-take good care of your body, ensuring that
-it remains the sharpest, most dependable
-weapon at your disposal.
-Martial artists or kasundas (as those with
-your training are sometimes called) are both
-feared and revered. They wear loose, comfortable
-clothing that allows them a full range of
-movement, and they rarely use weapons other
-than their body’s own implements (although
-some carry items designed to enhance their body
-movements for greater effect, such as knuckle
-weapons, knee spikes, or boot blades).
-Glaives are perhaps best suited for using
-their bodies as weapons, but Jacks are also
-good candidates. Sometimes, Arkai choose
-this focus because having a backup when
-persuasion fails is a useful leadership strategy.
-
+You don’t use weapons—you are a weapon. With powerful punches, kicks, and full-body moves, you inflict incredible damage on your foes. By focusing your energy, the combined power of your body and mind allows you to do incredible amounts of damage without depleting your energy reserves. You might have gained your skills through intense training, various implants and enhancements, genetic mutations, or any combination of these things. Whatever the origin of your feats, you likely take good care of your body, ensuring that it remains the sharpest, most dependable weapon at your disposal. Martial artists or kasundas (as those with your training are sometimes called) are both feared and revered. They wear loose, comfortable clothing that allows them a full range of movement, and they rarely use weapons other than their body’s own implements (although some carry items designed to enhance their body movements for greater effect, such as knuckle weapons, knee spikes, or boot blades). Glaives are perhaps best suited for using their bodies as weapons, but Jacks are also good candidates. Sometimes, Arkai choose this focus because having a backup when persuasion fails is a useful leadership strategy. 
 connection:
-1. Pick one other PC. They seem to believe
-that the only true weapons are those that you
-can hold in your hand, and they might look at
-you with disdain.
-2. Pick one other PC. This character seems
-incredibly unaware of their body and always
-happens to get in your way. If you miss your
-foe and accidentally hit someone else in close
-range, it’s likely to be them.
-3. Pick one other PC. You once trained with a
-close friend of theirs, and you owe that mutual
-friend much.
-4. Pick two other PCs. Once these two heard
-about your skills, they expressed interest in
-being your students. However, only one seems
-to have any aptitude.
-Minor Effect Suggestions: You trip your
-target and knock them prone.
-Major Effect Suggestions: You strike your
-target in a limb, making that limb useless for
-the next minute.
-Tier 1: Fists of Fury. You inflict 2 additional
-points of damage with unarmed attacks.
-Enabler.
-Flesh of Stone. You have +1 to Armor if you
-do not wear physical armor. Enabler.
+1. Pick one other PC. They seem to believe that the only true weapons are those that you can hold in your hand, and they might look at you with disdain.
+2. Pick one other PC. This character seems incredibly unaware of their body and always happens to get in your way. If you miss your foe and accidentally hit someone else in close range, it’s likely to be them.
+3. Pick one other PC. You once trained with a close friend of theirs, and you owe that mutual friend much.
+4. Pick two other PCs. Once these two heard about your skills, they expressed interest in being your students. However, only one seems to have any aptitude.
+Minor Effect Suggestions: You trip your target and knock them prone.
+Major Effect Suggestions: You strike your target in a limb, making that limb useless for the next minute.
+Tier 1: Fists of Fury. You inflict 2 additional points of damage with unarmed attacks. Enabler.
+Flesh of Stone. You have +1 to Armor if you do not wear physical armor. Enabler.
 
 
 NEVER SAYS DIE
-You are as stalwart, hardy, and driven as can
-be imagined. When others are ready to quit,
-you’re just getting started.
-You probably don’t spend a lot of time on
-your appearance—it is far less important than
-your actions. For that matter, so are words.
-You’re likely not much of a talker. You’re a doer.
-Characters with this focus are sometimes
-called stalwarts or diehards. They are often
-soldiers, mercenaries, or other tough-as-nails
-individuals, but sometimes they take a more
-heroic stance. A character who is hard to kill is
-around longer to help others, after all.
-Stalwarts are most often Glaives or Delves,
-but Nanos and Arkai who like to stand at the
-back of the pack out of harm’s way can do
-serious damage as diehards.
-
+You are as stalwart, hardy, and driven as can be imagined. When others are ready to quit, you’re just getting started. You probably don’t spend a lot of time on your appearance—it is far less important than your actions. For that matter, so are words. You’re likely not much of a talker. You’re a doer. Characters with this focus are sometimes called stalwarts or diehards. They are often soldiers, mercenaries, or other tough-as-nails individuals, but sometimes they take a more heroic stance. A character who is hard to kill is around longer to help others, after all. Stalwarts are most often Glaives or Delves, but Nanos and Arkai who like to stand at the back of the pack out of harm’s way can do serious damage as diehards. 
 connection:
-1. Pick one other PC. You feel the
-overwhelming need to impress this character,
-although you’re not sure why.
-2. Pick one other PC. This character seems
-quite capable, but in your mind, their spirit
-needs motivating. You’re constantly trying to
-convince them to keep trying, go the distance,
-and keep fighting the good fight.
-3. Pick one other PC. You feel very protective
-of this character and don’t want to see them
-harmed.
-4. Pick one other PC. This character comes
-from the same place you do, and you knew
-each other as children.
-Minor Effect Suggestions: You restore 2
-points to your Might Pool.
-Major Effect Suggestions: Your next action is
-eased by two steps.
-Tier 1: Rapid Recovery. Your ten-minute
-recovery roll takes only one action instead, so
-that your first two recovery rolls are one action,
-the third is one hour, and the fourth is ten
-hours. Enabler.
-Push on Through (2 Might points). You
-ignore the effects of terrain while moving for
-one hour. Enabler.
+1. Pick one other PC. You feel the overwhelming need to impress this character, although you’re not sure why.
+2. Pick one other PC. This character seems quite capable, but in your mind, their spirit needs motivating. You’re constantly trying to convince them to keep trying, go the distance, and keep fighting the good fight.
+3. Pick one other PC. You feel very protective of this character and don’t want to see them harmed.
+4. Pick one other PC. This character comes from the same place you do, and you knew each other as children.
+Minor Effect Suggestions: You restore 2 points to your Might Pool.
+Major Effect Suggestions: Your next action is eased by two steps.
+Tier 1: Rapid Recovery. Your ten-minute recovery roll takes only one action instead, so that your first two recovery rolls are one action, the third is one hour, and the fourth is ten hours. Enabler.
+Push on Through (2 Might points). You ignore the effects of terrain while moving for one hour. Enabler.
 
 
-POSSESSES A
-SHARD OF THE SUN
-You have the ability to create and sculpt light,
-to bend it away from you or gather it to use as
-a weapon. Perhaps a shard of amber crystal,
-midnight stone, or other iotum became
-embedded in your flesh and through it you can
-control light. Or you might have always had
-the gift, a freak talent handed down to you by
-the ancients.
-Most people able to command light favor
-bright colors in their clothing since those
-colors reflect light rather than absorb it. Nanos
-and Delves tend to be the ones who possess
-shards of the sun, calling themselves light
-bearers or sun savants. They find its power
-useful for exploration and personal protection.
-Jacks appreciate how the abilities help them
-trick and elude foes, and Arkai like how they
-awe onlookers.
-
+POSSESSES A SHARD OF THE SUN
+You have the ability to create and sculpt light, to bend it away from you or gather it to use as a weapon. Perhaps a shard of amber crystal, midnight stone, or other iotum became embedded in your flesh and through it you can control light. Or you might have always had the gift, a freak talent handed down to you by the ancients. Most people able to command light favor bright colors in their clothing since those colors reflect light rather than absorb it. Nanos and Delves tend to be the ones who possess shards of the sun, calling themselves light bearers or sun savants. They find its power useful for exploration and personal protection. Jacks appreciate how the abilities help them trick and elude foes, and Arkai like how they awe onlookers. 
 connection:
-1. Pick one other PC. You have a strong
-emotional connection to this character, and
-when in their presence, you can change the
-color of the light you create.
-2. Pick one other PC. They are especially
-perceptive to your light and occasionally your
-flashes leave them dazzled, hindering their
-defense tasks for a round.
-3. Pick one other PC. Something about their
-nature dampens the light. Your light-based
-powers cost 1 additional Intellect point if they
-stand immediately next to you.
-4. Pick one other PC. This character appears
-to have an oddity that was once yours, but that
-you lost in a game of chance years ago.
-Additional Equipment: You have a crystal
-lens. When you shine light through it, the light
-extends for double the normal distance.
-Radiant Abilities: If you perform esoteries
-or similar abilities, those that would normally
-use force or other energy instead use light and
-heat. For example, when you use Ward, light
-dapples your body and flares when you would
-be attacked, preventing your enemies from
-landing a solid blow.
-Minor Effect Suggestions: A flash of light
-leaves the creature dazzled, and its defense
-tasks are hindered for one round.
-Major Effect Suggestions: An intense flash of
-light leaves the creature blinded for one minute.
-Tier 1: Enlightened. You are trained in any
-perception task that involves sight. Enabler.
-Illuminating Touch (1 Intellect point). You
-touch an object, and that object sheds light to
-illuminate everything in short range. The light
-remains until you use an action to touch the
-object again, or until you’ve illuminated more
-objects than you have tiers, in which case the
-oldest objects you illuminated go dark first.
-Action.
-
+1. Pick one other PC. You have a strong emotional connection to this character, and when in their presence, you can change the color of the light you create.
+2. Pick one other PC. They are especially perceptive to your light and occasionally your flashes leave them dazzled, hindering their defense tasks for a round.
+3. Pick one other PC. Something about their nature dampens the light. Your light-based powers cost 1 additional Intellect point if they stand immediately next to you.
+4. Pick one other PC. This character appears to have an oddity that was once yours, but that you lost in a game of chance years ago.
+Additional Equipment: You have a crystal lens. When you shine light through it, the light extends for double the normal distance.
+Radiant Abilities: If you perform esoteries or similar abilities, those that would normally use force or other energy instead use light and heat. For example, when you use Ward, light dapples your body and flares when you would be attacked, preventing your enemies from landing a solid blow.
+Minor Effect Suggestions: A flash of light leaves the creature dazzled, and its defense tasks are hindered for one round.
+Major Effect Suggestions: An intense flash of light leaves the creature blinded for one minute.
+Tier 1: Enlightened. You are trained in any perception task that involves sight. Enabler.
+Illuminating Touch (1 Intellect point). You touch an object, and that object sheds light to illuminate everything in short range. The light remains until you use an action to touch the object again, or until you’ve illuminated more objects than you have tiers, in which case the oldest objects you illuminated go dark first. Action.  
 
 RADIATES VITALITY
-You radiate a strange energy—a “biomorphic
-field” according to a nano you once met—
-that makes you tougher than others, with an
-ability to heal that outstrips that of normal
-people. The field seems to strengthen as you
-gain experience, and you’re certain that as it
-grows in power, you’ll be able to touch other
-creatures with it to sense their presence, heal
-them, detect their feelings, and possibly even
-hurt those who are revealed to be enemies.
-You might consider your biomorphic field a
-curse, the effect of a strange numenera item
-embedded in your flesh, a metallic amulet that
-keeps turning up no matter how many times
-you try to lose it, a genetic mutation (or genetic
-tweak from your forebears), or maybe even
-as the direct intervention of some prior-world
-deity that you hope to meet one day. However
-it came to be, it’s a fact that dangerous risks
-are lessened for you, though not completely
-without consequence; if you are damaged
-enough, the flame of vitality that you radiate
-will be snuffed out.
-You wear tough clothing that can withstand
-a lot, because even though you are mighty,
-regular clothing and possessions are not.
-Usually your biomorphic field is little more
-than a subtle sparkle, but when you use an
-ability, you radiate a momentary flash of gold
-light.
-Though anyone might find that coming
-back from death, at least in the short term, is
-a desirable trait, those who put themselves
-into harm’s way most directly, like Glaives and
-Delves, are likely to benefit the most from it.
-
+You radiate a strange energy—a “biomorphic field” according to a nano you once met— that makes you tougher than others, with an ability to heal that outstrips that of normal people. The field seems to strengthen as you gain experience, and you’re certain that as it grows in power, you’ll be able to touch other creatures with it to sense their presence, heal them, detect their feelings, and possibly even hurt those who are revealed to be enemies. You might consider your biomorphic field a curse, the effect of a strange numenera item embedded in your flesh, a metallic amulet that keeps turning up no matter how many times you try to lose it, a genetic mutation (or genetic tweak from your forebears), or maybe even as the direct intervention of some prior-world deity that you hope to meet one day. However it came to be, it’s a fact that dangerous risks are lessened for you, though not completely without consequence; if you are damaged enough, the flame of vitality that you radiate will be snuffed out. You wear tough clothing that can withstand a lot, because even though you are mighty, regular clothing and possessions are not. Usually your biomorphic field is little more than a subtle sparkle, but when you use an ability, you radiate a momentary flash of gold light. Though anyone might find that coming back from death, at least in the short term, is a desirable trait, those who put themselves into harm’s way most directly, like Glaives and Delves, are likely to benefit the most from it. 
 connection:
-1. Pick one other PC. They were close to
-you in some fashion. The first time they saw
-you die, they grew despondent. When you
-returned, they were confused and upset. How
-they feel now, you’re not entirely sure.
-2. Pick one other PC. Your ability to
-regenerate doesn’t seem to work as well
-around them.
-3. Pick one other PC. They told you once that
-they worried your ability was the result of a
-potentially dangerous demon or alien parasite
-inhabiting your body. You don’t know how they
-feel now.
-4. Pick one other PC. You once died to save
-them, but they don’t know it. You may choose
-whether or not to tell them.
-Additional Equipment: You have a small,
-metallic pendant that always seems to turn
-up, even after you’ve apparently lost it or left it
-behind. It’s resisted all attempts you’ve made
-to scan, understand, or find out more about it.
-Minor Effect Suggestions: You
-spontaneously regain 1 point in one of your
-stat Pools.
-Major Effect Suggestions: You
-spontaneously regain 2 points in two of your
-stat Pools.
-Tier 1: Mighty. Your biomorphic field sustains
-you. You gain +6 to your Might Pool. Enabler.
+1. Pick one other PC. They were close to you in some fashion. The first time they saw you die, they grew despondent. When you returned, they were confused and upset. How they feel now, you’re not entirely sure.
+2. Pick one other PC. Your ability to regenerate doesn’t seem to work as well around them.
+3. Pick one other PC. They told you once that they worried your ability was the result of a potentially dangerous demon or alien parasite inhabiting your body. You don’t know how they feel now.
+4. Pick one other PC. You once died to save them, but they don’t know it. You may choose whether or not to tell them.
+Additional Equipment: You have a small, metallic pendant that always seems to turn up, even after you’ve apparently lost it or left it behind. It’s resisted all attempts you’ve made to scan, understand, or find out more about it.
+Minor Effect Suggestions: You spontaneously regain 1 point in one of your stat Pools.
+Major Effect Suggestions: You spontaneously regain 2 points in two of your stat Pools.
+Tier 1: Mighty. Your biomorphic field sustains you. You gain +6 to your Might Pool. Enabler.
 
 
 SEES BEYOND
-Unlike most people, you know there are far
-more than three dimensions, more colors than
-can be found in the rainbow, and more things
-in the world than most can see, sense, or even
-understand. With practice and help (through
-drugs, lenses, manipulated energy fields, or
-a combination of all three), you can perceive
-things that others cannot.
-What you see in other dimensions has
-changed your understanding of even the
-most basic things like weapon and dress.
-Where others might see your drab outfit and
-plain weapons, you see something entirely
-different—myriad colors and patterns that
-showcase your unique vision of the world. Your
-weapons likely bear marks of other dimensions
-as well.
-
+Unlike most people, you know there are far more than three dimensions, more colors than can be found in the rainbow, and more things in the world than most can see, sense, or even understand. With practice and help (through drugs, lenses, manipulated energy fields, or a combination of all three), you can perceive things that others cannot. What you see in other dimensions has changed your understanding of even the most basic things like weapon and dress. Where others might see your drab outfit and plain weapons, you see something entirely different—myriad colors and patterns that showcase your unique vision of the world. Your weapons likely bear marks of other dimensions as well. 
 connection:
-1. Pick one other PC. You are fairly certain
-that this character doesn’t believe that your
-abilities are real.
-2. Pick one other PC. You see a gathering of
-energy and colors on this character that seem
-to imply they too can see beyond. Whether you
-ask them about it is up to you.
-3. Pick one other PC. Whenever this
-character is near, your abilities seem to take
-longer and become more difficult.
-4. Pick one other PC. Wherever this
-character goes, you are aware of the general
-distance and direction of their location.
-Additional Equipment: You have a single
-item of your choosing—drugs, lenses, or
-a piece of the numenera—that helps you
-perceive things that others cannot. If you
-don’t have this item or something like it, tasks
-directly related to seeing beyond are hindered.
-Minor Effect Suggestions: The period of
-concentration needed is cut in half.
-Major Effect Suggestions: You see even
-more than you normally do and can ask the
-GM one question about what you’re looking at.
-Tier 1: See the Unseen. You can automatically
-perceive creatures and objects that are
-normally invisible, out of phase, or only
-partially in this universe. When looking for
-things more conventionally hidden, the task is
-eased. Enabler.
-
-
-SHEPHERDS THE
-COMMUNITY
-You have an abiding affection for the
-community you live in, have adopted, or guard
-from afar. It’s not just the place, but also the
-people you want to keep safe and healthy and
-see have success in their life. Certainly, there
-are individuals within the community who are
-more troublesome than others, but unless
-they become an actual danger to the others,
-you include them in those you shepherd. To
-accomplish your goal, you’ve honed not only
-your ability to fight in order to preserve the
-community against invaders, but also your
-ability to understand the concerns of the
-community and persuade them toward smart
-decisions about the problems that face them
-now or could crop up later if not guarded
-against.
-Glaives make ideal shepherds, but Arkai and
-Wrights can also easily step into this role to
-supplement their other community-oriented
-abilities.
-
+1. Pick one other PC. You are fairly certain that this character doesn’t believe that your abilities are real.
+2. Pick one other PC. You see a gathering of energy and colors on this character that seem to imply they too can see beyond. Whether you ask them about it is up to you.
+3. Pick one other PC. Whenever this character is near, your abilities seem to take longer and become more difficult.
+4. Pick one other PC. Wherever this character goes, you are aware of the general distance and direction of their location.
+Additional Equipment: You have a single item of your choosing—drugs, lenses, or a piece of the numenera—that helps you perceive things that others cannot. If you don’t have this item or something like it, tasks directly related to seeing beyond are hindered.
+Minor Effect Suggestions: The period of concentration needed is cut in half.
+Major Effect Suggestions: You see even more than you normally do and can ask the GM one question about what you’re looking at.
+Tier 1: See the Unseen. You can automatically perceive creatures and objects that are normally invisible, out of phase, or only partially in this universe. When looking for things more conventionally hidden, the task is eased. Enabler.
+ 
+SHEPHERDS THE COMMUNITY
+You have an abiding affection for the community you live in, have adopted, or guard from afar. It’s not just the place, but also the people you want to keep safe and healthy and see have success in their life. Certainly, there are individuals within the community who are more troublesome than others, but unless they become an actual danger to the others, you include them in those you shepherd. To accomplish your goal, you’ve honed not only your ability to fight in order to preserve the community against invaders, but also your ability to understand the concerns of the community and persuade them toward smart decisions about the problems that face them now or could crop up later if not guarded against. Glaives make ideal shepherds, but Arkai and Wrights can also easily step into this role to supplement their other community-oriented abilities. 
 connection:
-1. Pick one other PC. This character grew up
-in the community you shepherd, and you are
-especially keen to see that they stay safe when
-they venture beyond it.
-2. Pick one other PC. You originally thought
-they might be a danger to the community,
-which is why you introduced yourself, in order
-to discover if your first impression was correct.
-3. Pick one other PC. This character is from
-a community that has been a rival of the
-community you protect, but you hope that
-maybe through them, you can build a bridge.
-4. Pick one other PC. You hope this character
-will come to find as much comfort in your
-community as you.
-Minor Effect Suggestions: Your foe is so
-intimidated by your dedication that it backs
-away, unwilling to attack on its next turn. It can
-still defend itself.
-Major Effect Suggestions: Your foe is
-terrified by your dedication and flees.
-Tier 1: Community Knowledge (2 Intellect
-points). If you’ve invested yourself in a
-community and have spent at least a few
-months living there, you can learn things
-about it through a variety of methods.
-Sometimes contacts slip the information
-to you. Other times, you’re able to draw
-conclusions simply by what you can see and
-hear. When you use this ability, you can ask the
-GM one question about the community and
-get a very short answer. Action.
-Community Activist. When speaking to
-others in the community you foster, you
-are trained in persuasion and intimidation
-tasks about topics that directly relate to the
-community. Enabler.
+1. Pick one other PC. This character grew up in the community you shepherd, and you are especially keen to see that they stay safe when they venture beyond it.
+2. Pick one other PC. You originally thought they might be a danger to the community, which is why you introduced yourself, in order to discover if your first impression was correct.
+3. Pick one other PC. This character is from a community that has been a rival of the community you protect, but you hope that maybe through them, you can build a bridge.
+4. Pick one other PC. You hope this character will come to find as much comfort in your community as you.
+Minor Effect Suggestions: Your foe is so intimidated by your dedication that it backs away, unwilling to attack on its next turn. It can still defend itself.
+Major Effect Suggestions: Your foe is terrified by your dedication and flees.
+Tier 1: Community Knowledge (2 Intellect points). If you’ve invested yourself in a community and have spent at least a few months living there, you can learn things about it through a variety of methods. Sometimes contacts slip the information to you. Other times, you’re able to draw conclusions simply by what you can see and hear. When you use this ability, you can ask the GM one question about the community and get a very short answer. Action. 
+Community Activist. When speaking to others in the community you foster, you are trained in persuasion and intimidation tasks about topics that directly relate to the community. Enabler.
 
 
-SHREDS THE WALLS
-OF THE WORLD
-When you move, your body changes state and
-becomes partially phased, reflecting a bizarre
-alternate dimension where distance and time
-are different than they are in the Ninth World.
-It’s only when you’re still that you remain solid
-and fully part of the real world. Sometimes
-that’s a relief, but other times you feel like
-you’re stuck in wet sand. Moving is your key
-to changing phase—and perhaps happiness.
-While you’re phased, you skate along the
-surface of reality far more quickly than others.
-Such rapid movement across normal reality
-sometimes leaves behind scratches, which you
-can selectively make, suppress, or bear down
-upon to create particularly devastating attacks
-and, eventually, phase detonations.
-You got your ability because you’re
-descended from an entity that hailed from
-the bizarre dimension of altered distance and
-time, because you were touched and ultimately
-spared by an encounter with the iron wind, or
-because of a mechanism that you carry or that
-is embedded in you.
-You probably wear clothing designed to stay
-out of your way, because the less you carry,
-the less likely you are to come out of phase
-prematurely.
-Characters who want to get around quickly,
-like Jacks and Delves, are most drawn to this
-type, though Nanos and Arkai who want to stay
-out of harm’s way might also be interested.
-
+SHREDS THE WALLS OF THE WORLD
+When you move, your body changes state and becomes partially phased, reflecting a bizarre alternate dimension where distance and time are different than they are in the Ninth World. It’s only when you’re still that you remain solid and fully part of the real world. Sometimes that’s a relief, but other times you feel like you’re stuck in wet sand. Moving is your key to changing phase—and perhaps happiness. While you’re phased, you skate along the surface of reality far more quickly than others. Such rapid movement across normal reality sometimes leaves behind scratches, which you can selectively make, suppress, or bear down upon to create particularly devastating attacks and, eventually, phase detonations. You got your ability because you’re descended from an entity that hailed from the bizarre dimension of altered distance and time, because you were touched and ultimately spared by an encounter with the iron wind, or because of a mechanism that you carry or that is embedded in you. You probably wear clothing designed to stay out of your way, because the less you carry, the less likely you are to come out of phase prematurely. Characters who want to get around quickly, like Jacks and Delves, are most drawn to this type, though Nanos and Arkai who want to stay out of harm’s way might also be interested. 
 connection:
-1. Pick one other PC. For some reason, they
-never lose a sense of where you are, no matter
-how you sprint around, change phase, or even
-become invisible (to everyone else).
-2. Pick one other PC. You recently discovered
-that if they stand near you when you begin a
-Phase Sprint, they become partially phased in
-the same way as you for one round, though
-they can’t sprint or use any other abilities of
-this focus.
-3. Pick one other PC. Seeing you phase
-seems to trigger some unpleasant memory
-in this character. That memory is up to the
-other PC, although they may not be able to
-consciously recall what the memory might be.
-4. Pick one other PC. Something about
-them interferes with your abilities. When they
-stand next to you, your focus abilities cost 1
-additional point.
-Minor Effect Suggestions: The target is
-dazed, and their next action is hindered.
-Major Effect Suggestions: The target is
-stunned and loses their next action.
-Tier 1: Phase Sprint (1+ Speed points). You
-can run up to a long distance as long as you
-take no other actions. During your action
-and until the beginning of your next turn, you
-are partially phased, and some attacks pass
-through you harmlessly. While phased, you
-gain an asset to your Speed defense tasks, but
-you lose any benefit from armor you wear.
-Note that some of your other special
-abilities enable specific actions that you can
-take while using Phase Sprint. For instance,
-when using Disrupting Touch, you can make
-one touch attack while moving (though this
-ends your movement). Action.
-Disrupting Touch (1+ Might points). You can
-turn your Phase Sprint into a melee attack by
-purposefully grazing another creature as you
-run. When you do, the touch releases a violent
-blast of energy that inflicts 2 points of damage
-to the target (ignores Armor). Whether you
-hit or miss, your movement (and turn) ends
-immediately, which puts you within immediate
-distance of your target. If you apply Effort to
-increase damage rather than to ease the task,
-you deal 2 additional points of damage per
-level of Effort (instead of 3 points); the target
-takes 1 point of damage even if you fail the
-attack roll. Enabler.
-
+1. Pick one other PC. For some reason, they never lose a sense of where you are, no matter how you sprint around, change phase, or even become invisible (to everyone else).
+2. Pick one other PC. You recently discovered that if they stand near you when you begin a Phase Sprint, they become partially phased in the same way as you for one round, though they can’t sprint or use any other abilities of this focus.
+3. Pick one other PC. Seeing you phase seems to trigger some unpleasant memory in this character. That memory is up to the other PC, although they may not be able to consciously recall what the memory might be.
+4. Pick one other PC. Something about them interferes with your abilities. When they stand next to you, your focus abilities cost 1 additional point.
+Minor Effect Suggestions: The target is dazed, and their next action is hindered.
+Major Effect Suggestions: The target is stunned and loses their next action.
+Tier 1: Phase Sprint (1+ Speed points). You can run up to a long distance as long as you take no other actions. During your action and until the beginning of your next turn, you are partially phased, and some attacks pass through you harmlessly. While phased, you gain an asset to your Speed defense tasks, but you lose any benefit from armor you wear. Note that some of your other special abilities enable specific actions that you can take while using Phase Sprint. For instance, when using Disrupting Touch, you can make one touch attack while moving (though this ends your movement). Action. 
+Disrupting Touch (1+ Might points). You can turn your Phase Sprint into a melee attack by purposefully grazing another creature as you run. When you do, the touch releases a violent blast of energy that inflicts 2 points of damage to the target (ignores Armor). Whether you hit or miss, your movement (and turn) ends immediately, which puts you within immediate distance of your target. If you apply Effort to increase damage rather than to ease the task, you deal 2 additional points of damage per level of Effort (instead of 3 points); the target takes 1 point of damage even if you fail the attack roll. Enabler.  
 
 THUNDERS
 For you, sound is a tapestry of sensation that
