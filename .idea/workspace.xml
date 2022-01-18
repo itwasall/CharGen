@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34eef8fa-e044-4d1f-84f0-0a6be0cc8fbb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/numenera_data/foci.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numenera_data/foci.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/numenera_data/foci.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

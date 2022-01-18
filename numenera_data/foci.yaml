@@ -9,8 +9,11 @@ Bears a Halo of Fire:
   equipment:
     - A device that sprays inanimate objects to make them fire-resistant. All your starting gear has already been treated unless you don’t want it to be. [ARTIFACT]
   abilities:
-    Fire Powers:
+  Fire Powers:
       desc: Your special abilities that would normally use force or other energy (such as electricity) instead use fire. For example, force blasts from Onslaught are blasts of flame, and Flash is a burst of fire. These alterations change nothing except the type of damage and the fact that it might start fires. As another example, Barrier produces a wall of roaring flames. In this case, the alteration changes the esotery so that the barrier is not solid but instead inflicts 1 point of damage to anything that touches it and 4 points of damage to anyone who passes through it. Even fighting moves such as No Need for Weapons might mean your hands and fists are surrounded by flames.
+  Shroud of Flame:
+      desc: At your command, your entire body becomes shrouded in flames that last up to ten minutes. The fire doesn’t burn you, but it automatically inflicts 2 points of damage to anyone who tries to touch you or strike you with a melee attack. Flames from another source can still hurt you. While the shroud is active, you gain +2 points of Armor that protect only against damage from fire from another source. Enabler.
+      cost: [1, Intellect]
   minor_effect: The target or something near the target catches fire.
   major_effect: An important item on the target’s person is destroyed.
 Commands Mental Powers:
@@ -25,12 +28,73 @@ Commands Mental Powers:
   abilities:
     Mental Esoteries:
       desc: When you apply Effort to the special abilities that control minds, like the Mind Control esotery, the mind reading esotery or the Crow Control trick of the trade, you get a free level of Effort for that task. Enabler
+    Telepathic (1+ Intellect points):
+      desc: You can speak telepathically with others who are within short range. Communication is two-way, but the other party must be willing and able to communicate. You don’t have to see the target, but you must know that it’s within range. You can have more than one active contact at once, but you must establish contact with each target individually. Each contact lasts up to ten minutes. If you apply a level of Effort to increase the duration rather than affect the difficulty, the contact lasts for 28 hours. Action to establish contact.
+      cost: [1, Intellect]
   minor_effect: The range or duration of the mental power is double
-  major_effect: You can take another action on the same tiurn
+  major_effect: You can take another action on the same turn
+  choice:
+    Origin of Special Powers:
+      - [[1, 5], Natrual Mutation]
+      - [[6, 9], Unexpected viral reconstruction of your body]
+      - [[10, 15], Mutation due to ancestral exposure to chemicals, radiation, or virus]
+      - [[16, 21], Mutation due to experimental science performed on your ancestor(s)]
+      - [[22, 27], An encounter with the iron wind (unexpected nanotech reconstruction of your body)]
+      - [[28], Abduction by extraterrestrial(s) who experimented or performed surgery on you]
+      - [[29], Abduction by rogue Aeon Priest(s) who experimented or performed surgery on you]
+      - [[30], Abduction by machine intelligence that experimented or performed surgery on you]
+      - [[31], Encounter with an ultraterrestrial entity that mysteriously changed you]
+      - [[32, 35], Intentional or accidental fusion/implantation with mechanical devices in fingertips]
+      - [[36, 39], Intentional or accidental fusion/implantation with mechanical devices in palms]
+      - [[40, 43], Intentional or accidental fusion/implantation with mechanical device in head or eye]
+      - [[44, 47], Intentional or accidental fusion/implantation with mechanical device in chest]
+      - [[48, 51], Intentional or accidental immersion in or treatment with ancient chemicals or radiation]
+      - [[52, 56], Hidden artifact(s) secreted on your person]
+      - [[57, 60], Cloud of nanotech that follows and responds to you for reasons unknown]
+      - [[61, 64], Implant or mutation that provides knowledge and power from the datasphere]
+      - [[65, 66], Drugs]
+      - [[67], Training by extraterrestrial entities in strange and mysterious devotions]
+      - [[68, 69], Training by secret order that has mastered mysteries passed down from the ancients]
+      - [[70], Training by machine intelligence that shared inhuman knowledge]
+      - [[71, 80], "Confluence: roll twice and combine results"]
+      - [[81, 00], Unknown (GM can secretly roll again and keep the result hidden)]
 Controls Beasts:
-
+  desc: To say that you have a way with animals and nonhuman creatures doesn’t begin to cover it. Your mastery and communication with beasts is positively uncanny. They come to you fearlessly, and it’s not uncommon for birds to alight on your shoulder or for small animals to climb up your arms or legs. You probably wear tough clothing and have a disheveled or grizzled appearance that suggests a rugged, outdoor life. Perhaps you even smell like an animal. Any type of character is likely to have this focus.
+  connection:
+    - Pick one other PC. That character seems  to disturb your creatures in a way that you can’t explain. You know that you must keep your animals away from them if possible, or you might lose control.
+    - Pick one other PC. The creature that you’re bonded with seems to have a special   bond with this other person as well. You must decide whether it brings up feelings of jealousy or camaraderie within you and whether to thwart the connection or help it blossom.
+    - Pick one other PC. Recently, they accidentally (or perhaps intentionally) put your beast companion in a position of danger. Your companion is now nervous around them, and you are struggling with your own emotional response to the incident.
+    - Pick one other PC. They dislike beasts of all kinds, seeing them as little more than food or prey. You hope that exposing them to your beast companion will change their mind. It’s up to that player how their character responds to the experience.
+  equipment:
+    - 3 days’s worth of food for your beast companion
+    - a harness
+    - collar or similar accoutrement.
+  abilities:
+    Beast Companion:
+      desc: A level 2 creature of your size or smaller accompanies youa nd follows your instrctions. You and the GM must work out the details of your creater, and you'll probably make rolls for it in combat or when it takes actions. The beast companion acts on your turn. As a level 2 creature, it has a target number of 6 and 6 health and it inflicts 2 points of damage. It's movement is based on the creature type (avian, swimmer and so on). If your beast companion dies, you can hunt in the wild for 1d6 days to find a new companion. Enabler.
+  minor_effect: The duration of calmness or control is doubled.
+  major_effect: The duration of calmness or control extends to 28 hours. Remember that a day on the Ninth World is also 28 hours.
+  choice:
+    Beast Companion: [ [ Broken Hound, Dis p226 ], [ Seskii, Dis p252 ], [ Stratharian War Moth, Dis p255 ], [ Thuman, Dis p256 ], [ Dabirri, B1 p33 ], [ Drebil, B1 p38 ], [ Griffalo, B1 p61 ], [ Hex Stringer, B1 p65 ], [ Shanu, B1 p113 ], [ Slurge, B1 p119 ], [ Vape, B1 p131 ], [ Faradawk, B2 p54 ], [ Heeldran, B2 p64 ], [ Bowg, B3 p30 ], [ Chiurgeate Swarmers, B3 p34 ], [ Cranchur, B3 p39 ], [ Fire Dzik, B3 p61 ], [ Gluebelly, B3 p71 ], [ Iksaum, B3 p74 ], [ Rangifer Blight, B3 p128 ], [ Tovrost, B3 p153 ], [ Tyriaja, B3 p159 ], [ Vadasko, B3 p163 ] ]
 Controls Gravity:
-
+  desc: Gravity must have been quite a concern for the people of prior epochs because there are many paths within the numenera to control it. Through a quirk of fate, some unique device(s), or supreme devotion (or a combination of all three), you have learned to tap into the power of gravity. With one foot planted in the distant past, you are a mysterious individual. Most likely, you are also older, having spent much of your life honing your odd, ancient talents. You might prefer billowy garments that display your mastery of gravity’s pull and conceal your identity and intentions. No one type of character is more likely to control gravity than another, but the power is rare.
+  connection:
+    - Pick one other PC. In the recent past, while using your gravitational powers, you accidentally sent that character hurtling into the air or plummeting toward the ground. Either way, they barely survived. It is up to the player of that character to decide whether they resent, fear, or forgive you.
+    - Pick one other PC whose focus intertwines with yours. This odd connection affects them in some way. For example, if the character uses a bow, your ability to manipulate gravity sometimes extends the range of their arrows. If they are good at jumping, they seem less bound by the laws of gravity, and jump farther.
+    - Pick one other PC. They are deathly afraid of heights. Through your ability to control gravity, you would like to teach them how to be more comfortable with their feet off the ground. They must decide whether or not to take you up on your offer.
+    - Pick one other PC. They are skeptical of your ability to control gravity and think it’s just one big illusion. They might even attempt to discredit you or discover the “secret” behind your so-called skills.
+  equipment:
+    - A pen-sized oddity that tells the weight of whatever you point it at (within short range). The weight is displayed on a small glass plate in runes that only you can decipher.
+  abilities:
+    Gravity Ability: You can choose to learn Weighty instead of one of the abilities granted by your type
+      Weighty (1 Intellect point):
+        desc: You briefly increase the weight of a target within short range enough to stop them in their tracks, preventing the target from moving and hindering any attempted tasks on their next turn. Action.
+        cost: [ 1, Intellect ]
+    Hover:
+      desc: You float slowly into the air. As your action, you can concentrate to remain motionless in the air, or float up to a short distance, but no more; otherwise, you drift with the wind or with any momentum you have gained. This effect lasts for up to ten minutes. If you also have the Hover ability granted by your type, you can hover for twenty minutes and move your normal speed. Action to initiate.
+      cost: [ 1, Intellect ]
+  minor_effect: The duration of the effect is doubled.
+  major_effect: An important item on the target’s person is destroyed.
 Employs Magnetism:
 
 Entertains:
