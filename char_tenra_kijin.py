@@ -69,12 +69,15 @@ def gen_kijin(parts: List = None, verbose: bool = False):
     else:
         if len(list(part for part in parts if part in part_names)) == len(parts):
             mechanica_parts = parts
+    
 
     for part in mechanica_parts:
-        part_class.append(choice(list(mechanica[part]['classes'].keys())))
+        choice_part_class = choice(list(mechanica[part]['classes'].keys()))
+        part_class.append([choice_part_class, mechanica[part]['classes'][choice_part_class]])
+     
     return tuple(zip(mechanica_parts, part_class))
 
 
 
 
-print(gen_kijin())
+print(gen_kijin(verbose=True))
