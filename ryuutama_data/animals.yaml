@@ -1,0 +1,45 @@
+animal:
+  Riding Animal:
+    price: 900
+    effect: +1 bonus to travel checks on topographies of Level 2 or less. Only one person can ride at a time
+  Large Riding Animal:
+    price: 3800
+    effect: +1 bonus to travel checks on topographies of Level 2 or less. Four people can ride at a time
+  Pack Animal:
+    price: 500
+    effect: This animal has a carrying capacity of 15
+  Large Pack Animal:
+    price: 2000
+    effect: This animal has a carrying capacity of 30
+  Pet Animal:
+    price: 300
+    effect: A pet. Must be no larger than 1 metre i.e. a cat, turtle, rabbit etc.
+characteristics:
+  tough:
+    price_mod: mult
+    mod_amt: 2
+    desc: Needs no food, even in desert or alpine environments
+  clever:
+    price_mod: mult
+    mod_amt: 3
+    desc: Understands and tries to follow it's owners commands
+  bad_attitude:
+    price_mod: mult
+    mod_amt: 0.7
+    desc: Sometimes does not follow it's owners commands
+  loud:
+    price_mod: mult
+    mod_amt: 0.7
+    desc: Calls/brays/footsteps are loud and annoying
+  baby:
+    price_mod: mult
+    mod_amt: 0.3
+    desc: No more than 6 months old. Has no abilities and counts as a pet animal.
+  loyal:
+    price_mod: add
+    mod_amt: 1000
+    desc: Never leaves it's owners side. You may pay 1000g to add this to any animal you already own
+  well_traveled:
+    price_mod: add
+    mod_amt: 5000
+    desc: Grants +1 bonus to all travel checks. May only be applied to riding animals. Pay 5000g to add this to any riding animal you already own.

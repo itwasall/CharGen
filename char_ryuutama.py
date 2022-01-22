@@ -1,7 +1,6 @@
 from chargen import yaml_importer, roll
 
-import random
-
+from random import choice
 
 class ClassAbility:
     def __init__(self, name, desc, effect, usable, stat_used, tn=None):
@@ -28,6 +27,9 @@ class CharacterClass:
                 'Desc': ability.desc,
                 'Skill Effect': ability.effect
             }
+
+    def __repr__(self):
+        return self.name
 
 
 class CharacterType:
@@ -76,15 +78,25 @@ class WeaponType:
         self.handed = handed
         self.base_price = base_price
         if isinstance(accuracy, list):
-            self.accuracy_formula(accuracy[0], accuracy[1])
+            if len(accuracy) < 2:
+                self.accuracy_formula(accuracy[0], 0)
+            else:
+                self.accuracy_formula(accuracy[0], accuracy[1])
+
         if isinstance(damage, list):
-            self.damage_formula(damage[0], damage[1])
+            if len(damage) < 2:
+                self.damage_formula(damage[0], 0)
+            else:
+                self.damage_formula(damage[0], damage[1])
 
     def accuracy_formula(self, ops: list, mod: int):
         self.accuracy = [[score for score in ops], mod]
 
     def damage_formula(self, ops, mod):
         self.damage = [[score for score in ops], mod]
+
+    def __repr__(self):
+        return self.name
 
 
 character = {
@@ -186,3 +198,39 @@ Farmer = CharacterClass('Farmer', ['Robust', 'Animal Owner', 'Side-job'])
 Artisan = CharacterClass('Artisan', ['Trapping', 'Crafting', 'Repair'])
 
 Noble = CharacterClass('Noble', ['Etiquette', 'Refined Education', 'Weapon Grace'])
+
+ab_average_set = [6, 6, 6, 6]
+ab_standard_set = [4, 6, 6, 8]
+ab_specialised_set = [4, 4, 8, 8]
+
+ryuu_classes = [Minstrel, Merchant, Hunter, Healer, Farmer, Artisan, Noble]
+ryuu_types = [AttackType, TechnicalType, MagicType]
+ryuu_mastered_weapon = [wt_light_blade, wt_blade, wt_polearm, wt_axe, wt_bow, wt_unarmed]
+ryuu_ability_score_sets = [ab_standard_set, ab_average_set, ab_specialised_set]
+
+def gen_chanaracter():
+    # Stage one: Pick class
+    char_class = choice(ryuu_classes)
+    character['Class'] = char_class
+    # Stage two: Pick type
+    char_type = choice(ryuu_types)
+    character['Type'] = char_type
+    # Stage three: Determine starting ability scores
+    char_ability_score = choice(ryuu_ability_score_sets) 
+    for it, ability_score in enumerate(list(character['Ability Scores'].keys())):
+        character['Ability Scores'][ability_score] = char_ability_score[it]
+    character['Resources']['HP']['Current'], character['Resources']['HP']['Max'] = char_ability_score[0] * 2, char_ability_score[0] * 2
+    character['Resources']['MP']['Current'], character['Resources']['MP']['Max'] = char_ability_score[3] * 2, char_ability_score[3] * 2
+    character['Carrying Capacity'] = char_ability_score[0] + 3
+
+    # Stage four: Choose mastered weapon
+    char_mastered_weapon = choice(ryuu_mastered_weapon)
+    character['Mastered Weapon'] = char_mastered_weapon
+    # Stage five: Determine personal item
+
+    # Stage six: Shop for items
+
+    # Stage seven: Pick character details
+
+gen_chanaracter()
+print(character)
