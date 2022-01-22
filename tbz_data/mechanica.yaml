@@ -498,6 +498,7 @@ load_outs:
         class: Otsu
         slots:
           - Vajra Claws
+    attribute_cost: 8
   Renegade Marksman:
     focus: Light projectile attacks
     mechanica:
