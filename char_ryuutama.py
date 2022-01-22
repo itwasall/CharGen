@@ -2,7 +2,6 @@ from chargen import yaml_importer, roll
 
 import random
 
-
 def make_ability_effect(mod: int = 0,
                         effect_type: str = None,
                         checks: list = None,
@@ -27,15 +26,11 @@ class ClassAbility:
         self.effect = effect
 
 
-well_traveled_desc = "As a minstrel who makes their earning by constant travel. you've learned how to travel safely"
-well_traveled = ClassAbility('Well Traveled', well_traveled_desc,
-                             make_ability_effect(1, 'check_bonus', ['Traveling', 'Direction', 'Camping']))
-
-
 class CharacterClass:
-    def __init__(self, name):
+    def __init__(self, name, skills):
         self.name = name
         self.abilities = {}
+        self.skills = [skill for skill in skills]
 
     def add_ability(self, ability):
         if not isinstance(ability, dict):
@@ -46,10 +41,6 @@ class CharacterClass:
                 'Desc': ability.desc,
                 'Skill Effect': ability.effect
             }
-
-
-Minstrel = CharacterClass('Minstrel')
-Minstrel.add_ability(well_traveled)
 
 
 class CharacterType:
@@ -85,7 +76,8 @@ character = {
         'Outward Appearance': str,
         'Hometown': str,
         'Reason for Journeying': str,
-        'Personality': str
+        'Personality': str,
+        'Level': int = 1
     },
     'Class': CharacterClass,
     'Type': CharacterType,
@@ -160,3 +152,22 @@ wt_unarmed = WeaponType(
     [[ch_strength], -1],
     'Two-Handed'
 )
+
+well_traveled_desc = "As a minstrel who makes their earning by constant travel. you've learned how to travel safely"
+well_traveled = ClassAbility('Well Traveled', well_traveled_desc,
+                             make_ability_effect(1, 'check_bonus', ['Traveling', 'Direction', 'Camping']))
+
+Minstrel = CharacterClass('Minstrel', ['Well-traveled', 'Knowledge of Tradition', 'Music'])
+Minstrel.add_ability(well_traveled)
+
+Merchant = CharacterClass('Merchant', ['Well-spoken', 'Animal Owner', 'Trader'])
+
+Hunter = CharacterClass('Hunter', ['Animal Tracking', 'Trapping', 'Hunting'])
+
+Healer = CharacterClass('Healer', ['Healing', 'First-Aid', 'Herb Gathering'])
+
+Farmer = CharacterClass('Farmer', ['Robust', 'Animal Owner', 'Side-job'])
+
+Artisan = CharacterClass('Artisan', ['Trapping', 'Crafting', 'Repair'])
+
+Noble = CharacterClass('Noble', ['Etiquette', 'Refined Education', 'Weapon Grace'])

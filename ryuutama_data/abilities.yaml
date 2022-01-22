@@ -1,0 +1,32 @@
+abilities:
+  Well Traveled:
+    desc: As a minstrel who makes their earning by constant travel. you've learned how to travel safely
+    effect_type:
+      name: check_bonus
+      amt: 1
+      cond: [Travel, Direction, Camping]
+    useable: yes
+    stat_used: no
+    tn: no
+  Knowledge of Tradition:
+    desc: The people you have met on your travels have taught you their old songs and legends. You have learned a great deal of the world this way.
+    effect_type:
+      name: check_bonus
+      amt: GM discretion
+    useable: Any time you find something interesting
+    stat_used: [intelligence, intelligence]
+    tn: GM discretion
+  Music:
+    desc: You can play music that reinvigorates your companions. Once per scenario you may choose one terrain or weather type you are currently traveling through and gain it as a song. For example, if your character is currently in a rainy grassland, they might learn “Rain Song” or “Ballad of the Grassland,” but not “Desert Rumba.” You may later use the song only if it matches the specific condition in which it was acquired: for example, “Rain Song” can be used anytime it is raining, regardless of terrain. You can name your song whatever you like (the above names are only examples).
+    effect_type:
+      name: party_buff
+      amt: 1
+    useable: Usable when in a suitable area
+    penalty: [HP, -1]
+    stat_used: [dexterity, spirit]
+    tn: Topography
+  
+
+
+
+  
