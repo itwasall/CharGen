@@ -1,31 +1,64 @@
 abilities:
   Well Traveled:
     desc: As a minstrel who makes their earning by constant travel. you've learned how to travel safely
-    effect_type:
-      name: check_bonus
-      amt: 1
-      cond: [Travel, Direction, Camping]
+    effect: +1 to Journey Checks (Travel/Direction/Camping Checks). Always in effect
     useable: yes
     stat_used: no
     tn: no
   Knowledge of Tradition:
     desc: The people you have met on your travels have taught you their old songs and legends. You have learned a great deal of the world this way.
-    effect_type:
-      name: check_bonus
-      amt: GM discretion
+    effect: You can get more information about the things you see and hear.
     useable: Any time you find something interesting
     stat_used: [intelligence, intelligence]
     tn: GM discretion
   Music:
-    desc: You can play music that reinvigorates your companions. Once per scenario you may choose one terrain or weather type you are currently traveling through and gain it as a song. For example, if your character is currently in a rainy grassland, they might learn “Rain Song” or “Ballad of the Grassland,” but not “Desert Rumba.” You may later use the song only if it matches the specific condition in which it was acquired: for example, “Rain Song” can be used anytime it is raining, regardless of terrain. You can name your song whatever you like (the above names are only examples).
-    effect_type:
-      name: party_buff
-      amt: 1
+    desc: "You can play music that reinvigorates your companions. Once per scenario you may choose one terrain or weather type you are currently traveling through and gain it as a song. For example, if your character is currently in a rainy grassland, they might learn “Rain Song” or “Ballad of the Grassland,” but not “Desert Rumba.” You may later use the song only if it matches the specific condition in which it was acquired: for example, “Rain Song” can be used anytime it is raining, regardless of terrain. You can name your song whatever you like (the above names are only examples)."
+    skill_effect: "Give all party members a +1 bonus on their next roll. Critical: +3 bonus, Fumble: Any PCs with Condition of 6 or less gain the [Muddled: 6] status effect. Each use reduces the Minstrel's HP by 1."
     useable: Usable when in a suitable area
-    penalty: [HP, -1]
     stat_used: [dexterity, spirit]
     tn: Topography
-  
+  Well Spoken:
+    desc: As a merchant who earns her keep by trading, your communication skills are top notch
+    effect: Negotiation Check [INT + SPI] gets + 1. Always in effect
+    useable: Any Negotiation Check
+    stat_used: no
+    tn: no
+  Animal Owner:
+    desc: You have learned how to raise animals that will help you carry your goods. Normally, only one animal can be taken on a Journey for free (without paying their daily food and water costs. With this skill, you can keep more animals without incurring their food and water costs. The animal rules are explained in detail in the items section.
+    effect: You can keep 2 more animals for a total of 3 without paying for their food and water.
+    useable: no
+    stat_used: no
+    tn: no
+  Trader:
+    desc: When you go shopping, you can buy items cheaply and sell items at a higher price. However, in order to do so, you must buy or sell at least four items of the same type at once. When buying, you must have enough money to buy all the items at their normal price. If you succeed on the check, the price of the items will change. If you fail a check when buying, you cannot cancel the deal. You must buy the goods at full price. There may be times when supplies are short or shop owners refuse to deal with you, and you cannot use this skill. You may not use Trader to sell items in the same town that you have bought them.
+    effect: You may buy items at a reduced price or sell items at an increased value.
+    useable: When selling/buying 4 or more of the same item
+    stat_used: [intelligence, spirit]
+    tn:
+      6-7: 10% change in price
+      8-9: 20% change in price
+      10-13: 40% change in price
+      14-17: 60% change in price
+      18+: 80% change in price
+  Animal Tracking:
+    desc: You can track four types of monsters (animal, phantom beast, demonstone or phantom plant) by following their prints and spoor. You will also receive a +1 bonus to damage against a monster tracked using this skill.
+    effect: Find a monsters location. +1 bonus to damage against any monsters found
+    useable: When finding an animal's tracks
+    stat_used: [strength, intelligence]
+    tn: Topography
+  Trapping:
+    desc: You are able to harvest valuable materiasl, such as leather or food, from defeated monsters. The type of item you recieve on a success is shown in the monster's entry in the Dragonica
+    effect: Harvest materials from a defeated monster
+    useable: After defeating a monster
+    stat_used: [dexterity, intelligence]
+    tn: Monster level x 2
+  Hunting:
+    desc: You are able to catch small wild animals for food. This skill is used just before the camp check is made, however, if you decide to go hunting you cannot also help set up camp. The higher the result of the check, the more food you catch.
+    effect: "Receive a number of rations equal to Check result - target number, but cannot participate in the camp check. Critical: All food is Delicious. Fumble: Afflicted by [Injury: 6] status effect"
+    useable: Before camp check, once per day
+    stat_used: [dexterity, intelligence]
+    tn: Topography
+
 
 
 

@@ -2,28 +2,15 @@ from chargen import yaml_importer, roll
 
 import random
 
-def make_ability_effect(mod: int = 0,
-                        effect_type: str = None,
-                        checks: list = None,
-                        circumstances: str = None,
-                        stat_used: list = None,
-                        target_number=None):
-    effect = {
-        'Type': effect_type,
-        'Mod': mod,
-        'Cond': checks,
-        'Circumstances': circumstances,
-        'Stat_Used': stat_used,
-        'Target Number': target_number
-    }
-    return effect
-
 
 class ClassAbility:
-    def __init__(self, name, desc, effect):
+    def __init__(self, name, desc, effect, usable, stat_used, tn=None):
         self.name = name
         self.desc = desc
         self.effect = effect
+        self.usable = usable
+        self.stat_used = stat_used
+        self.tn = tn
 
 
 class CharacterClass:
@@ -44,8 +31,41 @@ class CharacterClass:
 
 
 class CharacterType:
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return self.name
+
+
+class AttackType(CharacterType):
     def __init__(self):
-        pass
+        super().__init__("Attack Type")
+        self.abilities = {
+            'Toughness': "Add +4 to Max HP",
+            'Power': "+1 Bonus to damage rolls during combat",
+            'Weapon Focus': "Gain 1 more Mastered Weapon"
+        }
+
+
+class TechnicalType(CharacterType):
+    def __init__(self):
+        super().__init__("Technical Type")
+        self.abilities = {
+            'Accurate': "Gain an extra +1 bonus to any check when using Concentration, for a bonus of +2",
+            'Quick': "+1 Bonus to Initiative checks in combat",
+            'Pocket': "Your Carrying Capacity is increased by +3"
+        }
+
+
+class MagicType(CharacterType):
+    def __init__(self):
+        super().__init__("Magic Type")
+        self.abilities = {
+            'Will': "Add +4 to Max MP",
+            'Spellbook': "Acquire 2 Incantation spells per level",
+            'Seasonal Sorcerer': "Acquire Seasonal Magic"
+        }
 
 
 class WeaponType:
@@ -77,7 +97,7 @@ character = {
         'Hometown': str,
         'Reason for Journeying': str,
         'Personality': str,
-        'Level': int = 1
+        'Level': int
     },
     'Class': CharacterClass,
     'Type': CharacterType,
@@ -153,12 +173,7 @@ wt_unarmed = WeaponType(
     'Two-Handed'
 )
 
-well_traveled_desc = "As a minstrel who makes their earning by constant travel. you've learned how to travel safely"
-well_traveled = ClassAbility('Well Traveled', well_traveled_desc,
-                             make_ability_effect(1, 'check_bonus', ['Traveling', 'Direction', 'Camping']))
-
 Minstrel = CharacterClass('Minstrel', ['Well-traveled', 'Knowledge of Tradition', 'Music'])
-Minstrel.add_ability(well_traveled)
 
 Merchant = CharacterClass('Merchant', ['Well-spoken', 'Animal Owner', 'Trader'])
 
