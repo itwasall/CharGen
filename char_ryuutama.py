@@ -1,6 +1,9 @@
+from typing import List
+
 from chargen import yaml_importer, roll
 
-from random import choice
+from random import choice, shuffle
+
 
 class ClassAbility:
     def __init__(self, name, desc, effect, usable, stat_used, tn=None):
@@ -36,9 +39,6 @@ class CharacterType:
     def __init__(self, name):
         self.name = name
 
-    def __repr__(self):
-        return self.name
-
 
 class AttackType(CharacterType):
     def __init__(self):
@@ -48,6 +48,9 @@ class AttackType(CharacterType):
             'Power': "+1 Bonus to damage rolls during combat",
             'Weapon Focus': "Gain 1 more Mastered Weapon"
         }
+
+    def __repr__(self):
+        return self.name
 
 
 class TechnicalType(CharacterType):
@@ -59,6 +62,9 @@ class TechnicalType(CharacterType):
             'Pocket': "Your Carrying Capacity is increased by +3"
         }
 
+    def __repr__(self):
+        return self.name
+
 
 class MagicType(CharacterType):
     def __init__(self):
@@ -68,6 +74,9 @@ class MagicType(CharacterType):
             'Spellbook': "Acquire 2 Incantation spells per level",
             'Seasonal Sorcerer': "Acquire Seasonal Magic"
         }
+
+    def __repr__(self):
+        return self.name
 
 
 class WeaponType:
@@ -132,7 +141,7 @@ character = {
     'Carrying Capacity': int,
     'Mastered Weapon': WeaponType,
     'Inventory': {
-        'Gold': int,
+        'Gold':int,
         'Personal Item': str,
         'Items': list
     }
@@ -185,6 +194,31 @@ wt_unarmed = WeaponType(
     'Two-Handed'
 )
 
+wl_light_blade = ['Dagger', 'Shortsword', 'Wakizashi']
+wl_blade = ['Broadsword', 'Rapier', 'Katana']
+wl_polearm = ['Longspear', 'Trident', 'Lance']
+wl_axe = ['Battleaxe', 'Greataxe']
+wl_bow = ['Shortbow', 'Longbow', 'Crossbow']
+
+def get_weapon(character):
+    master_weapon = character['Mastered Weapon'].name
+    if master_weapon == 'Light Blade':
+        weapon = choice(wl_light_blade)
+    elif master_weapon == 'Blade':
+        weapon = choice(wl_blade)
+    elif master_weapon == 'Polearm':
+        weapon = choice(wl_polearm)
+    elif master_weapon == 'Axe':
+        weapon = choice(wl_axe)
+    elif master_weapon == 'Bow':
+        weapon = choice(wl_bow)
+    elif master_weapon == 'Unarmed':
+        weapon = 'Fists'
+    if weapon != 'Fists':
+        character['Inventory']['Items'] = [weapon]
+    else:
+        pass
+
 Minstrel = CharacterClass('Minstrel', ['Well-traveled', 'Knowledge of Tradition', 'Music'])
 
 Merchant = CharacterClass('Merchant', ['Well-spoken', 'Animal Owner', 'Trader'])
@@ -208,6 +242,7 @@ ryuu_types = [AttackType, TechnicalType, MagicType]
 ryuu_mastered_weapon = [wt_light_blade, wt_blade, wt_polearm, wt_axe, wt_bow, wt_unarmed]
 ryuu_ability_score_sets = [ab_standard_set, ab_average_set, ab_specialised_set]
 
+
 def gen_chanaracter():
     # Stage one: Pick class
     char_class = choice(ryuu_classes)
@@ -216,21 +251,28 @@ def gen_chanaracter():
     char_type = choice(ryuu_types)
     character['Type'] = char_type
     # Stage three: Determine starting ability scores
-    char_ability_score = choice(ryuu_ability_score_sets) 
+    char_ability_score = choice(ryuu_ability_score_sets)
+    shuffle(char_ability_score)
     for it, ability_score in enumerate(list(character['Ability Scores'].keys())):
         character['Ability Scores'][ability_score] = char_ability_score[it]
-    character['Resources']['HP']['Current'], character['Resources']['HP']['Max'] = char_ability_score[0] * 2, char_ability_score[0] * 2
-    character['Resources']['MP']['Current'], character['Resources']['MP']['Max'] = char_ability_score[3] * 2, char_ability_score[3] * 2
+    character['Resources']['HP']['Current'], character['Resources']['HP']['Max'] = char_ability_score[0] * 2, \
+                                                                                   char_ability_score[0] * 2
+    character['Resources']['MP']['Current'], character['Resources']['MP']['Max'] = char_ability_score[3] * 2, \
+                                                                                   char_ability_score[3] * 2
     character['Carrying Capacity'] = char_ability_score[0] + 3
 
     # Stage four: Choose mastered weapon
     char_mastered_weapon = choice(ryuu_mastered_weapon)
     character['Mastered Weapon'] = char_mastered_weapon
     # Stage five: Determine personal item
+    character['Inventory']['Personal Item'] = "to be genned"
+    get_weapon(character)
 
     # Stage six: Shop for items
+    character['Inventory']['Gold'] = 1000
 
     # Stage seven: Pick character details
+
 
 gen_chanaracter()
 print(character)
