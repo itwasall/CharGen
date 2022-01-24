@@ -5,6 +5,28 @@ from chargen import yaml_importer, roll
 from random import choice, shuffle
 
 
+class CharacterDetails:
+    def __init__(
+        self,
+        name: str,
+        age: int,
+        gender: str,
+        image_color: str,
+        outward_appearance: str,
+        hometown: str,
+        reason_for_journey: str,
+        personality: str
+    ):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.image_color = image_color
+        self.outward_appearance = outward_appearance
+        self.hometown = hometown
+        self.reason_for_journey = reason_for_journey
+        self.personality = personality
+
+
 class ClassAbility:
     def __init__(self, name, desc, effect, usable, stat_used, tn=None):
         self.name = name
@@ -16,10 +38,12 @@ class ClassAbility:
 
 
 class CharacterClass:
-    def __init__(self, name, skills):
+    def __init__(self, name, skills, example_jobs: list = None, example_actions: list = None):
         self.name = name
         self.abilities = {}
         self.skills = [skill for skill in skills]
+        self.example_jobs = example_jobs
+        self.example_actions = example_actions
 
     def add_ability(self, ability):
         if not isinstance(ability, dict):
@@ -109,18 +133,11 @@ class WeaponType:
 
 
 character = {
-    'Details': {
-        'Name': str,
-        'Age': int,
-        'Gender': str,
-        'Image Colour': str,
-        'Outward Appearance': str,
-        'Hometown': str,
-        'Reason for Journeying': str,
-        'Personality': str,
-        'Level': int
-    },
+    'Details': CharacterDetails,
     'Class': CharacterClass,
+    'Job': str,
+    'Class Abilities': {},
+    'Class Actions': List,
     'Type': CharacterType,
     'Ability Scores': {
         'Strength': int,
@@ -255,10 +272,10 @@ def gen_chanaracter():
     shuffle(char_ability_score)
     for it, ability_score in enumerate(list(character['Ability Scores'].keys())):
         character['Ability Scores'][ability_score] = char_ability_score[it]
-    character['Resources']['HP']['Current'], character['Resources']['HP']['Max'] = char_ability_score[0] * 2, \
-                                                                                   char_ability_score[0] * 2
-    character['Resources']['MP']['Current'], character['Resources']['MP']['Max'] = char_ability_score[3] * 2, \
-                                                                                   char_ability_score[3] * 2
+    character['Resources']['HP']['Current'] = char_ability_score[0] * 2
+    character['Resources']['HP']['Max'] = char_ability_score[0] * 2
+    character['Resources']['MP']['Current'] = char_ability_score[3] * 2
+    character['Resources']['MP']['Max'] = char_ability_score[3] * 2
     character['Carrying Capacity'] = char_ability_score[0] + 3
 
     # Stage four: Choose mastered weapon
