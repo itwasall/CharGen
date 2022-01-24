@@ -63,6 +63,8 @@ def gen_name(gender = None, first_name_only: bool = None):
     else:
         return rnd3 + rnd4 + " " + rnd + rnd2
 
+def gen_age(lower_bound: int = 15, upper_bound: int = 35):
+    return randint([lower_bound, upper_bound])
 
 print([gen_hometown() for _ in range(10)])
 print([gen_name() for _ in range(10)])
