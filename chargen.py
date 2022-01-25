@@ -23,6 +23,15 @@ def expand(dictionary):
             return_dictionary[key] = value
     return return_dictionary
 
+def capitalise(string):
+    string_words = string.split(" ")
+    for it, word in enumerate(string_words):
+        if it != 0 and word.lower() in ['the', 'of', 'as', 'by', 'a', 'to', 'and', 'my']:
+            pass
+        else:
+            string_words[it] = string_words[it].capitalize()
+    return " ".join(string_words)
+
 
 def yaml_importer(path: str) -> dict:
     return safe_load(open(path, 'rt'))
