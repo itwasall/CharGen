@@ -42,7 +42,7 @@ class AbilityScores:
 
 
 class AbstractAncestoryClass:
-    def __init__(self, name: str, desc: str): 
+    def __init__(self, name: str, desc: str):
         self.name = name
         self.desc = desc
 
@@ -50,15 +50,15 @@ class AbstractAncestoryClass:
         return f"{self.name}:\n    {self.desc}"
 
 class AncestoryFeat(AbstractAncestoryClass):
-    def __init__(self, name: str, desc: str): 
+    def __init__(self, name: str, desc: str):
         super().__init__(name, desc)
 
 class AncestoryTrait(AbstractAncestoryClass):
-    def __init__(self, name: str, desc: str): 
+    def __init__(self, name: str, desc: str):
         super().__init__(name, desc)
 
 class AncestoryAbility(AbstractAncestoryClass):
-    def __init__(self, name: str, desc: str): 
+    def __init__(self, name: str, desc: str):
         super().__init__(name, desc)
 
 class Rarity:
@@ -95,7 +95,7 @@ class Character:
         self,
         ancestory: Ancestory,
         ability_scores: AbilityScores,
-        
+
     ):
         pass
 
