@@ -89,7 +89,6 @@ class Ancestory:
     def __repr__(self): return self.name
 
 
-
 class Character:
     def __init__(
         self,
