@@ -23,7 +23,7 @@ def expand(dictionary):
             return_dictionary[key] = value
     return return_dictionary
 
-def capitalise(string: str) -> str:
+def capitalise(string: str):
     """Returns a capitalised version of a string in title format
 
     Args:
@@ -31,7 +31,7 @@ def capitalise(string: str) -> str:
 
     Returns:
         str: return string
-    
+
     e.g. "the cliff of doom" -> "The Cliff of Doom"
     """
     string_words = string.split(" ")
