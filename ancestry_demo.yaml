@@ -1,0 +1,15 @@
+test:
+  name: Test
+  feats:
+    First Feat:
+      desc: This is the first feat
+      is_first_feat: True
+      is_second_feat: False
+    Second Feat:
+      desc: This is the second feat
+      is_second_feat: True
+      add_resistance:
+        element: Poison
+        amount: Half current level (Minumum 1)
+
+
