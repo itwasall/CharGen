@@ -23,10 +23,20 @@ def expand(dictionary):
             return_dictionary[key] = value
     return return_dictionary
 
-def capitalise(string):
+def capitalise(string: str) -> str:
+    """Returns a capitalised version of a string in title format
+
+    Args:
+        string str: input string
+
+    Returns:
+        str: return string
+    
+    e.g. "the cliff of doom" -> "The Cliff of Doom"
+    """
     string_words = string.split(" ")
     for it, word in enumerate(string_words):
-        if it != 0 and word.lower() in ['the', 'of', 'as', 'by', 'a', 'to', 'and', 'my']:
+        if it != 0 and word.lower() in ['the', 'is', 'of', 'as', 'by', 'a', 'to', 'and', 'my']:
             pass
         else:
             string_words[it] = string_words[it].capitalize()
