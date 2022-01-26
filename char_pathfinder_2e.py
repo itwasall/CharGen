@@ -2,6 +2,7 @@ from typing import List
 from chargen import yaml_importer, roll
 from random import choice, randint
 
+data_feats = yaml_importer('pathfinder_2e_data/feats.yaml')
 
 class AbstractAbilityScore:
     def __init__(self, name):
@@ -42,24 +43,48 @@ class AbilityScores:
 
 
 class AbstractAncestoryClass:
-    def __init__(self, name: str, desc: str):
+    def __init__(self, name: str):
         self.name = name
-        self.desc = desc
 
     def __repr__(self):
-        return f"{self.name}:\n    {self.desc}"
+        return f"{self.name}"
 
 class AncestoryFeat(AbstractAncestoryClass):
-    def __init__(self, name: str, desc: str):
-        super().__init__(name, desc)
+    def __init__(self, name: str, *args):
+        super().__init__(name)
+        self.desc = None
+        self.add_skill_proficiency = None
+        self.add_weapon_proficiency = None
+        self.allow_access_weapon_set = None
+        self.add_crit_success = None
+        self.add_terrain_adv = None
+        self.add_circumstance_bonus = None
+        self.add_speed_reduction_ignore = None
+        self.add_speed_penalty_reduction = None
+        self.add_ancestral_foe = None
+        self.add_bonus_damage_to_creature_when_hit = None
+        [setattr(self, attr_name, value) for attr_name, value in args[0].items()]
+
+
+class AncestoryHeritage(AbstractAbilityScore):
+    def __init__(self, name: str, *args):
+        super().__init__(name)
+        self.add_reaction = None
+        self.add_crit_saving_throw = None
+        self.add_resistance = None
+        self.add_circumstance_bonus = None
+        self.add_force_movement_reduction = None
+        self.add_poison_stage_reduction_by_saving_throw = None
+        [setattr(self, attr_name, value) for attr_name, value in args[0].items()]
 
 class AncestoryTrait(AbstractAncestoryClass):
-    def __init__(self, name: str, desc: str):
-        super().__init__(name, desc)
+    def __init__(self, name: str):
+        super().__init__(name)
 
 class AncestoryAbility(AbstractAncestoryClass):
     def __init__(self, name: str, desc: str):
-        super().__init__(name, desc)
+        super().__init__(name)
+        self.desc = desc
 
 class Rarity:
     def __init__(self, name: str):
