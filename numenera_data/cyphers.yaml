@@ -22,8 +22,7 @@ PENUMBRA GLOVE :
 
 SKIN OF PHASING: 
 	Level: 1d6 + 4
-  Wearable: Thin wrap of glistening material 
-  that lays itself across large sections of wearer’s natural skin
+  Wearable: Thin wrap of glistening material   that lays itself across large sections of wearer’s natural skin
   Effect: Once activated, the wearer gains control of their phase state for 28 hours. The wearer can slowly pass through physical barriers at a rate of 1 inch per round (minimum of one round to pass through any barrier). They can’t act on or perceive anything until they pass entirely through the barrier. Force fields repel movement, returning the wearer to the point of entry. Alternatively, the wearer can change their phase when they make a Speed defense roll, easing it. Each time they do so, the remaining duration of the cypher drops by one hour.
 
 SUN SHROUD: 
@@ -38,8 +37,7 @@ MASK OF MACHINE SPEAKING:
 
 METAL MELDING HELM: 
 	Level: 1d6 + 1
-  Wearable: Head-covering helm studded with 
-  strange devices
+  Wearable: Head-covering helm studded with   strange devices
   Effect: Once activated, the wearer can exert force on metal objects within short range for up to one hour. The force exerted is approximately equal to the strength of a fit, capable, adult human. The wearer can use it to slowly move or push off from metal objects, and so on. This force lacks the fine control to wield a weapon or move quickly, so in most situations, it’s not a means of attack.
 
 DETONATION (HORDE SUPPRESSOR): 
@@ -54,18 +52,19 @@ EFFORT ENHANCEMENT:
   Wearable: Adhesive patch that activates when slapped
   Usable: Injector
   Effect: For the next 28 hours, the user can access a thin connection to the datasphere to gain a very specific effect. When applying Effort to a task related to a predetermined skill, the user can apply one free level of Effort. The skills encoded are generally restricted to the following.
-01–10 Melee attacks
-11–20 Ranged attacks
-21–40 Understanding numenera 
-41–50 Salvaging numenera
-51–60 Crafting numenera
-61–70 Persuasion
-71–75 Healing
-76–80 Speed defense
-81–85 Intellect defense
-86–90 Swimming
-91–95 Riding
-96–00 Sneaking
+  Roll:
+   - 01–10 Melee attacks
+   - 11–20 Ranged attacks
+   - 21–40 Understanding numenera 
+   - 41–50 Salvaging numenera
+   - 51–60 Crafting numenera
+   - 61–70 Persuasion
+   - 71–75 Healing
+   - 76–80 Speed defense
+   - 81–85 Intellect defense
+   - 86–90 Swimming
+   - 91–95 Riding
+   - 96–00 Sneaking
 
 ACIDIC RESONATOR: 
 	Level: 1d6 + 2
@@ -212,14 +211,15 @@ ORGAN FACTORY:
   Internal: Pill, ingestible liquid
   Usable: Injector
   Effect: Over the course of 28 hours, the user grows an external, fully viable living organ or limb. This is a somewhat painful process that dazes the user for the last half of the process. The completely grown organ or limb can be transferred to another creature simply by placing it on their body and waiting a few rounds. If the recipient creature has sustained damage to the same kind of organ or limb, the newly grown one replaces it over the course of about a minute (during which time the recipient creature is stunned). Otherwise, the duplicate organ or limb withers and dies. Duplicate organs must be used within one week. All force-grown organs and limbs are sealed within a partially living, protective, translucent caul. The cypher can produce one of the following, chosen by the user at the time of the cypher’s use:
-01–04 Heart 36–45 Foot
-05–08 Lung 46–55 Full arm
-09–12 Brain 56–65 Full leg
-13–16 Blood 66–75 Nose
-17–20 Ribs 76–85 Mouth
-21–25 Eye 86–95 Stomach
-26–30 Ear 96–00 Intestines
-31–35 Hand
+  Roll: 
+   - 01–04 Heart 36–45 Foot
+   - 05–08 Lung 46–55 Full arm
+   - 09–12 Brain 56–65 Full leg
+   - 13–16 Blood 66–75 Nose
+   - 17–20 Ribs 76–85 Mouth
+   - 21–25 Eye 86–95 Stomach
+   - 26–30 Ear 96–00 Intestines
+   - 31–35 Hand
 
 SUMMONING ALARM NODULE: 
 	Level: 6
@@ -290,27 +290,22 @@ CHEMICAL FACTORY:
   Internal: Pill, ingestible liquid
   Usable: Injector
   Effect: After one hour, the sweat of the user produces 1d6 doses of a valuable liquid (these doses are not considered cyphers). They must be used within one week. Effects vary:
-01–04 Euphoric for 1d6 hours
-05–08 Hallucinogenic for 1d6 hours
-09–12 Stimulant for 1d6 hours
-13–16 Depressant for 1d6 hours
-17–20 Nutrient supplement
-21–25 Antivenom
-26–30 Cures disease
-31–35 See in the dark for one hour
-36–45 Restores a number of Might Pool 
-points equal to cypher level
-46–55 Restores a number of Speed Pool 
-points equal to cypher level
-56–65 Restores a number of Intellect Pool 
-points equal to cypher level
-66–75 Increases Might Edge by 1 for one 
-hour
-76–85 Increases Speed Edge by 1 for one 
-hour
-86–95 Increases Intellect Edge by 1 for one 
-hour
-96–00 Restores all Pools to full
+  Roll: 
+   - 01–04 Euphoric for 1d6 hours
+   - 05–08 Hallucinogenic for 1d6 hours
+   - 09–12 Stimulant for 1d6 hours
+   - 13–16 Depressant for 1d6 hours
+   - 17–20 Nutrient supplement
+   - 21–25 Antivenom
+   - 26–30 Cures disease
+   - 31–35 See in the dark for one hour
+   - 36–45 Restores a number of Might Pool points equal to cypher level
+   - 46–55 Restores a number of Speed Pool points equal to cypher level
+   - 56–65 Restores a number of Intellect Pool points equal to cypher level
+   - 66–75 Increases Might Edge by 1 for one hour
+   - 76–85 Increases Speed Edge by 1 for one hour
+   - 86–95 Increases Intellect Edge by 1 for one hour
+   - 96–00 Restores all Pools to full
 
 ADHESION CLAMPS: 
 	Level: 1d6
@@ -340,12 +335,13 @@ DETONATION:
   Wearable: Wristband projector (long range)
   Usable: Explosive device (thrown, short range) or handheld projector (long range)
   Effect: Explodes in an immediate radius, inflicting damage equal to the cypher level. Roll for the type of damage:
-01–10 Cell-disrupting (harms only flesh)
-11–30 Corrosive
-31–40 Electrical discharge
-41–50 Heat drain (cold)
-51–75 Fire
-76–00 Shrapnel 
+  Roll: 
+   - 01–10 Cell-disrupting (harms only flesh)
+   - 11–30 Corrosive
+   - 31–40 Electrical discharge
+   - 41–50 Heat drain (cold)
+   - 51–75 Fire
+   - 76–00 Shrapnel 
 
 DETONATION (DESICCATING): 
   Level: 1d6 + 2
@@ -398,12 +394,13 @@ DETONATION (SPAWN):
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Bursts in an immediate radius, blinding all within it for one minute and inflicting damage equal to the cypher level. The burst spawns 1d6 additional detonations; on the next round, each additional detonation flies to a random spot within short range and explodes in an immediate radius. Roll for the type of damage dealt by all detonations:
-01–10 Cell-disrupting (harms only flesh)
-11–30 Corrosive
-31–40 Electrical discharge
-41–50 Heat drain (cold)
-51–75 Fire
-76–00 Shrapnel
+  Roll: 
+   - 01–10 Cell-disrupting (harms only flesh)
+   - 11–30 Corrosive
+   - 31–40 Electrical discharge
+   - 41–50 Heat drain (cold)
+   - 51–75 Fire
+   - 76–00 Shrapnel
 
 DETONATION (WEB): 
   Level: 1d6 + 2
@@ -416,12 +413,13 @@ DETONATION (MASSIVE):
   Wearable: Wristband projector (very long range)
   Usable: Handheld projector (very long range)
   Effect: Explodes in a short-range radius, inflicting damage equal to the cypher level. Roll for the type of damage:
-01–10 Cell-disrupting (harms only flesh)
-11–30 Corrosive
-31–40 Electrical discharge
-41–50 Heat drain (cold)
-51–75 Fire
-76–00 Shrapnel
+  Roll: 
+   - 01–10 Cell-disrupting (harms only flesh)
+   - 11–30 Corrosive
+   - 31–40 Electrical discharge
+   - 41–50 Heat drain (cold)
+   - 51–75 Fire
+   - 76–00 Shrapnel
 
 DETONATION (MATTER DISRUPTION): 
   Level: 1d6 + 4
@@ -437,9 +435,7 @@ DETONATION (PRESSURE):
 
 DETONATION (SINGULARITY): 
   Level: 10
-  Usable: Explosive device or ceramic sphere 
-  (thrown, short range) or handheld 
-projector (long range)
+  Usable: Explosive device or ceramic sphere   (thrown, short range) or handheld projector (long range)
   Effect: Explodes and creates a momentary singularity that tears at the fabric of the universe. Inflicts 20 points of damage to all within short range, drawing them (or their remains) together to immediate range (if possible). Player characters in the radius move one step down the damage track if they fail a Might defense roll. 
 
 FORCE SCREEN PROJECTOR: 
@@ -452,7 +448,7 @@ FORCE SHIELD PROJECTOR:
 	Level: 1d6 + 3
   Internal: Subdermal injection
   Wearable: Belt, ring, bracelet
-Usable: Handheld device
+  Usable: Handheld device
   Effect: Creates a shimmering energy shield around the user for one hour, during which time they gain +3 Armor (+4 Armor if the cypher is level 5 or higher).
 
 FRICTION-REDUCING GEL: 
@@ -467,8 +463,7 @@ FRIGID WALL PROJECTOR:
 
 DISRUPTING NODULE: 
 	Level: 1d6
-  Usable: Crystal nodule affixed to a melee 
-  weapon
+  Usable: Crystal nodule affixed to a melee   weapon
   Effect: For the next 28 hours, each time the weapon the nodule is attached to strikes a solid creature or object, it generates a burst of nanites that directly attack organic cells. The affected target takes 1 additional point of damage (2 points if the cypher is level 4 or higher, 3 points if the cypher is level 6 or higher) and loses its next action.
 
 EAGLESEYE: 
@@ -497,9 +492,9 @@ FORCE CUBE PROJECTOR:
 FORCE NODULE: 
 	Level: 1d6
   Usable: Crystal nodule affixed to armor
-  Effect: For the next 28 hours, the armor the nodule is attached to is bolstered by a powerful force field, adding 2 to the Armor it provides (adding 
+  Effect: For the next 28 hours, the armor the nodule is attached to is bolstered by a powerful force field, adding 2 to the Armor it provides (adding 3 to the Armor if the cypher is level 5 or higher).
 
-3 to the Armor if the cypher is level 5 or higher).GRAVITY NULLIFIER: 
+GRAVITY NULLIFIER: 
 	Level: 1d6 + 3
   Internal: Subdermal injection
   Wearable: Belt, boots, ring, bracelet
@@ -521,28 +516,30 @@ HUNTER/SEEKER:
   Wearable: Arm- or shoulder-mounted launcher
   Usable: Complex device, handheld device
   Effect: With long-range movement, this intelligent missile tracks and attacks a specified target (target must be within sight when selected). If it misses, it continues to attack one additional time per cypher level until it hits. For example, a level 4 hunter/seeker will attack a maximum of five times. Different hunter/seekers have different effects:
-01–50 Inflicts 8 points of damage.
-51–80 Bears a poisoned needle that inflicts 3 points of damage plus poison.
-81–90 Explodes, inflicting 6 points of damage to all within immediate range.
-91–95 Shocks for 4 points of electricity damage, and stuns for one round per cypher level.
-96–00 Covers target in sticky goo that immediately hardens, holding them fast until they break out with a Might action (difficulty equal to the cypher level + 2). 
+  Roll: 
+   - 01–50 Inflicts 8 points of damage.
+   - 51–80 Bears a poisoned needle that inflicts 3 points of damage plus poison.
+   - 81–90 Explodes, inflicting 6 points of damage to all within immediate range.
+   - 91–95 Shocks for 4 points of electricity damage, and stuns for one round per cypher level.
+   - 96–00 Covers target in sticky goo that immediately hardens, holding them fast until they break out with a Might action (difficulty equal to the cypher level + 2). 
 
 GAS BOMB: 
 	Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Bursts in a poisonous cloud within an immediate distance. The cloud lingers for 1d6 rounds unless conditions dictate otherwise. Effects vary:
-01–10 Thick smoke: occludes sight while the cloud lasts.
-11–20 Choking gas: living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
-21–50 Poison gas: living creatures that breathe suffer damage equal to the cypher level.
-51–60 Corrosive gas: everything suffers damage equal to the cypher level.
-61–65 Hallucinogenic gas: living creatures that breathe lose their actions to hallucinations and visions for a number of rounds equal to the cypher level.
-66–70 Nerve gas: living creatures that breathe suffer Speed damage equal to the cypher level.
-71–80 Mind-numbing gas: living creatures that breathe suffer Intellect damageequal to the cypher level.
-81–83 Fear gas: living creatures that breathe and think flee in a random direction in fear (or are paralyzed with fear) for a number of rounds equal to the cypher level.
-84–86 Amnesia gas: living creatures that breathe and think permanently lose all memory of the last minute.
-87–96 Sleep gas: living creatures that breathe fall asleep for a number of rounds equal to the cypher level or until awoken by a violent action or an extremely loud noise.
-97–00 Rage gas: living creatures that breathe and think make a melee attack on the nearest creature and continue to do so for a number of rounds equal to the cypher level. 
+  Roll: 
+   - 01–10 Thick smoke: occludes sight while the cloud lasts.
+   - 11–20 Choking gas: living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
+   - 21–50 Poison gas: living creatures that breathe suffer damage equal to the cypher level.
+   - 51–60 Corrosive gas: everything suffers damage equal to the cypher level.
+   - 61–65 Hallucinogenic gas: living creatures that breathe lose their actions to hallucinations and visions for a number of rounds equal to the cypher level.
+   - 66–70 Nerve gas: living creatures that breathe suffer Speed damage equal to the cypher level.
+   - 71–80 Mind-numbing gas: living creatures that breathe suffer Intellect damageequal to the cypher level.
+   - 81–83 Fear gas: living creatures that breathe and think flee in a random direction in fear (or are paralyzed with fear) for a number of rounds equal to the cypher level.
+   - 84–86 Amnesia gas: living creatures that breathe and think permanently lose all memory of the last minute.
+   - 87–96 Sleep gas: living creatures that breathe fall asleep for a number of rounds equal to the cypher level or until awoken by a violent action or an extremely loud noise.
+   - 97–00 Rage gas: living creatures that breathe and think make a melee attack on the nearest creature and continue to do so for a number of rounds equal to the cypher level. 
 
 INSTANT SERVANT: 
 	Level: 1d6
@@ -571,12 +568,13 @@ IMAGE PROJECTOR:
   Wearable: Headband with device on forehead
   Usable: Handheld device with glass panel
   Effect: Projects one of the following immobile images in the area described for one hour. The image appears up to a close distance away (long distance if the cypher level is 4 or higher, very long distance if the cypher level is 6 or higher). Scenes include movement, sound, and smell.
-01–20 Terrifying creature of an unknown species, perhaps no longer alive in the world (10-foot [3 m] cube)
-21–40 Huge machine that obscures sight (30-foot [9 m] cube)
-41–50 Beautiful pastoral scene (50-foot [15 m] cube)
-51–60 Food that looks delicious but may not be familiar (10-foot [3 m] cube)
-61–80 Solid color that obscures sight (50-foot [15 m] cube)
-81–00 Incomprehensible scene that is disorienting and strange (20-foot [6 m] cube)
+  Roll: 
+   - 01–20 Terrifying creature of an unknown species, perhaps no longer alive in the world (10-foot [3 m] cube)
+   - 21–40 Huge machine that obscures sight (30-foot [9 m] cube)
+   - 41–50 Beautiful pastoral scene (50-foot [15 m] cube)
+   - 51–60 Food that looks delicious but may not be familiar (10-foot [3 m] cube)
+   - 61–80 Solid color that obscures sight (50-foot [15 m] cube)
+   - 81–00 Incomprehensible scene that is disorienting and strange (20-foot [6 m] cube)
 
 INFERNO WALL PROJECTOR: 
 	Level: 1d6 + 2
@@ -599,8 +597,7 @@ MACHINE CONTROL IMPLANT:
 
 MAGNETIC ATTACK DRILL: 
 	Level: 1d6 + 2
-  Usable: Small sphere with a thick screw 
-  protrusion
+  Usable: Small sphere with a thick screw   protrusion
   Effect: The user throws this cypher at a target within short range, and it drills into the target for one round, inflicting damage equal to the cypher level. If the target is made of metal or wearing metal (such as armor), the attack is eased.
 
 MAGNETIC MASTER: 
@@ -621,18 +618,19 @@ KNOWLEDGE ENHANCEMENT:
   Wearable: Adhesive patch that activates when slapped
   Usable: Injector
   Effect: For the next 28 hours, the character has training in a predetermined skill (or two skills if the cypher is level 5 or higher). Although the skill could be anything (including something specific to the operation of one device or something similar), common skills include:
-01–10 Melee attacks
-11–20 Ranged attacks
-21–40 Understanding numenera (sometimes specific to one device)
-41–50 Repairing (sometimes specific to one device)
-51–60 Crafting (usually specific to one thing)
-61–70 Persuasion
-71–75 Healing
-76–80 Speed defense
-81–85 Intellect defense
-86–90 Swimming
-91–95 Riding
-96–00 Sneaking 
+  Roll: 
+   - 01–10 Melee attacks
+   - 11–20 Ranged attacks
+   - 21–40 Understanding numenera (sometimes specific to one device)
+   - 41–50 Repairing (sometimes specific to one device)
+   - 51–60 Crafting (usually specific to one thing)
+   - 61–70 Persuasion
+   - 71–75 Healing
+   - 76–80 Speed defense
+   - 81–85 Intellect defense
+   - 86–90 Swimming
+   - 91–95 Riding
+   - 96–00 Sneaking 
  
 
 LIGHTNING WALL PROJECTOR: 
@@ -674,16 +672,17 @@ MENTAL SCRAMBLER:
 	Level: 1d6 + 2
   Usable: Complex metal and glass device
   Effect: Two rounds after being activated, the device creates an invisible field that fills an area within short range and lasts for one minute. The field scrambles the mental processes of all thinking creatures. The effect lasts as long as they remain in the field and for 1d6 rounds after, although an Intellect defense roll is allowed each round to act normally (both in the field and after leaving it). Each mental scrambler is keyed to a specific effect. Roll for effect:
-01–30 Victims cannot act.
-31–40 Victims cannot speak.
-41–50 Victims move slowly (immediate range) and clumsily.
-51–60 Victims cannot see or hear.
-61–70 Victims lose all sense of direction, depth, and proportion.
-71–80 Victims do not recognize anyone they know.
-81–88 Victims suffer partial amnesia.
-89–94 Victims suffer total amnesia.
-95–98 Victims lose all inhibitions, revealing secrets and performing surprising actions.
-99–00 Victims’ ethics are inverted.
+  Roll: 
+   - 01–30 Victims cannot act.
+   - 31–40 Victims cannot speak.
+   - 41–50 Victims move slowly (immediate range) and clumsily.
+   - 51–60 Victims cannot see or hear.
+   - 61–70 Victims lose all sense of direction, depth, and proportion.
+   - 71–80 Victims do not recognize anyone they know.
+   - 81–88 Victims suffer partial amnesia.
+   - 89–94 Victims suffer total amnesia.
+   - 95–98 Victims lose all inhibitions, revealing secrets and performing surprising actions.
+   - 99–00 Victims’ ethics are inverted.
 
 METAL DEATH: 
 	Level: 1d6 + 2
@@ -697,13 +696,14 @@ POISON (EXPLOSIVE):
   Wearable: Lipstick, false fingertip, ring with needle
   Usable: Injector
   Effect: Once this substance enters the bloodstream, it travels to the brain and reorganizes into an explosive that detonates when activated, inflicting 10 points of damage (ignoring Armor). Roll to determine the means of detonation:
-01–25 The detonator is activated (must be within long range).
-26–40 A specified amount of time passes.
-41–50 The victim takes a specific action.
-51–55 A specific note is sung or played on an instrument within short range.
-56–60 The victim smells a specific scent within immediate range.
-61–80 The victim comes within long range of the detonator.
-81–00 The victim is no longer within long range of the detonator. 
+  Roll: 
+   - 01–25 The detonator is activated (must be within long range).
+   - 26–40 A specified amount of time passes.
+   - 41–50 The victim takes a specific action.
+   - 51–55 A specific note is sung or played on an instrument within short range.
+   - 56–60 The victim smells a specific scent within immediate range.
+   - 61–80 The victim comes within long range of the detonator.
+   - 81–00 The victim is no longer within long range of the detonator. 
 
 POISON (MIND-CONTROLLING): 
   Level: 1d6 + 2
@@ -711,13 +711,14 @@ POISON (MIND-CONTROLLING):
   Wearable: Lipstick, false fingertip, ring with needle
   Usable: Injector
   Effect: The victim must carry out a specific action in response to a specific trigger.
-01–20 Lies down for one minute with eyes closed when told to do so.
-21–40 Flees in terror for one minute when threatened.
-41–60 Answers questions truthfully for one minute.
-61–75 Attacks close friend for one round when within immediate range.
-76–85 Obeys next verbal command given (if it is understood).
-86–95 For 28 hours, becomes sexually attracted to the next creature of its own species that it sees.
-96–00 For one minute, moves toward the next red object seen in lieu of all other actions, even ignoring self-preservation.
+  Roll: 
+   - 01–20 Lies down for one minute with eyes closed when told to do so.
+   - 21–40 Flees in terror for one minute when threatened.
+   - 41–60 Answers questions truthfully for one minute.
+   - 61–75 Attacks close friend for one round when within immediate range.
+   - 76–85 Obeys next verbal command given (if it is understood).
+   - 86–95 For 28 hours, becomes sexually attracted to the next creature of its own species that it sees.
+   - 96–00 For one minute, moves toward the next red object seen in lieu of all other actions, even ignoring self-preservation.
 
 PHASE CHANGER: 
 	Level: 1d6 + 1
@@ -727,23 +728,23 @@ PHASE CHANGER:
 
 PHASE DISRUPTOR: 
 	Level: 1d6 + 2
-  Usable: Complex device, plate that affixes to 
-  surface, elaborate spray atomizer
+  Usable: Complex device, plate that affixes to   surface, elaborate spray atomizer
   Effect: Puts a portion of a physical structure (like a wall or floor) out of phase for one hour. It affects an area equal to one 5-foot (1.5 m) cube per cypher level. While the area is out of phase, creatures and objects can pass freely through it as if it were not there, although one cannot see through it, and it blocks light.
 
 POISON (EMOTION): 
   	Level: 1d6 + 2
   Internal: Pill, ingestible or injectable liquid
   Wearable: Lipstick, false fingertip, ring with needle
-Usable: Injector
+  Usable: Injector
   Effect: The victim feels a specific emotion for one hour.
-01–20 Anger. Likely to attack anyone who disagrees with them. Very hard to interact with; all interaction tasks are hindered by two steps.
-21–40 Fear. Flees in terror for one minute when threatened.
-41–60 Lust. Cannot focus on any nonsexual activity.
-61–75 Sadness. All tasks are hindered.
-76–85 Complacency. Has no motivation. All tasks are hindered by two steps.
-86–95 Joy. Easy to interact with in a pleasant manner; all pleasant interaction tasks are eased.
-96–00 Love. Much easier to interact with; all interaction tasks are eased by two steps, but temporary attachment is likely.
+  Roll: 
+   - 01–20 Anger. Likely to attack anyone who disagrees with them. Very hard to interact with; all interaction tasks are hindered by two steps.
+   - 21–40 Fear. Flees in terror for one minute when threatened.
+   - 41–60 Lust. Cannot focus on any nonsexual activity.
+   - 61–75 Sadness. All tasks are hindered.
+   - 76–85 Complacency. Has no motivation. All tasks are hindered by two steps.
+   - 86–95 Joy. Easy to interact with in a pleasant manner; all pleasant interaction tasks are eased.
+   - 96–00 Love. Much easier to interact with; all interaction tasks are eased by two steps, but temporary attachment is likely.
 
 RAY EMITTER (PARALYSIS): 
   Level: 1d6 + 2
@@ -768,7 +769,7 @@ PSYCHIC COMMUNIQUE:
 	Level: 1d6 + 2
   Internal: Pill
   Wearable: Device that adheres to temple
-Usable: Metallic disk
+  Usable: Metallic disk
   Effect: Allows the user to project a one-time, one-way telepathic message of up to ten words per cypher level, with an unlimited range, to anyone they know.
 
 RAY EMITTER: 
@@ -777,12 +778,13 @@ RAY EMITTER:
   Wearable: Contact lens, glove, ring, wristband, headband, belt buckle, shoulder-mounted device
   Usable: Handheld device
   Effect: Allows the user to project a ray of destructive energy up to very long range that inflicts damage equal to the cypher’s level.
-01–50 Heat/concentrated light
-51–60 Cell-disrupting radiation
-61–80 Force
-81–87 Magnetic wave
-88–93 Molecular bond disruption
-94–00 Concentrated cold
+  Roll: 
+   - 01–50 Heat/concentrated light
+   - 51–60 Cell-disrupting radiation
+   - 61–80 Force
+   - 81–87 Magnetic wave
+   - 88–93 Molecular bond disruption
+   - 94–00 Concentrated cold
 
 RAY EMITTER (NUMBING): 
 	Level: 1d6 + 2
@@ -814,20 +816,21 @@ SKILL BOOST:
   Internal: Pill, ingestible liquid
   Usable: Injector
   Effect: Dramatically but temporarily alters the user’s mind and body so that one specific physical action they can perform is eased by three steps. Once activated, this boost can be used a number of times equal to the cypher’s level, but only within a 28-hour period. The boost takes effect each time the action is performed, so a level 3 cypher boosts the first three times the action is attempted. The action can be one of a number of possibilities:
-01–15 Melee attack
-16–30 Ranged attack
-31–40 Speed defense
-41–50 Might defense
-51–60 Intellect defense
-61–68 Jumping
-69–76 Climbing
-77–84 Running
-85–92 Swimming
-93–94 Sneaking
-95–96 Balancing
-97–98 Perceiving
-99 Carrying
-00 Escaping
+  Roll: 
+   - 01–15 Melee attack
+   - 16–30 Ranged attack
+   - 31–40 Speed defense
+   - 41–50 Might defense
+   - 51–60 Intellect defense
+   - 61–68 Jumping
+   - 69–76 Climbing
+   - 77–84 Running
+   - 85–92 Swimming
+   - 93–94 Sneaking
+   - 95–96 Balancing
+   - 97–98 Perceiving
+   - 99 Carrying
+   - 00 Escaping
 
 REJUVENATOR: 
 	Level: 1d6 + 2
@@ -835,9 +838,10 @@ REJUVENATOR:
   Wearable: Adhesive patch that activates when slapped
   Usable: Injector
   Effect: Substance restores a number of points equal to the cypher’s level to one random Pool. Roll 1d100:
-01–50 Might Pool
-51–75 Speed Pool
-76–00 Intellect Pool
+  Roll: 
+   - 01–50 Might Pool
+   - 51–75 Speed Pool
+   - 76–00 Intellect Pool
 
 REMOTE VIEWER: 
 	Level: 1d6
@@ -960,7 +964,7 @@ TELEPORTER (TRAVELER):
   Usable: Complex device, handheld device
   Effect: User teleports up to 100 × the cypher level in miles (160 x the cypher level in km) to a location they have previously visited. They arrive safely with their possessions but cannot take anything else with them.
 
-TEMPORAL VIEWER
+TEMPORAL VIEWER:
   Level: 1d6 + 4
   Wearable: Wristband
   Usable: Complex device, handheld device
@@ -985,8 +989,7 @@ TRACER:
 
 CARBONIC WIND CHIMES: 
 	Level: 1d6
-  Usable: Collection of small crystals strung 
-  together
+  Usable: Collection of small crystals strung   together
   Effect: The user removes one of the crystals and places it in a secure location. When the other crystals are held by the top string, they move and chime as if blown by wind, even when the air is still or when underwater. They always move in the direction of the crystal that was removed. This allows the user to navigate through unfamiliar or confusing terrain.
 
 CHARMPASTE: 
@@ -1072,8 +1075,7 @@ THICK AIR SNARE:
 
 ROOT SPIKE:
 	Level: 1d6 + 4
-  Usable: Wooden spike that seems to be 
-  dead, despite the roots sticking out of it
+  Usable: Wooden spike that seems to be   dead, despite the roots sticking out of it
   Effect: When the spike is thrown at an enemy within a short distance, the roots come alive, wrapping around the target and digging into the ground, immobilizing them for three rounds.
 
 SCORPION’S DESIRE:
@@ -1201,16 +1203,17 @@ HORDE HORN (ENERVATION):
   Level: 1d6 + 2 
   Usable: Device with hornlike speaker
   Effect: The cypher creates an audible effect a very long distance across centered on a location within 1 mile (1.5 km) that the user can see. Creatures in the area take 3 points of damage and their defense rolls are hindered for 28 hours. If used during a conflict between ranked communities or hordes, the affected force’s rank is reduced by 1 for the duration.FOLLOWER SEED TABLEd10 Follower Modifications or Special Qualities
-1 Chef Provides the PC with one quality meal before ten hours elapses
-2 Admirer Tells impressive stories about the PC and grants asset to any task to impress others
-3 Carpenter Grants asset to any commonplace crafting task involving wood and structures
-4 Mender Adds +1 to PC recovery rolls and grants asset to healing tasks
-5 Scholar Provides answers to moderately difficult questions (up to level 4)
-6 Tailor Provides the PC with one quality set of clothing before ten hours elapses
-7 Porter Carries one additional cypher for the PC (increasing cypher limit) for ten hours
-8 Mason Adds +1 Armor to an allied ranked community for ten hours
-9 Scout Provides crucial intel on enemy horde or community that increases allied community’s rank by +1 during next community action
-10 Creature Provides the benefit of one level 2 creature follower
+  Roll: 
+   - 1 Chef Provides the PC with one quality meal before ten hours elapses
+   - 2 Admirer Tells impressive stories about the PC and grants asset to any task to impress others
+   - 3 Carpenter Grants asset to any commonplace crafting task involving wood and structures
+   - 4 Mender Adds +1 to PC recovery rolls and grants asset to healing tasks
+   - 5 Scholar Provides answers to moderately difficult questions (up to level 4)
+   - 6 Tailor Provides the PC with one quality set of clothing before ten hours elapses
+   - 7 Porter Carries one additional cypher for the PC (increasing cypher limit) for ten hours
+   - 8 Mason Adds +1 Armor to an allied ranked community for ten hours
+   - 9 Scout Provides crucial intel on enemy horde or community that increases allied community’s rank by +1 during next community action
+   - 10 Creature Provides the benefit of one level 2 creature follower
 
 IRON TAMER:
 	Level: 1d6 + 4
@@ -1242,7 +1245,7 @@ INSTANT FLOOD:
   Usable: Boxy mechanism with dial
   Effect: When the cypher is activated, sterile water begins to pour out of the mechanism at a prodigious rate, enough to fill a low-lying area a long distance across to a depth of about a foot (30 cm) within a minute. If collected, the water is potable. The water continues to pour out of the cypher for a number of minutes equal to the cypher level. If the terrain isn’t conducive to receiving so much water, this could create a dangerous situation. Treat a flood surge as a ranked disaster that persists for about an hour. The flood’s rank is equal to one third the cypher level (minimum rank 1).CYPHERS
 
-NULL ORB:
+"NULL ORB":
 	Level: 1d6 + 1
   Usable: Metallic orb
   Effect: When activated, the null orb tumbles away in the direction the user throws it as if unaffected by gravity, moving at a rate of an immediate distance each round for about a minute. The orb’s surface becomes charged with entropic energy, and as it passes within 30 feet (6 m) of living creatures, damage equal to the cypher’s level is inflicted on them. The moving orb bounces off fixed surfaces, and thus might be set to bounce back and forth across a field of conflict for the duration of the effect. When a minute has passed, the orb tumbles to the ground, inert.If used during a conflict between ranked communities or hordes, the affected force suffers damage equal to one third the cypher’s level (minimum 1).
@@ -1254,8 +1257,7 @@ OTHERSPACE WEAPON NODULE:
 
 QUANTIUM BACKTRACKER:
 	Level: 1d6 + 2
-  Usable: Device filled with glittering points of 
-light with attached handle and control
+  Usable: Device filled with glittering points of light with attached handle and control
   Effect: The cypher moves the user one round back in time, allowing them to relive the previous round and even change what action they took.
 
 MATTER EVAPORATOR:
@@ -1352,13 +1354,13 @@ Disintegration Gel:
 	Level: 1d6 + 3
   Usable: Synth tube containing gel
   Effect: When applied to a specific substance, this tube produces a fist-sized amount of gel that vaporizes the material at a rate of about 1 inch (2.5 cm) of material per round. The gel works for two rounds per cypher level. It has no effect on other materials. Roll for the material affected:
-01–35 Metal
-36–39 A specific metal (GM’s choice)
-40–71 Stone
-72–81 Metal or stone
-82–98 Synth
-99–00 Organic matter (inflicts cypher level in 
-damage to a living creature)
+  Roll: 
+   - 01–35 Metal
+   - 36–39 A specific metal (GM’s choice)
+   - 40–71 Stone
+   - 72–81 Metal or stone
+   - 82–98 Synth
+   - 99–00 Organic matter (inflicts cypher level in damage to a living creature)
 
 Distance Activator :
 	Level: 1d6 + 1
@@ -1401,7 +1403,7 @@ Heat Sensor:
 	Level: 1d6
   Internal: Pill or injector
   Wearable: Goggles, spectacles, contact lenses
-Usable: Handheld device with a screen
+  Usable: Handheld device with a screen
   Effect: For one hour, the user can perceive objects and creatures based on the heat they emit. This may allow him to see otherwise invisible or hidden targets, or even certain objects inside other objects if their temperatures are vastly different.
 
 Helping Hand:
@@ -1454,12 +1456,13 @@ Message Detonation:
 	Level: 1d6
   Usable: A synth cylinder a foot (0.3 m) in length
   Effect: It takes an action to encode the capsule with a detailed description, signifying title, and/or name of the intended recipient. Once addressed, the cylinder fades from view. Within the next 100 hours, the cylinder appears to whomever it was addressed and explodes as a detonation in an immediate radius, inflicting damage equal to the cypher level. Roll for the type of damage:
-01–10 Cell-disrupting (harms only flesh) 
-11–30 Corrosive
-31–40 Electrical discharge
-41–50 Heat drain (cold)
-51–75 Fire 
-76–00 Shrapnel 
+  Roll: 
+   - 01–10 Cell-disrupting (harms only flesh) 
+   - 11–30 Corrosive
+   - 31–40 Electrical discharge
+   - 41–50 Heat drain (cold)
+   - 51–75 Fire 
+   - 76–00 Shrapnel 
 
 Mind Control Implant:
 	Level: 1d6 + 4
@@ -1478,10 +1481,11 @@ Mood Patch:
 	Level: 1d6 + 2
   Wearable: Adhesive patch that activates when slapped
   Effect: The patch transfers a substance that makes the wearer feel an emotion, enter a particular state of mind, or forget something unpleasant. Roll percentile:
-01–25 Moods ranging from tranquil to ecstatic for one hour
-26–50 Moods ranging from melancholy to suicidal for one hour
-51–75 Completely truthful (01–03 on d6) or pathological liar (04–06 on d6) for one hour
-76–00 Erases one memory chosen by wearer, permanent
+  Roll: 
+   - 01–25 Moods ranging from tranquil to ecstatic for one hour
+   - 26–50 Moods ranging from melancholy to suicidal for one hour
+   - 51–75 Completely truthful (01–03 on d6) or pathological liar (04–06 on d6) for one hour
+   - 76–00 Erases one memory chosen by wearer, permanent
 
 Motion Activator:
 	Level: 1d6 + 1
@@ -1711,21 +1715,22 @@ Biological Transpiercer:
 	Level: 1d6 + 2
   Usable: Biological needle or spike that is inserted under the skin
   Effect: Once inserted beneath the user’s skin, the transpiercer releases a slow-acting biological compound that begins to mix with the user’s blood, causing one of the following effects: 
-01–04 Allows the user to see in the dark for onehour
-05–08 Causes the user to go out of phase for one hour
-09–12 Increases Might Pool by 5 for one hour
-13–16 Increases Speed Pool by 5 for one hour
-17–20 Increases Intellect Pool by 5 for one hour
-21–25 Restores a number of Might Pool points equal to cypher level
-26–30 Restores a number of Speed Pool pointsequal to cypher level
-31–35 Restores a number of Intellect Pool points equal to cypher level
-36–45 Increases Might Edge by 1 for one hour
-46–55 Increases Speed Edge by 1 for one hour
-56–65 Increases Intellect Edge by 1 for one hour
-66–75 Creates a random beneficial mutation for one hour 
-76–85 Creates a random powerful mutation forone hour
-86–95 Creates a random distinctive mutation for one hour
-96–00 Creates a random cosmetic mutation forone hour
+  Roll: 
+   - 01–04 Allows the user to see in the dark for onehour
+   - 05–08 Causes the user to go out of phase for one hour
+   - 09–12 Increases Might Pool by 5 for one hour
+   - 13–16 Increases Speed Pool by 5 for one hour
+   - 17–20 Increases Intellect Pool by 5 for one hour
+   - 21–25 Restores a number of Might Pool points equal to cypher level
+   - 26–30 Restores a number of Speed Pool pointsequal to cypher level
+   - 31–35 Restores a number of Intellect Pool points equal to cypher level
+   - 36–45 Increases Might Edge by 1 for one hour
+   - 46–55 Increases Speed Edge by 1 for one hour
+   - 56–65 Increases Intellect Edge by 1 for one hour
+   - 66–75 Creates a random beneficial mutation for one hour 
+   - 76–85 Creates a random powerful mutation forone hour
+   - 86–95 Creates a random distinctive mutation for one hour
+   - 96–00 Creates a random cosmetic mutation forone hour
 
 Biometric Reference:
 	Level: 1
@@ -1739,11 +1744,12 @@ Biomorph:
   Internal: Pill, ingestible liquid
   Usable: Injector
   Effect: Causes the user to gain a mutation. Roll to determine the type of mutation:
-01–20 Harmful mutation
-21–40 Cosmetic mutation
-41–60 Beneficial mutation
-61–80 Distinctive mutation
-81–00 Powerful mutation
+  Roll: 
+   - 01–20 Harmful mutation
+   - 21–40 Cosmetic mutation
+   - 41–60 Beneficial mutation
+   - 61–80 Distinctive mutation
+   - 81–00 Powerful mutation
 
 Blood Boiler:
 	Level: 1d6 + 1
@@ -1755,9 +1761,10 @@ Blood Magnet:
   Wearable: Glove, wristband
   Usable: Syringe
   Effect: The user injects the biological magnet into his own blood or that of another living creature within close range. The hemoglobin of the injected creature gains strong ferromagnetic properties for one hour. Roll d100:
-01–50 Attracts metallic objects to thecreature (can move an object up tothe weight of the creature within longrange)
-51–75 Repels metallic objects from the creature (can move an object up to the weight of the creature within long range)
-76–00 Causes the creature’s bloodto become overly magnetized,decreasing the flow of oxygen tothe cells (does damage equal to thecypher level)
+  Roll: 
+   - 01–50 Attracts metallic objects to thecreature (can move an object up tothe weight of the creature within longrange)
+   - 51–75 Repels metallic objects from the creature (can move an object up to the weight of the creature within long range)
+   - 76–00 Causes the creature’s bloodto become overly magnetized,decreasing the flow of oxygen tothe cells (does damage equal to thecypher level)
 
 Bloom (Fireflower):
   Level: 1d6 + 4
@@ -1975,26 +1982,27 @@ Data Spike:
 	Level: 1d6
   Internal: Tiny spike
   Effect: A user activates the device by inserting it or having another character insert it into the base of his neck, angled upward so that it enters the brain stem. Installing the spike and removing it at a later time inflicts 1 point of damage that ignores Armor. A user can benefit from only one data spike at a time.Once the spike is installed, the user immediately connects to the datasphere and downloads information about a randomly determined skill into his mind. He becomes trained in that skill for a number of hours equal to the cypher level. If he is already trained in the skill, he instead becomes specialized.When a data spike is found, the GM can choose a skill or roll a d20 to determine the skill(s) randomly.
-1 Astronomy 
-2 Balancing
-3 Biology and botany
-4 Climbing and swimming
-5 Deceiving 
-6 Escaping and lockpicking
-7 Geography and geology
-8 Healing
-9 History
-10 Identifying
-11 Intimidation
-12 Leatherworking, metalworking, and woodworking
-13 Numenera
-14 Perception
-15 Persuasion
-16 Philosophy
-17 Pickpocketing
-18 Repairing
-19 Riding
-20 GM’s choice
+  Roll: 
+   - 1 Astronomy 
+   - 2 Balancing
+   - 3 Biology and botany
+   - 4 Climbing and swimming
+   - 5 Deceiving 
+   - 6 Escaping and lockpicking
+   - 7 Geography and geology
+   - 8 Healing
+   - 9 History
+   - 10 Identifying
+   - 11 Intimidation
+   - 12 Leatherworking, metalworking, and woodworking
+   - 13 Numenera
+   - 14 Perception
+   - 15 Persuasion
+   - 16 Philosophy
+   - 17 Pickpocketing
+   - 18 Repairing
+   - 19 Riding
+   - 20 GM’s choice
 
 Data Vault:
 	Level: 1d6 + 2
@@ -2021,22 +2029,23 @@ Demonsphere:
 	Level: 1d6 + 4
   Usable: A 6-inch (15 cm) orb of steel lattice with a reflective red sphere in the center
   Effect: This is a dangerous cypher to use, perhaps giving rise to its name. When activated, it creates a horrific sound, a combination of shrill shrieks and low rumbling (which also might account for its name). At the same time, red streaks of energy lance out at a number of intelligent targets within short range equal to the cypher level. If there are more targets than streaks of energy, the targets are determined randomly, meaning that the user could be a target.The streaks of energy are extradimensional conduits tying the targets to an ultraterrestrial intelligence with a level equal to the cypher level. The intelligence attempts to control the targets’ actions for one round per cypher level. (Eligible targets include machine intelligences or any living creature more substantial than an insect.) The ultraterrestrial intelligence has a motive and understanding all its own, but it is utterly alien. Thus, it can do almost anything, but if desired, roll d100 each round instead:Roll Target’s action
-01–10 Scream
-11–20 Make incomprehensible gestures
-21–40 Attack the nearest creature
-41–55 Attack the nearest object
-56–60 Attack the ground
-61–65 Activate the nearest numenera device
-66–75 Run off as fast as possible
-76–80 Begin speaking in an unknown language
-81–83 Speak in the Truth and ask strange,random questions
-84–85 Speak in the Truth and demand obedience
-86–88 Examine a random object
-89–90 Try to eat a random creature or object
-91–93 Access unknown energies and teleportaway
-94–95 Access unknown energies and create a force field around itself
-96–97 Access unknown energies and use themto attack all nearby
-98–00 Access unknown energies and open a transdimensional portal
+  Roll: 
+   - 01–10 Scream
+   - 11–20 Make incomprehensible gestures
+   - 21–40 Attack the nearest creature
+   - 41–55 Attack the nearest object
+   - 56–60 Attack the ground
+   - 61–65 Activate the nearest numenera device
+   - 66–75 Run off as fast as possible
+   - 76–80 Begin speaking in an unknown language
+   - 81–83 Speak in the Truth and ask strange,random questions
+   - 84–85 Speak in the Truth and demand obedience
+   - 86–88 Examine a random object
+   - 89–90 Try to eat a random creature or object
+   - 91–93 Access unknown energies and teleportaway
+   - 94–95 Access unknown energies and create a force field around itself
+   - 96–97 Access unknown energies and use themto attack all nearby
+   - 98–00 Access unknown energies and open a transdimensional portal
 
 Deployer (Atmospheric):
   Level: 1d6
@@ -2176,12 +2185,13 @@ Disintegration Gel:
 	Level: 1d6 + 3
   Usable: Synth tube containing gel
   Effect: This tube produces a fist-sized amount of gel. When applied to a specific material, the gel vaporizes it at a rate of about 1 inch (3 cm) per round. The gel works for two rounds per cypher level. It has no effect on other materials. Roll d100 for the material affected:
-01–35 Metal
-36–39 A specific metal (GM’s choice)
-40–71 Stone
-72–81 Metal or stone
-82–98 Synth
-99–00 Organic matter (inflicts damage equal to the cypher level on a living creature)
+  Roll: 
+   - 01–35 Metal
+   - 36–39 A specific metal (GM’s choice)
+   - 40–71 Stone
+   - 72–81 Metal or stone
+   - 82–98 Synth
+   - 99–00 Organic matter (inflicts damage equal to the cypher level on a living creature)
 
 Displacement Cloak:
 	Level: 1d6 + 4
@@ -2223,8 +2233,7 @@ Dreamachine:
 
 Dry Water:
 	Level: 1d6
-  Usable: Tiny marble made from ceramic, 
-stone, or glass
+  Usable: Tiny marble made from ceramic, stone, or glass
   Effect: The device activates when exposed to water. It instantly expands into water with a volume of 1 gallon (4 L) per cypher level.
 
 Duplicator:
@@ -2244,8 +2253,7 @@ Ear Worm:
 
 Echo Crystal:
 	Level: 1d6 + 4
-  Usable: Crystal nodule affixed to a melee 
-weapon
+  Usable: Crystal nodule affixed to a melee weapon
   Effect: When the device is activated, the crystal projects a second weapon in the air formed from solidified light. It follows the weapon it copies, floating through the air and mimicking the original’s movements. Whenever the user takes an action to attack with the original weapon, he makes an additional attack with the copy as part of the same action. The second weapon inflicts the same damage as the original. After 28 hours, the copy dissipates into a cloud of sparkling motes.
 
 Ecstasy Glass:
@@ -2268,12 +2276,13 @@ Electronic Nose:
 	Level: 1d6 + 2
   Wearable: Small nodule that affixes to nose, synth nose that attaches over a real one, clip-on nose ring
   Effect: This device enhances the wearer’s sense of smell, allowing him to detect odor signatures of various biological, biochemical, or chemical compounds for one hour. Those with knowledge of the numenera can attempt to “set” the nose to a desired substance just prior to using it (difficulty equal to the cypher level), or the GM can roll ahead of time: 
-01–10 Explosives or detonations
-11–30 Disease
-31–40 Blood
-41–50 Poison
-51–75 Chemical traps
-76–00 User’s choice
+  Roll: 
+   - 01–10 Explosives or detonations
+   - 11–30 Disease
+   - 31–40 Blood
+   - 41–50 Poison
+   - 51–75 Chemical traps
+   - 76–00 User’s choice
 
 Emoacoustic Weapon:
 	Level: 1d6 + 2
@@ -2295,15 +2304,16 @@ Energy Token:
 	Level: 1d10
   Usable: Glowing ball of energy
   Effect: This cypher functions when it is touched by a living creature (perhaps even before it can be identified), although it can be manipulated by tools such as tongs and safely stored if well away from a creature. Normal gloves or a leather bag is not enough to keep it from activating. The ball bathes a living creature touching it with energy of a type and effect depending on its color (roll a d20):
-1–2 Blue: Reorganizes brain connections;+1 to Intellect Edge for one hour.
-3–4 Red: Restructures skeletal structure; +1 to Might Edge for one hour.
-5–6 Green: Alters musculature; +1 to SpeedEdge for one hour.
-7–8 Yellow: Alters respiratory system; grants immunity to dangerous gases. User can also breathe a puff of poisonous vapor at a victim in immediate range that inflicts 2 points of Speed damage (ignores Armor) for a number of rounds equal to cypher level. The effect lasts for one hour.
-9–10 Orange: Changes physical density; +1to Armor, and user deals 2 additionalpoints of damage with melee attacks.
-11–12 Violet: Tunes dimensional phase of entire body; user can move through solid matter at a rate of 6 inches (15 cm) per round for ten minutes.
-13–14 Brown: Alters cellular relationship withgravity; user can move through the airas easily as on a solid surface for tenminutes.
-15–18 Black: Infuses cells with disruptive energy; inflicts 5 points of damage to user, and then user’s touch inflicts 8 points of damage to others for ten minutes.
-19–20 White: Alters ocular system; user gainsx-ray vision and can see through up to10 inches (25 cm) of matter for oneminute.
+  Roll: 
+   - 1–2 Blue: Reorganizes brain connections;+1 to Intellect Edge for one hour.
+   - 3–4 Red: Restructures skeletal structure; +1 to Might Edge for one hour.
+   - 5–6 Green: Alters musculature; +1 to SpeedEdge for one hour.
+   - 7–8 Yellow: Alters respiratory system; grants immunity to dangerous gases. User can also breathe a puff of poisonous vapor at a victim in immediate range that inflicts 2 points of Speed damage (ignores Armor) for a number of rounds equal to cypher level. The effect lasts for one hour.
+   - 9–10 Orange: Changes physical density; +1to Armor, and user deals 2 additionalpoints of damage with melee attacks.
+   - 11–12 Violet: Tunes dimensional phase of entire body; user can move through solid matter at a rate of 6 inches (15 cm) per round for ten minutes.
+   - 13–14 Brown: Alters cellular relationship withgravity; user can move through the airas easily as on a solid surface for tenminutes.
+   - 15–18 Black: Infuses cells with disruptive energy; inflicts 5 points of damage to user, and then user’s touch inflicts 8 points of damage to others for ten minutes.
+   - 19–20 White: Alters ocular system; user gainsx-ray vision and can see through up to10 inches (25 cm) of matter for oneminute.
 
 Eraser:
 	Level: 1d6 + 4
@@ -2325,9 +2335,10 @@ Exalted Vapor:
   Internal: Electronic smoking implement
   Wearable: Smoking mask
   Effect: Allows the user to inhale a potent chemical that restores a number of points equal to the cypher level to one random Pool. Roll d100:
-01–50 Might Pool
-51–75 Speed Pool
-76–00 Intellect Pool
+  Roll: 
+   - 01–50 Might Pool
+   - 51–75 Speed Pool
+   - 76–00 Intellect Pool
 
 Explosive Nodule:
 	Level: 1d6 + 2
@@ -2442,12 +2453,13 @@ Foam Sprayer:
 	Level: 1d6 + 1
   Usable: Canister
   Effect: This device sprays foam on a target within immediate range. There is enough foam to cover up to three humans standing next to each other (or one larger target). Different kinds of foam have different effects. Roll a d6 to determine the foam in a given canister:
-1 Hardens: All movement is halved, and thedifficulty of all physical actions is increasedby two steps for ten minutes.
-2 Caustic: The foam burns like acid, inflicting 4 points of damage on the first round and 2 points of damage on the second round before becoming harmless.
-3 Caustic and hardens: All movement ishalved, the difficulty of all physical actionsis increased by two steps for ten minutes,and the target suffers 4 points of damage.
-4 Dampens energy: If sprayed upon any numenera item (or if the target is in possession of numenera items), the item’s effective level is lowered by 4 for ten minutes. If this effect reduces the level of the item to 0, the item will not function for that time. Nonpowered numenera items, like pills, are not affected.
-5 Dissolves metal: The level of a metalitem covered in the foam is lowered by4 permanently. If this effect reduces thelevel of the metal to 0, the item isdestroyed. 
-6 Dissolves metal and dampens energy: The level of a metal item covered in the foam is lowered by 4 permanently. If this effect reduces the level of the metal to 0, the item is destroyed. Numenera items coated by the foam also have their level effectively lowered by 4 for ten minutes. If this effect reduces the level of the item to 0 or less, the item will not function for that time. Nonpowered numenera items, like pills, are not dampened.
+  Roll: 
+   - 1 Hardens: All movement is halved, and thedifficulty of all physical actions is increasedby two steps for ten minutes.
+   - 2 Caustic: The foam burns like acid, inflicting 4 points of damage on the first round and 2 points of damage on the second round before becoming harmless.
+   - 3 Caustic and hardens: All movement ishalved, the difficulty of all physical actionsis increased by two steps for ten minutes,and the target suffers 4 points of damage.
+   - 4 Dampens energy: If sprayed upon any numenera item (or if the target is in possession of numenera items), the item’s effective level is lowered by 4 for ten minutes. If this effect reduces the level of the item to 0, the item will not function for that time. Nonpowered numenera items, like pills, are not affected.
+   - 5 Dissolves metal: The level of a metalitem covered in the foam is lowered by4 permanently. If this effect reduces thelevel of the metal to 0, the item isdestroyed. 
+   - 6 Dissolves metal and dampens energy: The level of a metal item covered in the foam is lowered by 4 permanently. If this effect reduces the level of the metal to 0, the item is destroyed. Numenera items coated by the foam also have their level effectively lowered by 4 for ten minutes. If this effect reduces the level of the item to 0 or less, the item will not function for that time. Nonpowered numenera items, like pills, are not dampened.
 
 Fool Killer:
 	Level: 1d6 + 3
@@ -2457,22 +2469,16 @@ Fool Killer:
 Freeze Inducer:
 	Level: 1d6 + 3
   Usable: Complex device, handheld device
-  Effect: This item is cold to the touch and may 
-freeze to solid surfaces when not in use. The 
-item is activated by being pressed against 
-an object or creature weighing no more than 
-200 pounds (91 kg). Any liquid contained 
-in the object freezes; a living creature takes 
-a number of points of damage equal to the 
-cypher level.
+  Effect: This item is cold to the touch and may freeze to solid surfaces when not in use. The item is activated by being pressed against an object or creature weighing no more than 200 pounds (91 kg). Any liquid contained in the object freezes; a living creature takes a number of points of damage equal to the cypher level.
 
 Fungal Garden:
 	Level: 1d6 + 2
   Usable: Vial filled with multicolored dust
   Effect: When a user pours out the contents of the vial, the dust sinks into any earthen or sandy surface it touches. One hour later, a field of mushrooms grows from the ground in a long radius centered on the spot where the dust fell. The mushrooms grow until they reach about 10 feet (3 m) tall on average. Each mushroom has a wide, colorful cap that spreads out in a 6-foot (2 m) radius.Touching a mushroom causes spores to fall from the cap onto anything below. Each time this happens, roll a d6 to see what the spores do to all creatures they touch.Roll a d6 for effect:
-1–2 Bliss. The target experiences profoundfeelings of joy and happiness for one day.
-3–4 Sadness. The target experiences profound feelings of sadness for one day.
-5–6 Hallucinations. The target experiencesvisual and auditory hallucinations forone day. The hallucinations increase thedifficulty of any task that involves seeingor hearing by one step.
+  Roll: 
+   - 1–2 Bliss. The target experiences profoundfeelings of joy and happiness for one day.
+   - 3–4 Sadness. The target experiences profound feelings of sadness for one day.
+   - 5–6 Hallucinations. The target experiencesvisual and auditory hallucinations forone day. The hallucinations increase thedifficulty of any task that involves seeingor hearing by one step.
 
 Gel Suit:
 	Level: 1d6 + 2
@@ -2698,22 +2704,16 @@ Indestructible Oil:
 Inertia Shield:
 	Level: 1d6 + 4
   Wearable: Belt, body harness 
-  Effect: An energy field surrounds the user 
-for ten minutes. No physical object can 
-penetrate the shield if that object is moving 
-with any force that could be constituted as an 
-attack. The field would deflect a strike from a 
-broadsword or a bolt fired from a crossbow. 
-Attacks using physical objects inflict no 
-damage on the user until the effect ends.
+  Effect: An energy field surrounds the user for ten minutes. No physical object can penetrate the shield if that object is moving with any force that could be constituted as an attack. The field would deflect a strike from a broadsword or a bolt fired from a crossbow. Attacks using physical objects inflict no damage on the user until the effect ends.
 
 Inflatable Companion:
 	Level: 1d6 + 2
   Usable: Self-inflating blow-up companion
   Effect: Small device self-inflates into a companion that is roughly 4 feet (1 m) tall. It is a creature of a level equal to the cypher level and can understand verbal commands of the character who activates it. Once the companion has been activated, commanding it is not an action. It can make attacks or perform actions as ordered to the best of its abilities, but it cannot speak.The companion has short-range movement but never goes farther than long range away from the character who activated it. The companion is not artificially intelligent or capable of initiating action other than performing its purpose, as designated by its form. The GM should roll d100 ahead of time to decide what form the companion takes. 
-01–50 Attack creature: Takes the form ofan aggressive creature in the NinthWorld that does damage equal to thecypher level. The creature lasts for tenminutes. 
-51–75 Protective automaton: Takes the form of a sentient defense system (such as a floating shield) that absorbs 1 point of damage that would normally be taken by the user each round. The system lasts for one hour.
-76–00 Distracting humanoid: Takes the formof a humanoid figure that attempts tocreate a distraction. This causes thefoe to become dazed, increasing thedifficulty of all its tasks by one step.The humanoid lasts for three rounds. 
+  Roll: 
+   - 01–50 Attack creature: Takes the form ofan aggressive creature in the NinthWorld that does damage equal to thecypher level. The creature lasts for tenminutes. 
+   - 51–75 Protective automaton: Takes the form of a sentient defense system (such as a floating shield) that absorbs 1 point of damage that would normally be taken by the user each round. The system lasts for one hour.
+   - 76–00 Distracting humanoid: Takes the formof a humanoid figure that attempts tocreate a distraction. This causes thefoe to become dazed, increasing thedifficulty of all its tasks by one step.The humanoid lasts for three rounds. 
 
 Inflatable Suit:
 	Level: 1d6
@@ -2859,54 +2859,60 @@ Lutin (Bioengineered Insects):
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud of small engineered insects within short distance. The cloud lingers for 1d6 rounds unless conditions indicate otherwise. Roll to determine the effect:
-01–50 Eaten alive. Living creatures withexposed skin suffer damage equal tothe cypher level from bites and stings.
-51–75 Choking. Living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
-76–00 Blindness. In the second round afterthe explosion, living sighted creaturesare blinded by tiny webs spun acrosstheir eyes for a number of roundsequal to the cypher level.
+  Roll: 
+   - 01–50 Eaten alive. Living creatures withexposed skin suffer damage equal tothe cypher level from bites and stings.
+   - 51–75 Choking. Living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
+   - 76–00 Blindness. In the second round afterthe explosion, living sighted creaturesare blinded by tiny webs spun acrosstheir eyes for a number of roundsequal to the cypher level.
 
 Lutin (Combos):
   Level: 1d6 + 1
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud within short distance. The cloud lingers for 1d6 rounds unless conditions indicate otherwise. Roll to determine the effect:
-01–50 Spores and seeds. Explodes in ashower of green and yellow sporesand seeds. Roll on the (EngineeredSpores) table for effect. The seedsimplant themselves in living creaturesafter two rounds, causing additionaldamage equal to the cypher level. 
-51–75 Shrapnel and gel. Roll on the Lutin (Metal Shrapnel) table for shrapnel effect. The gel causes the shrapnel to adhere to living creatures. As a result, the effect lasts for a number of additional rounds equal to the cypher level.
-76–00 Moths and light drops. The mothshatch from stasis cocoons at themoment of the explosion. Theirreflective wings enhance the lightdrops, focusing the light into raybeams that do 1d6 + 4 points ofdamage to all creatures within longrange.
+  Roll: 
+   - 01–50 Spores and seeds. Explodes in ashower of green and yellow sporesand seeds. Roll on the (EngineeredSpores) table for effect. The seedsimplant themselves in living creaturesafter two rounds, causing additionaldamage equal to the cypher level. 
+   - 51–75 Shrapnel and gel. Roll on the Lutin (Metal Shrapnel) table for shrapnel effect. The gel causes the shrapnel to adhere to living creatures. As a result, the effect lasts for a number of additional rounds equal to the cypher level.
+   - 76–00 Moths and light drops. The mothshatch from stasis cocoons at themoment of the explosion. Theirreflective wings enhance the lightdrops, focusing the light into raybeams that do 1d6 + 4 points ofdamage to all creatures within longrange.
 
 Lutin (Engineered Spores):
   Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud of bioengineered spores within short distance. The cloud lingers for 1d6 rounds unless conditions indicate otherwise. Roll to determine the effect:
-01–50 Amnesia. Living creatures that breatheand think permanently lose allmemory of the last minute.
-51–75 Choking. Living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
-76–00 Hallucinogenic. Living creaturesthat breathe lose their actions tohallucinations and visions for anumber of rounds equal to the cypherlevel.
+  Roll: 
+   - 01–50 Amnesia. Living creatures that breatheand think permanently lose allmemory of the last minute.
+   - 51–75 Choking. Living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher level.
+   - 76–00 Hallucinogenic. Living creaturesthat breathe lose their actions tohallucinations and visions for anumber of rounds equal to the cypherlevel.
 
 Lutin (Light Drops):
   Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud of contained light drops within short distance. The cloud lingers for 1d6 rounds unless conditions indicate otherwise. Roll to determine the effect:
-01–50 Blindness. Living sighted creaturesare blinded by the refractions of lightfor a number of rounds equal to thecypher level.
-51–75 Sleep. Living sighted creatures are soothed by the warm glow of the light and fall asleep for a number of rounds equal to the cypher level or until woken by a violent action or an extremely loud noise.
-76–00 Dazzle. Living sighted creatures aredistracted by the dazzling array oflights and colors, and they becomedazed for a number of rounds equalto the cypher level. During this time,the difficulty of all tasks they performis modified by one step to theirdetriment.
+  Roll: 
+   - 01–50 Blindness. Living sighted creaturesare blinded by the refractions of lightfor a number of rounds equal to thecypher level.
+   - 51–75 Sleep. Living sighted creatures are soothed by the warm glow of the light and fall asleep for a number of rounds equal to the cypher level or until woken by a violent action or an extremely loud noise.
+   - 76–00 Dazzle. Living sighted creatures aredistracted by the dazzling array oflights and colors, and they becomedazed for a number of rounds equalto the cypher level. During this time,the difficulty of all tasks they performis modified by one step to theirdetriment.
 
 Lutin (Metal Shrapnel):
   Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud of metal shrapnel within short distance. Roll to determine the effect:
-01–50 Sharp. Living creatures with exposedskin suffer damage equal to thecypher level from the sharp edges ofthe shrapnel.
-51–75 Corrosive. Living creatures with exposed skin suffer damage equal to the cypher level from corrosive-laden shrapnel.
-76–00 Electrical. The shrapnel containssmall amounts of electric charge.Living creatures with exposed skinsuffer electrical damage equal to thecypher level.
+  Roll: 
+   - 01–50 Sharp. Living creatures with exposedskin suffer damage equal to thecypher level from the sharp edges ofthe shrapnel.
+   - 51–75 Corrosive. Living creatures with exposed skin suffer damage equal to the cypher level from corrosive-laden shrapnel.
+   - 76–00 Electrical. The shrapnel containssmall amounts of electric charge.Living creatures with exposed skinsuffer electrical damage equal to thecypher level.
 
 Lutin (Nanites):
   Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range). Can also be thrown against the ground or other hard object in short range. 
   Effect: Bursts in a cloud of nanites within short distance. The cloud lingers for 1d6 rounds unless conditions indicate otherwise. Roll to determine the effect:
-01–50 Absorb. Nanites absorb all physicaldamage dealt by creatures within theexplosive range for one round. Thishas no effect on Intellect damage.
-51–75 Power up. Nanites enhance all numenera devices within range, adding 1d6 to their damage (or level) if used in the next two rounds.
-76–00 Brain buster. Nanites do Intellectdamage equal to the cypher levelto all thinking creatures in range,ignoring Armor.
+  Roll: 
+   - 01–50 Absorb. Nanites absorb all physicaldamage dealt by creatures within theexplosive range for one round. Thishas no effect on Intellect damage.
+   - 51–75 Power up. Nanites enhance all numenera devices within range, adding 1d6 to their damage (or level) if used in the next two rounds.
+   - 76–00 Brain buster. Nanites do Intellectdamage equal to the cypher levelto all thinking creatures in range,ignoring Armor.
 
 Magnetic Boots:
 	Level: 1d6
@@ -2984,12 +2990,13 @@ Message Detonation:
 	Level: 1d6
   Usable: Synth cylinder about 1 foot (0.3 m) in length
   Effect: It takes an action to encode the cylinder with a detailed description of the intended recipient, signifying his title and/or name. Then the cylinder fades from view. Within the next 100 hours, it appears to the recipient and explodes as a detonation in an immediate radius, inflicting damage equal to the cypher level. Roll d100 for the type of damage:
-01–10 Cell-disrupting (harms only flesh)
-11–30 Corrosive
-31–40 Electrical discharge
-41–50 Heat drain (cold)
-51–75 Fire
-76–00 Shrapnel
+  Roll: 
+   - 01–10 Cell-disrupting (harms only flesh)
+   - 11–30 Corrosive
+   - 31–40 Electrical discharge
+   - 41–50 Heat drain (cold)
+   - 51–75 Fire
+   - 76–00 Shrapnel
 
 Metal Patch:
 	Level: 1d6
@@ -3001,12 +3008,13 @@ Metamagnetizer:
   Usable: Handheld device
   Wearable: Glove, wristband
   Effect: The device creates a sudden increase in the magnetic field of a random nonliving substance that isn’t usually magnetized, causing it to become drawn toward the cypher in one round. The device exerts a strong pull (holding or moving up to 10 pounds [5 kg]) within short range and a weaker pull (holding or moving up to 5 pounds [2 kg]) within long range. Roll d100 for the substance that it attracts: 
-01–10 Synth
-11–30 Stronglass
-31–40 Wood
-41–50 Stone
-51–75 Fabric
-76–00 Leather
+  Roll: 
+   - 01–10 Synth
+   - 11–30 Stronglass
+   - 31–40 Wood
+   - 41–50 Stone
+   - 51–75 Fabric
+   - 76–00 Leather
 
 Mind Control Implant:
 	Level: 1d6 + 4
@@ -3072,10 +3080,11 @@ Mood Patch:
 	Level: 1d6 + 2
   Wearable: Adhesive patch that activates when slapped 
   Effect: Once activated, the patch transfers a substance that makes the wearer feel an emotion, enter a particular state of mind, or forget something unpleasant. Roll d100: 
-01–25 Moods ranging from tranquil toecstatic for one hour
-26–50 Moods ranging from melancholy to suicidal for one hour
-51–75 Completely truthful (1–3 on d6) orpathological liar (4–6 on d6) for onehour
-76–00 Permanently erases one memory chosen by the wearer
+  Roll: 
+   - 01–25 Moods ranging from tranquil toecstatic for one hour
+   - 26–50 Moods ranging from melancholy to suicidal for one hour
+   - 51–75 Completely truthful (1–3 on d6) orpathological liar (4–6 on d6) for onehour
+   - 76–00 Permanently erases one memory chosen by the wearer
 
 Motion Activator:
 	Level: 1d6 + 1
@@ -3091,45 +3100,46 @@ Mystery Box:
 	Level: 10
   Usable: Mechanical object fitted with red button
   Effect: The device disappears when activated, and the GM secretly rolls 2d20 to see what happens. 
-2 Vanish. A singularity appears in the spaceleft by the cypher and drags everythingwithin immediate range into anotherreality or dimension. 
-3 Storm. A violent storm gathers in the sky over the area where the cypher was used and rages for one week before dissipating.
-4 Glow. Everything within immediate rangeemits faint light for one hour.
-5 Starfall. A meteorite falls from the sky and strikes a spot within 10 miles (16 km), destroying everything within 1 mile (2 km) of where it lands.
-6 Weird Death. Roll 2d6 to determine anage. The first roll is the first digit of theage, and the second roll is the seconddigit. Every living thing of that age within1 mile (2 km) immediately dies.
-7 Death Proof. No living thing within 1 mile (2 km) can die for the next 28 hours.
-8 Petrifaction. All plant matter within 1 mile(2 km) turns to stone.
-9 Drought. All water within 1 mile (2 km) is instantly destroyed.
-10 Rust. All ferrous objects within 1 mile (2km) turn to rust.
-11 Warping Energy. All characters within long range gain a harmful mutation or a beneficial mutation (50% chance of either).
-12 Temporal Distortion. Every living thingwithin short range is flung 1d20 monthsinto the future.
-13 Revision. One NPC ceases to exist.
-14 Transmute Gender. The user’s genderchanges or is removed altogether (50%chance of either).
-15 Weakness. The user’s Might Pool is permanently reduced by 1.
-16 Rigidity. The user’s Speed Pool ispermanently reduced by 1.
-17 Forgetfulness. The user’s Intellect Pool is permanently reduced by 1.
-18 Blindness. Each sighted creature withinshort range cannot see for 28 hours.
-19 Horrible Summons. A level 10 creature from another dimension appears and attacks.
-20 Radiation. A burst of radiation spreadsout from the spot where the devicedisappeared and inflicts 6 points ofambient damage to all creatures withinshort range. For any creature thattakes this damage, the difficulty of all tasksis increased by one step for 28 hours.
-21 Wretched Mutants. Each creature within short range gains a harmful mutation.
-22 Antigravity. Gravity ceases to functioneverywhere within long range. Anythingthat is not rooted to the ground fliesupward a short distance per round forthree rounds. After this time, gravityis restored, and everything that went upcomes back down, probably taking fallingdamage.
-23 Dreadful Summons. Three level 3 creatures from another dimension appear and attack.
-24 Deafness. Each creature that can hear andis within a short distance cannot hear for28 hours.
-25 Catatonic. The user enters a catatonic state that persists for 1d20 hours.
-26 Mutation. The user gains two harmfulmutations.
-27 Befuddled. For the user, the difficulty of all tasks is increased by three steps for one hour.
-28 Unexpected Development. The user gainstwo cosmetic mutations.
-29 Mind Transfer. The user swaps minds with the nearest character. The players swap characters.
-30 Psychic Connection. All characters withinimmediate range can communicatetelepathically regardless of distance forthe next 1d20 days.
-31 Foliage. Plants sprout from the ground and spread out to a distance of 1 mile (2 km).
-32 Awakening of the Flesh. The user gains abeneficial mutation.
-33 Strength. The user’s Might Pool is permanently increased by 1.
-34 Quickness. The user’s Speed Pool ispermanently increased by 1.
-35 Brilliance. The user’s Intellect Pool is permanently increased by 1.
-36 Fold Space. The user and everyone withinshort range teleport to a destination ofthe user’s choice anywhere in the world.
-37 Cypher Spawn. 1d6 randomly determined cyphers appear on the ground in a pile. 
-38 Artifact. A randomly determined artifactappears on the ground.
-39 Vitality Surge. All characters within immediate range increase their stat Pools by 1 for 28 hours.
-40 Cosmic Awareness. For the user, the difficultyof all tasks is reduced by three steps for onehour.
+  Roll: 
+   - 2 Vanish. A singularity appears in the spaceleft by the cypher and drags everythingwithin immediate range into anotherreality or dimension. 
+   - 3 Storm. A violent storm gathers in the sky over the area where the cypher was used and rages for one week before dissipating.
+   - 4 Glow. Everything within immediate rangeemits faint light for one hour.
+   - 5 Starfall. A meteorite falls from the sky and strikes a spot within 10 miles (16 km), destroying everything within 1 mile (2 km) of where it lands.
+   - 6 Weird Death. Roll 2d6 to determine anage. The first roll is the first digit of theage, and the second roll is the seconddigit. Every living thing of that age within1 mile (2 km) immediately dies.
+   - 7 Death Proof. No living thing within 1 mile (2 km) can die for the next 28 hours.
+   - 8 Petrifaction. All plant matter within 1 mile(2 km) turns to stone.
+   - 9 Drought. All water within 1 mile (2 km) is instantly destroyed.
+   - 10 Rust. All ferrous objects within 1 mile (2km) turn to rust.
+   - 11 Warping Energy. All characters within long range gain a harmful mutation or a beneficial mutation (50% chance of either).
+   - 12 Temporal Distortion. Every living thingwithin short range is flung 1d20 monthsinto the future.
+   - 13 Revision. One NPC ceases to exist.
+   - 14 Transmute Gender. The user’s genderchanges or is removed altogether (50%chance of either).
+   - 15 Weakness. The user’s Might Pool is permanently reduced by 1.
+   - 16 Rigidity. The user’s Speed Pool ispermanently reduced by 1.
+   - 17 Forgetfulness. The user’s Intellect Pool is permanently reduced by 1.
+   - 18 Blindness. Each sighted creature withinshort range cannot see for 28 hours.
+   - 19 Horrible Summons. A level 10 creature from another dimension appears and attacks.
+   - 20 Radiation. A burst of radiation spreadsout from the spot where the devicedisappeared and inflicts 6 points ofambient damage to all creatures withinshort range. For any creature thattakes this damage, the difficulty of all tasksis increased by one step for 28 hours.
+   - 21 Wretched Mutants. Each creature within short range gains a harmful mutation.
+   - 22 Antigravity. Gravity ceases to functioneverywhere within long range. Anythingthat is not rooted to the ground fliesupward a short distance per round forthree rounds. After this time, gravityis restored, and everything that went upcomes back down, probably taking fallingdamage.
+   - 23 Dreadful Summons. Three level 3 creatures from another dimension appear and attack.
+   - 24 Deafness. Each creature that can hear andis within a short distance cannot hear for28 hours.
+   - 25 Catatonic. The user enters a catatonic state that persists for 1d20 hours.
+   - 26 Mutation. The user gains two harmfulmutations.
+   - 27 Befuddled. For the user, the difficulty of all tasks is increased by three steps for one hour.
+   - 28 Unexpected Development. The user gainstwo cosmetic mutations.
+   - 29 Mind Transfer. The user swaps minds with the nearest character. The players swap characters.
+   - 30 Psychic Connection. All characters withinimmediate range can communicatetelepathically regardless of distance forthe next 1d20 days.
+   - 31 Foliage. Plants sprout from the ground and spread out to a distance of 1 mile (2 km).
+   - 32 Awakening of the Flesh. The user gains abeneficial mutation.
+   - 33 Strength. The user’s Might Pool is permanently increased by 1.
+   - 34 Quickness. The user’s Speed Pool ispermanently increased by 1.
+   - 35 Brilliance. The user’s Intellect Pool is permanently increased by 1.
+   - 36 Fold Space. The user and everyone withinshort range teleport to a destination ofthe user’s choice anywhere in the world.
+   - 37 Cypher Spawn. 1d6 randomly determined cyphers appear on the ground in a pile. 
+   - 38 Artifact. A randomly determined artifactappears on the ground.
+   - 39 Vitality Surge. All characters within immediate range increase their stat Pools by 1 for 28 hours.
+   - 40 Cosmic Awareness. For the user, the difficultyof all tasks is reduced by three steps for onehour.
 
 Navigator Daemon:
 	Level: 1d6 + 2
@@ -3148,14 +3158,12 @@ Needle Sphere:
 
 Needleburst:
 	Level: 1d6 + 4
-  Usable: A crystal with many jagged 
-protrusions
+  Usable: A crystal with many jagged protrusions
   Effect: This device is activated when the user plays a certain high-pitched note within long range of it. (This may require the user to have a pitch-pipe, flute, or other such instrument, but it’s possible to sing the note as well if one is talented.) When activated, the device explodes in a short radius with needlelike crystal shards, inflicting damage equal to the cypher level.
 
 Neuron Disruptor:
 	Level: 1d6 + 4
-  Usable: A metal cylinder with several buttons 
-and dials
+  Usable: A metal cylinder with several buttons and dials
   Effect: When activated, the device releases a pulse that travels out to a 1-mile (2 km) radius. All living things in the area whose level is lower than the cypher level become catatonic for 28 hours.
 
 Nevermind:
@@ -3207,9 +3215,10 @@ Ostracized Vapor:
   Wearable: Smoking mask
   Usable: Electronic smoking implement
   Effect: Allows the user to inhale a potent chemical that changes his body chemistry for ten minutes, causing him to give off pheromones that have a variety of effects. The GM should roll d100 ahead of time to determine the effect:
-01–50 Makes the user smell like prey to theclosest nonhuman creature (withinlong range)
-51–75 Makes the user smell like a predator to the closest nonhuman creature (within long range)
-76–00 Makes the user smell exactly like theclosest nonhuman creature (withinlong range)
+  Roll: 
+   - 01–50 Makes the user smell like prey to theclosest nonhuman creature (withinlong range)
+   - 51–75 Makes the user smell like a predator to the closest nonhuman creature (within long range)
+   - 76–00 Makes the user smell exactly like theclosest nonhuman creature (withinlong range)
 
 Overwatch Defender:
 	Level: 1d6 + 4
@@ -3290,12 +3299,13 @@ Portable Biolab:
 	Level: 1d6
   Usable: Glass orb
   Effect: Inside the orb is a complex, self-sustaining ecosystem that creates a useful compound, plant, or creature. When the glass is broken, the lab-produced item becomes available to the user. Although the creation inside could be almost anything, common options include: 
-01–10 Inhalable gas that allows the user tosee in complete darkness as if it weredaylight for one hour
-11–30 Bioluminescent grubs that, when eaten, cause the user’s skin to glow green for one hour
-31–40 Drinkable purple liquid that adds 5 tothe Pool of the user’s choice for onehour
-41–50 Orange-petaled flower that increases stamina when eaten, adding 1 to the user’s Might Edge for one hour
-51–75 Red speckled mushroom that,when licked, causes the user’s mindto open, decreasing the difficulty ofall skills related to perception,telepathy, and telekinetics by one stepfor 28 hours. 
-76–00 Blue-green moss that, when rubbedon skin, makes the skin tacky andsticky. The difficulty of all tasks elatedto keeping a good grip (includingclimbing, balancing, and lockpicking)is decreased by one step for 28 hours.
+  Roll: 
+   - 01–10 Inhalable gas that allows the user tosee in complete darkness as if it weredaylight for one hour
+   - 11–30 Bioluminescent grubs that, when eaten, cause the user’s skin to glow green for one hour
+   - 31–40 Drinkable purple liquid that adds 5 tothe Pool of the user’s choice for onehour
+   - 41–50 Orange-petaled flower that increases stamina when eaten, adding 1 to the user’s Might Edge for one hour
+   - 51–75 Red speckled mushroom that,when licked, causes the user’s mindto open, decreasing the difficulty ofall skills related to perception,telepathy, and telekinetics by one stepfor 28 hours. 
+   - 76–00 Blue-green moss that, when rubbedon skin, makes the skin tacky andsticky. The difficulty of all tasks elatedto keeping a good grip (includingclimbing, balancing, and lockpicking)is decreased by one step for 28 hours.
 
 Portable Steed:
 	Level: 1d6 + 2
@@ -3417,9 +3427,10 @@ Rejuvenation Field:
 	Level: 1d6 + 2
   Usable: Handheld device
   Effect: This device projects a nimbus of energy that fills the immediate area. All characters within the area regain a number of points equal to the cypher level in one Pool. Roll a d100:
-01–50 Might Pool
-51–75 Speed Pool
-76–00 Intellect PoolCreatures and NPCs in the area regain the points to their health.
+  Roll: 
+   - 01–50 Might Pool
+   - 51–75 Speed Pool
+   - 76–00 Intellect PoolCreatures and NPCs in the area regain the points to their health.
 
 Remake:
 	Level: 1d6 + 2
@@ -3487,12 +3498,13 @@ Screaming Madness:
 	Level: 1d6 + 2
   Usable: Small red polygon
   Effect: One round after activation, this device emits a loud, piercing noise. Living creatures within immediate range suffer 2 points of Intellect damage (ignores Armor), and for all those affected, the user makes a second roll. Those affected by the second roll are driven mad temporarily. Roll d100 to determine the expression of this insanity, which lasts for one minute.
-01–20 Run off in a random direction for ashort distance and then attempt tohide
-21–30 Attack the nearest creature with whatever means is closest at hand
-31–60 Do nothing but cover ears and scream
-61–80 Fall down and roll on the ground
-81–90 Drop whatever is held and cover eyesand face with hands
-91–00 Activate most powerful available ability, cypher, or artifact that is not an attack (if none, roll again) and then hideThe noise continues for five rounds, and the damage and madness continue each round, affecting those that remain in or enter the area.
+  Roll: 
+   - 01–20 Run off in a random direction for ashort distance and then attempt tohide
+   - 21–30 Attack the nearest creature with whatever means is closest at hand
+   - 31–60 Do nothing but cover ears and scream
+   - 61–80 Fall down and roll on the ground
+   - 81–90 Drop whatever is held and cover eyesand face with hands
+   - 91–00 Activate most powerful available ability, cypher, or artifact that is not an attack (if none, roll again) and then hideThe noise continues for five rounds, and the damage and madness continue each round, affecting those that remain in or enter the area.
 
 Second Sight Symbiote:
 	Level: 1d6
@@ -3543,24 +3555,26 @@ Sensory Disruptor:
   Wearable: Wristband projector (close range)
   Usable: Handheld projector (close range)
   Effect: Shoots out a single projectile that contains a bundle of nanowires. Upon contact with a living creature, the nanowires unfold and inject themselves into the skin, causing an instant sensory response within the target. Roll d100 for the effect:
-01–10 Synesthesia: The target senses soundas light and color as taste, causingdisorientation. The target loses hisnext two actions. 
-11–30 Perceptual deprivation: The target’s visual senses are overwhelmed, causing temporary blindness. The difficulty of all tasks attempted by the target is increased by one step. The effect lasts for ten minutes.
-31–40 Ultrasensation: The target’s sensesoverload, causing a heightenedresponse to stimuli. On his nextround, he attempts to flee. 
-41–50 Fear override: The target’s senses are dulled, causing him to ignore pain and fear. He rushes in, increasing the difficulty of all actions by one step. The effect lasts for ten minutes.
-51–75 Off balance: The target’s sense ofbalance is disrupted, causing him tofall prone for one round. 
-76–00 Hallucinations: The target experiences an auditory or visual hallucination, causing him to lash out at nothing and miss all attacks during his next action. 
+  Roll: 
+   - 01–10 Synesthesia: The target senses soundas light and color as taste, causingdisorientation. The target loses hisnext two actions. 
+   - 11–30 Perceptual deprivation: The target’s visual senses are overwhelmed, causing temporary blindness. The difficulty of all tasks attempted by the target is increased by one step. The effect lasts for ten minutes.
+   - 31–40 Ultrasensation: The target’s sensesoverload, causing a heightenedresponse to stimuli. On his nextround, he attempts to flee. 
+   - 41–50 Fear override: The target’s senses are dulled, causing him to ignore pain and fear. He rushes in, increasing the difficulty of all actions by one step. The effect lasts for ten minutes.
+   - 51–75 Off balance: The target’s sense ofbalance is disrupted, causing him tofall prone for one round. 
+   - 76–00 Hallucinations: The target experiences an auditory or visual hallucination, causing him to lash out at nothing and miss all attacks during his next action. 
 
 Sexual Alteration Device:
 	Level: 1d6 
   Wearable: Belt, bracelet 
   Usable: Handheld device 
   Effect: Alters some element of the user’s sexuality for one day. Roll d100 for the effect:
-01–10 Allows user to tweak his gender in anyway he sees fit 
-11–30 Allows user to change his sexual orientation or interests 
-31–40 Removes all sexual drive 
-41–50 Doubles all sexual drive 
-51–75 Causes the user to produce apheromone that sexually attractsanyone within close range 
-76–00 Causes the user to produce a pheromone that sexually repels anyone within close range
+  Roll: 
+   - 01–10 Allows user to tweak his gender in anyway he sees fit 
+   - 11–30 Allows user to change his sexual orientation or interests 
+   - 31–40 Removes all sexual drive 
+   - 41–50 Doubles all sexual drive 
+   - 51–75 Causes the user to produce apheromone that sexually attractsanyone within close range 
+   - 76–00 Causes the user to produce a pheromone that sexually repels anyone within close range
 
 Shadow Net:
 	Level: 1d6 + 2
@@ -3605,9 +3619,10 @@ Smart Bugs:
 	Level: 1d6
   Internal: Pill or tablet (dissolved in liquid) that releases genetically designed microbes
   Effect: Upon ingestion, the microbes enter the body and begin to do the task they were created for: targeting and enhancing a specific part of the body. The GM should roll d100 ahead of time to determine the effect:
-01–50 Brain bugs: The user experiences aheightened mental acuity that makesit feel like her brain is tingling. Grants+2 to her Intellect Edge for one hour.
-51–75 Fast-twitch bugs: The user’s muscles begin to quickly tighten and release, creating the sensation that her muscles are jumping beneath her skin. Grants +2 to her Speed Edge for one hour. 
-76–00 Meat bugs: A few seconds afteringesting the microbes, any lingeringsense of exhaustion or pain slips awayfrom the user’s muscles. Grants +2 toher Might Edge for one hour. 
+  Roll: 
+   - 01–50 Brain bugs: The user experiences aheightened mental acuity that makesit feel like her brain is tingling. Grants+2 to her Intellect Edge for one hour.
+   - 51–75 Fast-twitch bugs: The user’s muscles begin to quickly tighten and release, creating the sensation that her muscles are jumping beneath her skin. Grants +2 to her Speed Edge for one hour. 
+   - 76–00 Meat bugs: A few seconds afteringesting the microbes, any lingeringsense of exhaustion or pain slips awayfrom the user’s muscles. Grants +2 toher Might Edge for one hour. 
 
 Snake Eye:
 	Level: 1d6
@@ -3816,8 +3831,7 @@ Time Auger:
 
 Time Capsule:
 	Level: 1d6
-  Usable: A metallic container large enough to 
-hold a human-sized creature
+  Usable: A metallic container large enough to hold a human-sized creature
   Effect: Anything placed inside the container does not experience time’s passage for 1d20 years. At the end of this period, or if the contents are removed before then, the cypher becomes inert.
 
 Time Delay:
@@ -3845,11 +3859,12 @@ Transformation Torque:
 	Level: 1d6
   Usable: Necklace made of malleable metal and biotech elements
   Effect: Placing the necklace around your neck activates the device, which then sends small projections (similar to cilia) beneath the skin. These projections release a genetic compound that causes a mutation in the wearer for one hour.Additionally, the necklace houses a visage changer, which allows the wearer to hide his mutation if desired. If that’s the case, the wearer gets the effects of the mutation but others cannot see, hear, or otherwise sense the mutation. Different necklaces have different effects. Roll d100: 
-01–50 Causes a beneficial mutation 
-51–80 Causes a powerful mutation
-81–90 Causes a harmful mutation 
-91–95 Causes a distinctive mutation 
-96–00 Causes a cosmetic mutationTo determine the specific mutation caused by the device, GMs can choose or roll randomly on the mutation tables on page 124 in the Numenera corebook.
+  Roll: 
+   - 01–50 Causes a beneficial mutation 
+   - 51–80 Causes a powerful mutation
+   - 81–90 Causes a harmful mutation 
+   - 91–95 Causes a distinctive mutation 
+   - 96–00 Causes a cosmetic mutationTo determine the specific mutation caused by the device, GMs can choose or roll randomly on the mutation tables on page 124 in the Numenera corebook.
 
 Transient Inscriber:
 	Level: 1d6
