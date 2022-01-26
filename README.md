@@ -23,6 +23,11 @@ Just started - now just abandoned
 ## Mork Borg
 Core rulebook done
 
+## Pathfinder 2E
+Big mess lmao
+  - Background Data recorded
+  - Ancestory Data begun
+
 ## Ryuutama: Fantasy Roleplaying Game
 Basically done
 
