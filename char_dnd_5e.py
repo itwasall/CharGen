@@ -26,11 +26,25 @@ character = {
     'ability_mods': {'STR': 0, 'DEX': 0, 'CON': 0, 'INT': 0, 'WIS': 0, 'CHA': 0},
     'proficiency_bonus': 2,
     'saving_throws': {'STR': 0, 'DEX': 0, 'CON': 0, 'INT': 0, 'WIS': 0, 'CHA': 0},
-    'skills': {'Acrobatics': 0, 'Animal Handling': 0, 'Arcana': 0,
-            'Athletics': 0, 'Deception': 0, 'History': 0, 'Insight': 0,
-            'Intimidation': 0, 'Investigation': 0, 'Medicine': 0, 'Nature': 0,
-            'Perception': 0, 'Persuasion': 0, 'Religion': 0,
-            'Sleight of Hand': 0, 'Stealth': 0, 'Survival': 0},
+    'skills': {
+        'Acrobatics': 0,
+        'Animal Handling': 0,
+        'Arcana': 0,
+        'Athletics': 0,
+        'Deception': 0,
+        'History': 0,
+        'Insight': 0,
+        'Intimidation': 0,
+        'Investigation': 0,
+        'Medicine': 0,
+        'Nature': 0,
+        'Perception': 0,
+        'Persuasion': 0,
+        'Religion': 0,
+        'Sleight of Hand': 0,
+        'Stealth': 0,
+        'Survival': 0
+    },
     'armor_class': 0,
     'initiative': 0,
     'speed': {'Walking': 0, 'Flying': 0, 'Climbing': 0},
@@ -54,21 +68,22 @@ def dice(sides, throws):
     return total
 
 def job(race):
-    race_job_weights = {'High Elf': [1, 4, 2, 2, 2, 4, 2, 5, 5, 2, 2, 6],
-        'Wood Elf':                 [3, 4, 5, 5, 2, 6, 2, 6, 5, 2, 3, 2],
-        'Drow Elf':                 [2, 6, 3, 3, 2, 5, 5, 5, 5, 6, 6, 1],
-        'Stout Halfling':           [6, 5, 4, 4, 2, 6, 4, 6, 5, 4, 4, 4],
-        'Lightfoot Halfling':       [4, 6, 4, 4, 2, 6, 2, 5, 6, 6, 6, 3],
-        'Mountain Dwarf':           [6, 2, 4, 4, 6, 3, 6, 2, 2, 2, 2, 2],
-        'Hill Dwarf':               [6, 2, 4, 4, 6, 3, 6, 2, 2, 2, 2, 2],
-        'Forest Gnome':             [2, 2, 2, 2, 2, 3, 2, 3, 4, 2, 2, 6],
-        'Rock Gnome':               [2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 6],
-        'Human':                    [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-        'Half-Elf':                 [4, 7, 4, 4, 4, 4, 7, 4, 4, 7, 7, 4],
-        'Half-Orc':                 [6, 3, 3, 4, 6, 2, 6, 4, 4, 2, 6, 2],
-        'Dragonborn':               [6, 5, 4, 2, 6, 2, 6, 3, 2, 5, 5, 2],
-        'Tiefling':                 [2, 6, 2, 2, 2, 2, 5, 2, 4, 6, 6, 5]
-                        }
+    race_job_weights = {
+        'High Elf': [1, 4, 2, 2, 2, 4, 2, 5, 5, 2, 2, 6],
+        'Wood Elf': [3, 4, 5, 5, 2, 6, 2, 6, 5, 2, 3, 2],
+        'Drow Elf': [2, 6, 3, 3, 2, 5, 5, 5, 5, 6, 6, 1],
+        'Stout Halfling': [6, 5, 4, 4, 2, 6, 4, 6, 5, 4, 4, 4],
+        'Lightfoot Halfling': [4, 6, 4, 4, 2, 6, 2, 5, 6, 6, 6, 3],
+        'Mountain Dwarf': [6, 2, 4, 4, 6, 3, 6, 2, 2, 2, 2, 2],
+        'Hill Dwarf': [6, 2, 4, 4, 6, 3, 6, 2, 2, 2, 2, 2],
+        'Forest Gnome': [2, 2, 2, 2, 2, 3, 2, 3, 4, 2, 2, 6],
+        'Rock Gnome': [2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 6],
+        'Human': [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+        'Half-Elf': [4, 7, 4, 4, 4, 4, 7, 4, 4, 7, 7, 4],
+        'Half-Orc': [6, 3, 3, 4, 6, 2, 6, 4, 4, 2, 6, 2],
+        'Dragonborn': [6, 5, 4, 2, 6, 2, 6, 3, 2, 5, 5, 2],
+        'Tiefling': [2, 6, 2, 2, 2, 2, 5, 2, 4, 6, 6, 5]
+    }
     char_job = choices(jobs, weights=race_job_weights[race])
     return char_job[0]
 
@@ -249,11 +264,13 @@ def equiping(job, equip):
     martial_weapons = [melee for melee in martial_melee_weapons] + [ranged for ranged in martial_ranged_weapons]
     equipment = []
     tests = ['equipment1', 'equipment2', 'equipment3', 'equipment4']
-    item_check_list = {'simple Weapon':simple_weapons, 
-                       'simple Melee Weapon':simple_melee_weapons, 
-                       'martial Weapon':martial_weapons, 
-                       'martial Melee Weapon':martial_melee_weapons, 
-                       'musical Instrument':musical_instruments}
+    item_check_list = {
+        'simple Weapon': simple_weapons, 
+        'simple Melee Weapon': simple_melee_weapons, 
+        'martial Weapon': martial_weapons, 
+        'martial Melee Weapon': martial_melee_weapons, 
+        'musical Instrument': musical_instruments
+    }
 
     for test in tests:
         try:
@@ -264,7 +281,7 @@ def equiping(job, equip):
             equipment.append(item_to_add)
         except KeyError:
             pass
-        # Adding the list of items that a character will recieve regardless
+    # Adding the list of items that a character will recieve regardless
     for item_definite in job['equipment']:
         equipment.append(item_definite)
     pop_list = []
@@ -320,18 +337,20 @@ def background(lang, skills, tools, equipment, race):
     return background, skills, tools, equipment, lang
 
 def actions(equipment, job, race):
-    standard_actions = {'Standard Actions': ['Attack', 
-                                             'Cast a Spell', 
-                                             'Dash', 
-                                             'Disengage', 
-                                             'Dodge', 
-                                             'Help', 
-                                             'Hide', 
-                                             'Ready', 
-                                             'Search', 
-                                             'Use an Object',
-                                             'Two-Weapon Fighting', 
-                                             'Interact with an Object']}
+    standard_actions = {'Standard Actions': [
+        'Attack', 
+        'Cast a Spell', 
+        'Dash', 
+        'Disengage', 
+        'Dodge', 
+        'Help', 
+        'Hide', 
+        'Ready', 
+        'Search', 
+        'Use an Object',
+        'Two-Weapon Fighting', 
+        'Interact with an Object'
+    ]}
     weapon_attacks = {}
     for item in equipment:
         for weapon in weapons.values():
@@ -344,12 +363,14 @@ def magical(job, race, ab_mod):
     spell_list = []
     spell_save = 0
     spell_atk = 0
-    no_magic = ['Barbarian', 
-                'Fighter', 
-                'Monk', 
-                'Paladin', 
-                'Ranger', 
-                'Rogue']
+    no_magic = [
+        'Barbarian', 
+        'Fighter', 
+        'Monk', 
+        'Paladin', 
+        'Ranger', 
+        'Rogue'
+    ]
     if job['name'] in no_magic:
         return spell_list, cantrip_list, spell_save, spell_atk
     else:

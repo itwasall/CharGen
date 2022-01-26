@@ -1,8 +1,9 @@
 from typing import List
-from chargen import yaml_importer, roll
-from random import choice, randint
+from chargen import yaml_importer, roll, new_seed
+from random import choice, randint, seed
 
 data_feats = yaml_importer('pathfinder_2e_data/feats.yaml')
+data_backgrounds = yaml_importer('pathfinder_2e_data/backgrounds.yaml')
 
 class AbstractAbilityScore:
     def __init__(self, name):
@@ -114,14 +115,57 @@ class Ancestory:
     def __repr__(self): return self.name
 
 
+class Background:
+    def __init__(
+        self,
+        name: str,
+        desc: str,
+        ability_boost: List,
+        skill_proficiencies: List,
+        skill_feat: str,
+    ):
+        self.name = name
+        self.desc = desc
+        self.ability_boost = ability_boost
+        self.skill_proficiencies_data = skill_proficiencies
+        self.skill_proficiencies = self.reroll_params()
+        self.skill_feat = skill_feat
+
+    def reroll_params(self):
+        seed(new_seed())
+        skill_prof_choices = []
+        for it, item in enumerate(self.skill_proficiencies_data):
+            if type(item) == list:
+                skill_prof_choices.append(choice(item))
+            else:
+                skill_prof_choices.append(item)
+        return skill_prof_choices
+
+    def __repr__(self):
+        return f"Name: {self.name}\n  {self.desc}\n"
+
+def make_backgrounds():
+    all_backgrounds = {}
+    for key in data_backgrounds.keys():
+        key_data = data_backgrounds[key]
+        all_backgrounds[key] = Background(
+            key,
+            key_data['desc'],
+            key_data['ability_boost'],
+            key_data['skill_proficiencies'],
+            key_data['skill_feat']
+        )
+    return all_backgrounds
+
+
+
 class Character:
     def __init__(
         self,
         ancestory: Ancestory,
         ability_scores: AbilityScores,
-
     ):
         pass
 
-demo_trait = AncestoryTrait('Demo Trait', 'This is a demo trait')
-print(demo_trait)
+bg = make_backgrounds()
+print(bg['Acolyte'])

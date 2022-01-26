@@ -1,5 +1,6 @@
-from random import randint
+from random import randint, choice, seed
 from yaml import safe_load
+from string import ascii_letters
 
 
 def roll(dice_string):
@@ -41,6 +42,17 @@ def capitalise(string: str):
         else:
             string_words[it] = string_words[it].capitalize()
     return " ".join(string_words)
+
+def new_seed():
+    """Generates a new random seed from an random assortment of 
+        letters of a random length
+
+       This mainly saves having to import 'ascii_letters' from strings
+       over and over cuz that shit is verbose as all hell
+    """
+    seed_string = "".join(choice(ascii_letters) for _ in range(randint(5, 10)))
+    return seed_string
+    
 
 
 def yaml_importer(path: str) -> dict:
