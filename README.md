@@ -7,22 +7,24 @@ Core Rulebook done
 ## DND 3.5e
 WIP
 
-## Numenera 
-Restarted
-  - Discovery char types recorded
-  - Discovery char descriptors recorded
-  - Data structure mapped out
+## Numenera
+Currently
+  - Foci data recorded
+  - character type data recorded
+  - descriptor data recorded
+Cypher data not begun
 
 ## Cyberpunk RED
 WIP - Postponed til CP2020 done-ish
 
 ## Cyberpunk 2020
-Just started
+Just started - now just abandoned
 
 ## Mork Borg
-Data complete
-Generate complete
-PDF Form stuff need doing
+Core rulebook done
+
+## Ryuutama: Fantasy Roleplaying Game
+Basically done
 
 ## Werewolf: The Apocolaypse
 Very WIP
