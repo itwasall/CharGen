@@ -10,9 +10,9 @@ Bears a Halo of Fire:
   equipment:
     - A device that sprays inanimate objects to make them fire-resistant. All your starting gear has already been treated unless you don’t want it to be. [ARTIFACT]
   abilities:
-    Fire Powers:
+    - name: Fire Powers
       desc: Your special abilities that would normally use force or other energy (such as electricity) instead use fire. For example, force blasts from Onslaught are blasts of flame, and Flash is a burst of fire. These alterations change nothing except the type of damage and the fact that it might start fires. As another example, Barrier produces a wall of roaring flames. In this case, the alteration changes the esotery so that the barrier is not solid but instead inflicts 1 point of damage to anything that touches it and 4 points of damage to anyone who passes through it. Even fighting moves such as No Need for Weapons might mean your hands and fists are surrounded by flames.
-    Shroud of Flame:
+    - name: Shroud of Flame
       desc: At your command, your entire body becomes shrouded in flames that last up to ten minutes. The fire doesn’t burn you, but it automatically inflicts 2 points of damage to anyone who tries to touch you or strike you with a melee attack. Flames from another source can still hurt you. While the shroud is active, you gain +2 points of Armor that protect only against damage from fire from another source. Enabler.
       cost: [1, Intellect]
   minor_effect: The target or something near the target catches fire.
@@ -28,9 +28,9 @@ Commands Mental Powers:
   equipment:
     - Crystal or jewel artifact that, when worn against your forehead or temple, adds 1 point to your Intellect Pool. If you’re ever without the artifact, subtract 5 points from your Intellect Pool; the points are restored if you regain the item. [ARTIFACT]
   abilities:
-    Mental Esoteries:
+    - name: Mental Esoteries
       desc: When you apply Effort to the special abilities that control minds, like the Mind Control esotery, the mind reading esotery or the Crow Control trick of the trade, you get a free level of Effort for that task. Enabler
-    Telepathic (1+ Intellect points):
+    - name: Telepathic
       desc: You can speak telepathically with others who are within short range. Communication is two-way, but the other party must be willing and able to communicate. You don’t have to see the target, but you must know that it’s within range. You can have more than one active contact at once, but you must establish contact with each target individually. Each contact lasts up to ten minutes. If you apply a level of Effort to increase the duration rather than affect the difficulty, the contact lasts for 28 hours. Action to establish contact.
       cost: [1, Intellect]
   minor_effect: The range or duration of the mental power is double
@@ -73,7 +73,7 @@ Controls Beasts:
     - a harness
     - collar or similar accoutrement.
   abilities:
-    Beast Companion:
+    - name: Beast Companion
       desc: A level 2 creature of your size or smaller accompanies youa nd follows your instrctions. You and the GM must work out the details of your creater, and you'll probably make rolls for it in combat or when it takes actions. The beast companion acts on your turn. As a level 2 creature, it has a target number of 6 and 6 health and it inflicts 2 points of damage. It's movement is based on the creature type (avian, swimmer and so on). If your beast companion dies, you can hunt in the wild for 1d6 days to find a new companion. Enabler.
   minor_effect: The duration of calmness or control is doubled.
   major_effect: The duration of calmness or control extends to 28 hours. Remember that a day on the Ninth World is also 28 hours.
@@ -90,12 +90,12 @@ Controls Gravity:
   equipment:
     - A pen-sized oddity that tells the weight of whatever you point it at (within short range). The weight is displayed on a small glass plate in runes that only you can decipher.
   abilities:
-    Gravity Ability:
+    - name: Gravity Ability
       desc: You can choose to learn Weighty instead of one of the abilities granted by your type
-    Weighty:
+    - name: Weighty
       desc: You briefly increase the weight of a target within short range enough to stop them in their tracks, preventing the target from moving and hindering any attempted tasks on their next turn. Action.
       cost: [1, Intellect]
-    Hover:
+    - name: Hover
       desc: You float slowly into the air. As your action, you can concentrate to remain motionless in the air, or float up to a short distance, but no more; otherwise, you drift with the wind or with any momentum you have gained. This effect lasts for up to ten minutes. If you also have the Hover ability granted by your type, you can hover for twenty minutes and move your normal speed. Action to initiate.
       cost: [1, Intellect]
   minor_effect: The duration of the effect is doubled.
@@ -113,9 +113,9 @@ Crafts Illusions:
  minor_effect: Your illusion has a special quality to it—perhaps an observer sees an image of something from their past.
  major_effect: The illusion lasts for one hour, or if it already lasts that long, it lasts for 28 hours.
  abilities:
-  Psychedelic Abilities:
+  - name: Psychedelic Abilities
     desc: Your special abilities take on flamboyant visual and auditory qualities of your choosing. This alteration changes nothing other than the appearance of the effects. For example, your attack esoteries might look like monsters made of energy that assail your foes. Your Stasis esotery might look like a tentacled beast that holds the victim in place. Your Teleportation esotery might seem like a hole in space opens up and swallows you. Your Skill With Defense fighting move might look like ghostly echoes mimicking your actions or ephemeral arms blocking attacks against you.
-  Minor Illusion:
+  - name: Minor Illusion
     desc: You create a single image of a creature or object within immediate range. The image must fit within a 10-foot (3 m) cube. The image can move (for example, you could make the illusion of a person walk or attack), but it can’t leave the area defined by the cube. The illusion includes sound but not smell. It lasts for ten minutes, but if you want to change the original illusion significantly—such as making a creature appear to be wounded—you must concentrate on it again (though doing so doesn’t cost additional Intellect points). If you move beyond immediate range of the cube, the illusion vanishes. Action to create; action to modify.
     cost: [1, Intellect]
 
@@ -129,7 +129,7 @@ Employs Magnetism:
  minor_effect: The duration of the effect is doubled.
  major_effect: An important item on the target’s person is destroyed.
  abilities:
-  Move Metal:
+  - name: Move Metal
     desc: You can exert force on metal objects within short range for one round. Once activated, your power has an effective Might Pool of 10, a Might Edge of 1, and an Effort of 2 (approximately equal to the strength of a fit, capable, adult human), and you can use it to move metal objects, push against metal objects, and so on. For example, in your round, you could lift and pull a light metal object anywhere within range to yourself or move a heavy object (like a piece of furniture) about 10 feet (3 m). This power lacks the fine control to wield a weapon or move objects with much speed, so in most situations, it’s not a means of attack. You can’t use this ability on your own body. The power lasts for one hour or until its Might Pool is depleted, whichever comes first. Action.
     cost: [1, Intellect]
 
@@ -145,7 +145,7 @@ Entertains:
  minor_effect: You enchant the target, who remains enchanted as long as you focus all your attention on keeping them that way.
  major_effect: The target is forever favorably disposed toward you.
  abilities:
-  Levity:
+  - name: Levity
     desc: Through wit, charm, humor, and grace, you are trained in all social interactions other than those involving coercion or intimidation. During rests, you put friends and comrades at ease so much that they gain +1 to their recovery rolls. Enabler.
     trained: [Coercion, Intimidation]
 
@@ -159,9 +159,9 @@ Exists Partially Out Of Phase:
  minor_effect: While out of phase, you also have an asset to your Speed defense tasks.
  major_effect: While out of phase, you are also invisible.
  abilities:
-  Walk Through Walls:
-   desc: You can slowly pass through physical barriers at a rate of 1 inch (2.5 cm) per round (minimum of one round to pass through any barrier). You can’t act (other than moving) or perceive anything until you pass entirely through the barrier. You can’t pass through energy barriers. Action.
-   cost: [2, Intellect]
+  - name: Walk Through Walls
+    desc: You can slowly pass through physical barriers at a rate of 1 inch (2.5 cm) per round (minimum of one round to pass through any barrier). You can’t act (other than moving) or perceive anything until you pass entirely through the barrier. You can’t pass through energy barriers. Action.
+    cost: [2, Intellect]
 
 Explores Dark Places:
  desc: "You explore the foreboding ruins and mysterious locales of the ancient eras, trained in such activities by those who have gone before you. You’re the archetypical treasure hunter, scavenger, and finder of lost things. You spend so much of your time in the dark that you slowly adapt to it, almost becoming a creature of the gloom yourself. Even in civilized areas, you prefer to keep to the shadows. Most likely, you wear dark clothing to help you blend into the blackness. On the other hand, you might wear sensible garments and gear because you have serious and dangerous business to attend to in the dark. Jacks are suited to exploring dark places; those who do so are called shadowjacks. Glaives who follow this path are known as shadow warriors, and Nanos are called shadowcasters."
@@ -175,11 +175,11 @@ Explores Dark Places:
  minor_effect: The target is also dazed for one round, during which time all of its tasks are hindered.
  major_effect: The target is also stunned and loses its next turn.
  abilities:
-  Superb Explorer:
-   desc: You are trained in searching, listening, climbing, balancing, and jumping tasks. Enabler.
-   trained: [Searching, Listening, Climbing, Balancing, Jumping]
-  Darkness Powers:
-   desc: Your special abilities (such as Nano esoteries) make almost no sound, and whatever visual displays they produce are dark and shadowy. These alterations change nothing other than the appearance of the effects. A Flash esotery is a silent burst of shadows, a Barrier esotery is a mass of shadowy wisps, and so on.
+  - name: Superb Explorer
+    desc: You are trained in searching, listening, climbing, balancing, and jumping tasks. Enabler.
+    trained: [Searching, Listening, Climbing, Balancing, Jumping]
+  - name: Darkness Powers
+    desc: Your special abilities (such as Nano esoteries) make almost no sound, and whatever visual displays they produce are dark and shadowy. These alterations change nothing other than the appearance of the effects. A Flash esotery is a silent burst of shadows, a Barrier esotery is a mass of shadowy wisps, and so on.
 
 Fights With Panache:
  desc: "You know that style is at least as important as substance. Defeating foes is secondary to looking good while doing it. Some might call you a swashbuckler or daredevil. You leap through the air, make a flourish with your weapon, and attack, usually with a clever, biting show of wit. Your enemies hate you, but your allies adore you. Just watching you fight is entertaining. You very likely wear no armor, instead preferring stylish clothing—perhaps even a hat with a feather. Jacks and Glaives make the best swashbucklers, and they are the most common types of characters to fight with panache."
@@ -193,8 +193,8 @@ Fights With Panache:
  minor_effect: The target is so dazzled by your style that it is dazed for one round, during which time all of its tasks are hindered.
  major_effect: Make an additional attack with your weapon on your turn.
  abilities:
-  Attack Flourish:
-   desc: With your attack, you add stylish moves, entertaining quips, or a certain “something” that entertains or impresses others. One creature you choose within short range who can see you gains an asset to its next task if taken within a round or two. Enabler.
+  - name: Attack Flourish
+    desc: With your attack, you add stylish moves, entertaining quips, or a certain “something” that entertains or impresses others. One creature you choose within short range who can see you gains an asset to its next task if taken within a round or two. Enabler.
 
 Focuses Mind Over Matter:
  desc: "Telekinesis. Psychokinesis. Mind over matter. The power has many names, but in the end, it all boils down to one thing—the molecules that make up all matter are yours to command. You likely call yourself a telekinetic or just a TK. Many telekinetics prefer to wear tight clothing without much accoutrement, so there is little that another TK could grab hold of psychically. On the other hand, you have the power to create very minor telekinetic effects at will, so your hair might always be in motion, you could have a few tiny objects floating around you, or you might wear a long cape that’s always billowing. Jacks are the most likely characters to be telekinetics, but Glaives find that the abilities add to their combat prowess, and Nanos, of course, appreciate the additional power."
@@ -206,12 +206,12 @@ Focuses Mind Over Matter:
  minor_effect: An object moves faster or more efficiently.
  major_effect: You can move or affect twice as much as normal.
  abilities:
-  Deflect Attacks:
+  - name: Deflect Attacks
     desc: Using your mind, you protect yourself from incoming attacks. For the next ten minutes, you are trained in Speed defense tasks. Action to initiate.
     cost: [1, Intellect]
-  Mental Powers:
+  - name: Mental Powers
     desc: Your special abilities that would normally use force or other energy instead use psychokinetic force. For example, a Flash or an Onslaught force blast is a psychokinetic blast from your mind. This alteration changes nothing except that you don’t need a free hand to perform those abilities. In addition, you can choose to learn Impetus instead of one of the abilities granted by your type. Enabler.
-  Impetus:
+  - name: Impetus
     desc: A loose object within short range that you could carry in one hand is drawn to your free hand. If the object is stuck or held by another creature, you must succeed on a Might roll to rip it free, or the object remains where it was. Action.
     cost: [2, Intellect]
 
@@ -227,11 +227,11 @@ Fuses Flesh And Steel:
  minor_effect: Your servos learn from your successful actions. You gain an asset to similar actions involving the same task (such as making attacks against the same foe or operating the same device).
  major_effect: You discharge a small pulse of power into your foe. Make an immediate attack against that foe (using the same stat as the action that caused the major effect). If the attack succeeds, it deals 4 points of electrical damage.
  abilities:
-  Enhanced Body:
-   desc: You gain +1 to Armor, +3 to your Might Pool, and +3 to your Speed Pool. Enabler.
-   pool_bonus: [[3, Might], [3, Speed], [1, Armor]]
-  Special Healing:
-   desc: Traditional healing skills, medicines, and techniques work only half as well for you. Each time you start at full health, the first 5 points of damage you take can never be healed in these ways or recovered normally. Instead, you must use repairing skills and abilities to restore those points. For example, if you start with a full Might Pool of 10 and take 8 points of damage, you can use recovery rolls to restore 3 points, but the remaining 5 points must be restored with repair tasks.
+  - name: Enhanced Body
+    desc: You gain +1 to Armor, +3 to your Might Pool, and +3 to your Speed Pool. Enabler.
+    pool_bonus: [[3, Might], [3, Speed], [1, Armor]]
+  - name: Special Healing
+    desc: Traditional healing skills, medicines, and techniques work only half as well for you. Each time you start at full health, the first 5 points of damage you take can never be healed in these ways or recovered normally. Instead, you must use repairing skills and abilities to restore those points. For example, if you start with a full Might Pool of 10 and take 8 points of damage, you can use recovery rolls to restore 3 points, but the remaining 5 points must be restored with repair tasks.
 
 Howls At The Moon:
  desc: "Sometimes the numenera is a double-edged sword. You are cursed and blessed to be able to transform into a powerful creature, drawing additional mass from a transdimensional source. You and the GM should work out the exact nature of the creature, including its appearance, but it’s a wild beast of rage and blood—at least until you learn to control it. Creatures like you are often called “lycanthropes.” Style and appearance are probably low on your list of concerns. Your clothes might be ragged because your transformation is hard on them (or they’re cheap because you know they’ll be destroyed the next time you transform). Anyone can be a lycanthrope. A Glaive likely benefits the most from the transformation"
@@ -245,7 +245,7 @@ Howls At The Moon:
  minor_effect: The target is so intimidated by your bestial attack that it is dazed for one round, hindering its tasks.
  major_effect: Your attack conveys a small bit of your lycanthropy. If your foe survives, one month later, the target transforms into an uncontrolled beast. The GM decides what happens from there.
  abilities:
-  Beast Form:
+  - name: Beast Form
     desc: On five consecutive nights each month, you change into a monstrous beast for up to one hour each night. In this new form, you gain +8 to your Might Pool, +1 to your Might Edge, +2 to your Speed Pool, and +1 to your Speed Edge. While in beast form, you can’t spend Intellect points for any reason other than to try to change to your normal form before the one-hour duration is over (a difficulty 2 task). In addition, you attack any and every living creature within short range. After you revert to your normal form, you take a –1 penalty to all rolls for one hour. If you did not kill and eat at least one substantial creature while in beast form, the penalty increases to –2 and affects all your rolls for the next 28 hours. Action to change back.
     pool_bonus_cond: [[8, Might], [1, MightEdge], [2, Speed], [1, SpeedEdge]]
 
@@ -261,10 +261,10 @@ Hunts:
  minor_effect: You can attempt an intimidating task to cause your foe to immediately surrender.
  major_effect: Your foe pauses, terrified by your prowess, and takes no action on their turn.
  abilities:
-  Tracker:
+  - name: Tracker
     desc: You are trained in following and identifying tracks. Enabler.
     trained: [Following & Identifying Tracks]
-  Stalker:
+  - name: Stalker
     desc: You gain an asset to all types of movement tasks (including climbing, swimming, jumping, and balancing). Enabler.
     asset: [Climing, Swimming, Jumping, Balancing]
 
@@ -280,10 +280,10 @@ Lives In the Wilderness:
  minor_effect: A foe that is a natural creature flees rather than continue to fight you.
  major_effect: A foe that is a natural creature becomes warily passive.
  abilities:
-  Wilderness Life:
+  - name: Wilderness Life
     desc: "You are trained in two of the following: climbing, swimming, navigation, or identifying plants and creatures. Enabler."
     train_choice2: [Climing, Swimming, Navigation, Identifying Plants, Identifying Creatures]
-  Wild Hardiness:
+  - name: Wild Hardiness
     desc: You gain 3 points to your Might Pool. Enabler."
     pool_bonus: [[3, Might]]
 
@@ -299,7 +299,7 @@ Masters Defense:
  minor_effect: You gain an asset to Speed defense rolls for one round.
  major_effect: If an attack would hit you next round, it harmlessly strikes your shield instead if you choose.
  abilities:
-  Shield Master:
+  - name: Shield Master
     desc: When you use a shield, in addition to the asset it gives you (easing Speed defense tasks), you can act as if you are trained in Speed defense tasks. However, in any round in which you use this benefit, your attacks are hindered. Enabler.
 
 Masters Weaponry:
@@ -314,12 +314,12 @@ Masters Weaponry:
  minor_effect: The target is so dazzled by your expertise that it is dazed for one round, hindering all of its tasks.
  major_effect: Make an immediate additional attack with the weapon as part of your turn.
  abilities:
-  Weapon Master:
+  - name: Weapon Master
     desc: You gain a +1 bonus to damage with your chosen weapon. Enabler.
-  Weapon Crafter:
+  - name: Weapon Crafter
     desc: You are trained in crafting tasks associated with your chosen weapon. For instance, if your weapon is a bow, you are trained in tasks related to crafting bows and fletching arrows; if your weapon is a sword, you are trained in tasks for forging swords and sharpening blades; and so on. Enabler.
     trained: [WeaponSkill]
-  Weaponry Powers:
+  - name: Weaponry Powers
     desc: If you have “supernatural” special abilities (such as some esoteries), these look like your chosen weapon. So the force blast of the Onslaught esotery appears to be a large weapon made of force, and the Flash esotery produces a flurry of weaponry. These alterations change nothing other than the appearance of the effects. As another example, Barrier becomes a wall of swirling blades of energy. This alteration changes the esotery such that it is not a solid barrier but rather inflicts 1 point of damage to anyone who touches it and 4 points of damage to anyone who passes through it.
 
 Murders:
@@ -334,9 +334,9 @@ Murders:
  minor_effect: No one but the foe notices that you make the attack.
  major_effect: If you have poison amid your belongings, you were able to apply it just before the strike, adding the poison’s effects to the normal attack damage.
  abilities:
-  Surprise Attack:
+  - name: Surprise Attack
     desc: If attacking from a hidden vantage, with surprise, or before an opponent has acted, you gain an asset to your attack. On a successful hit with this surprise attack, you inflict 2 additional points of damage. Enabler.
-  Natural Assassin:
+  - name: Natural Assassin
     desc: You are trained in stealth and disguise tasks. Enabler.
     trained: [Stealth, Disguise]
 
@@ -350,7 +350,7 @@ Rages:
  minor_effect: When fighting multiple foes, you knock one into another, putting both off balance and hindering them for one round.
  major_effect: Your foe is terrified of your rage and uses its next two actions to flee.
  abilities:
-  Frenzy:
+  - name: Frenzy
     desc: When you wish, while in combat, you can enter a state of frenzy. While in this state, you can’t use Intellect points, but you gain +1 to your Might Edge and your Speed Edge. This effect lasts as long as you wish, but it ends if no combat is taking place within range of your senses. Enabler.
     cost: [1, Intellect]
 
@@ -366,12 +366,12 @@ Rides The Lightning:
  minor_effect: The target is dazed by electricity for one round, hindering all of its tasks. Electricity can also shut down an automaton for one round.
  major_effect: Devices filled with electrical power explode. You can target and destroy an artifact that a foe is holding or wearing.
  abilities:
-  Shock:
+  - name: Shock
     desc: Your hands crackle with electricity, and the next time you touch a creature, you inflict 3 points of damage. Alternatively, if you wield a weapon, for ten minutes it crackles with electricity and inflicts 1 additional point of damage per attack. Action for touch; enabler for weapon.
     cost: [1, Intellect]
-  Electrical Abilities:
+  - name: Electrical Abilities
     desc: If you have abilities that would normally use force or other energy, they instead use electricity. For example, a Flash or an Onslaught force blast is a blast of lightning. This alteration changes nothing other than the type of damage and the fact that it might start fires.
-  Charge:
+  - name: Charge
     desc: You can charge an artifact or other device (except a cypher) so that it can be used once. The cost is 1 Intellect point plus 1 point per level of the device. Action.
     cost: [1, Intellect]
 
@@ -387,7 +387,7 @@ Speaks With A Silver Tongue:
  minor_effect: The next time you attempt to influence, persuade, or deceive the same foe, the task is eased.
  major_effect: You speak with extra conviction, increasing the effect, duration, or range of your action.
  abilities:
-  Poetic License:
+  - name: Poetic License
     desc: You are trained in all social interactions, including persuasion, deception, and intimidation. You also know two languages other than the Truth. Enabler.
     trained: [Persuasion, Deception, Intimidation]
     language_add: 2
@@ -403,9 +403,9 @@ Talks To Machines:
   - A bag of small tools.  minor_effect: The duration of influence or control is doubled.
  major_effect: The duration of influence or control becomes 28 hours.
  abilities:
-  Machine Affinity:
+  - name: Machine Affinity
     desc: You are trained in tasks involving electrical machines. Enabler.
-  Distant Activation:
+  - name: Distant Activation
     desc: You can activate or deactivate any machine you can see within short range, even if normally you would have to touch or manually operate the device. To use this ability, you must understand the function of the machine, it must be your size or smaller, and it can’t be connected to another intelligence (or be intelligent itself). Action.
     cost: [1, Intellect]
 
@@ -421,10 +421,10 @@ Wears A Sheen Of Ice:
  minor_effect: The surface around the target becomes slick and difficult to stand on.
  major_effect: The target is covered in ice that slows its movement and hinders its tasks for one minute.
  abilities:
-  Ice Armor:
+  - name: Ice Armor
     desc: When you wish it, your body is covered in a sheen of ice for ten minutes that gives you +1 to Armor. While the sheen is active, you feel no discomfort from normal cold temperatures and have an additional +2 to Armor versus cold damage specifically. Enabler.
     cost: [1, Intellect]
-  Ice Abilities:
+  - name: Ice Abilities
     desc: If you possess abilities that would normally use force or other energy, they instead use cold and ice. For example, a force blast is a ray of frost. This alteration changes nothing other than the type of damage. As another example, Barrier creates a wall of ice. This alteration changes nothing except the wall’s appearance and the fact that it takes 2 additional points of damage from fire.
 
 Wields Power With Precision:
@@ -439,7 +439,7 @@ Wields Power With Precision:
  minor_effect: The special ability overwhelms and dazzles the target for one round, hindering it.
  major_effect: The special ability terrifies the target, who uses its next two turns to flee.
  abilities:
-  Genius:
+  - name: Genius
     desc: Your Intellect Pool increases by 5 points. Enabler.
     pool_bonus: [[5, Intellect]]
 
@@ -455,7 +455,7 @@ Wields Two Weapons At Once:
  minor_effect: The target is intimidated and flees as its next action.
  major_effect: You can make an immediate additional attack with one of your weapons.
  abilities:
-  Dual Light Wield:
+  - name: Dual Light Wield
     desc: You can use two light weapons at the same time, making two separate attacks on your turn as a single action. You remain limited by the amount of Effort you can apply on one action, but because you make separate attacks, your opponent’s Armor applies to both. Anything that modifies your attack or damage applies to both attacks, unless it’s specifically tied to one of the weapons. Enabler.
 
 Works The Back Alleys:
@@ -470,7 +470,7 @@ Works The Back Alleys:
  minor_effect: You can immediately attempt to hide after this action.
  major_effect: You can immediately take a second action during this turn.
  abilities:
-  Thief:
+  - name: Thief
     desc: You are trained in sneaking, pickpocketing, and lockpicking tasks. Enabler.
     trained: [Sneaking, Pickpocketing, Lockpicking]
 
@@ -484,7 +484,7 @@ Works Miracles:
  minor_effect: The target is healed for 1 additional point.
  major_effect: The target is healed for 2 additional points.
  abilities:
-  Healing Touch:
+  - name: Healing Touch
     desc: With a touch, you restore 1d6 points to one stat Pool of any creature. This ability is a difficulty 2 Intellect task. Each time you attempt to heal the same creature, the task difficulty increases by one step. The difficulty returns to 2 after that creature rests for ten hours. Action.
     cost: [1, Intellect]
 
@@ -499,7 +499,7 @@ Absorbs Energy:
  minor_effect: The energy you release is even more potent than you thought. Your opponent’s actions are hindered next round.
  major_effect: The energy you release is even more potent than you thought. Your opponent loses their next action.
  abilities:
-  Absorb Kinetic Energy:
+  - name: Absorb Kinetic Energy
     desc: You absorb a portion of the energy of a physical attack or impact. You negate 1 point of damage you would have suffered and store that point as energy. Once you have absorbed 1 point of energy, you continue to negate 1 point of damage from any incoming blow or impact, but the residual energy bleeds off with a flare of harmless light (you cannot store more than 1 point at a time). Enabler.
 
 Acts Without Consequences:
@@ -514,15 +514,15 @@ Acts Without Consequences:
  minor_effect: Your foe is surprised by or has a bad reaction to you for one round, during which time all its tasks are hindered.
  major_effect: A foe forgets about you unless you draw attention to yourself.
  abilities:
-  Slip Into Shadow (2+ Intellect points):
+  - name: Slip Into Shadow
     desc: You attempt to slip away from a selected target and hide from view in a nearby shadow, behind a tree or a furnishing, or into the next room, even if in full view of the target. For each level of Effort applied, you can attempt to affect one additional target, as long as all your targets are next to each other. Action to initiate.
     cost: [2, Intellect]
-  Weird Ability:
+  - name: Weird Ability
     desc: You can choose to learn Danger Sense instead of one of the abilities granted by your type.
-  Danger Sense:
+  - name: Danger Sense
     desc: Your initiative tasks are eased. You pay the cost each time the ability is used. Enabler.
     cost: [1, Speed]
-  Blameless:
+  - name: Blameless
     desc: You are trained in one of the following, deception, stealth, or disguise. Enabler.
     train_choice: [Deception, Stealth, Disguise]
 
@@ -538,10 +538,10 @@ Adjures The Leviathan:
  minor_effect: One additional creature takes no action for a round.
  major_effect: A creature you control takes an immediate extra action of your choice.
  abilities:
-  Adjure Creature:
+  - name: Adjure Creature
     desc: For one minute, you can verbally control a living, nonhumanoid creature of up to level 2 within short range whose motive is some variant of “hungers for flesh,” commanding it to do simple tasks on your behalf. Alternatively, you can force up to three such creatures within range to take no actions for as long as you focus all your attention on them. Every round, each member of the group can attempt to escape your control. Whichever effect you attempt, you can apply Effort to increase the maximum level of the affected creature. Thus, to command a level 4 creature to do simple tasks on your behalf (two levels above the normal limit), you must apply two levels of Effort. Action to initiate.
     cost: [2, Intellect]
-  Ninth World Bestiary Knowledge:
+  - name: Ninth World Bestiary Knowledge
     desc: You are trained in the lore of flesh-eating, nonhumanoid creatures—recognizing them, knowing their weaknesses, and knowing their habits and behaviors. Enabler.
     trained: [In the lore of flesh-eating non-humanoid creatures as well as the specifics in recognising them & knowing their weakness & knowing their havits and behaviors. Monte sort your fucking skill system out]
 
@@ -555,7 +555,7 @@ Augments Flesh With Grafts:
  minor_effect: An upgraded body part is especially effective or efficient at a particular physical task. You gain an asset to similar actions involving the same task (such as making attacks against the same foe or dealing with a physical obstacle).
  major_effect: Your foe is especially vulnerable to some aspect of one of your implants, like an allergy or radiation sensitivity. Make an immediate attack against that foe (using the same stat as the action that caused the major effect). If the attack succeeds, it deals 3 points of damage (ignores Armor).
  abilities:
-  Autodoctor:
+  - name: Autodoctor
     desc: You are trained in healing, performing surgical procedures, and withstanding pain. You can perform surgeries on yourself, remaining conscious while you do so. Enabler.
     trained: [Healing, Performing Surgical Procedures, Withstanding Pain]
 
@@ -571,9 +571,9 @@ Battles Automatons:
  minor_effect: Your automaton foe experiences an error for one round, during which time all tasks it attempts are hindered.
  major_effect: Your automaton foe experiences a major error and loses its next turn.
  abilities:
-  Machine Vulnerabilities:
+  - name: Machine Vulnerabilities
     desc: You inflict 3 additional points of damage against automatons and animate machines of all kinds. Enabler.
-  Anti-Machine Abilities:
+  - name: Anti-Machine Abilities
     desc: You are trained in understanding numenera. In addition, if your type grants you special abilities that inflict damage, they inflict 1 additional point of damage to automatons and similar beings, and 1 fewer point of damage to biological, living targets. If you have abilities that normally would not work against automatons (like mind control), they will now. Enabler.
     trained: [Understanding Numenera]
 
@@ -587,11 +587,11 @@ Brandishes An exotic Shield:
  minor_effect: You bash your target and knock them prone.
  major_effect: Your bash your target, and they are dazed for one minute, during which time their tasks are hindered.
  abilities:
-  Force Field Shield:
+  - name: Force Field Shield
     desc: You manifest a small plane of pure force, which takes on a shield-like shape with the barest flicker of a thought. You can dismiss it just as easily. To use the force shield, you must hold it in one of your hands. You are practiced in using your exotic shield in one hand as a light melee weapon; however, if you attack with both your shield and a weapon held in the other hand, both attacks are hindered. When you are unconscious or sleeping, the force field dissipates. Enabler.
-  Shield Abilities:
+  - name: Shield Abilities
     desc: If you wish, you can replace one of your tier 1 type abilities with Force Fall.
-  Force Fall:
+  - name: Force Fall
     desc: If you fall, you can use your force field shield to absorb the impact of landing and gain +5 Armor against damage you would otherwise take from the fall. Enabler.
     cost: [1, Speed]
 
@@ -607,7 +607,7 @@ Breaks Down Walls:
  minor_effect: Your feat of destruction thrills you. You gain an asset to Speed defense tasks until your next action.
  major_effect: Your feat of destruction inspires you. You knock your opponent off their feet, and they lose their next action.
  abilities:
-  Breaker:
+  - name: Breaker
     desc: You are trained in tasks related to damaging objects with the goal of breaking, piercing, or demolishing them. (It is a Might action to damage an object, and on a success, the object moves one step down the object damage track. If the Might roll exceeds the difficulty by two steps, the object instead moves two steps down the object damage track. If the Might roll exceeds the difficulty by four steps, the object moves three steps down the object damage track and is immediately destroyed. Brittle material reduces the effective level of the object, while hard material like wood or stone adds 1 to the effective level or 2 for very hard objects like those made of metal.) Enabler.
     trained: [Breaking, Piercing, Demolishing]
 
@@ -623,12 +623,12 @@ Builds Tomorrow:
  minor_effect: You are elated with how well an object you crafted is functioning, easing Speed defense tasks for the next round.
  major_effect: The object or structure creates some startling effect that causes the foe to lose their next turn.
  abilities:
-  Natural Crafter:
+  - name: Natural Crafter
     desc: You are trained in crafting numenera. Enabler.
     trained: [Crafting Numenera]
-  Seeds of a Plan:
+  - name: Seeds of a Plan
     desc: You immediately gain two new plans to create any object of up to level 3 plus your tier. Each time you advance a tier, you can gain two additional plans of up to level 3 plus your tier. Enabler.
-  Starting Iotum:
+  - name: Starting Iotum
     desc: You have, find, or otherwise obtain a cache of iotum sufficient to build one installation or cypher that you have a plan for. Enabler.
 
 Dances With Dark Matter:
@@ -641,7 +641,7 @@ Dances With Dark Matter:
  minor_effect: Darkness is drawn to your foe’s eyes, hindering any attacks the foe attempts on its next turn.
  major_effect: Darkness thickens and momentarily clogs your foe’s throat like a wad of felt. Coughing and choking, they lose their next turn.
  abilities:
-  Ribbons of Dark Matter:
+  - name: Ribbons of Dark Matter
     desc: For the next minute, dark matter condenses within an area within long range that is no bigger than an immediate distance in diameter, manifesting as swirling ribbons. All tasks attempted by creatures in the area are hindered, and leaving the area requires the creature’s entire action to move. You can dismiss the dark matter early as an action. Action to initiate.
     cost: [2, Intellect]
 
@@ -657,10 +657,10 @@ Defends The Gate:
  minor_effect: The target is pushed back by your strong defense, so much so that it’s dazed for one round, during which time its tasks are hindered.
  major_effect: Make an additional attack with your weapon on your turn.
  abilities:
-  Fortified Position:
+  - name: Fortified Position
     desc: For the next minute, you gain +1 Armor and an asset to your Might defense tasks, as long as you haven’t moved more than an immediate distance since your last turn. Action to initiate.
     cost: [2, Might]
-  Rally to Me:
+  - name: Rally to Me
     desc: You cry out, blow a battle horn, or otherwise signal to everyone within very long range that you require aid. All allied creatures who respond by moving to within an immediate distance of you within the next few rounds gain one asset on any one attack or defense task within the next hour that you suggest, such as “hold the gate,” “charge that group of abhumans,” or something similar. Action to initiate.
     cost: [2, Intellect]
 
@@ -676,10 +676,10 @@ Defends The Weak:
  minor_effect: You can draw an attack without having to use an action at any point before the end of the next round.
  major_effect: You can take an extra action, though you can use this action only to stand guard.
  abilities:
-  Courageous:
+  - name: Courageous
     desc: You are trained in Intellect defense tasks and initiative tasks. Enabler.
     trained: [Intellect Defence Tasks, Initiative Tasks]
-  Warding Shield:
+  - name: Warding Shield
     desc: You have +1 to Armor while you are using a shield. Enabler.
     pool_bonus: [[1, Armor]]
 
@@ -695,11 +695,12 @@ Descends From Nobility:
  minor_effect: The next time you attempt to command, captivate, or otherwise influence the same foe, the task is eased.
  major_effect: The foe is influenced, captivated, or otherwise affected by your ability for twice as long as normal.
  abilities:
-  Privileged Nobility:
+  - name: Privileged Nobility
     desc: You are adept at claiming the rewards that a noble background can generate. When recognized, you can be seated at any eating establishment no matter how full, get a room in an inn even if that means others are turned out, be let into any court or other structure where laws are decided or nobility rules, be invited to any gala, and get a seat at a private function of any sort. In addition, you are trained in persuasion. Enabler.
-  Noble Advantage:
+  - name: Noble Advantage
     desc: If you wish, you can swap an ability gained from your type for the following.
-    Servant:
+    subability:
+      name: Servant
       desc: Your name entitles you to a level 2 follower. One of their modifications must be for tasks related to serving as your personal assistant. You can ask your servant to deliver things for you, run messages, pick up objects of interest or items on a list—pretty much whatever you want, within reason. They can also run interference if you’re trying to avoid someone, help hide you from the attention of others, help you muscle through a crowd, and so on. Enabler.
 
 Emerged From The Obelisk:
@@ -714,9 +715,9 @@ Emerged From The Obelisk:
  minor_effect: Your foe is dazed for one round, during which time all their tasks are hindered.
  major_effect: Your foe loses their next turn.
  abilities:
-  Crystalline Body:
+  - name: Crystalline Body
     desc: You are composed of animate, translucent crystal the color of amber. Work with your GM to decide your exact form, though it is likely about the shape and size of a humanoid. Your crystal body grants you +2 to Armor and +4 to your Might Pool. However, you’re not quick and your Speed defense tasks are hindered. Certain conditions, like mundane diseases and poisons, do not affect you. Enabler.
-  Special Healing:
+  - name: Special Healing
     desc: Your crystalline body repairs itself more slowly than that of living flesh. You have only the one-round, one-hour, and tenhour recovery rolls available each day; you do not have a ten-minute recovery roll available. Any ability you have that requires a ten-minute recovery roll instead requires a one-hour recovery roll. Enabler.
 
 Explores Yesterday:
@@ -731,7 +732,7 @@ Explores Yesterday:
  minor_effect: You can take an extra action. You may use this action only to perform a movement-related activity or a knowledge-based activity, such as trying to climb a treacherous cliff or attempting to decipher strange cave markings.
  major_effect: Speed defense tasks you attempt before the end of the next round are eased.
  abilities:
-  Trained Excavator:
+  - name: Trained Excavator
     desc: You are trained in perception, climbing, and salvaging numenera tasks. Enabler.
     trained: [Perception, Climbing Salvaging Numenera]
 
@@ -747,7 +748,7 @@ Fights With A Horde:
  minor_effect: Your foe is knocked to the ground.
  major_effect: Your foe is held immobile and can’t take their next turn.
  abilities:
-  Teamwork:
+  - name: Teamwork
     desc: Through example, acts of camaraderie, stories of martial prowess, or other forms of instruction, you and your allies work better together as a cohesive unit. During any round in which you rally your team (by spending 2 Intellect points as part of another action), you and your allies inflict 1 additional point of damage in combat. This benefit applies only to allies with whom you have spent the last 28 hours. It ends if you leave, but it resumes if you return to your allies’ company within 28 hours. If you leave for more than 28 hours, you must spend another 28 hours together to reactivate the benefit. Enabler.
 
 Fuses Mind And Machine:
@@ -762,9 +763,9 @@ Fuses Mind And Machine:
  minor_effect: You foresee your foes’ moves so well that your Speed defense rolls for the next round gain an asset.
  major_effect: Processing surge! On your next action, you can use points from your Intellect Pool on Might or Speed tasks.
  abilities:
-  Mechanical Assistance:
+  - name: Mechanical Assistance
     desc: You gain +4 to your Intellect Pool through the use of implants and tiny processing devices. Enabler.
-  Stored Memories:
+  - name: Stored Memories
     desc: You are trained in one area of knowledge of your choice (history, geography, astronomy, and so on). Enabler.
 
 Hunts Abhumans:
@@ -777,9 +778,9 @@ Hunts Abhumans:
  minor_effect: Your foe is so intimidated by your prowess that it backs away, unwilling to attack. It can still defend itself.
  major_effect: Your foe is terrified by your skill and flees.
  abilities:
-  Tracker and Hunter:
+  - name: Tracker and Hunter
     desc: You are trained in tracking, looking for, interacting with, and hiding from abhumans. Enabler.
-  Abhuman Fighter:
+  - name: Abhuman Fighter
     desc: You inflict 2 additional points of damage when fighting abhumans. Enabler.
 
 Imparts Wisdom:
@@ -792,15 +793,16 @@ Imparts Wisdom:
  minor_effect: You don’t have to use an action ahead of time to use your next Learning the Path or Imparting the Path ability.
  major_effect: Intuition flares, and you can ask the GM one question about what you’re looking at.
  abilities:
-  Learning the Path:
+  - name: Learning the Path
     desc: You observe or study a creature, object, or location for at least one round. The next time you interact with it (possibly in the following round), a related task (such as persuading the creature, attacking it, or defending from its attack) is eased. Action.
     cost: [2, Intellect]
-  Wisdom Benefits:
+  - name: Wisdom Benefits
     desc: If you wish, you can swap an ability gained from your type for the following.
-    Philosophic Confusion:
+    subability:
+      name: Philosophic Confusion
       desc: Your esoteric words confuse a creature that can understand you, making it stand without taking actions as it attempts to pierce the puzzle set before it. For as long as you do nothing but pontificate (you can’t even move), the other creature takes no actions other than to defend itself, even over multiple rounds. If the creature is attacked, the effect ends. If you have a type ability that accomplishes the same thing, you can attempt to use either ability on two creatures at a time. Action.
       cost: [1, Intellect]
-  Philosophy:
+  - name: Philosophy
     desc: You are trained in two areas of knowledge of your choice.
     train_choice2: [Astronomy, Economics, Geography, Geology, History, Literature, Philosophy]
 
@@ -816,9 +818,9 @@ Leads:
  minor_effect: The next time you attempt to command, captivate, or otherwise influence the same foe, the task is eased.
  major_effect: The foe is influenced, captivated, or otherwise affected by your ability for twice as long as normal.
  abilities:
-  Natural Charisma:
+  - name: Natural Charisma
     desc: You are trained in all social interactions, whether they involve charm, learning a person’s secrets, or intimidating others. Enabler.
-  Good Advice:
+  - name: Good Advice
     desc: Anyone can help an ally, easing whatever task they’re attempting. However, you have the benefit of clarity and wisdom. When you help another character, they gain an additional asset. Enabler.
 
 Learns From Adversity:
@@ -833,9 +835,9 @@ Learns From Adversity:
  minor_effect: The range or duration of one of your abilities is doubled.
  major_effect: You can take another action on the same turn.
  abilities:
-  Quicker Than Most:
+  - name: Quicker Than Most
     desc: Experience has honed your reaction times, because those who act first gain the advantage in most situations. You’re trained in tasks related to initiative, seeing underlying patterns, and solving puzzles. Enabler.
-  Toughened Up:
+  - name: Toughened Up
     desc: Adversity has made you tougher. You gain +3 to your Might Pool. Enabler.
     pool_bonus: [[3, Might]]
 
@@ -851,10 +853,10 @@ Metes Out Justice:
  minor_effect: You shame or intimidate your foe so much that they are shaken and use their next turn to flee.
  major_effect: You mark your foe permanently with a distinctive scar so that their guilt will be known by all.
  abilities:
-  Make Judgment:
+  - name: Make Judgment
     desc: You are trained in discerning the truth of a situation, seeing through lies, or otherwise overcoming deception. Enabler.
     trained: [Discerning truth, seeing through lies, overcoming deception]
-  Designation:
+  - name: Designation
     desc: You assign an innocent or guilty label to one creature within immediate range, based on your assessment of a given situation or a predominant feeling. In other words, someone who is labeled innocent can be innocent in a certain circumstance, or they can be generally innocent of terrible crimes (such as murder, major theft, and so on). Likewise, you can declare that a creature is guilty of a particular crime or of terrible deeds in general. The accuracy of your assessment isn’t important as long as you believe it to be the truth; the GM may require you to give a rationale. Henceforth, your tasks to socially interact with someone you designate as innocent gain an asset, and your attacks against those you designate as guilty gain an asset. You can change your assessment, but it requires another designation action. The benefits of the designation last until you change it or until you are shown proof that it is wrong. Action.
 
 Moves Like A Cat:
@@ -867,10 +869,10 @@ Moves Like A Cat:
  minor_effect: You restore 2 points to your Speed Pool.
  major_effect: You can take a second action this round.
  abilities:
-  Reflexes:
+  - name: Reflexes
     desc: You gain +5 to your Speed Pool. Enabler.
     pool_bonus: [[5, Speed]]
-  Balance:
+  - name: Balance
     desc: You are trained in balancing. Enabler.
     trained: [Balancing]
 
@@ -884,9 +886,9 @@ Needs No Weapons:
  minor_effect: You trip your target and knock them prone.
  major_effect: You strike your target in a limb, making that limb useless for the next minute.
  abilities:
-  Fists of Fury:
+  - name:  Fists of Fury
     desc: You inflict 2 additional points of damage with unarmed attacks. Enabler.
-  Flesh of Stone:
+  - name:  Flesh of Stone
     desc: You have +1 to Armor if you do not wear physical armor. Enabler.
     pool_bonus_cond: [1, Armor]
 
@@ -900,9 +902,9 @@ Never Says Die:
  minor_effect: You restore 2 points to your Might Pool.
  major_effect: Your next action is eased by two steps.
  abilities:
-  Rapid Recovery:
+  - name:  Rapid Recovery
     desc: Your ten-minute recovery roll takes only one action instead, so that your first two recovery rolls are one action, the third is one hour, and the fourth is ten hours. Enabler.
-  Push on Through:
+  - name:  Push on Through
     desc: You ignore the effects of terrain while moving for one hour. Enabler.
     cost: [2, Might]
 
@@ -918,11 +920,11 @@ Possesses A Shard Of The Sun:
  minor_effect: A flash of light leaves the creature dazzled, and its defense tasks are hindered for one round.
  major_effect: An intense flash of light leaves the creature blinded for one minute.
  abilities:
-  Enlightened:
+  - name: Enlightened
     desc: You are trained in any perception task that involves sight. Enabler.
-  Radiant Abilities:
+  - name: Radiant Abilities
     desc: If you perform esoteries or similar abilities, those that would normally use force or other energy instead use light and heat. For example, when you use Ward, light dapples your body and flares when you would be attacked, preventing your enemies from landing a solid blow.
-  Illuminating Touch:
+  - name: Illuminating Touch
     desc: You touch an object, and that object sheds light to illuminate everything in short range. The light remains until you use an action to touch the object again, or until you’ve illuminated more objects than you have tiers, in which case the oldest objects you illuminated go dark first. Action.
     cost: [1, Intellect]
 
@@ -938,7 +940,7 @@ Radiates Vitality:
  minor_effect: You spontaneously regain 1 point in one of your stat Pools.
  major_effect: You spontaneously regain 2 points in two of your stat Pools.
  abilities:
-  Mighty:
+  - name: Mighty
     desc: Your biomorphic field sustains you. You gain +6 to your Might Pool. Enabler.
     pool_bonus: [[6, Might]]
 
@@ -954,7 +956,7 @@ Sees Beyond:
  minor_effect: The period of concentration needed is cut in half.
  major_effect: You see even more than you normally do and can ask the GM one question about what you’re looking at.
  abilities:
-  See the Unseen:
+  - name: See the Unseen
     desc: You can automatically perceive creatures and objects that are normally invisible, out of phase, or only partially in this universe. When looking for things more conventionally hidden, the task is eased. Enabler.
 
 Shepherds The Community:
@@ -967,10 +969,10 @@ Shepherds The Community:
  minor_effect: Your foe is so intimidated by your dedication that it backs away, unwilling to attack on its next turn. It can still defend itself.
  major_effect: Your foe is terrified by your dedication and flees.
  abilities:
-  Community Knowledge:
+  - name: Community Knowledge
     desc: If you’ve invested yourself in a community and have spent at least a few months living there, you can learn things about it through a variety of methods. Sometimes contacts slip the information to you. Other times, you’re able to draw conclusions simply by what you can see and hear. When you use this ability, you can ask the GM one question about the community and get a very short answer. Action.
     cost: [2, Intellect]
-  Community Activist:
+  - name: Community Activist
     desc: When speaking to others in the community you foster, you are trained in persuasion and intimidation tasks about topics that directly relate to the community. Enabler.
     trained: [Persuasion, Intimidation]
 
@@ -984,10 +986,10 @@ Shreds The Walls Of The World:
  minor_effect: The target is dazed, and their next action is hindered.
  major_effect: The target is stunned and loses their next action.
  abilities:
-  Phase Sprint:
+  - name: Phase Sprint
     desc: You can run up to a long distance as long as you take no other actions. During your action and until the beginning of your next turn, you are partially phased, and some attacks pass through you harmlessly. While phased, you gain an asset to your Speed defense tasks, but you lose any benefit from armor you wear. Note that some of your other special abilities enable specific actions that you can take while using Phase Sprint. For instance, when using Disrupting Touch, you can make one touch attack while moving (though this ends your movement). Action.
     cost: [1, Speed]
-  Disrupting Touch:
+  - name: Disrupting Touch
     desc: You can turn your Phase Sprint into a melee attack by purposefully grazing another creature as you run. When you do, the touch releases a violent blast of energy that inflicts 2 points of damage to the target (ignores Armor). Whether you hit or miss, your movement (and turn) ends immediately, which puts you within immediate distance of your target. If you apply Effort to increase damage rather than to ease the task, you deal 2 additional points of damage per level of Effort (instead of 3 points); the target takes 1 point of damage even if you fail the attack roll. Enabler.
     cost: [1, Might]
 
@@ -1001,7 +1003,7 @@ Thunders:
  minor_effect: The sound knocks the target to the ground.
  major_effect: The sound deafens the target for about a minute, during which time it is dazed.
  abilities:
-  Thunder Beam:
+  - name:  Thunder Beam
     desc: You direct a beam of focused sound at a target within long range, inflicting 2 points of damage and inducing a resonant destructive wave in their body. Each round after this initial attack, you can make another roll for the destructive wave to inflict an additional 1 point of damage to the target. If you fail this roll, the destructive wave ends. Unlike the initial attack, the destructive wave ignores Armor. Alternatively, you can set up a destructive resonance in a physical melee weapon for one minute or until you let go of it. All attacks made with the target weapon inflict 1 additional point of damage. Action to initiate.
     cost: [2, Might]
 
@@ -1017,12 +1019,13 @@ Touches The Sky:
  minor_effect: The target is dazed, and their next action is hindered.
  major_effect: The target is stunned and loses their next action.
  abilities:
-  Hover:
+  - name: Hover
     desc: You float slowly into the air. As your action, you can concentrate to remain motionless in the air or float up to a short distance, but no more; otherwise, you drift with the wind or with any momentum you have gained. This effect lasts for up to ten minutes. If you also have the Hover ability granted by your type, you can hover for twenty minutes and move your normal speed. Action to initiate.
     cost: [1, Intellect]
-  Weather Abilities:
+  - name: Weather Abilities
     desc: If you wield powers that would normally use force or other energy, they instead use various effects generated by extreme weather. For example, a blast of energy could be a wind blast, a blast of blizzard cold, or a small bolt of lightning. Also, if you wish, you can swap an ability gained from your type for the following.
-    Zap:
+    subability:
+      name: Zap
       desc: You attack a foe within short range with an electrical discharge that inflicts 4 points of damage and dazes your target so that its next action is hindered. Action.
       cost: [2, Intellect]
 
@@ -1036,10 +1039,10 @@ Wields Words Like Weapons:
  minor_effect: The target is dazed for a round, hindering all tasks they attempt on their next turn.
  major_effect: The target is favorably disposed toward you for days or more.
  abilities:
-  How Others Think:
+  - name: How Others Think
     desc: You have a sense of how people think. You’re trained in one of the following tasks Persuasion, Deception, or Detecting Falsehoods. Enabler.
     train_choice: [Persuasion, Deception, Detecting Falsehoods]
-  Misdirect Blame:
+  - name: Misdirect Blame
     desc: Using your clever words and knowledge of others, you can attempt to alter the narrative so that a target of up to level 3 within short range becomes uncertain of its conviction in one simple area, such as their conviction that you just stole a fruit from their stand or their belief that they’ve never met you before. This effect usually lasts only for the period of time you spend speaking, and perhaps up to a minute longer, before the target realizes its error. In addition to the normal options for using Effort, you can also choose to use Effort to increase the target level that can be affected. Afterward, all your tasks to persuade or otherwise socially interact with the target are hindered. Action.
     cost: [2, Intellect]
 
@@ -1055,10 +1058,10 @@ Exists In Two Places At Once:
  minor_effect: For your target, the difficulty of the next task it attempts involving you or your duplicate before the end of the next round is increased by one step.
  major_effect: You have an asset on the next roll you make within the next hour.
  abilities:
-  Duplicate:
+  - name: Duplicate
     desc: You cause a duplicate of yourself to appear at any point you can see within short range. The duplicate has no clothing or possessions when it appears. The duplicate is a level 2 nonplayer character with 6 health. The duplicate obeys your commands and does as you direct it. The duplicate remains until you dismiss it using an action or until it is killed. When the duplicate disappears, it leaves behind anything it was wearing or carrying at the time it disappeared. If the duplicate disappears because it was killed, you take 4 points of damage that ignore Armor, and you lose your next action. Action to initiate.
     cost: [2, Might]
-  Four Hands Are Better Than Two:
+  - name: Four Hands Are Better Than Two
     desc: When you and your duplicate work together to complete a task, the difficulty of that task is decreased by one step (if cooperation would be helpful).
 
 Explores Deep Waters:
@@ -1073,14 +1076,16 @@ Explores Deep Waters:
  minor_effect: You can take an extra action. You may use this action only to move or perform a movement-related activity.
  major_effect: The difficulty of any Speed defense actions you make before the end of the next round is reduced by one step.
  abilities:
-  Diver: You can safely dive into water from heights of up to 100 feet (30 m), and you can withstand pressure when in water as deep as 100 feet (30 m). Enabler.
-  Water Esoteries: If you perform esoteries, those that would normally use force or other energy instead use water or ice. For example, Onslaught might create a wave of water that crashes down on your target. In addition, you can swap out one of the esoteries you learned for the following.
-  Create Water:
+  - name: Diver 
+    desc: You can safely dive into water from heights of up to 100 feet (30 m), and you can withstand pressure when in water as deep as 100 feet (30 m). Enabler.
+  - name: Water Esoteries 
+    desc: If you perform esoteries, those that would normally use force or other energy instead use water or ice. For example, Onslaught might create a wave of water that crashes down on your target. In addition, you can swap out one of the esoteries you learned for the following.
+  - name: Create Water
     desc: You cause water to bubble up from a spot on the ground you can see. The water flows from that spot for one minute, creating about 1 gallon (3.8 liters) by the time it stops.
     cost: [2, Intellect]
-  Hold Breath:
+  - name: Hold Breath
     desc: You can hold your breath for up to five minutes. Enabler.
-  Trained Swimmer:
+  - name: Trained Swimmer
     desc: While underwater, you are trained in escaping, perception, sneaking, and swimming tasks, as well as in tasks to identify aquatic creatures and geography. Enabler.
     trained: [Perception, Sneaking, Swimming]
 
@@ -1096,9 +1101,9 @@ Fights Dirty:
  minor_effect: You manage to make your foe trip and fall prone.
  major_effect: You tangle something around your foe’s legs, and he not only falls down but also loses his next turn.
  abilities:
-  Taking Advantage:
+  - name: Taking Advantage
     desc: When your foe is weakened, dazed, stunned, moved down the damage track, or disadvantaged in some other way, the difficulty of your attacks against that foe is decreased by one step beyond any other modifications due to the disadvantage. Enabler.
-  Liar:
+  - name: Liar
     desc: You are trained in all forms of deception. Enabler.
     trained: [Deception, Persuasion, Fib Tell', Made-up Skulldugaryness]
 
@@ -1112,10 +1117,10 @@ Focuses Two Personalities:
  minor_effect: You knock your foe off its feet with your strength and size.
  major_effect: Even as you attack with your bursk sensibilities, you size up your foe with your neem focus. The difficulty of your next attack against the foe is decreased by two steps.
  abilities:
-  Greater Fugue State:
+  - name: Greater Fugue State
     desc: In addition to being trained in perception, while in fugue state you are also trained in breaking things and all interactions with others. Enabler.
     trained: [Perception]
-  Easier Change:
+  - name: Easier Change
     desc: The default difficulty of changing your state is 2 instead of 4. Enabler.
 
 Hunts Mutants:
@@ -1130,7 +1135,7 @@ Hunts Mutants:
  minor_effect: Your foe is so intimidated by your prowess that it backs away, unwilling to attack. It can still defend itself.
  major_effect: Your foe is disrupted and off balance and can’t use any special powers that require an action for two rounds.
  abilities:
-  Mutant Fighter:
+  - name: Mutant Fighter
     desc: You inflict 3 additional points of damage when fighting mutants. Enabler.
 
 Masters Insects:
@@ -1145,7 +1150,7 @@ Masters Insects:
  minor_effect: The insect swarm is particularly thick and angry, and everyone within it suffers 1 point of damage this round.
  major_effect: Everyone within the insect swarm suffers 3 points of damage this round.
  abilities:
-  Influence Insects:
+  - name: Influence Insects
     desc: Insects within short range will not harm you or those you designate as allies for one hour. Action to initiate.
     cost: [1, Intellect]
 
@@ -1161,7 +1166,7 @@ Performs Feats Of Strength:
  minor_effect: You knock the creature to the ground.
  major_effect: You send the creature flying through the air so that it lands on the ground in a heap 1d20 feet away from you.
  abilities:
-  Athlete:
+  - name: Athlete
     desc: You are trained in carrying, climbing, jumping, and smashing. Enabler. Strong. Your Might Edge increases by 1. Enabler.
     trained: [Carrying, Climbing, Jumping, Smashing]
 
@@ -1175,9 +1180,9 @@ Reforges Completely:
  minor_effect: You restore 2 points to one of your stat Pools.
  major_effect: The difficulty of your next action is decreased by two steps.
  abilities:
-  Rapid Reforging:
+  - name: Rapid Reforging
     desc: Your reforging can be completed in an action, not an hour. Action.
-  Suitability:
+  - name: Suitability
     desc: You have 3 additional points to permanently distribute among your stat Pools, as you wish. Enabler.
     additional_points: 3
 
@@ -1193,10 +1198,10 @@ Separates Mind From Body:
  minor_effect: You have an asset on any action that involves using your senses, such as perceiving or attacking, until the end of the next round.
  major_effect: Your Intellect Edge increases by 1 until the end of the next round.
  abilities:
-  Third Eye:
+  - name: Third Eye
     desc: You visualize a place within short range and cast your mind to that place, creating an immobile, invisible sensor for one minute or until you choose to end this ability. While using your third eye, you see through your sensor instead of your eyes using your normal visual abilities. You may perceive the area around your body using your other senses as normal. Action.
     cost: [1, Intellect]
-  Mental Esoteries:
+  - name: Mental Esoteries
     desc: If you have the Mind Reading or Sensor esotery, you’re automatically trained in it. If you have both, you’re trained in both. Enabler.
 
 Siphons Power:
@@ -1209,7 +1214,7 @@ Siphons Power:
  minor_effect: When draining, you gain 2 additional points to divide among your Speed Pool and Might Pool.
  major_effect: When draining, you gain 5 additional points to divide among your Speed Pool and Might Pool.
  abilities:
-  Drain Machine:
+  - name: Drain Machine
     desc: You can drain the power from an artifact or device you touch, allowing you to regain 1 point per level of the device. You can use this point to restore your Might Pool or Speed Pool. You regain points at the rate of 1 point per minute and must give your full concentration to the process during this time. The GM determines whether the device is fully drained (likely true of most handheld or smaller devices) or retains some power (likely true of large machines). Action to initiate.
     cost: [2, Intellect]
 
@@ -1225,10 +1230,10 @@ Stands Like A Bastion:
  minor_effect: You add +2 to Armor.
  major_effect: You regain 2 points to your Might Pool.
  abilities:
-  Experienced Defender:
+  - name: Experienced Defender
     desc: If you wear armor of any kind, you gain +1 to Armor.
     pool_bonus_cond: [1, Armor]
-  Practiced in Armor:
+  - name: Practiced in Armor
     desc: You can wear armor for long periods of time without tiring and can compensate for slowed reactions from wearing armor. You can wear any kind of armor. You reduce the Might cost per hour for wearing armor and the Speed Pool reduction for wearing armor by 2. Enabler.
 
 Throws With Deadly Accuracy:
@@ -1243,7 +1248,7 @@ Throws With Deadly Accuracy:
  minor_effect: You hit your target in the eye and blind him for one round.
  major_effect: You strike your target in a limb, making that limb useless for the next minute.
  abilities:
-  Precision:
+  - name: Precision
     desc: You deal 2 additional points of damage with attacks using weapons that you throw. Enabler.
 
 Travels Through Time:
@@ -1258,10 +1263,10 @@ Travels Through Time:
  minor_effect: One creature you choose within short range either acts first or acts last during the next round.
  major_effect: You step a few moments into the future. To other characters, it looks as if you disappeared. At the start of the next round, you reappear and you have an asset for any task you perform during that round.
  abilities:
-  Anticipation:
+  - name: Anticipation
     desc: You look ahead to see how your actions might unfold. You have an asset for the first task you perform before the end of the next round. Enabler.
     cost: [1, Intellect]
-  Temporal Esoteries:
+  - name: Temporal Esoteries
     desc: If you perform esoteries, time appears to slow down when you use them. You and everything around you moves in slow motion for a moment, and then time snaps back into place. The temporal distortion changes nothing about the effects of your esoteries except for the appearance of the world around you.
 
 # Numenera: Character Options 2
@@ -1278,10 +1283,10 @@ Abides In Crystal:
  minor_effect: Blinded by a glint of light from one of your crystals, the difficulty of an opponent’s actions is modified by one step to its detriment.
  major_effect: While within a crystal, you are infused with additional energy, and the difficulty of all tasks you attempt is decreased by one step for ten minutes.
  abilities:
-  Fuse Into Crystal:
+  - name: Fuse Into Crystal
     desc: You transfer your body and whatever you are wearing and holding into a crystal at least the size of your index finger. While in the crystal, you are in complete stasis, unaware of anything that transpires. You exit the crystal when some predetermined trigger occurs involving the crystal (it is tapped, it gets ten degrees warmer, someone says your name into the crystal, etc.) or when 28 hours pass, whichever comes first. If the crystal is destroyed or significantly damaged while you are within it, you immediately exit, cannot act for three rounds, and move two steps down the damage track. Action to initiate.
     cost: [2, Intellect]
-  Crystalline Esoteries:
+  - name: Crystalline Esoteries
     desc: If you perform esoteries, those that inflict damage do so by creating sharp shards of crystal that are hurled with great force. Protective esoteries use crystalline shields or armor. And so on.
 
 Abuses Alchemy:
@@ -1296,12 +1301,12 @@ Abuses Alchemy:
  minor_effect: Your drug is better than expected. You gain an asset to Speed defense rolls for one round.
  major_effect: Your drug is far better than expected. You gain an asset to Speed defense rolls and an asset to attack rolls for one round.
  abilities:
-  Alchemical Dependence:
+  - name: Alchemical Dependence
     desc: You are trained in alchemical tasks. In addition, you take a daily regimen of special drugs you’ve designed to work with your body in particular, drugs that have slowly adapted your muscles and organs, allowing you to accept still more concentrated doses. In effect, you’ve enhanced yourself with permanent abilities while you keep taking your daily dose of drugs. You can change your matrix of active daily abilities by choosing to take a different complement of drugs on a given day, assuming you have the recipe in your manual and ingredients for granting yourself that ability. You can have only one active ability of a given tier at a time. To make the switch, spend ten minutes studying your manual, preparing a new alchemical concoction, and finally taking it, after which time your activity ability is changed out. You can choose to change your active abilities up to twice per day, immediately after a one-hour or ten-hour recovery roll. Others who’ve taken your drugs experienced life-threatening reactions the few times you’ve experimented. Choose one of the following abilities as your active alchemical ability for tier 1.
     trained: [Alchemy]
-  Deadly Reflexes:
+  - name: Deadly Reflexes
     desc: You deal 1 additional point of damage with every attack you make. Enabler.
-  Densely Muscled:
+  - name: Densely Muscled
     desc: Your alchemical infusion provides +1 to your Might Edge, and 3 additional points to your Might Pool. Enabler.
     pool_bonus: [[1, MightEdge], [3, Might]]
 
@@ -1315,10 +1320,10 @@ Becomes Energy:
  minor_effect: You get an additional +1 to Armor for one minute with Energy Skin.
  major_effect: You blaze with blinding energy. Nearby opponents are blinded for one round.
  abilities:
-  Energy Skin:
+  - name: Energy Skin
     desc: You convert a thin outer layer of your skin into a glowing shield of energy that gives you +1 to Armor for up to one hour, until you dismiss the effect and convert the shield back into the outer layer of your skin, or until you choose to release the charge using one of your other abilities. Enabler.
     cost: [1, Intellect]
-  Release Energy Blast:
+  - name: Release Energy Blast
     desc: If you have energized your skin (using Energy Skin), you can release that energy in a blast that strikes a single foe within long range for 5 points of damage; however, you suffer 1 point of damage (ignores Armor) as you lose part of your mass if your d20 attack roll is an odd (as opposed to an even) result. Action.
 
 Charges Right In:
@@ -1331,10 +1336,10 @@ Charges Right In:
  minor_effect: Your charge is faster and more agile than usual. You gain an asset to Speed defense rolls until your next action.
  major_effect: Your charge is more powerful than normal, and you knock your opponent off their feet and they lose their next action.
  abilities:
-  Quick to Act:
+  - name: Quick to Act
     desc: You are trained in initiative tasks. Enabler.
     trained: [Initiative]
-  Charge Attack:
+  - name: Charge Attack
     desc: You can move a short distance and still make an attack as part of the same action, assuming you are running toward your foe. Enabler.
     cost: [1, Speed]
 
@@ -1348,10 +1353,10 @@ Conceals The Truth:
  minor_effect: Your lie is so simple that the target hardly even thinks twice about you, or what you’re doing.
  major_effect: Not only are you believed, your target will intervene on your behalf to defend your good name.
  abilities:
-  Natural Born Liar:
+  - name: Natural Born Liar
     desc: You have an asset on all tasks related to deceiving others. Enabler.
     asset: [Deception]
-  Stealth Skills:
+  - name: Stealth Skills
     desc: "You are trained in your choice of one of the following skills: disguise, deception, lockpicking, pickpocketing, seeing through deception, sleight of hand, or stealth. Enabler."
     trained_choice: [Disguie, Deception, Lockpicking, Pickpocketing, Seeing Through Deception, Sleight of Hand, Stealth]
 
@@ -1367,10 +1372,10 @@ Devotes Everything To The Cause:
  minor_effect: After you describe what you fight for, your foe must process it and is dazed for one round, during which time the difficulty of all tasks it performs is modified by one step to its detriment.
  major_effect: After interacting with you, your foe is seeded with a grain of your fervor. If your foe survives, several weeks later, they begin to act as if they support your cause.
  abilities:
-  Fanatic:
+  - name: Fanatic
     desc: Your devotion pays dividends. Long study, practice, and exercise means you gain 4 additional points to your Pools, divided up as you wish. Each time you gain a tier, you can choose to redistribute these 4 points as you wish. Enabler.
     additional_points: 4
-  Masterful:
+  - name: Masterful
     desc: You are trained in a knowledge skill related to your cause.
     trained: [A knowledge skill related to your cause (change as necessary)]
 
@@ -1384,9 +1389,9 @@ Fell From Another World:
  minor_effect: Your latent power for telekinesis sporadically kicks in, making your foe drop its weapon.
  major_effect: Your latent power for telepathy kicks in stronger than ever, mind-jolting your foe so that it loses its next turn.
  abilities:
-  Uncanny:
+  - name: Uncanny
     desc: You unsettle humans and other creatures that haven’t met a person of your heritage before. You can capitalize on that reaction and use it as an asset in most social interactions, whether you’re able to persuade someone because they give undue credence to your oddness, intimidate someone for the same reason, or deceive someone who can’t read your tells. Enabler.
-  Alien Knowledge:
+  - name: Alien Knowledge
     desc: You’re trained in one esoteric knowledge skill; that skill could be the numenera or something related to higher math, the history of your world, the mechanics of time travel, and so on.
     trained_choice: [Crafting Numenera, Understanding Numenera, Salvaging Numenera, Alien History, Higher Math, The Mechanics of Time Travel]
 
@@ -1402,7 +1407,7 @@ Figures Things Out:
  minor_effect: You don’t have to use an action observing to make your Applied Observation or attempt at Filling in the Details.
  major_effect: Intuition flares, and you gain an asset on your task.
  abilities:
-  Applied Observation:
+  - name: Applied Observation
     desc: You observe or study a creature, object, or location for at least one round. The next time you interact with it (possibly in the following round), the difficulty of a related task (such as persuading the creature, attacking it, or defending from its attack) is reduced by one step. Action.
 
 Forges A Bond:
@@ -1415,9 +1420,9 @@ Forges A Bond:
  minor_effect: Your bonded friend is so impressed by your action that they gain an asset on their next task.
  major_effect: The bond between you and your friend is strengthened to the point that one of you (you both agree on the choice) can take an immediate additional action.
  abilities:
-  Share Focus:
+  - name: Share Focus
     desc: You pick one person to be your closest friend—a friend so close that you forge a bond that takes on supernormal qualities. You gain any and all abilities of your friend’s focus, and you both gain abilities (and potentially drawbacks) from your focus (this one).
-  Bond:
+  - name: Bond
     desc: Whenever you and your friend are within immediate distance, one of you (but not both) gains an asset on whatever task they attempt in a given round. The two must mutually agree each round who gets the asset. Unfortunately, if you and your friend are not at least within long range of each other, the difficulty of all tasks for both of you is increased by one step. If one of you ever dies, the difficulty of all tasks for the other is increased by one step for a year. If you are alive but your friend isn’t, after this year, you can choose a new person to bond with. Enabler.
 
 Gazes Into The Abyss:
@@ -1432,10 +1437,10 @@ Gazes Into The Abyss:
  minor_effect: The target is so intimidated by your bestial attack that it is dazed for one round, during which time the difficulty of all tasks it performs is modified by one step to its detriment.
  major_effect: Your foe is disrupted and off balance by your bestial attack, and can’t use any special powers that require an action for two rounds.
  abilities:
-  Beast:
+  - name: Beast
     desc: Your monstrous form is both powerful and hideous. You gain +4 to your Might Pool, and +1 to your Might Edge. Enabler.
     pool_bonus: [[4, Might], [1, MightEdge]]
-  Natural Weapons:
+  - name: Natural Weapons
     desc: You can make a melee attack with your claws, teeth, tentacles, or whatever you are equipped with. The attack inflicts 4 points of damage. Action.
 
 Likes To Break Things:
@@ -1450,9 +1455,9 @@ Likes To Break Things:
  minor_effect: The difficulty of the next task to break something is reduced by one step.
  major_effect: The object held by the NPC shatters.
  abilities:
-   Feat of Strength:
-     desc: The difficulty of any task that depends on brute force is decreased by one step. Examples include smashing down a barred door, tearing open a locked container, lifting or moving a heavy object, or striking someone with a melee weapon. Enabler.
-     cost: [1, Might]
+  - name: Feat of Strength
+    desc: The difficulty of any task that depends on brute force is decreased by one step. Examples include smashing down a barred door, tearing open a locked container, lifting or moving a heavy object, or striking someone with a melee weapon. Enabler.
+    cost: [1, Might]
 
 Lives On the Road:
  desc: "You are a traveler. Experienced travelers are rare in the Ninth World because of the hazards involved, but you are up for these challenges. You thrill to the idea of exploring new places. Wanderlust makes you grow anxious if you stay in the same place too long. Being on the road means you’re adaptive. New situations don’t bother you (in fact, you thrive on them). The road is a dirty, dangerous place at times, but you’re resilient and resistant to harm and disease. Travelers wear tough, practical clothing and often a wide variety of gear. Because you’re always picking up new things as you visit places, your clothing and equipment are a hodge-podge of different cultures and styles. on the road, as they are very adaptable. But truly, anyone who walks the long and winding paths (or blazes whole new trails) that cross the world is a fellow traveler, regardless of their other skills."
@@ -1466,10 +1471,10 @@ Lives On the Road:
  minor_effect: Your action impresses those around you. People who were unsure of you are now willing to at least listen to what you have to say.
  major_effect: As you succeed, you say precisely the right thing, and the difficulty of all social interaction tasks pertaining to one person who can see and hear (and understand) you is decreased by two steps permanently.
  abilities:
-  Hardy:
+  - name: Hardy
     desc: You gain 4 additional points to your Might Pool. Enabler.
     pool_bonus: [[4, Might]]
-  Multilingual:
+  - name: Multilingual
     desc: You are fluent in an additional language of your choice. Enabler.
     language_add: 1
 
@@ -1485,10 +1490,10 @@ Makes Something Out Of Nothing:
  minor_effect: An item you improvise, jury-rig, or craft is of even better quality than you intended, and is one level higher than normal.
  major_effect: An item you improvise, jury-rig, or craft has an additional ability, use, or effect. For instance, if you improvise a club from a table leg, a perfectly positioned nail means the weapon inflicts 1 additional point of damage.
  abilities:
-   Improvise:
+  - name: Improvise
     desc: When you perform a task in which you are not trained, you can improvise to gain an asset on the task. The asset might be a tool you cobble together, a sudden insight into overcoming a problem, or a rush of dumb luck. For example, you could improvise a weapon from a table leg to serve as a medium club, a shard of crystal to serve as a light dagger, a stone to serve as a light thrown weapon, and so on. If need be, you can even use your fist as a light weapon. Likewise, you can improvise a shield from a small table, a chair, or other object larger than a breadbox that you can hold. Enabler.
     cost: [3, Intellect]
-   Craftsperson:
+  - name: Craftsperson
     desc: "You are trained in a crafting skill in which you are not already trained. Choices include, but are not limited to, the following: bowyering/fletching, leatherworking, glassblowing, armoring, weaponsmithing, woodcrafting, and metalworking. Enabler."
     trained_choice: [Bowering/Fletching, Leatherworking, Glassblowing, Armoring, Weaponsmithing, Woodcrafing, Metalworking]
 
@@ -1502,7 +1507,7 @@ Manipulates Force:
  minor_effect: The duration of the effect is doubled.
  major_effect: An important item on the target’s person is destroyed.
  abilities:
-   Bubble of Protection:
+  - name: Bubble of Protection
     desc: You are surrounded by an invisible bubble of force that provides +2 to Armor for one minute. The bubble is permeable to your intentions, but not perfectly. Tasks that require you to manipulate or interact with objects that you’re not carrying is one step more difficult while the bubble is up. This includes attacking targets outside the sphere (but does not include attacks you make using Invisible Force at tier 3). For each level of Effort you apply, the bubble provides an additional +1 to Armor; however, the difficulty of interacting with and attacking objects outside the sphere also increases by one step. Action to create.
     cost: [1, Intellect]
 
@@ -1518,10 +1523,10 @@ Plays Tricks:
  minor_effect: Your foe loses track of you and moves just out of immediate range before realizing its error.
  major_effect: Your foe is confused by your antics. On its next turn, it attacks one of its allies instead of you before realizing the truth.
  abilities:
-   Legerdemain:
+  - name: Legerdemain
     desc: You can perform small but seemingly impossible tricks. For example, you can make a small object in your hands disappear and move into a desired spot within reach (like your pocket). You can make someone believe that they have something in their possession that they do not have (or vice versa). You can switch similar objects right in front of someone’s eyes. Action.
     cost: [1, Speed]
-   Wit or Menace:
+  - name: Wit or Menace
     desc: Choose whether you’re trained in pleasant social interactions (including persuasion) or negative social interactions (such as intimidation).
     trained_choice: [Persuasion, Intimidation]
 
@@ -1535,10 +1540,10 @@ Provides Support:
  minor_effect: An ally is inspired and regains 2 points to a Pool.
  major_effect: You can use your Healer ability without having to use an action at any point before the end of the next round.
  abilities:
-  Healer:
+  - name: Healer
     desc: You are trained in healing tasks. Enabler.
     trained: [Healing]
-  Good Advice:
+  - name: Good Advice
     desc: You have a clear mind for determining the best way to proceed. When you give another character a suggestion involving his next action, the difficulty of that action is reduced by one step. Action.
     cost: [1, Intellect]
 
@@ -1552,7 +1557,7 @@ Shapes Liquid:
  minor_effect: Your creation lasts twice as long as normal.
  major_effect: Your creation is either two levels higher than normal or adds an asset to tasks involving its use.
  abilities:
-  Create Liquid Item:
+  - name: Create Liquid Item
     desc: You can shape about a gallon of liquid into any simple item (no moving parts) that you can easily hold in one hand. The item is level 2, but has the appropriate density (so a liquid sword can be used as a weapon) and lasts for one hour. Action.
     cost: [1, Intellect]
 
@@ -1568,13 +1573,13 @@ Speaks To The Datasphere:
  minor_effect: You learn an additional piece of information about the object, person, or topic in question.
  major_effect: You can take another action on that same turn.
  abilities:
-  Knowledge Tap:
+  - name: Knowledge Tap
     desc: Except in places where your access is cut off from the datasphere, you can tap in briefly and learn a bit more about something you can see. You get an asset on a task involving that person or object. Action.
     cost: [1, Intellect]
-  Machine Interface:
+  - name: Machine Interface
     desc: The difficulty of discerning the level, function, and activation of numenera devices that you touch is decreased by one step for one minute. Enabler
     cost: [2, Intellect]
-  Scan Training:
+  - name: Scan Training
     desc: If you have the Scan esotery from your type, you’re automatically trained in it. Enabler.
 
 Stares Down Adversity:
@@ -1589,10 +1594,10 @@ Stares Down Adversity:
  minor_effect: Your foe is frightened by your watchful intensity and backs away, unwilling to attack. It can still defend itself.
  major_effect: You regain 2 points to your Might Pool.
  abilities:
-  Watchful Intensity:
+  - name: Watchful Intensity
     desc: You are trained in all tasks related to perception and intimidation. Enabler.
     trained: [Perception, Intimidation]
-  Rally on Me:
+  - name: Rally on Me
     desc: Being brave in the face of adversity requires an assurance that one’s defenses are sound. You or a creature within short range gains an asset to one defense roll within the next round. For each additional Intellect point you spend, you can simultaneously provide an asset to one additional creature. Enabler.
     cost: [2, Intellect]
 
@@ -1608,10 +1613,10 @@ Steps Into The Outside:
  minor_effect: You restore 2 points to your Intellect Pool.
  major_effect: You gain an Insight after a brief glimpse of several potential parallel worlds branching off from where you stand now. (You do not have to spend 3 Intellect points for this Insight.)
  abilities:
-  Walk Through Walls:
+  - name: Walk Through Walls
     desc: The journey to the outside begins slowly. You can pass through physical barriers at a rate of 1 inch (3 cm) per round (minimum of one round to pass through any barrier). You can’t act (other than moving) or perceive anything until you pass entirely through the barrier. You can’t pass through energy barriers. Action.
     cost: [2, Intellect]
-  Dimensional Lore:
+  - name: Dimensional Lore
     desc: You are trained in tasks related to knowledge about alternate dimensions. Enabler.
 
 Ventures Into The Night:
@@ -1626,9 +1631,9 @@ Ventures Into The Night:
  minor_effect: The difficulty of the next task attempted by an ally is reduced by one step.
  major_effect: You can take an immediate extra action.
  abilities:
-  Air Supply:
+  - name: Air Supply
     desc: Your body is modified so that you do not need an external air supply, nor are you hindered by poisonous gas or other environmental conditions that threaten breathing creatures. In addition, you can withstand the rigors of vacuum. Your modifications sustain you for up to three days before you need to spend at least ten minutes in an area where you can breathe normally to recharge. Enabler.
-  Night Lore:
+  - name: Night Lore
     desc: You are trained in general knowledge related to other nearby planets and worlds. Enabler.
     trained: [Philantropic Astronomy]
 
@@ -1642,7 +1647,7 @@ Wields A Whip:
  minor_effect: You trip your target and knock them prone.
  major_effect: Your whip tip flicks the target in the eye, blinding it for one minute.
  abilities:
-  Savage Whip:
+  - name: Savage Whip
     desc: You inflict 2 additional points of damage with a light whip. In addition, you can target a specific body part of a foe without the usual penalty for trading damage for effect. Enabler.
 
 Wonders:
@@ -1657,8 +1662,8 @@ Wonders:
  minor_effect: Your foe is distracted by your question and leaves themselves open; the difficulty of the next attack made against them is reduced by one step.
  major_effect: Intuition flares, and you can ask the GM one question about what you’re looking at.
  abilities:
-  Asks the Question:
+  - name: Asks the Question
     desc: You can pose a question to a creature that can see and understand you that is so insightful, the question distracts it so that it loses its next turn. If you choose to continue asking questions to the same target to keep it pondering for longer than one round, you must use Effort each time. Action.
     cost: [1, Intellect]
-  Learning:
+  - name: Learning
     desc: Always asking questions eventually provides answers. You are trained in one noncombat skill. Enabler.

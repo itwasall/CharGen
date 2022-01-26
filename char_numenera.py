@@ -1,12 +1,13 @@
 from typing import List, Tuple
-from random import choice
-from chargen import roll, yaml_importer
+from random import choice, seed
+from chargen import roll, yaml_importer, new_seed
 
 chartypes = yaml_importer('numenera_data/classes_new.yaml')
 chardescs = yaml_importer('numenera_data/descriptor.yaml')
 charfoci = yaml_importer('numenera_data/foci.yaml')
 
-foci_key_exceptions = ['trained', 'cost', 'choice', 'pool_bonus', 'pool_bonus_cond', 'asset', 'language_add', 'train_choice', 'train_choice2', 'Servant', 'Philosophic Confusion', 'Zap', 'additional_points']
+foci_key_exceptions = [
+    'trained', 'cost', 'choice', 'pool_bonus', 'pool_bonus_cond', 'asset', 'language_add', 'train_choice', 'train_choice2', 'Servant', 'Philosophic Confusion', 'Zap', 'additional_points']
 pool_bonus_options = ['Might', 'Speed', 'Intellect', 'MightSpeed', 'MightIntellect', 'SpeedIntellect', 'MightEdge', 'SpeedEdge', 'IntellectEdge', 'Armour']
 
 class Cypher:
@@ -25,6 +26,94 @@ class Cypher:
         self.useable = useable
 
     def __repr__(self): return self.name
+
+class Ability:
+    def __init__(self, name: str, desc: str, subability = None, *args):
+        self.name = name
+        self.desc = desc
+        self.trained = None
+        self.cost = [0, None]
+        self.pool_bonus = None
+        self.pool_bonus_cond = None
+        self.language_add = None
+        self.train_choice = None
+        self.train_choice2 = None
+        self.additional_points = None
+        # Separate if statements here as None type not iterable
+        if subability is not None:
+            if len(subability) > 1: 
+                self.subability = Ability(
+                    subability['name'],
+                    subability['desc'],
+                    None,
+                    [subability[item] for it, key in enumerate(subability.keys()) if it > 2]
+                )
+        else:
+            self.subability = None
+        if len(args[0]) > 0:
+            # Args are in tuple pairs, in the format (param name, param details)
+            for items in args:
+                [setattr(self, item[0], item[1]) for item in items
+                    if item[0] not in ['name', 'desc', 'subability']]
+
+    def __repr__(self):
+        return self.repr_message()
+
+    def repr_message(self):
+        # Gives different output based on whether or not a subabiltiy is present
+        if self.subability is None:
+            return f"\n    {self.name}"
+        else:
+            return f"\n{self.name}\n  Subability: {self.subability.name}"
+
+
+
+class Focus:
+    def __init__(
+        self,
+        name: str,
+        desc: str,
+        connection: List,
+        equipment: List = None,
+        abilities: dict = None,
+        minor_effect: str = None,
+        major_effect: str = None,
+        choice = None
+    ):
+        self.name = name
+        self.desc = desc
+        self.connection = connection
+        self.equipment = equipment
+        self.abilities = self.make_abilities(abilities)
+        self.effects = [major_effect, minor_effect]
+        if choice is not None:
+            seed(new_seed)
+            self.choice = choice
+            self.chosen = choice(self.choice)
+
+    def make_abilities(self, data):
+        abilities = []
+        for entry in data:
+            if 'subability' in entry.keys():
+                print(f"subability found in {entry['name']}")
+                abl = Ability(
+                    entry['name'],
+                    entry['desc'],
+                    entry['subability'],
+                    [(key, entry[key]) for key in entry.keys() if key not in ['name', 'desc', 'subability']]
+                )
+            else:
+                abl = Ability(
+                    entry['name'],
+                    entry['desc'],
+                    None,
+                    [(key, entry[key]) for key in entry.keys() if key not in ['name', 'desc', 'subability']]
+                )
+            abilities.append(abl)
+        return abilities
+
+    def __repr__(self): return self.name
+
 
 class Stat:
     def __init__(
@@ -176,3 +265,17 @@ character['StatPools'].__add__(2, 'Might')
 
 print(character['StatPools'])
 
+all_foci = {}
+for foci in charfoci.keys():
+    focus = charfoci[foci]
+    all_foci[foci] = Focus(
+        foci,
+        focus['desc'],
+        focus['connection'],
+        [focus['equipment'] if 'equipment' in keys else None for keys in focus][0],
+        focus['abilities'],
+        [focus['minor_effect'] if 'minor_effect' in keys else None for keys in focus][0],
+        focus['major_effect'],
+        [focus['choice'] if 'choice' in keys else None for keys in focus][0],
+    )
+    print(all_foci[foci].name, all_foci[foci].abilities)
