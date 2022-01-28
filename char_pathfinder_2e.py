@@ -1,29 +1,24 @@
 from typing import List
-from chargen import yaml_importer, roll, new_seed
+from chargen import yaml_importer, roll, new_seed, BaseAttributeClass
 from random import choice, randint, seed
 
 data_feats = yaml_importer('pathfinder_2e_data/feats.yaml')
 data_backgrounds = yaml_importer('pathfinder_2e_data/backgrounds.yaml')
 
-class AbstractAbilityScore:
-    def __init__(self, name):
-        self.name = name
+STR = BaseAttributeClass('STR')
+DEX = BaseAttributeClass('DEX')
+CON = BaseAttributeClass('CON')
+INT = BaseAttributeClass('INT')
+WIS = BaseAttributeClass('WIS')
+CHA = BaseAttributeClass('CHA')
 
-abc_str = AbstractAbilityScore('STR')
-abc_dex = AbstractAbilityScore('DEX')
-abc_con = AbstractAbilityScore('CON')
-abc_int = AbstractAbilityScore('INT')
-abc_wis = AbstractAbilityScore('WIS')
-abc_cha = AbstractAbilityScore('CHA')
-
-class AbilityScore(AbstractAbilityScore):
+class AbilityScore(BaseAttributeClass):
     def __init__(self, name: str, value: int, modifier: int):
-        super().__init__(name)
-        self.value = value
+        super().__init__(name, value, value)
         self.modifier = modifier
 
     def __repr__(self):
-        return f"{self.value} ({self.modifier})"
+        return f"{self.maximum} ({self.modifier})"
 
 class AbilityScores:
     def __init__(

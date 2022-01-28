@@ -53,7 +53,79 @@ def new_seed():
     seed_string = "".join(choice(ascii_letters) for _ in range(randint(5, 10)))
     return seed_string
     
-
-
 def yaml_importer(path: str) -> dict:
     return safe_load(open(path, 'rt'))
+
+
+class BaseAttributeClass:
+    """
+    A generic class for attribute/ability scores
+    """
+    def __init__(self, name: str, maximum: int = 0, current: int = 0):
+        self.name = name
+        self.maximum = maximum
+        self.current = current
+
+    def __add__(self, x):
+        return BaseAttributeClass(self.name, (self.maximum+x), (self.current+x))
+
+    def __iadd__(self, x):
+        return self.__add__(x)
+
+    def __sub__(self, x):
+        return BaseAttributeClass(self.name, (self.maximum-x), (self.current-x))
+
+    def __isub__(self, x):
+        return self.__sub__(x)
+
+    def __repr__(self):
+        return f"{self.name}: {self.current}/{self.maximum}"
+    
+
+class BaseItemClass:
+    """
+    A generic class for representing an item in game
+    """
+    def __init__(self, name):
+        self.name = name
+
+    def isitem(self):
+        """
+        This function is used to verify an object is class BaseItemClass,
+            or is the child of BaseItemClass
+        """
+        return True
+
+    def __repr__(self):
+        return self.name
+
+class BaseWeaponClass(BaseItemClass):
+    """
+    A generic class for representing a weapon in game
+    """
+    def __init__(self, name):
+        super().__init__(name)
+
+
+class BaseInventoryClass:
+    """
+    A generic class for representing a character's inventory 
+    """
+    def __init__(self, items: list = []):
+        self.items = items
+
+    def __add__(self, item: BaseItemClass):
+        try:
+            item.isitem()
+            self.items.append(item) 
+            return BaseInventoryClass(items = self.items)
+        except:
+            raise TypeError
+
+    def __iadd__(self, item):
+        return self.__add__(item)
+
+    def __repr__(self):
+        return f"Items:\n   {[item for item in self.items]}"
+
+
