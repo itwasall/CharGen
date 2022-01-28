@@ -1,4 +1,7 @@
+from lib2to3.pytree import Base
+from typing import List
 from random import randint, choice, seed
+from attr import attr
 from yaml import safe_load
 from string import ascii_letters
 
@@ -44,7 +47,7 @@ def capitalise(string: str):
     return " ".join(string_words)
 
 def new_seed():
-    """Generates a new random seed from an random assortment of 
+    """Generates a new random seed from an random assortment of
         letters of a random length
 
        This mainly saves having to import 'ascii_letters' from strings
@@ -52,7 +55,7 @@ def new_seed():
     """
     seed_string = "".join(choice(ascii_letters) for _ in range(randint(5, 10)))
     return seed_string
-    
+
 def yaml_importer(path: str) -> dict:
     return safe_load(open(path, 'rt'))
 
@@ -66,27 +69,53 @@ class BaseAttributeClass:
         self.maximum = maximum
         self.current = current
 
-    def __add__(self, x):
-        return BaseAttributeClass(self.name, (self.maximum+x), (self.current+x))
+    def __add__(self, amount: int):
+        return BaseAttributeClass(self.name, (self.maximum+amount), (self.current+amount))
 
-    def __iadd__(self, x):
-        return self.__add__(x)
+    def __iadd__(self, amount: int):
+        return self.__add__(amount)
 
-    def __sub__(self, x):
-        return BaseAttributeClass(self.name, (self.maximum-x), (self.current-x))
+    def __sub__(self, amount: int):
+        return BaseAttributeClass(self.name, (self.maximum-amount), (self.current-amount))
 
-    def __isub__(self, x):
-        return self.__sub__(x)
+    def __isub__(self, amount: int):
+        return self.__sub__(amount)
 
     def __repr__(self):
         return f"{self.name}: {self.current}/{self.maximum}"
-    
+
+class BaseAttributeBlockClass:
+    """
+    A generic class for representing all of a characters attributes
+    """
+    def __init__(self, attributes: List = []):
+        self.attributes = attributes
+
+    def __add__(self, attribute: BaseAttributeClass):
+        self.attributes.append(attribute)
+        return BaseAttributeBlockClass(self.attributes)
+
+    def __iadd__(self, attribute: BaseAttributeClass):
+        return self.__add__(attribute)
+
+    def __repr__(self):
+        return f"{' '.join(attribute.name for attribute in self.attributes)}"
+
+
+class BaseSkillClass:
+    def __init__(self, name):
+        self.name = name
+
+    def set_level_names(self, level_names: List[str]):
+        self.level_names = {level_name: level for level_name, level in zip(level_names, range(len(level_names)))}
+
+
 
 class BaseItemClass:
     """
     A generic class for representing an item in game
     """
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
 
     def isitem(self):
@@ -103,13 +132,13 @@ class BaseWeaponClass(BaseItemClass):
     """
     A generic class for representing a weapon in game
     """
-    def __init__(self, name):
+    def __init__(self, name: str):
         super().__init__(name)
 
 
 class BaseInventoryClass:
     """
-    A generic class for representing a character's inventory 
+    A generic class for representing a character's inventory
     """
     def __init__(self, items: list = []):
         self.items = items
@@ -117,12 +146,12 @@ class BaseInventoryClass:
     def __add__(self, item: BaseItemClass):
         try:
             item.isitem()
-            self.items.append(item) 
+            self.items.append(item)
             return BaseInventoryClass(items = self.items)
         except:
             raise TypeError
 
-    def __iadd__(self, item):
+    def __iadd__(self, item: BaseItemClass):
         return self.__add__(item)
 
     def __repr__(self):
