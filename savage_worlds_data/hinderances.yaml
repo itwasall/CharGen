@@ -3,7 +3,7 @@ All Thumbs:
   rank: Minor
   penalty:
     amt: 2
-    type: "Mechanical or Electrical devices"
+    type: Mechanical or Electrical devices
 Anemic:
   desc: Anemic characters are particularly susceptible to sickness, disease, environmental effects, and fatigue. They subtract 2 from Vigor rolls made to resist Fatigue (see Hazards, starting on page 125).
   rank: Minor
@@ -19,21 +19,21 @@ Bad Eyes (Minor):
   conflict: Bad Eyes (Major)
   penalty:
     amt: 1
-    type: "Any trait roll dependant on vision"
+    type: Any trait roll dependant on vision
 Bad Eyes (Major):
   desc: Your hero’s eyes aren’t what they used to be. He suﬀers a −2 penalty to any Trait roll dependent on vision (such as ranged attacks and Notice rolls). In settings where glasses are available, they negate the penalty when worn. If lost or broken during a combat (generally a 50% chance when he’s Wounded, falls, or suﬀers some other trauma), the character is Distracted (and Vulnerable if a Major Hindrance) until the end of their next turn.
   rank: Major
   conflict: Bad Eyes (Minor)
   penalty:
     amt: 2
-    type: "Any trait roll dependant on vision"
+    type: Any trait roll dependant on vision"
 Bad Luck:
   desc: Your hero is a little less lucky than most. He gets one less Benny per game session than normal. A character cannot have both Bad Luck and the Luck Edge.
   rank: Major
   conflict: Luck Edge
   penalty:
     amt: 1
-    type: "Benny per game session"
+    type: Benny per game session
 Big Mouth:
   desc: Loose lips sink ships, the saying goes. This hero’s mouth could drown an armada. The blabbermouth can’t keep a secret very well. He reveals plans and gives away things best kept among friends, usually at the worst possible times.
   rank: Minor
@@ -42,7 +42,7 @@ Blind:
   rank: Major
   penalty:
     amt: 6
-    type: "All physical tasks that require vision"
+    type: All physical tasks that require vision
   bonus:
     amt: 1
     type: Free edge
@@ -254,14 +254,14 @@ Thin Skinned (Minor):
   conflict: Thin Skinned (Major)
   penalty:
     amt: 2
-    type: "Taunt attacks"
+    type: Taunt attacks
 Thin Skinned (Major):
   desc: Personal attacks really get under this individual’s skin. As a Minor Hindrance, he subtracts 4 when resisting Taunt attacks.
   rank: Major
   conflict: Thin Skinned (Minor)
   penalty:
     amt: 4
-    type: "Taunt attacks"
+    type: Taunt attacks
 Tongue-Tied:
   desc: Your adventurer flubs cool lines (or thinks of them afterwards!), goes off on tangents when he’s trying to talk someone into something, and generally miscommunicates most everything he says. He suffers a −1 penalty to Intimidation, Performance, Persuasion, and Taunt rolls that involve speech.
   rank: Major

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from chargen import *
+from savage_worlds_data import hinderances as SavageDataHinderances
 from math import floor
 
 DIE_TYPES = ["1d4", "1d6", "1d8", "1d10", "1d12"]
@@ -62,6 +63,7 @@ class SavageBaseSkillClass(BaseSkillClass):
         except KeyError:
             bonus = self.level - max(self.level_names.keys())
             self.level_names[self.level] = f"1d12 + {bonus}"
+
 
 
 def calc_parry_stat(fighting_die_type: str = '0'):

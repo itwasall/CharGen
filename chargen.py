@@ -60,6 +60,10 @@ def yaml_importer(path: str) -> dict:
     return safe_load(open(path, 'rt'))
 
 
+def set_name(object, name):
+    object.__setattr__(__name__, name)
+
+
 class BaseAttributeClass:
     """
     A generic class for attribute/ability scores
