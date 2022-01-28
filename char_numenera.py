@@ -41,12 +41,12 @@ class Ability:
         self.additional_points = None
         # Separate if statements here as None type not iterable
         if subability is not None:
-            if len(subability) > 1: 
+            if len(subability) > 1:
                 self.subability = Ability(
                     subability['name'],
                     subability['desc'],
                     None,
-                    [subability[item] for it, key in enumerate(subability.keys()) if it > 2]
+                    [subability[key] for it, key in enumerate(subability.keys()) if it > 2]
                 )
         else:
             self.subability = None
