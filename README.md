@@ -1,6 +1,12 @@
 # CharGen
 I didn't know how to start programming, so I attempted to make a bunch of TTRPG character generators
 
+## Cyberpunk 2020
+just started - now just abandoned
+
+## Cyberpunk RED
+WIP - Postponed til CP2020 done-ish
+
 ## DND 5e
 Core Rulebook done
 
@@ -12,13 +18,7 @@ Currently
   - Foci data recorded
   - character type data recorded
   - descriptor data recorded
-Cypher data not begun
-
-## Cyberpunk RED
-WIP - Postponed til CP2020 done-ish
-
-## Cyberpunk 2020
-Just started - now just abandoned
+  - literally every cypher recorded, generator working
 
 ## Mork Borg
 Core rulebook done
@@ -28,11 +28,14 @@ Big mess lmao
   - Background Data recorded
   - Ancestory Data begun
 
+## Savage Worlds
+I need to stop starting new generators before finishing others
+  - Boiler plate code done
+  - Racial traits recorded
+  - Hinderances recorded
+
 ## Ryuutama: Fantasy Roleplaying Game
 Basically done
-
-## Werewolf: The Apocolaypse
-Very WIP
 
 ## Tenra Bansho Zero
 Recording data 
@@ -42,3 +45,6 @@ Recording data
   - hou-jutsu data recorded
   - kijin mechanica data recorded
   - kijin mechanica generation begun
+
+## Werewolf: The Apocolaypse
+Very WIP
