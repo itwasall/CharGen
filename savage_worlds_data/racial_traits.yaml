@@ -1,0 +1,37 @@
+Aquatic:
+  desc: Move at full Pace when swimming
+Dependancy:
+  desc: Character must immerse themselves in water for 1 hour ever 24 hours or become automatically Fatigued each day until Incapacitated. They day after Incapacitation from dehydration, they perish. Each hour spent in water retores one level of Fatigue
+Low Light Vision:
+  desc: Ignore penalties for Dim or Dark Illuminiation
+Toughness:
+  desc: +1 to Toughness
+Cant Swim:
+  desc: -2 from Atheltics (swimming) rolls. Each inch moved in water costs 3 inches of Pace
+Flight:
+  desc: Character can fly at Pace 12 each round. Uses Athletics.
+Frail:
+  desc: -1 to Toughness
+Keen Senses:
+  desc: Begin with 1d6 Notice instead of 1d4
+Reduced Pace:
+  desc: -1 to Walking Pace. Running die is reduced by 1 step
+Tough:
+  desc: Begin with 1d6 Vigor instead of 1d4
+Agile:
+  desc: Begin with 1d6 Agility instead of 1d4
+All Thumbs:
+  desc: Gain the "All Thumbs" hinderance
+Heritage:
+  desc:
+    choice:
+      - Start with a free Novice Edge
+      - Begin with 1d6 Agility instead of 1d4
+Outsider:
+  desc: Gain the "Outsider (Minor)" hinderance
+Luck:
+  desc: Character draws one additional Benny per game session
+Size -1:
+  desc: -1 to Size (and therefore Toughness)
+Spirited:
+  desc: Begin with 1d6 Spirit instead of 1d4
