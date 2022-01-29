@@ -36,11 +36,11 @@ class SavageAttributeClass(SavageBaseAttributeClass):
         return f"{self.name} - {self.levels[self.level]}"
 
 class SavageDerivedStat:
-    def __init__(self, name: str, value_function: function):
+    def __init__(self, name: str, value_function):
         self.name = name
         self.value = self.calculate_value(value_function)
 
-    def calculate_value(self, value_function: function):
+    def calculate_value(self, value_function):
         return value_function
 
 class SavageBaseSkillClass(BaseSkillClass):
@@ -80,6 +80,14 @@ def calc_parry_stat(fighting_die_type: str = '0'):
     # For fighting_die_type's of "1d12 + [mod]", append half the [mod] value to the parry
     #   stat, rounding down
         return 2 + 6 + floor(int(fighting_die_type.split(' ')[2])/2)
+
+def calc_toughness_stat(vigor_die_type: str = '0', armor: int = 0):
+    if vigor_die_type == '0':
+        return f"{2+armor} ({armor})"
+    elif vigor_die_type in DIE_TYPES:
+        return f"{2 + floor((int(vigor_die_type.split('d')[1]) / 2)) + armor} ({armor})"
+    elif vigor_die_type.startswith("1d12"):
+        return f"{2 + 6 + floor(int(vigor_die_type.split(' ')[2])/2) + armor} ({armor})"
 
 Agility = SavageAttributeClass('Agility')
 Smarts = SavageAttributeClass('Smarts')
@@ -122,37 +130,9 @@ def get_skill_list():
     Weird_Science = SavageBaseSkillClass('Weird Science', Smarts)
 
     BasicSkillList = [
-        Academics,
-        Athletics,
-        Battle,
-        Boating,
-        Common_Knowledge,
-        Driving,
-        Electronics,
-        Faith,
-        Fighting,
-        Focus,
-        Gambling,
-        Hacking,
-        Healing,
-        Intimidation,
-        Language,
-        Notice,
-        Occult,
-        Performance,
-        Persuasion,
-        Piloting,
-        Psionics,
-        Repair,
-        Research,
-        Riding,
-        Science,
-        Shooting,
-        Spellcasting,
-        Stealth,
-        Survival,
-        Taunt,
-        Thievery,
-        Weird_Science
-    ]
+        Academics, Athletics, Battle, Boating, Common_Knowledge, Driving, Electronics, Faith,
+        Fighting, Focus, Gambling, Hacking, Healing, Intimidation, Language, Notice, Occult,
+        Performance, Persuasion, Piloting, Psionics, Repair, Research, Riding, Science, Shooting,
+        Spellcasting, Stealth, Survival, Taunt, Thievery, Weird_Science
+        ]
     return BasicSkillList

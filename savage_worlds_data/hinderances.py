@@ -2,6 +2,19 @@
 # -*- coding: utf-8 -*-
 from yaml import safe_load
 
+"""
+So like, what the fuck does this do?
+
+In order to populate the SavageHinderanceClass's data correctly,
+    I'm first declaring them all as empty first, putting them in a list,
+    then iterating over the keys in the hinderances.yaml file (as they are of equal length)
+    and populating the [desc], [rank], [conflict], [penalty] & [bonus] fields if they
+    exist in the .yaml file.
+
+This way I can have all the classes ready, even if the data isn't fully ready yet. If a
+    key doesn't exist it'll simply show up as [None] until the work is done.
+"""
+
 hinderance_data = safe_load(open('savage_worlds_data/hinderances.yaml', 'rt'))
 
 h_data = hinderance_data
@@ -11,7 +24,7 @@ class SavageHinderanceClass:
         self,
         desc: str = None,
         rank: str = None,
-        conflict: str = None, 
+        conflict: str = None,
         penalty: dict = None,
         bonus: dict = None
     ):
@@ -128,6 +141,8 @@ for it, key in enumerate(h_data.keys()):
         hinderances[it].conflict = h_data[key]['conflict']
     if 'penalty' in h_data[key].keys():
         hinderances[it].penalty = h_data[key]['penalty']
+    if 'bonus' in h_data[key].keys():
+        hinderances[it].bonus = h_data[key]['bonus']
 
 
 
