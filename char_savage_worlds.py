@@ -5,7 +5,7 @@ from savage_worlds_data import hinderances as SavageDataHinderances
 from math import floor
 
 DIE_TYPES = ["1d4", "1d6", "1d8", "1d10", "1d12"]
-DIE_TYPES_RNG = range(len(DIE_TYPES))
+DIE_TYPES_RNG = range(1, len(DIE_TYPES)+1)
 BASE_ATTRIBUTE_POINTS = 5
 BASE_SKILL_POINTS = 12
 
@@ -136,3 +136,8 @@ def get_skill_list():
         Spellcasting, Stealth, Survival, Taunt, Thievery, Weird_Science
         ]
     return BasicSkillList
+
+def get_hinderance_list():
+    HinderanceList = [hinderance for hinderance in SavageDataHinderances.hinderances]
+    return HinderanceList
+

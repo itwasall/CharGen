@@ -1,3 +1,11 @@
+Pacifist (Major):
+  desc: Gain "Pacifist (Major)" hinderance
+Construct:
+  desc: +2 Recover from being shaken. Character doesn't breathe. Ignore's 1 level of Wound modifiers. Grants immunity to Poison and Disease. Cannot heal naturally. Healing requires the repair skill, which takes 1 hour per current Wound level per attempt.
+Outsider (Major):
+  desc: Gain "Outsider (Major)" hinderance
+Vow (Major):
+  desc: Gain "Vow (Major)" hinderance
 Aquatic:
   desc: Move at full Pace when swimming
 Dependancy:
@@ -27,7 +35,7 @@ Heritage:
     choice:
       - Start with a free Novice Edge
       - Begin with 1d6 Agility instead of 1d4
-Outsider:
+Outsider (Minor):
   desc: Gain the "Outsider (Minor)" hinderance
 Luck:
   desc: Character draws one additional Benny per game session
@@ -35,3 +43,19 @@ Size -1:
   desc: -1 to Size (and therefore Toughness)
 Spirited:
   desc: Begin with 1d6 Spirit instead of 1d4
+Adaptable:
+  desc: Start with any Novice Edge you choose. Character must meet Edge requirements
+Bite/Claws:
+  desc: Start with Natural Weapon that cause Strength + 1d4 damage
+Bloodthirsty:
+  desc: Gain the "Bloodthirsty" hinderance
+Racial Enemy:
+  desc: Pick a common race in your setting. Members of each culture subtract 2 from Persuasion when dealing with each other
+Armor +2:
+  desc: Armor +2
+Bite:
+  desc: Start with Natural Weapon that cause Strength + 1d4 damage
+Environmental Weakness:
+  desc: -4 Penalty to resist cold environmental attacks. +4 damage from cold attacks
+Keen Senses:
+  desc: Gain the "Alertness" edge

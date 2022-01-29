@@ -22,23 +22,29 @@ h_data = hinderance_data
 class SavageHinderanceClass:
     def __init__(
         self,
+        name: str = None,
         desc: str = None,
         rank: str = None,
         conflict: str = None,
         penalty: dict = None,
         bonus: dict = None
     ):
+        self.name = name
         self.desc = desc
         self.rank = rank
         self.conflict = conflict
         self.penalty = penalty
         self.bonus = bonus
+        self.cost = 0
 
     def get_cost(self, rank: str):
         if rank.capitalize == 'Minor':
             return 1
         elif rank.capitalize == 'Major':
             return 2
+
+    def __repr__(self):
+        return self.name
 
 All_Thumbs = SavageHinderanceClass()
 Anemic = SavageHinderanceClass()
@@ -132,11 +138,12 @@ hinderances = [
 ]
 
 for it, key in enumerate(h_data.keys()):
+    hinderances[it].name = key
     if 'desc' in h_data[key].keys():
         hinderances[it].desc = h_data[key]['desc']
     if 'rank' in h_data[key].keys():
         hinderances[it].rank = h_data[key]['rank']
-        hinderances[it].get_cost(h_data[key]['rank'])
+        hinderances[it].cost = hinderances[it].get_cost(h_data[key]['rank'])
     if 'conflict' in h_data[key].keys():
         hinderances[it].conflict = h_data[key]['conflict']
     if 'penalty' in h_data[key].keys():
