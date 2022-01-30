@@ -1,0 +1,774 @@
+Wise_Arrow Wise Arrow
+Sight_Without_Eyes Sight Without Eyes
+Blood_Without_Balance Blood Without Balance
+Force_Without_Fire Force Without Fire
+Trance_of_Unhesitating_Speed Trance of Unhesitating Speed
+Phantom_Arrow_Technique Phantom Arrow Technique
+Fiery_Arrow_Attack Fiery Arrow Attack
+There_Is_No_Wind There Is No Wind
+Accuracy_Without_Distance Accuracy Without Distance
+Arrow_Storm_Technique Arrow Storm Technique
+Flashing_Vengeance_Draw Flashing Vengeance Draw
+Hunters_Swift_Answer Hunters Swift Answer
+Immaculate_Golden_Bow Immaculate Golden Bow
+Dazzling_Flare_Attack Dazzling Flare Attack
+Seven_Omens_Shot Seven Omens Shot
+Revolving_Bow_Discipline Revolving Bow Discipline
+Finishing_Snipe Finishing Snipe
+Rain_of_Feathered_Death Rain of Feathered Death
+Shadow-Seeking_Arrow Shadow-Seeking Arrow
+Searing_Sunfire_Interdiction Searing Sunfire Interdiction
+Solar_Spike Solar Spike
+Heart-Eating_Incineration Heart-Eating Incineration
+Dust_and_Ash_Sleight Dust and Ash Sleight
+Heavens_Crash_Down Heavens Crash Down
+Streaming_Arrow_Stance Streaming Arrow Stance
+Whispered_Prayer_of_Judgment Whispered Prayer of Judgment
+Graceful_Crane_Stance Graceful Crane Stance
+Monkey_Leap_Technique Monkey Leap Technique
+Soaring_Crane_Leap Soaring Crane Leap
+Foe-Vaulting_Method Foe-Vaulting Method
+Lightning_Speed Lightning Speed
+Winning_Stride_Discipline Winning Stride Discipline
+Increasing_Strength_Exercise Increasing Strength Exercise
+Ten_Ox_Meditation Ten Ox Meditation
+Thunderbolt_Attack_Prana Thunderbolt Attack Prana
+Feather_Foot_Style Feather Foot Style
+Spider_Foot_Style Spider Foot Style
+Unbound_Eagle_Approach Unbound Eagle Approach
+Leaping_Tiger_Attack Leaping Tiger Attack
+Racing_Hare_Method Racing Hare Method
+Onrush_Burst_Method Onrush Burst Method
+Arete-Driven_Marathon_Stride Arete-Driven Marathon Stride
+Armor-Eating_Strike Armor-Eating Strike
+Thunders_Might Thunders Might
+Mountain-Crossing_Leap_Technique Mountain-Crossing Leap Technique
+Eagle-Wing_Style Eagle-Wing Style
+Demon-Wasting_Rush Demon-Wasting Rush
+Hurricane_Spirit_Speed Hurricane Spirit Speed
+Godspeed_Steps Godspeed Steps
+Power_Suffusing_Form_Technique Power Suffusing Form Technique
+Legion_Aurochs_Method Legion Aurochs Method
+Triumph-Forged_God-Body Triumph-Forged God-Body
+One_Extra_Step One Extra Step
+Bonfire_Anima_Wings Bonfire Anima Wings
+Aegis_of_Unstoppable_Force Aegis of Unstoppable Force
+Living_Wind_Approach Living Wind Approach
+Nine_Aeons_Thew Nine Aeons Thew
+Sensory_Acuity_Prana Sensory Acuity Prana
+Surprise_Anticipation_Method Surprise Anticipation Method
+Keen_Sight_Technique Keen Sight Technique
+Unswerving_Eye_Method Unswerving Eye Method
+Keen_Taste_and_Smell_Technique Keen Taste and Smell Technique
+Genius_Palate_Summation Genius Palate Summation
+Foe-Scenting_Method Foe-Scenting Method
+Keen_Hearing_and_Touch_Technique Keen Hearing and Touch Technique
+Studied_Ear_Espial Studied Ear Espial
+Eyeless_Harbinger_Awareness Eyeless Harbinger Awareness
+Awakening_Eye Awakening Eye
+Inner_Eye_Focus Inner Eye Focus
+Scent-Honing_Prana Scent-Honing Prana
+Knowing_Beyond_Silence Knowing Beyond Silence
+Living_Pulse_Perception Living Pulse Perception
+Roused_Dragon_Detection Roused Dragon Detection
+Unsurpassed_Sight_Discipline Unsurpassed Sight Discipline
+Blink Blink
+Unsurpassed_Taste_and_Smell_Discipline Unsurpassed Taste and Smell Discipline
+Unsurpassed_Hearing_and_Touch_Discipline Unsurpassed Hearing and Touch Discipline
+Dedicated_Unerring_Ear Dedicated Unerring Ear
+Eye_of_the_Unconquered_Sun Eye of the Unconquered Sun
+Fists_of_Iron_Technique Fists of Iron Technique
+Iron_Battle_Focus Iron Battle Focus
+Ferocious_Jab Ferocious Jab
+Wind_and_Stones_Defense Wind and Stones Defense
+Heaven_Thunder_Hammer Heaven Thunder Hammer
+Vicious_Lunge Vicious Lunge
+Unbreakable_Grasp Unbreakable Grasp
+Devil-Strangling_Attitude Devil-Strangling Attitude
+Crashing_Wave_Throw Crashing Wave Throw
+Thunderclap_Rush_Attack Thunderclap Rush Attack
+Falling_Hammer_Strike Falling Hammer Strike
+Reckless_Fury_Discard Reckless Fury Discard
+Solar_Cross-Counter Solar Cross-Counter
+Ox-Stunning_Blow Ox-Stunning Blow
+Burning_Fist_Burial Burning Fist Burial
+Force-Rending_Strike Force-Rending Strike
+Blade-Rebuking_Wrath Blade-Rebuking Wrath
+Sledgehammer_Fist_Punch Sledgehammer Fist Punch
+Oak-Curling_Clinch Oak-Curling Clinch
+Burning_Proof_of_Authority Burning Proof of Authority
+Hammer_on_Iron_Technique Hammer on Iron Technique
+One_With_Violence One With Violence
+Dancing_With_Strife_Technique Dancing With Strife Technique
+Knockout_Blow Knockout Blow
+Cancel_the_Apocalypse Cancel the Apocalypse
+Adamantine_Fists_of_Battle Adamantine Fists of Battle
+Intercepting_Fury_Smite Intercepting Fury Smite
+Fire-Eating_Fist Fire-Eating Fist
+River-Binding_Wrath River-Binding Wrath
+Wicked_Dissolve_Dust Wicked Dissolve Dust
+Rapturous_Cradle Rapturous Cradle
+Dragon_Coil_Technique Dragon Coil Technique
+Ten_Calamities_Technique Ten Calamities Technique
+Titan-Straightening_Method Titan-Straightening Method
+Shockwave_Technique Shockwave Technique
+Lightning_Strikes_Twice Lightning Strikes Twice
+Fivefold_Fury_Onslaught Fivefold Fury Onslaught
+Striving_Aftershock_Method Striving Aftershock Method
+Superior_Violent_Knowledge Superior Violent Knowledge
+Inevitable_Victory_Meditation Inevitable Victory Meditation
+Incarnated_Fury_Attack Incarnated Fury Attack
+Orichalcum_Fists_of_Battle Orichalcum Fists of Battle
+Raging_Wrath_Repeated Raging Wrath Repeated
+Rampage-Berserker_Attack Rampage-Berserker Attack
+Supremacy_of_War_Meditation Supremacy of War Meditation
+Apocalypse_Flare_Attack Apocalypse Flare Attack
+Heaven_Fury_Smite Heaven Fury Smite
+Ascendant_Battle_Visage Ascendant Battle Visage
+Frugal_Merchant_Method Frugal Merchant Method
+Insightful_Buyer_Technique Insightful Buyer Technique
+Consumer-Evaluating_Glance Consumer-Evaluating Glance
+All-Seeing_Master_Procurer All-Seeing Master Procurer
+Illimitable_Master_Fence Illimitable Master Fence
+Deft_Officials_Way Deft Officials Way
+Measuring_Glance Measuring Glance
+Enigmatic_Bureau_Understanding Enigmatic Bureau Understanding
+Speed_the_Wheels Speed the Wheels
+Bureau-Rectifying_Method Bureau-Rectifying Method
+Enlightened_Discourse_Method Enlightened Discourse Method
+Irresistible_Salesman_Spirit Irresistible Salesman Spirit
+Ungoverned_Market_Awareness Ungoverned Market Awareness
+Bureau-Reforming_Kata Bureau-Reforming Kata
+Indolent_Official_Charm Indolent Official Charm
+Semantic_Argument_Technique Semantic Argument Technique
+Empowered_Barter_Stance Empowered Barter Stance
+Soul-Snaring_Pitch Soul-Snaring Pitch
+Woe-Capturing_Web Woe-Capturing Web
+Omen-Spawning_Beast Omen-Spawning Beast
+Foul_Air_of_Argument_Technique Foul Air of Argument Technique
+Eclectic_Verbiage_of_Law Eclectic Verbiage of Law
+Infinitely-Efficient_Register Infinitely-Efficient Register
+Taboo-Inflicting_Diatribe Taboo-Inflicting Diatribe
+Subject-Hailing_Ideology Subject-Hailing Ideology
+Order-Conferring_Action Order-Conferring Action
+Tireless_Workhorse_Method Tireless Workhorse Method
+Efficient_Craftsman_Technique Efficient Craftsman Technique
+Arete-Shifting_Prana Arete-Shifting Prana
+Supreme_Celestial_Focus Supreme Celestial Focus
+Sublime_Transference Sublime Transference
+Ages-Echoing_Wisdom Ages-Echoing Wisdom
+Dragon_Soul_Emergence Dragon Soul Emergence
+Copper_Spider_Conception Copper Spider Conception
+Clay_and_Breath_Practice Clay and Breath Practice
+Spirit-Gathering_Industry Spirit-Gathering Industry
+Summit-Piercing_Touch Summit-Piercing Touch
+Vice-Miracle_Technique Vice-Miracle Technique
+Unwinding_Gyre_Meditation Unwinding Gyre Meditation
+God-Forge_Within God-Forge Within
+Exegesis_of_the_Distilled_Form Exegesis of the Distilled Form
+Spirit-Stoking_Elevation Spirit-Stoking Elevation
+Sun-Heart_Tenacity Sun-Heart Tenacity
+Wonder-Forging_Genius Wonder-Forging Genius
+Dual_Magnus_Prana Dual Magnus Prana
+Brass_Scales_Falling Brass Scales Falling
+Red_Anvils_Ringing Red Anvils Ringing
+Chains_Fall_Away Chains Fall Away
+Craftsman_Needs_No_Tools Craftsman Needs No Tools
+Peerless_Paragon_of_Craft Peerless Paragon of Craft
+Supreme_Perfection_of_Craft Supreme Perfection of Craft
+Thousand-Forge_Hands Thousand-Forge Hands
+Divine_Transcendence_of_Craft Divine Transcendence of Craft
+Words-as-Workshop_Method Words-as-Workshop Method
+Shattering_Grasp Shattering Grasp
+Durability-Enhancing_Technique Durability-Enhancing Technique
+Crack-Mending_Technique Crack-Mending Technique
+Time_Heals_Nothing Time Heals Nothing
+Blood_Diamond_Sweat Blood Diamond Sweat
+Object-Strengthening_Touch Object-Strengthening Touch
+Chaos-Resistance_Preparation Chaos-Resistance Preparation
+Breach-Healing_Method Breach-Healing Method
+Design_Beyond_Limit Design Beyond Limit
+The_Art_of_Permanence The Art of Permanence
+Realizing_the_Form_Supernal Realizing the Form Supernal
+Celestial_Reforging_Technique Celestial Reforging Technique
+Flawless_Handiwork_Method Flawless Handiwork Method
+Triumph-Forging_Eye Triumph-Forging Eye
+Supreme_Masterwork_Focus Supreme Masterwork Focus
+Bright-Forging_Prana Bright-Forging Prana
+Experiential_Conjuring_of_True_Void Experiential Conjuring of True Void
+Unbroken_Image_Focus Unbroken Image Focus
+First_Movement_of_the_Demiurge First Movement of the Demiurge
+Essence-Forging_Kata Essence-Forging Kata
+Mind-Expanding_Meditation Mind-Expanding Meditation
+Inspiration-Renewing_Vision Inspiration-Renewing Vision
+Divine_Inspiration_Technique Divine Inspiration Technique
+Horizon-Unveiling_Insight Horizon-Unveiling Insight
+Holistic_Miracle_Understanding Holistic Miracle Understanding
+Reed_in_the_Wind Reed in the Wind
+Dust_Motes_Whirling Dust Motes Whirling
+Shadow_Dancer_Method Shadow Dancer Method
+Reflex_Sidestep_Technique Reflex Sidestep Technique
+Leaping_Dodge_Method Leaping Dodge Method
+Searing_Quicksilver_Flight Searing Quicksilver Flight
+Drifting_Leaf_Elusion Drifting Leaf Elusion
+Shadow_Over_Water Shadow Over Water
+Fleet_Dreaming_Image Fleet Dreaming Image
+Drifting_Shadow_Focus Drifting Shadow Focus
+Force-Stealing_Feint Force-Stealing Feint
+Seven_Shadow_Evasion Seven Shadow Evasion
+Safety_Between_Heartbeats Safety Between Heartbeats
+Fourfold_Shiver_Binding Fourfold Shiver Binding
+Flow_Like_Blood Flow Like Blood
+Rumor_of_Form Rumor of Form
+Way_of_Whispers_Technique Way of Whispers Technique
+Vaporous_Division Vaporous Division
+Sunlight_Bleeding_Away Sunlight Bleeding Away
+Thousand_Steps_Stillness Thousand Steps Stillness
+Unbowed_Willow_Meditation Unbowed Willow Meditation
+Hundred_Shadow_Ways Hundred Shadow Ways
+Living_Bonds_Unburdened Living Bonds Unburdened
+Unbridled_Shade_Attitude Unbridled Shade Attitude
+Harm-Dismissing_Meditation Harm-Dismissing Meditation
+Refinement_of_Flowing_Shadows Refinement of Flowing Shadows
+Enduring_Mental_Toughness Enduring Mental Toughness
+Stubborn_Boar_Defense Stubborn Boar Defense
+Integrity-Protecting_Prana Integrity-Protecting Prana
+Destiny-Manifesting_Method Destiny-Manifesting Method
+Legend-Soul_Revival Legend-Soul Revival
+Spirit-Maintaining_Maneuver Spirit-Maintaining Maneuver
+Undying_Solar_Resolve Undying Solar Resolve
+Temptation-Resisting_Stance Temptation-Resisting Stance
+Mind-Cleansing_Prana Mind-Cleansing Prana
+Clear_Mind_Discipline Clear Mind Discipline
+Energy_Restoration_Prana Energy Restoration Prana
+Steel_Heart_Stance Steel Heart Stance
+Righteous_Lion_Defense Righteous Lion Defense
+Watchful_Eyes_of_Heaven Watchful Eyes of Heaven
+Accord_of_the_Unbreakable_Spirit Accord of the Unbreakable Spirit
+Phoenix_Renewal_Tactic Phoenix Renewal Tactic
+Sun_King_Radiance Sun King Radiance
+Soul-Nourishing_Technique Soul-Nourishing Technique
+Spirit-Tempering_Practice Spirit-Tempering Practice
+Empowered_Soul_Technique Empowered Soul Technique
+Transcendent_Heros_Meditation Transcendent Heros Meditation
+Righteous_Soul_Judgment Righteous Soul Judgment
+Barque_of_Transcendent_Vision Barque of Transcendent Vision
+Unhesitating_Dedication Unhesitating Dedication
+Invincible_Solar_Aegis Invincible Solar Aegis
+Eminent_Paragon_Approach Eminent Paragon Approach
+Divine_Mantle Divine Mantle
+Body-Restoring_Benison Body-Restoring Benison
+Inviolable_Essence-Merging Inviolable Essence-Merging
+Watchmans_Infallible_Eye Watchmans Infallible Eye
+Inquisitors_Unfailing_Notice Inquisitors Unfailing Notice
+Crafty_Observation_Method Crafty Observation Method
+Divine_Induction_Technique Divine Induction Technique
+Evidence-Discerning_Method Evidence-Discerning Method
+Judges_Ear_Technique Judges Ear Technique
+Miraculous_Stunning_Insight Miraculous Stunning Insight
+Watchful_Justiciars_Eye Watchful Justiciars Eye
+Irresistible_Questioning_Technique Irresistible Questioning Technique
+Dauntless_Inquisitor_Attitude Dauntless Inquisitor Attitude
+Evidence-Restoring_Prana Evidence-Restoring Prana
+Ten_Magistrate_Eyes Ten Magistrate Eyes
+Unknown_Wisdom_Epiphany Unknown Wisdom Epiphany
+Enlightened_Touch_Insight Enlightened Touch Insight
+Judge-Generals_Stance Judge-Generals Stance
+Empathic_Recall_Discipline Empathic Recall Discipline
+Mind_Manse_Meditation Mind Manse Meditation
+Seasoned_Criminal_Method Seasoned Criminal Method
+Spurious_Presence Spurious Presence
+Preying_on_Uncertainty_Approach Preying on Uncertainty Approach
+Clever_Bandits_Rook Clever Bandits Rook
+Swift_Gamblers_Eye Swift Gamblers Eye
+Lightning-Hand_Sleight Lightning-Hand Sleight
+Flawless_Pickpocketing_Technique Flawless Pickpocketing Technique
+Lock-Opening_Touch Lock-Opening Touch
+Flawlessly_Impenetrable_Disguise Flawlessly Impenetrable Disguise
+Phantom_Hood_Technique Phantom Hood Technique
+Doubt-Sealing_Heist Doubt-Sealing Heist
+Living_Shadow_Preparedness Living Shadow Preparedness
+Unshakable_Rogues_Spirit Unshakable Rogues Spirit
+Master_Plan_Meditation Master Plan Meditation
+Proof-Eating_Palm Proof-Eating Palm
+Stealing_From_Plain_Sight_Spirit Stealing From Plain Sight Spirit
+Magpies_Invisible_Talon Magpies Invisible Talon
+Perfect_Mirror Perfect Mirror
+Fate-Shifting_Solar_Arete Fate-Shifting Solar Arete
+Skillful_Reappropriation_(Phantom_Sting_Search) Skillful Reappropriation (Phantom Sting Search)
+Reversal_of_Fortune Reversal of Fortune
+Iron_Wolves_Grasp Iron Wolves Grasp
+Door-Evading_Technique Door-Evading Technique
+Flashing_Ruse_Prana Flashing Ruse Prana
+Split_Deception_Method Split Deception Method
+Null_Anima_Gloves Null Anima Gloves
+Nights_Eye_Meditation Nights Eye Meditation
+Unbroken_Darkness_Approach Unbroken Darkness Approach
+Whirling_Brush_Method Whirling Brush Method
+Flawless_Brush_Discipline Flawless Brush Discipline
+Letter-Within-A-Letter_Technique Letter-Within-A-Letter Technique
+Subtle_Speech_Method Subtle Speech Method
+Flowing_Elegant_Hand Flowing Elegant Hand
+Strange_Tongue_Understanding Strange Tongue Understanding
+Poetic_Expression_Style Poetic Expression Style
+Mingled_Tongue_Technique Mingled Tongue Technique
+Sagacious_Reading_of_Intent Sagacious Reading of Intent
+Word-Shield_Invocation Word-Shield Invocation
+Stolen_Voice_Technique Stolen Voice Technique
+Moving_the_Unseen_Hand Moving the Unseen Hand
+Essence-Laden_Missive Essence-Laden Missive
+Voice-Caging_Calligraphy Voice-Caging Calligraphy
+Single_Voice_Kata Single Voice Kata
+Vanishing_Immersion_Style Vanishing Immersion Style
+Discerning_Savants_Eye Discerning Savants Eye
+Power-Snaring_Image Power-Snaring Image
+Flashing_Quill_Atemi Flashing Quill Atemi
+Mind-Swallowing_Missive Mind-Swallowing Missive
+Cup_Boils_Over Cup Boils Over
+Twisted_Words_Technique Twisted Words Technique
+Excellent_Emissarys_Tongue Excellent Emissarys Tongue
+Perfect_Recollection_Discipline Perfect Recollection Discipline
+Swift_Sages_Eye Swift Sages Eye
+Mind-Scribing_Method Mind-Scribing Method
+Heaven-Drawing_Discipline Heaven-Drawing Discipline
+Perfect_Celestial_Author Perfect Celestial Author
+Unbreakable_Fascination_Method Unbreakable Fascination Method
+Wyld-Dispelling_Prana Wyld-Dispelling Prana
+Chaos-Repelling_Pattern Chaos-Repelling Pattern
+Harmonious_Academic_Methodology Harmonious Academic Methodology
+First_Knowledges_Grace First Knowledges Grace
+Flowing_Mind_Prana Flowing Mind Prana
+Essence-Lending_Method Essence-Lending Method
+Will-Bolstering_Method Will-Bolstering Method
+Hidden_Wisdom_Bestowal Hidden Wisdom Bestowal
+Tireless_Learner_Method Tireless Learner Method
+Bottomless_Wellspring_Approach Bottomless Wellspring Approach
+Lore-Inducing_Concentration Lore-Inducing Concentration
+Truth-Rendering_Gaze Truth-Rendering Gaze
+Wound-Accepting_Technique Wound-Accepting Technique
+Essence_Font_Technique Essence Font Technique
+Legendary_Scholars_Curriculum Legendary Scholars Curriculum
+Selfsame_Master_Instructor Selfsame Master Instructor
+Sacred_Relic_Understanding Sacred Relic Understanding
+Wake_the_Sleeper Wake the Sleeper
+Heaven-Turning_Calculations Heaven-Turning Calculations
+Injury-Forcing_Technique Injury-Forcing Technique
+Essence-Draining_Touch Essence-Draining Touch
+Essence-Twining_Method Essence-Twining Method
+Force-Draining_Whisper Force-Draining Whisper
+Immanent_Solar_Glory Immanent Solar Glory
+Flowing_Essence_Conversion Flowing Essence Conversion
+Power-Restoring_Invocation Power-Restoring Invocation
+Surging_Essence_Flow Surging Essence Flow
+Order-Affirming_Blow Order-Affirming Blow
+Wyld-Shaping_Technique Wyld-Shaping Technique
+Hero-Induction_Method Hero-Induction Method
+Wyld_Cauldron_Mastery Wyld Cauldron Mastery
+Wyld-Called_Weapon Wyld-Called Weapon
+Wyld-Forging_Focus Wyld-Forging Focus
+Tome-Rearing_Gesture Tome-Rearing Gesture
+Power-Awarding_Prana Power-Awarding Prana
+Prophet_of_Seventeen_Cycles Prophet of Seventeen Cycles
+Will-Shattering_Illusion Will-Shattering Illusion
+Surging_Inner_Fire Surging Inner Fire
+Seal_of_Infinite_Wisdom Seal of Infinite Wisdom
+Sevenfold_Savant_Mantle Sevenfold Savant Mantle
+Power_Beyond_Reason Power Beyond Reason
+Manse-Raising_Method Manse-Raising Method
+Demiurgic_Suspiration Demiurgic Suspiration
+God-Kings_Shrike_(Dogstar_Ruminations) God-Kings Shrike (Dogstar Ruminations)
+Incalculable_Flowing_Mind Incalculable Flowing Mind
+Unstoppable_Magnus_Approach Unstoppable Magnus Approach
+Savant_of_Nine_Glories Savant of Nine Glories
+Ailment-Rectifying_Method Ailment-Rectifying Method
+Plague-Banishing_Incitation Plague-Banishing Incitation
+Wound-Mending_Care_Technique Wound-Mending Care Technique
+Wound-Cleansing_Meditation Wound-Cleansing Meditation
+Flawless_Diagnosis_Technique Flawless Diagnosis Technique
+Contagion-Curing_Touch Contagion-Curing Touch
+Instant_Treatment_Methodology Instant Treatment Methodology
+Wound-Banishing_Strike Wound-Banishing Strike
+Touch_of_Blissful_Release Touch of Blissful Release
+Feit_of_Imparted_Nature Feit of Imparted Nature
+Body-Purifying_Admonitions Body-Purifying Admonitions
+Anointment_of_Miraculous_Health Anointment of Miraculous Health
+Body-Sculpting_Essence_Method Body-Sculpting Essence Method
+Wholeness-Restoring_Meditation Wholeness-Restoring Meditation
+Healing_Trance_Meditation Healing Trance Meditation
+Life-Exchanging_Prana Life-Exchanging Prana
+Anodyne_of_Celestial_Dreaming Anodyne of Celestial Dreaming
+Master_Chirurgeon_Meditation Master Chirurgeon Meditation
+Benison_of_Celestial_Healing Benison of Celestial Healing
+Life-Sculpting_Hands_Technique Life-Sculpting Hands Technique
+Healers_Unerring_Hands Healers Unerring Hands
+Immaculate_Solar_Physician Immaculate Solar Physician
+Perfect_Celestial_Chirurgeon Perfect Celestial Chirurgeon
+Excellent_Strike Excellent Strike
+Fire_and_Stones_Strike Fire and Stones Strike
+One_Weapon,_Two_Blows One Weapon, Two Blows
+Peony_Blossom_Technique Peony Blossom Technique
+Dipping_Swallow_Defense Dipping Swallow Defense
+Bulwark_Stance Bulwark Stance
+War_Lion_Stance War Lion Stance
+Guard-Breaking_Technique Guard-Breaking Technique
+Solar_Counterattack Solar Counterattack
+Call_the_Blade Call the Blade
+Summoning_the_Loyal_Steel Summoning the Loyal Steel
+Rising_Sun_Slash Rising Sun Slash
+Agile_Dragonfly_Blade Agile Dragonfly Blade
+Iron_Whirlwind_Attack Iron Whirlwind Attack
+Fivefold_Bulwark_Stance Fivefold Bulwark Stance
+Heavenly_Guardian_Defense Heavenly Guardian Defense
+Hail-Shattering_Practice Hail-Shattering Practice
+Calm_and_Ready_Focus Calm and Ready Focus
+Unassailable_Guardian_Posture Unassailable Guardian Posture
+Ready_in_Eight_Directions_Stance Ready in Eight Directions Stance
+Glorious_Solar_Saber Glorious Solar Saber
+Iron_Raptor_Technique Iron Raptor Technique
+Sandstorm-Wind_Attack Sandstorm-Wind Attack
+Edge_of_Morning_Sunlight Edge of Morning Sunlight
+Foe-Cleaving_Focus Foe-Cleaving Focus
+Hungry_Tiger_Technique Hungry Tiger Technique
+Invincible_Fury_of_the_Dawn Invincible Fury of the Dawn
+Perfect_Strike_Discipline Perfect Strike Discipline
+Flashing_Edge_of_Dawn Flashing Edge of Dawn
+Fervent_Blow Fervent Blow
+Over-and-Under_Method Over-and-Under Method
+Immortal_Blade_Triumphant Immortal Blade Triumphant
+Corona_of_Radiance Corona of Radiance
+Sharp_Light_of_Judgment_Stance Sharp Light of Judgment Stance
+Blazing_Solar_Bolt Blazing Solar Bolt
+Heaven_Sword_Flash Heaven Sword Flash
+Circle_of_Bright_Reaving Circle of Bright Reaving
+Protection_of_Celestial_Bliss Protection of Celestial Bliss
+Spirit-Detecting_Glance Spirit-Detecting Glance
+Uncanny_Perception_Technique Uncanny Perception Technique
+Keen_Unnatural_Eye Keen Unnatural Eye
+Spirit-Cutting_Attack Spirit-Cutting Attack
+Spirit-Draining_Stance Spirit-Draining Stance
+Ghost-Eating_Technique Ghost-Eating Technique
+Phantom-Seizing_Strike Phantom-Seizing Strike
+Spirit-Slaying_Stance Spirit-Slaying Stance
+Uncanny_Shroud_Defense Uncanny Shroud Defense
+Spirit-Manifesting_Word Spirit-Manifesting Word
+Ancient_Tongue_Understanding Ancient Tongue Understanding
+Supernal_Control_Method Supernal Control Method
+All-Encompassing_Sorcerers_Sight All-Encompassing Sorcerers Sight
+Carnal_Spirit_Rending Carnal Spirit Rending
+Burning_Exorcism_Technique Burning Exorcism Technique
+Breath-Drinker_Method Breath-Drinker Method
+Spirit-Repelling_Diagram Spirit-Repelling Diagram
+Nine_Specters_Ban Nine Specters Ban
+Spirit-Caging_Mandala Spirit-Caging Mandala
+Material_Exegesis_Prana Material Exegesis Prana
+Dark-Minders_Observances Dark-Minders Observances
+Burning_Eye_of_the_Deliverer Burning Eye of the Deliverer
+Soul_Projection_Method Soul Projection Method
+Wyld-Binding_Prana Wyld-Binding Prana
+Spirit-Draining_Mudra Spirit-Draining Mudra
+Demon-Compelling_Noose Demon-Compelling Noose
+All_Souls_Benediction All Souls Benediction
+Gloaming_Eye_Understanding Gloaming Eye Understanding
+Sorcerers_Burning_Chakra Sorcerers Burning Chakra
+Immortal_Soul_Vigil Immortal Soul Vigil
+Spirit-Shredding_Exorcism Spirit-Shredding Exorcism
+Spirit-Drawing_Oculus Spirit-Drawing Oculus
+Ephemeral_Induction_Technique Ephemeral Induction Technique
+Terrestrial_Circle_Sorcery Terrestrial Circle Sorcery
+Celestial_Circle_Sorcery Celestial Circle Sorcery
+Solar_Circle_Sorcery Solar Circle Sorcery
+Masterful_Performance_Exercise Masterful Performance Exercise
+Soul-Firing_Performance Soul-Firing Performance
+Stillness-Drawing_Meditation Stillness-Drawing Meditation
+Trance_of_Fugue_Vision Trance of Fugue Vision
+Penultimate_Unity_of_Form Penultimate Unity of Form
+Soul-Bracing_Momentous_Power Soul-Bracing Momentous Power
+Unmatched_Showmanship_Style Unmatched Showmanship Style
+Soul_Voice Soul Voice
+Pivotal_Encore_Performance Pivotal Encore Performance
+Respect-Commanding_Attitude Respect-Commanding Attitude
+Phantom-Conjuring_Performance Phantom-Conjuring Performance
+Memory-Reweaving_Discipline Memory-Reweaving Discipline
+Demon_Wracking_Shout Demon Wracking Shout
+Impassioned_Orator_Technique Impassioned Orator Technique
+Fury_Inciting_Speech Fury Inciting Speech
+Dogmatic_Contagion_Discipline Dogmatic Contagion Discipline
+Infectious_Zealotry_Approach Infectious Zealotry Approach
+Perfect_Harmony_Technique Perfect Harmony Technique
+Mood-Inducing_Music Mood-Inducing Music
+Battle_Anthem_(of_the_Solar_Exalted) Battle Anthem (of the Solar Exalted)
+Plectral_Harbingers_Approach Plectral Harbingers Approach
+Heart-Compelling_Method Heart-Compelling Method
+Soul-Stirring_Cantata Soul-Stirring Cantata
+Heroism-Encouraging_Ballad Heroism-Encouraging Ballad
+Graceful_Reed_Dancing Graceful Reed Dancing
+Battle-Dancer_Method Battle-Dancer Method
+Shining_Expression_Style Shining Expression Style
+Winding_Sinuous_Motion Winding Sinuous Motion
+Monk-Seducing_Demon_Dance Monk-Seducing Demon Dance
+Master_Thespian_Style Master Thespian Style
+Voice-Hurling_Method Voice-Hurling Method
+Cunning_Mimicry_Technique Cunning Mimicry Technique
+Most_Excellent_Mockingbird Most Excellent Mockingbird
+Splendid_Magpie_Approach Splendid Magpie Approach
+Thousand_Courtesan_Ways Thousand Courtesan Ways
+Celestial_Bliss_Trick Celestial Bliss Trick
+Listener-Swaying_Argument Listener-Swaying Argument
+Harmonious_Presence_Meditation Harmonious Presence Meditation
+Excellent_Friend_Approach Excellent Friend Approach
+Tigers_Dread_Symmetry Tigers Dread Symmetry
+Impassioned_Discourse_Technique Impassioned Discourse Technique
+Empowering_Shout Empowering Shout
+Majestic_Radiant_Presence Majestic Radiant Presence
+Underling-Promoting_Touch Underling-Promoting Touch
+Threefold_Magnetic_Ardor Threefold Magnetic Ardor
+Awakened_Carnal_Demiurge Awakened Carnal Demiurge
+Enemy-Castigating_Solar_Judgment Enemy-Castigating Solar Judgment
+Fulminating_Word Fulminating Word
+Authority-Radiating_Stance Authority-Radiating Stance
+Terrifying_Apparition_of_Glory Terrifying Apparition of Glory
+Blazing_Glorious_Icon Blazing Glorious Icon
+Mind-Wiping_Gaze Mind-Wiping Gaze
+Hypnotic_Tongue_Technique Hypnotic Tongue Technique
+Worshipful_Lackey_Acquisition Worshipful Lackey Acquisition
+Prophet-Uplifting_Evocation Prophet-Uplifting Evocation
+Shedding_Infinite_Radiance Shedding Infinite Radiance
+Rose-Lipped_Seduction_Style Rose-Lipped Seduction Style
+Crowned_King_of_Eternity Crowned King of Eternity
+Favor-Conferring_Prana Favor-Conferring Prana
+Countenance_of_Vast_Wrath Countenance of Vast Wrath
+Durability_of_Oak_Meditation Durability of Oak Meditation
+Spirit_Strengthens_the_Skin Spirit Strengthens the Skin
+Iron_Skin_Concentration Iron Skin Concentration
+Ox-Body_Technique Ox-Body Technique
+Body-Mending_Meditation Body-Mending Meditation
+Front-Line_Warriors_Stamina Front-Line Warriors Stamina
+Whirlwind_Armor-Donning_Prana Whirlwind Armor-Donning Prana
+Armored_Scouts_Invigoration Armored Scouts Invigoration
+Poison-Resisting_Meditation Poison-Resisting Meditation
+Essence-Gathering_Temper Essence-Gathering Temper
+Diamond-Body_Prana Diamond-Body Prana
+Iron_Kettle_Body Iron Kettle Body
+Adamant_Skin_Technique Adamant Skin Technique
+Tiger_Warriors_Endurance Tiger Warriors Endurance
+Hauberk-Summoning_Gesture Hauberk-Summoning Gesture
+Illness-Resisting_Meditation Illness-Resisting Meditation
+Willpower-Enhancing_Spirit Willpower-Enhancing Spirit
+Battle_Fury_Focus Battle Fury Focus
+Wound-Knitting_Exercise Wound-Knitting Exercise
+Unbreakable_Warriors_Mastery Unbreakable Warriors Mastery
+Ruin-Abasing_Shrug Ruin-Abasing Shrug
+Glorious_Solar_Plate Glorious Solar Plate
+Immunity_to_Everything_Technique Immunity to Everything Technique
+Fury-Fed_Ardor Fury-Fed Ardor
+Bloodthirsty_Sword-Dancer_Spirit Bloodthirsty Sword-Dancer Spirit
+Aegis_of_Invincible_Might Aegis of Invincible Might
+Master_Horsemans_Techniques Master Horsemans Techniques
+Flashing_Thunderbolt_Steed Flashing Thunderbolt Steed
+Elusive_Mount_Technique Elusive Mount Technique
+Wind-Racing_Essence_Infusion Wind-Racing Essence Infusion
+Single_Spirit_Method Single Spirit Method
+Seasoned_Beast-Riders_Approach Seasoned Beast-Riders Approach
+Worthy_Mount_Technique Worthy Mount Technique
+Mount_Preservation_Method Mount Preservation Method
+Harmonious_Tacking_Technique Harmonious Tacking Technique
+Untouchable_Horsemans_Attitude Untouchable Horsemans Attitude
+Immortal_Chargers_Gallop Immortal Chargers Gallop
+Supernal_Lash_Discipline Supernal Lash Discipline
+Speed-Fury_Focus Speed-Fury Focus
+Inexhaustible_Destriers_Gait Inexhaustible Destriers Gait
+Coursing_Firebolt_Flash Coursing Firebolt Flash
+Saddle-Staying_Courses Saddle-Staying Courses
+Horse-Stealing_Leap Horse-Stealing Leap
+Immortal_Riders_Advantage Immortal Riders Advantage
+Horse-Healing_Technique Horse-Healing Technique
+Rousing_Backlash_Assault Rousing Backlash Assault
+Woe_and_Storm_Evasion Woe and Storm Evasion
+Resilience_of_the_Chosen_Mount Resilience of the Chosen Mount
+Phantom_Steed Phantom Steed
+Hero_Rides_Away Hero Rides Away
+Phantom_Riders_Approach Phantom Riders Approach
+Fierce_Chargers_Pulse Fierce Chargers Pulse
+Grizzled_Cataphracts_Way Grizzled Cataphracts Way
+Rapid_Cavalry_Approach Rapid Cavalry Approach
+Sometimes_Horses_Fly_Approach Sometimes Horses Fly Approach
+Soaring_Pegasus_Style Soaring Pegasus Style
+Whirlwind_Horse-Armoring_Prana Whirlwind Horse-Armoring Prana
+Bard-Lightening_Prana Bard-Lightening Prana
+Untouchable_Solar_Steed Untouchable Solar Steed
+Wrathful_Mount_Invigoration Wrathful Mount Invigoration
+Seven_Cyclones_Rearing Seven Cyclones Rearing
+Iron_Simhata_Style Iron Simhata Style
+Salty_Dog_Method Salty Dog Method
+Shipwreck-Surviving_Stamina Shipwreck-Surviving Stamina
+Fathoms-Fed_Spirit Fathoms-Fed Spirit
+Safe_Bearing_Technique Safe Bearing Technique
+Ship-Claiming_Stance Ship-Claiming Stance
+Ship-Sleeking_Technique Ship-Sleeking Technique
+Orichalcum_Letters_of_Marque Orichalcum Letters of Marque
+Immortal_Mariners_Advantage Immortal Mariners Advantage
+Legendary_Captains_Signature Legendary Captains Signature
+Sea_Ambush_Technique Sea Ambush Technique
+Deck-Sweeping_Fusillade Deck-Sweeping Fusillade
+Ship-Breaker_Method Ship-Breaker Method
+Superior_Positioning_Technique Superior Positioning Technique
+Ship-Imperiled_Vigor Ship-Imperiled Vigor
+Weather-Anticipating_Intuition Weather-Anticipating Intuition
+Tide-Cutting_Essence_Infusion Tide-Cutting Essence Infusion
+Wave-Riding_Discipline Wave-Riding Discipline
+Hull-Preserving_Technique Hull-Preserving Technique
+Hull-Taming_Transfusion Hull-Taming Transfusion
+Ship-Leavening_Meditation Ship-Leavening Meditation
+Indomitable_Voyagers_Perseverance Indomitable Voyagers Perseverance
+Ocean-Conquering_Avatar Ocean-Conquering Avatar
+Wind-Defying_Course_Technique Wind-Defying Course Technique
+Current-Cutting_Technique Current-Cutting Technique
+Implacable_Sea_Wolf_Spirit Implacable Sea Wolf Spirit
+Deadly_Ichneumon_Assault Deadly Ichneumon Assault
+Rail-Storming_Fervor Rail-Storming Fervor
+Sea_Serpent_Flash Sea Serpent Flash
+Tide-Carried_Omens Tide-Carried Omens
+Chaos-Cutting_Galley Chaos-Cutting Galley
+Blood_and_Salt_Bondage Blood and Salt Bondage
+Ship-Sustaining_Spirit Ship-Sustaining Spirit
+Burning_Anima_Sails Burning Anima Sails
+Storm-Weathering_Essence_Infusion Storm-Weathering Essence Infusion
+Invincible_Admiral_Method Invincible Admiral Method
+Sea_Devil_Training_Technique Sea Devil Training Technique
+Ship-Rolling_Juggernaut_Method Ship-Rolling Juggernaut Method
+Ship-Razing_Renewal Ship-Razing Renewal
+Black_Fathoms_Blessed Black Fathoms Blessed
+Mastery_of_Small_Manners Mastery of Small Manners
+Motive-Discerning_Technique Motive-Discerning Technique
+Quicksilver_Falcons_Eye Quicksilver Falcons Eye
+Umbral_Eyes_Focus Umbral Eyes Focus
+Humble_Servant_Approach Humble Servant Approach
+Shadow_Over_Day Shadow Over Day
+Night_Passes_Over Night Passes Over
+Intent-Tracing_Stare Intent-Tracing Stare
+Culture_Hero_Approach Culture Hero Approach
+Unimpeachable_Discourse_Technique Unimpeachable Discourse Technique
+Indecent_Proposal_Method Indecent Proposal Method
+Dauntless_Assayer_Method Dauntless Assayer Method
+Preeminent_Gala_Knife Preeminent Gala Knife
+Wise-Eyed_Courtier_Method Wise-Eyed Courtier Method
+Discretionary_Gesture Discretionary Gesture
+Deep-Eyed_Soul_Gazing Deep-Eyed Soul Gazing
+Easily-Discarded_Presence_Method Easily-Discarded Presence Method
+Guarded_Thoughts_Meditation Guarded Thoughts Meditation
+Penumbra_Self_Meditation Penumbra Self Meditation
+Inverted_Ego_Mask Inverted Ego Mask
+Cunning_Insight_Technique Cunning Insight Technique
+Doubt-Sowing_Contention_Method Doubt-Sowing Contention Method
+Effective_Counterargument Effective Counterargument
+Wise_Counsel_(Flashing_Soul_Reform) Wise Counsel (Flashing Soul Reform)
+Endless_Obsession_Feint Endless Obsession Feint
+Aspersions_Cast_Aside Aspersions Cast Aside
+Asp_Bites_Its_Tail Asp Bites Its Tail
+Fete-Watcher_Stance Fete-Watcher Stance
+Seen_and_Seeing_Method Seen and Seeing Method
+Face-Charming_Prana Face-Charming Prana
+Selfsame_Master_Procurer Selfsame Master Procurer
+Soul-Void_Kata Soul-Void Kata
+Knowing_the_Souls_Price Knowing the Souls Price
+Understanding_the_Court Understanding the Court
+Unbound_Social_Mastery Unbound Social Mastery
+Heart-Eclipsing_Shroud Heart-Eclipsing Shroud
+Hundred-Faced_Stranger Hundred-Faced Stranger
+Legend_Mask_Methodology Legend Mask Methodology
+Friend_of_a_Friend_Approach Friend of a Friend Approach
+Venomous_Rumors_Technique Venomous Rumors Technique
+Even-Touched_Prophet Even-Touched Prophet
+Elusive_Dream_Defense Elusive Dream Defense
+Draw_the_Curtain Draw the Curtain
+At_Your_Service At Your Service
+Fugue-Empowered_Other Fugue-Empowered Other
+Soul_Reprisal Soul Reprisal
+Perfect_Shadow_Stillness Perfect Shadow Stillness
+Invisible_Statue_Spirit Invisible Statue Spirit
+Easily-Overlooked_Presence_Method Easily-Overlooked Presence Method
+Blinding_Battle_Feint Blinding Battle Feint
+Stalking_Wolf_Attitude Stalking Wolf Attitude
+Guardian_Fog_Approach Guardian Fog Approach
+Blurred_Form_Style Blurred Form Style
+Mental_Invisibility_Technique Mental Invisibility Technique
+Shadow_Victors_Repose Shadow Victors Repose
+Flash-Eyed_Killers_Insight Flash-Eyed Killers Insight
+Hidden_Snake_Recoil Hidden Snake Recoil
+Dark_Sentinels_Way Dark Sentinels Way
+Smoke_and_Shadow_Cover Smoke and Shadow Cover
+Sun_Swallowing_Practice Sun Swallowing Practice
+Vanishing_From_Minds_Eye_Method Vanishing From Minds Eye Method
+Sound_and_Scent_Banishing_Attitude Sound and Scent Banishing Attitude
+Ten_Whispers_Silence_Meditation Ten Whispers Silence Meditation
+Mind_Shroud_Meditation Mind Shroud Meditation
+Shadow_Replacement_Technique Shadow Replacement Technique
+Shadow-Crossing_Leap_Technique Shadow-Crossing Leap Technique
+Fivefold_Shadow_Burial Fivefold Shadow Burial
+False_Image_Feint False Image Feint
+Flashing_Nocturne_Prana Flashing Nocturne Prana
+Food-Gathering_Exercise Food-Gathering Exercise
+Hardship-Surviving_Mendicant_Spirit Hardship-Surviving Mendicant Spirit
+Friendship_with_Animals_Approach Friendship with Animals Approach
+Trackless_Region_Navigation Trackless Region Navigation
+Unshakeable_Bloodhound_Technique Unshakeable Bloodhound Technique
+Spirit-Tied_Pet Spirit-Tied Pet
+Beast-Mastering_Behavior Beast-Mastering Behavior
+Deadly_Onslaught_Coordination Deadly Onslaught Coordination
+Bestial_Traits_Technique Bestial Traits Technique
+Hide-Hardening_Practice Hide-Hardening Practice
+Life_of_the_Aurochs Life of the Aurochs
+Familiar-Honing_Instruction Familiar-Honing Instruction
+Spirit-Hunting_Hound Spirit-Hunting Hound
+Ambush_Predator_Style Ambush Predator Style
+Element-Resisting_Prana Element-Resisting Prana
+Traceless_Passage Traceless Passage
+Eye-Deceiving_Camouflage Eye-Deceiving Camouflage
+Red-Toothed_Execution_Order Red-Toothed Execution Order
+Ghost_Panther_Slinking Ghost Panther Slinking
+Saga_Beast_Virtue Saga Beast Virtue
+Phantom-Rending_Fangs Phantom-Rending Fangs
+Force-Building_Predator_Style Force-Building Predator Style
+Crimson_Talon_Vigor Crimson Talon Vigor
+Deadly_Predator_Method Deadly Predator Method
+Precision_of_the_Striking_Raptor Precision of the Striking Raptor
+Steel_Storm_Descending Steel Storm Descending
+Flashing_Draw_Mastery Flashing Draw Mastery
+Joint-Wounding_Attack Joint-Wounding Attack
+Angle-Tracing_Edge Angle-Tracing Edge
+Triple_Distance_Attack_Technique Triple Distance Attack Technique
+Cascade_of_Cutting_Terror Cascade of Cutting Terror
+Swarm-Culling_Instinct Swarm-Culling Instinct
+Mist_on_Water_Attack Mist on Water Attack
+Observer-Deceiving_Attack Observer-Deceiving Attack
+Flying_Steel_Ruse Flying Steel Ruse
+Empty_Palm_Technique Empty Palm Technique
+Fallen_Weapon_Deflection Fallen Weapon Deflection
+Mist-Gathering_Practice Mist-Gathering Practice
+Shower_of_Deadly_Blades Shower of Deadly Blades
+Shrike_Saving_Discretion Shrike Saving Discretion
+Crimson_Razor_Wind Crimson Razor Wind
+Sharp_Hand_Feint Sharp Hand Feint
+Shadow_Wind_Slash_(Shadow_Wind_Kill) Shadow Wind Slash (Shadow Wind Kill)
+Shadow_Thrust_Spark Shadow Thrust Spark
+Savage_Wolf_Attack Savage Wolf Attack
+Falling_Icicle_Strike Falling Icicle Strike
+Fiery_Solar_Chakram Fiery Solar Chakram
+Cutting_Circle_of_Destruction Cutting Circle of Destruction
+War_God_Descendent War God Descendent
+Immortal_Commanders_Presence Immortal Commanders Presence
+League_of_Iron_Preparation League of Iron Preparation
+Rout-Stemming_Gesture Rout-Stemming Gesture
+Holistic_Battle_Understanding Holistic Battle Understanding
+Ideal_Battle_Knowledge_Prana Ideal Battle Knowledge Prana
+Tiger_Warrior_Training_Technique Tiger Warrior Training Technique
+Magnanimity_of_the_Unstoppable_Icon Magnanimity of the Unstoppable Icon
+Redoubt-Raising_Gesture Redoubt-Raising Gesture
+General_of_the_All-Seeing_Sun General of the All-Seeing Sun
+Immortal_Warlords_Tactic Immortal Warlords Tactic
+Battle_Path_Ascendant Battle Path Ascendant
+March_of_the_Returner March of the Returner
+Supremacy_of_the_Divine_Army Supremacy of the Divine Army
+Four_Glories_Meditation Four Glories Meditation
+Transcendent_Warlords_Genius Transcendent Warlords Genius
+Battle-Visionarys_Foresight Battle-Visionarys Foresight
