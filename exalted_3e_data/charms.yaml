@@ -1,4 +1,4 @@
-Wise Arrow:
+Wise Arrows:
     Cost: 1m
     Mins: [[Archery, 2], [Essence, 1]]
     Type: Supplemental
@@ -2224,7 +2224,7 @@ Accord of the Unbreakable Spirit:
 Phoenix Renewal Tactic:
     Cost: —(Varies)
     Mins: [[Integrity, 5], [Essence, 2]]
-    Type:: Permanent
+    Type: Permanent
     Keywords: None
     Duration: Permanent
     Prerequisite Charms: Destiny-Manifesting Method
