@@ -12,9 +12,7 @@ def print_charm_names():
     outfile = open('charm_names.txt', 'wt')
     for charm in list(data.keys()):
         charm_og = charm
-        charm_modified = "_".join(charm.split(' '))
-        charm_modified = "".join(charm_modified.split('’'))
-        outfile.write(f"{charm_modified} {charm_og}\n")
+        outfile.write(f"{charm_og}\n")
     outfile.close
 
 print(choose_charm())
