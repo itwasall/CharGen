@@ -14,6 +14,7 @@ from exalted_3e_data import data
 from exalted_3e_data.data import LIST_ABILITIES, LIST_ATTRIBUTE, LIST_CASTE
 
 DataExaltedCaste = safe_load(open(f'{root_path}/exalted_3e_data/caste.yaml', 'rt'))
+DataExaltedCharms = safe_load(open(f'{root_path}/exalted_3e_data/mini_exalted/mini_charms.yaml', 'rt'))
 
 for caste in LIST_CASTE:
     caste_name = caste.name
@@ -60,6 +61,12 @@ def select_caste(character: Character):
     character.details['Caste'] = character.caste.name
     character.details['Concept'] = choice(character.caste.example_concepts)
 
+def pick_charm(character: Character):
+    charm_name = choice(list(DataExaltedCharms.keys()))
+    charm = {charm_name: DataExaltedCharms[charm_name]}
+    print(charm)
+
+
 
 def dumb_caste_ability_exception(caste):
     if "Brawl/Martial Arts" in caste.abilities:
@@ -74,3 +81,4 @@ print(jerry.attributes)
 print(jerry.caste)
 print([ab for ab in jerry.abilities if ab.is_caste])
 print(jerry.details)
+pick_charm(jerry)
