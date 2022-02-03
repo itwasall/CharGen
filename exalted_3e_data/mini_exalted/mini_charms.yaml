@@ -1,0 +1,26 @@
+Sensory Acuity Prana:
+    Cost: 5m
+    Mins: [[Awareness, 2], [Essence, 1]]
+    Type: Reflexive
+    Keywords: None
+    Duration: One scene
+    Prerequisite Charms: [None]
+    Description: "A breath of Essence seals the five senses into a more perfect form. The Solars senses are heightened and attuned to minute motions and sounds, dim and noisy conditions.  She can differentiate between subtle tastes and textures with only the slightest variation. Thus sharpened, it is more difficult for characters to escape her notice, or to deceive her hunting senses. For the rest of the scene, the Exalts Awareness rolls benefit from double 9s. If the effect of any Unsurpassed (Sense) Discipline applies, reroll 6s until they cease to appear. Use of Sensory Acuity Prana comes without the danger of sensory overload; the Charm helps the Solar manage her senses more effectively."
+
+Surprise Anticipation Method:
+    Cost: —
+    Mins: [[Awareness, 3], [Essence, 1]]
+    Type: Reflexive
+    Keywords: None
+    Duration: Instant
+    Prerequisite Charms: [Sensory Acuity Prana]
+    Description: "Upon learning this technique, the Solars senses guard her from threats she is not consciously aware of. Whenever the Solar is in danger—even if she is not consciously aware of the threat—her relevant senses will home in on the source of danger, enhancing her Awareness to make the threat known to her. Surprise Anticipation Method has two functions. First: for every 9 she rolls on an Awareness check to reveal a hidden enemy, trap, or any source of harm not readily apparent, she gains a single mote of Essence, and for every 10 she gains two. This charge of Essence can only be used to offset the cost of activating Awareness Charms to reveal a threat. Motes returned in this fashion may retroactively lower the cost committed to Awareness Charms of a scene or longer duration, both lowering the committed cost and returning the discounted mote(s) to the Solars mote pool. Second: her senses function even when she is asleep or Incapacitated, allowing her to use any of her Awareness Charms subconsciously.  A threat revealed to the Solar while she is asleep or unconscious automatically revives her, allowing her to defend herself."
+
+Keen Sight Technique:
+    Cost: 3m or 6m, 1wp
+    Mins: [[Awareness, 3], [Essence, 1]]
+    Type: Simple
+    Keywords: None
+    Duration: One scene
+    Prerequisite Charms: [Sensory Acuity Prana]
+    Description: "The Solars visual acuity is heightened to several times that of a normal mortal. This Charm represents an array of mechanical benefits: the Solar may perform difficulty 2 or 3 sight-based actions without a roll. She gains an additional two dice to notice hidden persons or devices, to catch sleight of hand and see through disguises. In dim conditions, she sees as well as in broad daylight. Deeper visual hindrances such as dense smoke or fog represent less of a struggle: reduce the difficulty of seeing in such conditions by 1, and remove the -1 penalty to detect hidden threats in such environments. These effects reflect the Exalts ability to notice and process hundreds of minute details, as well as to focus and manage light sources more effectively. The Solars visual range is also increased: she can see tiny details at 100 yards, quickly count masses of troops, and notice threats well in advance of her position.  Special activation rules: The player may choose to activate Keen Sight Technique by paying six motes, one willpower.  Doing so sets the duration of this Charm to Indefinite.  Despite being Simple type Charms, each Keen (Sense) Technique can be activated simultaneously by paying the full cost of each. In addition, these Charms are compatible with Sensory Acuity Prana as well as with each other."
