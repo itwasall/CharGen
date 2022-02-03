@@ -13,6 +13,9 @@ class ExaltedCasteClass:
     def __init__(self, name: str, abilities: List[str]):
         self.name = name
         self.abilities = abilities
+        self.associations = []
+        self.example_concepts = []
+        self.sobriquets = []
     def __repr__(self):
         return self.name
 
