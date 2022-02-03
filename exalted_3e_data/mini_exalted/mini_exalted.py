@@ -1,15 +1,26 @@
 import sys
+from yaml import safe_load
 from random import choice
 from typing import List, Dict
 
 if not sys.platform == "linux":
-    sys.path.append("F:\\CharGen")
+    root_path = "F:\\CharGen"
 else:
-    sys.path.append("/home/refrshrs/code/python/CharGenNew/CharGen")
+    root_path = "/home/refrshrs/code/python/CharGenNew/CharGen"
+sys.path.append(root_path)
 
 
 from exalted_3e_data import data
 from exalted_3e_data.data import LIST_ABILITIES, LIST_ATTRIBUTE, LIST_CASTE
+
+DataExaltedCaste = safe_load(open(f'{root_path}/exalted_3e_data/caste.yaml', 'rt'))
+
+for caste in LIST_CASTE:
+    caste_name = caste.name
+    caste_data = DataExaltedCaste[caste_name]
+    caste.associations = caste_data['associations']
+    caste.example_concepts = caste_data['concepts']
+    caste.sobriquets = caste_data['sobriquets']
 
 
 class Character:
@@ -47,6 +58,7 @@ def select_caste(character: Character):
         else:
             continue
     character.details['Caste'] = character.caste.name
+    character.details['Concept'] = choice(character.caste.example_concepts)
 
 
 def dumb_caste_ability_exception(caste):

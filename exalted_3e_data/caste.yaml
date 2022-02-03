@@ -1,0 +1,55 @@
+Dawn:
+  abilities: [Archery, Awareness, Brawl/Marial Arts, Dodge, Melee, Resistance, Thrown, War]
+  associations:
+    - The season of spring
+    - The full moon
+    - the Maiden of battles
+    - the colors of lavender and saffron
+    - the East
+    - the element of Fire
+  sobriquets: [Ascending Suns, Children of the Dawn, Lightbringers, Spears of Morning, Swords of Heaven, Bronze Tigers, the Forsaken (derogatory)]
+  concepts: [Bodyguard, Genius Tactician, City Guardsman, Wandering Swordsman, Barbarian Warlord, Repentant Brigand, Martial Monk, Former Slave Gladiator, Veteran Soldier, Daring Young Farm Girl, Swordsmith, Arena Brawler]
+Zenith:
+  abilities: [Athletics, Integrity, Performance, Lore, Presence, Resistance, Survival, War]
+  associations:
+    - The season of summer
+    - the half moon
+    - the Maiden of Serenity
+    - the colors of cobalt blue and gold
+    - the South
+    - the element of Earth
+  sobriquets: [Resplendent Suns, the Unyielding, Pillars of the Sun, Hammers of Heaven, Golden Bulls, the Blasphemous (derogatory)]
+  concepts: [Firebrand Revolutionary, Master Orator, Two-Fisted Laborer, Village Chief, Wandering Mendicant, Peasant Rebel, Itinerant Physician, Former Priest Or Shaman Of Another God, Inspirational Artist, Runaway Slave, Hermit, Musician]
+Twilight:
+  abilities: [Bureaucracy, Craft, Integrity, Investigation, Linguistics, Lore, Medicine, Occult]
+  associations:
+    - The season of autumn
+    - the crescent moon
+    - the Maiden of Secrets
+    - the colors of orange and black
+    - the West
+    - the element of Wood
+  sobriquets: [Descending Suns, Children of Twilight, Copper Spiders, Arrows of Heaven, Solar Lightning, Heaven’s Lamps, the Unclean (derogatory)]
+  concepts: [Radical Scholar, Destitute Student, Master Geomancer, Child Prodigy, Architect, Cunning Tailor, Blacksmith, Demonologist, Relentless Detective, Court Astrologer, Young Scavenger Lord, Master Chef, Village Wise Woman]
+Night:
+  abilities: [Athletics, Awareness, Dodge, Investigation, Larceny, Ride, Stealth, and Socialize]
+  associations:
+    - The season of winter
+    - the new moon
+    - the Maiden of Endings
+    - the colors of violet and grey
+    - the North
+    - the element of Water
+  sobriquets: [Hidden Suns, Concealing Shadows, Nightbringers, Iron Wolves, the Daggers of Heaven, the Wretched (derogatory)]
+  concepts: [Cat Burglar, Escaped Fugitive, Bounty Hunter, Nobleman’S Mistress, Confidence Man, Vigilante Hero, Neglected Youngest Sister, Smuggler, Former Prostitute, Spy Extraordinaire, Underworld Kingpin, Assassin, Highwayman, Acrobat]
+Eclipse:
+  abilities: [Bureaucracy, Larceny, Linguistics, Occult, Presence, Ride, Sail, Socialize]
+  associations:
+    - The period of Calibration
+    - the gibbous moon
+    - the Maiden of Journeys
+    - the color of silver
+    - the Center
+    - the element of Air
+  sobriquets: [Crowned Suns, Harmonious Voices, Wheels of Peace, Solar Winds, Quicksilver Falcons, Quills of Heaven, Heaven’s Voices, the Deceivers (derogatory)]
+  concepts: [Translator, Ambitious Young Noble, Village Shaman, Diplomat, Merchant Prince, Adventurous Sailor, Royal Advisor, Gentleman Explorer, Speaker-To-Gods, Professional Courier, Government Minister]

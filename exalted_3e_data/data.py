@@ -10,12 +10,19 @@ class ExaltedAttributeClass(BaseAttributeClass):
 
 
 class ExaltedCasteClass:
-    def __init__(self, name: str, abilities: List[str]):
+    def __init__(
+        self,
+        name: str,
+        abilities: List[str] = None,
+        associations: List[str] = None,
+        example_concepts: List[str] = None,
+        sobriquets: List[str] = None
+    ):
         self.name = name
         self.abilities = abilities
-        self.associations = []
-        self.example_concepts = []
-        self.sobriquets = []
+        self.associations = associations
+        self.example_concepts = example_concepts
+        self.sobriquets = sobriquets
     def __repr__(self):
         return self.name
 
@@ -166,6 +173,7 @@ LIST_CHARMS = charm_names
 if __name__ == "__main__":
 
     DataExaltedCharms = safe_load(open('exalted_3e_data/charms.yaml', 'rt'))
+    DataExaltedCastes = safe_load(open('exalted_3e_data/caste.yaml', 'rt'))
 
     def get_charm(charm:str = None):
         if charm is None or charm not in charm_names:
