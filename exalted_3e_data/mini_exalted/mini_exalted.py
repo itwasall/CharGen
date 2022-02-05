@@ -6,7 +6,7 @@ from typing import List, Dict
 if not sys.platform == "linux":
     root_path = "F:\\CharGen"
 else:
-    root_path = "/home/refrshrs/code/python/CharGenNew/CharGen"
+    root_path = "/home/refrshrs/code/python/CharGen/CharGen"
 sys.path.append(root_path)
 
 
@@ -61,11 +61,11 @@ def select_caste(character: Character):
     character.details['Caste'] = character.caste.name
     character.details['Concept'] = choice(character.caste.example_concepts)
 
+
 def pick_charm(character: Character):
     charm_name = choice(list(DataExaltedCharms.keys()))
     charm = {charm_name: DataExaltedCharms[charm_name]}
-    print(charm)
-
+    # print(charm)
 
 
 def dumb_caste_ability_exception(caste):
