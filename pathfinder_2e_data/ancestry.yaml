@@ -14,34 +14,39 @@ Dwarf:
   heritages:
     Ancient-Blooded Dwarf:
       desc: Dwarven heroes of old could shrug off their enemies’ magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction.
-      add_reaction:
-        Call On Ancient Blood:
+      effects:
+        add_reaction:
+          name: Call On Ancient Blood
           trigger: You attempt a saving throw against a magical effect, but you haven't rolled yet.
           effect: Your ancestors’ innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus to the triggering saving throw and until the end of this turn.
     Death Warden Dwarf:
       desc: Your ancestors have been tomb guardians for generations, and the power they cultivated to ward off necromancy has passed on to you. If you roll a success on a saving throw against a necromancy effect, you get a critical success instead.
-      add_crit_saving_throw:
-        target: Necromancy Effect
+      effects:
+        add_crit_saving_throw:
+          target: Necromancy Effect
     Forge Dwarf:
       desc: You have a remarkable adaptation to hot environments from ancestors who inhabited blazing deserts or volcanic chambers beneath the earth. This grants you fire resistance equal to half your level (minimum 1), and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on).
-      add_resistance:
-        element: Fire
-        amount: Half current level (Minimum 1)
+      effects:
+        add_resistance:
+          element: Fire
+          amount: Half current level (Minimum 1)
     Rock Dwarf:
       desc: Your ancestors lived and worked among the great ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you. This bonus also applies to saving throws against spells or effects that attempt to knock you prone. In addition, if any effect would force you to move 10 feet or more, you are moved only half the distance.
-      add_circumstance_bonus:
-        target: [Shove, Trip]
-        dc_bonus: [Fortitude, Reflex]
-      add_force_movement_reduction:
-        initial_amount: 10
-        reduction: Half
+      effects:
+        add_circumstance_bonus:
+          target: [Shove, Trip]
+          dc_bonus: [Fortitude, Reflex]
+        add_force_movement_reduction:
+          initial_amount: 10
+          reduction: Half
     Strong-Blooded Dwarf:
       desc: Your blood runs hearty and strong, and you can shake off toxins. You gain poison resistance equal to half your level (minimum 1), and each of your successful saving throws against a poison affliction reduces its stage by 2, or by 1 for a virulent poison. Each critical success against an ongoing poison reduces its stage by 3, or by 2 for a virulent poison.
-      add_resistance:
-        element: Poison
-        amount: Half current level (Minimum 1)
-      add_poison_stage_reduction_by_saving_throw:
-        normal_saving_throw: 2
-        crit_saving_throw: 3
-        virulent_mod: -1
+      effects:
+        add_resistance:
+          element: Poison
+          amount: Half current level (Minimum 1)
+        add_poison_stage_reduction_by_saving_throw:
+          normal_saving_throw: 2
+          crit_saving_throw: 3
+          virulent_mod: -1
   feats: [Dwarven Lore, Dwarven Weapon Familiarity, Rock Runner, Stonecutter, Unburdened Iron, Vengeful Hatred]
