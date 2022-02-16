@@ -125,15 +125,24 @@ class PkSkills:
         self.lore = PokeSkill_Lore
         self.medicine = PokeSkill_Medicine
         self.science = PokeSkill_Science
-
-        self.skills_list = [self.brawl, self.throw, self.evasion, self.weapons,
-                            self.empathy, self.intimidate, self.perform, self.alert,
-                            self.athletic, self.nature, self.stealth, self.crafts,
-                            self.lore, self.medicine, self.science]
+        
+        self.update_skill_list()
 
     def update_skill_list(self):
-        return [self.brawl, self.throw, self.evasion, self.weapons, self.empathy, self.intimidate, self.perform, self.alert,
-        self.athletic, self.nature, self.stealth, self.crafts, self.lore, self.medicine, self.science]
+        self.skills_list = [self.brawl, self.throw, self.evasion, self.weapons, self.empathy, self.intimidate, self.perform, self.alert,
+                            self.athletic, self.nature, self.stealth, self.crafts, self.lore, self.medicine, self.science]
+
+    def rnd_add_skill(self, limit):
+        rnd_skill = choice(self.skills_list)
+        while rnd_skill.value < limit: 
+            rnd_skill = choice(self.skills_list)
+            rnd_skill.value += 1
+        self.skills_list[self.skills_list.index(rnd_skill)] = rnd_skill
+        self.update_skill_list()
+
+    def __repr__(self):
+        self.update_skill_list()
+        return ", ".join(i.__repr__() for i in self.skills_list)
 
 rank_bonuses = {
     'Starter': {'Extra Attribute': 0, 'Extra Social': 0, 'Skill Points': 5, 'Skill Limit': 1},
@@ -161,7 +170,19 @@ def gen_stats(rank, age):
         p.rnd_add_core('Social')
     p.print_attributes()
 
+def gen_skills(rank):
+    skill_points = rank_bonuses[rank]['Skill Points']
+    skill_limit = rank_bonuses[rank]['Skill Limit']
+    s = PkSkills()
+    for _ in range(skill_points):
+        s.rnd_add_skill(skill_limit)
+    print(f"Skill points: {skill_points}\nSkill Limit: {skill_limit}")
+    print(s)
+
+
 print("Teenage Starter")
 gen_stats('Starter', 'Teenager')
 print("Senior Ace")
 gen_stats('Ace', 'Senior')
+gen_skills('Starter')
+
