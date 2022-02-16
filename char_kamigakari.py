@@ -89,6 +89,4 @@ def gen_character():
         # Use in-book chargen shit
     # Step 10. Finished
         # This is not a fucking step
-
-
     pass

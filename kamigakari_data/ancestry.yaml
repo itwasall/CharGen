@@ -1,0 +1,49 @@
+Paragon:
+  ancestrial_trait:
+    Genetic Memory: You may acquire Paragon Ancestry Talents. Also, you may equip items restricted to Paragons.
+  stat_type:
+    Warrior: {S: 5, A: 4, I: 2, W: 2, L: 2}
+    Adept: {S: 4, A: 4, I: 2, W: 1, L: 4}
+    Occultist: {S: 2, A: 3, I: 5, W: 4, L: 1}
+  talents:
+    Keen Strike:
+      Timing: Attack
+      Range: Item
+      Target: One
+      Cost: [Odd]
+      Desc: You strike with a piercing scream, drawing out the effectiveness of certain weapons to their fullest.
+      effect:
+        Physical Attack: Make a physical attacking using a sword-form weapon or ranged-form weapon. When ou calculate the attack's damage, add any one of your main stats
+    Myriad Regalia:
+      Timing: Free
+      Range: User
+      Target: User
+      Cost: None
+      Desc: You briefly materialize countless Regalia using your spirit, then mow your enemies down with them like a chaingun
+      effect:
+        Unique Effect: 'Use before active check. Change the range of your attack action to "6 Sq." and the target to "one". This Talent may only be used once per round and does not change the attack into Form: Ranged'
+Nightstalker:
+  ancestrial_trait:
+    Descendant of the Night: You may acquire Nightstalker Ancestry Talents. Also, you may equip items restricted to Nightstalkers.
+  stat_type:
+    Warrior: {S: 5, A: 4, I: 3, W: 2, L: 1}
+    Adept: {S: 2, A: 4, I: 4, W: 1, L: 4}
+    Occultist: {S: 1, A: 2, I: 5, W: 6, L: 1}
+  talents:
+    Bestial Transformation:
+      Timing: Start
+      Range: User
+      Target: User
+      Cost: Doubles
+      Desc: The Nightstalker blood within you stirs, shifting you into a half-human, half-beastial form, allowing you to unleash your power.
+      effect:
+        Unique Effect: For the rest of the combat, you change your class to Beast, and gain either of the following effects
+        choice: [+1 Physical Rank, +1 Magical Rank]
+    Spellbinding:
+      Timing: Attack
+      Range: Other
+      Target: Other
+      Cost: [Even]
+      Desc: A special kind of spirit energ emanates from your eyes, and those within your sight may fgind their memories fickle and their awareness malleable
+      effect:
+        Unique Effect: May only be used while out of combat. You may manipulate or erase the memories and consciousness of any Innocent in the scene. The GM has the final say.
