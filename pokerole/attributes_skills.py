@@ -66,7 +66,6 @@ class PkAttributes:
             self.insight += 1
         elif a_choice.name == 'Dexterity':
             self.dexterity += 1
-
         elif a_choice.name == 'Tough':
             self.tough += 1
         elif a_choice.name == 'Beauty':
@@ -108,6 +107,33 @@ PokeSkill_Crafts = PkSkill('Crafts')
 PokeSkill_Lore = PkSkill('Lore')
 PokeSkill_Medicine = PkSkill('Medicine')
 PokeSkill_Science = PkSkill('Science')
+
+class PkSkills:
+    def __init__(self):
+        self.brawl = PokeSkill_Brawl
+        self.throw = PokeSkill_Throw
+        self.evasion = PokeSkill_Evasion
+        self.weapons = PokeSkill_Weapons
+        self.empathy = PokeSkill_Empathy
+        self.intimidate = PokeSkill_Intimidate
+        self.perform = PokeSkill_Perform
+        self.alert = PokeSkill_Alert
+        self.athletic = PokeSkill_Athletic
+        self.nature = PokeSkill_Nature
+        self.stealth = PokeSkill_Stealth
+        self.crafts = PokeSkill_Crafts
+        self.lore = PokeSkill_Lore
+        self.medicine = PokeSkill_Medicine
+        self.science = PokeSkill_Science
+
+        self.skills_list = [self.brawl, self.throw, self.evasion, self.weapons,
+                            self.empathy, self.intimidate, self.perform, self.alert,
+                            self.athletic, self.nature, self.stealth, self.crafts,
+                            self.lore, self.medicine, self.science]
+
+    def update_skill_list(self):
+        return [self.brawl, self.throw, self.evasion, self.weapons, self.empathy, self.intimidate, self.perform, self.alert,
+        self.athletic, self.nature, self.stealth, self.crafts, self.lore, self.medicine, self.science]
 
 rank_bonuses = {
     'Starter': {'Extra Attribute': 0, 'Extra Social': 0, 'Skill Points': 5, 'Skill Limit': 1},
