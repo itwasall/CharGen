@@ -61,6 +61,14 @@ class Character:
             'Gym Badge Case': dict # {Gym Name: 0/1}
         }
 
+    def character_info(self):
+        print(f"Name: {self.name} | Age: {self.age} | Rank: {self.rank}")
+        print(f"Nature: {self.nature} | Confidence: {self.confidence}")
+        print(f"Attributes: {list((k, v) for k,v in self.attributes.items())}")
+        print(f"Will: {self.will} | HP: {self.current_hp}")
+        print(f"Social Attributes: {list((k, v) for k,v in self.social_attributes.items())}")
+        print(f"Skills:\n{list((k, v['value']) for k, v in self.skills.items())}")
+
 
 class Pokemon:
     def __init__(self, name):
@@ -121,9 +129,6 @@ class Pokemon:
         self.confidence = 0
 
 
-
-
-
 class Rank:
     def __init__(self, name, data):
         self.name = name
@@ -132,6 +137,7 @@ class Rank:
         self.extra_benefits = data['extra_benefits']
         self.max_targets = data['max_targets']
         self.next_rank_reqs = data['next_rank_reqs']
+
     def __repr__(self):
         return self.name
 
@@ -152,6 +158,23 @@ AGES = {
     'Teen': 50,
     'Adult': 25,
     'Senior': 5
+}
+
+NATURES = {
+    # Nature : Confidence
+    'Adamant': 4, 'Bashful': 6,
+    'Bold': 9,    'Brave': 9,
+    'Calm': 8,    'Careful': 5,
+    'Docile': 7,  'Gentle': 10,
+    'Hardy': 9,   'Hasty': 7,
+    'Impish': 7,  'Jolly': 10,
+    'Lax': 8,     'Lonely': 5,
+    'Mild': 8,    'Modest': 10,
+    'Naive': 7,   'Naughty': 6,
+    'Quiet': 5,   'Quirky': 9,
+    'Rash': 6,    'Relaxed': 8,
+    'Sassy': 7,   'Serious': 4,
+    'Timid': 4
 }
 
 # I couldn't be bothered to write out all the stuff that's already been
@@ -217,4 +240,18 @@ def gen_character():
             continue
         else:
             _skill_points -= 1
+
+    # Calculate other values
+    Char.current_hp = 4 + Char.attributes['Vitality']
+    Char.max_hp = Char.current_hp
+    Char.will = 2 + Char.attributes['Insight']
+
+    # Generate nature + confidence
+    Char.nature = choice(list(NATURES.keys()))
+    Char.confidence = NATURES[Char.nature]
+
+    return Char
+
+x = gen_character()
+x.character_info()
 
