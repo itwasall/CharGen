@@ -2,37 +2,46 @@
 I didn't know how to start programming, so I attempted to make a bunch of TTRPG character generators
 
 ## Cyberpunk 2020
-just started - now just abandoned
+Currently
+  - A lot of background character info done.
 
 ## Cyberpunk RED
-WIP - Postponed til CP2020 done-ish
+Progress unknown. Don't care enough to check
 
 ## DND 5e
 Core Rulebook done
 
 ## DND 3.5e
-WIP
+Progress unknown. Don't care enough to check
+
+## Exalted
+Currently
+  - Mostly charm stuff. Which I've done all wrong. The yaml file is like 600k 💀
+
+## Kamigakari
+Mostly served as a test for a workflow I hypothesised whilst working on Exalted.
+Tests inconlusive, consider abandoned.
 
 ## Numenera
 Currently
-  - Foci data recorded
-  - character type data recorded
-  - descriptor data recorded
-  - literally every cypher recorded, generator working
+  - Foci data + character type data + descriptor data recorded
+  - literally every cypher recorded
+  - Lost in OOP hell
 
 ## Mork Borg
 Core rulebook done
 
 ## Pathfinder 2E
-Big mess lmao
-  - Background Data recorded
-  - Ancestory Data begun
+Currently
+  - Lost in OOP hell
+
+## Pokerole
+Currently
+  - Crying at how many stats everything has
+  - Trying a more imperative approach
 
 ## Savage Worlds
-I need to stop starting new generators before finishing others
-  - Boiler plate code done
-  - Racial traits recorded
-  - Hinderances recorded
+Consider Abandoned
 
 ## Ryuutama: Fantasy Roleplaying Game
 Basically done
@@ -47,4 +56,4 @@ Recording data
   - kijin mechanica generation begun
 
 ## Werewolf: The Apocolaypse
-Very WIP
+Progress unknown. Don't care enough to check
