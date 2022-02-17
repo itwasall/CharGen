@@ -1,3 +1,6 @@
+from random import choice
+
+import pokerole.rank
 
 class Character:
     def __init__(self, name):
@@ -23,6 +26,11 @@ class Character:
         self.will = None
         # Can carry up to 6 of the critters with you at once. Just there names here.
         self.pokemon = []
-        
 
 
+def character():
+    c = Character('Jerry')
+    c.rank = pokerole.rank.get_rank(choice(['Starter', 'Beginner', 'Amateur', 'Ace', 'Pro', 'Master', 'Champion']))
+    print(c.rank)
+
+character()

@@ -1,56 +1,84 @@
 Starter:
-  core_attribute_points: 
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 0
+  social_attribute_points: 0
+  skill_points: 5
+  skill_limit: 1
+  extra_benefits:
+    - None
+  max_targets: 2
   next_rank_reqs:
+    - Successfully understand your Pokemon's gestures
+    - Train a Pokemon
+    - Catch your second Pokemon
+    - Win your first Official Battle against a Trainer
 Beginner:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 2
+  social_attribute_points: 2
+  skill_points: 9
+  skill_limit: 2
+  extra_benefits:
+    - None
+  max_targets: 2
   next_rank_reqs:
+    - Evolve a Pokemon
+    - Win your first badge
+    - Increase a Pokemon's Loyalty
+    - Increase a Pokemon's Happiness
 Amateur:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 4
+  social_attribute_points: 4
+  skill_points: 13
+  skill_limit: 3
+  extra_benefits:
+    - None
+  max_targets: 3
   next_rank_reqs:
+    - Win 8 Badges
+    - Get a full party of six evolved Pokemon
+    - Defeat your Rival
 Ace:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 6
+  social_attribute_points: 6
+  skill_points: 15
+  skill_limit: 4
+  extra_benefits:
+    - None
+  max_targets: 6
   next_rank_reqs:
+    - Get a Pokemon-Related Job
+    - Clear Victory Road
+    - Catch a Professional-Rank Pokemon
 Pro:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 8
+  social_attribute_points: 8
+  skill_points: 16
+  skill_limit: 5
+  extra_benefits:
+    - None
+  max_targets: 6
   next_rank_reqs:
+    - Find and study all Pokemon species in your region
 Master:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 8
+  social_attribute_points: 14
+  skill_points: 16
+  skill_limit: 5
+  extra_benefits:
+    - Additional Skill Roll Dice: 2
+    - HP Increase: 2
+    - WILL Increase: 2
+    - Initiative Increase: 2
+    - DEF/SDEF Increase: 2
+  max_targets: 6
   next_rank_reqs:
+    - Defeat the Champion in the League's Challenge
 Champion:
-  core_attribute_points:
-  social_attribute_points:
-  skill_points:
-  skill_limit:
-  benefits:
-  max_targets:
+  core_attribute_points: 14
+  social_attribute_points: 14
+  skill_points: 17
+  skill_limit: 5
+  extra_benefits:
+    - Attributes Max Increase: 2
+  max_targets: 6
   next_rank_reqs:
+    - None
