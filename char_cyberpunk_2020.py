@@ -3,12 +3,12 @@ from random import choice, choices, randint, shuffle
 from chargen import roll, yaml_importer
 import yaml
 
-data_careerskills = yaml_importer('cyberpunk_2020_data\careerskills.yaml')
-data_languages = yaml_importer('cyberpunk_2020_data\languages.yaml')
-data_martial_arts = yaml_importer('cyberpunk_2020_data\martial_arts.yaml')
-data_origins_and_style = yaml_importer('cyberpunk_2020_data\origins_and_style.yaml')
-data_weapons = yaml_importer('cyberpunk_2020_data\weapons.yaml')
-data_motivations = yaml_importer('cyberpunk_2020_data\motivations.yaml')
+data_careerskills = yaml_importer('cyberpunk_2020_data/careerskills.yaml')
+data_languages = yaml_importer('cyberpunk_2020_data/languages.yaml')
+data_martial_arts = yaml_importer('cyberpunk_2020_data/martial_arts.yaml')
+data_origins_and_style = yaml_importer('cyberpunk_2020_data/origins_and_style.yaml')
+data_weapons = yaml_importer('cyberpunk_2020_data/weapons.yaml')
+data_motivations = yaml_importer('cyberpunk_2020_data/motivations.yaml')
 
 
 character = {
