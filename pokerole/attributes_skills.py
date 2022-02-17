@@ -16,27 +16,26 @@ class PkAttribute:
 
 PokeAttribute_Strength = PkAttribute('Strength')
 PokeAttribute_Vitality = PkAttribute('Vitality')
-PokeAttribute_Dexterity = PkAttribute('Dexterity')
-PokeAttribute_Insight = PkAttribute('Insight')
-
+PokeAttribute_Dexterity =   PkAttribute('Dexterity')
+PokeAttribute_Insight =     PkAttribute('Insight')
 PokeSocialAttribute_Tough = PkAttribute('Tough')
-PokeSocialAttribute_Beauty = PkAttribute('Beauty')
-PokeSocialAttribute_Cool = PkAttribute('Cool')
-PokeSocialAttribute_Cute = PkAttribute('Cute')
-PokeSocialAttribute_Clever = PkAttribute('Clever')
+PokeSocialAttribute_Beauty =PkAttribute('Beauty')
+PokeSocialAttribute_Cool =  PkAttribute('Cool')
+PokeSocialAttribute_Cute =  PkAttribute('Cute')
+PokeSocialAttribute_Clever =PkAttribute('Clever')
 
 class PkAttributes:
     def __init__(
         self,
-        strength = PokeAttribute_Strength,
-        vitality = PokeAttribute_Vitality,
-        dexterity = PokeAttribute_Dexterity,
-        insight = PokeAttribute_Insight,
-        tough = PokeSocialAttribute_Tough,
-        beauty = PokeSocialAttribute_Beauty,
-        cool = PokeSocialAttribute_Cool,
-        cute = PokeSocialAttribute_Cute,
-        clever = PokeSocialAttribute_Clever
+        strength = PkAttribute('Strength'),
+        vitality = PkAttribute('Vitality'),
+        dexterity = PkAttribute('Dexterity'),
+        insight = PkAttribute('Insight'),
+        tough = PkAttribute('Tough'),
+        beauty = PkAttribute('Beauty'),
+        cool = PkAttribute('Cool'),
+        cute = PkAttribute('Cute'),
+        clever = PkAttribute('Clever'),
     ):
         self.strength = strength
         self.vitality = vitality
@@ -47,85 +46,60 @@ class PkAttributes:
         self.cool = cool
         self.cute = cute
         self.clever = clever
+        self.update_attribute_lists()
+
+    def update_attribute_lists(self):
         self.core_attributes = [self.strength, self.vitality, self.dexterity, self.insight]
         self.social_attributes = [self.tough, self.beauty, self.cool, self.cute, self.clever]
+
 
     def rnd_add_core(self, attribute_type = 'Core'):
         if attribute_type == 'Core':
             a_choice = choice(self.core_attributes)
+            a_choice.value += 1
+            self.core_attributes[self.core_attributes.index(a_choice)] = a_choice
         elif attribute_type == 'Social':
             a_choice = choice(self.social_attributes)
-        # options = {'Strength': self.strength, 'Vitality': self.vitality, 'Insight':self.insight, 'Dexterity': self.dexterity,
-        #           'Tough': self.tough, 'Beauty': self.beauty, 'Cool': self.cool, 'Cute': self.cute, 'Clever': self.clever}
-        # options[a_choice.name] += 1
-        if a_choice.name == 'Strength':
-            self.strength += 1
-        elif a_choice.name == 'Vitality':
-            self.vitality += 1
-        elif a_choice.name == 'Insight':
-            self.insight += 1
-        elif a_choice.name == 'Dexterity':
-            self.dexterity += 1
-        elif a_choice.name == 'Tough':
-            self.tough += 1
-        elif a_choice.name == 'Beauty':
-            self.beauty += 1
-        elif a_choice.name == 'Cool':
-            self.cool += 1
-        elif a_choice.name == 'Cute':
-            self.cute += 1
-        elif a_choice.name == 'Clever':
-            self.clever += 1
+            a_choice.value += 1
+            self.social_attributes[self.social_attributes.index(a_choice)] = a_choice
+        self.update_attribute_lists()
 
-    def print_attributes(self):
-        self.core_attributes = [self.strength, self.vitality, self.dexterity, self.insight]
-        self.social_attributes = [self.tough, self.beauty, self.cool, self.cute, self.clever]
-        print("Core Attributes:")
-        for a in self.core_attributes:
-            print(f"  {a}")
-        for a in self.social_attributes:
-            print(f"  {a}")
-
-
+    def print_attributes(self, compact = False):
+        self.update_attribute_lists()
+        if compact:
+            print("Core Attributes:")
+            print(", ".join(a.__repr__() for a in self.core_attributes))
+            print("Social Attributes:")
+            print(", ".join(a.__repr__() for a in self.social_attributes))
+        else:
+            print("Core Attributes:")
+            for a in self.core_attributes:
+                print(f"  {a}")
+            print("Social Attributes:")
+            for a in self.social_attributes:
+                print(f"  {a}")
 
 class PkSkill(PkAttribute):
     def __init__(self, name, value = 0):
         super().__init__(name, value)
 
-PokeSkill_Brawl = PkSkill('Brawl')
-PokeSkill_Throw = PkSkill('Throw')
-PokeSkill_Evasion = PkSkill('Evasion')
-PokeSkill_Weapons = PkSkill('Weapons')
-PokeSkill_Empathy = PkSkill('Empathy')
-PokeSkill_Intimidate = PkSkill('Intimidate')
-PokeSkill_Perform = PkSkill('Perform')
-PokeSkill_Alert = PkSkill('Alert')
-PokeSkill_Athletic = PkSkill('Athletic')
-PokeSkill_Nature = PkSkill('Nature')
-PokeSkill_Stealth = PkSkill('Stealth')
-PokeSkill_Crafts = PkSkill('Crafts')
-PokeSkill_Lore = PkSkill('Lore')
-PokeSkill_Medicine = PkSkill('Medicine')
-PokeSkill_Science = PkSkill('Science')
-
 class PkSkills:
     def __init__(self):
-        self.brawl = PokeSkill_Brawl
-        self.throw = PokeSkill_Throw
-        self.evasion = PokeSkill_Evasion
-        self.weapons = PokeSkill_Weapons
-        self.empathy = PokeSkill_Empathy
-        self.intimidate = PokeSkill_Intimidate
-        self.perform = PokeSkill_Perform
-        self.alert = PokeSkill_Alert
-        self.athletic = PokeSkill_Athletic
-        self.nature = PokeSkill_Nature
-        self.stealth = PokeSkill_Stealth
-        self.crafts = PokeSkill_Crafts
-        self.lore = PokeSkill_Lore
-        self.medicine = PokeSkill_Medicine
-        self.science = PokeSkill_Science
-        
+        self.brawl = PkSkill('Brawl')
+        self.throw = PkSkill('Throw')
+        self.evasion = PkSkill('Evasion')
+        self.weapons = PkSkill('Weapons')
+        self.empathy = PkSkill('Empathy')
+        self.intimidate = PkSkill('Intimidate')
+        self.perform = PkSkill('Perform')
+        self.alert = PkSkill('Alert')
+        self.athletic = PkSkill('Athletic')
+        self.nature = PkSkill('Nature')
+        self.stealth = PkSkill('Stealth')
+        self.crafts = PkSkill('Crafts')
+        self.lore = PkSkill('Lore')
+        self.medicine = PkSkill('Medicine')
+        self.science = PkSkill('Science')
         self.update_skill_list()
 
     def update_skill_list(self):
@@ -134,11 +108,17 @@ class PkSkills:
 
     def rnd_add_skill(self, limit):
         rnd_skill = choice(self.skills_list)
-        while rnd_skill.value < limit: 
-            rnd_skill = choice(self.skills_list)
-            rnd_skill.value += 1
+        rnd_skill.value += 1
+        self.skill_limit_check(rnd_skill, limit)
         self.skills_list[self.skills_list.index(rnd_skill)] = rnd_skill
         self.update_skill_list()
+
+    def skill_limit_check(self, skill, limit):
+        if skill.value > limit:
+            skill.value -= 1
+            self.rnd_add_skill(limit)
+        else:
+            pass
 
     def __repr__(self):
         self.update_skill_list()
@@ -168,21 +148,23 @@ def gen_stats(rank, age):
         p.rnd_add_core('Core')
     for _ in range(social_points):
         p.rnd_add_core('Social')
-    p.print_attributes()
+    p.print_attributes(compact=True)
 
-def gen_skills(rank):
+def gen_skills(s, rank):
     skill_points = rank_bonuses[rank]['Skill Points']
     skill_limit = rank_bonuses[rank]['Skill Limit']
-    s = PkSkills()
     for _ in range(skill_points):
         s.rnd_add_skill(skill_limit)
     print(f"Skill points: {skill_points}\nSkill Limit: {skill_limit}")
-    print(s)
+    print([skill for skill in s.skills_list if skill.value > 0])
 
 
 print("Teenage Starter")
 gen_stats('Starter', 'Teenager')
 print("Senior Ace")
 gen_stats('Ace', 'Senior')
-gen_skills('Starter')
+s = PkSkills()
+gen_skills(s, 'Starter')
+s1 = PkSkills()
+gen_skills(s1, 'Starter')
 

@@ -1,0 +1,56 @@
+Starter:
+  core_attribute_points: 
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Beginner:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Amateur:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Ace:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Pro:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Master:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
+Champion:
+  core_attribute_points:
+  social_attribute_points:
+  skill_points:
+  skill_limit:
+  benefits:
+  max_targets:
+  next_rank_reqs:
