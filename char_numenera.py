@@ -258,7 +258,7 @@ def gen_character(
 
 
 x = gen_character(verbose=True)
-for k in list(x.keys()):
+for k in list(x):
     print(f"{k}: {x[k]}")
 
 character['StatPools'].__add__(2, 'Might')
@@ -266,7 +266,7 @@ character['StatPools'].__add__(2, 'Might')
 print(character['StatPools'])
 
 all_foci = {}
-for foci in charfoci.keys():
+for foci in charfoci:
     focus = charfoci[foci]
     all_foci[foci] = Focus(
         foci,

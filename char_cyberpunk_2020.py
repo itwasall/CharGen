@@ -417,5 +417,5 @@ SKILL EXCEPTIONS:
 
 if __name__ == "__main__":
     x = gen_motivations()
-    for i in x.keys():
+    for i in x:
         print(f"{i}: {x[i]}")

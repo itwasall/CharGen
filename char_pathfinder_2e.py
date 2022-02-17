@@ -141,7 +141,7 @@ class Background:
 
 def make_backgrounds():
     all_backgrounds = {}
-    for key in data_backgrounds.keys():
+    for key in data_backgrounds:
         key_data = data_backgrounds[key]
         all_backgrounds[key] = Background(
             key,
