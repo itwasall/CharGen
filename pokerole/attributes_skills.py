@@ -103,8 +103,8 @@ class PkSkills:
         self.update_skill_list()
 
     def update_skill_list(self):
-        self.skills_list = [self.brawl, self.throw, self.evasion, self.weapons, self.empathy, self.intimidate, self.perform, self.alert,
-                            self.athletic, self.nature, self.stealth, self.crafts, self.lore, self.medicine, self.science]
+        self.skills_list = ['Brawl', 'Throw', 'Evasion', 'Weapons', 'Empathy', 'Intimidate', 'Perform', 'Alert', 'Athletic', 'Nature', 'Stealth', 'Crafts', 'Lore', 'Medicine', 'Science']
+        
 
     def rnd_add_skill(self, limit):
         rnd_skill = choice(self.skills_list)

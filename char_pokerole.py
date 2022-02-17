@@ -1,6 +1,9 @@
-from random import choice
+from typing import List
+from random import choice, choices
+from yaml import safe_load
 
-import pokerole.rank
+rank_data = safe_load(open('pokerole/rank.yml', 'rt'))
+age_data = safe_load(open('pokerole/ages.yml', 'rt'))
 
 class Character:
     def __init__(self, name):
@@ -10,11 +13,32 @@ class Character:
         # Kid, Teen (Default), Adult, Senior
         self.age = None
         # Strength, Vitality, Dexterity, Insight
-        self.core_attributes = None
+        self.attributes = {
+            'Strength': 1, 'Vitality': 1, 'Dexterity': 1, 'Insight': 1
+        }
         # Tough, Beauty, Cool, Cute, Clever
-        self.social_attributes = None
+        self.social_attributes = {
+            'Tough': 1, 'Beauty': 1, 'Cool': 1, 'Cute': 1, 'Clever': 1
+        }
         # The skills that are in the game.
-        self.skills = None
+        self.skills = {
+            'Brawl': {'value': 0, 'type': 'Fight'},
+            'Throw': {'value': 0, 'type': 'Fight'},
+            'Weapons': {'value': 0, 'type': 'Fight'},
+            'Evasion': {'value': 0, 'type': 'Fight'},
+            'Alert': {'value': 0, 'type': 'Survival'},
+            'Athletic': {'value': 0, 'type': 'Survival'},
+            'Nature': {'value': 0, 'type': 'Survival'},
+            'Stealth': {'value': 0, 'type': 'Survival'},
+            'Allure': {'value': 0, 'type': 'Social'},
+            'Etiquette': {'value': 0, 'type': 'Social'},
+            'Intimidate': {'value': 0, 'type': 'Social'},
+            'Perform': {'value': 0, 'type': 'Social'},
+            'Crafts': {'value': 0, 'type': 'Knowledge'},
+            'Lore': {'value': 0, 'type': 'Knowledge'},
+            'Medicine': {'value': 0, 'type': 'Knowledge'},
+            'Science': {'value': 0, 'type': 'Knowledge'},
+        }
         # Always 150,000
         self.money = 150_000
         self.nature = None
@@ -25,12 +49,172 @@ class Character:
         # Initial Will is equal to (Insight + 2)
         self.will = None
         # Can carry up to 6 of the critters with you at once. Just there names here.
-        self.pokemon = []
+        self.pokemon = List
+        # Potions can be used a number of times. The 'Remaining' value refers only
+        #   to the most recently used potion
+        self.backpack = {
+            'Potions': {'Owned': 0, 'Remaining': 0}, # Potion max 2             
+            'Super Potions': {'Owned': 0, 'Remaining': 0}, # Super Potion max 4
+            'Hyper Potions': {'Owned': 0, 'Remaining': 0}, # Hyper Potion max 14
+            'Small Pocket': List, # Items in the small pocket can be used in battle
+            'Main Pocket': List, # All other items go here
+            'Gym Badge Case': dict # {Gym Name: 0/1}
+        }
 
 
-def character():
-    c = Character('Jerry')
-    c.rank = pokerole.rank.get_rank(choice(['Starter', 'Beginner', 'Amateur', 'Ace', 'Pro', 'Master', 'Champion']))
-    print(c.rank)
+class Pokemon:
+    def __init__(self, name):
+        self.name = name
+        self.nickname = None
+        self.dex_number = 0
+        # Size is [Feet, Inches], Weight is lbs
+        self.size = [0, 0] 
+        self.weight = 0
+        self.type = None
+        # Pokemon attributes, on top of having the 'Special' attribute PC's don't,
+        #   also have a max value that attribute can be raised to. PC's technically
+        #   have this as well, but all PC's stats can be raised up to 5, whereas a
+        #   Pokemon's base + potential max stat vary by attribute by pokemon
+        self.attributes = {
+            'Strength': [0, 0],
+            'Dexterity': [0, 0],
+            'Vitality': [0, 0],
+            'Special': [0, 0],
+            'Insight': [0, 0]
+        }
+        self.social_attributes = {
+            'Tough': 1, 'Beauty': 1, 'Cool': 1, 'Cute': 1, 'Clever': 1
+        }
+        self.suggested_rank = None
+        self.base_hp = 0
+        self.hp = 0 # base hp as in pokedex + 1 for each vitality
+        self.will = 0 # Insight + 2
+        self.held_item = "None"
+        self.status = "Healthy"
+        self.initiative = 0 # Dexterity + Alert
+        self.accuracy = 0
+        self.damage = 0
+        self.evasion = 0
+        self.clash = 0
+        self.defences = [0, 0] # [DEF, SDEF] == [VITALITY, INSIGHT]
+        self.moves = [
+            {'name': None, 'power': None, 'dice_pool': 0 },
+            {'name': None, 'power': None, 'dice_pool': 0 },
+            {'name': None, 'power': None, 'dice_pool': 0 },
+            {'name': None, 'power': None, 'dice_pool': 0 },
+        ]
+        self.skills = {
+            'Brawl': {'value': 0, 'type': 'Fight'},
+            'Channel': {'value': 0, 'type': 'Fight'},
+            'Clash': {'value': 0, 'type': 'Fight'},
+            'Evasion': {'value': 0, 'type': 'Fight'},
+            'Alert': {'value': 0, 'type': 'Survival'},
+            'Athletic': {'value': 0, 'type': 'Survival'},
+            'Nature': {'value': 0, 'type': 'Survival'},
+            'Stealth': {'value': 0, 'type': 'Survival'},
+            'Allure': {'value': 0, 'type': 'Contest'},
+            'Etiquette': {'value': 0, 'type': 'Contest'},
+            'Intimidate': {'value': 0, 'type': 'Contest'},
+            'Perform': {'value': 0, 'type': 'Contest'},
+        }
+        self.nature = None
+        self.confidence = 0
 
-character()
+
+
+
+
+class Rank:
+    def __init__(self, name, data):
+        self.name = name
+        self.skill_points = data['skill_points']
+        self.skill_limit = data['skill_limit']
+        self.extra_benefits = data['extra_benefits']
+        self.max_targets = data['max_targets']
+        self.next_rank_reqs = data['next_rank_reqs']
+    def __repr__(self):
+        return self.name
+
+RANKS = {
+    # Rank : Weight
+    'Starter': 50,
+    'Beginner': 30,
+    'Amateur': 10,
+    'Ace': 5,
+    'Pro': 3,
+    'Master': 1,
+    'Champion': 1
+}
+
+AGES = {
+    # Age : Weight (for randomisation lmao)
+    'Kid': 20,
+    'Teen': 50,
+    'Adult': 25,
+    'Senior': 5
+}
+
+# I couldn't be bothered to write out all the stuff that's already been
+#   spelled out in the class definition so fuck it, here's a dummy class
+#   I can use to make list comprehensions out of.
+d = Character("fuck oop")
+
+ATTRIBUTES = [a for a in d.attributes]
+SOCIAL_ATTRIBUTES = [s for s in d.social_attributes]
+SKILLS = [skill for skill in d.skills]
+
+def gen_character():
+    """
+    <summary>
+    Stylistic Guide:
+    gen_x = lambda function that generates sub component 'x'
+    _y = variable of name 'y' used to assit in character generation
+
+    Generates character by generating each sub component.
+    Rank - Can be any of the ranks in the corebook, with 
+        weights to make lower ranks more probable.
+    </summary>
+    """
+    _attribute_points, _social_attribute_points = 0, 0 
+    _skill_points, _skill_limit = 0, 0
+    Char = Character('Jerry')
+    # Just a way to declutter a choices call with a dictionary as an argument
+    gen_chooser = lambda _dict: choices(list(_dict), list(_dict.values()))[0]
+
+    # Generating a characters rank
+    gen_rank = lambda _rankname: Rank(_rankname, rank_data[_rankname])
+    Char.rank = gen_rank(gen_chooser(RANKS))
+
+    _rank = rank_data[Char.rank.name]
+    _attribute_points += _rank['core_attribute_points']
+    _social_attribute_points += _rank['social_attribute_points']
+    _skill_limit = _rank['skill_limit']
+    _skill_points += _rank['skill_points']
+
+    # Generating a characters age
+    Char.age = gen_chooser(AGES)
+
+    _age = age_data[Char.age]
+    _attribute_points += _age['bonus_attribute']
+    _social_attribute_points += _age['bonus_social']
+
+    # Generating attributes & social attributes
+    for _ in range(_attribute_points):
+        Char.attributes[choice(ATTRIBUTES)] += 1
+    for _ in range(_social_attribute_points):
+        Char.social_attributes[choice(SOCIAL_ATTRIBUTES)] += 1
+
+    # Generating skills
+    #   The logic below adds 1 to a random skill, checks if that skill
+    #   is now above the skill limit, reversing the change if it is and
+    #   continuing, otherwise the remaining skill points is subtracted by 1
+    #   until all skill points are spent
+    while _skill_points > 0:
+        _skill = choice(SKILLS)
+        Char.skills[_skill]['value'] += 1
+        if Char.skills[_skill]['value'] > _skill_limit:
+            Char.skills[_skill]['value'] -= 1
+            continue
+        else:
+            _skill_points -= 1
+

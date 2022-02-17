@@ -1,0 +1,12 @@
+Kid:
+  bonus_attribute: 0
+  bonus_social: 0
+Teen:
+  bonus_attribute: 2
+  bonus_social: 2
+Adult:
+  bonus_attribute: 4
+  bonus_social: 4
+Senior:
+  bonus_attribute: 3
+  bonus_social: 6
