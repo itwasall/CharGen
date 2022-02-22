@@ -1,0 +1,18 @@
+Bulbasaur:
+  dex: 001
+  type: [Grass, Poison]
+  attribute_points:
+    strength: [2, 4]
+    dexterity: [2, 4]
+    vitality: [2, 4]
+    special: [2, 4]
+    insight: [2, 4]
+  base_hp: 3
+  suggested_rank: Beginner
+  evolution:
+    stage: first
+    method: [Time, Medium]
+  abilities: [Overgrow]
+  moves:
+    - Tackle: {Rank: None, Type: Normal}
+    - Growl: {Rank: None, Type: Normal}
