@@ -53,7 +53,7 @@ class Character:
         # Potions can be used a number of times. The 'Remaining' value refers only
         #   to the most recently used potion
         self.backpack = {
-            'Potions': {'Owned': 0, 'Remaining': 0}, # Potion max 2             
+            'Potions': {'Owned': 0, 'Remaining': 0}, # Potion max 2
             'Super Potions': {'Owned': 0, 'Remaining': 0}, # Super Potion max 4
             'Hyper Potions': {'Owned': 0, 'Remaining': 0}, # Hyper Potion max 14
             'Small Pocket': List, # Items in the small pocket can be used in battle
@@ -76,7 +76,7 @@ class Pokemon:
         self.nickname = None
         self.dex_number = 0
         # Size is [Feet, Inches], Weight is lbs
-        self.size = [0, 0] 
+        self.size = [0, 0]
         self.weight = 0
         self.type = None
         # Pokemon attributes, on top of having the 'Special' attribute PC's don't,
@@ -177,6 +177,57 @@ NATURES = {
     'Timid': 4
 }
 
+POTENTIAL_STARTERS = [
+    # Gen 8 + Some regionals
+    'Cufant', 'Snom', 'Milcery', 'Yamask', 'Darumaka', 'Meowth', 'Zigzagoon',
+    'Impidimp', 'Hatenna', 'Sinistea', 'Clobbopus', 'Sizzlipede', 'Toxel', 'Arrokuda',
+    'Silicobra', 'Applin', 'Rolycoly', 'Yamper', 'Chewtle', 'Wooloo', 'Gossifleur',
+    'Nickit', 'Blipbug', 'Rookidee', 'Skwovet', 'Sobble', 'Scorbunny', 'Grookey',
+    # Gen 7
+    'Jangmo-o', 'Sandygast', 'Wimpod', 'Bounsweet', 'Stufful', 'Salandit', 'Morelull',
+    'Fomantis', 'Dewpider', 'Mudbury', 'Mareanie', 'Rockruff', 'Cutiefly', 'Crabbrawler',
+    'Grubbin', 'Yungoos', 'Pikipek', 'Popplio', 'Litten', 'Rowlet',
+    # Gen 6
+    'Noibat', 'Bergmite', 'Pumpkaboo', 'Phantump', 'Goomy', 'Helioptile', 'Clauncher',
+    'Skrelp', 'Binacle', 'Inkay', 'Swirlix', 'Spritzee', 'Honedge', 'Espurr', 'Pancham',
+    'Skiddo', 'Flabebe', 'Litleo', 'Spewpa', 'Scatterbug', 'Fletchling', 'Bunnelby',
+    'Froakie', 'Fennekin', 'Chespin',
+    # Gen 5
+    'Larvesta', 'Deino', 'Vullaby', 'Rufflet', 'Pawniard', 'Golett', 'Mienfoo', 'Shelmet',
+    'Cubchoo', 'Axew', 'Litwick', 'Elgyem', 'Tynamo', 'Ferroseed', 'Joltik', 'Frillish',
+    'Foongus', 'Karrablast', 'Deerling', 'Vanillite', 'Ducklett', 'Solosis', 'Gothita',
+    'Minccino', 'Zorua', 'Trubbish', 'Scraggy', 'Dwebble', 'Sandile', 'Petilil', 'Cottenee',
+    'Venipede', 'Swadloon', 'Sewaddle', 'Tympole', 'Timburr', 'Drilbur', 'Woobat', 'Roggenrola',
+    'Blitzle', 'Pidove', 'Munna', 'Panpour', 'Pansear', 'Pansage', 'Purrloin', 'Lilipup',
+    'Patrat', 'Oshawott', 'Tepig', 'Snivy',
+    # Gen 4
+    'Snover', 'Mantyke', 'Finneon', 'Croagunk', 'Skorupi', 'Hippopotas', 'Riolu', 'Munchlax',
+    'Gible', 'Happiny', 'Mime Jr.', 'Bonsly', 'Bronzor', 'Stunky', 'Chingling', 'Glameow',
+    'Buneary', 'Drifloon', 'Shellos', 'Cherubi', 'Buizel', 'Combee', 'Burmy', 'Budew',
+    'Shinx', 'Kricketot', 'Bidoof', 'Starly', 'Piplup', 'Chimchar', 'Turtwig',
+    # Gen 3
+    'Beldum', 'Bagon', 'Clamperl', 'Spheal', 'Snorunt', 'Wynaut', 'Chimecho', 'Duskull',
+    'Shuppet', 'Feebas', 'Baltoy', 'Corphish', 'Barboach', 'Swablu', 'Cacnea', 'Trapinch',
+    'Spoink', 'Numel', 'Wailmer', 'Carvanha', 'Gulpin', 'Roselia', 'Electrike', 'Meditite',
+    'Aron', 'Skitty', 'Nosepass', 'Azurill', 'Makuhita', 'Whismur', 'Nincada', 'Slakoth',
+    'Shroomish', 'Surskit', 'Ralts', 'Wingull', 'Tailow', 'Seedot', 'Lotad', 'Cascoon',
+    'Silicoon', 'Wurmple', 'Poochyena', 'Mudkip', 'Torchic', 'Treecko',
+    # Gen 2
+    'Larvitar', 'Magby', 'Elekid', 'Smoochum', 'Tyrogue', 'Phanpy', 'Houndour', 'Remoraid',
+    'Swinub', 'Slugma', 'Teddiursa', 'Sneasel', 'Snubbull', 'Gligar', 'Pineco',
+    'Misdreavus', 'Murkrow', 'Wooper', 'Yanma', 'Sunkern', 'Aipom', 'Hoppip', 'Marill',
+    'Mareep', 'Natu', 'Togepi', 'Igglybuff', 'Cleffa', 'Pichu', 'Chinchou', 'Spinarak',
+    'Ledyba', 'Hoothoot', 'Sentret', 'Totodile', 'Cyndaquil', 'Chikorita',
+    # Gen 1
+    'Dratini', 'Porygon', 'Eevee', 'Magikarp', 'Scyther', 'Staryu', 'Goldeen', 'Horsea',
+    'Tangela', 'Chansey', 'Rhyhorn', 'Koffing', 'Lickitung', 'Cubone', 'Exeggcute',
+    'Voltorb', 'Krabby', 'Drowzee', 'Gastly', 'Shellder', 'Grimer', 'Seel', 'Doduo',
+    'Magnemite', 'Slowpoke', 'Ponyta', 'Geodude', 'Tentacool', 'Bellsprout', 'Machop',
+    'Abra', 'Poliwag', 'Growlithe', 'Mankey', 'Psyduck', 'Diglett', 'Paras', 'Oddish',
+    'Zubat', 'Jigglypuff', 'Vulpix', 'Clefairy', 'Nidoran', 'Sandshrew', 'Pikachu',
+    'Ekans', 'Spearow', 'Rattata', 'Pidgey', 'Kakuna', 'Weedle', 'Metapod', 'Caterpie',
+    'Squirtle', 'Charmander', 'Bulbasaur'
+]
 # I couldn't be bothered to write out all the stuff that's already been
 #   spelled out in the class definition so fuck it, here's a dummy class
 #   I can use to make list comprehensions out of.
@@ -194,11 +245,11 @@ def gen_character():
     _y = variable of name 'y' used to assit in character generation
 
     Generates character by generating each sub component.
-    Rank - Can be any of the ranks in the corebook, with 
+    Rank - Can be any of the ranks in the corebook, with
         weights to make lower ranks more probable.
     </summary>
     """
-    _attribute_points, _social_attribute_points = 0, 0 
+    _attribute_points, _social_attribute_points = 0, 0
     _skill_points, _skill_limit = 0, 0
     Char = Character('Jerry')
     # Just a way to declutter a choices call with a dictionary as an argument
@@ -252,6 +303,8 @@ def gen_character():
 
     return Char
 
-x = gen_character()
-x.character_info()
+#x = gen_character()
+#x.character_info()
+print(len(POTENTIAL_STARTERS))
+
 
