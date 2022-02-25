@@ -49,7 +49,7 @@ class Character:
         # Initial Will is equal to (Insight + 2)
         self.will = None
         # Can carry up to 6 of the critters with you at once. Just there names here.
-        self.pokemon = List
+        self.pokemon = []
         # Potions can be used a number of times. The 'Remaining' value refers only
         #   to the most recently used potion
         self.backpack = {
@@ -68,6 +68,7 @@ class Character:
         print(f"Will: {self.will} | HP: {self.current_hp}")
         print(f"Social Attributes: {list((k, v) for k,v in self.social_attributes.items())}")
         print(f"Skills:\n{list((k, v['value']) for k, v in self.skills.items())}")
+        print(f"Starter Pokemon: {self.pokemon}")
 
 
 class Pokemon:
@@ -142,7 +143,7 @@ class Rank:
         return self.name
 
 RANKS = {
-    # Rank : Weight
+    # Rank : Statistical Weight
     'Starter': 50,
     'Beginner': 30,
     'Amateur': 10,
@@ -153,7 +154,7 @@ RANKS = {
 }
 
 AGES = {
-    # Age : Weight (for randomisation lmao)
+    # Age : Statistical Weight (for randomisation lmao)
     'Kid': 20,
     'Teen': 50,
     'Adult': 25,
@@ -301,10 +302,10 @@ def gen_character():
     Char.nature = choice(list(NATURES.keys()))
     Char.confidence = NATURES[Char.nature]
 
+    # Get Starter pokemon
+    Char.pokemon.append(choice(POTENTIAL_STARTERS))
     return Char
 
-#x = gen_character()
-#x.character_info()
-print(len(POTENTIAL_STARTERS))
 
-
+x = gen_character()
+x.character_info()
