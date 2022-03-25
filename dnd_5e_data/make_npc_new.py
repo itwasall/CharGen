@@ -2,9 +2,10 @@ import random
 from random import choice
 import click
 import yaml
+from os import getcwd
 
-
-names = yaml.safe_load(open('npc_new_namelist.yaml', 'rt'))
+print(getcwd())
+names = yaml.safe_load(open('./npc_new_namelist.yaml', 'rt'))
 aligncombine = ['Chaotic Evil', 'Chaotic Good', 'Chaotic Neutral', 'Lawful Good', 'Lawful Evil', 'Lawful Neutral', 'Neutral Good', 'Neutral Evil', 'True Neutral']
 abilities = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']
 race = ['Human', 'Elf', 'Dwarf', 'Halfing', 'Orc', 'Dragonborn', 'Tiefling', 'Half-Elf', 'Half-Orc']
