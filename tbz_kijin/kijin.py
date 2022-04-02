@@ -1,45 +1,33 @@
-import parts, random
-from chargen import roll
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+from yaml import safe_load
+
+data = safe_load(open("tbz_data/mechanica.yaml", 'rt'))
 
 class Kijin:
-    def __init__(self,
-                 name: str = None,
-                 attribute_budget: int = None
-                 ):
-        self.name = name
-        self.mechanica = {
-            'Sensor': None,
-            'Torso': None,
-            'Arm': None,
-            'Leg': None,
-            'Other': None
-        }
-        self.mechanica_slots = {
-            'Name': None
-        }
-        self.attribute_budget = attribute_budget
-        self.total_attribute_penalty = 0
-        self.notice_bonus = 0
+    def __init__(self, body_parts, extras):
+        self.body_parts = body_parts
+        self.extras = extras
 
+data_mechanica = data['mechanica']
+data_slots = data['mechanica']
 
-def generate_kijin(name: str):
-    """
-
-    Args:
-        name:
-
-    Returns:
-
-    """
-    budget_roll = roll("1d10")
-
-    kijin = Kijin(name, budget_roll)
-
-    number_of_parts = random.choices([1, 2, 3], weights=[10, 7, 3])[0]
-
-    for i in range(number_of_parts):
-        parts.part_chooser(kijin)
-
-    return kijin
-
+book_templates = {
+    'Man-Gohki':  {
+        'Body Parts': {
+            'Sensors': 'Hei',
+            'Arms': 'Otsu',
+            'Torso': 'Hei',
+            'Legs': 'Hei'
+        },
+        'Mechanica': {
+            'Sensors': ['Flash Burst'],
+            'Arms': ['Vajra Claws', 'White Heat Palm'],
+            'Torso': ['Heart Engine'],
+            'Legs': ['Roller Type Feet']
+        },
+        'Heart Engine': True,
+        'Weapon Interface': {'Arms': 'Vajra Claws'},
+    }
+}
