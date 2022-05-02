@@ -1,0 +1,37 @@
+generic_templates:
+  SensorExclusiveO:
+    Body Parts:
+      Sensor: Otsu
+  SensorExclusiveK:
+    Body Parts:
+      Sensor: Kou
+  ArmExclusiveO:
+    Body Parts:
+      Arm: Otsu
+  ArmExclusiveK:
+    Body Parts:
+      Arm: Kou
+  ArmExclusiveO:
+    Body Parts:
+      Arm: Otsu
+  ArmExclusiveK:
+    Body Parts:
+      Arm: Kou
+  TorsoExclusiveO:
+    Body Parts:
+      Torso: Otsu
+  TorsoExclusiveK:
+    Body Parts:
+      Torso: Kou
+  LegExclusiveO:
+    Body Parts:
+      Leg: Otsu
+  LegExclusiveK:
+    Body Parts:
+      Leg: Kou
+  SensorFocusO_PA:
+    Body Parts:
+      Sensor: Otsu
+      Arm: Hei
+
+

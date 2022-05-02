@@ -31,3 +31,18 @@ book_templates = {
         'Weapon Interface': {'Arms': 'Vajra Claws'},
     }
 }
+"""
+    Generic Templates and You: What the fuck do the abbreviations mean?
+
+    [Sensor/Arm/Torso/Leg]Exclusive - Only has mechanica for that body part - Otsu level + Higher
+    [Sensor/Arm/Torso/Leg]Focus[PS/PA/PT/PL] - Has Otsu level or higher for focused mechanica, plus other body part (PL = PlusLeg)
+    ...PHE - Has heart engine - required for some parts, torso mechnica needed
+    ...PWE - Has weapon interface - A weapon mechnica needed
+"""
+generic_templates = {
+    'SensorExclusive1': {
+        'Body Parts': {
+            
+        }
+    }
+}
