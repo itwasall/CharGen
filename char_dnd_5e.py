@@ -466,8 +466,6 @@ def char_gen():
     print_format_profs('Cantrips', char_cantrip)
 
 if __name__ == "__main__":
-
-
     char_gen()
 
     def try_100():
