@@ -7,6 +7,7 @@ import cli_ui
 
 
 data_classes = yaml_importer('dnd_5e_data/classes.yaml')
+jobs = data_classes['classes']
 backgrounds = yaml_importer('dnd_5e_data/backgrounds.yaml')
 equip = yaml_importer('dnd_5e_data/equipment.yaml')
 lang = yaml_importer('dnd_5e_data/languages.yaml')
@@ -246,9 +247,9 @@ def EXCEPT_tool_prof_bard(race, job):
     return tool_prof
 
 def hp(race, job, mod):
-    job_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)}, 
-                "1d8": {'name':'1d8', 'calc': dice(8,1)}, 
-                "1d10":{'name':'1d10', 'calc': dice(10,1)}, 
+    job_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)},
+                "1d8": {'name':'1d8', 'calc': dice(8,1)},
+                "1d10":{'name':'1d10', 'calc': dice(10,1)},
                 "1d12": {'name':'1d12', 'calc': dice(12,1)}}
     hit_points = job['hp_start'][0] + mod['CON']
     hit_die = job_dice[job['hp_start'][1]]
@@ -265,10 +266,10 @@ def equiping(job, equip):
     equipment = []
     tests = ['equipment1', 'equipment2', 'equipment3', 'equipment4']
     item_check_list = {
-        'simple Weapon': simple_weapons, 
-        'simple Melee Weapon': simple_melee_weapons, 
-        'martial Weapon': martial_weapons, 
-        'martial Melee Weapon': martial_melee_weapons, 
+        'simple Weapon': simple_weapons,
+        'simple Melee Weapon': simple_melee_weapons,
+        'martial Weapon': martial_weapons,
+        'martial Melee Weapon': martial_melee_weapons,
         'musical Instrument': musical_instruments
     }
 
@@ -338,17 +339,17 @@ def background(lang, skills, tools, equipment, race):
 
 def actions(equipment, job, race):
     standard_actions = {'Standard Actions': [
-        'Attack', 
-        'Cast a Spell', 
-        'Dash', 
-        'Disengage', 
-        'Dodge', 
-        'Help', 
-        'Hide', 
-        'Ready', 
-        'Search', 
+        'Attack',
+        'Cast a Spell',
+        'Dash',
+        'Disengage',
+        'Dodge',
+        'Help',
+        'Hide',
+        'Ready',
+        'Search',
         'Use an Object',
-        'Two-Weapon Fighting', 
+        'Two-Weapon Fighting',
         'Interact with an Object'
     ]}
     weapon_attacks = {}
@@ -364,11 +365,11 @@ def magical(job, race, ab_mod):
     spell_save = 0
     spell_atk = 0
     no_magic = [
-        'Barbarian', 
-        'Fighter', 
-        'Monk', 
-        'Paladin', 
-        'Ranger', 
+        'Barbarian',
+        'Fighter',
+        'Monk',
+        'Paladin',
+        'Ranger',
         'Rogue'
     ]
     if job['name'] in no_magic:
@@ -465,6 +466,8 @@ def char_gen():
     print_format_profs('Cantrips', char_cantrip)
 
 if __name__ == "__main__":
+
+
     char_gen()
 
     def try_100():
@@ -474,7 +477,7 @@ if __name__ == "__main__":
             try:
                 char_gen()
                 sucess += 1
-            except:
+            except err as Error:
                 failed += 1
                 print(err)
         print(f'Succeeded: {sucess} Failed: {failed}')
