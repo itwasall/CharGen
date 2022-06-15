@@ -57,14 +57,33 @@ replacing *dnd_5e.py* with the suffix of the generator you want to run (or see f
 - char_numenera_very_old.py
   - An even older **Numenera** file. Just when you thought the quality of the repo couldn't get worse, *it did*.
 - char_numenera.py
+  - The **CharGen** file for **Numenera**
+  - The most recent crack at a Numenera character generator. Foundations are laid, not much else
 - char_pathfinder_2e.py
+  - The **CharGen** file for **Pathfinder 2nd Edition**
+  - A cautionary tale on OOP abuse
 - char_pokerole.py
+  - The **CharGen** file for **Poke Role 2nd Edition**
+  - Traier stuff done, pokemon not
 - char_ryuutama.py
+  - The **CharGen** file for **Ryuutama**
+  - Not much too generate in **Ryuutama** in all honesty, it's technically done but functionally quite pointless
 - char_savage_worlds.py
-- char_tenra_kijin.py
-- char_tenra_shiki.py
+  - The **CharGen** file for **Savage Worlds**
+  - I don't know for which edition. This is considered abandoned
 - char_tenra.py
-- char_wta.py
+  - The **CharGen** file for **Tenra Bansho Zero**
+  - Right now the idea is to split off parts of the character generation into their own separate files, as TBZ's character generation is obtuse and depending on which (for lack of a better word) ""class"" you play determines a whole bunch of mechanics which are unique to that (again, lack of better wording) ""class"".
+  - char_tenra_kijin.py
+    - The **Tenra Bansho Zero** file for **Kijin** characters
+    - I will solve this one day. If this message is still here, then today is not that day.
+  - char_tenra_shiki.py
+    - The **Tenra Bansho Zero** file for **Shiki** magics
+    - Does as it says. Generates legal shiki spells
+
+ - char_wta.py
+   - The **CharGen** file for **Werewolf: The Apocolaypse**
+   - One of the earlier **CharGen** files, considered abandoned.
 - chargen.py
 
 
