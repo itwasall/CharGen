@@ -1,7 +1,37 @@
 # CharGen
 I didn't know how to start programming, so I attempted to make a bunch of TTRPG character generators
 
-## Cyberpunk 2020
+Work has stared on at least:
+- Cyberpunk 2020
+- Cyberpunk RED
+- Dungeons & Dragons 3.5
+- Dungeons & Dragons 5th Edition
+- Exalted 3rd Edition
+- Kamigakari
+- Mork Borg
+- Numenera
+- Pathfinder 2nd Edition
+- Pokerole
+- Ryuutama
+- Savage Worlds
+- Tenra Bansho Zero
+- Werewolf the Apocolaypse
+
+## Usage
+If a file works (which most don't, as either I'm incompetent, they're unfinished, or I wrote these on linux and didn't think how the code would work on other operating systems), you should just be able to use
+```bash
+$ python chargen_dnd_5e.py
+```
+replacing *dnd_5e.py* with the suffix of the generator you want to run (or see fail to run)
+
+### File Breakdown
+- char_cyberpunk_2020.py
+  - The **CharGen** file for **Cyberpunk 2020**
+  - A decent amount of data has been pulled in, most of it superflueous
+- char_cyberpunk_red.py
+  - The **CharGen** file for **
+
+Cyberpunk 2020
 Currently
   - A lot of background character info done.
 
