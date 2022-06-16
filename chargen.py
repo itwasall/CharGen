@@ -27,15 +27,13 @@ def expand(dictionary):
             return_dictionary[key] = value
     return return_dictionary
 
+
 def capitalise(string: str):
     """Returns a capitalised version of a string in title format
-
     Args:
         string str: input string
-
     Returns:
         str: return string
-
     e.g. "the cliff of doom" -> "The Cliff of Doom"
     """
     string_words = string.split(" ")
@@ -45,6 +43,14 @@ def capitalise(string: str):
         else:
             string_words[it] = string_words[it].capitalize()
     return " ".join(string_words)
+
+
+def capitalize(string: str):
+    """
+    If you must
+    """
+    return capitalise(string)
+
 
 def new_seed():
     """Generates a new random seed from an random assortment of
