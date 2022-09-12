@@ -124,6 +124,12 @@ class Skills:
         self.skill_list[skill_name] = skill_amt
         self.update_skills()
 
+    def __format__(self):
+        return "".join(f'{skill}: {self.skill_list[skill]}' for skill in self.skill_list if self.skill_list[skill] > 0)
+
+    def __repr__(self):
+        return self.__format__()
+
 char_skillList = Skills()
 
 class Character:
@@ -148,6 +154,12 @@ class Character:
 
 j = Character('name', 1, 'big', 'yes', 'nice', char_abilityScores)
 
-print(j.skills.skill_list)
-j.skills.change_skill('Animal Handling', 2)
-print(j.skills.animal_handling)
+def add_skill(c: Character, skill: str, amount: int):
+    c.skills.change_skill(skill, amount)
+
+def chargen():
+    character = Character()
+    add_skill(character, 'Animal Handling', 2)
+    print(character.skills)
+
+chargen()
