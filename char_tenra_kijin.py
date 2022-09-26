@@ -20,6 +20,26 @@ kijin_layout = {
     },
 }
 
+def new_gen_mechanica_parts():
+    kijin = {}
+    kijin['mechanica_parts'] = {}
+    total_attribute_penalty = 0
+    number_of_parts = choices(range(1,5), [10, 6, 3, 1])
+    for _ in range(number_of_parts[0]):
+        part_to_add = choice(kijin_parts)
+        while part_to_add in kijin['mechanica_parts'].keys():
+            part_to_add = choice(kijin_parts)
+        part_to_add_class = choice(list(parts[part_to_add]['classes'].keys()))
+        total_attribute_penalty += parts[part_to_add]['classes'][part_to_add_class]['attribute_penalty']
+        kijin['mechanica_parts'][part_to_add] = {}
+        kijin['mechanica_parts'][part_to_add][part_to_add_class] = parts[part_to_add][part_to_add_class]
+    kijin['total_attribute_penalty'] = total_attribute_penalty
+
+    for part in kijin['mechanica_parts']:
+
+
+
+
 def gen_mechanica_parts():
     kijin = {}
     kijin['mechanica_parts'] = {}
@@ -32,16 +52,17 @@ def gen_mechanica_parts():
     number_of_parts = choices(range(1,5), [10, 6, 3, 1])
     for i in range(number_of_parts[0]):
         # Choose part
-        choice_part = choice(kijin_parts)
+        part_chosen = choice(kijin_parts)
         # If part has already been chosen, choose another part
-        while choice_part in kijin['mechanica_parts'].keys():
-            choice_part = choice(kijin_parts)
+        while part_chosen in kijin['mechanica_parts'].keys():
+            part_chosen = choice(kijin_parts)
         # Get's the chosen part's details
-        choice_class = choice(list(parts[choice_part]['classes'].keys()))
+        choice_class = choice(list(parts[part_chosen]['classes'].keys()))
+        print(choice(list(parts[part_chosen]['classes'].keys())))
         # Accumulate the attribute penalty
-        total_attribute_penalty += parts[choice_part]['classes'][choice_class]['attribute_penalty']
-        kijin['mechanica_parts'][choice_part] = {}
-        kijin['mechanica_parts'][choice_part][choice_class] = parts[choice_part]['classes'][choice_class]
+        total_attribute_penalty += parts[part_chosen]['classes'][choice_class]['attribute_penalty']
+        kijin['mechanica_parts'][part_chosen] = {}
+        kijin['mechanica_parts'][part_chosen][choice_class] = parts[part_chosen]['classes'][choice_class]
     kijin['total_attribute_penalty'] = total_attribute_penalty
 
     for part in kijin['mechanica_parts']:
@@ -67,8 +88,11 @@ def gen_mechanica_parts():
                 in mech_data['slots'] 
                 if mech_data['slots'][slot]['slot'] == part
             ]
+            print(kijin)
             # Chooses a slot to put in to the character
             choice_slot = choice(choice_slots)
+            # print(choice_slot)
+            print(kijin[part]['slots'])
             while choice_slot in kijin[part]['slots'].keys():
                 choice_slot = choice(choice_slots)
             kijin[part]['slots'][choice_slot][0] = choice_slot[1]
