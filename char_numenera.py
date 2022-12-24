@@ -7,8 +7,33 @@ chardescs = yaml_importer('numenera_data/descriptor.yaml')
 charfoci = yaml_importer('numenera_data/foci.yaml')
 
 foci_key_exceptions = [
-    'trained', 'cost', 'choice', 'pool_bonus', 'pool_bonus_cond', 'asset', 'language_add', 'train_choice', 'train_choice2', 'Servant', 'Philosophic Confusion', 'Zap', 'additional_points']
-pool_bonus_options = ['Might', 'Speed', 'Intellect', 'MightSpeed', 'MightIntellect', 'SpeedIntellect', 'MightEdge', 'SpeedEdge', 'IntellectEdge', 'Armour']
+        'trained',
+        'cost',
+        'choice',
+        'pool_bonus',
+        'pool_bonus_cond',
+        'asset',
+        'language_add',
+        'train_choice',
+        'train_choice2',
+        'Servant',
+        'Philosophic Confusion',
+        'Zap',
+        'additional_points'
+    ]
+
+pool_bonus_options = [
+        'Might', 
+        'Speed', 
+        'Intellect', 
+        'MightSpeed', 
+        'MightIntellect', 
+        'SpeedIntellect',
+        'MightEdge', 
+        'SpeedEdge',
+        'IntellectEdge',
+        'Armour'
+    ]
 
 class Cypher:
     def __init__(
@@ -39,17 +64,16 @@ class Ability:
         self.train_choice = None
         self.train_choice2 = None
         self.additional_points = None
+        self.subability = None
         # Separate if statements here as None type not iterable
         if subability is not None:
             if len(subability) > 1:
                 self.subability = Ability(
-                    subability['name'],
-                    subability['desc'],
-                    None,
-                    [subability[key] for it, key in enumerate(subability.keys()) if it > 2]
-                )
-        else:
-            self.subability = None
+                                    subability['name'],
+                                    subability['desc'],
+                                    None,
+                                    [subability[key] for idx, key in enumerate(subability.keys()) if idx > 2]
+                                )
         if len(args[0]) > 0:
             # Args are in tuple pairs, in the format (param name, param details)
             for items in args:
@@ -60,7 +84,7 @@ class Ability:
         return self.repr_message()
 
     def repr_message(self):
-        # Gives different output based on whether or not a subabiltiy is present
+        # Gives different output based on whether or not a sub-abiltiy is present
         if self.subability is None:
             return f"\n    {self.name}"
         else:
@@ -93,22 +117,18 @@ class Focus:
 
     def make_abilities(self, data):
         abilities = []
+        sub_ability = None
         for entry in data:
             if 'subability' in entry.keys():
+                sub_ability = entry['subability']
                 print(f"subability found in {entry['name']}")
-                abl = Ability(
-                    entry['name'],
-                    entry['desc'],
-                    entry['subability'],
-                    [(key, entry[key]) for key in entry.keys() if key not in ['name', 'desc', 'subability']]
-                )
-            else:
-                abl = Ability(
-                    entry['name'],
-                    entry['desc'],
-                    None,
-                    [(key, entry[key]) for key in entry.keys() if key not in ['name', 'desc', 'subability']]
-                )
+
+            abl = Ability(
+                entry['name'],
+                entry['desc'],
+                sub_ability,
+                [(key, entry[key]) for key in entry.keys() if key not in ['name', 'desc', 'subability']]
+            )
             abilities.append(abl)
         return abilities
 
@@ -122,15 +142,17 @@ class Stat:
         current: int = None
     ):
         self.maximum = maximum
-        if current is None:
+
+        if current is None: 
             self.current = maximum
         else:
             self.current = current
 
     def __add__(self, x:int):
-        new_current = self.current + x
-        new_maximum = self.maximum + x
-        return Stat(new_maximum, new_current)
+        self.current += x
+        self.maximum += x
+        return Stat(self.maximum, self.current)
+
     def __iadd__(self, x:int):
         return self.__add__(x)
 
@@ -138,54 +160,49 @@ class Stat:
         return f"{self.maximum}/{self.current}"
 
 class StatPool:
-    def __init__(
-        self,
-        might: Stat,
-        speed: Stat,
-        intellect: Stat,
-    ):
-        self.Might = might
-        self.Speed = speed
-        self.Intellect = intellect
+    def __init__(self, might: Stat, speed: Stat, intel: Stat):
+        self.might = might
+        self.speed = speed
+        self.intel = intel
 
     def __add__(self, value: int, stat: str):
-        stat = stat.capitalize()
-        if stat not in ['Might', 'Speed', 'Intellect']:
-            pass
-        elif stat == 'Might':
-            self.Might += value
-        elif stat == 'Speed':
-            self.Speed += value
-        elif stat == 'Intellect':
-            self.Intellect += value
+        match stat.capitalize():
+            case "Might":
+                self.might += value
+            case "Speed":
+                self.speed += value
+            case "Intellect":
+                self.intel += value
+            case _:
+                pass
 
     def __repr__(self):
-        return f"Might: {self.Might} Speed: {self.Speed} Intellect: {self.Intellect}"
+        return f"Might: {self.might} Speed: {self.speed} Intellect: {self.intel}"
 
 class Edge:
     def __init__(
         self,
-        might_edge: int,
-        speed_edge: int,
-        intellect_edge: int
+        edge_might: int,
+        edge_speed: int,
+        edge_intel: int
     ):
-        self.might_edge = might_edge
-        self.speed_edge = speed_edge
-        self.intellect_edge = intellect_edge
+        self.edge_might = edge_might
+        self.edge_speed = edge_speed
+        self.edge_intel = edge_intel
 
     def __add__(self, value: int, edge: str):
-        edge = edge.capitalize()
-        if edge not in ['Might', 'Speed', 'Intellect']:
-            pass
-        elif edge == 'Might':
-            self.might_edge += value
-        elif edge == 'Speed':
-            self.speed_edge += value
-        elif edge == 'Intellect':
-            self.intellect_edge += value
+        match edge.capitalize():
+            case "Might":
+                self.edge_might += value
+            case "Speed":
+                self.edge_speed += value
+            case "Intellect":
+                self.edge_intel += value
+            case _:
+                pass
 
     def __repr__(self):
-        return f"Might Edge: {self.might_edge} Speed Edge: {self.speed_edge} Intellect Edge: {self.intellect_edge}"
+        return f"Might Edge: {self.edge_might} Speed Edge: {self.edge_speed} Intellect Edge: {self.edge_intel}"
 
 character = {
     'Name': str,
@@ -204,36 +221,44 @@ character = {
     'Skills': dict
 }
 
+def choose(data):
+    try:
+        return choice(list(data.keys()))
+    except AttributeError:
+        raise AttributeError()
+
+def keylist(data):
+    return list(data.keys())
+
 
 def gen_character(
-        settype: str = None,
-        setdesc: str = None,
-        setfoci: str = None,
+        set_type: str = None,
+        set_desc: str = None,
+        set_foci: str = None,
         verbose: bool = False,
 ):
-    if settype is None or settype not in list(chartypes.keys()):
-        choice_type = choice(list(chartypes.keys()))
-        while choice_type == "bs_im_not_rewriting":
-            choice_type = choice(list(chartypes.keys()))
-        character_type = (choice_type, chartypes[choice_type])
-        if verbose:
-            print(f'DEBUG: {choice_type}')
+    if set_type is None or set_type not in keylist(chartypes):
+        set_type = choose(chartypes)
+        while set_type == "bs_im_not_rewriting":
+            set_type = choose(chartypes)
+    character_type = (set_type, chartypes[set_type])
+
+    if set_desc is None or set_desc not in keylist(chardescs):
+        gen_desc = choose(chardescs)
+        character_descriptor = (gen_desc, chardescs[gen_desc])
     else:
-        character_type = (settype, chartypes[settype])
-    if setdesc is None or setdesc not in list(chardescs.keys()):
-        choice_desc = choice(list(chardescs.keys()))
-        character_descriptor = (choice_desc, chardescs[choice_desc])
-        if verbose:
-            print(f'DEBUG: {choice_desc}')
+        character_descriptor = (set_desc, chartypes[set_desc])
+
+    if set_foci is None or set_foci not in keylist(charfoci):
+        gen_foci = choose(charfoci)
+        character_focus = (gen_foci, charfoci[gen_foci])
     else:
-        character_descriptor = (setdesc, chartypes[setdesc])
-    if setfoci is None or setfoci not in list(charfoci.keys()):
-        choice_foci = choice(list(charfoci.keys()))
-        character_focus = (choice_foci, charfoci[choice_foci])
-        if verbose:
-            print(f'DEBUG: {choice_foci}')
-    else:
-        character_focus = (setfoci, charfoci[setfoci])
+        character_focus = (set_foci, charfoci[set_foci])
+
+    if verbose:
+            print(f'DEBUG: {set_type}')
+            print(f'DEBUG: {gen_desc}')
+            print(f'DEBUG: {gen_foci}')
 
     character['Type'] = character_type[0]
     character['Descriptor'] = character_descriptor[0]
@@ -261,21 +286,23 @@ x = gen_character(verbose=True)
 for k in list(x):
     print(f"{k}: {x[k]}")
 
-character['StatPools'].__add__(2, 'Might')
+# character['StatPools'].__add__(2, 'Might')
+# print(character['StatPools'])
 
-print(character['StatPools'])
+if not True:
+    print(character['StatPools'])
 
-all_foci = {}
-for foci in charfoci:
-    focus = charfoci[foci]
-    all_foci[foci] = Focus(
-        foci,
-        focus['desc'],
-        focus['connection'],
-        [focus['equipment'] if 'equipment' in keys else None for keys in focus][0],
-        focus['abilities'],
-        [focus['minor_effect'] if 'minor_effect' in keys else None for keys in focus][0],
-        focus['major_effect'],
-        [focus['choice'] if 'choice' in keys else None for keys in focus][0],
-    )
-    print(all_foci[foci].name, all_foci[foci].abilities)
+    all_foci = {}
+    for foci in charfoci:
+        focus = charfoci[foci]
+        all_foci[foci] = Focus(
+            foci,
+            focus['desc'],
+            focus['connection'],
+            [focus['equipment'] if 'equipment' in keys else None for keys in focus][0],
+            focus['abilities'],
+            [focus['minor_effect'] if 'minor_effect' in keys else None for keys in focus][0],
+            focus['major_effect'],
+            [focus['choice'] if 'choice' in keys else None for keys in focus][0],
+        )
+        print(all_foci[foci].name, all_foci[foci].abilities)
