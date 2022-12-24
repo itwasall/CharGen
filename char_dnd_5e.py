@@ -7,7 +7,7 @@ import cli_ui
 
 
 data_classes = yaml_importer('dnd_5e_data/classes.yaml')
-jobs = data_classes['classes']
+dnd_classs = data_classes['classes']
 backgrounds = yaml_importer('dnd_5e_data/backgrounds.yaml')
 equip = yaml_importer('dnd_5e_data/equipment.yaml')
 lang = yaml_importer('dnd_5e_data/languages.yaml')
@@ -22,7 +22,7 @@ character = {
     'age': 0,
     'height': "",
     'race': '',
-    'job': '',
+    'dnd_class': '',
     'ability_scores': {'STR': 0, 'DEX': 0, 'CON': 0, 'INT': 0, 'WIS': 0, 'CHA': 0},
     'ability_mods': {'STR': 0, 'DEX': 0, 'CON': 0, 'INT': 0, 'WIS': 0, 'CHA': 0},
     'proficiency_bonus': 2,
@@ -68,8 +68,11 @@ def dice(sides, throws):
         total += randint(1,sides)
     return total
 
-def job(race):
-    race_job_weights = {
+def dnd_class(race):
+    # Weighting class roll against character race. This information was taken from someones
+    #  meta-gaming analysis on which races are best suited for each class. I might've tweaked
+    #  a few numbers here or there, I cannot remember
+    race_dnd_class_weights = {
         'High Elf': [1, 4, 2, 2, 2, 4, 2, 5, 5, 2, 2, 6],
         'Wood Elf': [3, 4, 5, 5, 2, 6, 2, 6, 5, 2, 3, 2],
         'Drow Elf': [2, 6, 3, 3, 2, 5, 5, 5, 5, 6, 6, 1],
@@ -85,17 +88,27 @@ def job(race):
         'Dragonborn': [6, 5, 4, 2, 6, 2, 6, 3, 2, 5, 5, 2],
         'Tiefling': [2, 6, 2, 2, 2, 2, 5, 2, 4, 6, 6, 5]
     }
-    char_job = choices(jobs, weights=race_job_weights[race])
-    return char_job[0]
+    char_dnd_class = choices(dnd_classs, weights=race_dnd_class_weights[race])
+    return char_dnd_class[0]
 
-def alignment(race):
+def alignment(race, other_gen: bool = False):
+    """
+    The Players Handbook rather racistly states that some races are more likely to be
+     some alignments over others. What this problematically boils down to is that apparently
+     some races are more evil than others, or are more chaotic than others.
+    The default is to abide by this, as that follows the book as best it can.
+    The other_gen bool instead chooses an alignment at random, not taking into account race
+     at all.
+    """
     alignments_1 = ['Lawful ', 'Neutral ', 'Chaotic ']
     alignments_2 = ['Good', 'Neutral', 'Evil']
     character_alignment = str(choices(alignments_1, race['alignment_weights'][0])[0]) + \
                           str(choices(alignments_2, race['alignment_weights'][1])[0])
+    if other_gen:
+        character_alignment = alignments_1[randint(1,3)] + alignments_2[randint(1, 3)]
     return character_alignment
 
-def ability_scores(race, job):
+def ability_scores(race, dnd_class):
     scores = []
     ab_score = {'STR': 0, 'DEX': 0, 'CON': 0, 'INT': 0, 'WIS': 0, 'CHA': 0}
     ab_mod = {'STR': 0, 'DEX': 0, 'CON':0,  'INT': 0, 'WIS': 0, 'CHA': 0}
@@ -109,9 +122,9 @@ def ability_scores(race, job):
         scores.append(score)
     scores.sort(reverse=True)
     # allocating the highest number to the priority stats
-    ab_score[job['stat_priority_1']] = scores[0]
+    ab_score[dnd_class['stat_priority_1']] = scores[0]
     scores.pop(0)
-    ab_score[job['stat_priority_2']] = scores[0]
+    ab_score[dnd_class['stat_priority_2']] = scores[0]
     scores.pop(0)
     # randomly assigning the rest of the rolls to the rest of the stats
     for key, value in ab_score.items():
@@ -125,7 +138,7 @@ def ability_scores(race, job):
         else: continue
     # Dumb exception for half-elfs because they get to choose their own ability score bonuses
     if race['name'] == "Half-Elf":
-        race['ab_bonus'] = EXCEPT_ability_rolls_half_elf(race, job)
+        race['ab_bonus'] = EXCEPT_ability_rolls_half_elf(race, dnd_class)
     for key, value in race['ab_bonus'].items():
         ab_score[key] += value
     # Since ability score mods increase by 1 for every 2 points in ability score, halfing the score and using math.floor to round down to get the correct mod looks neater than writing out the mod for each possible ability score value
@@ -134,24 +147,20 @@ def ability_scores(race, job):
         ab_mod[key] = mod_calc_ref[floor(ab_score[key]/2)]
     # Calculating the saving throws
     for key, value in ab_sav.items():
-        if key in job['sav_throws']:
+        if key in dnd_class['sav_throws']:
             ab_sav[key] = ab_mod[key] + character['proficiency_bonus']
         else:
             ab_sav[key] = ab_mod[key]
     return ab_score, ab_mod, ab_sav
 
 def score_roll():
-    rolls = []
-    for j in range(4):
-        rolls.append(dice(6,1))
+    rolls = [dice(6,1) for _ in range(4)]
     rolls.sort()
     rolls.pop(0)
-    score = 0
-    for it, k in enumerate(rolls):
-        score += rolls[it]
+    score = sum(rolls)
     return score
 
-def EXCEPT_ability_rolls_half_elf(race, job):
+def EXCEPT_ability_rolls_half_elf(race, dnd_class):
     ability_scores_ref = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
     race['ab_bonus'] = {'CHA': 2}
     ability_scores_ref.pop(5)
@@ -178,17 +187,17 @@ def name(race, gender=""):
     name = choice(race[gender]) + " " + choice(race['surname'])
     return name
 
-def skill_prof(race, job):
+def skill_prof(race, dnd_class):
     skill_prof = {}
     if race['name'] == 'Half-Elf':
-        skill_prof_amount = job['skills'] + 2
+        skill_prof_amount = dnd_class['skills'] + 2
         skill_pool = skills
     else:
-        skill_prof_amount = job['skills']
-        if job['sk_pool'] == 'all':
+        skill_prof_amount = dnd_class['skills']
+        if dnd_class['sk_pool'] == 'all':
             skill_pool = skills
         else:
-            skill_pool = job['sk_pool']
+            skill_pool = dnd_class['sk_pool']
     for i in range(skill_prof_amount):
         skill = choice(skill_pool)
         while skill in skill_prof:
@@ -196,21 +205,21 @@ def skill_prof(race, job):
         skill_prof[skill] = 2
     return skill_prof
 
-def proficiencies(race, job):
+def proficiencies(race, dnd_class):
     armor_prof = []
     weap_prof = []
     languages = [i for i in race['languages'] if not i=="any"]
     if "any" in race['languages']:
         extra = (EXCEPT_language_any(languages, race))
         languages.append(extra[0]['name'])
-    armor_prof = job['armor_prof'] + race['armor_prof']
-    weap_prof = job['weap_prof'] + race['weap_prof']
-    if job['tool_prof'] == "Monk":
-        tool_prof = EXCEPT_tool_prof_monk(race, job)
-    elif job['tool_prof'] == "Bard":
-        tool_prof = EXCEPT_tool_prof_bard(race, job)
+    armor_prof = dnd_class['armor_prof'] + race['armor_prof']
+    weap_prof = dnd_class['weap_prof'] + race['weap_prof']
+    if dnd_class['tool_prof'] == "Monk":
+        tool_prof = EXCEPT_tool_prof_monk(race, dnd_class)
+    elif dnd_class['tool_prof'] == "Bard":
+        tool_prof = EXCEPT_tool_prof_bard(race, dnd_class)
     else:
-        tool_prof = job['tool_prof'] and race['tool_prof']
+        tool_prof = dnd_class['tool_prof'] and race['tool_prof']
     return armor_prof, weap_prof, tool_prof, languages
 
 def EXCEPT_language_any(tongues, race):
@@ -234,28 +243,28 @@ def EXCEPT_language_any(tongues, race):
         extra_tongue = x
     return extra_tongue
 
-def EXCEPT_tool_prof_monk(race, job):
+def EXCEPT_tool_prof_monk(race, dnd_class):
     tool_prof = []
     monk_tool_type_choose = choice(['artisans_tool_prof', 'musical_instruments'])
     tool_prof.append(choice(equip[monk_tool_type_choose]))
     return tool_prof
 
-def EXCEPT_tool_prof_bard(race, job):
+def EXCEPT_tool_prof_bard(race, dnd_class):
     tool_prof = []
     for i in range(3):
         tool_prof.append(choice(equip['musical_instruments']))
     return tool_prof
 
-def hp(race, job, mod):
-    job_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)},
+def hp(race, dnd_class, mod):
+    dnd_class_dice = {"1d6": {'name':'1d6', 'calc': dice(6,1)},
                 "1d8": {'name':'1d8', 'calc': dice(8,1)},
                 "1d10":{'name':'1d10', 'calc': dice(10,1)},
                 "1d12": {'name':'1d12', 'calc': dice(12,1)}}
-    hit_points = job['hp_start'][0] + mod['CON']
-    hit_die = job_dice[job['hp_start'][1]]
+    hit_points = dnd_class['hp_start'][0] + mod['CON']
+    hit_die = dnd_class_dice[dnd_class['hp_start'][1]]
     return hit_points, hit_die
 
-def equiping(job, equip):
+def equiping(dnd_class, equip):
     simple_melee_weapons = equip['simple_melee_weapons']
     simple_ranged_weapons = equip['simple_ranged_weapons']
     martial_melee_weapons = equip['martial_melee_weapons']
@@ -276,14 +285,14 @@ def equiping(job, equip):
     for test in tests:
         try:
             # Choosing which item to get from a set list. Each class has 2-4 of these, each with 2-3 items
-            item_to_add = choice(job[test])
+            item_to_add = choice(dnd_class[test])
             while item_to_add in equipment:
-                item_to_add = choice(job[test])
+                item_to_add = choice(dnd_class[test])
             equipment.append(item_to_add)
         except KeyError:
             pass
     # Adding the list of items that a character will recieve regardless
-    for item_definite in job['equipment']:
+    for item_definite in dnd_class['equipment']:
         equipment.append(item_definite)
     pop_list = []
     for it, item in enumerate(equipment):
@@ -310,8 +319,8 @@ def equiping(job, equip):
         exit()
     return equipment
 
-def wealth(job):
-    wealth_calc = job['wealth']
+def wealth(dnd_class):
+    wealth_calc = dnd_class['wealth']
     wealth = wealth_calc[0] + dice(wealth_calc[2], wealth_calc[1])
     return wealth
 
@@ -337,7 +346,7 @@ def background(lang, skills, tools, equipment, race):
         background['equipment'].append(choice(background['equipment_pick']))
     return background, skills, tools, equipment, lang
 
-def actions(equipment, job, race):
+def actions(equipment, dnd_class, race):
     standard_actions = {'Standard Actions': [
         'Attack',
         'Cast a Spell',
@@ -359,7 +368,7 @@ def actions(equipment, job, race):
                 weapon_attacks[item] = weapon['damage']
     return standard_actions, weapon_attacks
 
-def magical(job, race, ab_mod):
+def magical(dnd_class, race, ab_mod):
     cantrip_list = []
     spell_list = []
     spell_save = 0
@@ -372,33 +381,33 @@ def magical(job, race, ab_mod):
         'Ranger',
         'Rogue'
     ]
-    if job['name'] in no_magic:
+    if dnd_class['name'] in no_magic:
         return spell_list, cantrip_list, spell_save, spell_atk
     else:
         for item in magic:
-            if job['name'] == item:
-                for i in range(job['cantrip']):
-                    cantrip = choice(magic[job['name']]['cantrip'])
+            if dnd_class['name'] == item:
+                for i in range(dnd_class['cantrip']):
+                    cantrip = choice(magic[dnd_class['name']]['cantrip'])
                     while cantrip in cantrip_list:
-                        cantrip = choice(magic[job['name']]['cantrip'])
+                        cantrip = choice(magic[dnd_class['name']]['cantrip'])
                     cantrip_list.append(cantrip)
-                for i in range(job['spells']):
-                    spell = choice(magic[job['name']]['one'])
+                for i in range(dnd_class['spells']):
+                    spell = choice(magic[dnd_class['name']]['one'])
                     while spell in spell_list:
-                        spell = choice(magic[job['name']]['one'])
+                        spell = choice(magic[dnd_class['name']]['one'])
                     spell_list.append(spell)
-                if job['name'] == 'Cleric':
-                    spell_list = EXCEPT_magical_cleric(job, spell_list)
+                if dnd_class['name'] == 'Cleric':
+                    spell_list = EXCEPT_magical_cleric(dnd_class, spell_list)
 
-    spell_save = job['spell_save'][0] + ab_mod[job['spell_save'][1]]
-    spell_atk = job['spell_attack'][0] + ab_mod[job['spell_attack'][1]]
+    spell_save = dnd_class['spell_save'][0] + ab_mod[dnd_class['spell_save'][1]]
+    spell_atk = dnd_class['spell_attack'][0] + ab_mod[dnd_class['spell_attack'][1]]
     return spell_list, cantrip_list, spell_save, spell_atk
 
-def EXCEPT_magical_cleric(job, spell_list):
-    if job['name'] != 'Cleric':
+def EXCEPT_magical_cleric(dnd_class, spell_list):
+    if dnd_class['name'] != 'Cleric':
         pass
     else:
-        domain = choice(job['cleric_domain'])
+        domain = choice(dnd_class['cleric_domain'])
         for i in magic['Cleric'][domain]:
             if i in spell_list:
                 continue
@@ -425,23 +434,23 @@ def char_gen():
     char_race = choice(races)
     char_age, char_height, char_weight = age_height_weight(char_race)
     char_name = name(char_race)
-    char_job = job(char_race['name'])
+    char_dnd_class = dnd_class(char_race['name'])
     char_alignment = alignment(char_race)
-    char_ab_score, char_ab_mod, char_ab_sav = ability_scores(char_race, char_job)
-    char_skill_prof = skill_prof(char_race, char_job)
-    char_arm_prof, char_wea_prof, char_tool_prof, char_lang = proficiencies(char_race, char_job)
-    char_hit_points, char_hit_die = hp(char_race, char_job, char_ab_mod)
-    char_equipment = equiping(char_job, equip)
-    char_wealth = wealth(char_job)
+    char_ab_score, char_ab_mod, char_ab_sav = ability_scores(char_race, char_dnd_class)
+    char_skill_prof = skill_prof(char_race, char_dnd_class)
+    char_arm_prof, char_wea_prof, char_tool_prof, char_lang = proficiencies(char_race, char_dnd_class)
+    char_hit_points, char_hit_die = hp(char_race, char_dnd_class, char_ab_mod)
+    char_equipment = equiping(char_dnd_class, equip)
+    char_wealth = wealth(char_dnd_class)
     char_background, char_skill_prof, char_tool_prof, char_equipment, char_lang = background(char_lang, char_skill_prof, char_tool_prof, char_equipment, char_race)
-    char_actions, char_attack_actions = actions(char_equipment, char_job, char_race)
-    char_magic, char_cantrip, char_spell_sav, char_spell_atk = magical(char_job, char_race, char_ab_mod)
+    char_actions, char_attack_actions = actions(char_equipment, char_dnd_class, char_race)
+    char_magic, char_cantrip, char_spell_sav, char_spell_atk = magical(char_dnd_class, char_race, char_ab_mod)
 
     info(cli_ui.bold, '==== INFORMATION =====')
     info(cli_ui.yellow, f'{char_name}', cli_ui.reset, 'the', cli_ui.magenta, char_race['name'])
     print(char_alignment)
     print(f'{char_age} years old', char_height, char_weight)
-    print('Formally',char_job['name'])
+    print('Formally',char_dnd_class['name'])
     info(cli_ui.yellow, "Health/Hit Dice:  ", cli_ui.green, f'{char_hit_points}/{char_hit_die["name"]}', cli_ui.reset)
     info(cli_ui.yellow, "Spell Save/Attack:", cli_ui.green, f'{char_spell_sav}/{char_spell_atk}', cli_ui.reset)
     info(cli_ui.bold, '=== ABILITY SCORES ===')
