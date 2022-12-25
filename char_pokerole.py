@@ -2,8 +2,8 @@ from typing import List
 from random import choice, choices
 from yaml import safe_load
 
-rank_data = safe_load(open('pokerole/rank.yml', 'rt'))
-age_data = safe_load(open('pokerole/ages.yml', 'rt'))
+rank_data = safe_load(open('pokerole_data/rank.yml', 'rt'))
+age_data = safe_load(open('pokerole_data/ages.yml', 'rt'))
 
 class Character:
     def __init__(self, name):
