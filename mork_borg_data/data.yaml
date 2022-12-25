@@ -152,8 +152,8 @@ scrolls:
     Unmet Fate: One creature, dead for no more than a week, is awakened with terrible memories.
     Enochian Syntax: One creature blindly obeys a single command.
     Aegis of Sorrow: A creature of your choice gains 2d6 extra HP for 10 rounds.
-    "False Dawn/Night’s Chariot": Light or pitch black for 3d10 minutes.
-    Roskoe’s Consuming Glare: 1d4 creatures lose 1d8 HP each.
+    "False Dawn/Night's Chariot": Light or pitch black for 3d10 minutes.
+    Roskoe's Consuming Glare: 1d4 creatures lose 1d8 HP each.
     Bestial Speech: You may speak with animals for 1d20 minutes.
     Hermetic Step: You find all traps in your path for 2d10 minutes.
 
@@ -198,13 +198,13 @@ optional_classes:
       The Shoe of Death's Horse: It looks normal but since finding it in an obscure crypt you are convied this shoe came from the horse of Death himself. In you hands it hits with DR 10, 1d4 damage. 1/6 chance the shoe smashes the skull, instantly killing small-to-medium sized creatures. The shoe returns to your hand like a boomerang
   Gutterborn Scum:
     flavor_text:
-      desc: An ill star smiled upon your birth. Poverty, crime and bad parenting didn’t help either. In your community an honest day’s work was never an option. Not that you ever tried, what are you, some kind of mug? A razor blade and a moonless night are worth a week of chump-work.
+      desc: An ill star smiled upon your birth. Poverty, crime and bad parenting didn't help either. In your community an honest day's work was never an option. Not that you ever tried, what are you, some kind of mug? A razor blade and a moonless night are worth a week of chump-work.
       flavor_option:
         Bad Birth:
           - Dumped onto a moving shit-cart still in your birth caul.
           - Mother hanged from a tree outside of Galgenbeck, you fell from the corpse.
           - Raised by rats in the gutters of Grift.
-          - Kicked and beaten beneath a baker’s table in Schleswig.
+          - Kicked and beaten beneath a baker's table in Schleswig.
           - Escaped the Tvelandian orphanarium.
           - Educated by outlaws in a hovel south of Alliáns.
     hp: 1d6
@@ -218,7 +218,7 @@ optional_classes:
       weapon: 6
       armour: 2
     uniques:
-      Coward’s Jab: When attacking by surprise test Agility DR10. On a success you automatically hit once with a light one-handed weapon, dealing normal damage +3.
+      Coward's Jab: When attacking by surprise test Agility DR10. On a success you automatically hit once with a light one-handed weapon, dealing normal damage +3.
       Filthy Fingersmith: Your snaky little digits get into pockets and pick locks with a DR8 Agility test. You also begin with lockpicks!
       Abominable Gob Lobber: Your phlegm is viscous, lumpy, vile and ballistically accurate at short range. You can spit d2 times during a fight. Roll a DR8 Presence test for accuracy. Targets are blinded, retching and vomiting for d4 rounds. Anyone witnessing this—friend and foe—must make a Toughness test to not  also vomit. PCs test DR10 and enemies DR12.
       Escaping Fate: Every time you use an omen there is a 50% chance it is not spent.
@@ -226,7 +226,7 @@ optional_classes:
       Excretal Stealth: You have an astounding, almost preternatural ability to hide in muck, debris and filth. When hidden in these conditions a DR16 Presence test is required  to notice you.
   Esoteric Hermit:
     flavor_text:
-      desc: The stone of your cave is one with the stars. Silence and perfection. Now the chaos of a fallen world disturbs your rituals and the caul of night grows blacker than your cavern’s gloom. Irritating!
+      desc: The stone of your cave is one with the stars. Silence and perfection. Now the chaos of a fallen world disturbs your rituals and the caul of night grows blacker than your cavern's gloom. Irritating!
       flavor_option:
         Eldritch Origins:
           - Awakening, adult, in a ritual circle underneath the northern bridge to Grift.
@@ -234,7 +234,7 @@ optional_classes:
           - Single child survivor of an incident in the Valley of the Unfortunate Undead.
           - Dying of plague in a Bergen Chrypt hovel, you touched something from outside.
           - An average individual until you encountered something in a dim glade in Sarkash.
-          - Raised on a lonely island in Lake Onda. No one else has ever heard of this island and you can’t return.
+          - Raised on a lonely island in Lake Onda. No one else has ever heard of this island and you can't return.
     hp: 1d4
     abilities:
       Presence: 2
@@ -258,7 +258,7 @@ optional_classes:
         Things were going so well, until:
           - Your Wästland palace was reduced to rubble.
           - Your caravan kingdom of Tveland fell into penury.
-          - King Fathmu IX’s brother Zigmund, your father, was murdered.
+          - King Fathmu IX's brother Zigmund, your father, was murdered.
           - The southern empire of Südglans sank into the sea.
           - Anthelia demanded a gift of noble blood.
           - Two young princes were kidnapped west of Bergen Chrypt and disappeared into the black crevasse of the eastern slopes.
@@ -271,8 +271,8 @@ optional_classes:
     traits:
       Greedy: Take two unique items from the list
     uniques:
-      - The Blade of your Ancestors: This magnificent and clearly magical talking sword is foppish, unreliable and quietly despises you. It taunts your failures and, if continually disappointed, develops a 1 in 6 chance to ‘accidentally’ attack you or your companions. Deals d6+1 damage. Attack/Defence DR is 10.
-      - ‘Poltroon’ the Court Jester: While practically useless, personally irritating and an emotional drain, Poltroon’s capering actually makes enemies lose their focus in combat. For the first two rounds you and  your allies get +2 on attack/defence.
+      - The Blade of your Ancestors: This magnificent and clearly magical talking sword is foppish, unreliable and quietly despises you. It taunts your failures and, if continually disappointed, develops a 1 in 6 chance to ‘accidentally' attack you or your companions. Deals d6+1 damage. Attack/Defence DR is 10.
+      - ‘Poltroon' the Court Jester: While practically useless, personally irritating and an emotional drain, Poltroon's capering actually makes enemies lose their focus in combat. For the first two rounds you and  your allies get +2 on attack/defence.
       - Barbarister the Incredible Horse: Barbarister is magical, intelligent, arrogant and vain. He can also talk. If you can persuade him to care, Barbarister occasionally adds +2 to Presence tests involving logic and intellect. The horse may be smarter than you and is quite aware of this.
       - Hamfund the Squire: This intensely cowardly servant acts only as guardian for the scabbard of the cursed sword Eurekia. Once per combat, if Ham can be found, Eurekia may be drawn. The sword does 2d6 damage,  and for every swing of Eurekia roll a d6. On a 1 the squire is slain and Eurekia vanishes forever.
       - The Snake-Skin Gift: An expensive sandalwood box bound in snakeskin. It contains a seemingly ordinary dagger, wrapped in silk. The dagger does d4 damage but on a 1 the target dies immediately of deadly poison  weeping from the blade.
@@ -300,12 +300,12 @@ optional_classes:
     traits:
       Armour_Skill: You may use powers while wearing medium armour.
     uniques:
-      - Sacred shepherd’s crook: Its head a hook of human bone inscribed with overlapping anti-prayers. This crook hooks through other worlds. Staff does 2d4 damage except to faithless humans.
-      - Stolen Mitre: While wearing this holy hat the priest’s vile body fades, becoming hard to hit in combat (Defence DR10). If pulled over the ears outside of battle the priest becomes nearly invisible, testing  stealth against DR8.
-      - List of Sins: "A long and accurate document cross-referenced against reality to discover unseen evil-doers. Successful Presence DR10: A strange light surrounds evil creatures. The list’s owner defends with +2 against any being discovered this way."
+      - Sacred shepherd's crook: Its head a hook of human bone inscribed with overlapping anti-prayers. This crook hooks through other worlds. Staff does 2d4 damage except to faithless humans.
+      - Stolen Mitre: While wearing this holy hat the priest's vile body fades, becoming hard to hit in combat (Defence DR10). If pulled over the ears outside of battle the priest becomes nearly invisible, testing  stealth against DR8.
+      - List of Sins: "A long and accurate document cross-referenced against reality to discover unseen evil-doers. Successful Presence DR10: A strange light surrounds evil creatures. The list's owner defends with +2 against any being discovered this way."
       - The Blasphemous Nechrubel Bible: "So intensely blasphemous even the Priests themselves can only peruse it once per day. When read, roll a die. Even result: For the rest of the day PCs heal d4 HP after just five minutes of rest. Odd result: The priest is plagued by demonic hallucinations. The DM may invent d3 things that only the Priest can see and describe them to the player as if true. This effect ends with sunrise."
-      - Stones taken from Thel-Emas’ Lost Temple: Cast the stones on the ground. Their pattern reveals if danger lurks in an adjacent room. The stones can lie. The priest tests Presence DR10 to see if they are true but after failing they cannot test again until the sun has set.
-      - (WRONG JESUS) CRUCIFIX: The crucifix can be used in encounters with the undead as well as lesser trolls and goblins. Check morale (add or subtract the priest’s Presence modifier) to see if the creatures bow and kindly remove themselves
+      - Stones taken from Thel-Emas' Lost Temple: Cast the stones on the ground. Their pattern reveals if danger lurks in an adjacent room. The stones can lie. The priest tests Presence DR10 to see if they are true but after failing they cannot test again until the sun has set.
+      - (WRONG JESUS) CRUCIFIX: The crucifix can be used in encounters with the undead as well as lesser trolls and goblins. Check morale (add or subtract the priest's Presence modifier) to see if the creatures bow and kindly remove themselves
   Occult Herbmaster:
     flavor_text:
       desc: Born of the mushroom, raised in the glade, watched by the eye of the moon in a silverblack pool
@@ -317,7 +317,7 @@ optional_classes:
           - The illegal midnight markets of Schleswig.
           - The heretic isle of Crëlut, two nautical miles east of Grift.
           - A little witches cottage in Galgenbeck.
-          - The ruins of the Shadow King’s manse, thick with memories of mushrooms and smoke.
+          - The ruins of the Shadow King's manse, thick with memories of mushrooms and smoke.
           - The old frozen ruins not far from Alliáns.
     hp: 1d6
     abilities:
@@ -336,8 +336,8 @@ optional_classes:
       - Southern Frog Stew: Vomit for d4 hours, pass a DR14 test or you can do nothing else.
       - Elixir Vitalis: Heals d6 HP and stops infection. Can be habit-forming.
       - Spider-Owl Soup: See in darkness, climb on walls for 30 minutes.
-      - Fernor’s Philtre: Translucent oil, must be dabbed right into the eye. Heals infection and gives +2 on Presence tests for d4 hours.
-      - Hyphos’ Enervating Snuff: Berserk! Two attacks per round but defend with DR14. Lasts one fight. Must be snorted, causes sneezing.
+      - Fernor's Philtre: Translucent oil, must be dabbed right into the eye. Heals infection and gives +2 on Presence tests for d4 hours.
+      - Hyphos' Enervating Snuff: Berserk! Two attacks per round but defend with DR14. Lasts one fight. Must be snorted, causes sneezing.
       - Black Poison: Toughness DR14 or -d6 HP and blinded for one hour.
 
 ##################
@@ -380,15 +380,15 @@ optional_tables:
     - Juddering and stuttering from nerve damage or stress.
     - Corpulent, ravenous, drooling.
     - One hand lacks thumb and index finger, grips like a lobster.
-    - Red, swollen alcoholic’s nose.
+    - Red, swollen alcoholic's nose.
     - Resting maniac face, making friends is hard.
-    - Chronic athlete’s foot. Stinks.
+    - Chronic athlete's foot. Stinks.
     - Recently slashed and stinking eye covered with a patch.
     - Nails cracked and black, maybe about to drop off.
   bad_habits:
     - Obsessively collect small sharp stones.
-    - Won’t use a blade without testing it on your own flesh.
-    - Can’t stop drinking once you start.
+    - Won't use a blade without testing it on your own flesh.
+    - Can't stop drinking once you start.
     - Gambling addict. Must bet every day. If you lose, raise and bet again.
     - Cannot tolerate criticism of any kind. Results in rage and weeping.
     - Unable to get to the point.
@@ -438,7 +438,7 @@ occult_treasures:
   - The image of a being in this malevolently-accurate mirror shows only the shameful truth of their soul.
   - "Vampiric phurba- Heals you as it harms your target (d3), but beware: after stealing a total of 6 HP, test Presence DR14 or becomeaddicted—you must then  test Presence DR12 daily- Fail and you must stab someone with the knife before next sunrise- Or wither to ash and die as the sun rises."
   - A black pearl- If dropped in darkness it rolls towards the nearest exit to day.
-  - This torch burns for an immortal hour- Hold it and live- You can lose limbs and enter negative HP but won’t die unless you drop the torch or it burns out.
+  - This torch burns for an immortal hour- Hold it and live- You can lose limbs and enter negative HP but won't die unless you drop the torch or it burns out.
   - Silver bird cage slays whatever is placed behind its bars, slowly, over one long night- That which is killed reanimates twice as strong, as a raging uncontrollable undead.
   - Black Crown of the Crippled King- Wearing this crooks your body as you become aware that you and every creature within 100 yards gain +10 to your rolls but your maximum HP is halved- Rolls modified to go above 20 count as  crits- The worn crown can only be removed in the pale light of a full moon.
   - Anyone wearing this ancient blindfold becomes invisible to those who breathe though the undead attack them obsessively and nearby corpses awaken in moaning, unholy wrath.

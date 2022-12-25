@@ -2,9 +2,9 @@ from typing import List, Tuple
 from random import choice, seed
 from chargen import roll, yaml_importer, new_seed
 
-chartypes = yaml_importer('numenera_data/classes_new.yaml')
-chardescs = yaml_importer('numenera_data/descriptor.yaml')
-charfoci = yaml_importer('numenera_data/foci.yaml')
+chartypes = yaml_importer('numenera_data\\classes_new.yaml')
+chardescs = yaml_importer('numenera_data\\descriptor.yaml')
+charfoci = yaml_importer('numenera_data\\foci.yaml')
 
 foci_key_exceptions = [
         'trained',

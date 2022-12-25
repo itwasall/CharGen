@@ -13,11 +13,11 @@
         "abilities": ["Darvision"],
         "heritages": {
             "Ancient-Blooded Dwarf": {
-                "desc": "Dwarven heroes of old could shrug off their enemies’ magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction.",
+                "desc": "Dwarven heroes of old could shrug off their enemies' magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction.",
                 "add_reaction": {
                     "Call On Ancient Blood": {
                         "trigger": "You attempt a saving throw against a magical effect, but you haven't rolled yet.",
-                        "effect": "Your ancestors’ innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus to the triggering saving throw and until the end of this turn."
+                        "effect": "Your ancestors' innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus to the triggering saving throw and until the end of this turn."
                     }
                 }
             },
