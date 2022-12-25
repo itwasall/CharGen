@@ -8,7 +8,7 @@ class Metatype:
     def __repr__(self):
         return self.metatype_name
 
-class _Class:
+class Archetype:
     def __init__(class_name: str, self):
         self.class_name = class_name
 
@@ -16,7 +16,7 @@ class _Class:
         return self.class_name
 
 class ConditionMonitor:
-    def __init__(condition_physical: int = 0, condition_stun: int = 0, self):
+    def __init__(self, condition_physical: int = 0, condition_stun: int = 0):
         self.condition_physical = condition_physical
         self.condition_stun = condition_stun
 
@@ -33,8 +33,8 @@ class Attribute:
     def __init__(
             attribute_type: str,
             attribute_name: str,
+            self,
             value: int = 0, 
-            self
         ):
         self.attribute_type = attribute_type
         self.attribute_name = attribute_name
@@ -64,9 +64,17 @@ Essence = Attribute("Essence", "Special")
 Magic = Attribute("Magic", "Special")
 
 class Skill:
-    def __init__(skill_name: str, attribute: Attribute, rating: int = 0, dice_pool: int = 0, self):
+    def __init__(
+            self,
+            skill_name: str = None,
+            primary_attribute: Attribute = None,
+            secondary_attribute: Attribute = None,
+            speclizations: List = None,
+            rating: int = 0, dice_pool: int = 0):
         self.skill_name = skill_name
-        self.attribute = attribute
+        self.primary_attribute = primary_attribute
+        self.seconday_attribute = secondary_attribute
+        self.specializations= specializations=speclizations
         self.rating = rating
         self.dice_pool = dice_pool
 
@@ -74,16 +82,26 @@ class Skill:
         self.rating = amount
 
     def set_dice_pool(amount: int, self):
-        self.dice_pool = dice_pool
+        self.dice_pool = amount
 
-Astral = Skill("Astral", Intuition)
+Astral = Skill("Astral", Intuition, Willpower, ["Astral Combat", "  z"])
 Athletics = Skill("Athletics", Agility)
+Biotech = Skill("Biotech")
 CloseCombat = Skill("Close Combat", Agility)
+Con = Skill("Con")
+Conjuring = Skill("Conjuring")
+Cracking = Skill("Cracking")
+Electronics = Skill("Electronics")
 Engineering = Skill("Engineering", Logic)
+ExoticWeapons = Skill("Exotic Weapons")
 Firearms = Skill("Firearms", Agility)
+Influence = Skill("Influence")
+Outdoors = Skill("Outdoors")
 Perception = Skill("Perception", Intuition)
+Piloting = Skill("Piloting")
 Sorcery = Skill("Sorcery", Magic)
 Stealth = Skill("Stealth", Agility)
+Tasking = Skill("Tasking")
 
 
 def create_attributes():
@@ -111,7 +129,7 @@ Troll = Metatype("Troll")
 character = {
         "Name": "",
         "Metatype": Metatype,
-        "Class":
+        "Archetype": Archetype,
         "Ethnicity": "",
         "Age": 0,
         "Height": "0m",
