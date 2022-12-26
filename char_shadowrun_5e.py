@@ -264,7 +264,7 @@ COUNTERSPELLING = Skill("Counterspelling", MAGIC, "Active")
 DISENCHANTING = Skill("Disenchanting", MAGIC, "Active")
 RITUAL_SPELLCASTING = Skill("Ritual Spellcasting", MAGIC, "Active")
 SPELLCASTING = Skill("Spellcasting", MAGIC, "Active")
-sUMMONING = Skill("Summoning", MAGIC, "Active")
+SUMMONING = Skill("Summoning", MAGIC, "Active")
 # =============== RESONANCE ==============
 COMPILING = Skill("Compiling", RESONANCE, "Active")
 DECOMPILING = Skill("Decompiling", RESONANCE, "Active")
@@ -284,7 +284,24 @@ HISTORY = Skill("History", LOGIC, "Knowledge", category="Academic")
 MUSIC = Skill("Music", LOGIC, "Knowledge", category="Academic")
 PARABOTANY = Skill("Parabotany", LOGIC, "Knowledge", category="Academic")
 PARAZOOLOGY = Skill("Parazoology", LOGIC, "Knowledge", category="Academic")
-
+# =============== INTERESTS ==============
+CURRENT_SIMSENSE_MOVIES = Skill("Current_Simsense_movies", INTUITION, "Knowledge", category="Interests")
+POPULAR_TRIDEO_SHOWS = Skill("Popular_Trideo_Shows", INTUITION, "Knowledge", category="Interests")
+20TH_CENTURY_TRIVIA = Skill("20th_Century_trivia", INTUITION, "Knowledge", category="Interests")
+ELVEN_WINE = Skill("Elven_Wine", INTUITION, "Knowledge", category="Interests")
+URBAN_BRAWL = Skill("Urban_Brawl", INTUITION, "Knowledge", category="Interests")
+COMBAT_BIKING = Skill("Combat_Biking", INTUITION, "Knowledge", category="Interests")
+POP_MUSIC = Skill("Pop_music", INTUITION, "Knowledge", category="Interests")
+# =============== PROFESSIONAL ===========
+JOURNALISM = Skill("Journalism", LOGIC, "Knowledge", category="Professional")
+BUSINESS = Skill("Business", LOGIC, "Knowledge", category="Professional")
+LAW = Skill("Law", LOGIC, "Knowledge", category="Professional")
+MILITARY_SERVICE = Skill("Military_Service", LOGIC, "Knowledge", category="Professional")
+# =============== STREET =================
+GANG_IDENTIFICATION = Skill("Gang_Identification", INTUITION, "Knowledge", category="Street")
+CRIMINAL_ORGANISATIONS = Skill("Criminal_Organisations", INTUITION, "Knowledge", category="Street")
+SMUGGLING_ROUTES = Skill("Smuggling_Routes", INTUITION, "Knowledge", category="Street")
+FENCES = Skill("Fences", INTUITION, "Knowledge", category="Street")
 
 """
     METATYPES
