@@ -260,3 +260,14 @@ firearms:
     AVAIL: "4R"
     COST: 180
     CATEGORY: Hold-Outs
+########## LIGHT PISTOLS #############
+  - NAME: 
+    ACC: 
+    DAMAGE: [7, Physical, None] 
+    APP: "-"
+    MODE: Semi-Automatic
+    RC: "-"
+    AMMO: [2, b]
+    AVAIL: "4R"
+    COST: 180
+    CATEGORY: Hold-Outs
