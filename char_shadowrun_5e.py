@@ -1,4 +1,18 @@
 import chargen
+from yaml import safe_load
+
+"""
+    GOALS
+
+Lets set out some design goals and then have nowhere to formally put them.
+
+    1) Generate Character 
+    2) Lil TUI Interface that allows the user to, once a character is fully generated, scroll through menus to look at a weapon in more detail for example.
+    2a) I am scrapping this idea immediately after I had it because adding all the different and differing stats for the multitude of pieces of gear is long boring and isn't
+            required. A page number reference will suffice.
+"""
+
+gear = safe_load(open('./shadowrun_5e_data/gear.yaml', 'rt'))
 
 class Attribute:
     def __init__(self, name, value: int = 0):
@@ -101,6 +115,14 @@ class Type:
     def what_is(self):
         return f"{self.name} is a Character Type"
 
+class DamageType(Type):
+    def __init__(self, name: str):
+        super().__init__(name)
+    
+    def what_is(self):
+        return f"{self.name} is a Damage Type"
+
+
 
 class ConditionMonitor:
     def __init__(self, overflow: int, physical: int = 0, stun : int = 0):
@@ -173,7 +195,7 @@ class Skill:
         return f"{self.name} is a Skill of '{self.skill_type}' type"
 
 class Skill_Group:
-    def __init__(name: str, skills: list, self):
+    def __init__(self, name: str, skills: list):
         self.name = name
         self.skills = skills
 
@@ -182,6 +204,40 @@ class Skill_Group:
 
     def what_is(self):
         return f"{self.name} is a Skill Group comprising {', '.join([skill for skill in self.skills])}"
+
+"""
+"""
+class Gear:
+    def __init___(self, name: str, cost: int, avail):
+        self.name = name
+        self.cost = cost
+        self.avail = avail
+        self.category = None
+
+    def __repr__(self):
+        return self.name
+
+    def what_is(self):
+        return f"{self.name} is a Gear ({self.category})"
+
+class Firearm(Gear):
+    def __init__(self, name, value, avail, damage, acc, ap, mode, rc, ammo, subtype: None):
+        super().__init__(name, value, avail)
+        self.category = "Firearms"
+        self.damage = damage
+        self.accuracy = acc
+        self.armor_penetration = ap
+        self.mode = mode
+        self.recoil_compensation = rc
+        self.ammo = ammo
+        self.subtype = subtype
+
+
+class Melee_Weapons(Gear):
+    def __init__(self, name: str, value: int):
+        super().__init__(name, value)
+        self.category = "Melee Weapons"
+
 
 """
     ATTRIBUTES
@@ -296,6 +352,8 @@ REGISTERING = Skill("Registering", RESONANCE, "Active")
 
 """
     KNOWLEDGE SKILLS
+
+These are more fluff than the more mechanics-based 'Active' skills
 """
 # =============== ACADEMIC ===============
 BIOLOGY = Skill("Biology", LOGIC, "Knowledge", category="Academic")
@@ -329,14 +387,53 @@ FENCES = Skill("Fences", INTUITION, "Knowledge", category="Street")
 
 """
     LANGUAGE SKILLS
+
+Sperenthiel - Language of the Elves
+OR_ZET -> Or'Zet - Language of the Orks
+
+Category of 'Dialect' refers to how one speaks 
+Category of 'Tongue' refers to which language one speaks in
 """
-CITYSPEAK = Skill("Cityspeak", INTUITION, "Language")
-CREOLE = Skill("Creole", INTUITION, "Language")
-STREET = Skill("Street", INTUITION, "Language")
-L33TSPEAK = Skill("l33tspeak", INTUITION, "Language")
-MILSPEC = Skill("Milspec", INTUITION, "Language")
-CORP = Skill("Corp", INTUITION, "Language")
-ORBIBAL = Skill("Orbibal", INTUITION, "Language")
+CITYSPEAK = Skill("Cityspeak", INTUITION, "Language", category="Dialect")
+CREOLE = Skill("Creole", INTUITION, "Language", category="Dialect")
+STREET = Skill("Street", INTUITION, "Language", category="Dialect")
+L33TSPEAK = Skill("l33tspeak", INTUITION, "Language", category="Dialect")
+MILSPEC = Skill("Milspec", INTUITION, "Language", category="Dialect")
+CORP = Skill("Corp", INTUITION, "Language", category="Dialect")
+ORBIBAL = Skill("Orbibal", INTUITION, "Language", category="Dialect")
+SPERENTHIEL = Skill("Sperenthiel", INTUITION, "Language", category="Tongue")
+OR_ZET = Skill("Or'Zet", INTUITION, "Language", category="Tongue") 
+ENGLISH = Skill("English", INTUITION, "Language", category="Tongue")
+JAPANESE = Skill("Japanese", INTUITION, "Language", category="Tongue")
+MANDARIN = Skill("Mandarin", INTUITION, "Language", category="Tongue")
+RUSSIAN = Skill("Russian", INTUITION, "Language", category="Tongue")
+FRENCH = Skill("French", INTUITION, "Language", category="Tongue")
+ITALIAN = Skill("Italian", INTUITION, "Language", category="Tongue")
+GERMAN = Skill("German", INTUITION, "Language", category="Tongue")
+AZLANDER_SPANISH = Skill("Azlander_Spanish", INTUITION, "Language", category="Tongue")
+SPANISH = Skill("Spanish", INTUITION, "Language", category="Tongue")
+LAKOTA = Skill("Lakota", INTUITION, "Language", category="Tongue")
+DAKOTA = Skill("Dakota", INTUITION, "Language", category="Tongue")
+DINE = Skill("Dine", INTUITION, "Language", category="Tongue")
+
+"""
+    SKILL GROUPS
+"""
+ACTING = Skill_Group("Acting", [CON, IMPERSONATION, PERFORMANCE])
+ATHLETICS = Skill_Group("Athletics", [GYMNASTICS, RUNNING, SWIMMING])
+BIOTECH = Skill_Group("Biotech", [CYBERTECHNOLOGY, FIRST_AID, MEDICINE])
+CLOSE_COMBAT = Skill_Group("Close_Combat", [BLADES, CLUBS, UNARMED_COMBAT])
+CONJURING = Skill_Group("Conjuring", [BANISHING, BINDING, SUMMONING])
+CRACKING = Skill_Group("Cracking", [CYBERCOMBAT, ELECTRONIC_WARFARE, HACKING])
+ELECTRONICS = Skill_Group("Electronics", [COMPUTER, SOFTWARE, HARDWARE])
+ENCHANTING = Skill_Group("Enchanting", [ALCHEMY, ARTIFICING, DISENCHANTING])
+FIREARMS = Skill_Group("Firearms", [AUTOMATICS, LONGARMS, PISTOLS])
+INFLUENCE = Skill_Group("Influence", [ETIQUETTE, LEADERSHIP, NEGOTIATION])
+ENGINEERING = Skill_Group("Engineering", [AERONAUTICS_MECHANIC, AUTOMOTIVE_MECHANIC, INDUSTRIAL_MECHANIC, NAUTICAL_MECHANIC])
+OUTDOORS = Skill_Group("Outdoors", [NAVIGATION, SURVIVAL, TRACKING])
+SORCERY = Skill_Group("Sorcery", [COUNTERSPELLING, RITUAL_SPELLCASTING, SPELLCASTING])
+STEALTH = Skill_Group("Stealth", [DISGUISE, PALMING, SNEAKING])
+TASKING = Skill_Group("Tasking", [COMPILING, DECOMPILING, REGISTERING])
 
 """
     METATYPES
@@ -361,6 +458,63 @@ DECKER = Type('Decker')
 TECHNOMANCER = Type('Technomancer')
 RIGGER = Type('Rigger')
 STREETSAMURAI = Type('Street Samurai')
+
+"""
+    DAMAGE TYPES
+"""
+PHYSICAL = DamageType("Physical")
+STUN = DamageType("Stun")
+ELECTRICAL = DamageType("Electrical")
+FLECH = DamageType("Flechette")
+"""
+    GEAR
+
+And now, a breakdown on the weird pnemonics the corebook uses to denote certain parameters for pieces of gear.
+
+ACC: Accuracy
+AMMO: Ammuition
+        (b): Break-Action
+        (c): Clip
+        (d): Drum
+        (m): Internal Magazine
+        (ml): Muzzle Loader
+        (cy): Cylinder
+        (belt): Belt fed
+AP: Armor Penetration
+AVAIL: Availability
+        "-": Easily Accessible & Legal
+        R: Restricted
+        F: Forbidden
+        [no letter]: Legal
+DV: Damage Value
+        P: Physical
+        S: Stun
+        (e): Electrical
+        (f): Flechette
+MODE: Firing Mode
+        SS: Single-Shot
+        SA: Semi-Automatic
+        BF: Burst Fire
+        FA: Full Auto
+RC: Recoil Compensation
+"""
+"""
+    MELEE GEAR
+"""
+COMBAT_AXE = Melee_Weapons()
+"""
+    FIREARM GEAR
+arg order is:
+    name, cost, availability, damage, accuracy, armor penetration, firing mode, recoil compensation, ammunition
+"""
+# =============== TASERS =================
+DEFIANCE_EX_SHOCKER = Firearm("Defiance_EX_Shocker", 250, "-", [9, STUN, ELECTRICAL], 4, -5, "SA", "-", [4, "Internal Magazine"], "Taser")
+YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, "-", [7, STUN, ELECTRICAL], acc, ap, mode, rc, ammo, "Taser")
+# =============== HOLD-OUTS ==============
+FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, [5, "Restricted"], [8, PHYSICAL, FLECH], 5, 5, "SA", "-", [4, "Clip"], "Hold-Out")
+STREETLINE_SPECIAL = Firearm("Streetline_Special", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
+WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
+ 
 
 """
     PRIORITY TABLE
