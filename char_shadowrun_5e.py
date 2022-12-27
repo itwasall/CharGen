@@ -250,7 +250,9 @@ class Ammo(Gear):
         self.category = "Ammunition"
         self.avail = avail
         for key in kwargs.keys():
-            pass
+            match key:
+                case "subtype":
+                    self.subtype = kwargs['subtype']
 
 
 class Melee_Weapons:
@@ -632,6 +634,7 @@ TRIPOD = FirearmAcc("Tripod", cost=500, page_ref='p.432', mount="", avail=4)
 """
     AMMO TYPES
 """
+# =============== STANDARD ===============
 APFS = Ammo("APFS", cost=120, page_ref='p.433', avail=[12, FORBIDDEN])
 ASSAULT_CANNON = Ammo("Assault Cannon", cost=400, page_ref='p.433', avail=[12, FORBIDDEN])
 EXPLOSIVE_ROUNDS = Ammo("Explosive Rounds", cost=80, page_ref='p.433', avail=[9, FORBIDDEN])
@@ -643,6 +646,7 @@ REGULAR_AMMO = Ammo("Regular Ammo", cost=20, page_ref='p.433', avail=[2, RESTRIC
 STICK_N_SHOCK = Ammo("Stick-n-Shock", cost=80, page_ref='p.433', avail=[6, RESTRICTED])
 TRACER = Ammo("Tracer", cost=60, page_ref='p.433', avail=[6, RESTRICTED])
 TASER_DART = Ammo("Taser Dart", cost=50, page_ref='p.433', avail=3)
+# =============== GRENADES ===============
 Flash_Bang
 Flash_Pak
 Fragmentation
