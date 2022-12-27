@@ -207,34 +207,45 @@ class Skill_Group:
 
 """
 """
-class Gear():
-    def __init___(self, name, cost, page_ref, avail):
+
+class Gear:
+    def __init__(self, name, cost, page_ref, **kwargs):
         self.name = name
         self.cost = cost
         self.page_ref = page_ref
-        self.avail = avail
         self.category = None
         self.subtype = None
-
-    def __repr__(self):
-        return self.name
-
+    
     def what_is(self):
-        return f"{self.name} is a Gear ({self.category}, {self.subtype})"
+        return f"[{self.category}/{self.subtype}] - {self.name} is a piece of Gear"
+
+
 
 class Firearm(Gear):
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
-        super().__init__(name, cost, page_ref, avail)# , name, cost, page_ref, avail)
+        super().__init__(name, cost, page_ref)
+        self.avail = avail
         self.category = "Firearm"
         self.subtype = subtype
-        self.extra = [{k:d} for k,d in kwargs.items()]
+        for key in kwargs.keys():
+            match key:
+                case "damage":
+                    self.damage = kwargs['damage']
         
 
 
-class Melee_Weapons(Gear):
+class Melee_Weapons:
     def __init__(self, name: str, value: int):
         super().__init__(name, value)
         self.category = "Melee Weapons"
+
+class GearAvailability:
+    def __init__(self, name):
+        self.name = name
+    
+    def __repr__(self):
+        return self.name
+
 
 
 """
@@ -465,6 +476,12 @@ STUN = DamageType("Stun")
 ELECTRICAL = DamageType("Electrical")
 FLECH = DamageType("Flechette")
 """
+    GEAR AVAILABILITY
+"""
+LEGAL = GearAvailability("Legal")
+RESTRICTED = GearAvailability("Restricted")
+FORBIDDEN = GearAvailability("Forbidden")
+"""
     GEAR
 
 And now, a breakdown on the weird pnemonics the corebook uses to denote certain parameters for pieces of gear.
@@ -506,13 +523,37 @@ arg order is:
     name, cost, page_ref, avail, subtype, kwargs
 """
 # =============== TASERS =================
-DEFINANCE_EX_SHOCKER = Firearm("Definance_EX_Shocker", 250, "p.424", avail="-", subtype="Taser")
-# DEFIANCE_EX_SHOCKER = Firearm("Defiance_EX_Shocker", 250, "-", [9, STUN, ELECTRICAL], 4, -5, "SA", "-", [4, "Internal Magazine"], "Taser")
-# YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, "-", [7, STUN, ELECTRICAL], acc, ap, mode, rc, ammo, "Taser")
+DEFINANCE_EX_SHOCKER = Firearm("Definance_EX_Shocker", 250, "p.424", avail="-", subtype="Taser", damage=[9, STUN, ELECTRICAL])
+YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, 'p. 424', "-", "Taser")
 # =============== HOLD-OUTS ==============
-# FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, [5, "Restricted"], [8, PHYSICAL, FLECH], 5, 5, "SA", "-", [4, "Clip"], "Hold-Out")
-# STREETLINE_SPECIAL = Firearm("Streetline_Special", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
-# WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
+FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, 'p. 425', [5, RESTRICTED], "Hold-Outs")
+STREETLINE_SPECIAL = Firearm("Streetline_Special", 120, 'p. 425', [4, RESTRICTED], "Hold-Outs")
+WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", 180, 'p425', [4, RESTRICTED], "Hold-Out")
+# =============== LIGHT PISTOLS ==========
+ARES_LIGHT_FIRE_75 = Firearm("Ares_Light_Fire_75", 1250, 'p.425', [6, RESTRICTED], "Light Pistol")
+ARES_LIGHT_FIRE_70 = Firearm("Ares_Light_Fire_70", 200, 'p.425', [3, RESTRICTED], "Light Pistol")
+BERETTA_201T = Firearm("Beretta_201T", 210, 'p.425', [7, RESTRICTED], "Light Pistol")
+COLT_AMERICA_L36 = Firearm("Colt_America_L36", 320, 'p.425', [4, RESTRICTED], "Light Pistol")
+FICHETTI_SECURITY_600 = Firearm("Fichetti_Security_600", 350, 'p.426', [6, RESTRICTED], "Light Pistol")
+TAURUS_OMNI_6 = Firearm("Taurus_Omni_6", 300, 'p.426', [3, RESTRICTED], "Light Pistol")
+# =============== HEAVY PISTOLS ==========
+ARES_PREDATOR_V = Firearm("Ares_Predator_V", 725, 'p.426', [5, RESTRICTED], "Heavy Pistol")
+ARES_VIPER_SHOTGUN = Firearm("Ares_Viper_Shotgun", 380, 'p.426', [8, RESTRICTED], "Heavy Pistol")
+BROWNING_ULTRA_POWER = Firearm("Browning_Ultra_Power", 640, 'p.426', [4, RESTRICTED], "Heavy Pistol")
+COLT_GOVERNMENT_2066 = Firearm("Colt_Government_2066", 425, 'p.426', [7, RESTRICTED], "Heavy Pistol")
+REMINGTON_ROOMSWEEPER = Firearm("Remington_Roomsweeper", 250, 'p.426', [6, RESTRICTED], "Heavy Pistol")
+RUGER_SUPER_WARHAWK = Firearm("Ruger_Super_Warhawk", 400, 'p.427', [4, RESTRICTED], "Heavy Pistol")
+# =============== MACHINE PISTOLS ========
+ARES_CRUSADER_II = Firearm("Ares_Crusader_II", 830, 'p.427', [9, RESTRICTED], "Machine Pistol")
+CESKA_BLACK_SCORPIAN = Firearm("Ceska_Black_Scorpian", cost=270, page_ref='p.427', avail=[6, RESTRICTED], subtype="Machine Pistol")
+STEYR_TMP = Firearm("Steyr_TMP", cost=350, page_ref='p.427', avail=[8, RESTRICTED], subtype="Machine Pistol")
+# =============== SMGS ===================
+COLT_COBRA_TZ_120  = Firearm("Colt_Cobra_TZ_120", cost=660, page_ref='p.427', avail=[5, RESTRICTED], subtype="Submachine Gun")
+FN_P93_PRAETOR = Firearm("FN_P93_Praetor", cost=900, page_ref='p.427', avail=[11, RESTRICTED], subtype="Submachine Gun")
+HK_227 = Firearm("HK_227", cost=730, page_ref='p.427', avail=[8, RESTRICTED], subtype="Submachine Gun")
+INGRAM_SMARTGUN_X = Firearm("Ingram_Smartgun_X", cost=800, page_ref='p.427', avail=[6, RESTRICTED], subtype="Submachine Gun")
+SCK_MODEL_100 = Firearm("SCK_Model_100", cost=875, page_ref='p.428', avail=[6, RESTRICTED], subtype="Submachine Gun")
+UZI_IV = Firearm("Uzi_IV", cost=450, page_ref='p.428', avail=[4, RESTRICTED], subtype="Submachine Gun")
  
 
 """
@@ -587,4 +628,5 @@ print(BIOTECHNOLOGY.what_is())
 print(THROWING.what_is())
 print(ELF.what_is())
 print(STREETSAMURAI.what_is())
-print(DEFINANCE_EX_SHOCKER)
+print(DEFINANCE_EX_SHOCKER.what_is())
+print(DEFINANCE_EX_SHOCKER.damage)
