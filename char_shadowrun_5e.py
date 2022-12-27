@@ -209,7 +209,7 @@ class Skill_Group:
 """
 
 class Gear:
-    def __init__(self, name, cost, page_ref, **kwargs):
+    def __init__(self, name, cost, page_ref):
         self.name = name
         self.cost = cost
         self.page_ref = page_ref
@@ -228,8 +228,8 @@ class Melee_Weapons(Gear):
         self.avail = avail
         self.category = "Melee Weapon"
         self.subtype = subtype
-        for key in kwargs.keys():
-            pass
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 class Firearm(Gear):
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
@@ -237,10 +237,8 @@ class Firearm(Gear):
         self.avail = avail
         self.category = "Firearm"
         self.subtype = subtype
-        for key in kwargs.keys():
-            match key:
-                case "damage":
-                    self.damage = kwargs['damage']
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 class FirearmAcc(Gear):
     def __init__(self, name, cost, page_ref, mount, avail, **kwargs):
@@ -248,32 +246,74 @@ class FirearmAcc(Gear):
         self.category = "Firearm Accessory"
         self.mount = mount
         self.avail = avail
-        for key in kwargs.keys():
-            pass
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 class Ammo(Gear):
     def __init__(self, name, cost, page_ref, avail, **kwargs):
         super().__init__(name, cost, page_ref)
         self.category = "Ammunition"
         self.avail = avail
-        for key in kwargs.keys():
-            match key:
-                case "subtype":
-                    self.subtype = kwargs['subtype']
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 class Clothing(Gear):
     def __init__(self, name, cost, page_ref, **kwargs):
         super().__init__(name, cost, page_ref)
         self.category = "Clothing"
-        for key in kwargs.keys():
-            pass
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 class Armor(Gear):
     def __init__(self, name, cost, page_ref, **kwargs):
         super().__init__(name, cost, page_ref)
         self.category = "Armor"
-        for key in kwargs.keys():
-            pass
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+class ArmorModification(Gear):
+    def __init__(self, name, cost, page_ref, avail, capacity, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Armor"
+        self.subtype = "Modification"
+        self.avail = avail
+        self.capacity = capacity
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+class Electronics(Gear):
+    def __init__(self, name, cost, page_ref, rating, avail, subtype, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Electronics"
+        self.rating = rating
+        self.avail = avail
+        self.subtype = subtype
+        for k, d in kwargs.items():
+            self.__setattr(k, d)
+
+"""
+    The Item Class. Why now?
+
+So while the previous inheritants of the "Gear" class could all technically classify as "Items", I'm making a distinction
+    from the above and generic items by common-sense TTRPG logic, as oxymoronic as that sounds.
+
+If it equips to you, it ain't an item.
+If it gets thrust into your storage medium of choice to be used at a later date, it's an item.
+
+Even things like explosvies, who serve the same purpose as weaponary (do the hurty damage), count as items as I'm arbitrarily
+    making the call that you wouldn't equip explosives in the same way you would armor or a sword or a gun.
+Also I made the Ammo class before I got around to doing this class so fuck you, it stays as is.
+"""
+
+class Item(Gear):
+    def __init__(self, name, cost, page_ref, rating=0, category="Item", subtype=None, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = category
+        self.subtype = subtype
+        self.rating = rating
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
 
 class GearAvailability:
     def __init__(self, name):
@@ -559,141 +599,210 @@ arg order is:
     name, cost, page_ref, avail, subtype, kwargs
 """
 # =============== TASERS =================
-DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", 250, "p.424", avail="-", subtype="Taser", damage=[9, STUN, ELECTRICAL])
-YAMAHA_PULSAR = Firearm("Yamaha Pulsar", 180, 'p. 424', "-", "Taser")
+DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", cost=250, page_ref=424, avail="-", subtype="Taser", damage=[9, STUN, ELECTRICAL])
+YAMAHA_PULSAR = Firearm("Yamaha Pulsar", cost=180, page_ref=424, avail="-", subtype="Taser")
 # =============== HOLD-OUTS ==============
-FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", 1000, 'p. 425', [5, RESTRICTED], "Hold-Outs")
-STREETLINE_SPECIAL = Firearm("Streetline Special", 120, 'p. 425', [4, RESTRICTED], "Hold-Outs")
-WALTHER_PALM_PISTOL = Firearm("Walther Palm Pistol", 180, 'p425', [4, RESTRICTED], "Hold-Out")
+FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", cost=1000, page_ref=425, avail=[5, RESTRICTED], subtype="Hold-Outs")
+STREETLINE_SPECIAL = Firearm("Streetline Special", cost=120, page_ref=425, avail=[4, RESTRICTED], subtype="Hold-Outs")
+WALTHER_PALM_PISTOL = Firearm("Walther Palm Pistol", cost=180, page_ref=425, avail=[4, RESTRICTED], subtype="Hold-Out")
 # =============== LIGHT PISTOLS ==========
-ARES_LIGHT_FIRE_75 = Firearm("Ares_Light Fire 75", 1250, 'p.425', [6, RESTRICTED], "Light Pistol")
-ARES_LIGHT_FIRE_70 = Firearm("Ares Light Fire 70", 200, 'p.425', [3, RESTRICTED], "Light Pistol")
-BERETTA_201T = Firearm("Beretta 201T", 210, 'p.425', [7, RESTRICTED], "Light Pistol")
-COLT_AMERICA_L36 = Firearm("Colt America L36", 320, 'p.425', [4, RESTRICTED], "Light Pistol")
-FICHETTI_SECURITY_600 = Firearm("Fichetti Security 600", 350, 'p.426', [6, RESTRICTED], "Light Pistol")
-TAURUS_OMNI_6 = Firearm("Taurus Omni 6", 300, 'p.426', [3, RESTRICTED], "Light Pistol")
+ARES_LIGHT_FIRE_75 = Firearm("Ares_Light Fire 75", cost=1250, page_ref=425, avail=[6, RESTRICTED], subtype="Light Pistol")
+ARES_LIGHT_FIRE_70 = Firearm("Ares Light Fire 70", cost=200, page_ref=425, avail=[3, RESTRICTED], subtype="Light Pistol")
+BERETTA_201T = Firearm("Beretta 201T", cost=210, page_ref=425, avail=[7, RESTRICTED], subtype="Light Pistol")
+COLT_AMERICA_L36 = Firearm("Colt America L36", cost=320, page_ref=425, avail=[4, RESTRICTED], subtype="Light Pistol")
+FICHETTI_SECURITY_600 = Firearm("Fichetti Security 600", cost=350, page_ref=426, avail=[6, RESTRICTED], subtype="Light Pistol")
+TAURUS_OMNI_6 = Firearm("Taurus Omni 6", cost=300, page_ref=426, avail=[3, RESTRICTED], subtype="Light Pistol")
 # =============== HEAVY PISTOLS ==========
-ARES_PREDATOR_V = Firearm("Ares Predator V", 725, 'p.426', [5, RESTRICTED], "Heavy Pistol")
-ARES_VIPER_SHOTGUN = Firearm("Ares Viper Shotgun", 380, 'p.426', [8, RESTRICTED], "Heavy Pistol")
-BROWNING_ULTRA_POWER = Firearm("Browning Ultra Power", 640, 'p.426', [4, RESTRICTED], "Heavy Pistol")
-COLT_GOVERNMENT_2066 = Firearm("Colt Government 2066", 425, 'p.426', [7, RESTRICTED], "Heavy Pistol")
-REMINGTON_ROOMSWEEPER = Firearm("Remington Roomsweeper", 250, 'p.426', [6, RESTRICTED], "Heavy Pistol")
-RUGER_SUPER_WARHAWK = Firearm("Ruger Super Warhawk", 400, 'p.427', [4, RESTRICTED], "Heavy Pistol")
+ARES_PREDATOR_V = Firearm("Ares Predator V", cost=725, page_ref=426, avail=[5, RESTRICTED], subtype="Heavy Pistol")
+ARES_VIPER_SHOTGUN = Firearm("Ares Viper Shotgun", cost=380, page_ref=426, avail=[8, RESTRICTED], subtype="Heavy Pistol")
+BROWNING_ULTRA_POWER = Firearm("Browning Ultra Power", cost=640, page_ref=426, avail=[4, RESTRICTED], subtype="Heavy Pistol")
+COLT_GOVERNMENT_2066 = Firearm("Colt Government 2066", cost=425, page_ref=426, avail=[7, RESTRICTED], subtype="Heavy Pistol")
+REMINGTON_ROOMSWEEPER = Firearm("Remington Roomsweeper", cost=250, page_ref=426, avail=[6, RESTRICTED], subtype="Heavy Pistol")
+REMINGTON_ROOMSWEEPER_FLECHETTES = Firearm("Remington_Roomsweeper_Flechettes", cost=REMINGTON_ROOMSWEEPER.cost, page_ref=426, avail=REMINGTON_ROOMSWEEPER.avail, subtype="Heavy Pistol" , requires=REMINGTON_ROOMSWEEPER)
+RUGER_SUPER_WARHAWK = Firearm("Ruger Super Warhawk", cost=400, page_ref=427, avail=[4, RESTRICTED], subtype="Heavy Pistol")
 # =============== MACHINE PISTOLS ========
-ARES_CRUSADER_II = Firearm("Ares Crusader II", 830, 'p.427', [9, RESTRICTED], "Machine Pistol")
-CESKA_BLACK_SCORPIAN = Firearm("Ceska Black Scorpian", cost=270, page_ref='p.427', avail=[6, RESTRICTED], subtype="Machine Pistol")
-STEYR_TMP = Firearm("Steyr TMP", cost=350, page_ref='p.427', avail=[8, RESTRICTED], subtype="Machine Pistol")
+ARES_CRUSADER_II = Firearm("Ares Crusader II", cost=830, page_ref=427, avail=[9, RESTRICTED], subtype="Machine Pistol")
+CESKA_BLACK_SCORPIAN = Firearm("Ceska Black Scorpian", cost=270, page_ref=427, avail=[6, RESTRICTED], subtype="Machine Pistol")
+STEYR_TMP = Firearm("Steyr TMP", cost=350, page_ref=427, avail=[8, RESTRICTED], subtype="Machine Pistol")
 # =============== SMGS ===================
-COLT_COBRA_TZ_120  = Firearm("Colt Cobra TZ-120", cost=660, page_ref='p.427', avail=[5, RESTRICTED], subtype="Submachine Gun")
-FN_P93_PRAETOR = Firearm("FN-P93 Praetor", cost=900, page_ref='p.427', avail=[11, RESTRICTED], subtype="Submachine Gun")
-HK_227 = Firearm("HK-227", cost=730, page_ref='p.427', avail=[8, RESTRICTED], subtype="Submachine Gun")
-INGRAM_SMARTGUN_X = Firearm("Ingram Smartgun X", cost=800, page_ref='p.427', avail=[6, RESTRICTED], subtype="Submachine Gun")
-SCK_MODEL_100 = Firearm("SCK Model 100", cost=875, page_ref='p.428', avail=[6, RESTRICTED], subtype="Submachine Gun")
-UZI_IV = Firearm("Uzi IV", cost=450, page_ref='p.428', avail=[4, RESTRICTED], subtype="Submachine Gun")
+COLT_COBRA_TZ_120  = Firearm("Colt Cobra TZ-120", cost=660, page_ref=427, avail=[5, RESTRICTED], subtype="Submachine Gun")
+FN_P93_PRAETOR = Firearm("FN-P93 Praetor", cost=900, page_ref=427, avail=[11, RESTRICTED], subtype="Submachine Gun")
+HK_227 = Firearm("HK-227", cost=730, page_ref=427, avail=[8, RESTRICTED], subtype="Submachine Gun")
+INGRAM_SMARTGUN_X = Firearm("Ingram Smartgun X", cost=800, page_ref=427, avail=[6, RESTRICTED], subtype="Submachine Gun")
+SCK_MODEL_100 = Firearm("SCK Model 100", cost=875, page_ref=428, avail=[6, RESTRICTED], subtype="Submachine Gun")
+UZI_IV = Firearm("Uzi IV", cost=450, page_ref=428, avail=[4, RESTRICTED], subtype="Submachine Gun")
 # =============== ASSAULT RIFLE ==========
-AK_97 = Firearm("AK 97", cost=950, page_ref='p.428', avail=[4 ,RESTRICTED], subtype="Assault Rifle")
-ARES_ALPHA = Firearm("Ares Alpha", cost=2650, page_ref='p.428', avail=[11, FORBIDDEN], subtype="Assault Rifle")
-COLT_M23 = Firearm("Colt-M23", cost=550, page_ref='p.428', avail=[4, RESTRICTED], subtype="Assault Rifle")
-FN_HAR = Firearm("FN HAR", cost=1500, page_ref='p.428', avail=[8, RESTRICTED], subtype="Assault Rifle")
-YAMAHA_RAIDEN = Firearm("Yamaha Raiden", cost=2600, page_ref='p.428', avail=[14, FORBIDDEN], subtype="Assault Rifle")
+AK_97 = Firearm("AK 97", cost=950, page_ref=428, avail=[4 ,RESTRICTED], subtype="Assault Rifle")
+ARES_ALPHA = Firearm("Ares Alpha", cost=2650, page_ref=428, avail=[11, FORBIDDEN], subtype="Assault Rifle")
+ARES_ALPHA_GRENADE_LAUNCHER = Firearm("Ares Alpha Grenade Launcher", cost=0, page_ref=428, avail=[11, FORBIDDEN], subtype="Assault Rifle", requires=ARES_ALPHA)
+COLT_M23 = Firearm("Colt-M23", cost=550, page_ref=428, avail=[4, RESTRICTED], subtype="Assault Rifle")
+FN_HAR = Firearm("FN HAR", cost=1500, page_ref=428, avail=[8, RESTRICTED], subtype="Assault Rifle")
+YAMAHA_RAIDEN = Firearm("Yamaha Raiden", cost=2600, page_ref=428, avail=[14, FORBIDDEN], subtype="Assault Rifle")
 # =============== SNIPERS ================
-ARES_DESERT_STRIKE = Firearm("Ares Desert Strike", cost=17_500, page_ref='p428', avail=[10, FORBIDDEN], subtype="Sniper Rifle")
-CAVALIER_ARMS_CROCKETT_EBR = Firearm("Cavalier Arms Crockett EBR", cost=10_300, page_ref='p428', avail=[12, FORBIDDEN], subtype="Sniper Rifle")
-RANGER_ARMS_SM_5 = Firearm("Ranger Arms SM-5", cost=28_000, page_ref='p429', avail=[16, FORBIDDEN], subtype="Sniper Rifle")
-REMINGTON_950 = Firearm("Remington 950", cost=2100, page_ref='p429', avail=[4, RESTRICTED], subtype="Sniper Rifle")
-RUGER_100 = Firearm("Ruger 100", cost=1300, page_ref='p429', avail=[4, RESTRICTED], subtype="Sniper Rifle")
+ARES_DESERT_STRIKE = Firearm("Ares Desert Strike", cost=17_500, page_ref=28, avail=[10, FORBIDDEN], subtype="Sniper Rifle")
+CAVALIER_ARMS_CROCKETT_EBR = Firearm("Cavalier Arms Crockett EBR", cost=10_300, page_ref=28, avail=[12, FORBIDDEN], subtype="Sniper Rifle")
+RANGER_ARMS_SM_5 = Firearm("Ranger Arms SM-5", cost=28_000, page_ref=29, avail=[16, FORBIDDEN], subtype="Sniper Rifle")
+REMINGTON_950 = Firearm("Remington 950", cost=2100, page_ref=29, avail=[4, RESTRICTED], subtype="Sniper Rifle")
+RUGER_100 = Firearm("Ruger 100", cost=1300, page_ref=29, avail=[4, RESTRICTED], subtype="Sniper Rifle")
 # =============== SHOTGUNS ===============
-DEFIANCE_T_250 = Firearm("Defiance T-250", cost=450, page_ref='p.429', avail=[4, RESTRICTED], subtype="Shotgun")
-ENFIELD_AS_7 = Firearm("Enfield AS-7", cost=1100, page_ref='p.429', avail=[12, FORBIDDEN], subtype="Shotgun")
-PJSS_MODEL_55  = Firearm("PJSS Model 55", cost=1000, page_ref='p.429', avail=[0, RESTRICTED], subtype="Shotgun")
+DEFIANCE_T_250 = Firearm("Defiance T-250", cost=450, page_ref=429, avail=[4, RESTRICTED], subtype="Shotgun")
+ENFIELD_AS_7 = Firearm("Enfield AS-7", cost=1100, page_ref=429, avail=[12, FORBIDDEN], subtype="Shotgun")
+PJSS_MODEL_55  = Firearm("PJSS Model 55", cost=1000, page_ref=429, avail=[0, RESTRICTED], subtype="Shotgun")
 # =============== SPECiAL ================
-ARES_S_III_SUPER_SQUIRT = Firearm("Ares S-III Super Squirt", cost=950, page_ref='p.429', avail=[0, RESTRICTED], subtype="Special", damage="Chemical")
-FICHETTI_PAIN_INDUCER = Firearm("Fichetti Pain Inducer", cost=5000, page_ref='p430', avail=[11, FORBIDDEN], subtype="Special", damage="Special")
-PARASHIELD_DART_PISTOL = Firearm("Parashield Dart Pistol", cost=600, page_ref='p430', avail=[4, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
-PARASHIELD_DART_RIFLE = Firearm("Parashield Dart Rifle", cost=1200, page_ref='p430', avail=[6, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
+ARES_S_III_SUPER_SQUIRT = Firearm("Ares S-III Super Squirt", cost=950, page_ref=429, avail=[0, RESTRICTED], subtype="Special", damage="Chemical")
+FICHETTI_PAIN_INDUCER = Firearm("Fichetti Pain Inducer", cost=5000, page_ref=430, avail=[11, FORBIDDEN], subtype="Special", damage="Special")
+PARASHIELD_DART_PISTOL = Firearm("Parashield Dart Pistol", cost=600, page_ref=430, avail=[4, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
+PARASHIELD_DART_RIFLE = Firearm("Parashield Dart Rifle", cost=1200, page_ref=430, avail=[6, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
 # =============== MACHINE ================
-INGRAM_VALIANT = Firearm("Ingram Valiant", cost=5800, page_ref='p430', avail=[12, FORBIDDEN], subtype="Machine Gun")
-STONER_ARES_M202 = Firearm("Stoner-Ares M202", cost=7000, page_ref='p430', avail=[12, FORBIDDEN], subtype="Machine Gun")
-RPK_HMG = Firearm("RPK HMG", cost=16_300, page_ref='p430', avail=[16, FORBIDDEN], subtype="Machine Gun")
+INGRAM_VALIANT = Firearm("Ingram Valiant", cost=5800, page_ref=430, avail=[12, FORBIDDEN], subtype="Machine Gun")
+STONER_ARES_M202 = Firearm("Stoner-Ares M202", cost=7000, page_ref=430, avail=[12, FORBIDDEN], subtype="Machine Gun")
+RPK_HMG = Firearm("RPK HMG", cost=16_300, page_ref=430, avail=[16, FORBIDDEN], subtype="Machine Gun")
 # =============== LAUNCHER ===============
-ARES_ANTIOCH_2 = Firearm("Ares Antioch-2", cost=3200, page_ref='p42', avail=[8, FORBIDDEN], subtype="Cannon/Launcher")
-ARMTECH_MGL_12 = Firearm("ArmTech MGL-12", cost=5000, page_ref='p42', avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
-AZTECHNOLOGY_STRIKER = Firearm("Aztechnology Striker", cost=1200, page_ref='p42', avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
-KRIME_CANNON = Firearm("Krime Cannon", cost=21_000, page_ref='p42', avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
-ONOTARI_INTERCEPTOR = Firearm("Onotari Interceptor", cost=14_000, page_ref='p42', avail=[18, FORBIDDEN], subtype="Cannon/Launcher")
-PANTHER_XXL = Firearm("Panther XXL", cost=43_000, page_ref='p42', avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
+ARES_ANTIOCH_2 = Firearm("Ares Antioch-2", cost=3200, page_ref=431, avail=[8, FORBIDDEN], subtype="Cannon/Launcher")
+ARMTECH_MGL_12 = Firearm("ArmTech MGL-12", cost=5000, page_ref=431, avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
+AZTECHNOLOGY_STRIKER = Firearm("Aztechnology Striker", cost=1200, page_ref=431, avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
+KRIME_CANNON = Firearm("Krime Cannon", cost=21_000, page_ref=431, avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
+ONOTARI_INTERCEPTOR = Firearm("Onotari Interceptor", cost=14_000, page_ref=431, avail=[18, FORBIDDEN], subtype="Cannon/Launcher")
+PANTHER_XXL = Firearm("Panther XXL", cost=43_000, page_ref=431, avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
 
 """
     FIREARM ACCESSORIES
     arg order: name, cost, page_ref, mount, avail, **kwargs
 """
-AIRBURST_LINK = FirearmAcc("Airburst_Link", cost=600, page_ref='p.432', mount="", avail=[6, RESTRICTED])
-BIPOD = FirearmAcc("Bipod", cost=200, page_ref='p.432', mount="", avail=2)
-CONCEALABLE_HOLSTER = FirearmAcc("Concealable_Holster", cost=150, page_ref='p.432', mount="", avail=2)
-GAS_VENT_SYSTEM = FirearmAcc("Gas_Vent_System", cost=[200 x "Rating"], page_ref='p.432', mount="", avail=[(3, "Rating"), RESTRICTED])
-GYRO_MOUNT = FirearmAcc("Gyro_Mount", cost=1400, page_ref='p.432', mount="", avail=7)
-HIDDEN_ARM_SLIDE = FirearmAcc("Hidden_Arm_Slide", cost=350, page_ref='p.432', mount="", avail=[4,RESTRICTED])
-IMAGING_SCOPE = FirearmAcc("Imaging_Scope", cost=300, page_ref='p.432', mount="", avail=2)
-LASER_SIGHT = FirearmAcc("Laser_Sight", cost=125, page_ref='p.432', mount="", avail=2)
-PERISCOPE = FirearmAcc("Periscope", cost=70, page_ref='p.432', mount="", avail=3)
-QUICK_DRAW_HOLSTER = FirearmAcc("Quick_Draw_Holster", cost=175, page_ref='p.432', mount="", avail=4)
-SHOCK_PAD = FirearmAcc("Shock_Pad", cost=50, page_ref='p.432', mount="", avail=2)
-SILENCER_SUPPRESSOR = FirearmAcc("Silencer_Suppressor", cost=500, page_ref='p.432', mount="", avail=[9, FORBIDDEN])
-SMART_FIRING_PLATFORM = FirearmAcc("Smart_Firing_Platform", cost=2_500, page_ref='p.432', mount="", avail=[12, FORBIDDEN])
-SMARTGUN_SYSTEM_INTERNAL = FirearmAcc("Smartgun_System_Internal", cost=[2 * "WeaponCost"], page_ref='p.432', mount="", avail=[2, RESTRICTED])
-SMARTGUN_SYSTEM_EXTERNAL = FirearmAcc("Smartgun_System_External", cost=200, page_ref='p.432', mount="", avail=[4, RESTRICTED])
-SPARE_CLIP = FirearmAcc("Spare_Clip", cost=5, page_ref='p.432', mount="", avail=4)
-SPEED_LOADER = FirearmAcc("Speed_Loader", cost=25, page_ref='p.432', mount="", avail=2)
-TRIPOD = FirearmAcc("Tripod", cost=500, page_ref='p.432', mount="", avail=4)
+AIRBURST_LINK = FirearmAcc("Airburst_Link", cost=600, page_ref=432, mount="", avail=[6, RESTRICTED])
+BIPOD = FirearmAcc("Bipod", cost=200, page_ref=432, mount="", avail=2)
+CONCEALABLE_HOLSTER = FirearmAcc("Concealable_Holster", cost=150, page_ref=432, mount="", avail=2)
+GAS_VENT_SYSTEM = FirearmAcc("Gas_Vent_System", cost=(200, "Rating"), page_ref=432, mount="", avail=[(3, "Rating"), RESTRICTED])
+GYRO_MOUNT = FirearmAcc("Gyro_Mount", cost=1400, page_ref=432, mount="", avail=7)
+HIDDEN_ARM_SLIDE = FirearmAcc("Hidden_Arm_Slide", cost=350, page_ref=432, mount="", avail=[4,RESTRICTED])
+IMAGING_SCOPE = FirearmAcc("Imaging_Scope", cost=300, page_ref=432, mount="", avail=2)
+LASER_SIGHT = FirearmAcc("Laser_Sight", cost=125, page_ref=432, mount="", avail=2)
+PERISCOPE = FirearmAcc("Periscope", cost=70, page_ref=432, mount="", avail=3)
+QUICK_DRAW_HOLSTER = FirearmAcc("Quick_Draw_Holster", cost=175, page_ref=432, mount="", avail=4)
+SHOCK_PAD = FirearmAcc("Shock_Pad", cost=50, page_ref=432, mount="", avail=2)
+SILENCER_SUPPRESSOR = FirearmAcc("Silencer_Suppressor", cost=500, page_ref=432, mount="", avail=[9, FORBIDDEN])
+SMART_FIRING_PLATFORM = FirearmAcc("Smart_Firing_Platform", cost=2_500, page_ref=432, mount="", avail=[12, FORBIDDEN])
+SMARTGUN_SYSTEM_INTERNAL = FirearmAcc("Smartgun_System_Internal", cost=[2 * "WeaponCost"], page_ref=432, mount="", avail=[2, RESTRICTED])
+SMARTGUN_SYSTEM_EXTERNAL = FirearmAcc("Smartgun_System_External", cost=200, page_ref=432, mount="", avail=[4, RESTRICTED])
+SPARE_CLIP = FirearmAcc("Spare_Clip", cost=5, page_ref=432, mount="", avail=4)
+SPEED_LOADER = FirearmAcc("Speed_Loader", cost=25, page_ref=432, mount="", avail=2)
+TRIPOD = FirearmAcc("Tripod", cost=500, page_ref=432, mount="", avail=4)
 
 """
     AMMO TYPES
 """
 # =============== STANDARD ===============
-APFS = Ammo("APFS", cost=120, page_ref='p.433', avail=[12, FORBIDDEN])
-ASSAULT_CANNON = Ammo("Assault Cannon", cost=400, page_ref='p.433', avail=[12, FORBIDDEN])
-EXPLOSIVE_ROUNDS = Ammo("Explosive Rounds", cost=80, page_ref='p.433', avail=[9, FORBIDDEN])
-FLECHETTE_ROUNDS = Ammo("Flechette Rounds", cost=65, page_ref='p.433', avail=[6, RESTRICTED])
-GEL_ROUNDS = Ammo("Gel Rounds", cost=25, page_ref='p.433', avail=[2, RESTRICTED])
-HOLLOW_POINTS = Ammo("Hollow Points", cost=70, page_ref='p.433', avail=[4, FORBIDDEN])
-INJECTION_DARTS = Ammo("Injection Darts", cost=75, page_ref='p.433', avail=[4, RESTRICTED])
-REGULAR_AMMO = Ammo("Regular Ammo", cost=20, page_ref='p.433', avail=[2, RESTRICTED])
-STICK_N_SHOCK = Ammo("Stick-n-Shock", cost=80, page_ref='p.433', avail=[6, RESTRICTED])
-TRACER = Ammo("Tracer", cost=60, page_ref='p.433', avail=[6, RESTRICTED])
-TASER_DART = Ammo("Taser Dart", cost=50, page_ref='p.433', avail=3)
+APFS = Ammo("APFS", cost=120, page_ref=433, avail=[12, FORBIDDEN])
+ASSAULT_CANNON = Ammo("Assault Cannon", cost=400, page_ref=433, avail=[12, FORBIDDEN])
+EXPLOSIVE_ROUNDS = Ammo("Explosive Rounds", cost=80, page_ref=433, avail=[9, FORBIDDEN])
+FLECHETTE_ROUNDS = Ammo("Flechette Rounds", cost=65, page_ref=433, avail=[6, RESTRICTED])
+GEL_ROUNDS = Ammo("Gel Rounds", cost=25, page_ref=433, avail=[2, RESTRICTED])
+HOLLOW_POINTS = Ammo("Hollow Points", cost=70, page_ref=433, avail=[4, FORBIDDEN])
+INJECTION_DARTS = Ammo("Injection Darts", cost=75, page_ref=433, avail=[4, RESTRICTED])
+REGULAR_AMMO = Ammo("Regular Ammo", cost=20, page_ref=433, avail=[2, RESTRICTED])
+STICK_N_SHOCK = Ammo("Stick-n-Shock", cost=80, page_ref=433, avail=[6, RESTRICTED])
+TRACER = Ammo("Tracer", cost=60, page_ref=433, avail=[6, RESTRICTED])
+TASER_DART = Ammo("Taser Dart", cost=50, page_ref=433, avail=3)
 # =============== GRENADES ===============
-FLASH_BANG = Ammo("Flash Bang", cost=100, page_ref='p.434', avail=[6, RESTRICTED], subtype="Grenade")
-FLASH_PAK = Ammo("Flash Pak", cost=125, page_ref='p.434', avail=4, subtype="Grenade")
-FRAGMENTATION = Ammo("Fragmentation", cost=100, page_ref='p.434', avail=[11, FORBIDDEN], subtype="Grenade")
-HIGH_EXPLOSIVE = Ammo("High Explosive", cost=100, page_ref='p.434', avail=[11, FORBIDDEN], subtype="Grenade")
-GAS = Ammo("Gas", cost=[40, "Chemical Cost"], page_ref='p.434', avail=[[2, "Chemical Availability"], RESTRICTED], subtype="Grenade")
-SMOKE = Ammo("Smoke", cost=40, page_ref='p.434', avail=[4, RESTRICTED], subtype="Grenade")
-THERMAL_SMOKE = Ammo("Thermal Smoke", cost=60, page_ref='p.434', avail=[6, RESTRICTED], subtype="Grenade")
+FLASH_BANG = Ammo("Flash Bang", cost=100, page_ref=434, avail=[6, RESTRICTED], subtype="Grenade")
+FLASH_PAK = Ammo("Flash Pak", cost=125, page_ref=434, avail=4, subtype="Grenade")
+FRAGMENTATION = Ammo("Fragmentation", cost=100, page_ref=434, avail=[11, FORBIDDEN], subtype="Grenade")
+HIGH_EXPLOSIVE = Ammo("High Explosive", cost=100, page_ref=434, avail=[11, FORBIDDEN], subtype="Grenade")
+GAS = Ammo("Gas", cost=[40, "Chemical Cost"], page_ref=434, avail=[[2, "Chemical Availability"], RESTRICTED], subtype="Grenade")
+SMOKE = Ammo("Smoke", cost=40, page_ref=434, avail=[4, RESTRICTED], subtype="Grenade")
+THERMAL_SMOKE = Ammo("Thermal Smoke", cost=60, page_ref=434, avail=[6, RESTRICTED], subtype="Grenade")
 # =============== MISSILES ==============
-ANTI_VEHICLE = Ammo("Anti_Vehicle", cost=2800, page_ref='p.435', avail=[18, FORBIDDEN], subtype="Missile")
-FRAGMENTATION_MISSLE = Ammo("Fragmentation_Missle", cost=2000, page_ref='p.435', avail=[12, FORBIDDEN], subtype="Missile")
-HIGH_EXPLOSIVE_MISSLE = Ammo("High_Explosive_Missle", cost=2100, page_ref='p.435', avail=[18, FORBIDDEN], subtype="Missile")
+ANTI_VEHICLE = Ammo("Anti_Vehicle", cost=2800, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
+FRAGMENTATION_MISSLE = Ammo("Fragmentation_Missle", cost=2000, page_ref=435, avail=[12, FORBIDDEN], subtype="Missile")
+HIGH_EXPLOSIVE_MISSLE = Ammo("High_Explosive_Missle", cost=2100, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
+# =============== ROCKETS ==============
+ANTI_VEHICLE_ROCKET = Ammo("Anti_Vehicle_Rocket", cost=[ANTI_VEHICLE.cost, "+", ("Sensor Rating", 500)], page_ref=ANTI_VEHICLE.page_ref, avail=ANTI_VEHICLE.avail, subtype="Rocket", requires=ANTI_VEHICLE)
+FRAGMENTATION_ROCKET = Ammo("Fragmentation_Rocket", cost=[FRAGMENTATION_MISSLE.cost, "+", ("Sensor Rating", 500)], page_ref=FRAGMENTATION_MISSLE.page_ref, avail=FRAGMENTATION_MISSLE.avail, subtype="Rocket", requires=FRAGMENTATION_MISSLE)
+HIGH_EXPLOSIVE_ROCKET = Ammo("High_Explosive_Rocket", cost=[HIGH_EXPLOSIVE_MISSLE.cost, "+", ("Sensor Rating", 500)], page_ref=HIGH_EXPLOSIVE_MISSLE.page_ref, avail=HIGH_EXPLOSIVE_MISSLE.avail, subtype="Rocket", requires=HIGH_EXPLOSIVE_MISSLE)
+
+"""
+    EXPLOSIVES
+"""
+COMMERCIAL_EXPLOSIVES = Item("Commercial_Explosives", cost=100, page_ref=436, rating=5, avail=[8, RESTRICTED], category="Explosives")
+FOAM_EXPLOSIVES = Item("Foam_Explosives", cost=0, page_ref=436, rating=[6, "range", 25], avail=[12, FORBIDDEN], category="Explosives")
+FOAM_EXPLOSIVES.cost = (100, FOAM_EXPLOSIVES.rating)
+PLASTIC_EXPLOSIVES = Item("Plastic_Explosives", cost=0, page_ref=436, rating=[6, "range", 25], avail=[16, FORBIDDEN], category="Explosives")
+PLASTIC_EXPLOSIVES.cost = (100, PLASTIC_EXPLOSIVES.rating)
+DETONATOR_CAP = Item("Detonator Cap", cost=75, page_ref=436, rating="-", avail=[8, RESTRICTED], category="Explosives")
 
 """
     CLOTHING/ARMOR
 """
 # =============== CLOTHING ==============
-CLOTHING = Clothing("Clothing", cost=[20, "Range", 100_000], page_ref='p.436', avail="-")
-ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic_Modification", cost=500, page_ref='p.436', avail=2)
-FEEDBACK_CLOTHING = Clothing("Feedback_Clothing", cost=500, page_ref='p.436', avail=8)
-SYNTH_LEATHER = Clothing("Synth_Leather", cost=200, page_ref='p.436', avail="-")
+CLOTHING = Clothing("Clothing", cost=[20, "Range", 100_000], page_ref=436, avail="-", armor_rating=0)
+ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic_Modification", cost=500, page_ref=436, avail=2, requires=CLOTHING)
+FEEDBACK_CLOTHING = Clothing("Feedback_Clothing", cost=500, page_ref=436, avail=8, requires=CLOTHING)
+SYNTH_LEATHER = Clothing("Synth_Leather", cost=200, page_ref=436, avail="-", requires=CLOTHING)
 # =============== ARMOR =================
-ACTIONEER_BUSINESS_CLOTHING = Armor("Actioneer_Business_Clothing", cost=1500, page_ref='p.436', avail=8)
-ARMOR_CLOTHING = Armor("Armor_Clothing", cost=450, page_ref='p.436', avail=2)
-ARMOR_JACKET = Armor("Armor_Jacket", cost=1000, page_ref='p.436', avail=2)
-ARMOR_VEST = Armor("Armor_Vest", cost=500, page_ref='p.436', avail=4)
-CHAMELEON_SUIT = Armor("Chameleon_Suit", cost=1700, page_ref='p.436', avail=[10, RESTRICTED])
-FULL_BODY_ARMOR = Armor("Full_Body_Armor", cost=2000, page_ref='p.436', avail=[14, RESTRICTED])
-FULL_HELMET = Armor("Full_Helmet", cost=500, page_ref='p.436', avail=[14, RESTRICTED])
-LINED_COAT = Armor("Lined_Coat", cost=900, page_ref='p.436', avail=4)
-URBAN_EXPLORER_JUMPSUIT = Armor("Urban_Explorer_Jumpsuit", cost=650, page_ref='p.436', avail=8)
+ACTIONEER_BUSINESS_CLOTHING = Armor("Actioneer_Business_Clothing", cost=1500, page_ref=436, avail=8, armor_rating=8)
+ARMOR_CLOTHING = Armor("Armor_Clothing", cost=450, page_ref=436, avail=2, armor_rating=6)
+ARMOR_JACKET = Armor("Armor_Jacket", cost=1000, page_ref=436, avail=2, armor_rating=12)
+ARMOR_VEST = Armor("Armor_Vest", cost=500, page_ref=436, avail=4, armor_rating=9)
+CHAMELEON_SUIT = Armor("Chameleon_Suit", cost=1700, page_ref=436, avail=[10, RESTRICTED], armor_rating=9)
+FULL_BODY_ARMOR = Armor("Full_Body_Armor", cost=2000, page_ref=436, avail=[14, RESTRICTED], armor_rating=15)
+FULL_HELMET = Armor("Full_Helmet", cost=500, page_ref=436, avail=[14, RESTRICTED], requires=FULL_BODY_ARMOR, armor_rating=3)
+FULL_BODY_ARMOR_CHEMICAL_SEAL = Armor("Chemical Seal", cost=6000, page_ref=436, avail=[FULL_BODY_ARMOR.avail[0] + 6, RESTRICTED], requires=FULL_BODY_ARMOR, armor_rating="-")
+FULL_BODY_ARMOR_ENVIRONMENTAL_ADAPTATION = Armor("Environmental Adaptation", 1000, page_ref=436, avail=[FULL_BODY_ARMOR.avail[0] + 3, RESTRICTED], requires=FULL_BODY_ARMOR, armor_rating="-")
+LINED_COAT = Armor("Lined_Coat", cost=900, page_ref=436, avail=4, armor_rating=9)
+URBAN_EXPLORER_JUMPSUIT = Armor("Urban_Explorer_Jumpsuit", cost=650, page_ref=436, avail=8, armor_rating=9)
+URBAN_EXPLORER_JUMPSUIT_HELMET = Armor("Urban Explorer Jumpsuit Helmet", cost=100, page_ref=436, avail=URBAN_EXPLORER_JUMPSUIT.avail, requires=URBAN_EXPLORER_JUMPSUIT, armor_rating=2)
+# =============== SUBTYPES ==============
+HELMET = Armor("Helmet", cost=100, page_ref=438, avail=2, armor_rating=2, subtype="Helmet")
+BALLISTIC_SHIELD = Armor("Ballistic Shield", cost=1200, page_ref=438, avail=[12, RESTRICTED], armor_rating=6, subtype="Shield")
+RIOT_SHIELD = Armor("Riot Shield", cost=1500, page_ref=438, avail=[10, RESTRICTED], armor_rating=6, subtype="Shield")
+# =============== ARMOR MODS ============
+CHEMICAL_PROTECTION = ArmorModification("Chemical_Protection", cost=[250, "*", "Rating"], page_ref=438, avail=6, capacity="Rating")
+CHEMICAL_SEAL = ArmorModification("Chemical_Seal", cost=3000, page_ref=438, avail=[12, RESTRICTED], capacity=6)
+FIRE_RESISTANCE = ArmorModification("Fire_Resistance", cost=[250, "*", "Rating"], page_ref=438, avail=6, capacity="Rating")
+INSULATION = ArmorModification("Insulation", cost=[250, "*", "Rating"], page_ref=438, avail=6, capacity="Rating")
+NONCONDUCTIVITY = ArmorModification("Nonconductivity", cost=[250, "*", "Rating"], page_ref=438, avail=6, capacity="Rating")
+SHOCK_FRILLS = ArmorModification("Shock_Frills", cost=250, page_ref=438, avail=[6, RESTRICTED], capacity=2)
+THERMAL_DAMPING = ArmorModification("Thermal_Damping", cost=[500, "*", "Rating"], page_ref=438, avail=[10, RESTRICTED], capacity="Rating")
 
-
+"""
+    ELECTRONICS
+"""
+# =============== COMMLINKS ============
+META_LINK = Electronics("Meta_Link", cost=100, page_ref=439, rating=1, avail=2, subtype="Commlink")
+SONY_EMPORER = Electronics("Sony_Emporer", cost=700, page_ref=439, rating=2, avail=4, subtype="Commlink")
+RENRAKU_SENSEI = Electronics("Renraku_Sensei", cost=1000, page_ref=439, rating=3, avail=6, subtype="Commlink")
+ERIKA_ELITE = Electronics("Erika_Elite", cost=2500, page_ref=439, rating=4, avail=8, subtype="Commlink")
+HERMES_IKON = Electronics("Hermes_Ikon", cost=3000, page_ref=439, rating=5, avail=10, subtype="Commlink")
+TRANSYS_AVALON = Electronics("Transys_Avalon", cost=5000, page_ref=439, rating=6, avail=12, subtype="Commlink")
+FAIRLIGHT_CALIBAN = Electronics("Fairlight_Caliban", cost=8000, page_ref=439, rating=7, avail=14, subtype="Commlink")
+SIM_MODULE = Electronics("Sim_Module", cost=100, page_ref=439, rating="-", avail="-", subtype="Commlink", requires=["Commlink"])
+SIM_MODULE_HOT_SIM = Electronics("Sim_Module_Hot_Sim", cost=250, page_ref=439, rating="-", avail="-", subtype="Commlink", requires=SIM_MODULE)
+# =============== CYBERDECKS ===========
+ERIKA_MCD_1 = Electronics("Erika_MCD_1", cost=49_500, page_ref=439, rating=1, avail=[3, RESTRICTED], attribute_array=[4,3,2,1], programs=1, subtype="Cyberdeck")
+MICRODECK_SUMMIT = Electronics("Microdeck_Summit", cost=58_000, page_ref=439, rating=1, avail=[3, RESTRICTED], attribute_array=[4,3,3,1], programs=1, subtype="Cyberdeck")
+MIROTRONICA_AZTECA_200 = Electronics("Mirotronica_Azteca_200", cost=110_250, page_ref=439, rating=2, avail=[6, RESTRICTED], attribute_array=[5,4,3,2], programs=2, subtype="Cyberdeck")
+HERMES_CHARIOT = Electronics("Hermes_Chariot", cost=123_000, page_ref=439, rating=2, avail=[6, RESTRICTED], attribute_array=[5,4,4,2], programs=2, subtype="Cyberdeck")
+NOVATECH_NAVIGATOR = Electronics("Novatech_Navigator", cost=205_750, page_ref=439, rating=3, avail=[9, RESTRICTED], attribute_array=[6,5,4,3], programs=3, subtype="Cyberdeck")
+RENRAKU_TSURUGI = Electronics("Renraku_Tsurugi", cost=214_125, page_ref=439, rating=3, avail=[9, RESTRICTED], attribute_array=[6,5,5,3], programs=3, subtype="Cyberdeck")
+SONY_CIY_720 = Electronics("Sony_CIY_720", cost=345_000, page_ref=439, rating=4, avail=[12, RESTRICTED], attribute_array=[7,6,5,4], programs=4, subtype="Cyberdeck")
+SHIAWASE_CYBER_5 = Electronics("Shiawase_Cyber_5", cost=549_375, page_ref=439, rating=5, avail=[15, RESTRICTED], attribute_array=[8,7,6,5], programs=5, subtype="Cyberdeck")
+FAIRLIGHT_EXCALIBUR = Electronics("Fairlight_Excalibur", cost=823_250, page_ref=439, rating=6, avail=[18, RESTRICTED], attribute_array=[9,8,7,6], programs=6, subtype="Cyberdeck")
+# =============== ACCESSORIES =========
+AR_GLOVES = Electronics("AR_Gloves", cost=150, page_ref=440, rating=3, avail="-", subtype="Accessories")
+BIOMETRIC_READER = Electronics("Biometric_Reader", cost=200, page_ref=440, rating=3, avail=4, subtype="Accessories")
+ELECTRONIC_PAPER = Electronics("Electronic_Paper", cost=5, page_ref=440, rating=1, avail="-", subtype="Accessories")
+PRINTER = Electronics("Printer", cost=25, page_ref=440, rating=3, avail="-", subtype="Accessories")
+SATELLITE_LINK = Electronics("Satellite_Link", cost=500, page_ref=440, rating=4, avail=6, subtype="Accessories")
+SIMRIG = Electronics("Simrig", cost=1000, page_ref=440, rating=3, avail=12, subtype="Accessories")
+SUBVOCAL_MIC = Electronics("Subvocal_Mic", cost=50, page_ref=440, rating=3, avail=4, subtype="Accessories")
+TRID_PROJECTOR = Electronics("Trid_Projector", cost=200, page_ref=440, rating=3, avail="-", subtype="Accessories")
+TRODES = Electronics("Trodes", cost=70, page_ref=440, rating=3, avail="-", subtype="Accessories")
+# =============== RFID TAG ===========
+STANDARD_RFID = Electronics("Standard_RFID", cost=1, page_ref=440, rating=1, avail="-", subtype="RFID Tags")
+DATACHIP = Electronics("Datachip", cost=5, page_ref=440, rating=1, avail="-", subtype="RFID Tags")
+SECURITY_RFID = Electronics("Security_RFID", cost=5, page_ref=440, rating=3, avail=3, subtype="RFID Tags")
+SENSOR_RFID = Electronics("Sensor_RFID", cost=40, page_ref=440, rating=2, avail=5, subtype="RFID Tags")
+STEALTH_RFID = Electronics("Stealth_RFID", cost=10, page_ref=440, rating=3, avail=[7, RESTRICTED], subtype="RFID Tags")
 
 """
     PRIORITY TABLE
