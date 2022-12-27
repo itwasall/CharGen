@@ -219,6 +219,9 @@ class Gear:
     def what_is(self):
         return f"[{self.category}/{self.subtype}] - {self.name} is a piece of Gear"
 
+    def __repr__(self):
+        return self.name
+
 
 
 class Firearm(Gear):
@@ -231,7 +234,23 @@ class Firearm(Gear):
             match key:
                 case "damage":
                     self.damage = kwargs['damage']
-        
+
+class FirearmAcc(Gear):
+    def __init__(self, name, cost, page_ref, mount, avail, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Firearm Accessory"
+        self.mount = mount
+        self.avail = avail
+        for key in kwargs.keys():
+            pass
+
+class Ammo(Gear):
+    def __init__(self, name, cost, page_ref, avail, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Ammunition"
+        self.avail = avail
+        for key in kwargs.keys():
+            pass
 
 
 class Melee_Weapons:
@@ -523,38 +542,113 @@ arg order is:
     name, cost, page_ref, avail, subtype, kwargs
 """
 # =============== TASERS =================
-DEFINANCE_EX_SHOCKER = Firearm("Definance_EX_Shocker", 250, "p.424", avail="-", subtype="Taser", damage=[9, STUN, ELECTRICAL])
-YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, 'p. 424', "-", "Taser")
+DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", 250, "p.424", avail="-", subtype="Taser", damage=[9, STUN, ELECTRICAL])
+YAMAHA_PULSAR = Firearm("Yamaha Pulsar", 180, 'p. 424', "-", "Taser")
 # =============== HOLD-OUTS ==============
-FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, 'p. 425', [5, RESTRICTED], "Hold-Outs")
-STREETLINE_SPECIAL = Firearm("Streetline_Special", 120, 'p. 425', [4, RESTRICTED], "Hold-Outs")
-WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", 180, 'p425', [4, RESTRICTED], "Hold-Out")
+FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", 1000, 'p. 425', [5, RESTRICTED], "Hold-Outs")
+STREETLINE_SPECIAL = Firearm("Streetline Special", 120, 'p. 425', [4, RESTRICTED], "Hold-Outs")
+WALTHER_PALM_PISTOL = Firearm("Walther Palm Pistol", 180, 'p425', [4, RESTRICTED], "Hold-Out")
 # =============== LIGHT PISTOLS ==========
-ARES_LIGHT_FIRE_75 = Firearm("Ares_Light_Fire_75", 1250, 'p.425', [6, RESTRICTED], "Light Pistol")
-ARES_LIGHT_FIRE_70 = Firearm("Ares_Light_Fire_70", 200, 'p.425', [3, RESTRICTED], "Light Pistol")
-BERETTA_201T = Firearm("Beretta_201T", 210, 'p.425', [7, RESTRICTED], "Light Pistol")
-COLT_AMERICA_L36 = Firearm("Colt_America_L36", 320, 'p.425', [4, RESTRICTED], "Light Pistol")
-FICHETTI_SECURITY_600 = Firearm("Fichetti_Security_600", 350, 'p.426', [6, RESTRICTED], "Light Pistol")
-TAURUS_OMNI_6 = Firearm("Taurus_Omni_6", 300, 'p.426', [3, RESTRICTED], "Light Pistol")
+ARES_LIGHT_FIRE_75 = Firearm("Ares_Light Fire 75", 1250, 'p.425', [6, RESTRICTED], "Light Pistol")
+ARES_LIGHT_FIRE_70 = Firearm("Ares Light Fire 70", 200, 'p.425', [3, RESTRICTED], "Light Pistol")
+BERETTA_201T = Firearm("Beretta 201T", 210, 'p.425', [7, RESTRICTED], "Light Pistol")
+COLT_AMERICA_L36 = Firearm("Colt America L36", 320, 'p.425', [4, RESTRICTED], "Light Pistol")
+FICHETTI_SECURITY_600 = Firearm("Fichetti Security 600", 350, 'p.426', [6, RESTRICTED], "Light Pistol")
+TAURUS_OMNI_6 = Firearm("Taurus Omni 6", 300, 'p.426', [3, RESTRICTED], "Light Pistol")
 # =============== HEAVY PISTOLS ==========
-ARES_PREDATOR_V = Firearm("Ares_Predator_V", 725, 'p.426', [5, RESTRICTED], "Heavy Pistol")
-ARES_VIPER_SHOTGUN = Firearm("Ares_Viper_Shotgun", 380, 'p.426', [8, RESTRICTED], "Heavy Pistol")
-BROWNING_ULTRA_POWER = Firearm("Browning_Ultra_Power", 640, 'p.426', [4, RESTRICTED], "Heavy Pistol")
-COLT_GOVERNMENT_2066 = Firearm("Colt_Government_2066", 425, 'p.426', [7, RESTRICTED], "Heavy Pistol")
-REMINGTON_ROOMSWEEPER = Firearm("Remington_Roomsweeper", 250, 'p.426', [6, RESTRICTED], "Heavy Pistol")
-RUGER_SUPER_WARHAWK = Firearm("Ruger_Super_Warhawk", 400, 'p.427', [4, RESTRICTED], "Heavy Pistol")
+ARES_PREDATOR_V = Firearm("Ares Predator V", 725, 'p.426', [5, RESTRICTED], "Heavy Pistol")
+ARES_VIPER_SHOTGUN = Firearm("Ares Viper Shotgun", 380, 'p.426', [8, RESTRICTED], "Heavy Pistol")
+BROWNING_ULTRA_POWER = Firearm("Browning Ultra Power", 640, 'p.426', [4, RESTRICTED], "Heavy Pistol")
+COLT_GOVERNMENT_2066 = Firearm("Colt Government 2066", 425, 'p.426', [7, RESTRICTED], "Heavy Pistol")
+REMINGTON_ROOMSWEEPER = Firearm("Remington Roomsweeper", 250, 'p.426', [6, RESTRICTED], "Heavy Pistol")
+RUGER_SUPER_WARHAWK = Firearm("Ruger Super Warhawk", 400, 'p.427', [4, RESTRICTED], "Heavy Pistol")
 # =============== MACHINE PISTOLS ========
-ARES_CRUSADER_II = Firearm("Ares_Crusader_II", 830, 'p.427', [9, RESTRICTED], "Machine Pistol")
-CESKA_BLACK_SCORPIAN = Firearm("Ceska_Black_Scorpian", cost=270, page_ref='p.427', avail=[6, RESTRICTED], subtype="Machine Pistol")
-STEYR_TMP = Firearm("Steyr_TMP", cost=350, page_ref='p.427', avail=[8, RESTRICTED], subtype="Machine Pistol")
+ARES_CRUSADER_II = Firearm("Ares Crusader II", 830, 'p.427', [9, RESTRICTED], "Machine Pistol")
+CESKA_BLACK_SCORPIAN = Firearm("Ceska Black Scorpian", cost=270, page_ref='p.427', avail=[6, RESTRICTED], subtype="Machine Pistol")
+STEYR_TMP = Firearm("Steyr TMP", cost=350, page_ref='p.427', avail=[8, RESTRICTED], subtype="Machine Pistol")
 # =============== SMGS ===================
-COLT_COBRA_TZ_120  = Firearm("Colt_Cobra_TZ_120", cost=660, page_ref='p.427', avail=[5, RESTRICTED], subtype="Submachine Gun")
-FN_P93_PRAETOR = Firearm("FN_P93_Praetor", cost=900, page_ref='p.427', avail=[11, RESTRICTED], subtype="Submachine Gun")
-HK_227 = Firearm("HK_227", cost=730, page_ref='p.427', avail=[8, RESTRICTED], subtype="Submachine Gun")
-INGRAM_SMARTGUN_X = Firearm("Ingram_Smartgun_X", cost=800, page_ref='p.427', avail=[6, RESTRICTED], subtype="Submachine Gun")
-SCK_MODEL_100 = Firearm("SCK_Model_100", cost=875, page_ref='p.428', avail=[6, RESTRICTED], subtype="Submachine Gun")
-UZI_IV = Firearm("Uzi_IV", cost=450, page_ref='p.428', avail=[4, RESTRICTED], subtype="Submachine Gun")
- 
+COLT_COBRA_TZ_120  = Firearm("Colt Cobra TZ-120", cost=660, page_ref='p.427', avail=[5, RESTRICTED], subtype="Submachine Gun")
+FN_P93_PRAETOR = Firearm("FN-P93 Praetor", cost=900, page_ref='p.427', avail=[11, RESTRICTED], subtype="Submachine Gun")
+HK_227 = Firearm("HK-227", cost=730, page_ref='p.427', avail=[8, RESTRICTED], subtype="Submachine Gun")
+INGRAM_SMARTGUN_X = Firearm("Ingram Smartgun X", cost=800, page_ref='p.427', avail=[6, RESTRICTED], subtype="Submachine Gun")
+SCK_MODEL_100 = Firearm("SCK Model 100", cost=875, page_ref='p.428', avail=[6, RESTRICTED], subtype="Submachine Gun")
+UZI_IV = Firearm("Uzi IV", cost=450, page_ref='p.428', avail=[4, RESTRICTED], subtype="Submachine Gun")
+# =============== ASSAULT RIFLE ==========
+AK_97 = Firearm("AK 97", cost=950, page_ref='p.428', avail=[4 ,RESTRICTED], subtype="Assault Rifle")
+ARES_ALPHA = Firearm("Ares Alpha", cost=2650, page_ref='p.428', avail=[11, FORBIDDEN], subtype="Assault Rifle")
+COLT_M23 = Firearm("Colt-M23", cost=550, page_ref='p.428', avail=[4, RESTRICTED], subtype="Assault Rifle")
+FN_HAR = Firearm("FN HAR", cost=1500, page_ref='p.428', avail=[8, RESTRICTED], subtype="Assault Rifle")
+YAMAHA_RAIDEN = Firearm("Yamaha Raiden", cost=2600, page_ref='p.428', avail=[14, FORBIDDEN], subtype="Assault Rifle")
+# =============== SNIPERS ================
+ARES_DESERT_STRIKE = Firearm("Ares Desert Strike", cost=17_500, page_ref='p428', avail=[10, FORBIDDEN], subtype="Sniper Rifle")
+CAVALIER_ARMS_CROCKETT_EBR = Firearm("Cavalier Arms Crockett EBR", cost=10_300, page_ref='p428', avail=[12, FORBIDDEN], subtype="Sniper Rifle")
+RANGER_ARMS_SM_5 = Firearm("Ranger Arms SM-5", cost=28_000, page_ref='p429', avail=[16, FORBIDDEN], subtype="Sniper Rifle")
+REMINGTON_950 = Firearm("Remington 950", cost=2100, page_ref='p429', avail=[4, RESTRICTED], subtype="Sniper Rifle")
+RUGER_100 = Firearm("Ruger 100", cost=1300, page_ref='p429', avail=[4, RESTRICTED], subtype="Sniper Rifle")
+# =============== SHOTGUNS ===============
+DEFIANCE_T_250 = Firearm("Defiance T-250", cost=450, page_ref='p.429', avail=[4, RESTRICTED], subtype="Shotgun")
+ENFIELD_AS_7 = Firearm("Enfield AS-7", cost=1100, page_ref='p.429', avail=[12, FORBIDDEN], subtype="Shotgun")
+PJSS_MODEL_55  = Firearm("PJSS Model 55", cost=1000, page_ref='p.429', avail=[0, RESTRICTED], subtype="Shotgun")
+# =============== SPECiAL ================
+ARES_S_III_SUPER_SQUIRT = Firearm("Ares S-III Super Squirt", cost=950, page_ref='p.429', avail=[0, RESTRICTED], subtype="Special", damage="Chemical")
+FICHETTI_PAIN_INDUCER = Firearm("Fichetti Pain Inducer", cost=5000, page_ref='p430', avail=[11, FORBIDDEN], subtype="Special", damage="Special")
+PARASHIELD_DART_PISTOL = Firearm("Parashield Dart Pistol", cost=600, page_ref='p430', avail=[4, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
+PARASHIELD_DART_RIFLE = Firearm("Parashield Dart Rifle", cost=1200, page_ref='p430', avail=[6, FORBIDDEN], subtype="Special", damage="As Drug/Toxin")
+# =============== MACHINE ================
+INGRAM_VALIANT = Firearm("Ingram Valiant", cost=5800, page_ref='p430', avail=[12, FORBIDDEN], subtype="Machine Gun")
+STONER_ARES_M202 = Firearm("Stoner-Ares M202", cost=7000, page_ref='p430', avail=[12, FORBIDDEN], subtype="Machine Gun")
+RPK_HMG = Firearm("RPK HMG", cost=16_300, page_ref='p430', avail=[16, FORBIDDEN], subtype="Machine Gun")
+# =============== LAUNCHER ===============
+ARES_ANTIOCH_2 = Firearm("Ares Antioch-2", cost=3200, page_ref='p42', avail=[8, FORBIDDEN], subtype="Cannon/Launcher")
+ARMTECH_MGL_12 = Firearm("ArmTech MGL-12", cost=5000, page_ref='p42', avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
+AZTECHNOLOGY_STRIKER = Firearm("Aztechnology Striker", cost=1200, page_ref='p42', avail=[10, FORBIDDEN], subtype="Cannon/Launcher")
+KRIME_CANNON = Firearm("Krime Cannon", cost=21_000, page_ref='p42', avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
+ONOTARI_INTERCEPTOR = Firearm("Onotari Interceptor", cost=14_000, page_ref='p42', avail=[18, FORBIDDEN], subtype="Cannon/Launcher")
+PANTHER_XXL = Firearm("Panther XXL", cost=43_000, page_ref='p42', avail=[20, FORBIDDEN], subtype="Cannon/Launcher")
+
+"""
+    FIREARM ACCESSORIES
+    arg order: name, cost, page_ref, mount, avail, **kwargs
+"""
+AIRBURST_LINK = FirearmAcc("Airburst_Link", cost=600, page_ref='p.432', mount="", avail=[6, RESTRICTED])
+BIPOD = FirearmAcc("Bipod", cost=200, page_ref='p.432', mount="", avail=2)
+CONCEALABLE_HOLSTER = FirearmAcc("Concealable_Holster", cost=150, page_ref='p.432', mount="", avail=2)
+GAS_VENT_SYSTEM = FirearmAcc("Gas_Vent_System", cost=[200 x "Rating"], page_ref='p.432', mount="", avail=[(3, "Rating"), RESTRICTED])
+GYRO_MOUNT = FirearmAcc("Gyro_Mount", cost=1400, page_ref='p.432', mount="", avail=7)
+HIDDEN_ARM_SLIDE = FirearmAcc("Hidden_Arm_Slide", cost=350, page_ref='p.432', mount="", avail=[4,RESTRICTED])
+IMAGING_SCOPE = FirearmAcc("Imaging_Scope", cost=300, page_ref='p.432', mount="", avail=2)
+LASER_SIGHT = FirearmAcc("Laser_Sight", cost=125, page_ref='p.432', mount="", avail=2)
+PERISCOPE = FirearmAcc("Periscope", cost=70, page_ref='p.432', mount="", avail=3)
+QUICK_DRAW_HOLSTER = FirearmAcc("Quick_Draw_Holster", cost=175, page_ref='p.432', mount="", avail=4)
+SHOCK_PAD = FirearmAcc("Shock_Pad", cost=50, page_ref='p.432', mount="", avail=2)
+SILENCER_SUPPRESSOR = FirearmAcc("Silencer_Suppressor", cost=500, page_ref='p.432', mount="", avail=[9, FORBIDDEN])
+SMART_FIRING_PLATFORM = FirearmAcc("Smart_Firing_Platform", cost=2_500, page_ref='p.432', mount="", avail=[12, FORBIDDEN])
+SMARTGUN_SYSTEM_INTERNAL = FirearmAcc("Smartgun_System_Internal", cost=[2 * "WeaponCost"], page_ref='p.432', mount="", avail=[2, RESTRICTED])
+SMARTGUN_SYSTEM_EXTERNAL = FirearmAcc("Smartgun_System_External", cost=200, page_ref='p.432', mount="", avail=[4, RESTRICTED])
+SPARE_CLIP = FirearmAcc("Spare_Clip", cost=5, page_ref='p.432', mount="", avail=4)
+SPEED_LOADER = FirearmAcc("Speed_Loader", cost=25, page_ref='p.432', mount="", avail=2)
+TRIPOD = FirearmAcc("Tripod", cost=500, page_ref='p.432', mount="", avail=4)
+
+"""
+    AMMO TYPES
+"""
+APFS = Ammo("APFS", cost=120, page_ref='p.433', avail=[12, FORBIDDEN])
+ASSAULT_CANNON = Ammo("Assault Cannon", cost=400, page_ref='p.433', avail=[12, FORBIDDEN])
+EXPLOSIVE_ROUNDS = Ammo("Explosive Rounds", cost=80, page_ref='p.433', avail=[9, FORBIDDEN])
+FLECHETTE_ROUNDS = Ammo("Flechette Rounds", cost=65, page_ref='p.433', avail=[6, RESTRICTED])
+GEL_ROUNDS = Ammo("Gel Rounds", cost=25, page_ref='p.433', avail=[2, RESTRICTED])
+HOLLOW_POINTS = Ammo("Hollow Points", cost=70, page_ref='p.433', avail=[4, FORBIDDEN])
+INJECTION_DARTS = Ammo("Injection Darts", cost=75, page_ref='p.433', avail=[4, RESTRICTED])
+REGULAR_AMMO = Ammo("Regular Ammo", cost=20, page_ref='p.433', avail=[2, RESTRICTED])
+STICK_N_SHOCK = Ammo("Stick-n-Shock", cost=80, page_ref='p.433', avail=[6, RESTRICTED])
+TRACER = Ammo("Tracer", cost=60, page_ref='p.433', avail=[6, RESTRICTED])
+TASER_DART = Ammo("Taser Dart", cost=50, page_ref='p.433', avail=3)
+Flash_Bang
+Flash_Pak
+Fragmentation
+High_Explosive
+Gas
+
 
 """
     PRIORITY TABLE
