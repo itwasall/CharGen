@@ -1,22 +1,28 @@
 import chargen
 
 class Attribute:
-    def __init__(name: str, self, value: int = 0):
+    def __init__(self, name, value: int = 0):
         self.name = name
         self.value = value
         self.attribute_limit = 0
 
-    def __add___(amount: int, self):
+    def __add___(self, amount: int):
         self.value += amount
         return Attribute(self.name, self.value)
 
-    def set_attribute_limit(value: int, self):
+    def set_attribute_limit(self, value: int):
         self.attribute_limit = value
         return
 
-    def set_attribute_value(value: int, self):
+    def set_attribute_value(self, value: int):
         self.value = value
         return
+
+    def __repr__(self):
+        return f"{self.name}: [{self.value}/{self.attribute_limit}]"
+
+    def what_is(self):
+        return f"{self.name} is an Attribute"
 
 class Attributes:
     def __init__(self):
@@ -36,7 +42,7 @@ class Attributes:
     def rebuild_attribute_list(self):
         return [self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower, self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence]
 
-    def set_starting_limit_values(data: dict, self):
+    def set_starting_limit_values(self, data: dict):
         for value in data.keys():
             match value:
                 case ["Body", "BODY"]:
@@ -74,17 +80,26 @@ class Attributes:
 
 
 class Metatype:
-    def __init__(name: str, self):
+    def __init__(self, name: str):
         self.name = name
         self.racial_attributes = Attributes()
 
     def __repr__(self):
         return self.name
 
+    def what_is(self):
+        return f"{self.name} is a Metatype"
+
 
 class Type:
-    def __init__(name: str, self):
+    def __init__(self, name: str):
         self.name = name
+
+    def __repr__(self):
+        return self.name
+
+    def what_is(self):
+        return f"{self.name} is a Character Type"
 
 
 class ConditionMonitor:
@@ -136,20 +151,26 @@ class Qualitiy:
                     return False
         pass
 
+    def what_is(self):
+        return f"{self.name} is a Quality"
+
 class Skill:
-    def __init__(name: str, attribute: Attribute, skill_type: str, self, rating: int = 0, category = None):
+    def __init__(self, name: str, attribute: Attribute, skill_type: str, rating: int = 0, category = None):
         self.name = name
         self.attribute = attribute.name
         self.skill_type = skill_type
         self.rating = rating 
         self.category = None
     
-    def __add__(amount, self):
+    def __add__(self, amount):
         self.rating += amount
         return Skill(self.attribute, self.skill_type, self.rating)
 
     def __repr__(self):
         return (self.name, self.value)
+
+    def what_is(self):
+        return f"{self.name} is a Skill of '{self.skill_type}' type"
 
 class Skill_Group:
     def __init__(name: str, skills: list, self):
@@ -158,6 +179,9 @@ class Skill_Group:
 
     def __repr__(self):
         return self.skills
+
+    def what_is(self):
+        return f"{self.name} is a Skill Group comprising {', '.join([skill for skill in self.skills])}"
 
 """
     ATTRIBUTES
@@ -287,8 +311,8 @@ PARAZOOLOGY = Skill("Parazoology", LOGIC, "Knowledge", category="Academic")
 # =============== INTERESTS ==============
 CURRENT_SIMSENSE_MOVIES = Skill("Current_Simsense_movies", INTUITION, "Knowledge", category="Interests")
 POPULAR_TRIDEO_SHOWS = Skill("Popular_Trideo_Shows", INTUITION, "Knowledge", category="Interests")
-20TH_CENTURY_TRIVIA = Skill("20th_Century_trivia", INTUITION, "Knowledge", category="Interests")
-ELVEN_WINE = Skill("Elven_Wine", INTUITION, "Knowledge", category="Interests")
+TWENTIETH_CENTURY_TRIVIA = Skill("Twentieth_Century_trivia", INTUITION, "Knowledge", category="Interests")
+ELVEN_WINE = Skill("Elven_Wine", INTUITION, "Knowledge", category="Interests")
 URBAN_BRAWL = Skill("Urban_Brawl", INTUITION, "Knowledge", category="Interests")
 COMBAT_BIKING = Skill("Combat_Biking", INTUITION, "Knowledge", category="Interests")
 POP_MUSIC = Skill("Pop_music", INTUITION, "Knowledge", category="Interests")
@@ -302,6 +326,17 @@ GANG_IDENTIFICATION = Skill("Gang_Identification", INTUITION, "Knowledge", categ
 CRIMINAL_ORGANISATIONS = Skill("Criminal_Organisations", INTUITION, "Knowledge", category="Street")
 SMUGGLING_ROUTES = Skill("Smuggling_Routes", INTUITION, "Knowledge", category="Street")
 FENCES = Skill("Fences", INTUITION, "Knowledge", category="Street")
+
+"""
+    LANGUAGE SKILLS
+"""
+CITYSPEAK = Skill("Cityspeak", INTUITION, "Language")
+CREOLE = Skill("Creole", INTUITION, "Language")
+STREET = Skill("Street", INTUITION, "Language")
+L33TSPEAK = Skill("l33tspeak", INTUITION, "Language")
+MILSPEC = Skill("Milspec", INTUITION, "Language")
+CORP = Skill("Corp", INTUITION, "Language")
+ORBIBAL = Skill("Orbibal", INTUITION, "Language")
 
 """
     METATYPES
@@ -332,7 +367,7 @@ STREETSAMURAI = Type('Street Samurai')
 """
 PRIORITY_TABLE = {
     'A': {
-        'Metatype': [(Human, 9), (Elf, 8), (Dwarf, 7), (Ork, 7), (Troll, 5)],
+        'Metatype': [(HUMAN, 9), (ELF, 8), (DWARF, 7), (ORK, 7), (TROLL, 5)],
         'Attributes': 24,
         'MagicResonance': {
             'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
@@ -342,7 +377,7 @@ PRIORITY_TABLE = {
         'Money': 450_000
     },
     'B': {
-        'Metatype': [(Human, 7), (Elf, 6), (Dwarf, 4), (Ork, 4), (Troll, 0)],
+        'Metatype': [(HUMAN, 7), (ELF, 6), (DWARF, 4), (ORK, 4), (TROLL, 0)],
         'Attributes': 20,
         'MagicResonance':{
             'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
@@ -354,7 +389,7 @@ PRIORITY_TABLE = {
         'Money': 275_000
     },
     'C': {
-        'Metatype': [(Human, 5), (Elf, 3), (Dwarf, 1), (Ork, 0)],
+        'Metatype': [(HUMAN, 5), (ELF, 3), (DWARF, 1), (ORK, 0)],
         'Attributes': 16,
         'MagicResonance': {
             'Magician or Mystic Adept': { 'Magic': 3, 'Spells': 5},
@@ -366,7 +401,7 @@ PRIORITY_TABLE = {
         'Money': 140_000
     },
     'D': {
-        'Metatype': [(Human, 3), (Elf, 0)],
+        'Metatype': [(HUMAN, 3), (ELF, 0)],
         'Attributes': 14,
         'MagicResonance': {
             'Adept': {'Magic': 2},
@@ -376,7 +411,7 @@ PRIORITY_TABLE = {
         'Money': 50_000
     },
     'E': {
-        'Metatype': [(Human, 1)],
+        'Metatype': [(HUMAN, 1)],
         'Attributes': 12,
         'Skills': [18, 0],
         'Money': 6_000
@@ -393,3 +428,9 @@ def generate_character():
 
     # PHASE 2: PR
     pass
+
+print(STRENGTH.what_is())
+print(BIOTECHNOLOGY.what_is())
+print(THROWING.what_is())
+print(ELF.what_is())
+print(STREETSAMURAI.what_is())
