@@ -222,7 +222,14 @@ class Gear:
     def __repr__(self):
         return self.name
 
-
+class Melee_Weapons(Gear):
+    def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.avail = avail
+        self.category = "Melee Weapon"
+        self.subtype = subtype
+        for key in kwargs.keys():
+            pass
 
 class Firearm(Gear):
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
@@ -254,11 +261,19 @@ class Ammo(Gear):
                 case "subtype":
                     self.subtype = kwargs['subtype']
 
+class Clothing(Gear):
+    def __init__(self, name, cost, page_ref, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Clothing"
+        for key in kwargs.keys():
+            pass
 
-class Melee_Weapons:
-    def __init__(self, name: str, value: int):
-        super().__init__(name, value)
-        self.category = "Melee Weapons"
+class Armor(Gear):
+    def __init__(self, name, cost, page_ref, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.category = "Armor"
+        for key in kwargs.keys():
+            pass
 
 class GearAvailability:
     def __init__(self, name):
@@ -647,11 +662,37 @@ STICK_N_SHOCK = Ammo("Stick-n-Shock", cost=80, page_ref='p.433', avail=[6, RESTR
 TRACER = Ammo("Tracer", cost=60, page_ref='p.433', avail=[6, RESTRICTED])
 TASER_DART = Ammo("Taser Dart", cost=50, page_ref='p.433', avail=3)
 # =============== GRENADES ===============
-Flash_Bang
-Flash_Pak
-Fragmentation
-High_Explosive
-Gas
+FLASH_BANG = Ammo("Flash Bang", cost=100, page_ref='p.434', avail=[6, RESTRICTED], subtype="Grenade")
+FLASH_PAK = Ammo("Flash Pak", cost=125, page_ref='p.434', avail=4, subtype="Grenade")
+FRAGMENTATION = Ammo("Fragmentation", cost=100, page_ref='p.434', avail=[11, FORBIDDEN], subtype="Grenade")
+HIGH_EXPLOSIVE = Ammo("High Explosive", cost=100, page_ref='p.434', avail=[11, FORBIDDEN], subtype="Grenade")
+GAS = Ammo("Gas", cost=[40, "Chemical Cost"], page_ref='p.434', avail=[[2, "Chemical Availability"], RESTRICTED], subtype="Grenade")
+SMOKE = Ammo("Smoke", cost=40, page_ref='p.434', avail=[4, RESTRICTED], subtype="Grenade")
+THERMAL_SMOKE = Ammo("Thermal Smoke", cost=60, page_ref='p.434', avail=[6, RESTRICTED], subtype="Grenade")
+# =============== MISSILES ==============
+ANTI_VEHICLE = Ammo("Anti_Vehicle", cost=2800, page_ref='p.435', avail=[18, FORBIDDEN], subtype="Missile")
+FRAGMENTATION_MISSLE = Ammo("Fragmentation_Missle", cost=2000, page_ref='p.435', avail=[12, FORBIDDEN], subtype="Missile")
+HIGH_EXPLOSIVE_MISSLE = Ammo("High_Explosive_Missle", cost=2100, page_ref='p.435', avail=[18, FORBIDDEN], subtype="Missile")
+
+"""
+    CLOTHING/ARMOR
+"""
+# =============== CLOTHING ==============
+CLOTHING = Clothing("Clothing", cost=[20, "Range", 100_000], page_ref='p.436', avail="-")
+ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic_Modification", cost=500, page_ref='p.436', avail=2)
+FEEDBACK_CLOTHING = Clothing("Feedback_Clothing", cost=500, page_ref='p.436', avail=8)
+SYNTH_LEATHER = Clothing("Synth_Leather", cost=200, page_ref='p.436', avail="-")
+# =============== ARMOR =================
+ACTIONEER_BUSINESS_CLOTHING = Armor("Actioneer_Business_Clothing", cost=1500, page_ref='p.436', avail=8)
+ARMOR_CLOTHING = Armor("Armor_Clothing", cost=450, page_ref='p.436', avail=2)
+ARMOR_JACKET = Armor("Armor_Jacket", cost=1000, page_ref='p.436', avail=2)
+ARMOR_VEST = Armor("Armor_Vest", cost=500, page_ref='p.436', avail=4)
+CHAMELEON_SUIT = Armor("Chameleon_Suit", cost=1700, page_ref='p.436', avail=[10, RESTRICTED])
+FULL_BODY_ARMOR = Armor("Full_Body_Armor", cost=2000, page_ref='p.436', avail=[14, RESTRICTED])
+FULL_HELMET = Armor("Full_Helmet", cost=500, page_ref='p.436', avail=[14, RESTRICTED])
+LINED_COAT = Armor("Lined_Coat", cost=900, page_ref='p.436', avail=4)
+URBAN_EXPLORER_JUMPSUIT = Armor("Urban_Explorer_Jumpsuit", cost=650, page_ref='p.436', avail=8)
+
 
 
 """
