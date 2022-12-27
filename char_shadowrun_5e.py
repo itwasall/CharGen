@@ -207,30 +207,28 @@ class Skill_Group:
 
 """
 """
-class Gear:
-    def __init___(self, name: str, cost: int, avail):
+class Gear():
+    def __init___(self, name, cost, page_ref, avail):
         self.name = name
         self.cost = cost
+        self.page_ref = page_ref
         self.avail = avail
         self.category = None
+        self.subtype = None
 
     def __repr__(self):
         return self.name
 
     def what_is(self):
-        return f"{self.name} is a Gear ({self.category})"
+        return f"{self.name} is a Gear ({self.category}, {self.subtype})"
 
 class Firearm(Gear):
-    def __init__(self, name, value, avail, damage, acc, ap, mode, rc, ammo, subtype: None):
-        super().__init__(name, value, avail)
-        self.category = "Firearms"
-        self.damage = damage
-        self.accuracy = acc
-        self.armor_penetration = ap
-        self.mode = mode
-        self.recoil_compensation = rc
-        self.ammo = ammo
+    def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        super().__init__(name, cost, page_ref, avail)# , name, cost, page_ref, avail)
+        self.category = "Firearm"
         self.subtype = subtype
+        self.extra = [{k:d} for k,d in kwargs.items()]
+        
 
 
 class Melee_Weapons(Gear):
@@ -501,19 +499,20 @@ RC: Recoil Compensation
 """
     MELEE GEAR
 """
-COMBAT_AXE = Melee_Weapons()
+# COMBAT_AXE = Melee_Weapons()
 """
     FIREARM GEAR
 arg order is:
-    name, cost, availability, damage, accuracy, armor penetration, firing mode, recoil compensation, ammunition
+    name, cost, page_ref, avail, subtype, kwargs
 """
 # =============== TASERS =================
-DEFIANCE_EX_SHOCKER = Firearm("Defiance_EX_Shocker", 250, "-", [9, STUN, ELECTRICAL], 4, -5, "SA", "-", [4, "Internal Magazine"], "Taser")
-YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, "-", [7, STUN, ELECTRICAL], acc, ap, mode, rc, ammo, "Taser")
+DEFINANCE_EX_SHOCKER = Firearm("Definance_EX_Shocker", 250, "p.424", avail="-", subtype="Taser")
+# DEFIANCE_EX_SHOCKER = Firearm("Defiance_EX_Shocker", 250, "-", [9, STUN, ELECTRICAL], 4, -5, "SA", "-", [4, "Internal Magazine"], "Taser")
+# YAMAHA_PULSAR = Firearm("Yamaha_Pulsar", 180, "-", [7, STUN, ELECTRICAL], acc, ap, mode, rc, ammo, "Taser")
 # =============== HOLD-OUTS ==============
-FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, [5, "Restricted"], [8, PHYSICAL, FLECH], 5, 5, "SA", "-", [4, "Clip"], "Hold-Out")
-STREETLINE_SPECIAL = Firearm("Streetline_Special", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
-WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
+# FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti_Tiffani_Needler", 1000, [5, "Restricted"], [8, PHYSICAL, FLECH], 5, 5, "SA", "-", [4, "Clip"], "Hold-Out")
+# STREETLINE_SPECIAL = Firearm("Streetline_Special", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
+# WALTHER_PALM_PISTOL = Firearm("Walther_Palm_Pistol", cost, avail, [damage], acc, ap, mode, rc, ammo, "Hold-Out")
  
 
 """
@@ -588,3 +587,4 @@ print(BIOTECHNOLOGY.what_is())
 print(THROWING.what_is())
 print(ELF.what_is())
 print(STREETSAMURAI.what_is())
+print(DEFINANCE_EX_SHOCKER)
