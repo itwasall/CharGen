@@ -4,6 +4,7 @@ def dice_roll(dicestring):
     throws, sides = dicestring.split("d")
     return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
 
+
 class Guild:
     def __init__(self, name):
         self.name = name
@@ -33,6 +34,57 @@ class Alignment:
     def __repr__(self):
         return f"{self.law_chaos} {self.good_evil}"
 DEFAULT_ALIGNMENT = Alignment("DEFAULT", "ALIGNMENT")
+
+class Language:
+    def __init__(self, name, speakers: None, script: None):
+        self.name = name
+        if type(speakers) == str:
+            self.speakers = [speakers]
+        elif type(speakers) != list:
+            raise TypeError
+        self.speakers = speakers
+        self.script = script
+    def __repr__(self):
+        return self.name
+DEFAULT_LANGUAGE = Language("DEFAULT LANGUAGE", "DEFAULT SPEAKERS", "DEFAULT SCRIPT")
+
+class Attribute:
+    # Fuck you I don't care if this looks awful
+    modifier_table = {
+            1: -5, 2: -4, 3: -4, 4: -3, 5: -3, 6: -2, 7: -2, 8: -1, 9: -1, 10: 0, 11: 0, 12: 1, 13: 1, 14: 2, 15: 2,
+            16: 3, 17: 3, 18: 4, 19: 4, 20: 5, 21: 5, 22: 6, 23: 6, 24: 7, 25: 7, 26: 8, 27: 8, 28: 9, 29: 9, 30: 10
+            }
+    def __init__(self, name, value = 0):
+        self.name = name
+        self.value = value
+        self.modifier = modifier_table[value]
+
+    def __add__(self, value):
+        self.value += value
+        return Attribute(self.name, self.value)
+
+    def __iadd__(self, value):
+        return self.__add__(value)
+
+    def __sub__(self, value):
+        self.value -= value
+        return Attribute(self.name, self.value)
+
+    def __isub__(self, value):
+        return self.__sub__(value)
+
+DEFAULT_ATTRIBUTE = Attribute("DEFAULT ATTRIBUTE")
+
+STR = Attribute("Strength")
+DEX = Attribute("Dexterity")
+CON = Attribute("Constitution")
+INT = Attribute("Intelligence")
+WIS = Attribute("Wisdom")
+CHA = Attribute("Charisma")
+
+class Attribute_Block:
+    def __init__(self):
+        self.attributes = [STR, DEX, CON, INT, WIS, CHA]
 
 class PartyMember:
     def __init__(
