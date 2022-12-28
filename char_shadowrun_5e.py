@@ -232,11 +232,20 @@ class Gear:
     def __repr__(self):
         return self.name
 
-class Melee_Weapons(Gear):
+class Melee_Weapon(Gear):
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
         super().__init__(name, cost, page_ref)
         self.avail = avail
         self.category = "Melee Weapon"
+        self.subtype = subtype
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+class Projectile_Weapon(Gear):
+    def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        super().__init__(name, cost, page_ref)
+        self.avail = avail
+        self.category = "Projectile Weapon"
         self.subtype = subtype
         for k, d in kwargs.items():
             self.__setattr__(k, d)
@@ -628,7 +637,44 @@ RC: Recoil Compensation
 """
     MELEE GEAR
 """
-# COMBAT_AXE = Melee_Weapons()
+# =============== BLADES =================
+COMBAT_AXE = Melee_Weapon("Combat_Axe", cost=4000, page_ref=421, avail=[12, RESTRICTED], subtype="Blade")
+COMBAT_KNIFE = Melee_Weapon("Combat_Knife", cost=300, page_ref=421, avail=4, subtype="Blade")
+FOREARM_SNAP_BLADES = Melee_Weapon("Forearm_Snap_Blades", cost=200, page_ref=421, avail=[7, RESTRICTED], subtype="Blade")
+KATANA = Melee_Weapon("Katana", cost=1000, page_ref=421, avail=[9, RESTRICTED], subtype="Blade")
+KNIFE = Melee_Weapon("Knife", cost=10, page_ref=421, avail="-", subtype="Blade")
+POLE_ARM = Melee_Weapon("Pole_Arm", cost=1000, page_ref=421, avail=[6, RESTRICTED], subtype="Blade")
+SURVIVAL_KNIFE = Melee_Weapon("Survival_Knife", cost=100, page_ref=421, avail="-", subtype="Blade")
+SWORD = Melee_Weapon("Sword", cost=500, page_ref=421, avail=[5, RESTRICTED], subtype="Blade")
+# =============== CLUBS =================
+CLUB = Melee_Weapon("Club", cost=30, page_ref=421, avail="-", subtype="Club")
+EXTENDABLE_BATON = Melee_Weapon("Extendable_Baton", cost=100, page_ref=421, avail=4, subtype="Club")
+SAP = Melee_Weapon("Sap", cost=30, page_ref=421, avail=2, subtype="Club")
+STAFF = Melee_Weapon("Staff", cost=100, page_ref=421, avail=3, subtype="Club")
+STUN_BATON = Melee_Weapon("Stun_Baton", cost=750, page_ref=421, avail=[6, RESTRICTED], subtype="Club")
+TELESCOPING_STAFF = Melee_Weapon("Telescoping_Staff", cost=350, page_ref=421, avail=4, subtype="Club")
+# =============== OTHER =================
+KNUCKS = Melee_Weapon("Knucks", cost=100, page_ref=421, avail=[2, RESTRICTED], subtype="Other")
+MONOFILAMENT_WHIP = Melee_Weapon("Monofilament_Whip", cost=10_000, page_ref=421, avail=[12, FORBIDDEN], subtype="Other")
+SHOCK_GLOVES = Melee_Weapon("Shock_Gloves", cost=550, page_ref=421, avail=[6, RESTRICTED], subtype="Other")
+
+"""
+    PROJECTILE GEAR
+"""
+# =============== BOWS ==================
+BOW = Projectile_Weapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
+ARROW = Projectile_Weapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows", requires=BOW)
+INJECTION_ARROW = Projectile_Weapon("Injection_Arrow", cost=["Rating", "*", 20], page_ref=421, avail=[["Rating", "+", 2], RESTRICTED], rating=[1, "to", 6], subtype="Bows", requires=BOW)
+# =============== CROSSBOWS =============
+LIGHT_CROSSBOW = Projectile_Weapon("Light_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+MEDIUM_CROSSBOW = Projectile_Weapon("Medium_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+HEAVY_CROSSBOW = Projectile_Weapon("Heavy_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+CROSSBOW_BOLT = Projectile_Weapon("Crossbow_Bolt", cost=5, page_ref=421, avail=2, subtype="Crossbow", requires=[LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW])
+INJECTION_BOLT = Projectile_Weapon("Injection_Bolt", cost=50, page_ref=421, avail=[8, RESTRICTED], subtype="Crossbow", requires=[LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW])
+# =============== THROWING ==============
+
+
+
 """
     FIREARM GEAR
 arg order is:
