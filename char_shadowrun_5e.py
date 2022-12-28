@@ -1,4 +1,5 @@
 import chargen
+import random
 from yaml import safe_load
 
 """
@@ -11,6 +12,15 @@ Lets set out some design goals and then have nowhere to formally put them.
     2a) I am scrapping this idea immediately after I had it because adding all the different and differing stats for the multitude of pieces of gear is long boring and isn't
             required. A page number reference will suffice.
 """
+
+"""
+    USAGE
+    dice("2d6")
+"""
+def dice(dice_string):
+    sides, throws = dice_string.split("d")
+    return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
+
 
 gear = safe_load(open('./shadowrun_5e_data/gear.yaml', 'rt'))
 
@@ -321,6 +331,32 @@ class GearAvailability:
     
     def __repr__(self):
         return self.name
+
+"""
+    Starting Nuyen is calculated from two parts
+    First is the Nuyen multipler, or 'base_amount', then a dice roll is made to see how the total 
+        amount of starting Nuyen. This is *not* the same as the Nuyen amount chosen at the priorities
+        table, that's just cash for buying equipment, weapons & the like. This determines your starting
+        money
+"""
+class Lifestyle:
+    def __init__(self, name, dice_string, base_amount, cost):
+        self.name = name
+        self.dice_string = dice_string
+        self.base_amount = base_amount 
+        self.nuyen = 0
+        self.cost = cost
+
+    def roll(self):
+        self.nuyen = dice(self.dice_string) * self.base_amount
+        return self.nuyen
+
+    def __repr__(self):
+        return self.nuyen
+
+
+
+    
 
 
 
@@ -816,12 +852,123 @@ WHITE_NOISE_GENERATOR = Electronics("White Noise Generator", cost=["Rating", "*"
 AGENT_1_3 = Electronics("Agent (Rating 1-3)", cost=["Rating", "*", 1_000], page_ref=442, rating=[1, "to", 3], avail=["Rating", "*", 3], subtype="Software")
 AGENT_4_6 = Electronics("Agent (Rating 4-6)", cost=["Rating", "*", 2_000], page_ref=442, rating=[4, "to", 6], avail=["Rating", "*", 3], subtype="Software")
 AUTOSOFT = Electronics("Autosoft", cost=["Rating", "*", 500], page_ref=442, rating="-", avail=["Rating", "*", 2], subtype="Software")
-CYBERPROGRAM_COMMON = Electronics("Cyberprogram Common", cost=80, page_ref=442, rating=, avail="-", subtype="Software")
-CYBERPROGRAM_HACKING = Electronics("Cyberprogram Hacking", cost=250, page_ref=442, rating=, avail=[6, RESTRICTED], subtype="Software")
-DATASOFT = Electronics("Datasoft", cost=120, page_ref=442, rating=, avail="-", subtype="Software")
-MAPSOFT = Electronics("Mapsoft", cost=100, page_ref=442, rating=, avail="-", subtype="Software")
-SHOPSOFT = Electronics("Shopsoft", cost=150, page_ref=442, rating=, avail="-", subtype="Software")
+CYBERPROGRAM_COMMON = Electronics("Cyberprogram Common", cost=80, page_ref=442, rating="-", avail="-", subtype="Software")
+CYBERPROGRAM_HACKING = Electronics("Cyberprogram Hacking", cost=250, page_ref=442, rating="-", avail=[6, RESTRICTED], subtype="Software")
+DATASOFT = Electronics("Datasoft", cost=120, page_ref=442, rating="-", avail="-", subtype="Software")
+MAPSOFT = Electronics("Mapsoft", cost=100, page_ref=442, rating="-", avail="-", subtype="Software")
+SHOPSOFT = Electronics("Shopsoft", cost=150, page_ref=442, rating="-", avail="-", subtype="Software")
 TUTORSOFT = Electronics("Tutorsoft", cost=["Rating", "*", 400], page_ref=442, rating=[1, "to", 6], avail="Rating", subtype="Software")
+# =============== SKILLSOFTS =========
+ACTIVESOFTS = Electronics("Activesofts", cost=["Rating", "*", 5000], page_ref=442, rating=[1, "to", 6], avail=8, subtype="Skillsofts")
+KNOWSOFTS = Electronics("Knowsofts", cost=["Rating", "*", 2000], page_ref=442, rating=[1, "to", 6], avail=8, subtype="Skillsofts")
+LINGUASOFTS = Electronics("Linguasofts", cost=["Rating", "*", 1000], page_ref=442, rating=[1, "to", 6], avail=8, subtype="Skillsofts")
+# =============== CREDSTICKS =========
+STANDARD = Electronics("Standard Credstick", cost=5, page_ref=443, rating="-", avail="-", max_value=5000, subtype="Credsticks")
+SILVER = Electronics("Silver Credstick", cost=20, page_ref=443, rating="-", avail="-", max_value=20_000, subtype="Credsticks")
+GOLD = Electronics("Gold Credstick", cost=100, page_ref=443, rating="-", avail=5, max_value=100_000, subtype="Credsticks")
+PLATINUM = Electronics("Platinum Credstick", cost=500, page_ref=443, rating="-", avail=10, max_value=500_000, subtype="Credsticks")
+EBONY = Electronics("Ebony Credstick", cost=1000, page_ref=443, rating="-", avail=20, max_value=1_000_000, subtype="Credsticks")
+# =============== IDENTIFICATION =====
+FAKE_SIN = Electronics("Fake_SIN", cost=["Rating", "*", 2500], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
+FAKE_LICENCE = Electronics("Fake_Licence", cost=["Rating", "*", 200], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
+# =============== TOOLS ==============
+TOOL_KIT = Electronics("Tool_Kit", cost=500, page_ref=443, rating="-", avail="-", subtype="Tools")
+TOOL_SHOP = Electronics("Tool_Shop", cost=5000, page_ref=443, rating="-", avail=8, subtype="Tools")
+TOOL_FACILITY = Electronics("Tool_Facility", cost=50000, page_ref=443, rating="-", avail=12, subtype="Tools")
+# ========== OPTICAL / IMAGING DEVICES
+BINOCULARS = Electronics("Binoculars", cost=["Capacity", "*", 50], page_ref=444, rating="-", avail="-", capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
+OPTICAL_BINOCULARS = Electronics("Optical_Binoculars", cost=50, page_ref=444, rating="-", avail="-", subtype="Optical/Imaging Devices")
+CAMERA = Electronics("Camera", cost=["Capacity", "*", 100], page_ref=444, rating="-", avail="-",capacity=[1, "to", 6], subtype="Optical/Imaging Devices")
+MICRO_CAMERA = Electronics("Micro_Camera", cost=100, page_ref=444, rating="-", avail="-", capacity=1, subtype="Optical/Imaging Devices")
+EYE_CONTACTS = Electronics("Eye_Contacts", cost=["Capacity", "*", 200], page_ref=444, rating="-", avail="-", capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
+GLASSES = Electronics("Glasses", cost=["Capacity", "*", 100], page_ref=444, rating="-", avail="-", capacity=[1, "to", 4], subtype="Optical/Imaging Devices")
+GOGGLES = Electronics("Goggles", cost=["Capacity", "*", 50], page_ref=444, rating="-", avail="-", capacity=[1, "to", 6], subtype="Optical/Imaging Devices")
+ENDOSCOPE = Electronics("Endoscope", cost=250, page_ref=444, rating="-", avail=8, subtype="Optical/Imaging Devices")
+MAGE_SIGHT_GOGGLES = Electronics("Mage_Sight_Goggles", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], subtype="Optical/Imaging Devices")
+MONOCLE = Electronics("Monocle", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
+# =============== VISION ENCHANCEMENTS 
+LOW_LIGHT_VISION = Electronics("Low_Light_Vision", cost=500, page_ref=444, rating="-", avail=4, capacity=1, subtype="Vision Enhancement")
+FLARE_COMPENSATION = Electronics("Flare_Compensation", cost=250, page_ref=444, rating="-", avail=1, capacity=1, subtype="Vision Enhancement")
+IMAGE_LINK = Electronics("Image_Link", cost=25, page_ref=444, rating="-", avail="-", capacity=1, subtype="Vision Enhancement")
+SMARTLINK = Electronics("Smartlink", cost=2000, page_ref=444, rating="-", avail=[4, RESTRICTED], capacity=1, subtype="Vision Enhancement")
+THERMOGRAPHIC_VISION = Electronics("Thermographic_Vision", cost=500, page_ref=444, rating="-", avail=6, capacity=1, subtype="Vision Enhancement")
+VISION_ENHANCEMENT = Electronics("Vision_Enhancement", cost=["Rating", "*", 500], page_ref=444, rating="-", avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Vision Enhancement")
+VISION_MAGNIFICATION = Electronics("Vision_Magnification", cost=250, page_ref=444, rating="-", avail=2, capacity=1, subtype="Vision Enhancement")
+# =============== AUDIO DEVICES=======
+DIRECTIONAL_MIC = Electronics("Directional_Mic", cost=["Capactiy", "*", 50], page_ref=445, rating="-", avail=4, capacity=[1, "to", 6], subtype="Audio Device")
+EAR_BUDS = Electronics("Ear_Buds", cost=["Capactiy", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 3], subtype="Audio Device")
+HEADPHONES = Electronics("Headphones", cost=["Capactiy", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 6], subtype="Audio Device")
+LASER_MIC = Electronics("Laser_Mic", cost=["Capactiy", "*", 100], page_ref=445, rating="-", avail=[6, RESTRICTED], capacity=[1, "to", 6], subtype="Audio Device")
+OMNI_DIRECTIONAL_MIC = Electronics("Omni_Directional_Mic", cost=["Capactiy", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 6], subtype="Audio Device")
+# =============== AUDIO ENHANCEMENTS==
+AUDIO_ENHANCEMENT = Electronics("Audio_Enhancement", cost=["Rating", "*", 500], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Audio Enhancement")
+SELECT_SOUND_FILTER = Electronics("Select_Sound_Filter", cost=["Rating", "*", 250], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 3], 0], capacity="Rating", subtype="Audio Enhancement")
+SPACIAL_REGONISER = Electronics("Spacial_Regoniser", cost=1000, page_ref=445, rating="-", avail=4, capacity=2, subtype="Audio Enhancement")
+# =============== SENSORS ============
+"""
+I'm like 100 lines into electronics alone, probably a few hundred if you include everything in this data dump section.
+    So far everything has been predictable. Sure there's been some edge cases and oddities, but that's to be expected, 
+    a game would be boring if everything was boxed into the same formula, sharing the same restrictions.
+I say this because the sensor section can go fuck itself. For now. I'll figure out something in the future, probably
+    a shitty band-aid solution because I really do not want to reengineer how I've been storing data up to this point.
+Fuck that.
+"""
+# =============== SECURITY DEVICES====
+KEY_COMBINATION_LOCK = Electronics("Key_Combination_Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
+MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating="-", avail="Rating", subtype="Security Device")
+KEYPAD_CARD_READER = Electronics("Keypad_Card_Reader", cost=50, page_ref=447, rating="-", avail="-", subtype="Security Device")
+ANTI_TAMPER_CIRCUITS = Electronics("Anti_Tamper_Circuits", cost=["Rating", "*", 250], page_ref=447, rating=[1, "to", 4], avail="Rating", subtype="Security Device")
+# ============== RESTRAINT ===========
+METAL_RESTRAINT = Electronics("Metal_Restraint", cost=20, page_ref=447, rating="-", avail="-", subtype="Restraint")
+PLATEEL_RESTRAINT = Electronics("Plateel_Restraint", cost=50, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
+PLASTIC_RESTRAINT_PER_10 = Electronics("Plastic_Restraint_Per_10", cost=5, page_ref=447, rating="-", avail="-", subtype="Restraint")
+CONTAINMENT_MANACLES = Electronics("Containment_Manacles", cost=250, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
+# ============== BREAKING AND ENTERING
+AUTOPICKER = Electronics("Autopicker", cost=["Rating", "*", 500], page_ref=448, rating=[1, "to", 6], avail=[8, RESTRICTED], subtype="B&E Gear")
+CELLUAR_GLOVE_MOLDER = Electronics("Celluar_Glove_Molder", cost=["Rating", "*", 500], page_ref=448, rating=[1, "to", 4], avail=[12, FORBIDDEN], subtype="B&E Gear")
+CHISEL_CROWBAR = Electronics("Chisel_Crowbar", cost=20, page_ref=448, rating="-", avail="-", subtype="B&E Gear")
+KEYCARD_COPIER = Electronics("Keycard_Copier", cost=["Rating", "*", 600], page_ref=448, rating=[1, "to", 6], avail=[8, FORBIDDEN], subtype="B&E Gear")
+LOCKPICK_SET = Electronics("Lockpick_Set", cost=250, page_ref=448, rating="-", avail=[4, RESTRICTED], subtype="B&E Gear")
+MAGLOCK_PASSKEY = Electronics("Maglock_Passkey", cost=["Rating", "*", 2000], page_ref=448, rating=[1, "to", 4], avail=[["Rating", "*", 3], FORBIDDEN], subtype="B&E Gear")
+MINIWELDER = Electronics("Miniwelder", cost=250, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
+MINIWELDER_FUEL_CANISTER = Electronics("Miniwelder_Fuel_Canister", cost=80, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
+MONOFILAMENT_CHAINSAW = Electronics("Monofilament_Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="B&E Gear")
+SEQUENCER = Electronics("Sequencer", cost=["Rating", "*", 250], page_ref=448, rating=[1, "to", 6], avail=[["Rating", "*", 3], RESTRICTED], subtype="B&E Gear")
+
+"""
+    INDUSTRIAL CHEMICALS
+    No I don't know why this gets its own chapter in the book either
+"""
+GLUE_SOLVENT = Item("Glue_Solvent", cost=90, page_ref=448, avail=2, category="Industrial Chemicals")
+GLUE_SPRAYER= Item("Glue_Sprayer", cost=150, page_ref=448, avail=2, category="Industrial Chemicals")
+THERMITE_BURNING_BAR = Item("Thermite_Burning_Bar", cost=500, page_ref=448, avail=[16, RESTRICTED], category="Industrial Chemicals")
+
+"""
+    SURVIVAL GEAR
+"""
+CHEMSUIT = Item("Chemsuit", cost=["Rating", "*", 150], page_ref=449, rating=[1, "to", 6], avail=[["Rating", "*", 2],0], category="Survival Gear")
+CLIMBING_GEAR = Item("Climbing_Gear", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
+DIVING_GEAR = Item("Diving_Gear", cost=2000, page_ref=449, rating="-", avail=6, category="Survival Gear")
+FLASHLIGHT = Item("Flashlight", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
+GAS_MASK = Item("Gas_Mask", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
+GECKO_TAPE_GLOVES = Item("Gecko_Tape_Gloves", cost=250, page_ref=449, rating="-", avail=12, category="Survival Gear")
+HAZMAT_SUIT = Item("Hazmat_Suit", cost=3000, page_ref=449, rating="-", avail=8, category="Survival Gear")
+LIGHT_STICK = Item("Light_Stick", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MAGNESIUM_TORCH = Item("Magnesium_Torch", cost=5, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MICRO_FLARE_LAUNCHER = Item("Micro_Flare_Launcher", cost=175, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MICRO_FLARES = Item("Micro_Flares", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
+RAPPELLING_GLOVES = Item("Rappelling_Gloves", cost=50, page_ref=449, rating="-", avail="-", category="Survival Gear")
+RESPIRATOR = Item("Respirator", cost=["Rating", "*", 50], page_ref=449, rating=[1, "to", 6], avail="-", category="Survival Gear")
+SURVIVAL_KIT = Item("Survival_Kit", cost=200, page_ref=449, rating="-", avail=4, category="Survival Gear")
+"""
+    LIFESTYLE
+"""
+STREET_LIFESTYLE = Lifestyle("Street_Lifestyle", "1d6", 20, 0)
+SQUATTER_LIFESTYLE = Lifestyle("Squatter_Lifestyle", "2d6", 40, 500)
+LOW_LIFESTYLE = Lifestyle("Low_Lifestyle", "3d6", 60, 2000)
+MIDDLE_LIFESTYLE = Lifestyle("Middle_Lifestyle", "4d6", 100, 5000)
+HIGH_LIFESTYLE = Lifestyle("High_Lifestyle", "5d6", 500, 10_000)
+LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", "6d6", 1000, 100_000)
 
 """
     PRIORITY TABLE
