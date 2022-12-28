@@ -299,7 +299,7 @@ class Electronics(Gear):
         self.avail = avail
         self.subtype = subtype
         for k, d in kwargs.items():
-            self.__setattr(k, d)
+            self.__setattr__(k, d)
 
 """
     The Item Class. Why now?
@@ -1044,3 +1044,4 @@ print(ELF.what_is())
 print(STREETSAMURAI.what_is())
 print(DEFINANCE_EX_SHOCKER.what_is())
 print(DEFINANCE_EX_SHOCKER.damage)
+print(SENSOR_RFID.category)
