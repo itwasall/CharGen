@@ -62,6 +62,9 @@ class AbilityScore:
             value -= 1
         return int(value/2)-5
 
+    def __repr__(self):
+        return self.name
+
     def __add__(self, value):
         self.value += value
         return AbilityScore(self.name, self.value)
@@ -78,12 +81,15 @@ class AbilityScore:
 DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
 class Skill:
-    def __init__(self, name, ab_score, prof **kwargs):
+    def __init__(self, name, ab_score, prof, **kwargs):
         self.name = name
         self.ab_score = ab_score
         self.prof = prof
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+    def __repr__(self):
+        return f"({self.ab_score}) {self.name}: +-{self.prof}"
 
 """
     ABILITY SCORES
@@ -101,30 +107,30 @@ STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA":
     SKILLS
 """
 # ======= STR ======= 
-ATHLETICS = Skill("Athletics", ab_score=STR, prof=False)
+ATHLETICS = Skill("Athletics", ab_score=STR, prof=0)
 # ======= DEX ======= 
-ACROBATICS = Skill("Acrobatics", ab_score=DEX, prof=False)
-SLIGHT_OF_HAND = Skill("Slight_Of_Hand", ab_score=DEX, prof=False)
-STEALTH = Skill("Stealth", ab_score=DEX, prof=False)
+ACROBATICS = Skill("Acrobatics", ab_score=DEX, prof=0)
+SLEIGHT_OF_HAND = Skill("Sleight_Of_Hand", ab_score=DEX, prof=0)
+STEALTH = Skill("Stealth", ab_score=DEX, prof=0)
 # ======= INT ======= 
-ARCANA = Skill("Arcana", ab_score=INT, prof=False)
-HISTORY = Skill("History", ab_score=INT, prof=False)
-INVESTIGATION = Skill("Investigation", ab_score=INT, prof=False)
-NATURE = Skill("Nature", ab_score=INT, prof=False)
-RELIGION = Skill("Religion", ab_score=INT, prof=False)
+ARCANA = Skill("Arcana", ab_score=INT, prof=0)
+HISTORY = Skill("History", ab_score=INT, prof=0)
+INVESTIGATION = Skill("Investigation", ab_score=INT, prof=0)
+NATURE = Skill("Nature", ab_score=INT, prof=0)
+RELIGION = Skill("Religion", ab_score=INT, prof=0)
 # ======= WIS ======= 
-ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS, prof=False)
-INSIGHT = Skill("Insight", ab_score=WIS, prof=False)
-MEDICINE = Skill("Medicine", ab_score=WIS, prof=False)
-PERCEPTION = Skill("Perception", ab_score=WIS, prof=False)
-SURVIVAL = Skill("Survival", ab_score=WIS, prof=False)
+ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS, prof=0)
+INSIGHT = Skill("Insight", ab_score=WIS, prof=0)
+MEDICINE = Skill("Medicine", ab_score=WIS, prof=0)
+PERCEPTION = Skill("Perception", ab_score=WIS, prof=0)
+SURVIVAL = Skill("Survival", ab_score=WIS, prof=0)
 # ======= CHA ======= 
-DECEPTION = Skill("Deception", ab_score=CHA, prof=False)
-INTIMIDATION = Skill("Intimidation", ab_score=CHA, prof=False)
-PERFORMANCE = Skill("Performance", ab_score=CHA, prof=False)
-PERSUASION = Skill("Persuasion", ab_score=CHA, prof=False)
+DECEPTION = Skill("Deception", ab_score=CHA, prof=0)
+INTIMIDATION = Skill("Intimidation", ab_score=CHA, prof=0)
+PERFORMANCE = Skill("Performance", ab_score=CHA, prof=0)
+PERSUASION = Skill("Persuasion", ab_score=CHA, prof=0)
 
-SKILLS = [ATHLETICS, ACROBATICS, SLIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
+SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
 
 """
     GUILDS
@@ -195,7 +201,7 @@ ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", 
 CENTAUR = Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
 GOBLIN = Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
 LOXODON = Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
-MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
+MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
 SIMIC_HYBRID = Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
 VEDALKEN = Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
 
@@ -223,6 +229,7 @@ class PartyMember:
             race = DEFAULT_RACE,
             alignment = DEFAULT_ALIGNMENT,
             stats = STAT_BLOCK,
+            skills  = SKILLS,
             **kwargs,
         ):
         """ Character Overview """
@@ -240,8 +247,27 @@ class PartyMember:
         # Required for calculating weight as well
         self.height_modifier = 0
         self.weight = ""
-        """ Misc Bullshit """
+        """ Languages & Skills """
         self.languages = []
+        self.athletics = SKILLS[0]
+        self.acrobatics = SKILLS[1] 
+        self.sleight_of_hand = SKILLS[2]
+        self.stealth = SKILLS[3]
+        self.arcana = SKILLS[4]
+        self.history = SKILLS[5]
+        self.investigation = SKILLS[6]
+        self.nature = SKILLS[7]
+        self.religion = SKILLS[8]
+        self.animal_handling = SKILLS[9]
+        self.insight = SKILLS[10]
+        self.medicine = SKILLS[11]
+        self.perception = SKILLS[12]
+        self.survival = SKILLS[13]
+        self.deception = SKILLS[14]
+        self.intimidation = SKILLS[15]
+        self.performance = SKILLS[16]
+        self.persuasion = SKILLS[17]
+
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
@@ -378,16 +404,27 @@ def gen_party_makeup(party_name = "Default"):
             ]
             return Party("Benevolent", party_members)
 
-def gen_extra_traits(race: Race):
-    match race.name:
+def gen_extra_traits(partymember: PartyMember):
+    match partymember.race.name:
         case "Centaur":
-            race.extra_traits = {
+            partymember.race.extra_traits = {
                     'Fey': 'Your creature type is fey, rather than humanoid',
                     'Charge': 'If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves',
                     'Hooves': 'Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your STR modifier, instead of the bludgeoning damage normal of an unarmed strike.',
                     'Equine Build': 'You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs 4 extra feet, instead of the 1 extra foot.',
                     }
             # race.proficiencies = 
+        case "Minotaur":
+            partymember.race.extra_traits = {
+                'Horns': 'Your horns are natural melee weapons, which you can use to make unarmd stirkes. Ifyou hit with them, you deal piercing damage sequal to 1d6 + your STR modifier, instead of the bludgeoning damage normal for an unarmed strike',
+                'Goring Rush': 'Immediately after you use the Dash action on your turn and move at least 20 feet you can make one melee attack with your horns as a bonus action',
+                'Hammering Horns': 'Immediately after you hit a creature with a melee attack as parto fhte Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The tartget must be no more than one size larger than you and within 5 feet of you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your STR modifier, you push it up to 10 feet away from you.',
+                'Imposing Presence': 'You have proficiencies in one of the following skills of your choice: Intimidation or Persuasion'
+            }
+            imposing_presence_roll = random.choice(['Intimidation', 'Persuasion'])
+            if imposing_presence_roll == 'Intimidation':
+                pass
+
 
 
 
@@ -463,5 +500,6 @@ def create_character():
     print("Race: ", my_nu_leng.race.name)
     print("Guild: ", my_nu_leng.guild.name)
     print("Age: ", my_nu_leng.age)
+    print(my_nu_leng.acrobatics)
 
 create_character()
