@@ -314,13 +314,36 @@ def gen_party_makeup(party_name = "Default"):
 def gen_extra_traits(Character: PartyMember):
     match Character.race.name:
         case "Centaur":
+            survivor_roll = random.choice(['Animal Handling', 'Medicine', 'Nature', 'Survival'])
+            match survivor_roll:
+                case 'Animal Handling':
+                    Character.animal_handling.set_proficiency_bonus(Character.level)
+                case 'Medicine':
+                    Character.medicine.set_proficiency_bonus(Character.level)
+                case 'Nature':
+                    Character.nature.set_proficiency_bonus(Character.level)
+                case 'Survival':
+                    Character.survival.set_proficiency_bonus(Character.level)
             Character.extra_traits = {
-                    'Fey': 'Your creature type is fey, rather than humanoid',
-                    'Charge': 'If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves',
-                    'Hooves': 'Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your STR modifier, instead of the bludgeoning damage normal of an unarmed strike.',
-                    'Equine Build': 'You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs 4 extra feet, instead of the 1 extra foot.',
-                }
-            # race.proficiencies = 
+                'Fey': 'Your creature type is fey, rather than humanoid',
+                'Charge': 'If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves',
+                'Hooves': 'Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your STR modifier, instead of the bludgeoning damage normal of an unarmed strike.',
+                'Equine Build': 'You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs 4 extra feet, instead of the 1 extra foot.',
+                'Survivor': f"You have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature or Survival. DEBUG: {survivor_roll} was chosen"
+            }
+        case "Goblin":
+            Character.extra_traits = {
+                'Fury of the Small': "When you damage a creature with an attack or spell and the creature's size is greater than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your level. This can only be used once per short rest",
+                'Nimble Escape': "You can take a Disengage or Hide action as a bonus action on each of your turns"
+            }
+        case "Loxodon":
+            Character.extra_traits = {
+                'Powerful Build': "You count as one size larger when determing your carrying capacity and the weight you can push or drag",
+                'Loxodon Serenity': "You have advantage on saving throws against being charmed or frightened",
+                'Natural Armor': "You have thick, leathery skin. When you aren't wearing any armour, your AC is 12 + your CON modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal when you are using your natural armor.",
+                'Trunk': "You can grasp things with your trunk, and you can use it as a snorkel. It has a reach of 5 feet, and it can lift a number of pounds equal to five times your STR score. You can use it to do the following simple tasks: lift, drop, hold, push or pull an object or creature; open or close a door or container; grapple someone; or make an unarmed strike. Your trunk can't wield weapons or shields or do anything that requires manual prescision, such as using tools or magic items or performing the somantic components of a spell."
+                'Keen Smell': "Thanks to your sensitive trunk, you have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks with an involve smell"
+            }
         case "Minotaur":
             imposing_presence_roll = random.choice(['Intimidation', 'Persuasion'])
             if imposing_presence_roll == 'Intimidation':
