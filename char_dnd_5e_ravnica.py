@@ -16,14 +16,14 @@ DEFAULT_GUILD = Guild("Default Guild")
 class _Class:
     def __init__(self, name, **kwargs):
         self.name = name
-        for k, d in self.kwargs.items():
+        for k, d in kwargs.items():
             self.__setattr__(k, d)
 DEFAULT_CLASS = _Class("Default Class")
 
 class Race:
     def __init__(self, name, **kwargs):
         self.name = name
-        for k, d in self.kwargs.items():
+        for k, d in kwargs.items():
             self.__setattr__(k, d)
 DEFAULT_RACE = Race("Default Race")
 
@@ -48,72 +48,110 @@ class Language:
         return self.name
 DEFAULT_LANGUAGE = Language("DEFAULT LANGUAGE", "DEFAULT SPEAKERS", "DEFAULT SCRIPT")
 
-class Attribute:
+class AbilityScore:
     # Fuck you I don't care if this looks awful
-    modifier_table = {
-            1: -5, 2: -4, 3: -4, 4: -3, 5: -3, 6: -2, 7: -2, 8: -1, 9: -1, 10: 0, 11: 0, 12: 1, 13: 1, 14: 2, 15: 2,
-            16: 3, 17: 3, 18: 4, 19: 4, 20: 5, 21: 5, 22: 6, 23: 6, 24: 7, 25: 7, 26: 8, 27: 8, 28: 9, 29: 9, 30: 10
-            }
     def __init__(self, name, value = 0):
         self.name = name
         self.value = value
-        self.modifier = modifier_table[value]
+        self.modifier = self.get_mod(value)
+
+    def get_mod(self, value):
+        if value == 1:
+            return -5
+        if (value + 1) % 2 == 0:
+            value -= 1
+        return int(value/2)-5
 
     def __add__(self, value):
         self.value += value
-        return Attribute(self.name, self.value)
+        return AbilityScore(self.name, self.value)
 
     def __iadd__(self, value):
         return self.__add__(value)
 
     def __sub__(self, value):
         self.value -= value
-        return Attribute(self.name, self.value)
+        return AbilityScore(self.name, self.value)
 
     def __isub__(self, value):
         return self.__sub__(value)
 
-DEFAULT_ATTRIBUTE = Attribute("DEFAULT ATTRIBUTE")
+DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
-STR = Attribute("Strength")
-DEX = Attribute("Dexterity")
-CON = Attribute("Constitution")
-INT = Attribute("Intelligence")
-WIS = Attribute("Wisdom")
-CHA = Attribute("Charisma")
+STR = AbilityScore("Strength")
+DEX = AbilityScore("Dexterity")
+CON = AbilityScore("Constitution")
+INT = AbilityScore("Intelligence")
+WIS = AbilityScore("Wisdom")
+CHA = AbilityScore("Charisma")
 
-class Attribute_Block:
-    def __init__(self):
-        self.attributes = [STR, DEX, CON, INT, WIS, CHA]
 
-class PartyMember:
-    def __init__(
-            self, 
-            name = "", 
-            guild = DEFAULT_GUILD,
-            _class = DEFAULT_CLASS, 
-            race = DEFAULT_RACE,
-            alignment = DEFAULT_ALIGNMENT,
-            stats = None,
-        ):
-        self.name = name
-        self.guild = guild
-        self.level = 1
-        self.stats = stats
-        self._class = _class
-        self.age = 0
-        self.alignment = alignment
-        for k, d in self.kwargs.items():
-            self.__setattr__(k, d)
+STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA": CHA}
 
-HUMAN = Race("Human")
-ELF = Race("Elf")
-CENTAUR = Race("Centaur")
-GOBLIN = Race("Goblin")
-SIMIC_HYBRID = Race("Simic_Hybrid")
-LOXODON = Race("Loxodon")
-MINOTAUR = Race("Minotaur")
-VEDALKEN = Race("Vedalken")
+AZORIUS_SENATE = Guild("Azorius Senate")
+HOUSE_DIMIR = Guild("House Dimir")
+SIMIC_COMBINE = Guild("Simic Combine")
+IZZIT_LEAGUE = Guild("Izzit League")
+SELESNYA_CONCLAVE = Guild("Selesnya Conclave")
+GOLGARI_SWARM = Guild("Golgari Swarm")
+GRUUL_CLANS = Guild("Gruul Clans")
+CULT_OF_RAKDOS = Guild("Cult of Rakdos")
+BOROS_LEGION = Guild("Boros Legion")
+ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
+
+ABYSSAL = Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
+CELESTIAL = Language("Celestial", speakers="Angels", script="Celestial")
+COMMON = Language("Common", speakers="Humans", script="Common")
+DRACONIC = Language("Draconic", speakers="Dragons", script="Draconic")
+ELVISH = Language("Elvish", speakers="Elves", script="Elvish")
+GIANT = Language("Giant", speakers=["Ogres", "Giants"], script="Minotaur")
+GOBLIN_L = Language("Goblin", speakers="Goblins", script="Common")
+KRAUL = Language("Kraul", speakers="Kraul", script="Kraul")
+LOXODON_L = Language("Loxodon", speakers="Loxodons", script="Elvish")
+MERFOLK = Language("Merfolk", speakers="Merfolk", script="Merfolk")
+MINOTAUR_L = Language("Minotaur", speakers="Minotaurs", script="Minotaur")
+SPHINX = Language("Sphinx", speakers="Sphinxes", script="-")
+SYLVAN = Language("Sylvan", speakers=["Centaurs", "Dryads"], script="Elvish")
+VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
+
+"""
+    RACE CLASS CREATION STYLE GUIDE
+    ab_score_bonus default
+        [ (Ability_Score, Bonus), (Ability_Score, Bonus) ]
+    ab_score_bonus choice
+        [{
+            "Choice": [Ability_Score_1, Ability_Score_2],
+            "Amount": Bonus
+        }, (Ability_Score, Bonus)]
+    age_range
+        [Lowest_Age, Highest Age]
+    alignment default
+        [Lawful/Chatoic/Neutral tendancy, Good/Evil/Neutral tendancy]
+    alignment based on guild
+        [
+            {GUILD_1: Lawful/Chatoic/Neutral tendancy, GUILD_2: Lawful/Chaotic/Neutral tendandy},
+            {GUILD_1: Good/Evil/Neutral tendancy, GUILD_3: Good/Evil/Neutral tendancy}
+        ]
+    alignment not x
+        [(Lawful, Neutral) tendancy, (Good, Neutral) tendancy]
+    size
+        string
+    speed
+        int
+    languages
+        [Language_1, Language 2]
+    languages, second is choice
+        [Language_1, {'Choose': [ExLang_1, ExLang_2, ExLang_3]}]
+"""
+
+HUMAN = Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age_range=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
+ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age_range=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
+CENTAUR = Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age_range=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
+GOBLIN = Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age_range=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
+LOXODON = Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age_range=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
+MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age_range=[], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
+SIMIC_HYBRID = Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age_range=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
+VEDALKEN = Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age_range=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
 
 BARBARIAN = _Class("Barbarian")
 BARD = _Class("Bard")
@@ -128,24 +166,85 @@ SORCERER = _Class("Sorcerer")
 WARLOCK = _Class("Warlock")
 WIZARD = _Class("Wizard")
 
-AZORIUS_SENATE = Guild("Azorius Senate")
-HOUSE_DIMIR = Guild("House Dimir")
-SIMIC_COMBINE = Guild("Simic Combine")
-IZZIT_LEAGUE = Guild("Izzit League")
-SELESNYA_CONCLAVE = Guild("Selesnya Conclave")
-GOLGARI_SWARM = Guild("Golgari Swarm")
-GRUUL_CLANS = Guild("Gruul Clans")
-CULT_OF_RAKDOS = Guild("Cult of Rakdos")
-BOROS_LEGION = Guild("Boros Legion")
-ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
-
 GUILDS = [AZORIUS_SENATE, BOROS_LEGION, CULT_OF_RAKDOS, GOLGARI_SWARM, GRUUL_CLANS, HOUSE_DIMIR, IZZIT_LEAGUE, ORZHOV_SYNDICATE, SELESNYA_CONCLAVE, SIMIC_COMBINE]
 
+class PartyMember:
+    def __init__(
+            self, 
+            name = "", 
+            guild = DEFAULT_GUILD,
+            _class = DEFAULT_CLASS, 
+            race = DEFAULT_RACE,
+            alignment = DEFAULT_ALIGNMENT,
+            stats = STAT_BLOCK,
+            **kwargs,
+        ):
+        """ Character Overview """
+        self.name = name
+        self.alignment = alignment
+        self.guild = guild
+        self._class = _class
+        self.race = race
+        """ Cool Numbers """
+        self.level = 1
+        self.stats = stats
+        self.age = 0
+        """ Height/ Weight """
+        self.height = ""
+        # Required for calculating weight as well
+        self.height_modifier = 0
+        self.weight = ""
+        """ Misc Bullshit """
+        self.languages = []
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+    def gen_height(self, base_height, dicestring):
+        base_feet, base_inches = base_height.split("'")
+        base_feet, base_inches = int(base_feet), int(base_inches)
+        self.height_modifier = dice_roll(dicestring) 
+        base_inches += self.height_modifier
+        while base_inches >= 12:
+            base_feet += 1
+            base_inches -= 12
+        return f"{base_feet}'{base_inches}\""
+    
+    def gen_weight(self, base_weight, dicestring):
+        if self.height == "":
+            raise ValueError("Please roll height first to get height mod")
+        base_weight = int(base_weight)
+        modifier = dice_roll(dicestring)
+        return f"{base_weight + self.height_modifier * modifier}lbs"
+
+    def set_ab_values(self, ab_values = [15,14,13,12,10,8]):
+        random.shuffle(ab_values)
+        for idx, stat in enumerate(self.stats.keys()):
+            self.stats[stat] += ab_values[idx]
+        print([{k:d.value} for k, d in self.stats.items()])
+
+
+    def speaks(self):
+        if isinstance(self.race.language) == list:
+            for idx, lang in enumerate(self.race.language):
+                if isinstance(lang) == dict and "Choose" in lang.keys():
+                    self.languages.append(random.choice(lang["Choose"]))
+                elif isinstance(lang) == Language:
+                    self.languages.append(lang)
+                else:
+                    continue
+                if idx == 0:
+                    self.native_lang = lang
+        elif isinstance(self.race.language) == Language:
+            self.languages = [self.race.language]
+            self.shitty_monolingual_cunt = True
+        else:
+            raise TypeError("I need a list of Language class items or a single Language class item. Daft cunt")
+
 class Party:
-    def __init__(self, name, party_comp, **kawrgs):
+    def __init__(self, name, party_comp, **kwargs):
         self.name = name
         self.party_comp = party_comp
-        for k, d in self.kwargs.items():
+        for k, d in kwargs.items():
             self.__setattr__(k, d)
 
 
@@ -254,9 +353,6 @@ def gen_common_cause():
         case 8:
             return ["Do or Die", "The characters are all trying to avert the catastrophe of an all-out war amoung the guilds"]
 
-
-
-
 def gen_one_guild_party_makeup(guild: Guild):
     match guild.name:
         case "Azorius Senate":
@@ -292,3 +388,20 @@ def gen_one_guild_party_makeup(guild: Guild):
         case _:
             print(f"{guild.name} is wrong")
             pass
+
+def gen_character():
+    guilds = GUILDS
+    classes = [BARD, BARBARIAN, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
+    races = [HUMAN, ELF, CENTAUR, GOBLIN, LOXODON, MINOTAUR, SIMIC_HYBRID, VEDALKEN]
+    NEW_CHARACTER = PartyMember(name="Jeff", guild=random.choice(guilds), _class=random.choice(classes), race=random.choice(races))
+    return NEW_CHARACTER
+
+def create_character():
+    my_nu_leng = gen_character()
+    my_nu_leng.set_ab_values()
+    print("Name: ", my_nu_leng.name)
+    print("Class: ", my_nu_leng._class.name)
+    print("Race: ", my_nu_leng.race.name)
+    print("Guild: ", my_nu_leng.guild.name)
+
+# create_character()
