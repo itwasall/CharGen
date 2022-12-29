@@ -11,8 +11,6 @@ class _Class:
             self.__setattr__(k, d)
 DEFAULT_CLASS = _Class("Default Class")
 
-
-
 class Race:
     def __init__(self, name, **kwargs):
         self.name = name
@@ -128,29 +126,8 @@ INTIMIDATION = Skill("Intimidation", ab_score=CHA, prof=0)
 PERFORMANCE = Skill("Performance", ab_score=CHA, prof=0)
 PERSUASION = Skill("Persuasion", ab_score=CHA, prof=0)
 
-"""
-    LANGUAGES
-"""
-ABYSSAL = Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
-CELESTIAL = Language("Celestial", speakers="Angels", script="Celestial")
-COMMON = Language("Common", speakers="Humans", script="Common")
-DRACONIC = Language("Draconic", speakers="Dragons", script="Draconic")
-ELVISH = Language("Elvish", speakers="Elves", script="Elvish")
-GIANT = Language("Giant", speakers=["Ogres", "Giants"], script="Minotaur")
-GOBLIN_L = Language("Goblin", speakers="Goblins", script="Common")
-KRAUL = Language("Kraul", speakers="Kraul", script="Kraul")
-LOXODON_L = Language("Loxodon", speakers="Loxodons", script="Elvish")
-MERFOLK = Language("Merfolk", speakers="Merfolk", script="Merfolk")
-MINOTAUR_L = Language("Minotaur", speakers="Minotaurs", script="Minotaur")
-SPHINX = Language("Sphinx", speakers="Sphinxes", script="-")
-SYLVAN = Language("Sylvan", speakers=["Centaurs", "Dryads"], script="Elvish")
-VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
-
 
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
-
-HUMAN = Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
-ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
 
 BARBARIAN = _Class("Barbarian")
 BARD = _Class("Bard")
