@@ -69,7 +69,7 @@ def dice(sides, throws):
     return total
 
 def dnd_class(race):
-    # Weighting class roll against character race. This information was taken from someones
+    # Weighted class roll against character race. This information was taken from someones
     #  meta-gaming analysis on which races are best suited for each class. I might've tweaked
     #  a few numbers here or there, I cannot remember
     race_dnd_class_weights = {
@@ -175,9 +175,11 @@ def EXCEPT_ability_rolls_half_elf(race, dnd_class):
 
 def age_height_weight(race):
     age = randint(race['age'][0], race['age'][0])
+
     height_inches = race['height'][0] + dice(race['height'][2], race['height'][1])
     height = [int((height_inches - height_inches % 12)/12), height_inches % 12]
     height_format = f"{height[0]}'" + f'{height[1]}"'
+
     weight = race['weight'][0] + dice(race['weight'][2], race['weight'][1])
     weight_format = f"{weight}lbs"
     return age, height_format, weight_format
@@ -228,8 +230,10 @@ def EXCEPT_language_any(tongues, race):
     for it, language in enumerate(lang):
         weight.append(1)
         if language['script'] == 'Dwarvish' and race['name'] == 'Mountain Dwarf' or race['name'] == 'Hill Dwarf':
+      # if language.script == 'Dwarvish' and race.name in ['Mountain Dwarf', 'Hill Dwarf']
             weight[it] += 2
         if language['script'] == 'Elvish' and race['name'] == 'High Elf' or race['name'] == 'Wood Elf' or race['name'] == 'Drow Elf':
+      # if language.script == 'Elvish' and race.name == 'Elf'
             weight[it] += 2
         if language['type'] == 'Standard' and race['name'] != 'Tiefling':
             weight[it] += 2
