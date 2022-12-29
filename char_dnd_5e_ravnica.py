@@ -1,4 +1,5 @@
 import random
+import char_dnd_5e_core as Core
 
 def dice_roll(dicestring):
     throws, sides = dicestring.split("d")
@@ -13,27 +14,6 @@ class Guild:
         return self.name
 DEFAULT_GUILD = Guild("Default Guild")
 
-class _Class:
-    def __init__(self, name, **kwargs):
-        self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-DEFAULT_CLASS = _Class("Default Class")
-
-class Race:
-    def __init__(self, name, **kwargs):
-        self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-DEFAULT_RACE = Race("Default Race")
-
-class Alignment:
-    def __init__(self, law_chaos, good_evil):
-        self.law_chaos = law_chaos 
-        self.good_evil = good_evil
-    def __repr__(self):
-        return f"{self.law_chaos} {self.good_evil}"
-DEFAULT_ALIGNMENT = Alignment("DEFAULT", "ALIGNMENT")
 
 class Language:
     def __init__(self, name, speakers: None, script: None):
@@ -49,7 +29,6 @@ class Language:
 DEFAULT_LANGUAGE = Language("DEFAULT LANGUAGE", "DEFAULT SPEAKERS", "DEFAULT SCRIPT")
 
 class AbilityScore:
-    # Fuck you I don't care if this looks awful
     def __init__(self, name, value = 0):
         self.name = name
         self.value = value
@@ -133,6 +112,20 @@ PERSUASION = Skill("Persuasion", ab_score=CHA, prof=0)
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
 
 """
+    ALIGNMENT
+"""
+LAWFUL_GOOD = Core.Alignment("Lawful", "Good")
+LAWFUL_NEUTRAL = Core.Alignment("Lawful", "Neutral")
+LAWFUL_EVIL = Core.Alignment("Lawful", "Evil")
+NEUTRAL_GOOD = Core.Alignment("Neutral", "Good")
+NEUTRAL_EVIL = Core.Alignment("Neutral", "Evil")
+NEUTRAL_NEUTRAL = Core.Alignment("Neutral", "Neutral")
+CHAOTIC_GOOD = Core.Alignment("Chaotic", "Good")
+CHAOTIC_NEUTRAL = Core.Alignment("Chaotic", "Neutral")
+CHAOTIC_EVIL = Core.Alignment("Chaotic", "Evil")
+
+
+"""
     GUILDS
 """
 AZORIUS_SENATE = Guild("Azorius Senate")
@@ -145,24 +138,6 @@ GRUUL_CLANS = Guild("Gruul Clans")
 CULT_OF_RAKDOS = Guild("Cult of Rakdos")
 BOROS_LEGION = Guild("Boros Legion")
 ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
-
-"""
-    LANGUAGES
-"""
-ABYSSAL = Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
-CELESTIAL = Language("Celestial", speakers="Angels", script="Celestial")
-COMMON = Language("Common", speakers="Humans", script="Common")
-DRACONIC = Language("Draconic", speakers="Dragons", script="Draconic")
-ELVISH = Language("Elvish", speakers="Elves", script="Elvish")
-GIANT = Language("Giant", speakers=["Ogres", "Giants"], script="Minotaur")
-GOBLIN_L = Language("Goblin", speakers="Goblins", script="Common")
-KRAUL = Language("Kraul", speakers="Kraul", script="Kraul")
-LOXODON_L = Language("Loxodon", speakers="Loxodons", script="Elvish")
-MERFOLK = Language("Merfolk", speakers="Merfolk", script="Merfolk")
-MINOTAUR_L = Language("Minotaur", speakers="Minotaurs", script="Minotaur")
-SPHINX = Language("Sphinx", speakers="Sphinxes", script="-")
-SYLVAN = Language("Sylvan", speakers=["Centaurs", "Dryads"], script="Elvish")
-VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
 
 
 
@@ -196,27 +171,27 @@ VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
         [Language_1, {'Choose': [ExLang_1, ExLang_2, ExLang_3]}]
 """
 
-HUMAN = Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
-ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
-CENTAUR = Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
-GOBLIN = Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
-LOXODON = Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
-MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
-SIMIC_HYBRID = Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
-VEDALKEN = Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
+HUMAN = Core.Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
+ELF = Core.Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
+CENTAUR = Core.Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
+GOBLIN = Core.Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
+LOXODON = Core.Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
+MINOTAUR = Core.Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
+SIMIC_HYBRID = Core.Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
+VEDALKEN = Core.Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
 
-BARBARIAN = _Class("Barbarian")
-BARD = _Class("Bard")
-CLERIC = _Class("Cleric")
-DRUID = _Class("Druid")
-FIGHTER = _Class("Fighter")
-MONK = _Class("Monk")
-PALADIN = _Class("Paladin")
-RANGER = _Class("Ranger")
-ROGUE = _Class("Rogue")
-SORCERER = _Class("Sorcerer")
-WARLOCK = _Class("Warlock")
-WIZARD = _Class("Wizard")
+BARBARIAN = Core.BARBARIAN
+BARD = Core.BARD
+CLERIC = Core.CLERIC
+DRUID = Core.DRUID
+FIGHTER = Core.FIGHTER
+MONK = Core.MONK
+PALADIN = Core.PALADIN
+RANGER = Core.RANGER
+ROGUE = Core.ROGUE
+SORCERER = Core.SORCERER
+WARLOCK = Core.WARLOCK
+WIZARD = Core.WIZARD
 
 GUILDS = [AZORIUS_SENATE, BOROS_LEGION, CULT_OF_RAKDOS, GOLGARI_SWARM, GRUUL_CLANS, HOUSE_DIMIR, IZZIT_LEAGUE, ORZHOV_SYNDICATE, SELESNYA_CONCLAVE, SIMIC_COMBINE]
 
@@ -503,3 +478,5 @@ def create_character():
     print(my_nu_leng.acrobatics)
 
 create_character()
+print(CHAOTIC_GOOD)
+print(NEUTRAL_NEUTRAL)
