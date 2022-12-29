@@ -75,9 +75,19 @@ class AbilityScore:
 
     def __isub__(self, value):
         return self.__sub__(value)
-
 DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
+class Skill:
+    def __init__(self, name, ab_score, prof **kwargs):
+        self.name = name
+        self.ab_score = ab_score
+        self.prof = prof
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+"""
+    ABILITY SCORES
+"""
 STR = AbilityScore("Strength")
 DEX = AbilityScore("Dexterity")
 CON = AbilityScore("Constitution")
@@ -85,9 +95,40 @@ INT = AbilityScore("Intelligence")
 WIS = AbilityScore("Wisdom")
 CHA = AbilityScore("Charisma")
 
-
 STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA": CHA}
 
+"""
+    SKILLS
+"""
+# ======= STR ======= 
+ATHLETICS = Skill("Athletics", ab_score=STR, prof=False)
+# ======= DEX ======= 
+ACROBATICS = Skill("Acrobatics", ab_score=DEX, prof=False)
+SLIGHT_OF_HAND = Skill("Slight_Of_Hand", ab_score=DEX, prof=False)
+STEALTH = Skill("Stealth", ab_score=DEX, prof=False)
+# ======= INT ======= 
+ARCANA = Skill("Arcana", ab_score=INT, prof=False)
+HISTORY = Skill("History", ab_score=INT, prof=False)
+INVESTIGATION = Skill("Investigation", ab_score=INT, prof=False)
+NATURE = Skill("Nature", ab_score=INT, prof=False)
+RELIGION = Skill("Religion", ab_score=INT, prof=False)
+# ======= WIS ======= 
+ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS, prof=False)
+INSIGHT = Skill("Insight", ab_score=WIS, prof=False)
+MEDICINE = Skill("Medicine", ab_score=WIS, prof=False)
+PERCEPTION = Skill("Perception", ab_score=WIS, prof=False)
+SURVIVAL = Skill("Survival", ab_score=WIS, prof=False)
+# ======= CHA ======= 
+DECEPTION = Skill("Deception", ab_score=CHA, prof=False)
+INTIMIDATION = Skill("Intimidation", ab_score=CHA, prof=False)
+PERFORMANCE = Skill("Performance", ab_score=CHA, prof=False)
+PERSUASION = Skill("Persuasion", ab_score=CHA, prof=False)
+
+SKILLS = [ATHLETICS, ACROBATICS, SLIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
+
+"""
+    GUILDS
+"""
 AZORIUS_SENATE = Guild("Azorius Senate")
 HOUSE_DIMIR = Guild("House Dimir")
 SIMIC_COMBINE = Guild("Simic Combine")
@@ -99,6 +140,9 @@ CULT_OF_RAKDOS = Guild("Cult of Rakdos")
 BOROS_LEGION = Guild("Boros Legion")
 ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
 
+"""
+    LANGUAGES
+"""
 ABYSSAL = Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
 CELESTIAL = Language("Celestial", speakers="Angels", script="Celestial")
 COMMON = Language("Common", speakers="Humans", script="Common")
@@ -114,6 +158,8 @@ SPHINX = Language("Sphinx", speakers="Sphinxes", script="-")
 SYLVAN = Language("Sylvan", speakers=["Centaurs", "Dryads"], script="Elvish")
 VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
 
+
+
 """
     RACE CLASS CREATION STYLE GUIDE
     ab_score_bonus default
@@ -123,7 +169,7 @@ VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
             "Choice": [Ability_Score_1, Ability_Score_2],
             "Amount": Bonus
         }, (Ability_Score, Bonus)]
-    age_range
+    age
         [Lowest_Age, Highest Age]
     alignment default
         [Lawful/Chatoic/Neutral tendancy, Good/Evil/Neutral tendancy]
@@ -144,14 +190,14 @@ VEDALKEN_L = Language("Vedalken", speakers="Vedalken", script="Vedalken")
         [Language_1, {'Choose': [ExLang_1, ExLang_2, ExLang_3]}]
 """
 
-HUMAN = Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age_range=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
-ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age_range=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
-CENTAUR = Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age_range=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
-GOBLIN = Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age_range=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
-LOXODON = Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age_range=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
-MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age_range=[], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
-SIMIC_HYBRID = Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age_range=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
-VEDALKEN = Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age_range=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
+HUMAN = Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
+ELF = Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
+CENTAUR = Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
+GOBLIN = Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
+LOXODON = Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
+MINOTAUR = Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
+SIMIC_HYBRID = Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
+VEDALKEN = Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
 
 BARBARIAN = _Class("Barbarian")
 BARD = _Class("Bard")
@@ -188,7 +234,7 @@ class PartyMember:
         """ Cool Numbers """
         self.level = 1
         self.stats = stats
-        self.age = 0
+        self.age = random.randint(self.race.age[0], self.race.age[1])
         """ Height/ Weight """
         self.height = ""
         # Required for calculating weight as well
@@ -332,6 +378,19 @@ def gen_party_makeup(party_name = "Default"):
             ]
             return Party("Benevolent", party_members)
 
+def gen_extra_traits(race: Race):
+    match race.name:
+        case "Centaur":
+            race.extra_traits = {
+                    'Fey': 'Your creature type is fey, rather than humanoid',
+                    'Charge': 'If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves',
+                    'Hooves': 'Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your STR modifier, instead of the bludgeoning damage normal of an unarmed strike.',
+                    'Equine Build': 'You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs 4 extra feet, instead of the 1 extra foot.',
+                    }
+            # race.proficiencies = 
+
+
+
 def gen_common_cause():
     match dice_roll("1d8"):
         case 1:
@@ -403,5 +462,6 @@ def create_character():
     print("Class: ", my_nu_leng._class.name)
     print("Race: ", my_nu_leng.race.name)
     print("Guild: ", my_nu_leng.guild.name)
+    print("Age: ", my_nu_leng.age)
 
-# create_character()
+create_character()
