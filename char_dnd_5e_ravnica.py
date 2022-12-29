@@ -17,9 +17,7 @@ DEFAULT_GUILD = Guild("Default Guild")
 
 DEFAULT_ABILITY_SCORE = Core.AbilityScore("DEFAULT ABILITY_SCORE")
 
-"""
-    ABILITY SCORES
-"""
+# ABILITY SCORES
 STR = Core.STR
 DEX = Core.DEX
 CON = Core.CON
@@ -27,15 +25,20 @@ INT = Core.INT
 WIS = Core.WIS
 CHA = Core.CHA
 STAT_BLOCK = Core.STAT_BLOCK
-
-"""
-    SKILLS
-"""
-SKILLS = [Core.ATHLETICS, Core.ACROBATICS, Core.SLEIGHT_OF_HAND, Core.STEALTH, Core.ARCANA, Core.HISTORY, Core.INVESTIGATION, Core.NATURE, Core.RELIGION, Core.ANIMAL_HANDLING, Core.INSIGHT, Core.MEDICINE, Core.PERCEPTION, Core.SURVIVAL, Core.DECEPTION, Core.INTIMIDATION, Core.PERFORMANCE, Core.PERSUASION]
-
-"""
-    ALIGNMENT
-"""
+# SKILLS
+SKILLS = [
+    # STR
+    Core.ATHLETICS,
+    # DEX
+    Core.ACROBATICS, Core.SLEIGHT_OF_HAND, Core.STEALTH,
+    # INT 
+    Core.ARCANA, Core.HISTORY, Core.INVESTIGATION, Core.NATURE, Core.RELIGION, 
+    # WIS
+    Core.ANIMAL_HANDLING, Core.INSIGHT, Core.MEDICINE, Core.PERCEPTION, Core.SURVIVAL,
+    # CHA
+    Core.DECEPTION, Core.INTIMIDATION, Core.PERFORMANCE, Core.PERSUASION
+]
+# ALIGNMENT
 LAWFUL_GOOD = Core.Alignment("Lawful", "Good")
 LAWFUL_NEUTRAL = Core.Alignment("Lawful", "Neutral")
 LAWFUL_EVIL = Core.Alignment("Lawful", "Evil")
@@ -45,10 +48,7 @@ NEUTRAL_NEUTRAL = Core.Alignment("Neutral", "Neutral")
 CHAOTIC_GOOD = Core.Alignment("Chaotic", "Good")
 CHAOTIC_NEUTRAL = Core.Alignment("Chaotic", "Neutral")
 CHAOTIC_EVIL = Core.Alignment("Chaotic", "Evil")
-
-"""
-    GUILDS
-"""
+# GUILDS
 AZORIUS_SENATE = Guild("Azorius Senate")
 HOUSE_DIMIR = Guild("House Dimir")
 SIMIC_COMBINE = Guild("Simic Combine")
@@ -59,10 +59,8 @@ GRUUL_CLANS = Guild("Gruul Clans")
 CULT_OF_RAKDOS = Guild("Cult of Rakdos")
 BOROS_LEGION = Guild("Boros Legion")
 ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
-
-"""
-    LANGUAGES
-"""
+GUILDS = [AZORIUS_SENATE, BOROS_LEGION, CULT_OF_RAKDOS, GOLGARI_SWARM, GRUUL_CLANS, HOUSE_DIMIR, IZZIT_LEAGUE, ORZHOV_SYNDICATE, SELESNYA_CONCLAVE, SIMIC_COMBINE]
+# LANGUAGES
 ABYSSAL = Core.Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
 CELESTIAL = Core.Language("Celestial", speakers="Angels", script="Celestial")
 COMMON = Core.Language("Common", speakers="Humans", script="Common")
@@ -115,7 +113,7 @@ LOXODON = Core.Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450
 MINOTAUR = Core.Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
 SIMIC_HYBRID = Core.Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
 VEDALKEN = Core.Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
-
+# CLASS
 BARBARIAN = Core.BARBARIAN
 BARD = Core.BARD
 CLERIC = Core.CLERIC
@@ -128,8 +126,6 @@ ROGUE = Core.ROGUE
 SORCERER = Core.SORCERER
 WARLOCK = Core.WARLOCK
 WIZARD = Core.WIZARD
-
-GUILDS = [AZORIUS_SENATE, BOROS_LEGION, CULT_OF_RAKDOS, GOLGARI_SWARM, GRUUL_CLANS, HOUSE_DIMIR, IZZIT_LEAGUE, ORZHOV_SYNDICATE, SELESNYA_CONCLAVE, SIMIC_COMBINE]
 
 class PartyMember:
     def __init__(
@@ -160,24 +156,24 @@ class PartyMember:
         self.weight = ""
         """ Languages & Skills """
         self.languages = []
-        self.athletics = SKILLS[0]
-        self.acrobatics = SKILLS[1] 
-        self.sleight_of_hand = SKILLS[2]
-        self.stealth = SKILLS[3]
-        self.arcana = SKILLS[4]
-        self.history = SKILLS[5]
-        self.investigation = SKILLS[6]
-        self.nature = SKILLS[7]
-        self.religion = SKILLS[8]
-        self.animal_handling = SKILLS[9]
-        self.insight = SKILLS[10]
-        self.medicine = SKILLS[11]
-        self.perception = SKILLS[12]
-        self.survival = SKILLS[13]
-        self.deception = SKILLS[14]
-        self.intimidation = SKILLS[15]
-        self.performance = SKILLS[16]
-        self.persuasion = SKILLS[17]
+        self.athletics = skills[0]
+        self.acrobatics = skills[1] 
+        self.sleight_of_hand = skills[2]
+        self.stealth = skills[3]
+        self.arcana = skills[4]
+        self.history = skills[5]
+        self.investigation = skills[6]
+        self.nature = skills[7]
+        self.religion = skills[8]
+        self.animal_handling = skills[9]
+        self.insight = skills[10]
+        self.medicine = skills[11]
+        self.perception = skills[12]
+        self.survival = skills[13]
+        self.deception = skills[14]
+        self.intimidation = skills[15]
+        self.performance = skills[16]
+        self.persuasion = skills[17]
 
         for k, d in kwargs.items():
             self.__setattr__(k, d)
@@ -211,13 +207,13 @@ class PartyMember:
             for idx, lang in enumerate(self.race.language):
                 if isinstance(lang) == dict and "Choose" in lang.keys():
                     self.languages.append(random.choice(lang["Choose"]))
-                elif isinstance(lang) == Language:
+                elif isinstance(lang) == Core.Language:
                     self.languages.append(lang)
                 else:
                     continue
                 if idx == 0:
                     self.native_lang = lang
-        elif isinstance(self.race.language) == Language:
+        elif isinstance(self.race.language) == Core.Language:
             self.languages = [self.race.language]
             self.shitty_monolingual_cunt = True
         else:
@@ -235,9 +231,8 @@ def gen_party_makeup(party_name = "Default"):
     roll = dice_roll("1d8")
     match roll:
         case 1:
-            template = "One-Guild Party"
             party_guild = random.choice(GUILDS)
-            party_makeup = Party(party_name, gen_one_guild_party_makeup(party_guild))
+            return Party("One Guild Party", gen_one_guild_party_makeup(party_guild))
         case 2:
             party_members = [
                 random.choice([
@@ -257,6 +252,7 @@ def gen_party_makeup(party_name = "Default"):
                     PartyMember(guild=IZZIT_LEAGUE, _class=WIZARD)
                 ]),
             ]
+            return Party("Ordinary", party_members)
         case 3:
             party_members = [
                 PartyMember(guild=BOROS_LEGION, _class=CLERIC),
@@ -315,26 +311,28 @@ def gen_party_makeup(party_name = "Default"):
             ]
             return Party("Benevolent", party_members)
 
-def gen_extra_traits(partymember: PartyMember):
-    match partymember.race.name:
+def gen_extra_traits(Character: PartyMember):
+    match Character.race.name:
         case "Centaur":
-            partymember.race.extra_traits = {
+            Character.extra_traits = {
                     'Fey': 'Your creature type is fey, rather than humanoid',
                     'Charge': 'If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves',
                     'Hooves': 'Your hooves are natural melee weapons, which you can use to make unarmed strikes. If you hit with them, you deal bludgeoning damage equal to 1d4 + your STR modifier, instead of the bludgeoning damage normal of an unarmed strike.',
                     'Equine Build': 'You count as one size larger when determining your carrying capacity and the weight you can push or drag. In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs 4 extra feet, instead of the 1 extra foot.',
-                    }
+                }
             # race.proficiencies = 
         case "Minotaur":
-            partymember.race.extra_traits = {
+            imposing_presence_roll = random.choice(['Intimidation', 'Persuasion'])
+            if imposing_presence_roll == 'Intimidation':
+                Character.intimidation.set_proficiency_bonus(Character.level)
+            elif imposing_presence_roll == 'Persuasion':
+                Character.persuasion.set_proficiency_bonus(Character.level)
+            Character.extra_traits = {
                 'Horns': 'Your horns are natural melee weapons, which you can use to make unarmd stirkes. Ifyou hit with them, you deal piercing damage sequal to 1d6 + your STR modifier, instead of the bludgeoning damage normal for an unarmed strike',
                 'Goring Rush': 'Immediately after you use the Dash action on your turn and move at least 20 feet you can make one melee attack with your horns as a bonus action',
                 'Hammering Horns': 'Immediately after you hit a creature with a melee attack as parto fhte Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The tartget must be no more than one size larger than you and within 5 feet of you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your STR modifier, you push it up to 10 feet away from you.',
-                'Imposing Presence': 'You have proficiencies in one of the following skills of your choice: Intimidation or Persuasion'
+                'Imposing Presence': f'You have proficiencies in one of the following skills of your choice: Intimidation or Persuasion. DEBUG: {imposing_presence_roll} was chosen'
             }
-            imposing_presence_roll = random.choice(['Intimidation', 'Persuasion'])
-            if imposing_presence_roll == 'Intimidation':
-                pass
 
 
 

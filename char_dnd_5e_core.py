@@ -75,16 +75,31 @@ class AbilityScore:
         return self.__sub__(value)
 DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
+def ProficiencyBonus(level):
+    return ((level - 1) // 4) + 2
+
 class Skill:
-    def __init__(self, name, ab_score, prof, **kwargs):
+    def __init__(self, name, ab_score, prof: bool = False, bonus = 0, **kwargs):
         self.name = name
         self.ab_score = ab_score
         self.prof = prof
+        self.bonus = bonus
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
+    def __add__(self, value):
+        self.bonus += value
+        return Skill(self.name, self.ab_score, self.prof)
+    
+    def __iadd__(self, value):
+        return self.__add__(value)
+
     def __repr__(self):
         return f"({self.ab_score}) {self.name}: +-{self.prof}"
+
+    def set_proficiency_bonus(self, level: int):
+        self.prof = True
+        self.__add__(self, ProficiencyBonus(level))
 
 
 """
@@ -103,28 +118,28 @@ STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA":
     SKILLS
 """
 # ======= STR ======= 
-ATHLETICS = Skill("Athletics", ab_score=STR, prof=0)
+ATHLETICS = Skill("Athletics", ab_score=STR)
 # ======= DEX ======= 
-ACROBATICS = Skill("Acrobatics", ab_score=DEX, prof=0)
-SLEIGHT_OF_HAND = Skill("Sleight_Of_Hand", ab_score=DEX, prof=0)
-STEALTH = Skill("Stealth", ab_score=DEX, prof=0)
+ACROBATICS = Skill("Acrobatics", ab_score=DEX)
+SLEIGHT_OF_HAND = Skill("Sleight_Of_Hand", ab_score=DEX)
+STEALTH = Skill("Stealth", ab_score=DEX)
 # ======= INT ======= 
-ARCANA = Skill("Arcana", ab_score=INT, prof=0)
-HISTORY = Skill("History", ab_score=INT, prof=0)
-INVESTIGATION = Skill("Investigation", ab_score=INT, prof=0)
-NATURE = Skill("Nature", ab_score=INT, prof=0)
-RELIGION = Skill("Religion", ab_score=INT, prof=0)
+ARCANA = Skill("Arcana", ab_score=INT)
+HISTORY = Skill("History", ab_score=INT)
+INVESTIGATION = Skill("Investigation", ab_score=INT)
+NATURE = Skill("Nature", ab_score=INT)
+RELIGION = Skill("Religion", ab_score=INT)
 # ======= WIS ======= 
-ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS, prof=0)
-INSIGHT = Skill("Insight", ab_score=WIS, prof=0)
-MEDICINE = Skill("Medicine", ab_score=WIS, prof=0)
-PERCEPTION = Skill("Perception", ab_score=WIS, prof=0)
-SURVIVAL = Skill("Survival", ab_score=WIS, prof=0)
+ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS)
+INSIGHT = Skill("Insight", ab_score=WIS)
+MEDICINE = Skill("Medicine", ab_score=WIS)
+PERCEPTION = Skill("Perception", ab_score=WIS)
+SURVIVAL = Skill("Survival", ab_score=WIS)
 # ======= CHA ======= 
-DECEPTION = Skill("Deception", ab_score=CHA, prof=0)
-INTIMIDATION = Skill("Intimidation", ab_score=CHA, prof=0)
-PERFORMANCE = Skill("Performance", ab_score=CHA, prof=0)
-PERSUASION = Skill("Persuasion", ab_score=CHA, prof=0)
+DECEPTION = Skill("Deception", ab_score=CHA)
+INTIMIDATION = Skill("Intimidation", ab_score=CHA)
+PERFORMANCE = Skill("Performance", ab_score=CHA)
+PERSUASION = Skill("Persuasion", ab_score=CHA)
 
 
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
@@ -154,5 +169,4 @@ class Classes:
         self.RANGER = RANGER
         self.SORCERER = SORCERER
         self.WARLOCK = WARLOCK
-        self.WIZARD = WIZARD
-
+        self.WIZARD =250 
