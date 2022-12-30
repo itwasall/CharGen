@@ -63,6 +63,15 @@ class Race:
             self.__setattr__(k, d)
 DEFAULT_RACE = Race("Default Race")
 
+class Background:
+    def __init__(self, name **kwargs):
+        self.name = name
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+    def __repr__(self):
+        return self.name
+
 class Alignment:
     def __init__(self, law_chaos, good_evil):
         self.law_chaos = law_chaos 
@@ -209,6 +218,36 @@ sp = Coin("Silver Piece", value=10)
 ep = Coin("Electrum Piece", value=50)
 gp = Coin("Gold Piece", value=100)
 pp = Coin("Platinum Piece", value=1000)
+
+"""
+    SKILLS
+"""
+# ======= STR ======= 
+ATHLETICS = Skill("Athletics", ab_score=STR)
+# ======= DEX ======= 
+ACROBATICS = Skill("Acrobatics", ab_score=DEX)
+SLEIGHT_OF_HAND = Skill("Sleight_Of_Hand", ab_score=DEX)
+STEALTH = Skill("Stealth", ab_score=DEX)
+# ======= INT ======= 
+ARCANA = Skill("Arcana", ab_score=INT)
+HISTORY = Skill("History", ab_score=INT)
+INVESTIGATION = Skill("Investigation", ab_score=INT)
+NATURE = Skill("Nature", ab_score=INT)
+RELIGION = Skill("Religion", ab_score=INT)
+# ======= WIS ======= 
+ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS)
+INSIGHT = Skill("Insight", ab_score=WIS)
+MEDICINE = Skill("Medicine", ab_score=WIS)
+PERCEPTION = Skill("Perception", ab_score=WIS)
+SURVIVAL = Skill("Survival", ab_score=WIS)
+# ======= CHA ======= 
+DECEPTION = Skill("Deception", ab_score=CHA)
+INTIMIDATION = Skill("Intimidation", ab_score=CHA)
+PERFORMANCE = Skill("Performance", ab_score=CHA)
+PERSUASION = Skill("Persuasion", ab_score=CHA)
+
+
+SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
         
 """
     WEAPONS
@@ -434,41 +473,40 @@ HORN = Tool("Horn", cost=[3, gp], tool_type='Instrument', category="Tool")
 PAN_FLUTE = Tool("Pan_Flute", cost=[12, gp], tool_type='Instrument', category="Tool")
 SHAWM = Tool("Shawm", cost=[2, gp], tool_type='Instrument', category="Tool")
 VIOL = Tool("Viol", cost=[30, gp], tool_type='Instrument', category="Tool")
-
+# EQUIPMENT LISTS
 ARTISAN_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Artisan')]
 MUSICAL_INSTRUMENT = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Instrument')]
 GAMING_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Gaming')]
 TOOLS = [tool for tool in Item.items if (hasattr(tool, "category") and tool.category == 'Tool')]
 
 """
-    SKILLS
+    BACKGROUND SPECIFIC GEAR
 """
-# ======= STR ======= 
-ATHLETICS = Skill("Athletics", ab_score=STR)
-# ======= DEX ======= 
-ACROBATICS = Skill("Acrobatics", ab_score=DEX)
-SLEIGHT_OF_HAND = Skill("Sleight_Of_Hand", ab_score=DEX)
-STEALTH = Skill("Stealth", ab_score=DEX)
-# ======= INT ======= 
-ARCANA = Skill("Arcana", ab_score=INT)
-HISTORY = Skill("History", ab_score=INT)
-INVESTIGATION = Skill("Investigation", ab_score=INT)
-NATURE = Skill("Nature", ab_score=INT)
-RELIGION = Skill("Religion", ab_score=INT)
-# ======= WIS ======= 
-ANIMAL_HANDLING = Skill("Animal_Handling", ab_score=WIS)
-INSIGHT = Skill("Insight", ab_score=WIS)
-MEDICINE = Skill("Medicine", ab_score=WIS)
-PERCEPTION = Skill("Perception", ab_score=WIS)
-SURVIVAL = Skill("Survival", ab_score=WIS)
-# ======= CHA ======= 
-DECEPTION = Skill("Deception", ab_score=CHA)
-INTIMIDATION = Skill("Intimidation", ab_score=CHA)
-PERFORMANCE = Skill("Performance", ab_score=CHA)
-PERSUASION = Skill("Persuasion", ab_score=CHA)
+# ACOLYTE
+PRAYER_BOOK = Item("Prayer_Book")
+PRAYER_WHEEL = Item("Prayer_Wheel")
+STICKS_OF_INCENSE = Item("Sticks_of_Incense", quantity=5)
+VESTMENTS = Item("Vestments")
+# CHARLATAN
 
 
-SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
+"""
+    BACKGROUND
+"""
+ACOLYTE = Background("Acolyte", skill_profs=[INSIGHT, RELIGION], tool_profs=[], equipment=[{'Choose 1': HOLY_SYMBOL}, {'Choose 1': [PRAYER_BOOK, PRAYER_WHEEL]}, VESTMENTS, CLOTHES_COMMON], money=[15, gp], languages[{'Choose 2': []}])
+CHARLATAN = Background("Charlatan", skill_profs=[DECEPTION, SLEIGHT_OF_HAND], tool_profs=[DISGUISE_KIT, FORGERY_KIT], equipment=[CLOTHES_FINE, DISGUISE_KIT, ])
+CRIMINAL = Background("Criminal", skill_profs=[], tool_profs=[], equipment=[])
+ENTERTAINER = Background("Entertainer", skill_profs=[], tool_profs=[], equipment=[])
+FOLK_HERO = Background("Folk_Hero", skill_profs=[], tool_profs=[], equipment=[])
+GUILD_ARTISAN = Background("Guild_Artisan", skill_profs=[], tool_profs=[], equipment=[])
+HERMIT = Background("Hermit", skill_profs=[], tool_profs=[], equipment=[])
+NOBLE = Background("Noble", skill_profs=[], tool_profs=[], equipment=[])
+OUTLANDER = Background("Outlander", skill_profs=[], tool_profs=[], equipment=[])
+SAGE = Background("Sage", skill_profs=[], tool_profs=[], equipment=[])
+SAILOR = Background("Sailor", skill_profs=[], tool_profs=[], equipment=[])
+SOLDIER = Background("Soldier", skill_profs=[], tool_profs=[], equipment=[])
+URCHIN = Background("Urchin", skill_profs=[], tool_profs=[], equipment=[])
+
 
 """
     CLASSES
@@ -740,6 +778,18 @@ ALCHEMIST = _SubClass("Alchemist", _class=ARTIFICER, tasha=True)
 ARMORER = _SubClass("Armorer", _class=ARTIFICER, tasha=True)
 ARTILLERIST = _SubClass("Artillerist", _class=ARTIFICER, tasha=True)
 BATTLE_SMITH = _SubClass("Battle_Smith", _class=ARTIFICER, tasha=True)
+"""
+    RACE
+"""
+DRAGONBORN = Race("Dragonborn")
+DWARF = Race("Dwarf")
+ELF = Race("Elf")
+GNOME = Race("Gnome")
+HALFLING = Race("Halfling")
+HALF_ELF = Race("Half_Elf")
+HALF_ORC = Race("Half_Orc")
+HUMAN = Race("Human")
+TIEFLING = Race("Tiefling")
 
 if __name__ == "__main__":
     """
