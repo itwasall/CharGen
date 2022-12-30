@@ -34,6 +34,8 @@ def GetProficiencies(data):
         case 'Has':
             return data['Has']
 
+
+
 def MakeItemList(attribute, attr_value=None):
     if attr_value == None:
         return [item for item in Item.items if hasattr(item, attribute)]
@@ -928,6 +930,29 @@ HALF_ORC = Race("Half_Orc")
 HUMAN = Race("Human")
 TIEFLING = Race("Tiefling")
 
+def Choose(data: list):
+    return random.choice(data)
+
+def Unpack(data: list):
+    print("unpack launched")
+    output = []
+    for item in data:
+        if type(item) == dict:
+            print("item is dict")
+            item_keys = list(item.keys())
+            match item_keys[0]:
+                case "Choose 1":
+                    output.append(Unpack(item[item_keys[0]]))
+        elif type(item) == list:
+            print("item is list")
+            output.append(random.choice(item))
+        else:
+            print("item is not dict")
+    return output
+
+
+        
+
 if __name__ == "__main__":
     """
     print(f"Total subclasses: {len(_SubClass.items)}")
@@ -959,3 +984,5 @@ if __name__ == "__main__":
 
     roll_class = MONK 
     tool_prof = GetProficiencies(roll_class.proficiencies['Tools'])
+    x = Unpack(BARD.equipment)
+    print(x)
