@@ -32,6 +32,12 @@ def GetProficiencies(data):
         case 'Has':
             return data['Has']
 
+def MakeItemList(attribute, attr_value=None):
+    if attr_value == None:
+        return [item for item in Item.items if hasattr(item, attribute)]
+    else:
+        return [item for item in Item.items if (hasattr(item, attribute) and item.__getattribute__(attribute) == attr_value)]
+
 class _Class:
     items = []
     def __init__(self, name, **kwargs):
@@ -64,7 +70,7 @@ class Race:
 DEFAULT_RACE = Race("Default Race")
 
 class Background:
-    def __init__(self, name **kwargs):
+    def __init__(self, name, **kwargs):
         self.name = name
         for k, d in kwargs.items():
             self.__setattr__(k, d)
@@ -197,6 +203,14 @@ class Tool(Item):
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
+class Vehicle(Item):
+    def __init__(self, name, vehicle_type=None, **kwargs):
+        super().__init__(name)
+        self.vehicle_type = vehicle_type
+        for k, d in kwargs.items():
+            self.__setattr__(k ,d)
+
+
 
 """
     ABILITY SCORES
@@ -248,7 +262,40 @@ PERSUASION = Skill("Persuasion", ab_score=CHA)
 
 
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
-        
+
+"""
+    VEHICLES 
+"""
+# MOUNTS
+CAMEL = Vehicle("Camel", cost=[50, gp], speed=50, vehicle_type='Land', subtype='Animal')
+DONKEY = Vehicle("Donkey", cost=[8, gp], speed=40, vehicle_type='Land', subtype='Animal')
+ELEPHANT = Vehicle("Elephant", cost=[200, gp], speed=40, vehicle_type='Land', subtype='Animal')
+HORSE_DRAFT = Vehicle("Horse_Draft", cost=[50, gp], speed=40, vehicle_type='Land', subtype='Animal')
+HORSE_RIDING = Vehicle("Horse_Riding", cost=[75, gp], speed=60, vehicle_type='Land', subtype='Animal')
+MASTIFF = Vehicle("Mastiff", cost=[25, gp], speed=40, vehicle_type='Land', subtype='Animal')
+PONY = Vehicle("Pony", cost=[30, gp], speed=40, vehicle_type='Land', subtype='Animal')
+WARHORSE = Vehicle("Warhorse", cost=[400, gp], speed=60, vehicle_type='Land', subtype='Animal')
+# DRAWN VEHICLES        
+BARDING = Vehicle("Barding", vehicle_type='Land', subtype='Vehicle')
+BIT_AND_BRIDLE = Vehicle("Bit_and_Bridle", vehicle_type='Land', subtype='Vehicle')
+CARRIAGE = Vehicle("Carriage", vehicle_type='Land', subtype='Vehicle')
+CART = Vehicle("Cart", vehicle_type='Land', subtype='Vehicle')
+CHARIOT = Vehicle("Chariot", vehicle_type='Land', subtype='Vehicle')
+FEED = Vehicle("Feed", vehicle_type='Land', subtype='Vehicle')
+SADDLEBAGS = Vehicle("Saddlebags", vehicle_type='Land', subtype='Vehicle')
+SLED = Vehicle("Sled", vehicle_type='Land', subtype='Vehicle')
+STABLING = Vehicle("Stabling", vehicle_type='Land', subtype='Vehicle')
+WAGON = Vehicle("Wagon", vehicle_type='Land', subtype='Vehicle')
+# WATER VEHICLES
+GALLEY = Vehicle("Galley", cost=[30_000, gp], vehicle_type='Water')
+KEELBOAT = Vehicle("Keelboat", cost=[3000, gp], vehicle_type='Water')
+LONGSHIP = Vehicle("Longship", cost=[10_000, gp], vehicle_type='Water')
+ROWBOAT = Vehicle("Rowboat", cost=[50, gp], vehicle_type='Water')
+SAILING_SHIP = Vehicle("Sailing_Ship", cost=[10_000, gp], vehicle_type='Water')
+WARSHIP = Vehicle("Warship", cost=[25_000, gp], vehicle_type='Water')
+
+LAND_VEHICLES = MakeItemList("vehicle_type", "Land")
+WATER_VEHICLES = MakeItemList("vehicle_type", "Water")
 """
     WEAPONS
 """
@@ -294,8 +341,8 @@ HEAVY_CROSSBOW = Weapon("Heavy_Crossbow", cost=[50, gp], wpn_type='Martial', is_
 LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 
-SIMPLE_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Simple')]
-MARTIAL_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Martial')]
+SIMPLE_WEAPONS = MakeItemList("wpn_type", "Simple")
+MARTIAL_WEAPONS = MakeItemList("wpn_type", "Martial")
 
 """
     ARMOR
@@ -318,10 +365,10 @@ PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None], categor
 # SHIELD
 SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None], category='Armor')
 
-LIGHT_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Light')]
-MEDIUM_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Medium')]
-HEAVY_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Heavy')]
-SHIELDS = [armor for armor in Item.items if armor.name == "Shield"]
+LIGHT_ARMOR = MakeItemList("arm_type", "Light")
+MEDIUM_ARMOR = MakeItemList("arm_type", "Medium")
+HEAVY_ARMOR = MakeItemList("arm_type", "Heavy")
+SHIELDS = MakeItemList("arm_type", "Shield")
 ALL_ARMOR = LIGHT_ARMOR + MEDIUM_ARMOR + HEAVY_ARMOR
 
 """
@@ -430,6 +477,10 @@ YEW_WAND = Item("Yew_Wand", cost=[100, gp], druidic_focus=True, category="Advent
 AMULET = Item("Amulet", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
 EMBLEM = Item("Emblem", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
 RELIQUARY = Item("Reliquary", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
+# ITEM LISTS
+ARCANE_FOCUS = MakeItemList("arcane_focus")
+DRUIDIC_FOCUS = MakeItemList("druidic_focus")
+HOLY_SYMBOL = MakeItemList("holy_symbol")
 
 """
     TOOLS
@@ -473,39 +524,75 @@ HORN = Tool("Horn", cost=[3, gp], tool_type='Instrument', category="Tool")
 PAN_FLUTE = Tool("Pan_Flute", cost=[12, gp], tool_type='Instrument', category="Tool")
 SHAWM = Tool("Shawm", cost=[2, gp], tool_type='Instrument', category="Tool")
 VIOL = Tool("Viol", cost=[30, gp], tool_type='Instrument', category="Tool")
-# EQUIPMENT LISTS
-ARTISAN_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Artisan')]
-MUSICAL_INSTRUMENT = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Instrument')]
-GAMING_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Gaming')]
-TOOLS = [tool for tool in Item.items if (hasattr(tool, "category") and tool.category == 'Tool')]
+# TOOL LISTS
+ARTISAN_TOOLS = MakeItemList("tool_type", "Artisan")
+MUSICAL_INSTRUMENT = MakeItemList("tool_type", "Instrument")
+GAMING_TOOLS = MakeItemList("tool_type", "Gaming")
+TOOLS = MakeItemList("category", "Tool")
 
 """
     BACKGROUND SPECIFIC GEAR
 """
 # ACOLYTE
-PRAYER_BOOK = Item("Prayer_Book")
-PRAYER_WHEEL = Item("Prayer_Wheel")
-STICKS_OF_INCENSE = Item("Sticks_of_Incense", quantity=5)
-VESTMENTS = Item("Vestments")
+PRAYER_BOOK = Item("Prayer_Book", background='Acolyte')
+PRAYER_WHEEL = Item("Prayer_Wheel", background='Acolyte')
+STICKS_OF_INCENSE = Item("Sticks_of_Incense", quantity=5, background='Acolyte')
+VESTMENTS = Item("Vestments", background='Acolyte')
 # CHARLATAN
-
-
+STOPPERED_BOTTLES = Item("Stoppered_Bottles", background='Charlatan')
+WEIGHTED_DICE = Item("Weighted_Dice", background='Charlatan')
+DECK_OF_MARKED_CARDS = Item("Deck_of_Marked_Cards", background='Charlatan')
+SIGNET_RING_OF_IMAGINARY_DUKE = Item("Signet_Ring_of_Imaginary_Duke", background='Charlatan')
+CHARLATAN_ITEMS = MakeItemList("background", "Charlatan")
+# Criminal
+DARK_HOOD = Item("Dark Hood", background='Criminal')
+# Entertainer
+LOVE_LETTER = Item("Love_Letter", background='Entertainer')
+LOCK_OF_HAIR = Item("Lock_of_Hair", background='Entertainer')
+ADMIRER_TRINKET = Item("Admirer_Trinket", background='Entertainer')
+ENTERTAINER_ITEMS = MakeItemList("background", 'Entertainer')
+# GUILD_ARTISAN
+LETTER_OF_INTRODUCTION = Item("Letter_of_Introduction", background='Guild Artisan')
+# NOBLE
+SCROLL_OF_PEDIGREE = Item("Scroll_of_Pedigree", background='Noble')
+# OUTLANDER
+HUNTING_TRAP = Item("Hunting_Trap", background='Outlander')
+ANIMAL_TROPHY = Item("Animal_Trophy", background='Outlander')
+# SAGE
+QUILL = Item("Quill", background='Sage')
+LETTER_FROM_DEAD_COLLEAGUE = Item("Letter_from_Dead_Colleague", background='Sage')
+# SAILOR
+BELAYING_PIN = Item("Belaying_Pin", background='Sailor')
+LUCKY_CHARM = Item("Lucky Charm", background='Sailor')
+# SOLDIER
+INSIGNIA_OF_RANK = Item("Insignia_of_Rank", background='Solider')
+TROPHY_FROM_FALLEN_ENEMY = Item("Trophy_from_Fallen_Enemy", background='Solider')
+BONE_DICE = Item("Bone_Dice", background='Solider')
+DECK_OF_CARDS = Item("Deck_of_Cards", background='Solider')
+# URCHIN
+SMALL_KNIFE = Item("Small_Knife", background='Urchin')
+MAP_OF_HOMETOWN = Item("Map_of_Hometown", background='Urchin')
+PET_MOUSE = Item("Pet_Mouse", background='Urchin')
+PARENTAL_TOKEN_OF_REMEMBERANCE = Item("Parental_Token_of_Rememberance", background='Urchin')
+# Shit uhhh
+VEHICLES_WATER = Item("Water Vehicles")
+VEHICLES_LAND = Item("Land Vehicles")
 """
     BACKGROUND
 """
-ACOLYTE = Background("Acolyte", skill_profs=[INSIGHT, RELIGION], tool_profs=[], equipment=[{'Choose 1': HOLY_SYMBOL}, {'Choose 1': [PRAYER_BOOK, PRAYER_WHEEL]}, VESTMENTS, CLOTHES_COMMON], money=[15, gp], languages[{'Choose 2': []}])
-CHARLATAN = Background("Charlatan", skill_profs=[DECEPTION, SLEIGHT_OF_HAND], tool_profs=[DISGUISE_KIT, FORGERY_KIT], equipment=[CLOTHES_FINE, DISGUISE_KIT, ])
-CRIMINAL = Background("Criminal", skill_profs=[], tool_profs=[], equipment=[])
-ENTERTAINER = Background("Entertainer", skill_profs=[], tool_profs=[], equipment=[])
-FOLK_HERO = Background("Folk_Hero", skill_profs=[], tool_profs=[], equipment=[])
-GUILD_ARTISAN = Background("Guild_Artisan", skill_profs=[], tool_profs=[], equipment=[])
-HERMIT = Background("Hermit", skill_profs=[], tool_profs=[], equipment=[])
-NOBLE = Background("Noble", skill_profs=[], tool_profs=[], equipment=[])
-OUTLANDER = Background("Outlander", skill_profs=[], tool_profs=[], equipment=[])
-SAGE = Background("Sage", skill_profs=[], tool_profs=[], equipment=[])
-SAILOR = Background("Sailor", skill_profs=[], tool_profs=[], equipment=[])
-SOLDIER = Background("Soldier", skill_profs=[], tool_profs=[], equipment=[])
-URCHIN = Background("Urchin", skill_profs=[], tool_profs=[], equipment=[])
+ACOLYTE = Background("Acolyte", skill_profs=[INSIGHT, RELIGION], tool_profs=[], language=[{'Choose 2': []}], equipment=[{'Choose 1': HOLY_SYMBOL}, {'Choose 1': [PRAYER_BOOK, PRAYER_WHEEL]}, VESTMENTS, CLOTHES_COMMON], money=[15, gp])
+CHARLATAN = Background("Charlatan", skill_profs=[DECEPTION, SLEIGHT_OF_HAND], tool_profs=[DISGUISE_KIT, FORGERY_KIT], equipment=[CLOTHES_FINE, DISGUISE_KIT, {'Choose 1': CHARLATAN_ITEMS}], money=[15, gp])
+CRIMINAL = Background("Criminal", skill_profs=[DECEPTION, STEALTH], tool_profs=[{'Choose 1': GAMING_TOOLS}, THIEVES_TOOLS], equipment=[CROWBAR, CLOTHES_COMMON, DARK_HOOD], money=[15, gp])
+ENTERTAINER = Background("Entertainer", skill_profs=[ACROBATICS, PERFORMANCE], tool_profs=[DISGUISE_KIT, {'Choose 1': MUSICAL_INSTRUMENT}], equipment=[{'Choose 1': MUSICAL_INSTRUMENT}, {'Choose 1': ENTERTAINER_ITEMS}, CLOTHES_COSTUME], money=[15, gp])
+FOLK_HERO = Background("Folk_Hero", skill_profs=[ANIMAL_HANDLING, SURVIVAL], tool_profs=[{'Choose 1': ARTISAN_TOOLS}, ("TODO: VEHICLES")], equipment=[{'Choose 1': ARTISAN_TOOLS}, SHOVEL, POT, CLOTHES_COMMON], money=[10, gp])
+GUILD_ARTISAN = Background("Guild_Artisan", skill_profs=[INSIGHT, PERSUASION], tool_profs=[{'Choose 1': ARTISAN_TOOLS}], language=[{'Choose 1': []}], equipment=[{'Choose 1': ARTISAN_TOOLS}, LETTER_OF_INTRODUCTION, CLOTHES_TRAVELERS], money=[15, gp])
+HERMIT = Background("Hermit", skill_profs=[MEDICINE, RELIGION], tool_profs=[HERBALISM_KIT], language=[{'Choose 1':[]}], equipment=[CASE_MAP_SCROLL, BLANKET, CLOTHES_COMMON, HERBALISM_KIT], money=[5, gp])
+NOBLE = Background("Noble", skill_profs=[HISTORY, PERSUASION], tool_profs=[{'Choose 1': GAMING_TOOLS}], language=[{'Choose 1': []}], equipment=[CLOTHES_FINE, SIGNET_RING, SCROLL_OF_PEDIGREE], money=[25, gp])
+OUTLANDER = Background("Outlander", skill_profs=[ATHLETICS, SURVIVAL], tool_profs=[{'Choose 1': MUSICAL_INSTRUMENT}], language=[{'Choose 1': []}], equipment=[STAFF, HUNTING_TRAP, ANIMAL_TROPHY], money=[10, gp])
+SAGE = Background("Sage", skill_profs=[ARCANA, HISTORY], tool_profs=[], language=[{'Choose 2': []}], equipment=[INK, QUILL, LETTER_FROM_DEAD_COLLEAGUE], money=[10, gp])
+SAILOR = Background("Sailor", skill_profs=[ATHLETICS, PERCEPTION], tool_profs=[NAVIGATORS_TOOLS, VEHICLES_WATER], equipment=[BELAYING_PIN, LUCKY_CHARM, CLOTHES_COMMON], money=[10, gp])
+SOLDIER = Background("Soldier", skill_profs=[ATHLETICS, INTIMIDATION], tool_profs=[{'Choose 1': GAMING_TOOLS}, VEHICLES_LAND], equipment=[INSIGNIA_OF_RANK, TROPHY_FROM_FALLEN_ENEMY, {'Choose 1': [BONE_DICE, DECK_OF_CARDS]}], money=[10, gp])
+URCHIN = Background("Urchin", skill_profs=[SLEIGHT_OF_HAND, STEALTH], tool_profs=[DISGUISE_KIT, THIEVES_TOOLS], equipment=[SMALL_KNIFE, MAP_OF_HOMETOWN, PET_MOUSE, PARENTAL_TOKEN_OF_REMEMBERANCE, CLOTHES_COMMON], money=[10, gp])
 
 
 """
@@ -822,5 +909,3 @@ if __name__ == "__main__":
 
     roll_class = MONK 
     tool_prof = GetProficiencies(roll_class.proficiencies['Tools'])
-    print(tool_prof)
-
