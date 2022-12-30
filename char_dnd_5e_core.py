@@ -356,8 +356,8 @@ RANGED_MARTIAL_WEAPONS = [wpn for wpn in MARTIAL_WEAPONS if wpn.is_melee == Fals
 """
 # LIGHT ARMOR
 PADDED = Armor("Padded", cost=[5, gp], arm_type='Light', ac=[11, DEX], category='Armor')
-LEATHER = Armor("Leather", cost=[10, gp], arm_type='Light', ac=[11, DEX], category='Armor')
-STUDDED_LEATHER = Armor("Studded_Leather", cost=[45, gp], arm_type='Light', ac=[12, DEX], category='Armor')
+LEATHER_ARMOR = Armor("Leather", cost=[10, gp], arm_type='Light', ac=[11, DEX], category='Armor')
+STUDDED_LEATHER_ARMOR = Armor("Studded_Leather", cost=[45, gp], arm_type='Light', ac=[12, DEX], category='Armor')
 # MEDIUM ARMOR
 HIDE = Armor("Hide", cost=[10, gp], arm_type='Medium', ac=[12, DEX], category='Armor')
 CHAIN_SHIRT = Armor("Chain_Shirt", cost=[50, gp], arm_type='Medium', ac=[13, DEX], category='Armor')
@@ -508,7 +508,7 @@ COBBLERS_TOOLS = Tool("Cobblers_Tools", cost=[5, gp], tool_type='Artisan', categ
 COOKING_UTENSILS = Tool("Cooking_Utensils", cost=[1, gp], tool_type='Artisan', category="Tool")
 GLASSBLOWERS_TOOLS = Tool("Glassblowers_Tools", cost=[30, gp], tool_type='Artisan', category="Tool")
 JEWLERS_TOOLS = Tool("Jewlers_Tools", cost=[25, gp], tool_type='Artisan', category="Tool")
-LEATHERWORKERS_TOOLS = Tool("Leatherworkers_Tools", cost=[5, gp], tool_type='Artisan', category="Tool")
+LEATHER_ARMORWORKERS_TOOLS = Tool("Leatherworkers_Tools", cost=[5, gp], tool_type='Artisan', category="Tool")
 MASONS_TOOLS = Tool("Masons_Tools", cost=[10, gp], tool_type='Artisan', category="Tool")
 PAINTERS_SUPPLIES = Tool("Painters_Supplies", cost=[10, gp], tool_type='Artisan', category="Tool")
 SMITHS_TOOLS = Tool("Smiths_Tools", cost=[10, gp], tool_type='Artisan', category="Tool")
@@ -598,7 +598,7 @@ VEHICLES_LAND = Item("Land Vehicles")
 BURGLURS_PACK = [BACKPACK, BALL_BEARINGS, BELL] + [CANDLE for _ in range(5)] + [CROWBAR, HAMMER, LANTURN_HOODED, WATERSKIN, ROPE_HEMPEN] + [PITON for _ in range(10)]
 DIPLOMATS_PACK = [CHEST, CASE_MAP_SCROLL, CASE_MAP_SCROLL, CLOTHES_FINE, INK, INK_PEN, LAMP, FLASK, FLASK] + [PAPER for _ in range(5)] + [PERFUME, SEALING_WAX, SOAP]
 DUNGEONEERS_PACK = [BACKPACK, CROWBAR, HAMMER] + [PITON for _ in range(10)] + [TORCH for _ in range(10)] + [RATIONS for _ in range(10)] + [TINDERBOX, WATERSKIN, ROPE_HEMPEN]
-ENTERTAINERS_PACK = [BACKPACK, BEDROLL] + [CLOTHES_COSTUME for _ in range(2)] + [CANDLE for _ in range(5)] + [RATIONS for _ in range(5)] + [WATERSKIN + DISGUISE_KIT]
+ENTERTAINERS_PACK = [BACKPACK, BEDROLL] + [CLOTHES_COSTUME for _ in range(2)] + [CANDLE for _ in range(5)] + [RATIONS for _ in range(5)] + [WATERSKIN, DISGUISE_KIT]
 EXPLORERS_PACK = [BACKPACK, BEDROLL, MESS_KIT, TINDERBOX] + [TORCH for _ in range(10)] + [RATIONS for _ in range(10)] + [WATERSKIN, ROPE_HEMPEN]
 PRIESTS_PACK = [BACKPACK, BLANKET] + [CANDLE for _ in range(10)] + [TINDERBOX, ALMS_BOX, CENSER, VESTMENTS, WATERSKIN, ROPE_HEMPEN] + [RATIONS for _ in range(2)] + [BLOCK_OF_INCENSE for _ in range(2)]
 SCHOLARS_PACK = [BACKPACK, BOOK, INK, INK_PEN, SMALL_KNIFE, BAG_OF_SAND] + [PARCHMENT for _ in range(10)]
@@ -648,10 +648,8 @@ BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATUR
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
 BARBARIAN.starting_money = ["2d4", 10, gp]
-BARBARIAN.equipment = [
-        {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]},
-        {'Choose 1': [[HANDAXE, HANDAXE], {'Choose 1': SIMPLE_WEAPONS}]},
-        JAVELIN, JAVELIN, JAVELIN, JAVELIN] + EXPLORERS_PACK
+BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [[HANDAXE, HANDAXE], {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
+BARBARIAN.equipment_pack = EXPLORERS_PACK
 
 
 BARD.proficiencies = {
@@ -664,12 +662,8 @@ BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
 BARD.initial_health = [8, CON.modifier]
 BARD.starting_money = ["5d4", 10, gp]
-BARD.equipment = [
-        {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]},
-        {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
-        {'Choose 1': [LUTE, {'Choose 1': INSTRUMENT}]},
-        LEATHER, DAGGER
-        ]
+BARD.equipment = [ {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [LUTE, {'Choose 1': MUSICAL_INSTRUMENT}]}, LEATHER_ARMOR, DAGGER ]
+BARD.equipment_pack = {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
 
 CLERIC.proficiencies = {
         'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
@@ -681,13 +675,8 @@ CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
 CLERIC.hit_dice = "1d8"
 CLERIC.initial_health = [8, CON.modifier]
 CLERIC.starting_money = ["5d4", 10, gp]
-CLERIC.equipment = [
-        {'Choose 1': [MACE, WARHAMMER]},
-        {'Choose 1': [SCALE_MAIL, LEATHER, CHAIN_MAIL]},
-        {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]},
-        {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]},
-        SHIELD, {'Choose 1': HOLY_SYMBOL}
-        ]
+CLERIC.equipment = [ {'Choose 1': [MACE, WARHAMMER]}, {'Choose 1': [SCALE_MAIL, LEATHER_ARMOR, CHAIN_MAIL]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, SHIELD, {'Choose 1': HOLY_SYMBOL} ]
+CLERIC.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
 DRUID.proficiencies = {
         'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
@@ -699,6 +688,8 @@ DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE,
 DRUID.hit_dice = "1d8"
 DRUID.initial_health = [8, CON.modifier]
 DRUID.starting_money = ["2d4", 10, gp]
+DRUID.equipment = [ {'Choose 1': [SHIELD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [SCIMITAR, {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, LEATHER_ARMOR, {'Choose 1': DRUIDIC_FOCUS} ]
+DRUID.equipment_pack = EXPLORERS_PACK
 
 FIGHTER.proficiencies = {
         'Armor': ALL_ARMOR + SHIELDS,
@@ -710,6 +701,8 @@ FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, 
 FIGHTER.hit_dice = "1d10"
 FIGHTER.initial_health = [10, CON.modifier]
 FIGHTER.starting_money = ["5d4", 10, gp]
+FIGHTER.equipment = [ {'Choose 1': [CHAIN_MAIL, [LEATHER_ARMOR, LONGBOW, ARROWS]]}, {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], {'Choose 2': MARTIAL_WEAPONS}]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], [HANDAXE, HANDAXE]]}, ]
+FIGHTER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
 MONK.proficiencies = {
         'Armor': None,
@@ -721,6 +714,8 @@ MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, S
 MONK.hit_dice = "1d8"
 MONK.initial_health = [8, CON.modifier]
 MONK.starting_money = ["5d4", 1, gp]
+MONK.equipment = [{'Choose 1': [SHORTSWORD, {'Choose 1':SIMPLE_WEAPONS}]}] + [DART for _ in range(10)]
+MONK.equipment_pack = {'Choose 1': [EXPLORERS_PACK, DUNGEONEERS_PACK]}
 
 PALADIN.proficiencies = {
         'Armor': ALL_ARMOR + SHIELDS,
@@ -732,6 +727,8 @@ PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSU
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = [10, CON.modifier]
 PALADIN.starting_money = ["5d4", 10, gp]
+PALADIN.equipment = [ {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], {'Choose 2': MARTIAL_WEAPONS}]}, {'Choose 1': [[JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
+PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
 RANGER.proficiencies = {
         'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
@@ -743,6 +740,8 @@ RANGER.skills = {'Choose 3': [ANIMAL_HANDLING, ATHLETICS, INSIGHT, INVESTIGATION
 RANGER.hit_dice = "1d10"
 RANGER.initial_health = [10, CON.modifier]
 RANGER.starting_money = ["5d4", 10, gp]
+RANGER.equipment = [ {'Choose 1': [LEATHER_ARMOR, SCALE_MAIL]}, {'Choose 1': [[SHORTSWORD, SHORTSWORD], {'Choose 2': MELEE_SIMPLE_WEAPONS}]}, LONGBOW, QUIVER, ARROWS ] 
+RANGER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
 ROGUE.proficiencies = {
         'Armor': LIGHT_ARMOR,
@@ -754,6 +753,8 @@ ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDA
 ROGUE.hit_dice = "1d8"
 ROGUE.initial_health = [8, CON.modifier]
 ROGUE.starting_money = ["4d4", 10, gp]
+ROGUE.equipment = [ {'Choose 1': [RAPIER, SHORTSWORD]}, {'Choose 1': [[SHORTBOW, QUIVER, ARROWS], SHORTSWORD]}, LEATHER_ARMOR, DAGGER, DAGGER, THIEVES_TOOLS ]
+ROGUE.equipment_pack = {'Choose 1': [BURGLURS_PACK, DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
 SORCERER.proficiencies = {
         'Armor': None,
@@ -765,6 +766,8 @@ SORCERER.skills = {'Choose 2': [ARCANA, DECEPTION, INSIGHT, INTIMIDATION, PERSUA
 SORCERER.hit_dice = "1d6"
 SORCERER.initial_health = [6, CON.modifier]
 SORCERER.starting_money = ["3d4", 10, gp]
+SORCERER.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER ]
+SORCERER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
 WARLOCK.proficiencies = {
         'Armor': LIGHT_ARMOR,
@@ -776,6 +779,8 @@ WARLOCK.skills = {'Choose 2': [ARCANA, DECEPTION, HISTORY, INTIMIDATION, INVESTI
 WARLOCK.hit_dice = "1d8"
 WARLOCK.initial_health = [8, CON.modifier]
 WARLOCK.starting_money = ["4d4", 10, gp]
+WARLOCK.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER, LEATHER_ARMOR, {'Choose 1': SIMPLE_WEAPONS} ]
+WARLOCK.equipment_pack = {'Choose 1': [SCHOLARS_PACK, DUNGEONEERS_PACK]}
 
 WIZARD.proficiencies = {
         'Armor': None,
@@ -787,6 +792,8 @@ WIZARD.skills = {'Choose 2': [ARCANA, HISTORY, INSIGHT, INVESTIGATION, MEDICINE,
 WIZARD.hit_dice = "1d6"
 WIZARD.initial_health = [6, CON.modifier]
 WIZARD.starting_money = ["4d4", 10, gp]
+WIZARD.equipment = [ {'Choose 1': [QUARTERSTAFF, DAGGER]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, SPELLBOOK ]
+WIZARD.equipment_pack = {'Choose 1': [SCHOLARS_PACK, EXPLORERS_PACK]}
 
 CLASSES = [BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
 
