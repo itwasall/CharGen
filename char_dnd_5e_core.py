@@ -168,6 +168,127 @@ WARLOCK = _Class("Warlock")
 WIZARD = _Class("Wizard")
 ARTIFICER = _Class("Artificer", tasha=True)
 
+BARBARIAN.proficiencies = {
+        'Armor': ['Light', 'Medium', 'Sheilds'],
+        'Weapons': ['Simple', 'Martial'],
+        'Tools': None
+        }
+BARBARIAN.saving_throws = ['STR', 'CON']
+BARBARIAN.skills = {'Choose 2': ['Animal Handling', 'Athletics', 'Intimidation', 'Nature', 'Perception', 'Survival']}
+BARBARIAN.hit_dice = "1d12"
+BARBARIAN.hit_modifier = "CON"
+
+BARD.proficiencies = {
+        'Armor': ['Light'],
+        'Weapons': ['Simple', 'Hand Crossbow', 'Longsword', 'Rapier', 'Shortsword'],
+        'Tools': {'Choose 3': []}
+        }
+BARD.saving_throws = ['DEX', 'CHA']
+BARD.skills = {'Choose 3': ['Any']}
+BARD.hit_dice = "1d6"
+BARD.hit_modifier = "CON"
+
+CLERIC.proficiencies = {
+        'Armor': ['Light', 'Medium', 'Shields'],
+        'Weapons': ['Simple'],
+        'Tools': None
+        }
+CLERIC.saving_throws = ['WIS', 'CHA']
+CLERIC.skills = {'Choose 2': ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']}
+CLERIC.hit_dice = "1d8"
+CLERIC.hit_modifier = "CON"
+
+DRUID.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+DRUID.saving_throws = []
+DRUID.skills = {}
+DRUID.hit_dice = ""
+DRUID.hit_modifier = ""
+
+FIGHTER.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+FIGHTER.saving_throws = []
+FIGHTER.skills = {}
+FIGHTER.hit_dice = ""
+FIGHTER.hit_modifier = ""
+
+MONK.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+MONK.saving_throws = []
+MONK.skills = {}
+MONK.hit_dice = ""
+MONK.hit_modifier = ""
+
+PALADIN.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+PALADIN.saving_throws = []
+PALADIN.skills = {}
+PALADIN.hit_dice = ""
+PALADIN.hit_modifier = ""
+
+RANGER.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+RANGER.saving_throws = []
+RANGER.skills = {}
+RANGER.hit_dice = ""
+RANGER.hit_modifier = ""
+
+ROGUE.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+ROGUE.saving_throws = []
+ROGUE.skills = {}
+ROGUE.hit_dice = ""
+ROGUE.hit_modifier = ""
+
+SORCERER.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+SORCERER.saving_throws = []
+SORCERER.skills = {}
+SORCERER.hit_dice = ""
+SORCERER.hit_modifier = ""
+
+WARLOCK.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+WARLOCK.saving_throws = []
+WARLOCK.skills = {}
+WARLOCK.hit_dice = ""
+WARLOCK.hit_modifier = ""
+
+WIZARD.proficiencies = {
+        'Armor': [],
+        'Weapons': [],
+        'Tools': []
+        }
+WIZARD.saving_throws = []
+WIZARD.skills = {}
+WIZARD.hit_dice = ""
+WIZARD.hit_modifier = ""
+
+
 """
     SUBCLASSES
 """
