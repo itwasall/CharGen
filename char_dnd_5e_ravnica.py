@@ -7,8 +7,24 @@ def dice_roll(dicestring):
 
 
 class Guild:
-    def __init__(self, name):
+    def __init__(self, name, classes: list, subclasses: list, races: list, alignment: list, **kwargs):
         self.name = name
+        self.classes = classes
+        self.subclasses = subclasses
+        self.races = races
+        """
+            Alignments are shown in the book as, for example, "Usually Good, Often Lawful"
+            This will be split up into a four part list: ['Usually', 'Good', 'Often', 'Lawful'], then
+            properly assembled in the list below to give:
+                self.alignment = [('Usually', 'Good'), ('Often', 'Lawful')]
+            This structure was chosen because it doesn't matter which order the items are in on a tuple level, it does
+            matter which order the items are in from the list level. As both Good/Evil & Chaotic/Lawful dichotomys have
+            a "neutral" option, it should be clear which of the two any given "netural" is referring to, with only so much
+            as its position on the list to indicate it's value
+        """
+        self.alignment = [ (alignment[0], alignment[1]), (alignment[2], alignment[3]) ]
+        for k, d in kwargs.items():
+            self.__setattr(k, d)
     
     def __repr__(self):
         return self.name
@@ -48,17 +64,30 @@ NEUTRAL_NEUTRAL = Core.Alignment("Neutral", "Neutral")
 CHAOTIC_GOOD = Core.Alignment("Chaotic", "Good")
 CHAOTIC_NEUTRAL = Core.Alignment("Chaotic", "Neutral")
 CHAOTIC_EVIL = Core.Alignment("Chaotic", "Evil")
+# CLASS
+BARBARIAN = Core.BARBARIAN
+BARD = Core.BARD
+CLERIC = Core.CLERIC
+DRUID = Core.DRUID
+FIGHTER = Core.FIGHTER
+MONK = Core.MONK
+PALADIN = Core.PALADIN
+RANGER = Core.RANGER
+ROGUE = Core.ROGUE
+SORCERER = Core.SORCERER
+WARLOCK = Core.WARLOCK
+WIZARD = Core.WIZARD
 # GUILDS
-AZORIUS_SENATE = Guild("Azorius Senate")
-HOUSE_DIMIR = Guild("House Dimir")
-SIMIC_COMBINE = Guild("Simic Combine")
-IZZIT_LEAGUE = Guild("Izzit League")
-SELESNYA_CONCLAVE = Guild("Selesnya Conclave")
-GOLGARI_SWARM = Guild("Golgari Swarm")
-GRUUL_CLANS = Guild("Gruul Clans")
-CULT_OF_RAKDOS = Guild("Cult of Rakdos")
-BOROS_LEGION = Guild("Boros Legion")
-ORZHOV_SYNDICATE = Guild("Orzhov Syndicate")
+AZORIUS_SENATE = Guild("Azorius Senate", classes=[BARD, CLERIC, FIGHTER, PALADIN, WIZARD], subclasses=[])
+BOROS_LEGION = Guild("Boros Legion", classes=[CLERIC, FIGHTER, PALADIN, RANGER, WIZARD], subclasses=[])
+CULT_OF_RAKDOS = Guild("Cult of Rakdos", classes=[BARBARIAN, BARD, FIGHTER, WARLOCK], subclasses=[])
+GOLGARI_SWARM = Guild("Golgari Swarm", classes=[DRUID, FIGHTER, RANGER, ROGUE, WIZARD], subclasses=[])
+GRUUL_CLANS = Guild("Gruul Clans", classes=[BARBARIAN, CLERIC, DRUID, FIGHTER, RANGER], subclasses=[])
+HOUSE_DIMIR = Guild("House Dimir", classes=[MONK, ROGUE, WIZARD], subclasses=[])
+IZZIT_LEAGUE = Guild("Izzit League", classes=[FIGHTER, SORCERER, WIZARD], subclasses=[])
+ORZHOV_SYNDICATE = Guild("Orzhov Syndicate", classes=[CLERIC, FIGHTER, ROGUE, WIZARD], subclasses=[])
+SIMIC_COMBINE = Guild("Simic Combine", classes=[DRUID, FIGHTER, MONK, WIZARD], subclasses=[])
+SELESNYA_CONCLAVE = Guild("Selesnya Conclave", classes=[BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, WARLOCK], subclasses=[])
 GUILDS = [AZORIUS_SENATE, BOROS_LEGION, CULT_OF_RAKDOS, GOLGARI_SWARM, GRUUL_CLANS, HOUSE_DIMIR, IZZIT_LEAGUE, ORZHOV_SYNDICATE, SELESNYA_CONCLAVE, SIMIC_COMBINE]
 # LANGUAGES
 ABYSSAL = Core.Language("Abyssal", speakers=["Demons", "Devils"], script="Infernal")
@@ -113,19 +142,6 @@ LOXODON = Core.Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450
 MINOTAUR = Core.Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
 SIMIC_HYBRID = Core.Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choose 1": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose 1': [ELVISH, VEDALKEN_L]}])
 VEDALKEN = Core.Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose 1': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
-# CLASS
-BARBARIAN = Core.BARBARIAN
-BARD = Core.BARD
-CLERIC = Core.CLERIC
-DRUID = Core.DRUID
-FIGHTER = Core.FIGHTER
-MONK = Core.MONK
-PALADIN = Core.PALADIN
-RANGER = Core.RANGER
-ROGUE = Core.ROGUE
-SORCERER = Core.SORCERER
-WARLOCK = Core.WARLOCK
-WIZARD = Core.WIZARD
 
 class PartyMember:
     def __init__(

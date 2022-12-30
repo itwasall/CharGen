@@ -10,40 +10,27 @@ import random
 def ProficiencyBonus(level):
     return ((level - 1) // 4) + 2
 
-def GetProficentSkills(skills):
-    def RandomiseProficientSkills(skills, x):
-        proficient_skills = []
-        while len(proficient_skills) < x:
-            skill = random.choice(skills[f"Choose {x}"])
-            if skill in proficient_skills:
-                proficient_skills.pop(proficient_skills.index(skill))
-            proficient_skills.append(skill)
-        return proficient_skills
-    prof_data_keys = skills.keys()
-    match list(prof_data_keys)[0]:
-        case 'Choose 2':
-            return RandomiseProficientSkills(skills, 2)
-        case 'Choose 3':
-            return RandomiseProficientSkills(skills, 3)
-        case 'Choose 4':
-            return RandomiseProficientSkills(skills, 4)
-
-def GetProficientTools(tools):
-    def RandomiseProficientTools(tools, x):
-        proficient_tools = []
-        while len(proficient_tools) < x:
-            tool = random.choice(tools[f"Choose {x}"])
-            if tool in proficient_tools:
-                proficient_tools.pop(proficient_tools.index(tool))
-            proficient_tools.append(tool)
-        return proficient_tools
-    prof_data_keys = tools.keys()
+def GetProficiencies(data):
+    def RandomiseProficiencies(data, x):
+        proficiencies = []
+        while len(proficiencies) < x:
+            roll = random.choice(data[f"Choose {x}"])
+            if roll in proficiencies:
+                proficiencies.pop(proficiencies.index(roll))
+            proficiencies.append(roll)
+        return proficiencies
+    prof_data_keys = data.keys()
     match list(prof_data_keys)[0]:
         case 'Choose 1':
-            return RandomiseProficientTools(tools, 1)
+            return RandomiseProficiencies(data, 1)
+        case 'Choose 2':
+            return RandomiseProficiencies(data, 2)
         case 'Choose 3':
-            return RandomiseProficientTools(tools, 3)
-
+            return RandomiseProficiencies(data, 3)
+        case 'Choose 4':
+            return RandomiseProficiencies(data, 4)
+        case 'Has':
+            return data['Has']
 
 class _Class:
     items = []
@@ -194,10 +181,10 @@ class Armor(Item):
             self.__setattr__(k, d)
 
 class Tool(Item):
-    def __init__(self, name, cost, subtype=None, **kwargs):
+    def __init__(self, name, cost, tool_type=None, **kwargs):
         super().__init__(name)
         self.cost = cost
-        self.subtype = subtype
+        self.tool_type = tool_type
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
@@ -291,6 +278,12 @@ SPLINT = Armor("Splint", cost=[200, gp], arm_type='Heavy', ac=[17, None], catego
 PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None], category='Armor')
 # SHIELD
 SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None], category='Armor')
+
+LIGHT_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Light')]
+MEDIUM_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Medium')]
+HEAVY_ARMOR = [armor for armor in Item.items if (hasattr(armor, 'arm_type') and armor.arm_type == 'Heavy')]
+SHIELDS = [armor for armor in Item.items if armor.name == "Shield"]
+ALL_ARMOR = LIGHT_ARMOR + MEDIUM_ARMOR + HEAVY_ARMOR
 
 """
     ADVENTURING GEAR
@@ -408,43 +401,43 @@ HERBALISM_KIT = Tool("Herbalism_Kit", cost=[5,gp], category="Tool")
 NAVIGATORS_TOOLS = Tool("Navigators_Tools", cost=[25,gp], category="Tool")
 POISONERS_KIT = Tool("Poisoners_Kit", cost=[50,gp], category="Tool")
 THIEVES_TOOLS = Tool("Thieves_Tools", cost=[25,gp], category="Tool")
+# ARTISAN
+ALCHEMISTS_SUPPLIES = Tool("Alchemists_Supplies", cost=[50, gp], tool_type='Artisan', category="Tool")
+BREWERS_SUPPLIES = Tool("Brewers_Supplies", cost=[20, gp], tool_type='Artisan', category="Tool")
+CALLIGRAPHY_SUPPLIES = Tool("Calligraphy_Supplies", cost=[10, gp], tool_type='Artisan', category="Tool")
+CARPENTERS_TOOLS = Tool("Carpenters_Tools", cost=[8, gp], tool_type='Artisan', category="Tool")
+CARTOGRAPHERS_TOOLS = Tool("Cartographers_Tools", cost=[15, gp], tool_type='Artisan', category="Tool")
+COBBLERS_TOOLS = Tool("Cobblers_Tools", cost=[5, gp], tool_type='Artisan', category="Tool")
+COOKING_UTENSILS = Tool("Cooking_Utensils", cost=[1, gp], tool_type='Artisan', category="Tool")
+GLASSBLOWERS_TOOLS = Tool("Glassblowers_Tools", cost=[30, gp], tool_type='Artisan', category="Tool")
+JEWLERS_TOOLS = Tool("Jewlers_Tools", cost=[25, gp], tool_type='Artisan', category="Tool")
+LEATHERWORKERS_TOOLS = Tool("Leatherworkers_Tools", cost=[5, gp], tool_type='Artisan', category="Tool")
+MASONS_TOOLS = Tool("Masons_Tools", cost=[10, gp], tool_type='Artisan', category="Tool")
+PAINTERS_SUPPLIES = Tool("Painters_Supplies", cost=[10, gp], tool_type='Artisan', category="Tool")
+SMITHS_TOOLS = Tool("Smiths_Tools", cost=[10, gp], tool_type='Artisan', category="Tool")
+TINKERS_TOOLS = Tool("Tinkers_Tools", cost=[50, gp], tool_type='Artisan', category="Tool")
+WEAVERS_TOOLS = Tool("Weavers_Tools", cost=[1, gp], tool_type='Artisan', category="Tool")
+WOODCARVERS_TOOLS = Tool("Woodcarvers_Tools", cost=[1, gp], tool_type='Artisan', category="Tool")
+# GAMING
+DICE_SET = Tool("Dice_Set", cost=[1,sp], tool_type='Gaming', category="Tool")
+DRAGONCHESS_SET = Tool("Dragonchess_Set", cost=[1,gp], tool_type='Gaming', category="Tool")
+PLAYING_CARD_SET = Tool("Playing_Card_Set", cost=[5,gp], tool_type='Gaming', category="Tool")
+THREE_DRAGON_ANTE_SET = Tool("Three_Dragon_Ante_Set", cost=[1,gp], tool_type='Gaming', category="Tool")
+# INSTRUMENT
+BAGPIPES = Tool("Bagpipes", cost=[30, gp], tool_type='Instrument', category="Tool")
+DRUM = Tool("Drum", cost=[6, gp], tool_type='Instrument', category="Tool")
+DULCIMER = Tool("Dulcimer", cost=[25, gp], tool_type='Instrument', category="Tool")
+FLUTE = Tool("Flute", cost=[2, gp], tool_type='Instrument', category="Tool")
+LUTE = Tool("Lute", cost=[35, gp], tool_type='Instrument', category="Tool")
+LYRE = Tool("Lyre", cost=[30, gp], tool_type='Instrument', category="Tool")
+HORN = Tool("Horn", cost=[3, gp], tool_type='Instrument', category="Tool")
+PAN_FLUTE = Tool("Pan_Flute", cost=[12, gp], tool_type='Instrument', category="Tool")
+SHAWM = Tool("Shawm", cost=[2, gp], tool_type='Instrument', category="Tool")
+VIOL = Tool("Viol", cost=[30, gp], tool_type='Instrument', category="Tool")
 
-ALCHEMISTS_SUPPLIES = Tool("Alchemists_Supplies", cost=[50, gp], subtype='Artisan', category="Tool")
-BREWERS_SUPPLIES = Tool("Brewers_Supplies", cost=[20, gp], subtype='Artisan', category="Tool")
-CALLIGRAPHY_SUPPLIES = Tool("Calligraphy_Supplies", cost=[10, gp], subtype='Artisan', category="Tool")
-CARPENTERS_TOOLS = Tool("Carpenters_Tools", cost=[8, gp], subtype='Artisan', category="Tool")
-CARTOGRAPHERS_TOOLS = Tool("Cartographers_Tools", cost=[15, gp], subtype='Artisan', category="Tool")
-COBBLERS_TOOLS = Tool("Cobblers_Tools", cost=[5, gp], subtype='Artisan', category="Tool")
-COOKING_UTENSILS = Tool("Cooking_Utensils", cost=[1, gp], subtype='Artisan', category="Tool")
-GLASSBLOWERS_TOOLS = Tool("Glassblowers_Tools", cost=[30, gp], subtype='Artisan', category="Tool")
-JEWLERS_TOOLS = Tool("Jewlers_Tools", cost=[25, gp], subtype='Artisan', category="Tool")
-LEATHERWORKERS_TOOLS = Tool("Leatherworkers_Tools", cost=[5, gp], subtype='Artisan', category="Tool")
-MASONS_TOOLS = Tool("Masons_Tools", cost=[10, gp], subtype='Artisan', category="Tool")
-PAINTERS_SUPPLIES = Tool("Painters_Supplies", cost=[10, gp], subtype='Artisan', category="Tool")
-SMITHS_TOOLS = Tool("Smiths_Tools", cost=[10, gp], subtype='Artisan', category="Tool")
-TINKERS_TOOLS = Tool("Tinkers_Tools", cost=[50, gp], subtype='Artisan', category="Tool")
-WEAVERS_TOOLS = Tool("Weavers_Tools", cost=[1, gp], subtype='Artisan', category="Tool")
-WOODCARVERS_TOOLS = Tool("Woodcarvers_Tools", cost=[1, gp], subtype='Artisan', category="Tool")
-
-DICE_SET = Tool("Dice_Set", cost=[1,sp], subtype='Gaming', category="Tool")
-DRAGONCHESS_SET = Tool("Dragonchess_Set", cost=[1,gp], subtype='Gaming', category="Tool")
-PLAYING_CARD_SET = Tool("Playing_Card_Set", cost=[5,gp], subtype='Gaming', category="Tool")
-THREE_DRAGON_ANTE_SET = Tool("Three_Dragon_Ante_Set", cost=[1,gp], subtype='Gaming', category="Tool")
-
-BAGPIPES = Tool("Bagpipes", cost=[30, gp], subtype='Instrument', category="Tool")
-DRUM = Tool("Drum", cost=[6, gp], subtype='Instrument', category="Tool")
-DULCIMER = Tool("Dulcimer", cost=[25, gp], subtype='Instrument', category="Tool")
-FLUTE = Tool("Flute", cost=[2, gp], subtype='Instrument', category="Tool")
-LUTE = Tool("Lute", cost=[35, gp], subtype='Instrument', category="Tool")
-LYRE = Tool("Lyre", cost=[30, gp], subtype='Instrument', category="Tool")
-HORN = Tool("Horn", cost=[3, gp], subtype='Instrument', category="Tool")
-PAN_FLUTE = Tool("Pan_Flute", cost=[12, gp], subtype='Instrument', category="Tool")
-SHAWM = Tool("Shawm", cost=[2, gp], subtype='Instrument', category="Tool")
-VIOL = Tool("Viol", cost=[30, gp], subtype='Instrument', category="Tool")
-
-ARTISAN_TOOLS = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Artisan')]
-MUSICAL_INSTRUMENT = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Instrument')]
-GAMING_TOOLS = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Gaming')]
+ARTISAN_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Artisan')]
+MUSICAL_INSTRUMENT = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Instrument')]
+GAMING_TOOLS = [tool for tool in Item.items if (hasattr(tool, "tool_type") and tool.tool_type == 'Gaming')]
 TOOLS = [tool for tool in Item.items if (hasattr(tool, "category") and tool.category == 'Tool')]
 
 """
@@ -495,8 +488,8 @@ WIZARD = _Class("Wizard")
 ARTIFICER = _Class("Artificer", tasha=True)
 
 BARBARIAN.proficiencies = {
-        'Armor': ['Light', 'Medium', 'Sheilds'],
-        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
+        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
         'Tools': None
         }
 BARBARIAN.saving_throws = [STR, CON]
@@ -507,8 +500,8 @@ BARBARIAN.starting_money = ["2d4", 10, gp]
 
 
 BARD.proficiencies = {
-        'Armor': ['Light'],
-        'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD],
+        'Armor': LIGHT_ARMOR,
+        'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD],
         'Tools': {'Choose 3': MUSICAL_INSTRUMENT}
         }
 BARD.saving_throws = [DEX, CHA]
@@ -518,8 +511,8 @@ BARD.initial_health = [8, CON.modifier]
 BARD.starting_money = ["5d4", 10, gp]
 
 CLERIC.proficiencies = {
-        'Armor': ['Light', 'Medium', 'Shield'],
-        'Weapons': [SIMPLE_WEAPONS],
+        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
+        'Weapons': SIMPLE_WEAPONS,
         'Tools': None
         }
 CLERIC.saving_throws = [WIS, CHA]
@@ -529,9 +522,9 @@ CLERIC.initial_health = [8, CON.modifier]
 CLERIC.starting_money = ["5d4", 10, gp]
 
 DRUID.proficiencies = {
-        'Armor': ['Light', 'Medium', 'Shield'],
+        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
         'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR],
-        'Tools': {'Has': ['Herbalism Kit']}
+        'Tools': {'Has': [HERBALISM_KIT]}
         }
 DRUID.saving_throws = [INT, WIS]
 DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE, PERCEPTION, RELIGION, SURVIVAL]}
@@ -540,8 +533,8 @@ DRUID.initial_health = [8, CON.modifier]
 DRUID.starting_money = ["2d4", 10, gp]
 
 FIGHTER.proficiencies = {
-        'Armor': ['All', 'Shield'],
-        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Armor': ALL_ARMOR + SHIELDS,
+        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
         'Tools': None
         }
 FIGHTER.saving_throws = [STR, CON]
@@ -552,7 +545,7 @@ FIGHTER.starting_money = ["5d4", 10, gp]
 
 MONK.proficiencies = {
         'Armor': None,
-        'Weapons': [SIMPLE_WEAPONS, SHORTSWORD],
+        'Weapons': SIMPLE_WEAPONS +  [SHORTSWORD],
         'Tools': {'Choose 1': MUSICAL_INSTRUMENT + ARTISAN_TOOLS}
         }
 MONK.saving_throws = [STR, DEX]
@@ -562,8 +555,8 @@ MONK.initial_health = [8, CON.modifier]
 MONK.starting_money = ["5d4", 1, gp]
 
 PALADIN.proficiencies = {
-        'Armor': ['All', 'Shield'],
-        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Armor': ALL_ARMOR + SHIELDS,
+        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
         'Tools': None
         }
 PALADIN.saving_throws = [WIS, CHA]
@@ -573,8 +566,8 @@ PALADIN.initial_health = [10, CON.modifier]
 PALADIN.starting_money = ["5d4", 10, gp]
 
 RANGER.proficiencies = {
-        'Armor': ['Light', 'Medium', 'Shield'],
-        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
+        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
         'Tools': None
         }
 RANGER.saving_throws = [STR, DEX]
@@ -584,8 +577,8 @@ RANGER.initial_health = [10, CON.modifier]
 RANGER.starting_money = ["5d4", 10, gp]
 
 ROGUE.proficiencies = {
-        'Armor': ['Light'],
-        'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW],
+        'Armor': LIGHT_ARMOR,
+        'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW],
         'Tools': {'Has': [THIEVES_TOOLS]}
         }
 ROGUE.saving_throws = [DEX, INT]
@@ -606,8 +599,8 @@ SORCERER.initial_health = [6, CON.modifier]
 SORCERER.starting_money = ["3d4", 10, gp]
 
 WARLOCK.proficiencies = {
-        'Armor': ['Light'],
-        'Weapons': ['Simple'],
+        'Armor': LIGHT_ARMOR,
+        'Weapons': SIMPLE_WEAPONS,
         'Tools': None
         }
 WARLOCK.saving_throws = [WIS, CHA]
@@ -778,6 +771,6 @@ if __name__ == "__main__":
         
 
     roll_class = MONK 
-    tool_prof = GetProficientTools(roll_class.proficiencies['Tools'])
+    tool_prof = GetProficiencies(roll_class.proficiencies['Tools'])
     print(tool_prof)
 
