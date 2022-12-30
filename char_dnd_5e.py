@@ -454,7 +454,7 @@ def char_gen():
     info(cli_ui.yellow, f'{char_name}', cli_ui.reset, 'the', cli_ui.magenta, char_race['name'])
     print(char_alignment)
     print(f'{char_age} years old', char_height, char_weight)
-    print('Formally',char_dnd_class['name'])
+    print(char_dnd_class['name'])
     info(cli_ui.yellow, "Health/Hit Dice:  ", cli_ui.green, f'{char_hit_points}/{char_hit_die["name"]}', cli_ui.reset)
     info(cli_ui.yellow, "Spell Save/Attack:", cli_ui.green, f'{char_spell_sav}/{char_spell_atk}', cli_ui.reset)
     info(cli_ui.bold, '=== ABILITY SCORES ===')
