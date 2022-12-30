@@ -1,9 +1,34 @@
+import random
+# random should probably only be used for testing. This file is to store data, not to aide in the processing of a random generation of a character
 """
     What the shit is this?
 
     This file holds the core shit for DND, such as AbilityScore, Alignment & Class classes so that I won't have to
         rewrite everything should I ever try and make a character generator for another setting set in 5e
 """
+
+def ProficiencyBonus(level):
+    return ((level - 1) // 4) + 2
+
+def GetProficentSkills(skills):
+    def RandomiseProficientSkills(skills, x):
+        proficient_skills = []
+        while len(proficient_skills) < x:
+            skill = random.choice(skills[f"Choose {x}"])
+            if skill in proficient_skills:
+                proficient_skills.pop()
+            proficient_skills.append(skill)
+        return proficient_skills
+    prof_data_keys = skills.keys()
+    match list(prof_data_keys)[0]:
+        case 'Choose 2':
+            return RandomiseProficientSkills(skills, 2)
+        case 'Choose 3':
+            return RandomiseProficientSkills(skills, 3)
+        case 'Choose 4':
+            return RandomiseProficientSkills(skills, 4)
+
+
 class _Class:
     items = []
     def __init__(self, name, **kwargs):
@@ -11,6 +36,9 @@ class _Class:
         _Class.items.append(self)
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+    
+    def __repr__(self):
+        return self.name
 DEFAULT_CLASS = _Class("Default Class")
 
 class _SubClass:
@@ -21,6 +49,9 @@ class _SubClass:
         _SubClass.items.append(self)
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+    def __repr__(self):
+        return self.name
 
 class Race:
     def __init__(self, name, **kwargs):
@@ -82,8 +113,6 @@ class AbilityScore:
         return self.__sub__(value)
 DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
-def ProficiencyBonus(level):
-    return ((level - 1) // 4) + 2
 
 class Skill:
     def __init__(self, name, ab_score, prof: bool = False, bonus = 0, **kwargs):
@@ -91,6 +120,7 @@ class Skill:
         self.ab_score = ab_score
         self.prof = prof
         self.bonus = bonus
+        self.FORMAT_REPR = False
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
@@ -102,12 +132,88 @@ class Skill:
         return self.__add__(value)
 
     def __repr__(self):
-        return f"({self.ab_score}) {self.name}: +-{self.prof}"
+        return self.__format__()
+    
+    def __format__(self):
+        if self.FORMAT_REPR:
+            return f"({self.ab_score}) {self.name}: +-{self.prof}"
+        else:
+            return self.name
 
     def set_proficiency_bonus(self, level: int):
         self.prof = True
         self.__add__(self, ProficiencyBonus(level))
 
+class Item:
+    items = []
+    def __init__(self, name, **kwargs):
+        self.name = name
+        Item.items.append(self)
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+    def __repr__(self):
+        return self.name
+
+class Coin(Item):
+    def __init__(self, name):
+        super().__init__(name)
+
+cp = Coin("Copper Piece")
+sp = Coin("Silver Piece")
+gp = Coin("Gold Piece")
+
+class Weapon(Item):
+    def __init__(self, name, cost, wpn_type, **kwargs):
+        super().__init__(name)
+        self.cost = cost
+        self.wpn_type = wpn_type
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+        
+CLUB = Weapon("Club", cost=[1, sp], wpn_type='Simple', is_melee = True)
+DAGGER = Weapon("Dagger", cost=[2, gp], wpn_type='Simple', is_melee=True)
+GREATCLUB = Weapon("Greatclub", cost=[2, sp], wpn_type='Simple', is_melee=True)
+HANDAXE = Weapon("Handaxe", cost=[5, gp], wpn_type='Simple', is_melee=True)
+JAVELIN = Weapon("Javelin", cost=[2, gp], wpn_type='Simple', is_melee=True)
+LIGHT_HAMMER = Weapon("Light_Hammer", cost=[2, gp], wpn_type='Simple', is_melee=True)
+MACE = Weapon("Mace", cost=[5, gp], wpn_type='Simple', is_melee=True)
+QUARTERSTAFF = Weapon("Quarterstaff", cost=[2, sp], wpn_type='Simple', is_melee=True)
+SICKLE = Weapon("Sickle", cost=[1, gp], wpn_type='Simple', is_melee=True)
+SPEAR = Weapon("Spear", cost=[1, gp], wpn_type='Simple', is_melee=True)
+
+LIGHT_CROSSBOW = Weapon("Light_Crossbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
+DART = Weapon("Dart", cost=[5, cp], wpn_type='Simple', is_melee=False)
+SHORTBOW = Weapon("Shortbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
+SLING = Weapon("Sling", cost=[1, sp], wpn_type='Simple', is_melee=False)
+
+BATTLEAXE = Weapon("Battleaxe", cost=[10, gp], wpn_type='Martial', is_melee=True)
+FLAIL = Weapon("Flail", cost=[10, gp], wpn_type='Martial', is_melee=True)
+GLAIVE = Weapon("Glaive", cost=[20, gp], wpn_type='Martial', is_melee=True)
+GREATAXE = Weapon("Greataxe", cost=[30, gp], wpn_type='Martial', is_melee=True)
+GREATSWORD = Weapon("Greatsword", cost=[50, gp], wpn_type='Martial', is_melee=True)
+HALBERD = Weapon("Halberd", cost=[20, gp], wpn_type='Martial', is_melee=True)
+LANCE = Weapon("Lance", cost=[10, gp], wpn_type='Martial', is_melee=True)
+LONGSWORD = Weapon("Longsword", cost=[15, gp], wpn_type='Martial', is_melee=True)
+MAUL = Weapon("Maul", cost=[10, gp], wpn_type='Martial', is_melee=True)
+MORNINGSTAR = Weapon("Morningstar", cost=[15, gp], wpn_type='Martial', is_melee=True)
+PIKE = Weapon("Pike", cost=[5, gp], wpn_type='Martial', is_melee=True)
+RAPIER = Weapon("Rapier", cost=[25, gp], wpn_type='Martial', is_melee=True)
+SCIMITAR = Weapon("Scimitar", cost=[25, gp], wpn_type='Martial', is_melee=True)
+SHORTSWORD = Weapon("Shortsword", cost=[10, gp], wpn_type='Martial', is_melee=True)
+TRIDENT = Weapon("Trident", cost=[5, gp], wpn_type='Martial', is_melee=True)
+WAR_PICK = Weapon("War_Pick", cost=[5, gp], wpn_type='Martial', is_melee=True)
+WARHAMMER = Weapon("Warhammer", cost=[15, gp], wpn_type='Martial', is_melee=True)
+WHIP = Weapon("Whip", cost=[2, gp], wpn_type='Martial', is_melee=True)
+
+BLOWGUN = Weapon("Blowgun", cost=[10, gp], wpn_type='Martial', is_melee=False)
+HAND_CROSSBOW = Weapon("Hand_Crossbow", cost=[75, gp], wpn_type='Martial', is_melee=False)
+HEAVY_CROSSBOW = Weapon("Heavy_Crossbow", cost=[50, gp], wpn_type='Martial', is_melee=False)
+LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False)
+NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False)
+
+SIMPLE_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Simple')]
+MARTIAL_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Martial')]
 
 """
     ABILITY SCORES
@@ -170,124 +276,125 @@ ARTIFICER = _Class("Artificer", tasha=True)
 
 BARBARIAN.proficiencies = {
         'Armor': ['Light', 'Medium', 'Sheilds'],
-        'Weapons': ['Simple', 'Martial'],
+        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
         'Tools': None
         }
-BARBARIAN.saving_throws = ['STR', 'CON']
-BARBARIAN.skills = {'Choose 2': ['Animal Handling', 'Athletics', 'Intimidation', 'Nature', 'Perception', 'Survival']}
+BARBARIAN.saving_throws = [STR, CON]
+BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATURE, PERCEPTION, SURVIVAL]}
 BARBARIAN.hit_dice = "1d12"
-BARBARIAN.hit_modifier = "CON"
+BARBARIAN.initial_health = [12, CON.modifier]
 
 BARD.proficiencies = {
         'Armor': ['Light'],
-        'Weapons': ['Simple', 'Hand Crossbow', 'Longsword', 'Rapier', 'Shortsword'],
+        'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD],
         'Tools': {'Choose 3': []}
         }
-BARD.saving_throws = ['DEX', 'CHA']
-BARD.skills = {'Choose 3': ['Any']}
+BARD.saving_throws = [DEX, CHA]
+BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
-BARD.hit_modifier = "CON"
+BARD.initial_health = [8, CON.modifier]
 
 CLERIC.proficiencies = {
-        'Armor': ['Light', 'Medium', 'Shields'],
+        'Armor': ['Light', 'Medium', 'Shield'],
+        'Weapons': [SIMPLE_WEAPONS],
+        'Tools': None
+        }
+CLERIC.saving_throws = [WIS, CHA]
+CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
+CLERIC.hit_dice = "1d8"
+CLERIC.initial_health = [8, CON.modifier]
+
+DRUID.proficiencies = {
+        'Armor': ['Light', 'Medium', 'Shield'],
+        'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR],
+        'Tools': {'Has': ['Herbalism Kit']}
+        }
+DRUID.saving_throws = [INT, WIS]
+DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE, PERCEPTION, RELIGION, SURVIVAL]}
+DRUID.hit_dice = "1d8"
+DRUID.initial_health = [8, CON.modifier]
+
+FIGHTER.proficiencies = {
+        'Armor': ['All', 'Shield'],
+        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Tools': None
+        }
+FIGHTER.saving_throws = [STR, CON]
+FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, INSIGHT, INTIMIDATION, PERCEPTION, SURVIVAL]}
+FIGHTER.hit_dice = "1d10"
+FIGHTER.initial_health = [10, CON.modifier]
+
+MONK.proficiencies = {
+        'Armor': None,
+        'Weapons': [SIMPLE_WEAPONS, SHORTSWORD],
+        'Tools': {'Choose 1': []}
+        }
+MONK.saving_throws = [STR, DEX]
+MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, STEALTH]}
+MONK.hit_dice = "1d8"
+MONK.initial_health = [8, CON.modifier]
+
+PALADIN.proficiencies = {
+        'Armor': ['All', 'Shield'],
+        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Tools': None
+        }
+PALADIN.saving_throws = [WIS, CHA]
+PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSUASION, RELIGION]}
+PALADIN.hit_dice = "1d10"
+PALADIN.initial_health = [10, CON.modifier]
+
+RANGER.proficiencies = {
+        'Armor': ['Light', 'Medium', 'Shield'],
+        'Weapons': [SIMPLE_WEAPONS, MARTIAL_WEAPONS],
+        'Tools': None
+        }
+RANGER.saving_throws = [STR, DEX]
+RANGER.skills = {'Choose 3': [ANIMAL_HANDLING, ATHLETICS, INSIGHT, INVESTIGATION, NATURE, PERCEPTION, STEALTH, SURVIVAL]}
+RANGER.hit_dice = "1d10"
+RANGER.initial_health = [10, CON.modifier]
+
+ROGUE.proficiencies = {
+        'Armor': ['Light'],
+        'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW],
+        'Tools': {'Has': ['Thieves Tools']}
+        }
+ROGUE.saving_throws = [DEX, INT]
+ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDATION, INVESTIGATION, PERCEPTION, PERFORMANCE, PERSUASION, SLEIGHT_OF_HAND, STEALTH]}
+ROGUE.hit_dice = "1d8"
+ROGUE.initial_health = [8, CON.modifier]
+
+SORCERER.proficiencies = {
+        'Armor': None,
+        'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW],
+        'Tools': None
+        }
+SORCERER.saving_throws = [CON, CHA]
+SORCERER.skills = {'Choose 2': [ARCANA, DECEPTION, INSIGHT, INTIMIDATION, PERSUASION, RELIGION]}
+SORCERER.hit_dice = "1d6"
+SORCERER.initial_health = [6, CON.modifier]
+
+WARLOCK.proficiencies = {
+        'Armor': ['Light'],
         'Weapons': ['Simple'],
         'Tools': None
         }
-CLERIC.saving_throws = ['WIS', 'CHA']
-CLERIC.skills = {'Choose 2': ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']}
-CLERIC.hit_dice = "1d8"
-CLERIC.hit_modifier = "CON"
-
-DRUID.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-DRUID.saving_throws = []
-DRUID.skills = {}
-DRUID.hit_dice = ""
-DRUID.hit_modifier = ""
-
-FIGHTER.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-FIGHTER.saving_throws = []
-FIGHTER.skills = {}
-FIGHTER.hit_dice = ""
-FIGHTER.hit_modifier = ""
-
-MONK.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-MONK.saving_throws = []
-MONK.skills = {}
-MONK.hit_dice = ""
-MONK.hit_modifier = ""
-
-PALADIN.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-PALADIN.saving_throws = []
-PALADIN.skills = {}
-PALADIN.hit_dice = ""
-PALADIN.hit_modifier = ""
-
-RANGER.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-RANGER.saving_throws = []
-RANGER.skills = {}
-RANGER.hit_dice = ""
-RANGER.hit_modifier = ""
-
-ROGUE.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-ROGUE.saving_throws = []
-ROGUE.skills = {}
-ROGUE.hit_dice = ""
-ROGUE.hit_modifier = ""
-
-SORCERER.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-SORCERER.saving_throws = []
-SORCERER.skills = {}
-SORCERER.hit_dice = ""
-SORCERER.hit_modifier = ""
-
-WARLOCK.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
-        }
-WARLOCK.saving_throws = []
-WARLOCK.skills = {}
-WARLOCK.hit_dice = ""
-WARLOCK.hit_modifier = ""
+WARLOCK.saving_throws = [WIS, CHA]
+WARLOCK.skills = {'Choose 2': [ARCANA, DECEPTION, HISTORY, INTIMIDATION, INVESTIGATION, NATURE, RELIGION]}
+WARLOCK.hit_dice = "1d8"
+WARLOCK.initial_health = [8, CON.modifier]
 
 WIZARD.proficiencies = {
-        'Armor': [],
-        'Weapons': [],
-        'Tools': []
+        'Armor': None,
+        'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW],
+        'Tools': None
         }
-WIZARD.saving_throws = []
-WIZARD.skills = {}
-WIZARD.hit_dice = ""
-WIZARD.hit_modifier = ""
+WIZARD.saving_throws = [INT, WIS]
+WIZARD.skills = {'Choose 2': [ARCANA, HISTORY, INSIGHT, INVESTIGATION, MEDICINE, RELIGION]}
+WIZARD.hit_dice = "1d6"
+WIZARD.initial_health = [6, CON.modifier]
 
+CLASSES = [BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
 
 """
     SUBCLASSES
@@ -409,7 +516,33 @@ ARTILLERIST = _SubClass("Artillerist", _class=ARTIFICER, tasha=True)
 BATTLE_SMITH = _SubClass("Battle_Smith", _class=ARTIFICER, tasha=True)
 
 if __name__ == "__main__":
+    """
     print(f"Total subclasses: {len(_SubClass.items)}")
     bingus = lambda x: [subclass for subclass in _SubClass.items if hasattr(subclass, x)]
     print(f"Total xanathar subclasses: {len(bingus('xanathar'))}")
     print(f"{', '.join([subclass.name for subclass in bingus('xanathar')])}")
+    """
+    roll_class = random.choice(CLASSES)
+    print(roll_class)
+
+    def gen_skill_prof(Class: _Class):
+        def gen_skill_while(Class: _Class, x):
+            proficient_skills = []
+            while len(proficient_skills) < x:
+                skill = random.choice(Class.skills[f"Choose {x}"])
+                if skill in proficient_skills:
+                    proficient_skills.pop()
+                proficient_skills.append(skill)
+            return proficient_skills
+        prof_data_keys = Class.skills.keys()
+        match list(prof_data_keys)[0]:
+            case 'Choose 2':
+                return gen_skill_while(Class, 2)
+            case 'Choose 3':
+                return gen_skill_while(Class, 3)
+            case 'Choose 4':
+                return gen_skill_while(Class, 4)
+        
+
+    print(gen_skill_prof(roll_class))
+
