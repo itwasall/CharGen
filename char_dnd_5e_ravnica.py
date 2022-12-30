@@ -103,16 +103,16 @@ VEDALKEN_L = Core.Language("Vedalken", speakers="Vedalken", script="Vedalken")
     languages
         [Language_1, Language 2]
     languages, second is choice
-        [Language_1, {'Choose': [ExLang_1, ExLang_2, ExLang_3]}]
+        [Language_1, {'Choose 1': [ExLang_1, ExLang_2, ExLang_3]}]
 """
-HUMAN = Core.Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
+HUMAN = Core.Race("Human", ab_score_bonus=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,100], alignment=["None", "None"], size="Medium", speed=30, language=[COMMON, {'Choose 1': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN, VEDALKEN_L]}]) 
 ELF = Core.Race("Elf", ab_score_bonus=[(DEX, 2)], age=[100,750], alignment=["Chaos", "None"], size="Medium", speed=30, darkvision=60, language=[COMMON, ELVISH])
 CENTAUR = Core.Race("Centaur", ab_score_bonus=[(STR, 2), (WIS, 1)], age=[18,100], alignment=["Neutral", "Neutral"], size="Medium", speed="40", language=[COMMON, SYLVAN])
 GOBLIN = Core.Race("Goblin", ab_score_bonus=[(DEX, 2), (CON, 1)], age=[8, 60], alignment=["Chaotic","None"], size="Small", speed=30, darkvision=60, language=[COMMON, GOBLIN_L])
 LOXODON = Core.Race("Loxodon", ab_score_bonus=[(CON, 2), (WIS, 1)], age=[20, 450], alignment=["Lawful","Good"], size="Medium", speed=30, language=[COMMON, LOXODON_L])
 MINOTAUR = Core.Race("Minotaur", ab_score_bonus=[(STR, 2), (CON, 1)], age=[18,100], alignment=[{BOROS_LEGION: "Lawful", CULT_OF_RAKDOS: "Chatotic", GRUUL_CLANS:"Chatoic", DEFAULT_GUILD: "None"},""], size="", speed=0, language=[COMMON, MINOTAUR_L])
-SIMIC_HYBRID = Core.Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choice": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose': [ELVISH, VEDALKEN_L]}])
-VEDALKEN = Core.Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
+SIMIC_HYBRID = Core.Race("Simic_Hybrid", ab_score_bonus=[(CON, 2), {"Choose 1": [STR, DEX, INT, WIS, CHA], "Bonus": 1}], age=[1, 70], alignment=[{SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}, {SIMIC_COMBINE: "Neutral", DEFAULT_GUILD: "None"}], size="Medium", speed=60, darkvision=60, language=[COMMON, {'Choose 1': [ELVISH, VEDALKEN_L]}])
+VEDALKEN = Core.Race("Vedalken", ab_score_bonus=[(INT, 2), (WIS, 1)], age=[40, 350], alignment=["Lawful", ("Good", "Neutral")], size="Medium", speed=30, language=[COMMON, VEDALKEN_L, {'Choose 1': [ABYSSAL, CELESTIAL, DRACONIC, ELVISH, GIANT, GOBLIN_L, KRAUL, LOXODON_L, MERFOLK, MINOTAUR_L, SPHINX, SYLVAN]}])
 # CLASS
 BARBARIAN = Core.BARBARIAN
 BARD = Core.BARD
@@ -210,8 +210,8 @@ class PartyMember:
     def speaks(self):
         if isinstance(self.race.language) == list:
             for idx, lang in enumerate(self.race.language):
-                if isinstance(lang) == dict and "Choose" in lang.keys():
-                    self.languages.append(random.choice(lang["Choose"]))
+                if isinstance(lang) == dict and "Choose 1" in lang.keys():
+                    self.languages.append(random.choice(lang["Choose 1"]))
                 elif isinstance(lang) == Core.Language:
                     self.languages.append(lang)
                 else:

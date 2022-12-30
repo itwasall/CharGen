@@ -16,7 +16,7 @@ def GetProficentSkills(skills):
         while len(proficient_skills) < x:
             skill = random.choice(skills[f"Choose {x}"])
             if skill in proficient_skills:
-                proficient_skills.pop()
+                proficient_skills.pop(proficient_skills.index(skill))
             proficient_skills.append(skill)
         return proficient_skills
     prof_data_keys = skills.keys()
@@ -156,12 +156,9 @@ class Item:
         return self.name
 
 class Coin(Item):
-    def __init__(self, name):
+    def __init__(self, name, value):
         super().__init__(name)
-
-cp = Coin("Copper Piece")
-sp = Coin("Silver Piece")
-gp = Coin("Gold Piece")
+        self.value = value
 
 class Weapon(Item):
     def __init__(self, name, cost, wpn_type, **kwargs):
@@ -170,7 +167,41 @@ class Weapon(Item):
         self.wpn_type = wpn_type
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+class Armor(Item):
+    def __init__(self, name, cost, arm_type, ac, **kwargs):
+        super().__init__(name)
+        self.cost = cost
+        self.arm_type = arm_type
+        self.ac = ac
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+"""
+    ABILITY SCORES
+"""
+STR = AbilityScore("Strength")
+DEX = AbilityScore("Dexterity")
+CON = AbilityScore("Constitution")
+INT = AbilityScore("Intelligence")
+WIS = AbilityScore("Wisdom")
+CHA = AbilityScore("Charisma")
+
+STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA": CHA}
+
+"""
+    MONEY
+"""
+cp = Coin("Copper Piece", value=1)
+sp = Coin("Silver Piece", value=10)
+ep = Coin("Electrum Piece", value=50)
+gp = Coin("Gold Piece", value=100)
+pp = Coin("Platinum Piece", value=1000)
         
+"""
+    WEAPONS
+"""
+# Simple Melee
 CLUB = Weapon("Club", cost=[1, sp], wpn_type='Simple', is_melee = True)
 DAGGER = Weapon("Dagger", cost=[2, gp], wpn_type='Simple', is_melee=True)
 GREATCLUB = Weapon("Greatclub", cost=[2, sp], wpn_type='Simple', is_melee=True)
@@ -181,12 +212,12 @@ MACE = Weapon("Mace", cost=[5, gp], wpn_type='Simple', is_melee=True)
 QUARTERSTAFF = Weapon("Quarterstaff", cost=[2, sp], wpn_type='Simple', is_melee=True)
 SICKLE = Weapon("Sickle", cost=[1, gp], wpn_type='Simple', is_melee=True)
 SPEAR = Weapon("Spear", cost=[1, gp], wpn_type='Simple', is_melee=True)
-
+# Simple Ranged
 LIGHT_CROSSBOW = Weapon("Light_Crossbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
 DART = Weapon("Dart", cost=[5, cp], wpn_type='Simple', is_melee=False)
 SHORTBOW = Weapon("Shortbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
 SLING = Weapon("Sling", cost=[1, sp], wpn_type='Simple', is_melee=False)
-
+# Martial Melee
 BATTLEAXE = Weapon("Battleaxe", cost=[10, gp], wpn_type='Martial', is_melee=True)
 FLAIL = Weapon("Flail", cost=[10, gp], wpn_type='Martial', is_melee=True)
 GLAIVE = Weapon("Glaive", cost=[20, gp], wpn_type='Martial', is_melee=True)
@@ -205,7 +236,7 @@ TRIDENT = Weapon("Trident", cost=[5, gp], wpn_type='Martial', is_melee=True)
 WAR_PICK = Weapon("War_Pick", cost=[5, gp], wpn_type='Martial', is_melee=True)
 WARHAMMER = Weapon("Warhammer", cost=[15, gp], wpn_type='Martial', is_melee=True)
 WHIP = Weapon("Whip", cost=[2, gp], wpn_type='Martial', is_melee=True)
-
+# Martial Ranged
 BLOWGUN = Weapon("Blowgun", cost=[10, gp], wpn_type='Martial', is_melee=False)
 HAND_CROSSBOW = Weapon("Hand_Crossbow", cost=[75, gp], wpn_type='Martial', is_melee=False)
 HEAVY_CROSSBOW = Weapon("Heavy_Crossbow", cost=[50, gp], wpn_type='Martial', is_melee=False)
@@ -216,16 +247,132 @@ SIMPLE_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_typ
 MARTIAL_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Martial')]
 
 """
-    ABILITY SCORES
+    ARMOR
 """
-STR = AbilityScore("Strength")
-DEX = AbilityScore("Dexterity")
-CON = AbilityScore("Constitution")
-INT = AbilityScore("Intelligence")
-WIS = AbilityScore("Wisdom")
-CHA = AbilityScore("Charisma")
+# LIGHT ARMOR
+PADDED = Armor("Padded", cost=[5, gp], arm_type='Light', ac=[11, DEX])
+LEATHER = Armor("Leather", cost=[10, gp], arm_type='Light', ac=[11, DEX])
+STUDDED_LEATHER = Armor("Studded_Leather", cost=[45, gp], arm_type='Light', ac=[12, DEX])
+# MEDIUM ARMOR
+HIDE = Armor("Hide", cost=[10, gp], arm_type='Medium', ac=[12, DEX])
+CHAIN_SHIRT = Armor("Chain_Shirt", cost=[50, gp], arm_type='Medium', ac=[13, DEX])
+SCALE_MAIL = Armor("Scale_Mail", cost=[50, gp], arm_type='Medium', ac=[14, DEX])
+BREASTPLATE = Armor("Breastplate", cost=[400, gp], arm_type='Medium', ac=[14, DEX])
+HALF_PLATE = Armor("Half_Plate", cost=[750, gp], arm_type='Medium', ac=[15, DEX])
+# HEAVY ARMOR
+RING_MAIL = Armor("Ring_Mail", cost=[30, gp], arm_type='Heavy', ac=[14, None])
+CHAIN_MAIL = Armor("Chain_Mail", cost=[75, gp], arm_type='Heavy', ac=[16, None])
+SPLINT = Armor("Splint", cost=[200, gp], arm_type='Heavy', ac=[17, None])
+PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None])
+# SHIELD
+SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None])
 
-STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA": CHA}
+"""
+    ADVENTURING GEAR
+"""
+# REGULAR
+ABACUS = Item("Abacus", cost=[2, gp])
+ACID_VIAL = Item("Acid_Vial", cost=[25, gp])
+ALCHEMISTS_FIRE = Item("Alchemists_Fire", cost=[50, gp])
+ANTITOXIN_VIAL = Item("Antitoxin_Vial", cost=[50, gp])
+BACKPACK = Item("Backpack", cost=[2, gp])
+BALL_BEARINGS = Item("Ball_Bearings", cost=[1, gp], quantity=1000)
+BARREL = Item("Barrel", cost=[2, gp])
+BASKET = Item("Basket", cost=[4, sp])
+BEDROLL = Item("Bedroll", cost=[1, gp])
+BELL = Item("Bell", cost=[1, gp])
+BLANKET = Item("Blanket", cost=[5, sp])
+BLOCK_AND_TACKLE = Item("Block_and_Tackle", cost=[1, gp])
+BOOK = Item("Book", cost=[25, gp])
+BOTTLE_GLASS = Item("Bottle_Glass", cost=[2, gp])
+BUCKET = Item("Bucket", cost=[5, cp])
+CALTROPS = Item("Caltrops", cost=[1, gp], quantity=20)
+CANDLE = Item("Candle", cost=[1, cp])
+CASE_CROSSBOW_BOLT = Item("Case_Crossbow_Bolt", cost=[1, gp])
+CASE_MAP_SCROLL = Item("Case_Map_Scroll", cost=[1, gp])
+CHAIN = Item("Chain", cost=[5, gp], quantity=10)
+CHALK = Item("Chalk", cost=[1, cp], quantity=1)
+CHEST = Item("Chest", cost=[5, gp])
+CLIMBERS_KIT = Item("Climbers_Kit", cost=[25, gp])
+CLOTHES_COMMON = Item("Clothes_Common", cost=[5, sp])
+CLOTHES_COSTUME = Item("Clothes_Costume", cost=[5, gp])
+CLOTHES_FINE = Item("Clothes_Fine", cost=[15, gp])
+CLOTHES_TRAVELERS = Item("Clothes_Travelers", cost=[2, gp])
+COMPONENT_POUCH = Item("Component_Pouch", cost=[25, gp])
+CROWBAR = Item("Crowbar", cost=[2, gp])
+FISHING_TACKLE = Item("Fishing_Tackle", cost=[1, gp])
+FLASK = Item("Flask", cost=[2, cp])
+GRAPPING_HOOK = Item("Grapping_Hook", cost=[2, gp])
+HAMMER = Item("Hammer", cost=[1, gp])
+SLEDGEHAMMER = Item("Sledgehammer", cost=[2, gp])
+HEALERS_KIT = Item("Healers_Kit", cost=[5, gp])
+HOLY_WATER = Item("Holy_Water", cost=[25, gp])
+HOURGLASS = Item("Hourglass", cost=[25, gp])
+INK = Item("Ink", cost=[10, gp], quantity=1)
+INK_PEN = Item("Ink_Pen", cost=[2, cp])
+JUG = Item("Jug", cost=[2, cp])
+LADDER = Item("Ladder", cost=[1, sp], quantity=10)
+LAMP = Item("Lamp", cost=[5, sp])
+LANTURN_BULLSEYE = Item("Lanturn_Bullseye", cost=[10, gp])
+LANTURN_HOODED = Item("Lanturn_Hooded", cost=[5, gp])
+LOCK = Item("Lock", cost=[10, gp])
+MAGNIFYING_GLASS = Item("Magnifying_Glass", cost=[100, gp])
+MANACLES = Item("Manacles", cost=[2, gp])
+MESS_KIT = Item("Mess_Kit", cost=[2, sp])
+MIRROR = Item("Mirror", cost=[5, gp])
+OIL = Item("Oil", cost=[1, sp])
+PAPER = Item("Paper", cost=[2, sp], quantity=1)
+PARCHMENT = Item("Parchment", cost=[1, sp], quantity=1)
+PERFUME = Item("Perfume", cost=[5, gp])
+PICK = Item("Pick", cost=[2, gp])
+PITON = Item("Piton", cost=[5, cp])
+POISON_VIAL = Item("Poison_Vial", cost=[100, gp])
+POLE = Item("Pole", cost=[5, cp], quantity=10)
+POT = Item("Pot", cost=[2, gp])
+POTION_OF_HEALING = Item("Potion_of_Healing", cost=[50, gp])
+POUCH = Item("Pouch", cost=[5, sp])
+QUIVER = Item("Quiver", cost=[1, gp])
+RAM_PORTABLE = Item("Ram_Portable", cost=[4, gp])
+RATIONS = Item("Rations", cost=[5, sp], quantity=1)
+ROBES = Item("Robes", cost=[1, gp])
+ROPE_HEMPEN = Item("Rope_hempen", cost=[1, gp], quantity=50)
+ROPE_SILK = Item("Rope_Silk", cost=[10, gp], quantity=50)
+SACK = Item("Sack", cost=[1, cp])
+SCALE_MERCHANTS = Item("Scale_Merchants", cost=[5, gp])
+SEALING_WAX = Item("Sealing_Wax", cost=[5, sp])
+SHOVEL = Item("Shovel", cost=[2, gp])
+SIGNAL_WHISTLE = Item("Signal_Whistle", cost=[5, cp])
+SIGNET_RING = Item("Signet_Ring", cost=[5, gp])
+SOAP = Item("Soap", cost=[2, cp])
+SPELLBOOK = Item("Spellbook", cost=[50, gp])
+IRON_SPIKES = Item("Iron_Spikes", cost=[1, gp], quantity=10)
+SPYGLASS = Item("Spyglass", cost=[1000, gp])
+TENT_TWO_PERSON = Item("Tent_Two_Person", cost=[2, gp])
+TINDERBOX = Item("Tinderbox", cost=[5, sp])
+TORCH = Item("Torch", cost=[1, cp])
+VIAL = Item("Vial", cost=[1, gp])
+WATERSKIN = Item("Waterskin", cost=[2, sp])
+WHETSTONE = Item("Whetstone", cost=[1, cp])
+# AMMUNITION
+ARROWS = Item("Arrows", cost=[1, gp], ammunition=True, quantity=20)
+BLOWGUN_NEEDLES = Item("Blowgun_Needles", cost=[1, gp], ammunition=True, quantity=50)
+CROSSBOW_BOLTS = Item("Crossbow_Bolts", cost=[1, gp], ammunition=True, quantity=20)
+SLING_BULLETS = Item("Sling_Bullets", cost=[4, cp], ammunition=True, quantity=20)
+# ARCANE_FOCUS
+CRYSTAL = Item("Crystal", cost=[10, gp], arcane_focus=True)
+ORB = Item("Orb", cost=[20, gp], arcane_focus=True)
+ROD = Item("Rod", cost=[10, gp], arcane_focus=True)
+STAFF = Item("Staff", cost=[5, gp], arcane_focus=True)
+WAND = Item("Wand", cost=[10, gp], arcane_focus=True)
+# DRUIDIC_FOCUS
+SPRIG_OF_MISTLETOE = Item("Sprig_of_Mistletoe", cost=[1, gp], druidic_focus=True)
+TOTEM = Item("Totem", cost=[1, gp], druidic_focus=True)
+WOODEN_STAFF = Item("Wooden_Staff", cost=[5, gp], druidic_focus=True)
+YEW_WAND = Item("Yew_Wand", cost=[100, gp], druidic_focus=True)
+# HOLY_SYMBOL
+AMULET = Item("Amulet", cost=[5, gp], holy_symbol=True)
+EMBLEM = Item("Emblem", cost=[5, gp], holy_symbol=True)
+RELIQUARY = Item("Reliquary", cost=[5, gp], holy_symbol=True)
 
 """
     SKILLS
@@ -283,6 +430,8 @@ BARBARIAN.saving_throws = [STR, CON]
 BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATURE, PERCEPTION, SURVIVAL]}
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
+BARBARIAN.starting_money = ["2d4", 10, gp]
+
 
 BARD.proficiencies = {
         'Armor': ['Light'],
@@ -293,6 +442,7 @@ BARD.saving_throws = [DEX, CHA]
 BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
 BARD.initial_health = [8, CON.modifier]
+BARD.starting_money = ["5d4", 10, gp]
 
 CLERIC.proficiencies = {
         'Armor': ['Light', 'Medium', 'Shield'],
@@ -303,6 +453,7 @@ CLERIC.saving_throws = [WIS, CHA]
 CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
 CLERIC.hit_dice = "1d8"
 CLERIC.initial_health = [8, CON.modifier]
+CLERIC.starting_money = ["5d4", 10, gp]
 
 DRUID.proficiencies = {
         'Armor': ['Light', 'Medium', 'Shield'],
@@ -313,6 +464,7 @@ DRUID.saving_throws = [INT, WIS]
 DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE, PERCEPTION, RELIGION, SURVIVAL]}
 DRUID.hit_dice = "1d8"
 DRUID.initial_health = [8, CON.modifier]
+DRUID.starting_money = ["2d4", 10, gp]
 
 FIGHTER.proficiencies = {
         'Armor': ['All', 'Shield'],
@@ -323,6 +475,7 @@ FIGHTER.saving_throws = [STR, CON]
 FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, INSIGHT, INTIMIDATION, PERCEPTION, SURVIVAL]}
 FIGHTER.hit_dice = "1d10"
 FIGHTER.initial_health = [10, CON.modifier]
+FIGHTER.starting_money = ["5d4", 10, gp]
 
 MONK.proficiencies = {
         'Armor': None,
@@ -333,6 +486,7 @@ MONK.saving_throws = [STR, DEX]
 MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, STEALTH]}
 MONK.hit_dice = "1d8"
 MONK.initial_health = [8, CON.modifier]
+MONK.starting_money = ["5d4", 1, gp]
 
 PALADIN.proficiencies = {
         'Armor': ['All', 'Shield'],
@@ -343,6 +497,7 @@ PALADIN.saving_throws = [WIS, CHA]
 PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSUASION, RELIGION]}
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = [10, CON.modifier]
+PALADIN.starting_money = ["5d4", 10, gp]
 
 RANGER.proficiencies = {
         'Armor': ['Light', 'Medium', 'Shield'],
@@ -353,6 +508,7 @@ RANGER.saving_throws = [STR, DEX]
 RANGER.skills = {'Choose 3': [ANIMAL_HANDLING, ATHLETICS, INSIGHT, INVESTIGATION, NATURE, PERCEPTION, STEALTH, SURVIVAL]}
 RANGER.hit_dice = "1d10"
 RANGER.initial_health = [10, CON.modifier]
+RANGER.starting_money = ["5d4", 10, gp]
 
 ROGUE.proficiencies = {
         'Armor': ['Light'],
@@ -363,6 +519,7 @@ ROGUE.saving_throws = [DEX, INT]
 ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDATION, INVESTIGATION, PERCEPTION, PERFORMANCE, PERSUASION, SLEIGHT_OF_HAND, STEALTH]}
 ROGUE.hit_dice = "1d8"
 ROGUE.initial_health = [8, CON.modifier]
+ROGUE.starting_money = ["4d4", 10, gp]
 
 SORCERER.proficiencies = {
         'Armor': None,
@@ -373,6 +530,7 @@ SORCERER.saving_throws = [CON, CHA]
 SORCERER.skills = {'Choose 2': [ARCANA, DECEPTION, INSIGHT, INTIMIDATION, PERSUASION, RELIGION]}
 SORCERER.hit_dice = "1d6"
 SORCERER.initial_health = [6, CON.modifier]
+SORCERER.starting_money = ["3d4", 10, gp]
 
 WARLOCK.proficiencies = {
         'Armor': ['Light'],
@@ -383,6 +541,7 @@ WARLOCK.saving_throws = [WIS, CHA]
 WARLOCK.skills = {'Choose 2': [ARCANA, DECEPTION, HISTORY, INTIMIDATION, INVESTIGATION, NATURE, RELIGION]}
 WARLOCK.hit_dice = "1d8"
 WARLOCK.initial_health = [8, CON.modifier]
+WARLOCK.starting_money = ["4d4", 10, gp]
 
 WIZARD.proficiencies = {
         'Armor': None,
@@ -393,6 +552,7 @@ WIZARD.saving_throws = [INT, WIS]
 WIZARD.skills = {'Choose 2': [ARCANA, HISTORY, INSIGHT, INVESTIGATION, MEDICINE, RELIGION]}
 WIZARD.hit_dice = "1d6"
 WIZARD.initial_health = [6, CON.modifier]
+WIZARD.starting_money = ["4d4", 10, gp]
 
 CLASSES = [BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
 
