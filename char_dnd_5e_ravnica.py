@@ -174,6 +174,11 @@ class PartyMember:
         self.intimidation = skills[15]
         self.performance = skills[16]
         self.persuasion = skills[17]
+        """ Calculatables """
+        self.ac = 0
+        self.hit_die = ""
+        self.hit_points = 0
+        self.current_hit_points = 0
 
         for k, d in kwargs.items():
             self.__setattr__(k, d)
@@ -341,7 +346,7 @@ def gen_extra_traits(Character: PartyMember):
                 'Powerful Build': "You count as one size larger when determing your carrying capacity and the weight you can push or drag",
                 'Loxodon Serenity': "You have advantage on saving throws against being charmed or frightened",
                 'Natural Armor': "You have thick, leathery skin. When you aren't wearing any armour, your AC is 12 + your CON modifier. You can use your natural armor to determine your AC if the armor you wear would leave you with a lower AC. A shield's benefits apply as normal when you are using your natural armor.",
-                'Trunk': "You can grasp things with your trunk, and you can use it as a snorkel. It has a reach of 5 feet, and it can lift a number of pounds equal to five times your STR score. You can use it to do the following simple tasks: lift, drop, hold, push or pull an object or creature; open or close a door or container; grapple someone; or make an unarmed strike. Your trunk can't wield weapons or shields or do anything that requires manual prescision, such as using tools or magic items or performing the somantic components of a spell."
+                'Trunk': "You can grasp things with your trunk, and you can use it as a snorkel. It has a reach of 5 feet, and it can lift a number of pounds equal to five times your STR score. You can use it to do the following simple tasks: lift, drop, hold, push or pull an object or creature; open or close a door or container; grapple someone; or make an unarmed strike. Your trunk can't wield weapons or shields or do anything that requires manual prescision, such as using tools or magic items or performing the somantic components of a spell.",
                 'Keen Smell': "Thanks to your sensitive trunk, you have advantage on Wisdom (Perception), Wisdom (Survival), and Intelligence (Investigation) checks with an involve smell"
             }
         case "Minotaur":
@@ -356,9 +361,54 @@ def gen_extra_traits(Character: PartyMember):
                 'Hammering Horns': 'Immediately after you hit a creature with a melee attack as parto fhte Attack action on your turn, you can use a bonus action to attempt to shove that target with your horns. The tartget must be no more than one size larger than you and within 5 feet of you. Unless it succeeds on a Strength saving throw against a DC equal to 8 + your proficiency bonus + your STR modifier, you push it up to 10 feet away from you.',
                 'Imposing Presence': f'You have proficiencies in one of the following skills of your choice: Intimidation or Persuasion. DEBUG: {imposing_presence_roll} was chosen'
             }
-
-
-
+        case "Simic Hybrid":
+            animal_enhancement_first_roll = random.choice(['Manta Glide', 'Nimble Climber', 'Underwater Adaption'])
+            animal_enhancement_fifth_roll = random.choice(['Grappling Appendages', 'Carapace', 'Acid Spit'])
+            match animal_enhancement_first_roll:
+                case 'Manta Glide':
+                    first_animal_en_key, first_animal_en_value = {'Manta Glide', "You have ray-like fins that you can use as wings to slow your fall or allow you to glide. When you fall and aren't incapacitated, you can subtract up to 100 feet from the fall when calculating falling damage, and you can move up to 2 feet horizontally for every 1 foot you descend"}
+                case 'Nimble Climber':
+                    first_animal_en_key, first_animal_en_value= {'Nimble Climber': "You have a climbing speed equal to your walking speed."}
+                case 'Underwater Adaptation':
+                    first_animal_en_key, first_animal_en_value= {'Underwater Adaptation': "You can breathe air and water, and you have a swimming speed equal to your walking speed"}
+            match animal_enhancement_fifth_roll:
+                case 'Grappling Appendages':
+                    fifth_animal_en_key, fifth_animal_en_value = {'Grappling Appendages': "You have two special appendages growing alongside your arms. Choose whether they're both claws or tentacles. As an action, you can use one of them to try to grapple a creature. Each one is also a natural weapon, which you can use to make an unarmed strike. Ifyou hit with it, the target takes bludgeoning damage equal to 1d6 + your STR modifier, instead of the bludgeoning damage normal for an unarmed strike. Immediately after hitting, you can try to grapple the target as a bonus action. These appendages can't precisely manipulate anything and can't wield weapons, magic items, or other specialised equipment."}
+                case 'Carapace':
+                    fifth_animal_en_key, fifth_animal_en_value = {'Carapace': "Your skin in places is covered by a thick shell. You gain +1 bonus to AC when you're not wearing heavy armor"}
+                case 'Acid Spit':
+                    fifth_animal_en_key, fifth_animal_en_value = {'Acid Spit': "As an action, you can spracy acid from glands in your mouth, targeting one creature or object you can see within 30 feet of you. The targettakes 2d10 acid damage unless it succeeds on a DEX saving throw against a DC equal to 8 + your CON modifier + your proficiency bonus. This damage increases by 1d10 when you reach 11th level (3d10) and 17th level (4d10). You can use this trait a number of times equal to your CON modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."}
+            if Character.level >= 5:
+                Character.extra_traits = {
+                'Animal Enhancement': f"Your body has been altered to incorporate certain animal characteristics. You choose one animal enhancement now and a second enhancement at 5th level. DEBUG: {animal_enhancement_first_roll} & {animal_enhancement_fifth_roll} was chosen",
+                first_animal_en_key: first_animal_en_value,
+                fifth_animal_en_key: fifth_animal_en_value
+                }
+            else:
+                Character.extra_traits = {
+                'Animal Enhancement': f"Your body has been altered to incorporate certain animal characteristics. You choose one animal enhancement now and a second enhancement at 5th level. DEBUG: {animal_enhancement_first_roll} was chosen",
+                first_animal_en_key: first_animal_en_value,
+                }
+        case "Vedalken":
+            tireless_precision_roll = random.choice(['Arcana', 'History', 'Investigation', 'Medicine', 'Performance', 'Sleight of Hand'])
+            match tireless_precision_roll:
+                case 'Arcana':
+                    Character.arcana.set_proficiency_bonus(Character.level)
+                case 'History':
+                    Character.history.set_proficiency_bonus(Character.level)
+                case 'Investigation':
+                    Character.investigation.set_proficiency_bonus(Character.level)
+                case 'Medicine':
+                    Character.medicine.set_proficiency_bonus(Character.level)
+                case 'Performance':
+                    Character.performance.set_proficiency_bonus(Character.level)
+                case 'Sleight of Hand':
+                    Character.sleight_of_hand.set_proficiency_bonus(Character.level)
+            Character.extra_traits = {
+                'Vedalken Dispassion': "You have advantage on all Intelligence, Wisdom and Charisma saving throws.",
+                'Tireless Precision': f"You are proficient in one of the following skills: Arcana, History, Investigation, Medicine, Performance, or Sleight of Hand. You are also proficient with one tool of your choice. Whenever you make an ability check with the chosen skill or tool, roll 1d4 and add the number rolled to the check's total. DEBUG: {tireless_precision_roll} was chosen.",
+                'Partially Amphibious': "By absorbing oxygen through your skin, you can breathe underwater for up to 1 hour. Once you've reached that limit, you can't use this trait again until you finish a long rest"
+            }
 
 def gen_common_cause():
     match dice_roll("1d8"):
