@@ -11,6 +11,7 @@ def ProficiencyBonus(level):
     return ((level - 1) // 4) + 2
 
 def GetProficiencies(data):
+
     def RandomiseProficiencies(data, x):
         proficiencies = []
         while len(proficiencies) < x:
@@ -19,6 +20,7 @@ def GetProficiencies(data):
                 proficiencies.pop(proficiencies.index(roll))
             proficiencies.append(roll)
         return proficiencies
+
     prof_data_keys = data.keys()
     match list(prof_data_keys)[0]:
         case 'Choose 1':
