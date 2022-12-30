@@ -344,7 +344,12 @@ LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False, c
 NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 
 SIMPLE_WEAPONS = MakeItemList("wpn_type", "Simple")
+MELEE_SIMPLE_WEAPONS = [wpn for wpn in SIMPLE_WEAPONS if wpn.is_melee == True]
+RANGED_SIMPLE_WEAPONS = [wpn for wpn in SIMPLE_WEAPONS if wpn.is_melee == False]
+
 MARTIAL_WEAPONS = MakeItemList("wpn_type", "Martial")
+MELEE_MARTIAL_WEAPONS = [wpn for wpn in MARTIAL_WEAPONS if wpn.is_melee == True]
+RANGED_MARTIAL_WEAPONS = [wpn for wpn in MARTIAL_WEAPONS if wpn.is_melee == False]
 
 """
     ARMOR
@@ -531,6 +536,13 @@ ARTISAN_TOOLS = MakeItemList("tool_type", "Artisan")
 MUSICAL_INSTRUMENT = MakeItemList("tool_type", "Instrument")
 GAMING_TOOLS = MakeItemList("tool_type", "Gaming")
 TOOLS = MakeItemList("category", "Tool")
+"""
+    MISC ITEMS
+"""
+ALMS_BOX = Item("Alms Box")
+CENSER = Item("Censer")
+BLOCK_OF_INCENSE = Item("Block_of_Incense")
+BAG_OF_SAND = Item("Bag_of_Sand")
 
 """
     BACKGROUND SPECIFIC GEAR
@@ -579,6 +591,18 @@ PARENTAL_TOKEN_OF_REMEMBERANCE = Item("Parental_Token_of_Rememberance", backgrou
 # Shit uhhh
 VEHICLES_WATER = Item("Water Vehicles")
 VEHICLES_LAND = Item("Land Vehicles")
+
+"""
+    ITEM PACKS
+"""
+BURGLURS_PACK = [BACKPACK, BALL_BEARINGS, BELL] + [CANDLE for _ in range(5)] + [CROWBAR, HAMMER, LANTURN_HOODED, WATERSKIN, ROPE_HEMPEN] + [PITON for _ in range(10)]
+DIPLOMATS_PACK = [CHEST, CASE_MAP_SCROLL, CASE_MAP_SCROLL, CLOTHES_FINE, INK, INK_PEN, LAMP, FLASK, FLASK] + [PAPER for _ in range(5)] + [PERFUME, SEALING_WAX, SOAP]
+DUNGEONEERS_PACK = [BACKPACK, CROWBAR, HAMMER] + [PITON for _ in range(10)] + [TORCH for _ in range(10)] + [RATIONS for _ in range(10)] + [TINDERBOX, WATERSKIN, ROPE_HEMPEN]
+ENTERTAINERS_PACK = [BACKPACK, BEDROLL] + [CLOTHES_COSTUME for _ in range(2)] + [CANDLE for _ in range(5)] + [RATIONS for _ in range(5)] + [WATERSKIN + DISGUISE_KIT]
+EXPLORERS_PACK = [BACKPACK, BEDROLL, MESS_KIT, TINDERBOX] + [TORCH for _ in range(10)] + [RATIONS for _ in range(10)] + [WATERSKIN, ROPE_HEMPEN]
+PRIESTS_PACK = [BACKPACK, BLANKET] + [CANDLE for _ in range(10)] + [TINDERBOX, ALMS_BOX, CENSER, VESTMENTS, WATERSKIN, ROPE_HEMPEN] + [RATIONS for _ in range(2)] + [BLOCK_OF_INCENSE for _ in range(2)]
+SCHOLARS_PACK = [BACKPACK, BOOK, INK, INK_PEN, SMALL_KNIFE, BAG_OF_SAND] + [PARCHMENT for _ in range(10)]
+
 """
     BACKGROUND
 """
@@ -624,6 +648,10 @@ BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATUR
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
 BARBARIAN.starting_money = ["2d4", 10, gp]
+BARBARIAN.equipment = [
+        {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]},
+        {'Choose 1': [[HANDAXE, HANDAXE], {'Choose 1': SIMPLE_WEAPONS}]},
+        JAVELIN, JAVELIN, JAVELIN, JAVELIN] + EXPLORERS_PACK
 
 
 BARD.proficiencies = {
@@ -636,6 +664,12 @@ BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
 BARD.initial_health = [8, CON.modifier]
 BARD.starting_money = ["5d4", 10, gp]
+BARD.equipment = [
+        {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]},
+        {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
+        {'Choose 1': [LUTE, {'Choose 1': INSTRUMENT}]},
+        LEATHER, DAGGER
+        ]
 
 CLERIC.proficiencies = {
         'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
@@ -647,6 +681,13 @@ CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
 CLERIC.hit_dice = "1d8"
 CLERIC.initial_health = [8, CON.modifier]
 CLERIC.starting_money = ["5d4", 10, gp]
+CLERIC.equipment = [
+        {'Choose 1': [MACE, WARHAMMER]},
+        {'Choose 1': [SCALE_MAIL, LEATHER, CHAIN_MAIL]},
+        {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]},
+        {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]},
+        SHIELD, {'Choose 1': HOLY_SYMBOL}
+        ]
 
 DRUID.proficiencies = {
         'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
