@@ -28,6 +28,22 @@ def GetProficentSkills(skills):
         case 'Choose 4':
             return RandomiseProficientSkills(skills, 4)
 
+def GetProficientTools(tools):
+    def RandomiseProficientTools(tools, x):
+        proficient_tools = []
+        while len(proficient_tools) < x:
+            tool = random.choice(tools[f"Choose {x}"])
+            if tool in proficient_tools:
+                proficient_tools.pop(proficient_tools.index(tool))
+            proficient_tools.append(tool)
+        return proficient_tools
+    prof_data_keys = tools.keys()
+    match list(prof_data_keys)[0]:
+        case 'Choose 1':
+            return RandomiseProficientTools(tools, 1)
+        case 'Choose 3':
+            return RandomiseProficientTools(tools, 3)
+
 
 class _Class:
     items = []
@@ -177,6 +193,15 @@ class Armor(Item):
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
+class Tool(Item):
+    def __init__(self, name, cost, subtype=None, **kwargs):
+        super().__init__(name)
+        self.cost = cost
+        self.subtype = subtype
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+
 """
     ABILITY SCORES
 """
@@ -202,46 +227,46 @@ pp = Coin("Platinum Piece", value=1000)
     WEAPONS
 """
 # Simple Melee
-CLUB = Weapon("Club", cost=[1, sp], wpn_type='Simple', is_melee = True)
-DAGGER = Weapon("Dagger", cost=[2, gp], wpn_type='Simple', is_melee=True)
-GREATCLUB = Weapon("Greatclub", cost=[2, sp], wpn_type='Simple', is_melee=True)
-HANDAXE = Weapon("Handaxe", cost=[5, gp], wpn_type='Simple', is_melee=True)
-JAVELIN = Weapon("Javelin", cost=[2, gp], wpn_type='Simple', is_melee=True)
-LIGHT_HAMMER = Weapon("Light_Hammer", cost=[2, gp], wpn_type='Simple', is_melee=True)
-MACE = Weapon("Mace", cost=[5, gp], wpn_type='Simple', is_melee=True)
-QUARTERSTAFF = Weapon("Quarterstaff", cost=[2, sp], wpn_type='Simple', is_melee=True)
-SICKLE = Weapon("Sickle", cost=[1, gp], wpn_type='Simple', is_melee=True)
-SPEAR = Weapon("Spear", cost=[1, gp], wpn_type='Simple', is_melee=True)
+CLUB = Weapon("Club", cost=[1, sp], wpn_type='Simple', is_melee = True, category='Weapon')
+DAGGER = Weapon("Dagger", cost=[2, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+GREATCLUB = Weapon("Greatclub", cost=[2, sp], wpn_type='Simple', is_melee=True, category='Weapon')
+HANDAXE = Weapon("Handaxe", cost=[5, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+JAVELIN = Weapon("Javelin", cost=[2, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+LIGHT_HAMMER = Weapon("Light_Hammer", cost=[2, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+MACE = Weapon("Mace", cost=[5, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+QUARTERSTAFF = Weapon("Quarterstaff", cost=[2, sp], wpn_type='Simple', is_melee=True, category='Weapon')
+SICKLE = Weapon("Sickle", cost=[1, gp], wpn_type='Simple', is_melee=True, category='Weapon')
+SPEAR = Weapon("Spear", cost=[1, gp], wpn_type='Simple', is_melee=True, category='Weapon')
 # Simple Ranged
-LIGHT_CROSSBOW = Weapon("Light_Crossbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
-DART = Weapon("Dart", cost=[5, cp], wpn_type='Simple', is_melee=False)
-SHORTBOW = Weapon("Shortbow", cost=[25, gp], wpn_type='Simple', is_melee=False)
-SLING = Weapon("Sling", cost=[1, sp], wpn_type='Simple', is_melee=False)
+LIGHT_CROSSBOW = Weapon("Light_Crossbow", cost=[25, gp], wpn_type='Simple', is_melee=False, category='Weapon')
+DART = Weapon("Dart", cost=[5, cp], wpn_type='Simple', is_melee=False, category='Weapon')
+SHORTBOW = Weapon("Shortbow", cost=[25, gp], wpn_type='Simple', is_melee=False, category='Weapon')
+SLING = Weapon("Sling", cost=[1, sp], wpn_type='Simple', is_melee=False, category='Weapon')
 # Martial Melee
-BATTLEAXE = Weapon("Battleaxe", cost=[10, gp], wpn_type='Martial', is_melee=True)
-FLAIL = Weapon("Flail", cost=[10, gp], wpn_type='Martial', is_melee=True)
-GLAIVE = Weapon("Glaive", cost=[20, gp], wpn_type='Martial', is_melee=True)
-GREATAXE = Weapon("Greataxe", cost=[30, gp], wpn_type='Martial', is_melee=True)
-GREATSWORD = Weapon("Greatsword", cost=[50, gp], wpn_type='Martial', is_melee=True)
-HALBERD = Weapon("Halberd", cost=[20, gp], wpn_type='Martial', is_melee=True)
-LANCE = Weapon("Lance", cost=[10, gp], wpn_type='Martial', is_melee=True)
-LONGSWORD = Weapon("Longsword", cost=[15, gp], wpn_type='Martial', is_melee=True)
-MAUL = Weapon("Maul", cost=[10, gp], wpn_type='Martial', is_melee=True)
-MORNINGSTAR = Weapon("Morningstar", cost=[15, gp], wpn_type='Martial', is_melee=True)
-PIKE = Weapon("Pike", cost=[5, gp], wpn_type='Martial', is_melee=True)
-RAPIER = Weapon("Rapier", cost=[25, gp], wpn_type='Martial', is_melee=True)
-SCIMITAR = Weapon("Scimitar", cost=[25, gp], wpn_type='Martial', is_melee=True)
-SHORTSWORD = Weapon("Shortsword", cost=[10, gp], wpn_type='Martial', is_melee=True)
-TRIDENT = Weapon("Trident", cost=[5, gp], wpn_type='Martial', is_melee=True)
-WAR_PICK = Weapon("War_Pick", cost=[5, gp], wpn_type='Martial', is_melee=True)
-WARHAMMER = Weapon("Warhammer", cost=[15, gp], wpn_type='Martial', is_melee=True)
-WHIP = Weapon("Whip", cost=[2, gp], wpn_type='Martial', is_melee=True)
+BATTLEAXE = Weapon("Battleaxe", cost=[10, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+FLAIL = Weapon("Flail", cost=[10, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+GLAIVE = Weapon("Glaive", cost=[20, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+GREATAXE = Weapon("Greataxe", cost=[30, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+GREATSWORD = Weapon("Greatsword", cost=[50, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+HALBERD = Weapon("Halberd", cost=[20, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+LANCE = Weapon("Lance", cost=[10, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+LONGSWORD = Weapon("Longsword", cost=[15, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+MAUL = Weapon("Maul", cost=[10, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+MORNINGSTAR = Weapon("Morningstar", cost=[15, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+PIKE = Weapon("Pike", cost=[5, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+RAPIER = Weapon("Rapier", cost=[25, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+SCIMITAR = Weapon("Scimitar", cost=[25, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+SHORTSWORD = Weapon("Shortsword", cost=[10, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+TRIDENT = Weapon("Trident", cost=[5, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+WAR_PICK = Weapon("War_Pick", cost=[5, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+WARHAMMER = Weapon("Warhammer", cost=[15, gp], wpn_type='Martial', is_melee=True, category='Weapon')
+WHIP = Weapon("Whip", cost=[2, gp], wpn_type='Martial', is_melee=True, category='Weapon')
 # Martial Ranged
-BLOWGUN = Weapon("Blowgun", cost=[10, gp], wpn_type='Martial', is_melee=False)
-HAND_CROSSBOW = Weapon("Hand_Crossbow", cost=[75, gp], wpn_type='Martial', is_melee=False)
-HEAVY_CROSSBOW = Weapon("Heavy_Crossbow", cost=[50, gp], wpn_type='Martial', is_melee=False)
-LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False)
-NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False)
+BLOWGUN = Weapon("Blowgun", cost=[10, gp], wpn_type='Martial', is_melee=False, category='Weapon')
+HAND_CROSSBOW = Weapon("Hand_Crossbow", cost=[75, gp], wpn_type='Martial', is_melee=False, category='Weapon')
+HEAVY_CROSSBOW = Weapon("Heavy_Crossbow", cost=[50, gp], wpn_type='Martial', is_melee=False, category='Weapon')
+LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False, category='Weapon')
+NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 
 SIMPLE_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Simple')]
 MARTIAL_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_type == 'Martial')]
@@ -250,129 +275,177 @@ MARTIAL_WEAPONS = [i for i in Item.items if (hasattr(i, "wpn_type") and i.wpn_ty
     ARMOR
 """
 # LIGHT ARMOR
-PADDED = Armor("Padded", cost=[5, gp], arm_type='Light', ac=[11, DEX])
-LEATHER = Armor("Leather", cost=[10, gp], arm_type='Light', ac=[11, DEX])
-STUDDED_LEATHER = Armor("Studded_Leather", cost=[45, gp], arm_type='Light', ac=[12, DEX])
+PADDED = Armor("Padded", cost=[5, gp], arm_type='Light', ac=[11, DEX], category='Armor')
+LEATHER = Armor("Leather", cost=[10, gp], arm_type='Light', ac=[11, DEX], category='Armor')
+STUDDED_LEATHER = Armor("Studded_Leather", cost=[45, gp], arm_type='Light', ac=[12, DEX], category='Armor')
 # MEDIUM ARMOR
-HIDE = Armor("Hide", cost=[10, gp], arm_type='Medium', ac=[12, DEX])
-CHAIN_SHIRT = Armor("Chain_Shirt", cost=[50, gp], arm_type='Medium', ac=[13, DEX])
-SCALE_MAIL = Armor("Scale_Mail", cost=[50, gp], arm_type='Medium', ac=[14, DEX])
-BREASTPLATE = Armor("Breastplate", cost=[400, gp], arm_type='Medium', ac=[14, DEX])
-HALF_PLATE = Armor("Half_Plate", cost=[750, gp], arm_type='Medium', ac=[15, DEX])
+HIDE = Armor("Hide", cost=[10, gp], arm_type='Medium', ac=[12, DEX], category='Armor')
+CHAIN_SHIRT = Armor("Chain_Shirt", cost=[50, gp], arm_type='Medium', ac=[13, DEX], category='Armor')
+SCALE_MAIL = Armor("Scale_Mail", cost=[50, gp], arm_type='Medium', ac=[14, DEX], category='Armor')
+BREASTPLATE = Armor("Breastplate", cost=[400, gp], arm_type='Medium', ac=[14, DEX], category='Armor')
+HALF_PLATE = Armor("Half_Plate", cost=[750, gp], arm_type='Medium', ac=[15, DEX], category='Armor')
 # HEAVY ARMOR
-RING_MAIL = Armor("Ring_Mail", cost=[30, gp], arm_type='Heavy', ac=[14, None])
-CHAIN_MAIL = Armor("Chain_Mail", cost=[75, gp], arm_type='Heavy', ac=[16, None])
-SPLINT = Armor("Splint", cost=[200, gp], arm_type='Heavy', ac=[17, None])
-PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None])
+RING_MAIL = Armor("Ring_Mail", cost=[30, gp], arm_type='Heavy', ac=[14, None], category='Armor')
+CHAIN_MAIL = Armor("Chain_Mail", cost=[75, gp], arm_type='Heavy', ac=[16, None], category='Armor')
+SPLINT = Armor("Splint", cost=[200, gp], arm_type='Heavy', ac=[17, None], category='Armor')
+PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None], category='Armor')
 # SHIELD
-SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None])
+SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None], category='Armor')
 
 """
     ADVENTURING GEAR
 """
 # REGULAR
-ABACUS = Item("Abacus", cost=[2, gp])
-ACID_VIAL = Item("Acid_Vial", cost=[25, gp])
-ALCHEMISTS_FIRE = Item("Alchemists_Fire", cost=[50, gp])
-ANTITOXIN_VIAL = Item("Antitoxin_Vial", cost=[50, gp])
-BACKPACK = Item("Backpack", cost=[2, gp])
-BALL_BEARINGS = Item("Ball_Bearings", cost=[1, gp], quantity=1000)
-BARREL = Item("Barrel", cost=[2, gp])
-BASKET = Item("Basket", cost=[4, sp])
-BEDROLL = Item("Bedroll", cost=[1, gp])
-BELL = Item("Bell", cost=[1, gp])
-BLANKET = Item("Blanket", cost=[5, sp])
-BLOCK_AND_TACKLE = Item("Block_and_Tackle", cost=[1, gp])
-BOOK = Item("Book", cost=[25, gp])
-BOTTLE_GLASS = Item("Bottle_Glass", cost=[2, gp])
-BUCKET = Item("Bucket", cost=[5, cp])
-CALTROPS = Item("Caltrops", cost=[1, gp], quantity=20)
-CANDLE = Item("Candle", cost=[1, cp])
-CASE_CROSSBOW_BOLT = Item("Case_Crossbow_Bolt", cost=[1, gp])
-CASE_MAP_SCROLL = Item("Case_Map_Scroll", cost=[1, gp])
-CHAIN = Item("Chain", cost=[5, gp], quantity=10)
-CHALK = Item("Chalk", cost=[1, cp], quantity=1)
-CHEST = Item("Chest", cost=[5, gp])
-CLIMBERS_KIT = Item("Climbers_Kit", cost=[25, gp])
-CLOTHES_COMMON = Item("Clothes_Common", cost=[5, sp])
-CLOTHES_COSTUME = Item("Clothes_Costume", cost=[5, gp])
-CLOTHES_FINE = Item("Clothes_Fine", cost=[15, gp])
-CLOTHES_TRAVELERS = Item("Clothes_Travelers", cost=[2, gp])
-COMPONENT_POUCH = Item("Component_Pouch", cost=[25, gp])
-CROWBAR = Item("Crowbar", cost=[2, gp])
-FISHING_TACKLE = Item("Fishing_Tackle", cost=[1, gp])
-FLASK = Item("Flask", cost=[2, cp])
-GRAPPING_HOOK = Item("Grapping_Hook", cost=[2, gp])
-HAMMER = Item("Hammer", cost=[1, gp])
-SLEDGEHAMMER = Item("Sledgehammer", cost=[2, gp])
-HEALERS_KIT = Item("Healers_Kit", cost=[5, gp])
-HOLY_WATER = Item("Holy_Water", cost=[25, gp])
-HOURGLASS = Item("Hourglass", cost=[25, gp])
-INK = Item("Ink", cost=[10, gp], quantity=1)
-INK_PEN = Item("Ink_Pen", cost=[2, cp])
-JUG = Item("Jug", cost=[2, cp])
-LADDER = Item("Ladder", cost=[1, sp], quantity=10)
-LAMP = Item("Lamp", cost=[5, sp])
-LANTURN_BULLSEYE = Item("Lanturn_Bullseye", cost=[10, gp])
-LANTURN_HOODED = Item("Lanturn_Hooded", cost=[5, gp])
-LOCK = Item("Lock", cost=[10, gp])
-MAGNIFYING_GLASS = Item("Magnifying_Glass", cost=[100, gp])
-MANACLES = Item("Manacles", cost=[2, gp])
-MESS_KIT = Item("Mess_Kit", cost=[2, sp])
-MIRROR = Item("Mirror", cost=[5, gp])
-OIL = Item("Oil", cost=[1, sp])
-PAPER = Item("Paper", cost=[2, sp], quantity=1)
-PARCHMENT = Item("Parchment", cost=[1, sp], quantity=1)
-PERFUME = Item("Perfume", cost=[5, gp])
-PICK = Item("Pick", cost=[2, gp])
-PITON = Item("Piton", cost=[5, cp])
-POISON_VIAL = Item("Poison_Vial", cost=[100, gp])
-POLE = Item("Pole", cost=[5, cp], quantity=10)
-POT = Item("Pot", cost=[2, gp])
-POTION_OF_HEALING = Item("Potion_of_Healing", cost=[50, gp])
-POUCH = Item("Pouch", cost=[5, sp])
-QUIVER = Item("Quiver", cost=[1, gp])
-RAM_PORTABLE = Item("Ram_Portable", cost=[4, gp])
-RATIONS = Item("Rations", cost=[5, sp], quantity=1)
-ROBES = Item("Robes", cost=[1, gp])
-ROPE_HEMPEN = Item("Rope_hempen", cost=[1, gp], quantity=50)
-ROPE_SILK = Item("Rope_Silk", cost=[10, gp], quantity=50)
-SACK = Item("Sack", cost=[1, cp])
-SCALE_MERCHANTS = Item("Scale_Merchants", cost=[5, gp])
-SEALING_WAX = Item("Sealing_Wax", cost=[5, sp])
-SHOVEL = Item("Shovel", cost=[2, gp])
-SIGNAL_WHISTLE = Item("Signal_Whistle", cost=[5, cp])
-SIGNET_RING = Item("Signet_Ring", cost=[5, gp])
-SOAP = Item("Soap", cost=[2, cp])
-SPELLBOOK = Item("Spellbook", cost=[50, gp])
-IRON_SPIKES = Item("Iron_Spikes", cost=[1, gp], quantity=10)
-SPYGLASS = Item("Spyglass", cost=[1000, gp])
-TENT_TWO_PERSON = Item("Tent_Two_Person", cost=[2, gp])
-TINDERBOX = Item("Tinderbox", cost=[5, sp])
-TORCH = Item("Torch", cost=[1, cp])
-VIAL = Item("Vial", cost=[1, gp])
-WATERSKIN = Item("Waterskin", cost=[2, sp])
-WHETSTONE = Item("Whetstone", cost=[1, cp])
+ABACUS = Item("Abacus", cost=[2, gp], category="Adventuring Gear")
+ACID_VIAL = Item("Acid_Vial", cost=[25, gp], category="Adventuring Gear")
+ALCHEMISTS_FIRE = Item("Alchemists_Fire", cost=[50, gp], category="Adventuring Gear")
+ANTITOXIN_VIAL = Item("Antitoxin_Vial", cost=[50, gp], category="Adventuring Gear")
+BACKPACK = Item("Backpack", cost=[2, gp], category="Adventuring Gear")
+BALL_BEARINGS = Item("Ball_Bearings", cost=[1, gp], quantity=1000, category="Adventuring Gear")
+BARREL = Item("Barrel", cost=[2, gp], category="Adventuring Gear")
+BASKET = Item("Basket", cost=[4, sp], category="Adventuring Gear")
+BEDROLL = Item("Bedroll", cost=[1, gp], category="Adventuring Gear")
+BELL = Item("Bell", cost=[1, gp], category="Adventuring Gear")
+BLANKET = Item("Blanket", cost=[5, sp], category="Adventuring Gear")
+BLOCK_AND_TACKLE = Item("Block_and_Tackle", cost=[1, gp], category="Adventuring Gear")
+BOOK = Item("Book", cost=[25, gp], category="Adventuring Gear")
+BOTTLE_GLASS = Item("Bottle_Glass", cost=[2, gp], category="Adventuring Gear")
+BUCKET = Item("Bucket", cost=[5, cp], category="Adventuring Gear")
+CALTROPS = Item("Caltrops", cost=[1, gp], quantity=20, category="Adventuring Gear")
+CANDLE = Item("Candle", cost=[1, cp], category="Adventuring Gear")
+CASE_CROSSBOW_BOLT = Item("Case_Crossbow_Bolt", cost=[1, gp], category="Adventuring Gear")
+CASE_MAP_SCROLL = Item("Case_Map_Scroll", cost=[1, gp], category="Adventuring Gear")
+CHAIN = Item("Chain", cost=[5, gp], quantity=10, category="Adventuring Gear")
+CHALK = Item("Chalk", cost=[1, cp], quantity=1, category="Adventuring Gear")
+CHEST = Item("Chest", cost=[5, gp], category="Adventuring Gear")
+CLIMBERS_KIT = Item("Climbers_Kit", cost=[25, gp], category="Adventuring Gear")
+CLOTHES_COMMON = Item("Clothes_Common", cost=[5, sp], category="Adventuring Gear")
+CLOTHES_COSTUME = Item("Clothes_Costume", cost=[5, gp], category="Adventuring Gear")
+CLOTHES_FINE = Item("Clothes_Fine", cost=[15, gp], category="Adventuring Gear")
+CLOTHES_TRAVELERS = Item("Clothes_Travelers", cost=[2, gp], category="Adventuring Gear")
+COMPONENT_POUCH = Item("Component_Pouch", cost=[25, gp], category="Adventuring Gear")
+CROWBAR = Item("Crowbar", cost=[2, gp], category="Adventuring Gear")
+FISHING_TACKLE = Item("Fishing_Tackle", cost=[1, gp], category="Adventuring Gear")
+FLASK = Item("Flask", cost=[2, cp], category="Adventuring Gear")
+GRAPPING_HOOK = Item("Grapping_Hook", cost=[2, gp], category="Adventuring Gear")
+HAMMER = Item("Hammer", cost=[1, gp], category="Adventuring Gear")
+SLEDGEHAMMER = Item("Sledgehammer", cost=[2, gp], category="Adventuring Gear")
+HEALERS_KIT = Item("Healers_Kit", cost=[5, gp], category="Adventuring Gear")
+HOLY_WATER = Item("Holy_Water", cost=[25, gp], category="Adventuring Gear")
+HOURGLASS = Item("Hourglass", cost=[25, gp], category="Adventuring Gear")
+INK = Item("Ink", cost=[10, gp], quantity=1, category="Adventuring Gear")
+INK_PEN = Item("Ink_Pen", cost=[2, cp], category="Adventuring Gear")
+JUG = Item("Jug", cost=[2, cp], category="Adventuring Gear")
+LADDER = Item("Ladder", cost=[1, sp], quantity=10, category="Adventuring Gear")
+LAMP = Item("Lamp", cost=[5, sp], category="Adventuring Gear")
+LANTURN_BULLSEYE = Item("Lanturn_Bullseye", cost=[10, gp], category="Adventuring Gear")
+LANTURN_HOODED = Item("Lanturn_Hooded", cost=[5, gp], category="Adventuring Gear")
+LOCK = Item("Lock", cost=[10, gp], category="Adventuring Gear")
+MAGNIFYING_GLASS = Item("Magnifying_Glass", cost=[100, gp], category="Adventuring Gear")
+MANACLES = Item("Manacles", cost=[2, gp], category="Adventuring Gear")
+MESS_KIT = Item("Mess_Kit", cost=[2, sp], category="Adventuring Gear")
+MIRROR = Item("Mirror", cost=[5, gp], category="Adventuring Gear")
+OIL = Item("Oil", cost=[1, sp], category="Adventuring Gear")
+PAPER = Item("Paper", cost=[2, sp], quantity=1, category="Adventuring Gear")
+PARCHMENT = Item("Parchment", cost=[1, sp], quantity=1, category="Adventuring Gear")
+PERFUME = Item("Perfume", cost=[5, gp], category="Adventuring Gear")
+PICK = Item("Pick", cost=[2, gp], category="Adventuring Gear")
+PITON = Item("Piton", cost=[5, cp], category="Adventuring Gear")
+POISON_VIAL = Item("Poison_Vial", cost=[100, gp], category="Adventuring Gear")
+POLE = Item("Pole", cost=[5, cp], quantity=10, category="Adventuring Gear")
+POT = Item("Pot", cost=[2, gp], category="Adventuring Gear")
+POTION_OF_HEALING = Item("Potion_of_Healing", cost=[50, gp], category="Adventuring Gear")
+POUCH = Item("Pouch", cost=[5, sp], category="Adventuring Gear")
+QUIVER = Item("Quiver", cost=[1, gp], category="Adventuring Gear")
+RAM_PORTABLE = Item("Ram_Portable", cost=[4, gp], category="Adventuring Gear")
+RATIONS = Item("Rations", cost=[5, sp], quantity=1, category="Adventuring Gear")
+ROBES = Item("Robes", cost=[1, gp], category="Adventuring Gear")
+ROPE_HEMPEN = Item("Rope_hempen", cost=[1, gp], quantity=50, category="Adventuring Gear")
+ROPE_SILK = Item("Rope_Silk", cost=[10, gp], quantity=50, category="Adventuring Gear")
+SACK = Item("Sack", cost=[1, cp], category="Adventuring Gear")
+SCALE_MERCHANTS = Item("Scale_Merchants", cost=[5, gp], category="Adventuring Gear")
+SEALING_WAX = Item("Sealing_Wax", cost=[5, sp], category="Adventuring Gear")
+SHOVEL = Item("Shovel", cost=[2, gp], category="Adventuring Gear")
+SIGNAL_WHISTLE = Item("Signal_Whistle", cost=[5, cp], category="Adventuring Gear")
+SIGNET_RING = Item("Signet_Ring", cost=[5, gp], category="Adventuring Gear")
+SOAP = Item("Soap", cost=[2, cp], category="Adventuring Gear")
+SPELLBOOK = Item("Spellbook", cost=[50, gp], category="Adventuring Gear")
+IRON_SPIKES = Item("Iron_Spikes", cost=[1, gp], quantity=10, category="Adventuring Gear")
+SPYGLASS = Item("Spyglass", cost=[1000, gp], category="Adventuring Gear")
+TENT_TWO_PERSON = Item("Tent_Two_Person", cost=[2, gp], category="Adventuring Gear")
+TINDERBOX = Item("Tinderbox", cost=[5, sp], category="Adventuring Gear")
+TORCH = Item("Torch", cost=[1, cp], category="Adventuring Gear")
+VIAL = Item("Vial", cost=[1, gp], category="Adventuring Gear")
+WATERSKIN = Item("Waterskin", cost=[2, sp], category="Adventuring Gear")
+WHETSTONE = Item("Whetstone", cost=[1, cp], category="Adventuring Gear")
 # AMMUNITION
-ARROWS = Item("Arrows", cost=[1, gp], ammunition=True, quantity=20)
-BLOWGUN_NEEDLES = Item("Blowgun_Needles", cost=[1, gp], ammunition=True, quantity=50)
-CROSSBOW_BOLTS = Item("Crossbow_Bolts", cost=[1, gp], ammunition=True, quantity=20)
-SLING_BULLETS = Item("Sling_Bullets", cost=[4, cp], ammunition=True, quantity=20)
+ARROWS = Item("Arrows", cost=[1, gp], ammunition=True, quantity=20, category="Adventuring Gear")
+BLOWGUN_NEEDLES = Item("Blowgun_Needles", cost=[1, gp], ammunition=True, quantity=50, category="Adventuring Gear")
+CROSSBOW_BOLTS = Item("Crossbow_Bolts", cost=[1, gp], ammunition=True, quantity=20, category="Adventuring Gear")
+SLING_BULLETS = Item("Sling_Bullets", cost=[4, cp], ammunition=True, quantity=20, category="Adventuring Gear")
 # ARCANE_FOCUS
-CRYSTAL = Item("Crystal", cost=[10, gp], arcane_focus=True)
-ORB = Item("Orb", cost=[20, gp], arcane_focus=True)
-ROD = Item("Rod", cost=[10, gp], arcane_focus=True)
-STAFF = Item("Staff", cost=[5, gp], arcane_focus=True)
-WAND = Item("Wand", cost=[10, gp], arcane_focus=True)
+CRYSTAL = Item("Crystal", cost=[10, gp], arcane_focus=True, category="Adventuring Gear")
+ORB = Item("Orb", cost=[20, gp], arcane_focus=True, category="Adventuring Gear")
+ROD = Item("Rod", cost=[10, gp], arcane_focus=True, category="Adventuring Gear")
+STAFF = Item("Staff", cost=[5, gp], arcane_focus=True, category="Adventuring Gear")
+WAND = Item("Wand", cost=[10, gp], arcane_focus=True, category="Adventuring Gear")
 # DRUIDIC_FOCUS
-SPRIG_OF_MISTLETOE = Item("Sprig_of_Mistletoe", cost=[1, gp], druidic_focus=True)
-TOTEM = Item("Totem", cost=[1, gp], druidic_focus=True)
-WOODEN_STAFF = Item("Wooden_Staff", cost=[5, gp], druidic_focus=True)
-YEW_WAND = Item("Yew_Wand", cost=[100, gp], druidic_focus=True)
+SPRIG_OF_MISTLETOE = Item("Sprig_of_Mistletoe", cost=[1, gp], druidic_focus=True, category="Adventuring Gear")
+TOTEM = Item("Totem", cost=[1, gp], druidic_focus=True, category="Adventuring Gear")
+WOODEN_STAFF = Item("Wooden_Staff", cost=[5, gp], druidic_focus=True, category="Adventuring Gear")
+YEW_WAND = Item("Yew_Wand", cost=[100, gp], druidic_focus=True, category="Adventuring Gear")
 # HOLY_SYMBOL
-AMULET = Item("Amulet", cost=[5, gp], holy_symbol=True)
-EMBLEM = Item("Emblem", cost=[5, gp], holy_symbol=True)
-RELIQUARY = Item("Reliquary", cost=[5, gp], holy_symbol=True)
+AMULET = Item("Amulet", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
+EMBLEM = Item("Emblem", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
+RELIQUARY = Item("Reliquary", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
+
+"""
+    TOOLS
+"""
+DISGUISE_KIT = Tool("Disguise_Kit", cost=[25,gp], category="Tool")
+FORGERY_KIT = Tool("Forgery_Kit", cost=[15,gp], category="Tool")
+HERBALISM_KIT = Tool("Herbalism_Kit", cost=[5,gp], category="Tool")
+NAVIGATORS_TOOLS = Tool("Navigators_Tools", cost=[25,gp], category="Tool")
+POISONERS_KIT = Tool("Poisoners_Kit", cost=[50,gp], category="Tool")
+THIEVES_TOOLS = Tool("Thieves_Tools", cost=[25,gp], category="Tool")
+
+ALCHEMISTS_SUPPLIES = Tool("Alchemists_Supplies", cost=[50, gp], subtype='Artisan', category="Tool")
+BREWERS_SUPPLIES = Tool("Brewers_Supplies", cost=[20, gp], subtype='Artisan', category="Tool")
+CALLIGRAPHY_SUPPLIES = Tool("Calligraphy_Supplies", cost=[10, gp], subtype='Artisan', category="Tool")
+CARPENTERS_TOOLS = Tool("Carpenters_Tools", cost=[8, gp], subtype='Artisan', category="Tool")
+CARTOGRAPHERS_TOOLS = Tool("Cartographers_Tools", cost=[15, gp], subtype='Artisan', category="Tool")
+COBBLERS_TOOLS = Tool("Cobblers_Tools", cost=[5, gp], subtype='Artisan', category="Tool")
+COOKING_UTENSILS = Tool("Cooking_Utensils", cost=[1, gp], subtype='Artisan', category="Tool")
+GLASSBLOWERS_TOOLS = Tool("Glassblowers_Tools", cost=[30, gp], subtype='Artisan', category="Tool")
+JEWLERS_TOOLS = Tool("Jewlers_Tools", cost=[25, gp], subtype='Artisan', category="Tool")
+LEATHERWORKERS_TOOLS = Tool("Leatherworkers_Tools", cost=[5, gp], subtype='Artisan', category="Tool")
+MASONS_TOOLS = Tool("Masons_Tools", cost=[10, gp], subtype='Artisan', category="Tool")
+PAINTERS_SUPPLIES = Tool("Painters_Supplies", cost=[10, gp], subtype='Artisan', category="Tool")
+SMITHS_TOOLS = Tool("Smiths_Tools", cost=[10, gp], subtype='Artisan', category="Tool")
+TINKERS_TOOLS = Tool("Tinkers_Tools", cost=[50, gp], subtype='Artisan', category="Tool")
+WEAVERS_TOOLS = Tool("Weavers_Tools", cost=[1, gp], subtype='Artisan', category="Tool")
+WOODCARVERS_TOOLS = Tool("Woodcarvers_Tools", cost=[1, gp], subtype='Artisan', category="Tool")
+
+DICE_SET = Tool("Dice_Set", cost=[1,sp], subtype='Gaming', category="Tool")
+DRAGONCHESS_SET = Tool("Dragonchess_Set", cost=[1,gp], subtype='Gaming', category="Tool")
+PLAYING_CARD_SET = Tool("Playing_Card_Set", cost=[5,gp], subtype='Gaming', category="Tool")
+THREE_DRAGON_ANTE_SET = Tool("Three_Dragon_Ante_Set", cost=[1,gp], subtype='Gaming', category="Tool")
+
+BAGPIPES = Tool("Bagpipes", cost=[30, gp], subtype='Instrument', category="Tool")
+DRUM = Tool("Drum", cost=[6, gp], subtype='Instrument', category="Tool")
+DULCIMER = Tool("Dulcimer", cost=[25, gp], subtype='Instrument', category="Tool")
+FLUTE = Tool("Flute", cost=[2, gp], subtype='Instrument', category="Tool")
+LUTE = Tool("Lute", cost=[35, gp], subtype='Instrument', category="Tool")
+LYRE = Tool("Lyre", cost=[30, gp], subtype='Instrument', category="Tool")
+HORN = Tool("Horn", cost=[3, gp], subtype='Instrument', category="Tool")
+PAN_FLUTE = Tool("Pan_Flute", cost=[12, gp], subtype='Instrument', category="Tool")
+SHAWM = Tool("Shawm", cost=[2, gp], subtype='Instrument', category="Tool")
+VIOL = Tool("Viol", cost=[30, gp], subtype='Instrument', category="Tool")
+
+ARTISAN_TOOLS = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Artisan')]
+MUSICAL_INSTRUMENT = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Instrument')]
+GAMING_TOOLS = [tool for tool in Item.items if (hasattr(tool, "subtype") and tool.subtype == 'Gaming')]
+TOOLS = [tool for tool in Item.items if (hasattr(tool, "category") and tool.category == 'Tool')]
 
 """
     SKILLS
@@ -436,7 +509,7 @@ BARBARIAN.starting_money = ["2d4", 10, gp]
 BARD.proficiencies = {
         'Armor': ['Light'],
         'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD],
-        'Tools': {'Choose 3': []}
+        'Tools': {'Choose 3': MUSICAL_INSTRUMENT}
         }
 BARD.saving_throws = [DEX, CHA]
 BARD.skills = {'Choose 3': SKILLS}
@@ -480,7 +553,7 @@ FIGHTER.starting_money = ["5d4", 10, gp]
 MONK.proficiencies = {
         'Armor': None,
         'Weapons': [SIMPLE_WEAPONS, SHORTSWORD],
-        'Tools': {'Choose 1': []}
+        'Tools': {'Choose 1': MUSICAL_INSTRUMENT + ARTISAN_TOOLS}
         }
 MONK.saving_throws = [STR, DEX]
 MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, STEALTH]}
@@ -513,7 +586,7 @@ RANGER.starting_money = ["5d4", 10, gp]
 ROGUE.proficiencies = {
         'Armor': ['Light'],
         'Weapons': [SIMPLE_WEAPONS, HAND_CROSSBOW],
-        'Tools': {'Has': ['Thieves Tools']}
+        'Tools': {'Has': [THIEVES_TOOLS]}
         }
 ROGUE.saving_throws = [DEX, INT]
 ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDATION, INVESTIGATION, PERCEPTION, PERFORMANCE, PERSUASION, SLEIGHT_OF_HAND, STEALTH]}
@@ -704,5 +777,7 @@ if __name__ == "__main__":
                 return gen_skill_while(Class, 4)
         
 
-    print(gen_skill_prof(roll_class))
+    roll_class = MONK 
+    tool_prof = GetProficientTools(roll_class.proficiencies['Tools'])
+    print(tool_prof)
 
