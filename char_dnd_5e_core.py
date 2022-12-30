@@ -62,11 +62,7 @@ class AbilityScore:
         self.modifier = self.get_mod(value)
 
     def get_mod(self, value):
-        if value == 1:
-            return -5
-        if (value + 1) % 2 == 0:
-            value -= 1
-        return int(value/2)-5
+        return (value // 2) - 5
 
     def __repr__(self):
         return self.name
