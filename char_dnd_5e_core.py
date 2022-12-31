@@ -35,12 +35,49 @@ def GetProficiencies(data):
             return data['Has']
 
 
+def UnpackListDict(data):
+    """
+        I suck at coming up with names for things.
+        Basically this function deals with all the 
+        [ITEM_A, {'Choose 1': ITEM_LIST_1}, ITEM_C]
+        stuff that all the _Class's equipement have
+    """
+    unpacked = []
+    def RollItems(data, amount):
+        Items = []
+        while len(Items) < amount:
+            roll = random.choice(data)
+            if roll in Items:
+                Items.pop(Items.index(roll))
+            Items.append(roll)
+        return Items
+
+    def MatchKey(key, data):
+        match key:
+            case 'Choose 1':
+                return RollItems(data, 1)
+            case 'Choose 2':
+                return RollItems(data, 2)
+            case 'Choose 3':
+                return RollItems(data, 3)
+            case 'Choose 4':
+                return RollItems(data, 4)
+
+    for item in data:
+        if isinstance(item, dict) and len(item.keys()) == 1:
+            dictItemValue = UnpackListDict(list(item.values())[0])
+            unpacked.append(MatchKey(list(item.keys())[0], dictItemValue))
+        else:
+            unpacked.append(item) 
+    return unpacked
+
 
 def MakeItemList(attribute, attr_value=None):
     if attr_value == None:
         return [item for item in Item.items if hasattr(item, attribute)]
     else:
-        return [item for item in Item.items if (hasattr(item, attribute) and item.__getattribute__(attribute) == attr_value)]
+        return [item for item in Item.items 
+                if (hasattr(item, attribute) and item.__getattribute__(attribute) == attr_value)]
 
 class _Class:
     items = []
@@ -650,7 +687,10 @@ BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATUR
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
 BARBARIAN.starting_money = ["2d4", 10, gp]
-BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
+BARBARIAN.equipment = [
+    {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]},
+    {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, 
+    JAVELIN, JAVELIN, JAVELIN, JAVELIN]
 BARBARIAN.equipment_pack = EXPLORERS_PACK
 
 
@@ -729,7 +769,7 @@ PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSU
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = [10, CON.modifier]
 PALADIN.starting_money = ["5d4", 10, gp]
-PALADIN.equipment = [ {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], {'Choose 2': MARTIAL_WEAPONS}]}, {'Choose 1': [[JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
+PALADIN.equipment = [ {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}]]}, {'Choose 1': [[JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
 PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
 RANGER.proficiencies = {
@@ -984,5 +1024,6 @@ if __name__ == "__main__":
 
     roll_class = MONK 
     tool_prof = GetProficiencies(roll_class.proficiencies['Tools'])
-    x = Unpack(BARD.equipment)
-    print(x)
+    for __class in CLASSES:
+        print(__class)
+        print(UnpackListDict(__class.equipment))
