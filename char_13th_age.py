@@ -23,8 +23,14 @@ class Race(ABC):
 class _Class(ABC):
     items = []
     def __init__(self, name, **kwargs):
-        super().__init__(name)
+        super().__init__(name, **kwargs)
         _Class.items.append(self)
+
+class DamageType(ABC):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name)
+        DamageType.items.append(self)
 
 class AbilityScore(ABC):
     def __init__(self, name, value = 0, **kwargs):
@@ -34,6 +40,7 @@ class AbilityScore(ABC):
 
     def __add__(self, amt):
         self.value += amt
+        self.mod = self.get_mod()
         return AbilityScore(self.name, self.value)
 
     def __iadd__(self, amt):
@@ -54,12 +61,29 @@ class Character(ABC):
         super().__init__(name)
         self.race = race 
         self._class = _class 
+        self.level = 1
         self.STR = STR
         self.DEX = DEX
         self.CON = CON
         self.INT = INT
         self.WIS = WIS
         self.CHA = CHA
+        self.ac = 0
+        self.physical_defence = 0
+        self.mental_defence = 0
+        self.initiative_bonus = self.DEX.mod + self.level
+        self.hit_points = self.calc_hit_points()
+
+    def calc_hit_points(self):
+        return (self.CON.mod + 7) * 3
+
+STR = AbilityScore("Strength")
+DEX = AbilityScore("Dexterity")
+CON = AbilityScore("Constitution")
+INT = AbilityScore("Intelligence")
+WIS = AbilityScore("Wisdom")
+CHA = AbilityScore("Charisma")
+ABILITY_SCORES = [STR, DEX, CON, INT, WIS, CHA]
 
 HUMAN = Race("Human")
 GNOME = Race("Gnome")
@@ -72,7 +96,12 @@ HALF_ORC = Race("Half_Orc")
 HALFLING = Race("Halfling")
 RACES = Race.items
 
-BARBARIAN = _Class("Barbarian")
+"""
+    _Class Style Guide
+hit_points
+    [[7, CON.mod], 3] == (7 + CON.mod) * 3
+"""
+BARBARIAN = _Class("Barbarian", ab_bonus=[STR, CON], hit_points=[[7, CON.mod], 3])
 BARD = _Class("Bard")
 CLERIC = _Class("Cleric")
 FIGHTER = _Class("Fighter")
@@ -83,12 +112,25 @@ SORCERER = _Class("Sorcerer")
 WIZARD = _Class("Wizard")
 _CLASSES = _Class.items
 
-STR = AbilityScore("Strength")
-DEX = AbilityScore("Dexterity")
-CON = AbilityScore("Constitution")
-INT = AbilityScore("Intelligence")
-WIS = AbilityScore("Wisdom")
-CHA = AbilityScore("Charisma")
-ABILITYSCORES = [STR, DEX, CON, INT, WIS, CHA]
+def calc_hit_points(character):
+    return sum(character._class.hit_points[0]) * character._class.hit_points[1]
 
+ACID = DamageType("Acid")
+COLD = DamageType("Cold")
+FIRE = DamageType("Fire")
+FORCE = DamageType("Force")
+HOLY = DamageType("Holy")
+LIGHTNING = DamageType("Lightning")
+NEGATIVE_ENERGY = DamageType("Negative_Energy")
+POISON = DamageType("Poison")
+PSYCHIC = DamageType("Psychic")
+THUNDER = DamageType("Thunder")
+DAMAGE_TYPES = DamageType.items
 
+jeff = Character(name="Jeff", _class=BARBARIAN)
+
+print(jeff.hit_points)
+CON += 7
+jeff2 = Character(name="Jeff", _class=BARBARIAN)
+print(jeff2.hit_points)
+# print(BARBARIAN.hit_points)
