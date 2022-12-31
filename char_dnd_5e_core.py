@@ -1,4 +1,5 @@
 import random
+# from unpack_test import unpack_new
 # random should probably only be used for testing. This file is to store data, not to aide in the processing of a random generation of a character
 """
     What the shit is this?
@@ -42,6 +43,7 @@ def UnpackListDict(data):
         [ITEM_A, {'Choose 1': ITEM_LIST_1}, ITEM_C]
         stuff that all the _Class's equipement have
     """
+    """
     unpacked = []
     def RollItems(data, amount):
         Items = []
@@ -63,13 +65,19 @@ def UnpackListDict(data):
             case 'Choose 4':
                 return RollItems(data, 4)
 
-    for item in data:
-        if isinstance(item, dict) and len(item.keys()) == 1:
-            dictItemValue = UnpackListDict(list(item.values())[0])
-            unpacked.append(MatchKey(list(item.keys())[0], dictItemValue))
-        else:
-            unpacked.append(item) 
+    def process_items(data):
+        for item in data:
+            if isinstance(item, dict) and len(item.keys()) == 1:
+                dictItemValue = UnpackListDict(list(item.values())[0])
+                unpacked.append(MatchKey(list(item.keys())[0], dictItemValue))
+            elif isinstance(item, list):
+                process_items(item)
+            else:
+                unpacked.append(item) 
     return unpacked
+    """
+    #return unpack_new(data)
+    return None
 
 
 def MakeItemList(attribute, attr_value=None):
@@ -743,7 +751,10 @@ FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, 
 FIGHTER.hit_dice = "1d10"
 FIGHTER.initial_health = [10, CON.modifier]
 FIGHTER.starting_money = ["5d4", 10, gp]
-FIGHTER.equipment = [ {'Choose 1': [CHAIN_MAIL, [LEATHER_ARMOR, LONGBOW, ARROWS]]}, {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], {'Choose 2': MARTIAL_WEAPONS}]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], [HANDAXE, HANDAXE]]}, ]
+FIGHTER.equipment = [
+        {'Choose 1': [CHAIN_MAIL, [LEATHER_ARMOR, LONGBOW, ARROWS]]},
+        {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}]]},
+        {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], [HANDAXE, HANDAXE]]}, ]
 FIGHTER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
 MONK.proficiencies = {
@@ -769,7 +780,17 @@ PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSU
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = [10, CON.modifier]
 PALADIN.starting_money = ["5d4", 10, gp]
-PALADIN.equipment = [ {'Choose 1': [[{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}]]}, {'Choose 1': [[JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
+PALADIN.equipment = [
+        {'Choose 1': [
+            [{'Choose 1': MARTIAL_WEAPONS}, SHIELD],
+            [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}]
+        ]},
+        {'Choose 1': [
+            [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}
+        ]}, 
+        CHAIN_MAIL, 
+        {'Choose 1': HOLY_SYMBOL} 
+        ]
 PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
 RANGER.proficiencies = {
