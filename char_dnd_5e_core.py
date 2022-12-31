@@ -650,7 +650,7 @@ BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATUR
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
 BARBARIAN.starting_money = ["2d4", 10, gp]
-BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [[HANDAXE, HANDAXE], {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
+BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
 BARBARIAN.equipment_pack = EXPLORERS_PACK
 
 
