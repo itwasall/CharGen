@@ -143,7 +143,8 @@ class Alignment:
 DEFAULT_ALIGNMENT = Alignment("DEFAULT", "ALIGNMENT")
 
 class Language:
-    def __init__(self, name, speakers: None, script: None):
+    items = []
+    def __init__(self, name, speakers: None, script: None, **kwargs):
         self.name = name
         if type(speakers) == str:
             self.speakers = [speakers]
@@ -151,6 +152,9 @@ class Language:
             raise TypeError
         self.speakers = speakers
         self.script = script
+        Language.items.append(self)
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
     def __repr__(self):
         return self.name
 DEFAULT_LANGUAGE = Language("DEFAULT LANGUAGE", "DEFAULT SPEAKERS", "DEFAULT SCRIPT")
@@ -261,6 +265,77 @@ class Vehicle(Item):
         for k, d in kwargs.items():
             self.__setattr__(k ,d)
 
+class PartyMember:
+    def __init__(
+            self,
+            Name: str = None,
+            Race: Race = None,
+            _Class: _Class = None,
+            _SubClass: _SubClass = None,
+            STR: STR = None,
+            DEX: DEX = None,
+            CON: CON = None,
+            INT: INT = None,
+            WIS: WIS = None,
+            CHA: CHA = None,
+            Athletics: ATHLETICS= None,
+            Acrobatics: ACROBATICS= None,
+            Sleight_of_Hand: SLEIGHT_OF_HAND = None,
+            Stealth: STEALTH = None,
+            Arcana: ARCANA = None,
+            History: HISTORY = None,
+            Investigation: INVESTIGATION = None,
+            Nature: NATURE = None,
+            Religion: RELIGION = None,
+            Animal_Handling: ANIMAL_HANDLING = None,
+            Insight: INSIGHT = None,
+            Medicine: MEDICINE = None,
+            Perception: PERCEPTION = None,
+            Survival: SURVIVAL = None,
+            Deception: DECEPTION = None,
+            Intimidation: INTIMIDATION = None,
+            Performance: PERFORMANCE = None,
+            Persuasion: PERSUASION = None,
+            Money = None,
+            Languages = None,
+            Weapon_Proficiences = None,
+            Armor_Proficiences = None,
+            Tool_Proficiences = None,
+            ):
+        self.name = Name
+        self.race = Race
+        self._class = _Class
+        self._subclass = _SubClass
+        self.STR = STR
+        self.DEX = DEX
+        self.CON = CON
+        self.INT = INT
+        self.WIS = WIS
+        self.CHA = CHA
+        self.athletics = Athletics
+        self.acrobatics = Acrobatics
+        self.sleight_of_hand = Sleight_of_Hand
+        self.arcana = Arcana
+        self.history = History
+        self.investigation = Investigation
+        self.nature = Nature
+        self.religion = Religion
+        self.animal_handling = Animal_Handling
+        self.insight = Insight
+        self.medicine = Medicine
+        self.perception = Perception
+        self.survival = Survival
+        self.deception = Deception
+        self.intimidation = Intimidation
+        self.performance = Performance
+        self.persuasion = Persuasion
+        self.money = Money
+        self.languages = Languages
+        self.weapon_proficiences = Weapon_Proficiences
+        self.armor_proficiences = Armor_Proficiences
+        self.tool_proficiences = Tool_Proficiences
+
+
 
 
 """
@@ -313,6 +388,29 @@ PERSUASION = Skill("Persuasion", ab_score=CHA)
 
 
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
+
+"""
+    LANGUAGES
+"""
+# STANDARD LANGUAGES
+COMMON = Language("Common", speakers='Humans', script='Common')
+DWARVISH = Language("Dwarvish", speakers='Dwarves', script='Dwarvish')
+ELVISH = Language("Elvish", speakers='Elves', script='Elvish')
+GIANT = Language("Giant", speakers=['Ogres', 'Giants'], script='Dwarvish')
+GNOMISH = Language("Gnomish", speakers='Gnomes', script='Dwarvish')
+GOBLIN = Language("Goblin", speakers='Goblins', script='Dwarvish')
+HALFLING = Language("Halfling", speakers='Halflings', script='Common')
+ORC = Language("Orc", speakers='Orcs', script='Dwarvish')
+# EXOTIC LANGUAGES
+ABYSSAL = Language("Abyssal", speakers='Demons', script='Infernal', exotic=True)
+CELESTIAL = Language("Celestial", speakers='Celestials', script='Celestial', exotic=True)
+DEEP_SPEECH = Language("Deep Speech", speakers=['Mind Flayers', 'Beholders'], script=None, exotic=True)
+DRACONIC = Language("Draconic", speakers=['Dragons', 'Dragonborn'], script='Draconic', exotic=True)
+INFERNAL = Language("Infernal", speakers='Devils', script='Infernal', exotic=True)
+PRIMORDIAL = Language("Primordial", speakers='Elementals', script='Dwarvish', exotic=True)
+SYLVAN = Language("Sylvan", speakers='Fey creatures', script='Elvish', exotic=True)
+UNDERCOMMON = Language("Undercommon", speakers='Underdark Traders', script='Elvish', exotic=True)
+
 
 """
     VEHICLES 
@@ -655,16 +753,16 @@ SCHOLARS_PACK = [BACKPACK, BOOK, INK, INK_PEN, SMALL_KNIFE, BAG_OF_SAND] + [PARC
 """
     BACKGROUND
 """
-ACOLYTE = Background("Acolyte", skill_profs=[INSIGHT, RELIGION], tool_profs=[], language=[{'Choose 2': []}], equipment=[{'Choose 1': HOLY_SYMBOL}, {'Choose 1': [PRAYER_BOOK, PRAYER_WHEEL]}, VESTMENTS, CLOTHES_COMMON], money=[15, gp])
+ACOLYTE = Background("Acolyte", skill_profs=[INSIGHT, RELIGION], tool_profs=[], language=[{'Choose 2': Language.items}], equipment=[{'Choose 1': HOLY_SYMBOL}, {'Choose 1': [PRAYER_BOOK, PRAYER_WHEEL]}, VESTMENTS, CLOTHES_COMMON], money=[15, gp])
 CHARLATAN = Background("Charlatan", skill_profs=[DECEPTION, SLEIGHT_OF_HAND], tool_profs=[DISGUISE_KIT, FORGERY_KIT], equipment=[CLOTHES_FINE, DISGUISE_KIT, {'Choose 1': CHARLATAN_ITEMS}], money=[15, gp])
 CRIMINAL = Background("Criminal", skill_profs=[DECEPTION, STEALTH], tool_profs=[{'Choose 1': GAMING_TOOLS}, THIEVES_TOOLS], equipment=[CROWBAR, CLOTHES_COMMON, DARK_HOOD], money=[15, gp])
 ENTERTAINER = Background("Entertainer", skill_profs=[ACROBATICS, PERFORMANCE], tool_profs=[DISGUISE_KIT, {'Choose 1': MUSICAL_INSTRUMENT}], equipment=[{'Choose 1': MUSICAL_INSTRUMENT}, {'Choose 1': ENTERTAINER_ITEMS}, CLOTHES_COSTUME], money=[15, gp])
 FOLK_HERO = Background("Folk Hero", skill_profs=[ANIMAL_HANDLING, SURVIVAL], tool_profs=[{'Choose 1': ARTISAN_TOOLS}, ("TODO: VEHICLES")], equipment=[{'Choose 1': ARTISAN_TOOLS}, SHOVEL, POT, CLOTHES_COMMON], money=[10, gp])
-GUILD_ARTISAN = Background("Guild Artisan", skill_profs=[INSIGHT, PERSUASION], tool_profs=[{'Choose 1': ARTISAN_TOOLS}], language=[{'Choose 1': []}], equipment=[{'Choose 1': ARTISAN_TOOLS}, LETTER_OF_INTRODUCTION, CLOTHES_TRAVELERS], money=[15, gp])
-HERMIT = Background("Hermit", skill_profs=[MEDICINE, RELIGION], tool_profs=[HERBALISM_KIT], language=[{'Choose 1':[]}], equipment=[CASE_MAP_SCROLL, BLANKET, CLOTHES_COMMON, HERBALISM_KIT], money=[5, gp])
-NOBLE = Background("Noble", skill_profs=[HISTORY, PERSUASION], tool_profs=[{'Choose 1': GAMING_TOOLS}], language=[{'Choose 1': []}], equipment=[CLOTHES_FINE, SIGNET_RING, SCROLL_OF_PEDIGREE], money=[25, gp])
-OUTLANDER = Background("Outlander", skill_profs=[ATHLETICS, SURVIVAL], tool_profs=[{'Choose 1': MUSICAL_INSTRUMENT}], language=[{'Choose 1': []}], equipment=[STAFF, HUNTING_TRAP, ANIMAL_TROPHY], money=[10, gp])
-SAGE = Background("Sage", skill_profs=[ARCANA, HISTORY], tool_profs=[], language=[{'Choose 2': []}], equipment=[INK, QUILL, LETTER_FROM_DEAD_COLLEAGUE], money=[10, gp])
+GUILD_ARTISAN = Background("Guild Artisan", skill_profs=[INSIGHT, PERSUASION], tool_profs=[{'Choose 1': ARTISAN_TOOLS}], language=[{'Choose 1': Language.items}], equipment=[{'Choose 1': ARTISAN_TOOLS}, LETTER_OF_INTRODUCTION, CLOTHES_TRAVELERS], money=[15, gp])
+HERMIT = Background("Hermit", skill_profs=[MEDICINE, RELIGION], tool_profs=[HERBALISM_KIT], language=[{'Choose 1': Language.items}], equipment=[CASE_MAP_SCROLL, BLANKET, CLOTHES_COMMON, HERBALISM_KIT], money=[5, gp])
+NOBLE = Background("Noble", skill_profs=[HISTORY, PERSUASION], tool_profs=[{'Choose 1': GAMING_TOOLS}], language=[{'Choose 1': Language.items}], equipment=[CLOTHES_FINE, SIGNET_RING, SCROLL_OF_PEDIGREE], money=[25, gp])
+OUTLANDER = Background("Outlander", skill_profs=[ATHLETICS, SURVIVAL], tool_profs=[{'Choose 1': MUSICAL_INSTRUMENT}], language=[{'Choose 1': Language.items}], equipment=[STAFF, HUNTING_TRAP, ANIMAL_TROPHY], money=[10, gp])
+SAGE = Background("Sage", skill_profs=[ARCANA, HISTORY], tool_profs=[], language=[{'Choose 2': Language.items}], equipment=[INK, QUILL, LETTER_FROM_DEAD_COLLEAGUE], money=[10, gp])
 SAILOR = Background("Sailor", skill_profs=[ATHLETICS, PERCEPTION], tool_profs=[NAVIGATORS_TOOLS, VEHICLES_WATER], equipment=[BELAYING_PIN, LUCKY_CHARM, CLOTHES_COMMON], money=[10, gp])
 SOLDIER = Background("Soldier", skill_profs=[ATHLETICS, INTIMIDATION], tool_profs=[{'Choose 1': GAMING_TOOLS}, VEHICLES_LAND], equipment=[INSIGNIA_OF_RANK, TROPHY_FROM_FALLEN_ENEMY, {'Choose 1': [BONE_DICE, DECK_OF_CARDS]}], money=[10, gp])
 URCHIN = Background("Urchin", skill_profs=[SLEIGHT_OF_HAND, STEALTH], tool_profs=[DISGUISE_KIT, THIEVES_TOOLS], equipment=[SMALL_KNIFE, MAP_OF_HOMETOWN, PET_MOUSE, PARENTAL_TOKEN_OF_REMEMBERANCE, CLOTHES_COMMON], money=[10, gp])
@@ -905,50 +1003,50 @@ PEACE_DOMAIN = _SubClass("Peace Domain", _class=CLERIC, tasha=True)
 TWILIGHT_DOMAIN = _SubClass("Twilight Domain", _class=CLERIC, tasha=True)
 # DRUID
 CIRCLE_OF_THE_LAND = _SubClass("Circle of the Land", _class=DRUID)
-CIRCLE_OF_THE_MOON = _SubClass("Circle_of_the_Moon", _class=DRUID)
-CIRCLE_OF_DREAMS = _SubClass("Circle_of_Dreams", _class=DRUID, xanathar=True)
-CIRCLE_OF_THE_SHEPHERD = _SubClass("Circle_of_the_Shepherd", _class=DRUID, xanathar=True)
-CIRCLE_OF_SPORES = _SubClass("Circle_of_Spores", _class=DRUID, ravnica=True, tasha=True)
-CIRCLE_OF_STARS = _SubClass("Circle_of_Stars", _class=DRUID, tasha=True)
-CIRCLE_OF_WILDFIRE = _SubClass("Circle_of_Wildfire", _class=DRUID, tasha=True)
+CIRCLE_OF_THE_MOON = _SubClass("Circle of the Moon", _class=DRUID)
+CIRCLE_OF_DREAMS = _SubClass("Circle of Dreams", _class=DRUID, xanathar=True)
+CIRCLE_OF_THE_SHEPHERD = _SubClass("Circle of the Shepherd", _class=DRUID, xanathar=True)
+CIRCLE_OF_SPORES = _SubClass("Circle of Spores", _class=DRUID, ravnica=True, tasha=True)
+CIRCLE_OF_STARS = _SubClass("Circle of Stars", _class=DRUID, tasha=True)
+CIRCLE_OF_WILDFIRE = _SubClass("Circle of Wildfire", _class=DRUID, tasha=True)
 # FIGHTER 
-BATTLE_MASTER = _SubClass("Battle_Master", _class=FIGHTER)
+BATTLE_MASTER = _SubClass("Battle Master", _class=FIGHTER)
 CHAMPTION = _SubClass("Chamption", _class=FIGHTER)
-ELDRITCH_KNIGHT = _SubClass("Eldritch_Knight", _class=FIGHTER)
+ELDRITCH_KNIGHT = _SubClass("Eldritch Knight", _class=FIGHTER)
 CAVALIER = _SubClass("Cavalier", _class=FIGHTER, xanathar=True)
 ARCANE_ARCHER = _SubClass("Arcane_Archer", _class=FIGHTER, xanathar=True)
 SAMURAI = _SubClass("Samurai", _class=FIGHTER, xanathar=True)
-PSI_WARRIOR = _SubClass("Psi_Warrior", _class=FIGHTER, tasha=True)
-RUNE_KNIGHT = _SubClass("Rune_Knight", _class=FIGHTER, tasha=True)
+PSI_WARRIOR = _SubClass("Psi Warrior", _class=FIGHTER, tasha=True)
+RUNE_KNIGHT = _SubClass("Rune Knight", _class=FIGHTER, tasha=True)
 # MONK
-WAY_OF_SHADOW = _SubClass("Way_of_Shadow", _class=MONK)
-WAY_OF_THE_FOUR_ELEMENTS = _SubClass("Way_of_the_Four_Elements", _class=MONK)
-WAY_OF_THE_OPEN_HAND = _SubClass("Way_of_the_Open_Hand", _class=MONK)
-WAY_OF_THE_SUN_SOUL = _SubClass("Way_of_the_Sun_Soul", _class=MONK, xanathar=True)
-WAY_OF_THE_DRUNKEN_MASTER = _SubClass("Way_of_the_Drunken_Master", _class=MONK, xanathar=True)
-WAY_OF_THE_KENSEI = _SubClass("Way_of_the_Kensei", _class=MONK, xanathar=True)
-WAY_OF_THE_ASCENDANT_DRAGON = _SubClass("Way_of_the_Ascendant_Dragon", _class=MONK, fizbans=True)
-WAY_OF_MERCY = _SubClass("Way_of_Mercy", _class=MONK, tasha=True)
-WAY_OF_THE_ASTRAL_SELF = _SubClass("Way_of_the_Astral_Self", _class=MONK, tasha=True)
+WAY_OF_SHADOW = _SubClass("Way of Shadow", _class=MONK)
+WAY_OF_THE_FOUR_ELEMENTS = _SubClass("Way of the Four Elements", _class=MONK)
+WAY_OF_THE_OPEN_HAND = _SubClass("Way of the Open Hand", _class=MONK)
+WAY_OF_THE_SUN_SOUL = _SubClass("Way of the Sun Soul", _class=MONK, xanathar=True)
+WAY_OF_THE_DRUNKEN_MASTER = _SubClass("Way of the Drunken Master", _class=MONK, xanathar=True)
+WAY_OF_THE_KENSEI = _SubClass("Way of the Kensei", _class=MONK, xanathar=True)
+WAY_OF_THE_ASCENDANT_DRAGON = _SubClass("Way of the Ascendant Dragon", _class=MONK, fizbans=True)
+WAY_OF_MERCY = _SubClass("Way of Mercy", _class=MONK, tasha=True)
+WAY_OF_THE_ASTRAL_SELF = _SubClass("Way of the Astral Self", _class=MONK, tasha=True)
 # PALADIN
-OATH_OF_DEVOTION = _SubClass("Oath_of_Devotion", _class=PALADIN)
-OATH_OF_THE_ANCIENTS = _SubClass("Oath_of_the_Ancients", _class=PALADIN)
-OATH_OF_VENGEANCE = _SubClass("Oath_of_Vengeance", _class=PALADIN)
-OATH_OF_CONQUEST = _SubClass("Oath_of_Conquest", _class=PALADIN, xanathar=True)
-OATH_OF_REDEMPTION = _SubClass("Oath_of_Redemption", _class=PALADIN, xanathar=True)
-OATH_OF_GLORY = _SubClass("Oath_of_Glory", _class=PALADIN, tasha=True)
-OATH_OF_THE_WATCHERS = _SubClass("Oath_of_the_Watchers", _class=PALADIN, tasha=True)
+OATH_OF_DEVOTION = _SubClass("Oath of Devotion", _class=PALADIN)
+OATH_OF_THE_ANCIENTS = _SubClass("Oath of the Ancients", _class=PALADIN)
+OATH_OF_VENGEANCE = _SubClass("Oath of Vengeance", _class=PALADIN)
+OATH_OF_CONQUEST = _SubClass("Oath of Conquest", _class=PALADIN, xanathar=True)
+OATH_OF_REDEMPTION = _SubClass("Oath of Redemption", _class=PALADIN, xanathar=True)
+OATH_OF_GLORY = _SubClass("Oath of Glory", _class=PALADIN, tasha=True)
+OATH_OF_THE_WATCHERS = _SubClass("Oath of the Watchers", _class=PALADIN, tasha=True)
 # RANGER
-BEAST_MASTER = _SubClass("Beast_Master", _class=RANGER)
+BEAST_MASTER = _SubClass("Beast Master", _class=RANGER)
 HUNTER = _SubClass("Hunter", _class=RANGER)
-GLOOM_STALKER = _SubClass("Gloom_Stalker", _class=RANGER, xanathar=True)
-HORIZON_WALKER = _SubClass("Horizon_Walker", _class=RANGER, xanathar=True)
-MONSTER_SLAYER = _SubClass("Monster_Slayer", _class=RANGER, xanathar=True)
-FEY_WANDERER = _SubClass("Fey_Wanderer", _class=RANGER, tasha=True)
+GLOOM_STALKER = _SubClass("Gloom Stalker", _class=RANGER, xanathar=True)
+HORIZON_WALKER = _SubClass("Horizon Walker", _class=RANGER, xanathar=True)
+MONSTER_SLAYER = _SubClass("Monster Slayer", _class=RANGER, xanathar=True)
+FEY_WANDERER = _SubClass("Fey Wanderer", _class=RANGER, tasha=True)
 SWARMKEEPER = _SubClass("Swarmkeeper", _class=RANGER, tasha=True)
 DRAKEWARDEN = _SubClass("Drakewarden", _class=RANGER, fizbans=True)
 # ROGUE
-ARCANE_TRICKSTER = _SubClass("Arcane_Trickster", _class=ROGUE)
+ARCANE_TRICKSTER = _SubClass("Arcane Trickster", _class=ROGUE)
 ASSASSIN = _SubClass("Assassin", _class=ROGUE)
 SCOUT = _SubClass("Scout", _class=ROGUE, xanathar=True)
 THIEF = _SubClass("Thief", _class=ROGUE)
@@ -958,32 +1056,32 @@ SWASHBUCKLER = _SubClass("Swashbuckler", _class=ROGUE, xanathar=True)
 PHANTOM = _SubClass("Phantom", _class=ROGUE, tasha=True)
 SOULKNIFE = _SubClass("Soulknife", _class=ROGUE, tasha=True)
 # SORCERER
-DRACONIC_BLOODLINE = _SubClass("Draconic_Bloodline", _class=SORCERER)
-WILD_MAGIC = _SubClass("Wild_Magic", _class=SORCERER)
-DIVINE_SOUL = _SubClass("Divine_Soul", _class=SORCERER, xanathar=True)
-SHADOW_MAGIC = _SubClass("Shadow_Magic", _class=SORCERER, xanathar=True)
-STORM_SORCERY = _SubClass("Storm_Sorcery", _class=SORCERER, xanathar=True)
-ABERRANT_MIND = _SubClass("Aberrant_Mind", _class=SORCERER, tasha=True)
-CLOCKWORK_SOUL = _SubClass("Clockwork_Soul", _class=SORCERER, tasha=True)
+DRACONIC_BLOODLINE = _SubClass("Draconic Bloodline", _class=SORCERER)
+WILD_MAGIC = _SubClass("Wild Magic", _class=SORCERER)
+DIVINE_SOUL = _SubClass("Divine Soul", _class=SORCERER, xanathar=True)
+SHADOW_MAGIC = _SubClass("Shadow Magic", _class=SORCERER, xanathar=True)
+STORM_SORCERY = _SubClass("Storm Sorcery", _class=SORCERER, xanathar=True)
+ABERRANT_MIND = _SubClass("Aberrant Mind", _class=SORCERER, tasha=True)
+CLOCKWORK_SOUL = _SubClass("Clockwork Soul", _class=SORCERER, tasha=True)
 # WARLOCK
-THE_ARCHFEY = _SubClass("The_Archfey", _class=WARLOCK)
-THE_FIEND = _SubClass("The_Fiend", _class=WARLOCK)
-THE_GREAT_OLD_ONE = _SubClass("The_Great_Old_One", _class=WARLOCK)
-THE_CELESTIAL = _SubClass("The_Celestial", _class=WARLOCK, xanathar=True)
-THE_HEXBLADE = _SubClass("The_Hexblade", _class=WARLOCK, xanathar=True)
-THE_FATHOMLESS = _SubClass("The_Fathomless", _class=WARLOCK, tasha=True)
-THE_GENIE = _SubClass("The_Genie", _class=WARLOCK, tasha=True)
+THE_ARCHFEY = _SubClass("The Archfey", _class=WARLOCK)
+THE_FIEND = _SubClass("The Fiend", _class=WARLOCK)
+THE_GREAT_OLD_ONE = _SubClass("The Great Old One", _class=WARLOCK)
+THE_CELESTIAL = _SubClass("The Celestial", _class=WARLOCK, xanathar=True)
+THE_HEXBLADE = _SubClass("The Hexblade", _class=WARLOCK, xanathar=True)
+THE_FATHOMLESS = _SubClass("The Fathomless", _class=WARLOCK, tasha=True)
+THE_GENIE = _SubClass("The Genie", _class=WARLOCK, tasha=True)
 # WIZARD
-SCHOOL_OF_ABJURATION = _SubClass("School_of_Abjuration", _class=WIZARD)
-SCHOOL_OF_CONJURATION = _SubClass("School_of_Conjuration", _class=WIZARD)
-SCHOOL_OF_DIVINATION = _SubClass("School_of_Divination", _class=WIZARD)
-SCHOOL_OF_ENCHANTMENT = _SubClass("School_of_Enchantment", _class=WIZARD)
-SCHOOL_OF_EVOCATION = _SubClass("School_of_Evocation", _class=WIZARD)
-SCHOOL_OF_ILLUSION = _SubClass("School_of_Illusion", _class=WIZARD)
-SCHOOL_OF_NECROMANCY = _SubClass("School_of_Necromancy", _class=WIZARD)
-SCHOOL_OF_TRANSMUTATION = _SubClass("School_of_Transmutation", _class=WIZARD)
-WAR_MAGIC = _SubClass("War_Magic", _class=WIZARD, xanathar=True)
-ORDER_OF_SCRIBES = _SubClass("Order_of_Scribes", _class=WIZARD, tasha=True)
+SCHOOL_OF_ABJURATION = _SubClass("School of Abjuration", _class=WIZARD)
+SCHOOL_OF_CONJURATION = _SubClass("School of Conjuration", _class=WIZARD)
+SCHOOL_OF_DIVINATION = _SubClass("School of Divination", _class=WIZARD)
+SCHOOL_OF_ENCHANTMENT = _SubClass("School of Enchantment", _class=WIZARD)
+SCHOOL_OF_EVOCATION = _SubClass("School of Evocation", _class=WIZARD)
+SCHOOL_OF_ILLUSION = _SubClass("School of Illusion", _class=WIZARD)
+SCHOOL_OF_NECROMANCY = _SubClass("School of Necromancy", _class=WIZARD)
+SCHOOL_OF_TRANSMUTATION = _SubClass("School of Transmutation", _class=WIZARD)
+WAR_MAGIC = _SubClass("War Magic", _class=WIZARD, xanathar=True)
+ORDER_OF_SCRIBES = _SubClass("Order of Scribes", _class=WIZARD, tasha=True)
 # ARTIFICER
 ALCHEMIST = _SubClass("Alchemist", _class=ARTIFICER, tasha=True)
 ARMORER = _SubClass("Armorer", _class=ARTIFICER, tasha=True)
@@ -997,8 +1095,8 @@ DWARF = Race("Dwarf")
 ELF = Race("Elf")
 GNOME = Race("Gnome")
 HALFLING = Race("Halfling")
-HALF_ELF = Race("Half_Elf")
-HALF_ORC = Race("Half_Orc")
+HALF_ELF = Race("Half-Elf")
+HALF_ORC = Race("Half-Orc")
 HUMAN = Race("Human")
 TIEFLING = Race("Tiefling")
 
