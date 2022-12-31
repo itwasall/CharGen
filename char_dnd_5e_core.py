@@ -869,7 +869,7 @@ FIGHTINGSTYLE_DEFENCE = _ClassMechanic("Defence", _class=FIGHTER)
 FIGHTINGSTYLE_DUELING = _ClassMechanic("Dueling", _class=FIGHTER)
 FIGHTINGSTYLE_GREAT_WEAPON_FIGHTING = _ClassMechanic("Great Weapon Fighting", _class=FIGHTER)
 FIGHTINGSTYLE_PROTECTION = _ClassMechanic("Protection", _class=FIGHTER)
-FIGHTINGSTYLE_TWO_WEAPON_FIGHTING = _ClassMechanic("TwoWeapon Fighting", _class=FIGHTER)
+FIGHTINGSTYLE_TWO_WEAPON_FIGHTING = _ClassMechanic("Two Weapon Fighting", _class=FIGHTER)
 
 """
     SUBCLASSES
