@@ -120,6 +120,15 @@ class Race:
             self.__setattr__(k, d)
 DEFAULT_RACE = Race("Default Race")
 
+class RaceMechanic:
+    items = []
+    def __init__(self, name, category, **kwargs):
+        self.name = category
+        self.category = category
+        RaceMechanic.items.append(self)
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
 class Background:
     def __init__(self, name, **kwargs):
         self.name = name
@@ -1018,11 +1027,28 @@ ALCHEMIST = _SubClass("Alchemist", _class=ARTIFICER, tasha=True)
 ARMORER = _SubClass("Armorer", _class=ARTIFICER, tasha=True)
 ARTILLERIST = _SubClass("Artillerist", _class=ARTIFICER, tasha=True)
 BATTLE_SMITH = _SubClass("Battle_Smith", _class=ARTIFICER, tasha=True)
+
+"""
+    RACE MECHANICS
+"""
+# Dragonborn
+DRAGON_ANCESTORY_BLACK = RaceMechanic("Black", category="Dragon Ancestory", dmg_type='Acid')
+DRAGON_ANCESTORY_BLUE = RaceMechanic("Blue", category="Dragon Ancestory", dmg_type='Lightning')
+DRAGON_ANCESTORY_BRASS = RaceMechanic("Brass", category="Dragon Ancestory", dmg_type='Fire')
+DRAGON_ANCESTORY_BRONZE = RaceMechanic("Bronze", category="Dragon Ancestory", dmg_type='Lightning')
+DRAGON_ANCESTORY_COPPER = RaceMechanic("Copper", category="Dragon Ancestory", dmg_type='Acid')
+DRAGON_ANCESTORY_GOLD = RaceMechanic("Gold", category="Dragon Ancestory", dmg_type='Fire')
+DRAGON_ANCESTORY_GREEN = RaceMechanic("Green", category="Dragon Ancestory", dmg_type='Poison')
+DRAGON_ANCESTORY_RED = RaceMechanic("Red", category="Dragon Ancestory", dmg_type='Fire')
+DRAGON_ANCESTORY_WHITE = RaceMechanic("White", category="Dragon Ancestory", dmg_type='Cold')
+DRAGON_ANCESTORY_SILVER = RaceMechanic("Silver", category="Dragon Ancestory", dmg_type='Cold')
+DRAGON_ANCESTORIES = [item for item in RaceMechanic.items if item.category=='Dragon Ancestory']
+
 """
     RACE
 """
-DRAGONBORN = Race("Dragonborn")
-DWARF = Race("Dwarf")
+DRAGONBORN = Race("Dragonborn", ab_score=[(STR, 2), (CON, 1)], age=[15, 80], alignment=("None", "Good"), size='Medium', speed=30, languages=[COMMON, DRACONIC] ancestory={'Choose 1': DRAGON_ANCESTORIES}], traits=['Breath Weapon'])
+DWARF = Race("Dwarf", ab_core=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), side='Small', speed=20, languages=[COMMON, DWARVISH])
 ELF = Race("Elf")
 GNOME = Race("Gnome")
 HALFLING = Race("Halfling")
@@ -1030,26 +1056,6 @@ HALF_ELF = Race("Half-Elf")
 HALF_ORC = Race("Half-Orc")
 HUMAN = Race("Human")
 TIEFLING = Race("Tiefling")
-
-def Choose(data: list):
-    return random.choice(data)
-
-def Unpack(data: list):
-    print("unpack launched")
-    output = []
-    for item in data:
-        if type(item) == dict:
-            print("item is dict")
-            item_keys = list(item.keys())
-            match item_keys[0]:
-                case "Choose 1":
-                    output.append(Unpack(item[item_keys[0]]))
-        elif type(item) == list:
-            print("item is list")
-            output.append(random.choice(item))
-        else:
-            print("item is not dict")
-    return output
 
 class PartyMember:
     def __init__(
@@ -1089,39 +1095,55 @@ class PartyMember:
             Tool_Proficiences = None,
             **kwargs
             ):
+        """ Macro Character Stuff """
         self.name = Name
         self.race = Race
         self._class = _Class
         self._subclass = _SubClass
+        self.languages = Languages
+        """ Ability Scores """
         self.STR = STR
         self.DEX = DEX
         self.CON = CON
         self.INT = INT
         self.WIS = WIS
         self.CHA = CHA
+        """ Skills """
+        # STR
         self.athletics = Athletics
+        # DEX
         self.acrobatics = Acrobatics
         self.sleight_of_hand = Sleight_of_Hand
         self.stealth = Stealth
+        # INT
         self.arcana = Arcana
         self.history = History
         self.investigation = Investigation
         self.nature = Nature
         self.religion = Religion
+        # WIS
         self.animal_handling = Animal_Handling
         self.insight = Insight
         self.medicine = Medicine
         self.perception = Perception
         self.survival = Survival
+        # CHA
         self.deception = Deception
         self.intimidation = Intimidation
         self.performance = Performance
         self.persuasion = Persuasion
+        """ Equipment & Proficiencies """
         self.money = Money
-        self.languages = Languages
         self.weapon_proficiences = Weapon_Proficiences
         self.armor_proficiences = Armor_Proficiences
         self.tool_proficiences = Tool_Proficiences
+        """ Combat Stats """
+        self.AC = 0
+        self.initiative = 0
+        self.speed = 0
+        self.hit_points = 0
+        self.current_hit_points = 0
+
 
         for k, d in kwargs.items():
             self.__setattr__(k, d)
@@ -1131,6 +1153,8 @@ class PartyMember:
 
     def __format__(self):
         return self.name
+
+
 
 
         
