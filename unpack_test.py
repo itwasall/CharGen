@@ -30,41 +30,8 @@ def unpack_new(data):
                 if isinstance(i, dict) and len(i.keys()) == 1:
                     unpacked_dict_value = unpack_new(list(i.values())[0])
                     unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                elif isinstance(item, list):
-                    for i in item:
-                        if isinstance(i, dict) and len(i.keys()) == 1:
-                            unpacked_dict_value = unpack_new(list(i.values())[0])
-                            unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                        elif isinstance(item, list):
-                            for i in item:
-                                if isinstance(i, dict) and len(i.keys()) == 1:
-                                    unpacked_dict_value = unpack_new(list(i.values())[0])
-                                    unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                                elif isinstance(item, list):
-                                        for i in item:
-                                            if isinstance(i, dict) and len(i.keys()) == 1:
-                                                unpacked_dict_value = unpack_new(list(i.values())[0])
-                                                unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                                            elif isinstance(item, list):
-                                                for i in item:
-                                                    if isinstance(i, dict) and len(i.keys()) == 1:
-                                                        unpacked_dict_value = unpack_new(list(i.values())[0])
-                                                        unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                                                    elif isinstance(item, list):
-                                                        for i in item:
-                                                            if isinstance(i, dict) and len(i.keys()) == 1:
-                                                                unpacked_dict_value = unpack_new(list(i.values())[0])
-                                                                unpacked_items.append(key_process(list(i.keys())[0], unpacked_dict_value))
-                                                    else:
-                                                        unpacked_items.append(item)
-                                            else:
-                                                unpacked_items.append(item)
-                                else:
-                                    unpacked_items.append(item)
-                        else:
-                            unpacked_items.append(item)
                 else:
-                    unpacked_items.append(item)
+                    unpacked_items.append(i) 
         else:
             unpacked_items.append(item) 
     return unpacked_items
@@ -74,8 +41,6 @@ flatten = lambda *n: (e for a in n for e in (flatten(*a) if isinstance(a, (tuple
 
 c = Core.CLASSES
 
-for cl in c:
-    if cl.name == "Fighter":
-        pass
-    print(cl.name)
-    print(list(flatten(unpack_new(cl.equipment))))
+pal = Core.FIGHTER
+for i in range(10):
+    print(pal, list(flatten(unpack_new(pal.equipment))))
