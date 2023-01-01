@@ -1,165 +1,133 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+import random
 
-from chargen import yaml_importer
+from char_dnd_5e_core import *
 
-data_classes = yaml_importer('dnd_5e_data/classes.yaml')
-jobs = data_classes['classes']
-backgrounds = yaml_importer('dnd_5e_data/backgrounds.yaml')
-equip = yaml_importer('dnd_5e_data/equipment.yaml')
-lang = yaml_importer('dnd_5e_data/languages.yaml')
-races = yaml_importer('dnd_5e_data/races.yaml')
-skills = yaml_importer('dnd_5e_data/skills.yaml')
-weapons = yaml_importer('dnd_5e_data/weapons.yaml')
-magic = yaml_importer('dnd_5e_data/magic.yaml')
+class PartyMember:
+    def __init__(
+            self,
+            name: str = None,
+            race: Race = None,
+            subRace: SubRace = None,
+            _class: _Class = None,
+            _subClass: _SubClass = None,
+            STR: STR = None,
+            DEX: DEX = None,
+            CON: CON = None,
+            INT: INT = None,
+            WIS: WIS = None,
+            CHA: CHA = None,
+            athletics: ATHLETICS= None,
+            acrobatics: ACROBATICS= None,
+            sleight_of_Hand: SLEIGHT_OF_HAND = None,
+            stealth: STEALTH = None,
+            arcana: ARCANA = None,
+            history: HISTORY = None,
+            investigation: INVESTIGATION = None,
+            nature: NATURE = None,
+            religion: RELIGION = None,
+            animal_Handling: ANIMAL_HANDLING = None,
+            insight: INSIGHT = None,
+            medicine: MEDICINE = None,
+            perception: PERCEPTION = None,
+            survival: SURVIVAL = None,
+            deception: DECEPTION = None,
+            intimidation: INTIMIDATION = None,
+            performance: PERFORMANCE = None,
+            persuasion: PERSUASION = None,
+            money = None,
+            languages = None,
+            weapon_Proficiences = None,
+            armor_Proficiences = None,
+            tool_Proficiences = None,
+            equipment = None,
+            **kwargs
+            ):
+        """ Macro Character Stuff """
+        self.name = name
+        self.race = race
+        self.subrace = subRace
+        self._class = _class
+        self._subclass = _subClass
+        self.languages = languages
+        """ Ability Scores """
+        self.STR = STR
+        self.DEX = DEX
+        self.CON = CON
+        self.INT = INT
+        self.WIS = WIS
+        self.CHA = CHA
+        """ Skills """
+        # STR
+        self.athletics = athletics
+        # DEX
+        self.acrobatics = acrobatics
+        self.sleight_of_hand = sleight_of_Hand
+        self.stealth = stealth
+        # INT
+        self.arcana = arcana
+        self.history = history
+        self.investigation = investigation
+        self.nature = nature
+        self.religion = religion
+        # WIS
+        self.animal_handling = animal_Handling
+        self.insight = insight
+        self.medicine = medicine
+        self.perception = perception
+        self.survival = survival
+        # CHA
+        self.deception = deception
+        self.intimidation = intimidation
+        self.performance = performance
+        self.persuasion = persuasion
+        """ Equipment & Proficiencies """
+        self.weapon_proficiences = weapon_Proficiences
+        self.armor_proficiences = armor_Proficiences
+        self.tool_proficiences = tool_Proficiences
+        """ Combat Stats """
+        self.AC = 0
+        self.initiative = 0
+        self.speed = 0
+        self.hit_points = 0
+        self.current_hit_points = 0
+        """ Possessions """
+        self.money = money
+        self.equipment = equipment
 
-class AbilityScores:
-    def __init__(self):
-        self.STR = 0
-        self.STR_MOD = self.get_ability_mod(self.STR)
-        self.STR_SAV = 0
-        self.DEX = 0
-        self.DEX_MOD = self.get_ability_mod(self.DEX)
-        self.DEX_SAV = 0
-        self.CON = 0
-        self.CON_MOD = self.get_ability_mod(self.CON)
-        self.CON_SAV = 0
-        self.INT = 0
-        self.INT_MOD = self.get_ability_mod(self.INT)
-        self.INT_SAV = 0
-        self.WIS = 0
-        self.WIS_MOD = self.get_ability_mod(self.WIS)
-        self.WIS_SAV = 0
-        self.CHA = 0
-        self.CHA_MOD = self.get_ability_mod(self.CHA)
-        self.CHA_SAV = 0
 
-    def set_values(self, values: list):
-        if len(values) != 6:
-            return ValueError
-        self.STR = values[0]
-        self.DEX = values[1]
-        self.CON = values[2]
-        self.INT = values[3]
-        self.WIS = values[4]
-        self.CHA = values[5]
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
     
-    def get_ability_mod(self, ability_score):
-        if not ability_score:
-            return ValueError
-        mod_dict = {
-            1: -5, 
-            2: -4, 
-            3: -4, 
-            4: -3, 
-            5: -3, 
-            6: -2, 
-            7: -2,
-            8: -1, 
-            9: -1,
-            10: 0,
-            11: 0,
-            12: 1,
-            13: 1,
-            14: 2,
-            15: 2,
-            16: 3,
-            17: 3,
-            18: 4,
-            19: 4,
-            20: 5
-        }
-        return mod_dict[ability_score]
-
-char_abilityScores = AbilityScores()
-
-class Skills:
-    def __init__(self):
-
-        self.skill_list = {
-            'Acrobatics': 0,
-            'Animal Handling': 0,
-            'Arcana': 0,
-            'Athletics': 0,
-            'Deception': 0,
-            'History': 0,
-            'Insight': 0,
-            'Intimidation': 0,
-            'Investigation': 0,
-            'Medicine': 0,
-            'Nature': 0,
-            'Perception': 0,
-            'Persuasion': 0,
-            'Religion': 0,
-            'Sleight Of Hand': 0,
-            'Stealth': 0,
-            'Survival': 0
-        }
-        self.update_skills()
-
-    def update_skills(self):
-
-        self.acrobatics = self.skill_list['Acrobatics']
-        self.animal_handling = self.skill_list['Animal Handling']
-        self.arcana = self.skill_list['Arcana'] 
-        self.athletics = self.skill_list['Athletics']
-        self.deception = self.skill_list['Deception']
-        self.history = self.skill_list['History']
-        self.insight = self.skill_list['Insight']
-        self.intimidation = self.skill_list['Intimidation']
-        self.investigation = self.skill_list['Investigation']
-        self.medicine = self.skill_list['Medicine']
-        self.nature = self.skill_list['Nature']
-        self.perception = self.skill_list['Perception']
-        self.persuasion = self.skill_list['Persuasion']
-        self.religion = self.skill_list['Religion']
-        self.sleight_of_hand = self.skill_list['Sleight Of Hand']
-        self.stealth = self.skill_list['Stealth']
-        self.survival = self.skill_list['Survival']
-
-
-    def change_skill(self, skill_name: str, skill_amt: int):
-        if skill_name not in list(self.skill_list.keys()):
-            return ValueError
-        self.skill_list[skill_name] = skill_amt
-        self.update_skills()
-
-    def __format__(self):
-        return "".join(f'{skill}: {self.skill_list[skill]}' for skill in self.skill_list if self.skill_list[skill] > 0)
-
     def __repr__(self):
         return self.__format__()
 
-char_skillList = Skills()
+    def __format__(self):
+        return self.name
 
-class Character:
-    def __init__(
-        self,
-        name: str = "",
-        age: int = 0,
-        height: str = "",
-        race: str = "",
-        char_class: str = "",
-        ability_scores: AbilityScores = char_abilityScores,
-        skills: Skills = char_skillList
-    ):
-        self.name = name
-        self.age = age
-        self.height = height
-        self.race = race
-        self.character_class = char_class
-        self.ability_scores = ability_scores
-        self.skills = skills
+def dice_roll(dicestring, summed=True):
+    throws, sides = dicestring.split("d")
+    if summed:
+        return sum([random.randint(int(sides)) for _ in range(int(throws))])
+    else:
+        return [random.randint(int(sides)) for _ in range(int(throws))]
+
+def gen_character():
+    CHOSEN_RACE = random.choice(RACES)
+    potential_subraces = [subrace for subrace in SUBRACES if subrace.parent_race == chosen_race]
+    if len(potential_subraces) != 0:
+        CHOSEN_SUBRACE = random.choice(potential_subraces)
+    else:
+        CHOSEN_SUBRACE = None
+    CHOSEN_CLASS = random.choice(CLASSES)
+
+    EQUIPMENT = GenerateEquipment(CHOSEN_CLASS.equipment)
+    if isinstance(CHOSEN_CLASS.equipment_pack, dict):
+        EQUIPMENT += random.choice(CHOSEN_CLASS.equipment_pack['Choose 1'])
+    else:
+        EQUIPMENT += CHOSEN_CLASS.equipment_pack
 
 
-j = Character('name', 1, 'big', 'yes', 'nice', char_abilityScores)
 
-def add_skill(c: Character, skill: str, amount: int):
-    c.skills.change_skill(skill, amount)
 
-def chargen():
-    character = Character()
-    add_skill(character, 'Animal Handling', 2)
-    print(character.skills)
+    
 
-chargen()

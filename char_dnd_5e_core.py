@@ -123,11 +123,19 @@ DEFAULT_RACE = Race("Default Race")
 class RaceMechanic:
     items = []
     def __init__(self, name, category, **kwargs):
-        self.name = category
+        self.name = name 
         self.category = category
         RaceMechanic.items.append(self)
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+class SubRace:
+    items = []
+    def __init__(self, name, parent_race, **kwargs):
+        self.name = name
+        self.parent_race = parent_race
+        SubRace.items.append(self)
+
 
 class Background:
     def __init__(self, name, **kwargs):
@@ -1057,102 +1065,12 @@ HALF_ORC = Race("Half-Orc")
 HUMAN = Race("Human")
 TIEFLING = Race("Tiefling")
 
-class PartyMember:
-    def __init__(
-            self,
-            Name: str = None,
-            Race: Race = None,
-            _Class: _Class = None,
-            _SubClass: _SubClass = None,
-            STR: STR = None,
-            DEX: DEX = None,
-            CON: CON = None,
-            INT: INT = None,
-            WIS: WIS = None,
-            CHA: CHA = None,
-            Athletics: ATHLETICS= None,
-            Acrobatics: ACROBATICS= None,
-            Sleight_of_Hand: SLEIGHT_OF_HAND = None,
-            Stealth: STEALTH = None,
-            Arcana: ARCANA = None,
-            History: HISTORY = None,
-            Investigation: INVESTIGATION = None,
-            Nature: NATURE = None,
-            Religion: RELIGION = None,
-            Animal_Handling: ANIMAL_HANDLING = None,
-            Insight: INSIGHT = None,
-            Medicine: MEDICINE = None,
-            Perception: PERCEPTION = None,
-            Survival: SURVIVAL = None,
-            Deception: DECEPTION = None,
-            Intimidation: INTIMIDATION = None,
-            Performance: PERFORMANCE = None,
-            Persuasion: PERSUASION = None,
-            Money = None,
-            Languages = None,
-            Weapon_Proficiences = None,
-            Armor_Proficiences = None,
-            Tool_Proficiences = None,
-            **kwargs
-            ):
-        """ Macro Character Stuff """
-        self.name = Name
-        self.race = Race
-        self._class = _Class
-        self._subclass = _SubClass
-        self.languages = Languages
-        """ Ability Scores """
-        self.STR = STR
-        self.DEX = DEX
-        self.CON = CON
-        self.INT = INT
-        self.WIS = WIS
-        self.CHA = CHA
-        """ Skills """
-        # STR
-        self.athletics = Athletics
-        # DEX
-        self.acrobatics = Acrobatics
-        self.sleight_of_hand = Sleight_of_Hand
-        self.stealth = Stealth
-        # INT
-        self.arcana = Arcana
-        self.history = History
-        self.investigation = Investigation
-        self.nature = Nature
-        self.religion = Religion
-        # WIS
-        self.animal_handling = Animal_Handling
-        self.insight = Insight
-        self.medicine = Medicine
-        self.perception = Perception
-        self.survival = Survival
-        # CHA
-        self.deception = Deception
-        self.intimidation = Intimidation
-        self.performance = Performance
-        self.persuasion = Persuasion
-        """ Equipment & Proficiencies """
-        self.money = Money
-        self.weapon_proficiences = Weapon_Proficiences
-        self.armor_proficiences = Armor_Proficiences
-        self.tool_proficiences = Tool_Proficiences
-        """ Combat Stats """
-        self.AC = 0
-        self.initiative = 0
-        self.speed = 0
-        self.hit_points = 0
-        self.current_hit_points = 0
+"""
+    SUBRACE
+"""
+Hill_Dwarf = SUb
 
-
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-    
-    def __repr__(self):
-        return self.__format__()
-
-    def __format__(self):
-        return self.name
+RACES = [DRAGONBORN, DWARF, ELF, GNOME, HALFLING, HALF_ELF, HALF_ORC, HUMAN, TIEFLING]
 
 
 
