@@ -2,6 +2,17 @@ import random
 
 import char_dnd_5e_core as Core
 
+# This is to allow for further optional expansion of
+#    suppliment material
+RACES =  Core.RACES
+SUBRACES = Core.SUBRACES
+LANGUAGES = Core.LANGUAGES
+CLASSES = Core.CLASSES
+SUBCLASSES = Core._SubClass.items
+BACKGROUNDS = Core.Background.items
+ITEMS = Core.Item.items
+
+
 
 class PartyMember:
     def __init__( self, name: str = None, **kwargs):
@@ -85,6 +96,37 @@ def sortReverse(l: list):
 def attrAsDict(_class):
     return [{i: _class._getattr(i)} for i in dir(_class) if not i.startswith("__")]
 
+def unpackChoice(data: dict, dupes_allowed=False):
+    def getRandomChoice(value: list, amt: int, dupes_allowed=False):
+        chosen_values = []
+        if dupes_allowed:
+            chosen_values = [random.choice(value) for _ in range(amt)]
+        else:
+            while len(chosen_values) < amt:
+                random_item = random.choice(value)
+                if random_item in chosen_values:
+                    chosen_values.pop(chosen_values.index(random_item))
+                chosen_values.append(random_item)
+        return chosen_values
+
+    opt_bonus_value = None
+    if len(data.keys()) != 1 and list(data.keys())[1] == 'Bonus':
+        opt_bonus_value = data['Bonus']
+    data_keys = list(data.keys())
+    match data_keys[0]:
+        case 'Choose 1':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 1)
+        case 'Choose 2':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 2)
+        case 'Choose 3':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 3)
+        case 'Choose 4':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 4)
+        case 'Has':
+            unpacked_choice = data[data_keys[0]]
+    return unpacked_choice
+
+
 def genAlignment(weights: tuple):
     is_weight_a = random.randint(0, 100)
     if is_weight_a > 30 and isinstance(weights[0], str) and weights[0] != 'None':
@@ -98,37 +140,65 @@ def genAlignment(weights: tuple):
         alignment_b = random.choice(['Good', 'Evil', 'Neutral'])
     return Core.Alignment(alignment_a, alignment_b)
 
+def genLanguage(languages, banlist=None):
+    if banlist == None:
+        banlist = []
+    return_languages = []
+    for lang in languages:
+        if lang in banlist:
+            pass
+        elif isinstance(lang, dict):
+            chosen_lang = (unpackChoice(lang))
+            for lang in chosen_lang:
+                banlist.append(lang)
+                return_languages.append(lang)
+        elif isinstance(lang, Core.Language):
+            chosen_lang = lang
+            return_languages.append(chosen_lang)
+    return return_languages
+
+
+
 
 def genRace():
     char_race = random.choice(Core.RACES)
 
+    char_language = []
     char_race_attributes = attrAsDict(char_race)
     
     for attr in char_race_attributes:
+        print(list(attr.keys()))
         match list(attr.keys())[0]:
             case '_getattr':
-                char_race_attributes.pop(char_race_attributes.index(attr))
+                pass
+                # char_race_attributes.pop(char_race_attributes.index(attr))
             case 'has_subrace':
-                char_race_attributes.pop(char_race_attributes.index(attr))
+                # char_race_attributes.pop(char_race_attributes.index(attr))
                 char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
             case 'alignment':
-                char_race_attributes.pop(char_race_attributes.index(attr))
+                # char_race_attributes.pop(char_race_attributes.index(attr))
                 print("yes alignment")
                 char_alignment = genAlignment(attr['alignment'])
             case 'age':
-                char_race_attributes.pop(char_race_attributes.index(attr))
+                # char_race_attributes.pop(char_race_attributes.index(attr))
                 char_age = random.randint(attr['age'][0], attr['age'][1])
             case 'size':
-                char_race_attributes.pop(char_race_attributes.index(attr))
+                # char_race_attributes.pop(char_race_attributes.index(attr))
                 char_size = attr['size']
+            case 'language':
+                # char_race_attributes.pop(char_race_attributes.index(attr))
+                print("yes language")
+                char_language = genLanguage(char_race.language)
             case _:
                 char_subrace = None
                 char_alignment = genAlignment((False, False))
                 char_size = "SIZE NOT FOUND"
+        
     print(char_race, char_subrace, char_age)
     print(char_race_attributes)
     print(char_alignment)
     print(char_size)
+    print(char_language)
 
 
 
@@ -145,14 +215,15 @@ def genCharacter():
 
     genRace()
 
-    char_race = random.choice(Core.RACES)
+    char_race = random.choice(RACES)
     if hasattr(char_race, "has_subrace"):
-        char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
+        char_subrace = random.choice([subrace for subrace in SUBRACES if subrace.race == char_race])
     else:
         char_subrace = None
 
 #    print(char_race, char_subrace)
-    char_class = random.choice(Core.CLASSES)
+    char_class = random.choice(CLASSES)
+    return "nice"
 
 
 print(genCharacter())

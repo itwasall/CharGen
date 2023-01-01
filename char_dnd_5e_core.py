@@ -141,8 +141,10 @@ class RaceMechanic(ABC):
         RaceMechanic.items.append(self)
 
 class Background(ABC):
+    items = []
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
+        Background.items.append(self)
 
 class Alignment:
     def __init__(self, law_chaos, good_evil):
@@ -344,6 +346,7 @@ INFERNAL = Language("Infernal", speakers='Devils', script='Infernal', exotic=Tru
 PRIMORDIAL = Language("Primordial", speakers='Elementals', script='Dwarvish', exotic=True)
 SYLVAN = Language("Sylvan", speakers='Fey creatures', script='Elvish', exotic=True)
 UNDERCOMMON = Language("Undercommon", speakers='Underdark Traders', script='Elvish', exotic=True)
+LANGUAGES = [COMMON, DWARVISH, ELVISH, GIANT, GNOMISH, GOBLIN, HALFLING, ORC, ABYSSAL, DEEP_SPEECH, INFERNAL, PRIMORDIAL, SYLVAN, UNDERCOMMON]
 
 """
     VEHICLES 
@@ -701,6 +704,8 @@ SAGE = Background("Sage", skill_profs=[ARCANA, HISTORY], tool_profs=[], language
 SAILOR = Background("Sailor", skill_profs=[ATHLETICS, PERCEPTION], tool_profs=[NAVIGATORS_TOOLS, VEHICLES_WATER], equipment=[BELAYING_PIN, LUCKY_CHARM, CLOTHES_COMMON], money=[10, gp])
 SOLDIER = Background("Soldier", skill_profs=[ATHLETICS, INTIMIDATION], tool_profs=[{'Choose 1': GAMING_TOOLS}, VEHICLES_LAND], equipment=[INSIGNIA_OF_RANK, TROPHY_FROM_FALLEN_ENEMY, {'Choose 1': [BONE_DICE, DECK_OF_CARDS]}], money=[10, gp])
 URCHIN = Background("Urchin", skill_profs=[SLEIGHT_OF_HAND, STEALTH], tool_profs=[DISGUISE_KIT, THIEVES_TOOLS], equipment=[SMALL_KNIFE, MAP_OF_HOMETOWN, PET_MOUSE, PARENTAL_TOKEN_OF_REMEMBERANCE, CLOTHES_COMMON], money=[10, gp])
+
+
 
 
 """
