@@ -126,7 +126,6 @@ def unpackChoice(data: dict, dupes_allowed=False):
             unpacked_choice = data[data_keys[0]]
     return unpacked_choice
 
-
 def genAlignment(weights: tuple):
     is_weight_a = random.randint(0, 100)
     if is_weight_a > 30 and isinstance(weights[0], str) and weights[0] != 'None':
@@ -145,62 +144,135 @@ def genLanguage(languages, banlist=None):
         banlist = []
     return_languages = []
     for lang in languages:
-        if lang in banlist:
-            pass
-        elif isinstance(lang, dict):
-            chosen_lang = (unpackChoice(lang))
-            for lang in chosen_lang:
-                banlist.append(lang)
-                return_languages.append(lang)
+        if isinstance(lang, dict):
+            chosen_lang = unpackChoice(lang)
+            while chosen_lang in return_languages:
+                chosen_lang = unpackChoice(lang)
+            return_languages.append(chosen_lang)
         elif isinstance(lang, Core.Language):
             chosen_lang = lang
             return_languages.append(chosen_lang)
     return return_languages
 
+def raiseAbilityScore(data: tuple):
+    match data[0]:
+        case Core.STR:
+            CHARACTER.STR += data[1]
+        case Core.DEX:
+            CHARACTER.DEX += data[1]
+        case Core.CON:
+            CHARACTER.CON += data[1]
+        case Core.INT:
+            CHARACTER.INT += data[1]
+        case Core.WIS:
+            CHARACTER.WIS += data[1]
+        case Core.CHA:
+            CHARACTER.CHA += data[1]
+
+def genRaceAttributeBonus(data):
+    for item in data:
+        if isinstance(item, tuple):
+            raiseAbilityScore(item)
+        elif isinstance(item, dict):
+            unpacked_item = unpackChoice(item)
+            print(unpacked_item)
+            raiseAbilityScore(unpackChoice(item)[0])
+
+def genClass():
+    char_class = random.choice(CLASSES)
+
+    char_class_attributes = attrAsDict(char_class)
+    attributes_generated = []
+
+    for attr in char_class_attributes:
+        match list(attr.keys())[0]:
+            case '_getattr':
+                attributes_generated.append('_getattr')
+            case 'items':
+                attributes_generated.append('items')
+            case 'proficiencies':
+                attributes_generated.append('proficiencies')
+            case 'saving_throws':
+                attributes_generated.append('saving_throws')
+            case 'skills':
+                attributes_generated.append('skills')
+            case 'hit_dice':
+                attributes_generated.append('hit_dice')
+            case 'initial_health':
+                attributes_generated.append('initial_heath')
+            case 'starting_money':
+                attributes_generated.append('starting_money')
+            case 'equipment':
+                attributes_generated.append('equipment')
+                attributes_generated.append('equipment_pack')
+            case 'equipment_pack':
+                pass
+
+    print("generated: ", attributes_generated)
+    print("not generated: ", [list(attr.keys())[0] for attr in char_class_attributes if list(attr.keys())[0] not in attributes_generated])
 
 
+def genRace(subrace=None):
+    if subrace == None:
+        # char_race = random.choice(Core.RACES)
+        char_race = Core.ELF
+        CHARACTER.race = char_race
+    else:
+        char_race = subrace
 
-def genRace():
-    char_race = random.choice(Core.RACES)
-
-    char_language = []
     char_race_attributes = attrAsDict(char_race)
+    attributes_generated = []
     
     for attr in char_race_attributes:
         print(list(attr.keys()))
         match list(attr.keys())[0]:
             case '_getattr':
-                pass
-                # char_race_attributes.pop(char_race_attributes.index(attr))
+                attributes_generated.append('_getattr')
+            case 'ab_score':
+                attributes_generated.append('ab_score')
+                genRaceAttributeBonus(attr['ab_score'])
+                print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
             case 'has_subrace':
-                # char_race_attributes.pop(char_race_attributes.index(attr))
+                attributes_generated.append('has_subrace')
                 char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
+                genRace(char_subrace)
+                CHARACTER.subrace = char_subrace
             case 'alignment':
-                # char_race_attributes.pop(char_race_attributes.index(attr))
-                print("yes alignment")
-                char_alignment = genAlignment(attr['alignment'])
+                attributes_generated.append('alignment')
+                CHARACTER.alignment = genAlignment(attr['alignment'])
             case 'age':
-                # char_race_attributes.pop(char_race_attributes.index(attr))
-                char_age = random.randint(attr['age'][0], attr['age'][1])
+                attributes_generated.append('age')
+                CHARACTER.age = random.randint(attr['age'][0], attr['age'][1])
             case 'size':
-                # char_race_attributes.pop(char_race_attributes.index(attr))
-                char_size = attr['size']
+                attributes_generated.append('size')
+                CHARACTER.size = attr['size']
+            case 'speed':
+                attributes_generated.append('speed')
+                CHARACTER.speed = attr['speed']
             case 'language':
-                # char_race_attributes.pop(char_race_attributes.index(attr))
-                print("yes language")
-                char_language = genLanguage(char_race.language)
+                attributes_generated.append('language')
+                CHARACTER.languages = list(Core.flatten(genLanguage(char_race.language)))
+            case 'racial_prof':
+                attributes_generated.append('racial_prof')
+                CHARACTER.proficiencies = attr['racial_prof']
+            case 'ancestory':
+                attributes_generated.append('ancestory')
+                CHARACTER.ancestory = unpackChoice(attr['ancestory'])
+            case 'darvision':
+                attributes_generated.append('darkvision')
+                CHARACTER.darkvision = attr['darkvision']
+            case 'hit_point_increase':
+                attributes_generated.append('hit_point_increase')
+                CHARACTER.hit_points += 1
+
             case _:
-                char_subrace = None
-                char_alignment = genAlignment((False, False))
-                char_size = "SIZE NOT FOUND"
+                if 'has_subrace' not in attributes_generated:
+                    char_subrace = None
+                if 'alignment' not in attributes_generated:
+                    char_alignment = genAlignment((False, False))
+                if 'size' not in attributes_generated:
+                    char_size = "SIZE NOT FOUND"
         
-    print(char_race, char_subrace, char_age)
-    print(char_race_attributes)
-    print(char_alignment)
-    print(char_size)
-    print(char_language)
-
-
 
 def genCharacter():
 
@@ -214,8 +286,10 @@ def genCharacter():
     ability_score_rolls.sort()
 
     genRace()
+    genClass()
 
-    char_race = random.choice(RACES)
+    # char_race = random.choice(RACES)
+    char_race = [i for i in RACES if i.name == 'Dragonborn'][0]
     if hasattr(char_race, "has_subrace"):
         char_subrace = random.choice([subrace for subrace in SUBRACES if subrace.race == char_race])
     else:
@@ -224,6 +298,5 @@ def genCharacter():
 #    print(char_race, char_subrace)
     char_class = random.choice(CLASSES)
     return "nice"
-
 
 print(genCharacter())
