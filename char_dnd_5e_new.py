@@ -1,39 +1,40 @@
 import random
 
-from char_dnd_5e_core import *
+import char_dnd_5e_core as Core
+
 
 class PartyMember:
     def __init__(
             self,
             name: str = None,
-            race: Race = None,
-            subRace: SubRace = None,
-            _class: _Class = None,
-            _subClass: _SubClass = None,
-            STR: STR = None,
-            DEX: DEX = None,
-            CON: CON = None,
-            INT: INT = None,
-            WIS: WIS = None,
-            CHA: CHA = None,
-            athletics: ATHLETICS= None,
-            acrobatics: ACROBATICS= None,
-            sleight_of_Hand: SLEIGHT_OF_HAND = None,
-            stealth: STEALTH = None,
-            arcana: ARCANA = None,
-            history: HISTORY = None,
-            investigation: INVESTIGATION = None,
-            nature: NATURE = None,
-            religion: RELIGION = None,
-            animal_Handling: ANIMAL_HANDLING = None,
-            insight: INSIGHT = None,
-            medicine: MEDICINE = None,
-            perception: PERCEPTION = None,
-            survival: SURVIVAL = None,
-            deception: DECEPTION = None,
-            intimidation: INTIMIDATION = None,
-            performance: PERFORMANCE = None,
-            persuasion: PERSUASION = None,
+            race: Core.Race = None,
+            subRace: Core.SubRace = None,
+            _class: Core._Class = None,
+            _subClass: Core._SubClass = None,
+            STR: Core.STR = None,
+            DEX: Core.DEX = None,
+            CON: Core.CON = None,
+            INT: Core.INT = None,
+            WIS: Core.WIS = None,
+            CHA: Core.CHA = None,
+            athletics: Core.ATHLETICS= None,
+            acrobatics: Core.ACROBATICS= None,
+            sleight_of_Hand: Core.SLEIGHT_OF_HAND = None,
+            stealth: Core.STEALTH = None,
+            arcana: Core.ARCANA = None,
+            history: Core.HISTORY = None,
+            investigation: Core.INVESTIGATION = None,
+            nature: Core.NATURE = None,
+            religion: Core.RELIGION = None,
+            animal_Handling: Core.ANIMAL_HANDLING = None,
+            insight: Core.INSIGHT = None,
+            medicine: Core.MEDICINE = None,
+            perception: Core.PERCEPTION = None,
+            survival: Core.SURVIVAL = None,
+            deception: Core.DECEPTION = None,
+            intimidation: Core.INTIMIDATION = None,
+            performance: Core.PERFORMANCE = None,
+            persuasion: Core.PERSUASION = None,
             money = None,
             languages = None,
             weapon_Proficiences = None,
@@ -92,7 +93,7 @@ class PartyMember:
         self.current_hit_points = 0
         """ Possessions """
         self.money = money
-        self.equipment = equipment
+        self.equipment = equipment 
 
 
         for k, d in kwargs.items():
@@ -107,27 +108,39 @@ class PartyMember:
 def dice_roll(dicestring, summed=True):
     throws, sides = dicestring.split("d")
     if summed:
-        return sum([random.randint(int(sides)) for _ in range(int(throws))])
+        return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
     else:
-        return [random.randint(int(sides)) for _ in range(int(throws))]
+        rolls = [random.randint(1, int(sides)) for _ in range(int(throws))]
+        rolls.sort()
+        return rolls
 
 def gen_character():
-    CHOSEN_RACE = random.choice(RACES)
-    potential_subraces = [subrace for subrace in SUBRACES if subrace.parent_race == chosen_race]
-    if len(potential_subraces) != 0:
-        CHOSEN_SUBRACE = random.choice(potential_subraces)
-    else:
-        CHOSEN_SUBRACE = None
-    CHOSEN_CLASS = random.choice(CLASSES)
-
-    EQUIPMENT = GenerateEquipment(CHOSEN_CLASS.equipment)
-    if isinstance(CHOSEN_CLASS.equipment_pack, dict):
-        EQUIPMENT += random.choice(CHOSEN_CLASS.equipment_pack['Choose 1'])
-    else:
-        EQUIPMENT += CHOSEN_CLASS.equipment_pack
-
-
-
-
+    AbilityScore_Rolls = []
+    for _ in range(6):
+        rolls = dice_roll("4d6", summed=False)
+        rolls.sort()
+        rolls.reverse()
+        rolls.pop()
+        AbilityScore_Rolls.append(rolls)
     
+    AbilityScore_Rolls.sort()
+    CHAR_CLASS = random.choice(Core.CLASSES)
+    print(CHAR_CLASS)
+    CHAR_STR, CHAR_DEX, CHAR_CON, CHAR_INT, CHAR_WIS, CHAR_CHA = Core.STR, Core.DEX, Core.CON, Core.INT, Core.WIS, Core.CHA
+    ABILITY_SCORES = [CHAR_STR, CHAR_DEX, CHAR_CON, CHAR_INT, CHAR_WIS, CHAR_CHA]
+    CHAR_ABILITY_SCORES = []
+    for abilityScore in ABILITY_SCORES:
+        if abilityScore in CHAR_CLASS.saving_throws:
+            ABILITY_SCORES.pop(ABILITY_SCORES.index(abilityScore))
+            CHAR_ABILITY_SCORES.append(abilityScore)
+    random.shuffle(CHAR_ABILITY_SCORES)
+    random.shuffle(ABILITY_SCORES)
+    for abilityScore in ABILITY_SCORES:
+        CHAR_ABILITY_SCORES.append(abilityScore)
+    for idx, value in enumerate(AbilityScore_Rolls):
+        CHAR_ABILITY_SCORES[idx] = value
 
+            
+    print(CHAR_ABILITY_SCORES)
+
+print(gen_character())

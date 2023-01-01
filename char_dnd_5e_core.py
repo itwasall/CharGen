@@ -82,69 +82,64 @@ def MakeItemList(attribute, attr_value=None):
         return [item for item in Item.items 
                 if (hasattr(item, attribute) and item.__getattribute__(attribute) == attr_value)]
 
-class _Class:
-    items = []
+class AbstractBaseClass:
     def __init__(self, name, **kwargs):
         self.name = name
-        _Class.items.append(self)
         for k, d in kwargs.items():
             self.__setattr__(k, d)
-    
+
     def __repr__(self):
+        return self.__format__()
+
+    def __format__(self):
         return self.name
+
+class ABC(AbstractBaseClass):
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+
+class _Class(ABC):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        _Class.items.append(self)
 DEFAULT_CLASS = _Class("Default Class")
 
-class _ClassMechanic:
+class _ClassMechanic(ABC):
     items = []
     def __init__(self, name, _class: _Class, **kwargs):
-        self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
+        super().__init__(name, **kwargs)
+        self._class = _class
+        _ClassMechanic.items.append(self)
 
-class _SubClass:
+class _SubClass(ABC):
     items = []
     def __init__(self, name, _class: _Class, **kwargs):
-        self.name = name
+        super().__init__(name, **kwargs)
         self._class = _class
         _SubClass.items.append(self)
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
 
-    def __repr__(self):
-        return self.name
-
-class Race:
+class Race(ABC):
     def __init__(self, name, **kwargs):
-        self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
+        super().__init__(name, **kwargs)
 DEFAULT_RACE = Race("Default Race")
 
-class RaceMechanic:
+class SubRace(ABC):
     items = []
-    def __init__(self, name, category, **kwargs):
-        self.name = name 
-        self.category = category
-        RaceMechanic.items.append(self)
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-
-class SubRace:
-    items = []
-    def __init__(self, name, parent_race, **kwargs):
-        self.name = name
-        self.parent_race = parent_race
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
         SubRace.items.append(self)
 
+class RaceMechanic(ABC):
+    items = []
+    def __init__(self, name, category, **kwargs):
+        super().__init__(name, **kwargs)
+        self.category = category
+        RaceMechanic.items.append(self)
 
-class Background:
+class Background(ABC):
     def __init__(self, name, **kwargs):
-        self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-
-    def __repr__(self):
-        return self.name
+        super().__init__(name, **kwargs)
 
 class Alignment:
     def __init__(self, law_chaos, good_evil):
@@ -159,10 +154,10 @@ class Alignment:
         
 DEFAULT_ALIGNMENT = Alignment("DEFAULT", "ALIGNMENT")
 
-class Language:
+class Language(ABC):
     items = []
     def __init__(self, name, speakers: None, script: None, **kwargs):
-        self.name = name
+        super().__init__(name, **kwargs)
         if type(speakers) == str:
             self.speakers = [speakers]
         elif type(speakers) != list:
@@ -170,10 +165,6 @@ class Language:
         self.speakers = speakers
         self.script = script
         Language.items.append(self)
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-    def __repr__(self):
-        return self.name
 DEFAULT_LANGUAGE = Language("DEFAULT LANGUAGE", "DEFAULT SPEAKERS", "DEFAULT SCRIPT")
 
 class AbilityScore:
@@ -189,7 +180,10 @@ class AbilityScore:
         return self.name
 
     def __add__(self, value):
-        self.value += value
+        print("arg:", value)
+        print(self.value)
+
+        self.value = self.value + value
         return AbilityScore(self.name, self.value)
 
     def __iadd__(self, value):
@@ -204,15 +198,13 @@ class AbilityScore:
 DEFAULT_ABILITY_SCORE = AbilityScore("DEFAULT ABILITY_SCORE")
 
 
-class Skill:
+class Skill(ABC):
     def __init__(self, name, ab_score, prof: bool = False, bonus = 0, **kwargs):
-        self.name = name
+        super().__init__(name, **kwargs)
         self.ab_score = ab_score
         self.prof = prof
         self.bonus = bonus
         self.FORMAT_REPR = False
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
 
     def __add__(self, value):
         self.bonus += value
@@ -220,9 +212,6 @@ class Skill:
     
     def __iadd__(self, value):
         return self.__add__(value)
-
-    def __repr__(self):
-        return self.__format__()
     
     def __format__(self):
         if self.FORMAT_REPR:
@@ -234,16 +223,11 @@ class Skill:
         self.prof = True
         self.__add__(self, ProficiencyBonus(level))
 
-class Item:
+class Item(ABC):
     items = []
     def __init__(self, name, **kwargs):
-        self.name = name
+        super().__init__(name, **kwargs)
         Item.items.append(self)
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-
-    def __repr__(self):
-        return self.name
 
 class Coin(Item):
     def __init__(self, name, value):
@@ -252,40 +236,27 @@ class Coin(Item):
 
 class Weapon(Item):
     def __init__(self, name, cost, wpn_type, **kwargs):
-        super().__init__(name)
+        super().__init__(name, **kwargs)
         self.cost = cost
         self.wpn_type = wpn_type
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
 
 class Armor(Item):
     def __init__(self, name, cost, arm_type, ac, **kwargs):
-        super().__init__(name)
+        super().__init__(name, **kwargs)
         self.cost = cost
         self.arm_type = arm_type
         self.ac = ac
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
 
 class Tool(Item):
     def __init__(self, name, cost, tool_type=None, **kwargs):
-        super().__init__(name)
+        super().__init__(name, **kwargs)
         self.cost = cost
         self.tool_type = tool_type
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
 
 class Vehicle(Item):
     def __init__(self, name, vehicle_type=None, **kwargs):
-        super().__init__(name)
+        super().__init__(name, **kwargs)
         self.vehicle_type = vehicle_type
-        for k, d in kwargs.items():
-            self.__setattr__(k ,d)
-
-
-
-
-
 """
     ABILITY SCORES
 """
@@ -334,7 +305,6 @@ INTIMIDATION = Skill("Intimidation", ab_score=CHA)
 PERFORMANCE = Skill("Performance", ab_score=CHA)
 PERSUASION = Skill("Persuasion", ab_score=CHA)
 
-
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
 
 """
@@ -358,7 +328,6 @@ INFERNAL = Language("Infernal", speakers='Devils', script='Infernal', exotic=Tru
 PRIMORDIAL = Language("Primordial", speakers='Elementals', script='Dwarvish', exotic=True)
 SYLVAN = Language("Sylvan", speakers='Fey creatures', script='Elvish', exotic=True)
 UNDERCOMMON = Language("Undercommon", speakers='Underdark Traders', script='Elvish', exotic=True)
-
 
 """
     VEHICLES 
@@ -393,6 +362,7 @@ WARSHIP = Vehicle("Warship", cost=[25_000, gp], vehicle_type='Water')
 
 LAND_VEHICLES = MakeItemList("vehicle_type", "Land")
 WATER_VEHICLES = MakeItemList("vehicle_type", "Water")
+
 """
     WEAPONS
 """
@@ -631,6 +601,7 @@ ARTISAN_TOOLS = MakeItemList("tool_type", "Artisan")
 MUSICAL_INSTRUMENT = MakeItemList("tool_type", "Instrument")
 GAMING_TOOLS = MakeItemList("tool_type", "Gaming")
 TOOLS = MakeItemList("category", "Tool")
+
 """
     MISC ITEMS
 """
@@ -733,28 +704,17 @@ WARLOCK = _Class("Warlock")
 WIZARD = _Class("Wizard")
 ARTIFICER = _Class("Artificer", tasha=True)
 
-BARBARIAN.proficiencies = {
-        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
-        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
-        'Tools': None
-        }
+BARBARIAN.proficiencies = { 'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS, 'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS, 'Tools': None }
 BARBARIAN.saving_throws = [STR, CON]
 BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATURE, PERCEPTION, SURVIVAL]}
 BARBARIAN.hit_dice = "1d12"
 BARBARIAN.initial_health = [12, CON.modifier]
 BARBARIAN.starting_money = ["2d4", 10, gp]
-BARBARIAN.equipment = [
-    {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]},
-    {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, 
-    JAVELIN, JAVELIN, JAVELIN, JAVELIN]
+BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
 BARBARIAN.equipment_pack = EXPLORERS_PACK
 
 
-BARD.proficiencies = {
-        'Armor': LIGHT_ARMOR,
-        'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD],
-        'Tools': {'Choose 3': MUSICAL_INSTRUMENT}
-        }
+BARD.proficiencies = { 'Armor': LIGHT_ARMOR, 'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW, LONGSWORD, RAPIER, SHORTSWORD], 'Tools': {'Choose 3': MUSICAL_INSTRUMENT} }
 BARD.saving_throws = [DEX, CHA]
 BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
@@ -763,11 +723,7 @@ BARD.starting_money = ["5d4", 10, gp]
 BARD.equipment = [ {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [LUTE, {'Choose 1': MUSICAL_INSTRUMENT}]}, LEATHER_ARMOR, DAGGER ]
 BARD.equipment_pack = {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
 
-CLERIC.proficiencies = {
-        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
-        'Weapons': SIMPLE_WEAPONS,
-        'Tools': None
-        }
+CLERIC.proficiencies = { 'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS, 'Weapons': SIMPLE_WEAPONS, 'Tools': None }
 CLERIC.saving_throws = [WIS, CHA]
 CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
 CLERIC.hit_dice = "1d8"
@@ -776,11 +732,7 @@ CLERIC.starting_money = ["5d4", 10, gp]
 CLERIC.equipment = [ {'Choose 1': [MACE, WARHAMMER]}, {'Choose 1': [SCALE_MAIL, LEATHER_ARMOR, CHAIN_MAIL]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, SHIELD, {'Choose 1': HOLY_SYMBOL} ]
 CLERIC.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
-DRUID.proficiencies = {
-        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
-        'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR],
-        'Tools': {'Has': [HERBALISM_KIT]}
-        }
+DRUID.proficiencies = { 'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS, 'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR], 'Tools': {'Has': [HERBALISM_KIT]} }
 DRUID.saving_throws = [INT, WIS]
 DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE, PERCEPTION, RELIGION, SURVIVAL]}
 DRUID.hit_dice = "1d8"
@@ -789,11 +741,7 @@ DRUID.starting_money = ["2d4", 10, gp]
 DRUID.equipment = [ {'Choose 1': [SHIELD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [SCIMITAR, {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, LEATHER_ARMOR, {'Choose 1': DRUIDIC_FOCUS} ]
 DRUID.equipment_pack = EXPLORERS_PACK
 
-FIGHTER.proficiencies = {
-        'Armor': ALL_ARMOR + SHIELDS,
-        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
-        'Tools': None
-        }
+FIGHTER.proficiencies = { 'Armor': ALL_ARMOR + SHIELDS, 'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS, 'Tools': None }
 FIGHTER.saving_throws = [STR, CON]
 FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, INSIGHT, INTIMIDATION, PERCEPTION, SURVIVAL]}
 FIGHTER.hit_dice = "1d10"
@@ -802,11 +750,7 @@ FIGHTER.starting_money = ["5d4", 10, gp]
 FIGHTER.equipment = [ {'Choose 1': [CHAIN_MAIL, (LEATHER_ARMOR, LONGBOW, ARROWS)]}, {'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': [MARTIAL_WEAPONS, SHIELD]}, {'Choose 1': [(LIGHT_CROSSBOW, CROSSBOW_BOLTS), (HANDAXE, HANDAXE)]}]
 FIGHTER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
-MONK.proficiencies = {
-        'Armor': None,
-        'Weapons': SIMPLE_WEAPONS +  [SHORTSWORD],
-        'Tools': {'Choose 1': MUSICAL_INSTRUMENT + ARTISAN_TOOLS}
-        }
+MONK.proficiencies = { 'Armor': None, 'Weapons': SIMPLE_WEAPONS +  [SHORTSWORD], 'Tools': {'Choose 1': MUSICAL_INSTRUMENT + ARTISAN_TOOLS} }
 MONK.saving_throws = [STR, DEX]
 MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, STEALTH]}
 MONK.hit_dice = "1d8"
@@ -815,34 +759,16 @@ MONK.starting_money = ["5d4", 1, gp]
 MONK.equipment = [{'Choose 1': [SHORTSWORD, {'Choose 1':SIMPLE_WEAPONS}]}] + [DART for _ in range(10)]
 MONK.equipment_pack = {'Choose 1': [EXPLORERS_PACK, DUNGEONEERS_PACK]}
 
-PALADIN.proficiencies = {
-        'Armor': ALL_ARMOR + SHIELDS,
-        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
-        'Tools': None
-        }
+PALADIN.proficiencies = { 'Armor': ALL_ARMOR + SHIELDS, 'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS, 'Tools': None }
 PALADIN.saving_throws = [WIS, CHA]
 PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSUASION, RELIGION]}
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = [10, CON.modifier]
 PALADIN.starting_money = ["5d4", 10, gp]
-PALADIN.equipment = [
-        {'Choose 1': [
-            [{'Choose 1': MARTIAL_WEAPONS}, SHIELD],
-            [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}]
-        ]},
-        {'Choose 1': [
-            [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS}
-        ]}, 
-        CHAIN_MAIL, 
-        {'Choose 1': HOLY_SYMBOL} 
-        ]
+PALADIN.equipment = [ {'Choose 1': [ [{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}] ]}, {'Choose 1': [ [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS} ]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
 PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
-RANGER.proficiencies = {
-        'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS,
-        'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS,
-        'Tools': None
-        }
+RANGER.proficiencies = { 'Armor': LIGHT_ARMOR + MEDIUM_ARMOR + SHIELDS, 'Weapons': SIMPLE_WEAPONS + MARTIAL_WEAPONS, 'Tools': None }
 RANGER.saving_throws = [STR, DEX]
 RANGER.skills = {'Choose 3': [ANIMAL_HANDLING, ATHLETICS, INSIGHT, INVESTIGATION, NATURE, PERCEPTION, STEALTH, SURVIVAL]}
 RANGER.hit_dice = "1d10"
@@ -851,11 +777,7 @@ RANGER.starting_money = ["5d4", 10, gp]
 RANGER.equipment = [ {'Choose 1': [LEATHER_ARMOR, SCALE_MAIL]}, {'Choose 1': [[SHORTSWORD, SHORTSWORD], {'Choose 2': MELEE_SIMPLE_WEAPONS}]}, LONGBOW, QUIVER, ARROWS ] 
 RANGER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
-ROGUE.proficiencies = {
-        'Armor': LIGHT_ARMOR,
-        'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW],
-        'Tools': {'Has': [THIEVES_TOOLS]}
-        }
+ROGUE.proficiencies = { 'Armor': LIGHT_ARMOR, 'Weapons': SIMPLE_WEAPONS + [HAND_CROSSBOW], 'Tools': {'Has': [THIEVES_TOOLS]} }
 ROGUE.saving_throws = [DEX, INT]
 ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDATION, INVESTIGATION, PERCEPTION, PERFORMANCE, PERSUASION, SLEIGHT_OF_HAND, STEALTH]}
 ROGUE.hit_dice = "1d8"
@@ -864,11 +786,7 @@ ROGUE.starting_money = ["4d4", 10, gp]
 ROGUE.equipment = [ {'Choose 1': [RAPIER, SHORTSWORD]}, {'Choose 1': [[SHORTBOW, QUIVER, ARROWS], SHORTSWORD]}, LEATHER_ARMOR, DAGGER, DAGGER, THIEVES_TOOLS ]
 ROGUE.equipment_pack = {'Choose 1': [BURGLURS_PACK, DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
-SORCERER.proficiencies = {
-        'Armor': None,
-        'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW],
-        'Tools': None
-        }
+SORCERER.proficiencies = { 'Armor': None, 'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW], 'Tools': None }
 SORCERER.saving_throws = [CON, CHA]
 SORCERER.skills = {'Choose 2': [ARCANA, DECEPTION, INSIGHT, INTIMIDATION, PERSUASION, RELIGION]}
 SORCERER.hit_dice = "1d6"
@@ -877,11 +795,7 @@ SORCERER.starting_money = ["3d4", 10, gp]
 SORCERER.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER ]
 SORCERER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
 
-WARLOCK.proficiencies = {
-        'Armor': LIGHT_ARMOR,
-        'Weapons': SIMPLE_WEAPONS,
-        'Tools': None
-        }
+WARLOCK.proficiencies = { 'Armor': LIGHT_ARMOR, 'Weapons': SIMPLE_WEAPONS, 'Tools': None }
 WARLOCK.saving_throws = [WIS, CHA]
 WARLOCK.skills = {'Choose 2': [ARCANA, DECEPTION, HISTORY, INTIMIDATION, INVESTIGATION, NATURE, RELIGION]}
 WARLOCK.hit_dice = "1d8"
@@ -890,11 +804,7 @@ WARLOCK.starting_money = ["4d4", 10, gp]
 WARLOCK.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER, LEATHER_ARMOR, {'Choose 1': SIMPLE_WEAPONS} ]
 WARLOCK.equipment_pack = {'Choose 1': [SCHOLARS_PACK, DUNGEONEERS_PACK]}
 
-WIZARD.proficiencies = {
-        'Armor': None,
-        'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW],
-        'Tools': None
-        }
+WIZARD.proficiencies = { 'Armor': None, 'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW], 'Tools': None }
 WIZARD.saving_throws = [INT, WIS]
 WIZARD.skills = {'Choose 2': [ARCANA, HISTORY, INSIGHT, INVESTIGATION, MEDICINE, RELIGION]}
 WIZARD.hit_dice = "1d6"
@@ -1055,27 +965,34 @@ DRAGON_ANCESTORIES = [item for item in RaceMechanic.items if item.category=='Dra
 """
     RACE
 """
-DRAGONBORN = Race("Dragonborn", ab_score=[(STR, 2), (CON, 1)], age=[15, 80], alignment=("None", "Good"), size='Medium', speed=30, languages=[COMMON, DRACONIC] ancestory={'Choose 1': DRAGON_ANCESTORIES}], traits=['Breath Weapon'])
-DWARF = Race("Dwarf", ab_core=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), side='Small', speed=20, languages=[COMMON, DWARVISH])
-ELF = Race("Elf")
-GNOME = Race("Gnome")
-HALFLING = Race("Halfling")
-HALF_ELF = Race("Half-Elf")
-HALF_ORC = Race("Half-Orc")
-HUMAN = Race("Human")
-TIEFLING = Race("Tiefling")
+DRAGONBORN = Race("Dragonborn", ab_score=[(STR, 2), (CON, 1)], age=[15, 80], alignment=("None", "Good"), size='Medium', speed=30, language=[COMMON, DRACONIC], ancestory={'Choose 1': DRAGON_ANCESTORIES}, traits=['Breath Weapon'])
+DWARF = Race("Dwarf", ab_score=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), size='Small', speed=25, language=[COMMON, DWARVISH], racial_prof={'Weapon': [BATTLEAXE, HANDAXE, LIGHT_HAMMER, WARHAMMER], 'Tool': {'Choose 1': [SMITHS_TOOLS, BREWERS_SUPPLIES, MASONS_TOOLS]}})
+ELF = Race("Elf", ab_score=[(DEX, 2)], age=[100, 750], alignment=("Chaotic", "None"), size='Medium', speed=30, language=[COMMON, ELVISH], racial_prof={'Skill': [PERCEPTION]}, darkvision=60, has_subrace=True)
+GNOME = Race("Gnome", ab_score=[(INT, 2)], age=[40, 350], alignment=("None", "Good"), size='Small', speed=25, language=[COMMON, GNOMISH], darkvision=60)
+HALFLING = Race("Halfling", ab_score=[(DEX, 2)], age=[20, 150], alignment=("Lawful", "Good"), size='Small', speed=25, language=[COMMON, HALFLING], has_subrace=True)
+HALF_ELF = Race("Half-Elf", ab_score=[(CHA, 2), {'Choose 2': [STR, DEX, CON, INT, WIS], 'Bonus': 2}], age=[20,180], alignment=('Chaotic', 'None'), size='Medium', speed=30, language=[COMMON, ELVISH, {'Choose 1': [l for l in Language.items if l.name != 'Elvish' or l.name != 'Common']}], darkvision=60, racial_prof={'Skills': {'Choose 2': SKILLS}})
+HALF_ORC = Race("Half-Orc", ab_score=[(STR, 2), (CON, 1)], age=[14,75], alignment=('Chaotic', 'Evil'), size='Medium', speed=30, language=[COMMON, ORC], darkvision=60, racial_prof={'Skill': [INTIMIDATION]})
+HUMAN = Race("Human", ab_score=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,80], alignment=("None", "None"), size='Medium', speed=30, language=[COMMON])
+TIEFLING = Race("Tiefling", ab_score=[(INT, 1), (CHA, 2)], age=[18, 75], alignment=('None', 'Evil'), size='Medium', speed=30, Language=[COMMON, INFERNAL], thaumaturgy_cantrip=True)
 
 """
-    SUBRACE
+    SUB-RACES
 """
-Hill_Dwarf = SUb
+HILL_DWARF = SubRace("Hill_Dwarf", race=DWARF, ab_score=[(WIS, 1)], racial_prof={}, hit_point_increase=1)
+MOUNTAIN_DWARF = SubRace("Mountain_Dwarf", race=DWARF, ab_score=[(STR, 2)], racial_prof={'Armor': [LIGHT_ARMOR, MEDIUM_ARMOR]})
+HIGH_ELF = SubRace("High Elf", race=ELF, ab_score=[(INT, 1)], racial_prof={'Weapon': [LONGSWORD, SHORTSWORD, SHORTBOW, LONGBOW]}, language={'Choose 1': [language for language in Language.items if language not in ELF.language]}, cantrip=True)
+WOOD_ELF = SubRace("Wood Elf", race=ELF, ab_score=[(WIS, 1)], racial_prof={'Weapon': [LONGSWORD, SHORTSWORD, SHORTBOW, LONGBOW]}, speed=35)
+DARK_ELF = SubRace("Dark Elf", race=ELF, ab_score=[(CHA, 1)], darkvision=120, racial_prof={'Weapon': [RAPIER, SHORTSWORD, HAND_CROSSBOW]})
+FOREST_GNOME = SubRace("Forest_Gnome", race=GNOME, ab_score=[(DEX, 1)], racial_prof={}, minor_illusion_cantrip=True)
+ROCK_GNOME = SubRace("Rock_Gnome", race=GNOME, ab_score=[(CON, 1)], racial_prof={'Tool': [TINKERS_TOOLS]})
+LIGHTFOOT_HALFLING = SubRace("Lightfoot_Halfling", race=HALFLING, ab_score=[(CHA, 1)], racial_prof={})
+STOUT_HALFLING = SubRace("Stout_Halfling", race=HALFLING, ab_score=[(CON, 1)], racial_prof={})
 
-RACES = [DRAGONBORN, DWARF, ELF, GNOME, HALFLING, HALF_ELF, HALF_ORC, HUMAN, TIEFLING]
 
 
 
+    
 
-        
 
 if __name__ == "__main__":
     """
