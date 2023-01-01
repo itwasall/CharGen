@@ -8,11 +8,11 @@ import random
         rewrite everything should I ever try and make a character generator for another setting set in 5e
 """
 
-def ProficiencyBonus(level):
+def proficiencyBonus(level):
     return ((level - 1) // 4) + 2
 
-def GetProficiencies(data):
-    def RandomiseProficiencies(data, x):
+def getProficiencies(data):
+    def randomiseProficiencies(data, x):
         proficiencies = []
         while len(proficiencies) < x:
             roll = random.choice(data[f"Choose {x}"])
@@ -24,20 +24,20 @@ def GetProficiencies(data):
     prof_data_keys = data.keys()
     match list(prof_data_keys)[0]:
         case 'Choose 1':
-            return RandomiseProficiencies(data, 1)
+            return randomiseProficiencies(data, 1)
         case 'Choose 2':
-            return RandomiseProficiencies(data, 2)
+            return randomiseProficiencies(data, 2)
         case 'Choose 3':
-            return RandomiseProficiencies(data, 3)
+            return randomiseProficiencies(data, 3)
         case 'Choose 4':
-            return RandomiseProficiencies(data, 4)
+            return randomiseProficiencies(data, 4)
         case 'Has':
             return data['Has']
 
-def GenerateEquipment(data):
-    def UnpackEquipment(data):
+def getEquipment(data):
+    def unpackEquipment(data):
         unpacked_items = []
-        def RollItems(data, amount):
+        def rollItems(data, amount):
             items = []
             while len(items) < amount:
                 roll = random.choice(data)
@@ -46,24 +46,24 @@ def GenerateEquipment(data):
                 items.append(roll)
             return items
 
-        def ChooseHowMany(key, data):
+        def chooseHowMany(key, data):
             match key:
                 case 'Choose 1':
-                    return RollItems(data, 1)
+                    return rollItems(data, 1)
                 case 'Choose 2':
-                    return RollItems(data, 2)
+                    return rollItems(data, 2)
         """
         TODO: Sort out that wack recursion
         """
         for item in data:
             if isinstance(item, dict) and len(item.keys()) == 1:
-                unpacked_dict_value = UnpackEquipment(list(item.values())[0])
-                unpacked_items.append(ChooseHowMany(list(item.keys())[0], unpacked_dict_value))
+                unpacked_dict_value = unpackEquipment(list(item.values())[0])
+                unpacked_items.append(chooseHowMany(list(item.keys())[0], unpacked_dict_value))
             elif isinstance(item, list):
                 for i in item:
                     if isinstance(i, dict) and len(i.keys()) == 1:
-                        unpacked_dict_value = UnpackEquipment(list(i.values())[0])
-                        unpacked_items.append(ChooseHowMany(list(i.keys())[0], unpacked_dict_value))
+                        unpacked_dict_value = unpackEquipment(list(i.values())[0])
+                        unpacked_items.append(chooseHowMany(list(i.keys())[0], unpacked_dict_value))
                     else:
                         unpacked_items.append(i) 
             else:
@@ -71,11 +71,11 @@ def GenerateEquipment(data):
         return unpacked_items
     flatten = lambda *n: (e for a in n for e in (flatten(*a) if isinstance(a, (tuple, list)) else (a,)))    
     """ I stole this lambda from stackoverflow and have no idea how it works but it does, thanks samplebias!"""
-    return list(flatten(UnpackEquipment(data)))
+    return list(flatten(unpackEquipment(data)))
 
 
 
-def MakeItemList(attribute, attr_value=None):
+def makeItemList(attribute, attr_value=None):
     if attr_value == None:
         return [item for item in Item.items if hasattr(item, attribute)]
     else:
@@ -93,6 +93,9 @@ class AbstractBaseClass:
 
     def __format__(self):
         return self.name
+
+    def _getattr(self, attribute):
+        return self.__getattribute__(attribute)
 
 class ABC(AbstractBaseClass):
     def __init__(self, name, **kwargs):
@@ -221,7 +224,7 @@ class Skill(ABC):
 
     def set_proficiency_bonus(self, level: int):
         self.prof = True
-        self.__add__(self, ProficiencyBonus(level))
+        self.__add__(self, proficiencyBonus(level))
 
 class Item(ABC):
     items = []
@@ -268,6 +271,19 @@ WIS = AbilityScore("Wisdom")
 CHA = AbilityScore("Charisma")
 
 STAT_BLOCK = {"STR": STR, "DEX": DEX, "CON": CON, "INT": INT, "WIS": WIS, "CHA": CHA}
+
+"""
+    ALIGNMENTS
+"""
+LAWFUL_GOOD = Alignment("Lawful", "Good")
+LAWFUL_NEUTRAL = Alignment("Lawful", "Neutral")
+LAWFUL_EVIL = Alignment("Lawful", "Evil")
+NEUTRAL_GOOD = Alignment("Neutral", "Good")
+NEUTRAL_NEUTRAL = Alignment("Neutral", "Neutral")
+NEUTRAL_EVIL = Alignment("Neutral", "Evil")
+CHAOTIC_GOOD = Alignment("Chaotic", "Good")
+CHAOTIC_NEUTRAL = Alignment("Chaotic", "Neutral")
+CHAOTIC_EVIL = Alignment("Chaotic", "Evil")
 
 """
     MONEY
@@ -360,8 +376,8 @@ ROWBOAT = Vehicle("Rowboat", cost=[50, gp], vehicle_type='Water')
 SAILING_SHIP = Vehicle("Sailing Ship", cost=[10_000, gp], vehicle_type='Water')
 WARSHIP = Vehicle("Warship", cost=[25_000, gp], vehicle_type='Water')
 
-LAND_VEHICLES = MakeItemList("vehicle_type", "Land")
-WATER_VEHICLES = MakeItemList("vehicle_type", "Water")
+LAND_VEHICLES = makeItemList("vehicle_type", "Land")
+WATER_VEHICLES = makeItemList("vehicle_type", "Water")
 
 """
     WEAPONS
@@ -408,11 +424,11 @@ HEAVY_CROSSBOW = Weapon("Heavy Crossbow", cost=[50, gp], wpn_type='Martial', is_
 LONGBOW = Weapon("Longbow", cost=[50, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 NET = Weapon("Net", cost=[1, gp], wpn_type='Martial', is_melee=False, category='Weapon')
 
-SIMPLE_WEAPONS = MakeItemList("wpn_type", "Simple")
+SIMPLE_WEAPONS = makeItemList("wpn_type", "Simple")
 MELEE_SIMPLE_WEAPONS = [wpn for wpn in SIMPLE_WEAPONS if wpn.is_melee == True]
 RANGED_SIMPLE_WEAPONS = [wpn for wpn in SIMPLE_WEAPONS if wpn.is_melee == False]
 
-MARTIAL_WEAPONS = MakeItemList("wpn_type", "Martial")
+MARTIAL_WEAPONS = makeItemList("wpn_type", "Martial")
 MELEE_MARTIAL_WEAPONS = [wpn for wpn in MARTIAL_WEAPONS if wpn.is_melee == True]
 RANGED_MARTIAL_WEAPONS = [wpn for wpn in MARTIAL_WEAPONS if wpn.is_melee == False]
 
@@ -437,10 +453,10 @@ PLATE = Armor("Plate", cost=[1500, gp], arm_type='Heavy', ac=[18, None], categor
 # SHIELD
 SHIELD = Armor("Shield", cost=[10, gp], arm_type='Shield', ac=[2, None], category='Armor')
 
-LIGHT_ARMOR = MakeItemList("arm_type", "Light")
-MEDIUM_ARMOR = MakeItemList("arm_type", "Medium")
-HEAVY_ARMOR = MakeItemList("arm_type", "Heavy")
-SHIELDS = MakeItemList("arm_type", "Shield")
+LIGHT_ARMOR = makeItemList("arm_type", "Light")
+MEDIUM_ARMOR = makeItemList("arm_type", "Medium")
+HEAVY_ARMOR = makeItemList("arm_type", "Heavy")
+SHIELDS = makeItemList("arm_type", "Shield")
 ALL_ARMOR = LIGHT_ARMOR + MEDIUM_ARMOR + HEAVY_ARMOR
 
 """
@@ -550,9 +566,9 @@ AMULET = Item("Amulet", cost=[5, gp], holy_symbol=True, category="Adventuring Ge
 EMBLEM = Item("Emblem", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
 RELIQUARY = Item("Reliquary", cost=[5, gp], holy_symbol=True, category="Adventuring Gear")
 # ITEM LISTS
-ARCANE_FOCUS = MakeItemList("arcane_focus")
-DRUIDIC_FOCUS = MakeItemList("druidic_focus")
-HOLY_SYMBOL = MakeItemList("holy_symbol")
+ARCANE_FOCUS = makeItemList("arcane_focus")
+DRUIDIC_FOCUS = makeItemList("druidic_focus")
+HOLY_SYMBOL = makeItemList("holy_symbol")
 
 """
     TOOLS
@@ -597,10 +613,10 @@ PAN_FLUTE = Tool("Pan Flute", cost=[12, gp], tool_type='Instrument', category="T
 SHAWM = Tool("Shawm", cost=[2, gp], tool_type='Instrument', category="Tool")
 VIOL = Tool("Viol", cost=[30, gp], tool_type='Instrument', category="Tool")
 # TOOL LISTS
-ARTISAN_TOOLS = MakeItemList("tool_type", "Artisan")
-MUSICAL_INSTRUMENT = MakeItemList("tool_type", "Instrument")
-GAMING_TOOLS = MakeItemList("tool_type", "Gaming")
-TOOLS = MakeItemList("category", "Tool")
+ARTISAN_TOOLS = makeItemList("tool_type", "Artisan")
+MUSICAL_INSTRUMENT = makeItemList("tool_type", "Instrument")
+GAMING_TOOLS = makeItemList("tool_type", "Gaming")
+TOOLS = makeItemList("category", "Tool")
 
 """
     MISC ITEMS
@@ -623,14 +639,14 @@ STOPPERED_BOTTLES = Item("Stoppered Bottles", background='Charlatan')
 WEIGHTED_DICE = Item("Weighted Dice", background='Charlatan')
 DECK_OF_MARKED_CARDS = Item("Deck of Marked Cards", background='Charlatan')
 SIGNET_RING_OF_IMAGINARY_DUKE = Item("Signet Ring of Imaginary Duke", background='Charlatan')
-CHARLATAN_ITEMS = MakeItemList("background", "Charlatan")
+CHARLATAN_ITEMS = makeItemList("background", "Charlatan")
 # Criminal
 DARK_HOOD = Item("Dark Hood", background='Criminal')
 # Entertainer
 LOVE_LETTER = Item("Love Letter", background='Entertainer')
 LOCK_OF_HAIR = Item("Lock of Hair", background='Entertainer')
 ADMIRER_TRINKET = Item("Admirer Trinket", background='Entertainer')
-ENTERTAINER_ITEMS = MakeItemList("background", 'Entertainer')
+ENTERTAINER_ITEMS = makeItemList("background", 'Entertainer')
 # GUILD_ARTISAN
 LETTER_OF_INTRODUCTION = Item("Letter of Introduction", background='Guild Artisan')
 # NOBLE
@@ -968,15 +984,16 @@ DRAGON_ANCESTORIES = [item for item in RaceMechanic.items if item.category=='Dra
 DRAGONBORN = Race("Dragonborn", ab_score=[(STR, 2), (CON, 1)], age=[15, 80], alignment=("None", "Good"), size='Medium', speed=30, language=[COMMON, DRACONIC], ancestory={'Choose 1': DRAGON_ANCESTORIES}, traits=['Breath Weapon'])
 DWARF = Race("Dwarf", ab_score=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), size='Small', speed=25, language=[COMMON, DWARVISH], racial_prof={'Weapon': [BATTLEAXE, HANDAXE, LIGHT_HAMMER, WARHAMMER], 'Tool': {'Choose 1': [SMITHS_TOOLS, BREWERS_SUPPLIES, MASONS_TOOLS]}})
 ELF = Race("Elf", ab_score=[(DEX, 2)], age=[100, 750], alignment=("Chaotic", "None"), size='Medium', speed=30, language=[COMMON, ELVISH], racial_prof={'Skill': [PERCEPTION]}, darkvision=60, has_subrace=True)
-GNOME = Race("Gnome", ab_score=[(INT, 2)], age=[40, 350], alignment=("None", "Good"), size='Small', speed=25, language=[COMMON, GNOMISH], darkvision=60)
+GNOME = Race("Gnome", ab_score=[(INT, 2)], age=[40, 350], alignment=("None", "Good"), size='Small', speed=25, language=[COMMON, GNOMISH], darkvision=60, has_subrace=True)
 HALFLING = Race("Halfling", ab_score=[(DEX, 2)], age=[20, 150], alignment=("Lawful", "Good"), size='Small', speed=25, language=[COMMON, HALFLING], has_subrace=True)
 HALF_ELF = Race("Half-Elf", ab_score=[(CHA, 2), {'Choose 2': [STR, DEX, CON, INT, WIS], 'Bonus': 2}], age=[20,180], alignment=('Chaotic', 'None'), size='Medium', speed=30, language=[COMMON, ELVISH, {'Choose 1': [l for l in Language.items if l.name != 'Elvish' or l.name != 'Common']}], darkvision=60, racial_prof={'Skills': {'Choose 2': SKILLS}})
 HALF_ORC = Race("Half-Orc", ab_score=[(STR, 2), (CON, 1)], age=[14,75], alignment=('Chaotic', 'Evil'), size='Medium', speed=30, language=[COMMON, ORC], darkvision=60, racial_prof={'Skill': [INTIMIDATION]})
 HUMAN = Race("Human", ab_score=[(STR, 1), (DEX, 1), (CON, 1), (INT, 1), (WIS, 1), (CHA, 1)], age=[18,80], alignment=("None", "None"), size='Medium', speed=30, language=[COMMON])
 TIEFLING = Race("Tiefling", ab_score=[(INT, 1), (CHA, 2)], age=[18, 75], alignment=('None', 'Evil'), size='Medium', speed=30, Language=[COMMON, INFERNAL], thaumaturgy_cantrip=True)
+RACES = [DRAGONBORN, DWARF, ELF, GNOME, HALFLING, HALF_ELF, HALF_ORC, HUMAN, TIEFLING]
 
 """
-    SUB-RACES
+    SUB RACES
 """
 HILL_DWARF = SubRace("Hill_Dwarf", race=DWARF, ab_score=[(WIS, 1)], racial_prof={}, hit_point_increase=1)
 MOUNTAIN_DWARF = SubRace("Mountain_Dwarf", race=DWARF, ab_score=[(STR, 2)], racial_prof={'Armor': [LIGHT_ARMOR, MEDIUM_ARMOR]})
@@ -987,6 +1004,8 @@ FOREST_GNOME = SubRace("Forest_Gnome", race=GNOME, ab_score=[(DEX, 1)], racial_p
 ROCK_GNOME = SubRace("Rock_Gnome", race=GNOME, ab_score=[(CON, 1)], racial_prof={'Tool': [TINKERS_TOOLS]})
 LIGHTFOOT_HALFLING = SubRace("Lightfoot_Halfling", race=HALFLING, ab_score=[(CHA, 1)], racial_prof={})
 STOUT_HALFLING = SubRace("Stout_Halfling", race=HALFLING, ab_score=[(CON, 1)], racial_prof={})
+SUBRACES=[HILL_DWARF, MOUNTAIN_DWARF, HIGH_ELF, WOOD_ELF, DARK_ELF, FOREST_GNOME, ROCK_GNOME, LIGHTFOOT_HALFLING, STOUT_HALFLING]
+
 
 
 
@@ -1024,7 +1043,7 @@ if __name__ == "__main__":
         
 
     roll_class = MONK 
-    tool_prof = GetProficiencies(roll_class.proficiencies['Tools'])
+    tool_prof = getProficiencies(roll_class.proficiencies['Tools'])
     for __class in CLASSES:
         print(__class)
-        print(GenerateEquipment(__class.equipment))
+        print(getEquipment(__class.equipment))

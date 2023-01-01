@@ -4,87 +4,47 @@ import char_dnd_5e_core as Core
 
 
 class PartyMember:
-    def __init__(
-            self,
-            name: str = None,
-            race: Core.Race = None,
-            subRace: Core.SubRace = None,
-            _class: Core._Class = None,
-            _subClass: Core._SubClass = None,
-            STR: Core.STR = None,
-            DEX: Core.DEX = None,
-            CON: Core.CON = None,
-            INT: Core.INT = None,
-            WIS: Core.WIS = None,
-            CHA: Core.CHA = None,
-            athletics: Core.ATHLETICS= None,
-            acrobatics: Core.ACROBATICS= None,
-            sleight_of_Hand: Core.SLEIGHT_OF_HAND = None,
-            stealth: Core.STEALTH = None,
-            arcana: Core.ARCANA = None,
-            history: Core.HISTORY = None,
-            investigation: Core.INVESTIGATION = None,
-            nature: Core.NATURE = None,
-            religion: Core.RELIGION = None,
-            animal_Handling: Core.ANIMAL_HANDLING = None,
-            insight: Core.INSIGHT = None,
-            medicine: Core.MEDICINE = None,
-            perception: Core.PERCEPTION = None,
-            survival: Core.SURVIVAL = None,
-            deception: Core.DECEPTION = None,
-            intimidation: Core.INTIMIDATION = None,
-            performance: Core.PERFORMANCE = None,
-            persuasion: Core.PERSUASION = None,
-            money = None,
-            languages = None,
-            weapon_Proficiences = None,
-            armor_Proficiences = None,
-            tool_Proficiences = None,
-            equipment = None,
-            **kwargs
-            ):
+    def __init__( self, name: str = None, **kwargs):
         """ Macro Character Stuff """
         self.name = name
-        self.race = race
-        self.subrace = subRace
-        self._class = _class
-        self._subclass = _subClass
-        self.languages = languages
+        self.race = Core.DEFAULT_RACE
+        self.subrace = None
+        self._class = Core.DEFAULT_CLASS
+        self._subclass = None
+        self.languages = [Core.DEFAULT_LANGUAGE]
         """ Ability Scores """
-        self.STR = STR
-        self.DEX = DEX
-        self.CON = CON
-        self.INT = INT
-        self.WIS = WIS
-        self.CHA = CHA
+        self.STR = Core.STR
+        self.DEX = Core.DEX
+        self.CON = Core.CON
+        self.INT = Core.INT
+        self.WIS = Core.WIS
+        self.CHA = Core.CHA
         """ Skills """
         # STR
-        self.athletics = athletics
+        self.athletics = Core.ATHLETICS
         # DEX
-        self.acrobatics = acrobatics
-        self.sleight_of_hand = sleight_of_Hand
-        self.stealth = stealth
+        self.acrobatics = Core.ACROBATICS
+        self.sleight_of_hand = Core.SLEIGHT_OF_HAND
+        self.stealth = Core.STEALTH
         # INT
-        self.arcana = arcana
-        self.history = history
-        self.investigation = investigation
-        self.nature = nature
-        self.religion = religion
+        self.arcana = Core.ARCANA
+        self.history = Core.HISTORY
+        self.investigation = Core.INVESTIGATION
+        self.nature = Core.NATURE
+        self.religion = Core.RELIGION
         # WIS
-        self.animal_handling = animal_Handling
-        self.insight = insight
-        self.medicine = medicine
-        self.perception = perception
-        self.survival = survival
+        self.animal_handling = Core.ANIMAL_HANDLING
+        self.insight = Core.INSIGHT
+        self.medicine = Core.MEDICINE
+        self.perception = Core.PERCEPTION
+        self.survival = Core.SURVIVAL
         # CHA
-        self.deception = deception
-        self.intimidation = intimidation
-        self.performance = performance
-        self.persuasion = persuasion
+        self.deception = Core.DECEPTION
+        self.intimidation = Core.INTIMIDATION
+        self.performance = Core.PERFORMANCE
+        self.persuasion = Core.PERSUASION
         """ Equipment & Proficiencies """
-        self.weapon_proficiences = weapon_Proficiences
-        self.armor_proficiences = armor_Proficiences
-        self.tool_proficiences = tool_Proficiences
+        self.proficiencies = {'Weapon': [], 'Armor': [], 'Tool': []}
         """ Combat Stats """
         self.AC = 0
         self.initiative = 0
@@ -92,8 +52,8 @@ class PartyMember:
         self.hit_points = 0
         self.current_hit_points = 0
         """ Possessions """
-        self.money = money
-        self.equipment = equipment 
+        self.money = { Core.cp: 0, Core.sp: 0, Core.ep: 0, Core.gp: 0, Core.pp: 0 }
+        self.equipment = []
 
 
         for k, d in kwargs.items():
@@ -105,7 +65,10 @@ class PartyMember:
     def __format__(self):
         return self.name
 
-def dice_roll(dicestring, summed=True):
+global CHARACTER
+CHARACTER = PartyMember('Jeff')
+
+def diceRoll(dicestring, summed=True):
     throws, sides = dicestring.split("d")
     if summed:
         return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
@@ -114,33 +77,82 @@ def dice_roll(dicestring, summed=True):
         rolls.sort()
         return rolls
 
-def gen_character():
-    AbilityScore_Rolls = []
-    for _ in range(6):
-        rolls = dice_roll("4d6", summed=False)
-        rolls.sort()
-        rolls.reverse()
-        rolls.pop()
-        AbilityScore_Rolls.append(rolls)
+def sortReverse(l: list):
+    l.sort()
+    l.reverse()
+    return l
+
+def attrAsDict(_class):
+    return [{i: _class._getattr(i)} for i in dir(_class) if not i.startswith("__")]
+
+def genAlignment(weights: tuple):
+    is_weight_a = random.randint(0, 100)
+    if is_weight_a > 30 and isinstance(weights[0], str) and weights[0] != 'None':
+        alignment_a = weights[0]
+    else:
+        alignment_a = random.choice(['Lawful', 'Chaotic', 'Neutral'])
+    is_weight_b = random.randint(0, 100)
+    if is_weight_b > 30 and isinstance(weights[1], str) and weights[1] != 'None':
+        alignment_b = weights[1]
+    else:
+        alignment_b = random.choice(['Good', 'Evil', 'Neutral'])
+    return Core.Alignment(alignment_a, alignment_b)
+
+
+def genRace():
+    char_race = random.choice(Core.RACES)
+
+    char_race_attributes = attrAsDict(char_race)
     
-    AbilityScore_Rolls.sort()
-    CHAR_CLASS = random.choice(Core.CLASSES)
-    print(CHAR_CLASS)
-    CHAR_STR, CHAR_DEX, CHAR_CON, CHAR_INT, CHAR_WIS, CHAR_CHA = Core.STR, Core.DEX, Core.CON, Core.INT, Core.WIS, Core.CHA
-    ABILITY_SCORES = [CHAR_STR, CHAR_DEX, CHAR_CON, CHAR_INT, CHAR_WIS, CHAR_CHA]
-    CHAR_ABILITY_SCORES = []
-    for abilityScore in ABILITY_SCORES:
-        if abilityScore in CHAR_CLASS.saving_throws:
-            ABILITY_SCORES.pop(ABILITY_SCORES.index(abilityScore))
-            CHAR_ABILITY_SCORES.append(abilityScore)
-    random.shuffle(CHAR_ABILITY_SCORES)
-    random.shuffle(ABILITY_SCORES)
-    for abilityScore in ABILITY_SCORES:
-        CHAR_ABILITY_SCORES.append(abilityScore)
-    for idx, value in enumerate(AbilityScore_Rolls):
-        CHAR_ABILITY_SCORES[idx] = value
+    for attr in char_race_attributes:
+        match list(attr.keys())[0]:
+            case '_getattr':
+                char_race_attributes.pop(char_race_attributes.index(attr))
+            case 'has_subrace':
+                char_race_attributes.pop(char_race_attributes.index(attr))
+                char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
+            case 'alignment':
+                char_race_attributes.pop(char_race_attributes.index(attr))
+                print("yes alignment")
+                char_alignment = genAlignment(attr['alignment'])
+            case 'age':
+                char_race_attributes.pop(char_race_attributes.index(attr))
+                char_age = random.randint(attr['age'][0], attr['age'][1])
+            case 'size':
+                char_race_attributes.pop(char_race_attributes.index(attr))
+                char_size = attr['size']
+            case _:
+                char_subrace = None
+                char_alignment = genAlignment((False, False))
+                char_size = "SIZE NOT FOUND"
+    print(char_race, char_subrace, char_age)
+    print(char_race_attributes)
+    print(char_alignment)
+    print(char_size)
 
-            
-    print(CHAR_ABILITY_SCORES)
 
-print(gen_character())
+
+def genCharacter():
+
+    ability_score_rolls = []
+    for _ in range(6):
+        rolls = diceRoll("4d6", summed=False)
+        sortReverse(rolls)
+        rolls.pop()
+        ability_score_rolls.append(rolls)
+    
+    ability_score_rolls.sort()
+
+    genRace()
+
+    char_race = random.choice(Core.RACES)
+    if hasattr(char_race, "has_subrace"):
+        char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
+    else:
+        char_subrace = None
+
+#    print(char_race, char_subrace)
+    char_class = random.choice(Core.CLASSES)
+
+
+print(genCharacter())
