@@ -236,6 +236,19 @@ class Skill(ABC):
         self.prof = True
         self.__add__(self, proficiencyBonus(level))
 
+class Spell(ABC):
+    items = []
+    def __init__(self, name, level: int, _class: _Class, **kwargs):
+        super().__init__(name, **kwargs)
+        self.level = level
+        if self.level == 0:
+            self.cantrip = True
+        else:
+            self.cantrip = False
+        self._class = _class
+        Spell.items.append(self)
+
+
 class Item(ABC):
     items = []
     def __init__(self, name, **kwargs):
@@ -332,6 +345,49 @@ PERFORMANCE = Skill("Performance", ab_score=CHA)
 PERSUASION = Skill("Persuasion", ab_score=CHA)
 
 SKILLS = [ATHLETICS, ACROBATICS, SLEIGHT_OF_HAND, STEALTH, ARCANA, HISTORY, INVESTIGATION, NATURE, RELIGION, ANIMAL_HANDLING, INSIGHT, MEDICINE, PERCEPTION, SURVIVAL, DECEPTION, INTIMIDATION, PERFORMANCE, PERSUASION]
+
+"""
+    SPELLS & CANTRIPS
+"""
+# BARD CANTRIPS
+BARD_BLADE_WARD = Spell("Blade_Ward", level=0, _class=BARD)
+BARD_DANCING_LIGHTS = Spell("Dancing_Lights", level=0, _class=BARD)
+BARD_FRIENDS = Spell("Friends", level=0, _class=BARD)
+BARD_LIGHT = Spell("Light", level=0, _class=BARD)
+BARD_MAGE_HAND = Spell("Mage_Hand", level=0, _class=BARD)
+BARD_MENDING = Spell("Mending", level=0, _class=BARD)
+BARD_MESSAGE = Spell("Message", level=0, _class=BARD)
+BARD_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class=BARD)
+BARD_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class=BARD)
+BARD_TRUE_STRIKE = Spell("True_Strike", level=0, _class=BARD)
+BARD_VICIOUS_MOCKERY = Spell("Vicious_Mockery", level=0, _class=BARD)
+# BARD 1ST LEVEL
+BARD_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class=BARD)
+BARD_BANE = Spell("Bane", level=1, _class=BARD)
+BARD_CHARM_PERSON = Spell("Charm_Person", level=1, _class=BARD)
+BARD_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class=BARD)
+BARD_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class=BARD)
+BARD_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=BARD)
+BARD_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class=BARD)
+BARD_DISSONANT_WHISPERS = Spell("Dissonant_Whispers", level=1, _class=BARD)
+BARD_FAERIE_FIRE = Spell("Faerie_Fire", level=1, _class=BARD)
+BARD_FEATHER_FALL = Spell("Feather_Fall", level=1, _class=BARD)
+BARD_HEALING_WORD = Spell("Healing_Word", level=1, _class=BARD)
+BARD_HEROISM = Spell("Heroism", level=1, _class=BARD)
+BARD_IDENTIFY = Spell("Identify", level=1, _class=BARD)
+BARD_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class=BARD)
+BARD_LONGSTRIDER = Spell("Longstrider", level=1, _class=BARD)
+BARD_SILENT_IMAGE = Spell("Silent_Image", level=1, _class=BARD)
+BARD_SLEEP = Spell("Sleep", level=1, _class=BARD)
+BARD_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class=BARD)
+BARD_TASHAS_HIDEOUS_LAUGHTER = Spell("Tashas_Hideous_Laughter", level=1, _class=BARD)
+BARD_THUNDERWAVE = Spell("Thunderwave", level=1, _class=BARD)
+BARD_UNSEEN_SERVENT = Spell("Unseen_Servent", level=1, _class=BARD)
+# BARD LISTS
+BARD_CANTRIPS = [item for item in Spell.items if item.level==0 and item._class==BARD]
+BARD_FIRST_LEVEL = [item for item in Spell.items if item.level==1 and item._class==BARD]
+
+
 
 """
     LANGUAGES
@@ -757,6 +813,9 @@ BARD.initial_health = [8, CON.modifier]
 BARD.starting_money = ["5d4", 10, gp]
 BARD.equipment = [ {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [LUTE, {'Choose 1': MUSICAL_INSTRUMENT}]}, LEATHER_ARMOR, DAGGER ]
 BARD.equipment_pack = {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
+BARD.cantrips = {'Choose 2': []}
+BARD.spell_slots = {'1st Level': {'Choose 2': []}}
+BARD.spells = {'Choose 4': []}
 
 CLERIC.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE_WEAPONS_PROF], 'Tools': None }
 CLERIC.saving_throws = [WIS, CHA]
@@ -766,6 +825,8 @@ CLERIC.initial_health = [8, CON.modifier]
 CLERIC.starting_money = ["5d4", 10, gp]
 CLERIC.equipment = [ {'Choose 1': [MACE, WARHAMMER]}, {'Choose 1': [SCALE_MAIL, LEATHER_ARMOR, CHAIN_MAIL]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, SHIELD, {'Choose 1': HOLY_SYMBOL} ]
 CLERIC.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
+CLERIC.cantrips = {'Choose 3': []}
+CLERIC.spells = {'1st Level': {'Choose 2': []}
 
 DRUID.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS], 'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR], 'Tools': {'Has': [HERBALISM_KIT]} }
 DRUID.saving_throws = [INT, WIS]
@@ -775,6 +836,8 @@ DRUID.initial_health = [8, CON.modifier]
 DRUID.starting_money = ["2d4", 10, gp]
 DRUID.equipment = [ {'Choose 1': [SHIELD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [SCIMITAR, {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, LEATHER_ARMOR, {'Choose 1': DRUIDIC_FOCUS} ]
 DRUID.equipment_pack = EXPLORERS_PACK
+DRUID.cantrips = {'Choose 2': []}
+DRUID.spells = {'1st Level': {'Choose 2': []}}
 
 FIGHTER.proficiencies = { 'Armor': [ALL_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE_WEAPONS_PROF, MARTIAL_WEAPONS_PROF], 'Tools': None }
 FIGHTER.saving_throws = [STR, CON]
@@ -829,6 +892,9 @@ SORCERER.initial_health = [6, CON.modifier]
 SORCERER.starting_money = ["3d4", 10, gp]
 SORCERER.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER ]
 SORCERER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
+SORCERER.cantrips = {'Choose 4' []:}
+SORCERER.spells = {'1st Level': {'Choose 2': []}}
+SORCERER.spell_slots = {'1st Level': {'Choose 2': []}}
 
 WARLOCK.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF], 'Weapons': [SIMPLE_WEAPONS_PROF], 'Tools': None }
 WARLOCK.saving_throws = [WIS, CHA]
@@ -838,6 +904,9 @@ WARLOCK.initial_health = [8, CON.modifier]
 WARLOCK.starting_money = ["4d4", 10, gp]
 WARLOCK.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER, LEATHER_ARMOR, {'Choose 1': SIMPLE_WEAPONS} ]
 WARLOCK.equipment_pack = {'Choose 1': [SCHOLARS_PACK, DUNGEONEERS_PACK]}
+WARLOCK.cantrips = {'Choose 2' []:}
+WARLOCK.spells = {'1st Level': {'Choose 2': []}}
+WARLOCK.spell_slots = {'1st Level': {'Choose 1': []}}
 
 WIZARD.proficiencies = { 'Armor': None, 'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW], 'Tools': None }
 WIZARD.saving_throws = [INT, WIS]
@@ -847,6 +916,9 @@ WIZARD.initial_health = [6, CON.modifier]
 WIZARD.starting_money = ["4d4", 10, gp]
 WIZARD.equipment = [ {'Choose 1': [QUARTERSTAFF, DAGGER]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, SPELLBOOK ]
 WIZARD.equipment_pack = {'Choose 1': [SCHOLARS_PACK, EXPLORERS_PACK]}
+WIZARD.cantrips = {'Choose 3' []:}
+WIZARD.spells = {'1st Level': {'Choose 2': []}}
+WIZARD.spellbook = {'1st Level': {'Choose 6': []}}
 
 CLASSES = [BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
 
@@ -1024,13 +1096,6 @@ ROCK_GNOME = SubRace("Rock_Gnome", race=GNOME, ab_score=[(CON, 1)], racial_prof=
 LIGHTFOOT_HALFLING = SubRace("Lightfoot_Halfling", race=HALFLING, ab_score=[(CHA, 1)], racial_prof={})
 STOUT_HALFLING = SubRace("Stout_Halfling", race=HALFLING, ab_score=[(CON, 1)], racial_prof={})
 SUBRACES=[HILL_DWARF, MOUNTAIN_DWARF, HIGH_ELF, WOOD_ELF, DARK_ELF, FOREST_GNOME, ROCK_GNOME, LIGHTFOOT_HALFLING, STOUT_HALFLING]
-
-
-
-
-
-    
-
 
 if __name__ == "__main__":
     """
