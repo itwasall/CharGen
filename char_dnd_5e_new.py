@@ -22,6 +22,7 @@ class PartyMember:
         self.subrace = None
         self._class = Core.DEFAULT_CLASS
         self._subclass = None
+        self.level = 1
         self.languages = [Core.DEFAULT_LANGUAGE]
         """ Ability Scores """
         self.STR = Core.STR
@@ -31,29 +32,31 @@ class PartyMember:
         self.WIS = Core.WIS
         self.CHA = Core.CHA
         """ Skills """
-        # STR
-        self.athletics = Core.ATHLETICS
-        # DEX
-        self.acrobatics = Core.ACROBATICS
-        self.sleight_of_hand = Core.SLEIGHT_OF_HAND
-        self.stealth = Core.STEALTH
-        # INT
-        self.arcana = Core.ARCANA
-        self.history = Core.HISTORY
-        self.investigation = Core.INVESTIGATION
-        self.nature = Core.NATURE
-        self.religion = Core.RELIGION
-        # WIS
-        self.animal_handling = Core.ANIMAL_HANDLING
-        self.insight = Core.INSIGHT
-        self.medicine = Core.MEDICINE
-        self.perception = Core.PERCEPTION
-        self.survival = Core.SURVIVAL
-        # CHA
-        self.deception = Core.DECEPTION
-        self.intimidation = Core.INTIMIDATION
-        self.performance = Core.PERFORMANCE
-        self.persuasion = Core.PERSUASION
+        self.SKILLS = {
+            # STR
+            'Athletics': Core.ATHLETICS,
+            # DEX
+            'Acrobatics': Core.ACROBATICS,
+            'Sleight of Hand': Core.SLEIGHT_OF_HAND,
+            'Stealth': Core.STEALTH,
+            # INT
+            'Arcana': Core.ARCANA,
+            'History': Core.HISTORY,
+            'Investigation': Core.INVESTIGATION,
+            'Nature': Core.NATURE,
+            'Religion': Core.RELIGION,
+            # WIS
+            'Animal Handling': Core.ANIMAL_HANDLING,
+            'Insight': Core.INSIGHT,
+            'Medicine': Core.MEDICINE,
+            'Perception': Core.PERCEPTION,
+            'Survival': Core.SURVIVAL,
+            # CHA
+            'Deception': Core.DECEPTION,
+            'Intimidation': Core.INTIMIDATION,
+            'Performance': Core.PERFORMANCE,
+            'Persuasion': Core.PERSUASION
+        }
         """ Equipment & Proficiencies """
         self.proficiencies = {'Weapon': [], 'Armor': [], 'Tool': []}
         """ Combat Stats """
@@ -62,8 +65,15 @@ class PartyMember:
         self.speed = 0
         self.hit_points = 0
         self.current_hit_points = 0
+        """ Magic """
+        self.cantrips = []
+        self.spells = {'1st Level': []}
+        self.spell_slots = {'1st Level': []}
+        self.spell_save_dc = 0
+        self.spell_attack_modifier = 0
+        self.spellcasting_ability_score = None
         """ Possessions """
-        self.money = { Core.cp: 0, Core.sp: 0, Core.ep: 0, Core.gp: 0, Core.pp: 0 }
+        self.money = 0
         self.equipment = []
 
 
@@ -96,8 +106,8 @@ def sortReverse(l: list):
 def attrAsDict(_class):
     return [{i: _class._getattr(i)} for i in dir(_class) if not i.startswith("__")]
 
-def unpackChoice(data: dict, dupes_allowed=False):
-    def getRandomChoice(value: list, amt: int, dupes_allowed=False):
+def unpackChoice(data: dict, dupes_allowed=False) -> list:
+    def getRandomChoice(value: list, amt: int, dupes_allowed=False) -> list:
         chosen_values = []
         if dupes_allowed:
             chosen_values = [random.choice(value) for _ in range(amt)]
@@ -121,6 +131,10 @@ def unpackChoice(data: dict, dupes_allowed=False):
         case 'Choose 3':
             unpacked_choice = getRandomChoice(data[data_keys[0]], 3)
         case 'Choose 4':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 4)
+        case 'Choose 5':
+            unpacked_choice = getRandomChoice(data[data_keys[0]], 4)
+        case 'Choose 6':
             unpacked_choice = getRandomChoice(data[data_keys[0]], 4)
         case 'Has':
             unpacked_choice = data[data_keys[0]]
@@ -178,35 +192,93 @@ def genRaceAttributeBonus(data):
             print(unpacked_item)
             raiseAbilityScore(unpackChoice(item)[0])
 
+def genSpells(spells = None, spell_slots = None, _class = None):
+    # Druid exception (the first one like 1600 lines in :c )
+    #   Druid spell slots = The greater of (WIS Mod + Character Level || 1)
+    if _class != None and _class.name == "Druid":
+        druid_spells_amount = CHARACTER.WIS.modifier + CHARACTER.level
+        if druid_spells_amount < 1:
+            druid_spells_amount = 1
+        _class.spells['1st Level'] = {f"Choose {druid_spells_amount}": _class.spells['1st Level']}
+
+    if spells != None and len(CHARACTER.spells) == 0:
+        return unpackChoice(spells['1st level'])
+    if spell_slots != None:
+        # Because god has cursed me for my hubris, '_' is apparently alphabettically ahead
+        #   of 's', meaning the 'spell_' of 'spell_slots' will be dealt with before
+        #   'spells'. Can't allocated spells to spell slots if you've no spells to do so
+        #   with, so hurry, more shitey code : ) 
+        if len(CHARACTER.spells['1st Level']) == 0:
+            if isinstance(_class.spells['1st Level'], dict):
+                CHARACTER.spells = unpackChoice(_class.spells['1st Level'])
+            elif isinstance(_class.spells['1st Level'], list):
+                CHARACTER.spells = _class.spells['1st Level']
+        return [random.choice(CHARACTER.spells) for _ in range(spell_slots)]
+
+
+
+def genSpellbook():
+    spellbook_spells_pool = [spell for spell in Core.WIZARD_FIRST_LEVEL if spell not in CHARACTER.spells]
+    return unpackChoice({'Choose 6': spellbook_spells_pool})
+
+def genSkills(_class):
+    skills = unpackChoice(_class.skills)
+    for skill in skills:
+        CHARACTER.SKILLS[skill.name].prof = True
+
 def genClass():
     char_class = random.choice(CLASSES)
+    print(char_class.name)
 
     char_class_attributes = attrAsDict(char_class)
     attributes_generated = []
 
     for attr in char_class_attributes:
         match list(attr.keys())[0]:
-            case '_getattr':
-                attributes_generated.append('_getattr')
-            case 'items':
-                attributes_generated.append('items')
             case 'proficiencies':
                 attributes_generated.append('proficiencies')
             case 'saving_throws':
                 attributes_generated.append('saving_throws')
             case 'skills':
                 attributes_generated.append('skills')
+                genSkills(char_class)
+                
             case 'hit_dice':
                 attributes_generated.append('hit_dice')
+                CHARACTER.hit_dice = attr['hit_dice']
             case 'initial_health':
                 attributes_generated.append('initial_heath')
+                CHARACTER.hit_points = attr['initial_health'] + CHARACTER.CON.modifier
             case 'starting_money':
                 attributes_generated.append('starting_money')
+                CHARACTER.money += diceRoll(attr['starting_money'][0]) + attr['starting_money'][1]
             case 'equipment':
                 attributes_generated.append('equipment')
-                attributes_generated.append('equipment_pack')
+                CHARACTER.equipment += Core.getEquipment(attr['equipment'])
             case 'equipment_pack':
-                pass
+                attributes_generated.append('equipment_pack')
+                if isinstance(attr['equipment_pack'], list):
+                    CHARACTER.equipment += attr['equipment_pack']
+                elif isinstance(attr['equipment_pack'], list):
+                    CHARACTER.equipment += unpackChoice(attr['equipment_pack'])
+            case 'cantrips':
+                attributes_generated.append('cantrips')
+                CHARACTER.cantrips = unpackChoice(attr['cantrips'])
+            case 'spells':
+                attributes_generated.append('spells')
+                CHARACTER.spells = genSpells(spells=attr['spells'])
+            case 'spell_slots':
+                attributes_generated.append('spell_slots')
+                CHARACTER.spell_slots = genSpells(spell_slots=attr['spell_slots']['1st Level'], _class=char_class)
+            case 'spellcasting_ab':
+                attributes_generated.append('spellcasting_ab')
+                CHARACTER.spellcasting_ability_score = attr['spellcasting_ab']
+                CHARACTER.spell_save_dc = 0
+            case _:
+                attributes_generated.append('_getattr')
+                attributes_generated.append('items')
+                attributes_generated.append('name')
+
 
     print("generated: ", attributes_generated)
     print("not generated: ", [list(attr.keys())[0] for attr in char_class_attributes if list(attr.keys())[0] not in attributes_generated])
@@ -224,14 +296,12 @@ def genRace(subrace=None):
     attributes_generated = []
     
     for attr in char_race_attributes:
-        print(list(attr.keys()))
         match list(attr.keys())[0]:
             case '_getattr':
                 attributes_generated.append('_getattr')
             case 'ab_score':
                 attributes_generated.append('ab_score')
                 genRaceAttributeBonus(attr['ab_score'])
-                print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
             case 'has_subrace':
                 attributes_generated.append('has_subrace')
                 char_subrace = random.choice([subrace for subrace in Core.SUBRACES if subrace.race == char_race])
@@ -297,6 +367,8 @@ def genCharacter():
 
 #    print(char_race, char_subrace)
     char_class = random.choice(CLASSES)
+    # print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
+    print(CHARACTER.hit_points)
     return "nice"
 
 print(genCharacter())

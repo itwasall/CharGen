@@ -241,7 +241,7 @@ class Skill(ABC):
 
 class Spell(ABC):
     items = []
-    def __init__(self, name, level: int, _class: _Class, **kwargs):
+    def __init__(self, name, level: int, _class, **kwargs):
         super().__init__(name, **kwargs)
         self.level = level
         if self.level == 0:
@@ -737,6 +737,251 @@ SAILOR = Background("Sailor", skill_profs=[ATHLETICS, PERCEPTION], tool_profs=[N
 SOLDIER = Background("Soldier", skill_profs=[ATHLETICS, INTIMIDATION], tool_profs=[{'Choose 1': GAMING_TOOLS}, VEHICLES_LAND], equipment=[INSIGNIA_OF_RANK, TROPHY_FROM_FALLEN_ENEMY, {'Choose 1': [BONE_DICE, DECK_OF_CARDS]}], money=[10, gp])
 URCHIN = Background("Urchin", skill_profs=[SLEIGHT_OF_HAND, STEALTH], tool_profs=[DISGUISE_KIT, THIEVES_TOOLS], equipment=[SMALL_KNIFE, MAP_OF_HOMETOWN, PET_MOUSE, PARENTAL_TOKEN_OF_REMEMBERANCE, CLOTHES_COMMON], money=[10, gp])
 
+"""
+    SPELLS & CANTRIPS
+"""
+# BARD CANTRIPS
+BARD_BLADE_WARD = Spell("Blade_Ward", level=0, _class='Bard')
+BARD_DANCING_LIGHTS = Spell("Dancing_Lights", level=0, _class='Bard')
+BARD_FRIENDS = Spell("Friends", level=0, _class='Bard')
+BARD_LIGHT = Spell("Light", level=0, _class='Bard')
+BARD_MAGE_HAND = Spell("Mage_Hand", level=0, _class='Bard')
+BARD_MENDING = Spell("Mending", level=0, _class='Bard')
+BARD_MESSAGE = Spell("Message", level=0, _class='Bard')
+BARD_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class='Bard')
+BARD_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class='Bard')
+BARD_TRUE_STRIKE = Spell("True_Strike", level=0, _class='Bard')
+BARD_VICIOUS_MOCKERY = Spell("Vicious_Mockery", level=0, _class='Bard')
+# BARD 1ST LEVEL
+BARD_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class='Bard')
+BARD_BANE = Spell("Bane", level=1, _class='Bard')
+BARD_CHARM_PERSON = Spell("Charm_Person", level=1, _class='Bard')
+BARD_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class='Bard')
+BARD_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class='Bard')
+BARD_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Bard')
+BARD_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class='Bard')
+BARD_DISSONANT_WHISPERS = Spell("Dissonant_Whispers", level=1, _class='Bard')
+BARD_FAERIE_FIRE = Spell("Faerie_Fire", level=1, _class='Bard')
+BARD_FEATHER_FALL = Spell("Feather_Fall", level=1, _class='Bard')
+BARD_HEALING_WORD = Spell("Healing_Word", level=1, _class='Bard')
+BARD_HEROISM = Spell("Heroism", level=1, _class='Bard')
+BARD_IDENTIFY = Spell("Identify", level=1, _class='Bard')
+BARD_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class='Bard')
+BARD_LONGSTRIDER = Spell("Longstrider", level=1, _class='Bard')
+BARD_SILENT_IMAGE = Spell("Silent_Image", level=1, _class='Bard')
+BARD_SLEEP = Spell("Sleep", level=1, _class='Bard')
+BARD_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class='Bard')
+BARD_TASHAS_HIDEOUS_LAUGHTER = Spell("Tashas_Hideous_Laughter", level=1, _class='Bard')
+BARD_THUNDERWAVE = Spell("Thunderwave", level=1, _class='Bard')
+BARD_UNSEEN_SERVENT = Spell("Unseen_Servent", level=1, _class='Bard')
+# BARD LISTS
+BARD_CANTRIPS = makeSpellList('Bard', level=0)
+BARD_FIRST_LEVEL = makeSpellList('Bard', level=1)
+# CLERIC CANTRIP
+CLERIC_GUIDANCE = Spell("Guidance", level=0, _class='Cleric')
+CLERIC_LIGHT = Spell("Light", level=0, _class='Cleric')
+CLERIC_MENDING = Spell("Mending", level=0, _class='Cleric')
+CLERIC_RESISTANCE = Spell("Resistance", level=0, _class='Cleric')
+CLERIC_SACRED_FLAME = Spell("Sacred_Flame", level=0, _class='Cleric')
+CLERIC_SPARE_THE_DYING = Spell("Spare_the_Dying", level=0, _class='Cleric')
+CLERIC_THAUMATURGY = Spell("Thaumaturgy", level=0, _class='Cleric')
+# CLERIC FIRST LEVEL
+CLERIC_BANE = Spell("Bane", level=1, _class='Cleric')
+CLERIC_BLESS = Spell("Bless", level=1, _class='Cleric')
+CLERIC_COMMAND = Spell("Command", level=1, _class='Cleric')
+CLERIC_CREATE_OR_DESTORY_WATER = Spell("Create_or_Destory_Water", level=1, _class='Cleric')
+CLERIC_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class='Cleric')
+CLERIC_DETECT_EVIL_AND_GOOD = Spell("Detect_Evil_and_Good", level=1, _class='Cleric')
+CLERIC_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Cleric')
+CLERIC_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class='Cleric')
+CLERIC_GUIDING_BOLT = Spell("Guiding_Bolt", level=1, _class='Cleric')
+CLERIC_HEALING_WORD = Spell("Healing_Word", level=1, _class='Cleric')
+CLERIC_INFLICT_WOUNDS = Spell("Inflict_Wounds", level=1, _class='Cleric')
+CLERIC_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class='Cleric')
+CLERIC_PURIFY_FOOD_AND_DRINK = Spell("Purify_Food_and_Drink", level=1, _class='Cleric')
+CLERIC_SANCTUARY = Spell("Sanctuary", level=1, _class='Cleric')
+CLERIC_SHIELD_OF_FAITH = Spell("Shield_of_Faith", level=1, _class='Cleric')
+# CLERIC LISTS
+CLERIC_CANTRIPS = makeSpellList('Cleric', level=0)
+CLERIC_FIRST_LEVEL = makeSpellList('Cleric', level=1)
+# DRUID CANTRIP
+DRUID_DRUIDCRAFT = Spell("Druidcraft", level=0, _class='Druid')
+DRUID_GUIDANCE = Spell("Guidance", level=0, _class='Druid')
+DRUID_MENDING = Spell("Mending", level=0, _class='Druid')
+DRUID_POISON_SPRAY = Spell("Poison_Spray", level=0, _class='Druid')
+DRUID_PRODUCE_FLAME = Spell("Produce_Flame", level=0, _class='Druid')
+DRUID_RESISTANCE = Spell("Resistance", level=0, _class='Druid')
+DRUID_SHILLELAGH = Spell("Shillelagh", level=0, _class='Druid')
+DRUID_THRON_WHIP = Spell("Thron_Whip", level=0, _class='Druid')
+# DRUID FIRST LEVEL
+DRUID_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class='Druid')
+DRUID_CHARM_PERSON = Spell("Charm_Person", level=1, _class='Druid')
+DRUID_CREATE_OR_DESTROY_WATER = Spell("Create_or_Destroy_Water", level=1, _class='Druid')
+DRUID_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class='Druid')
+DRUID_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Druid')
+DRUID_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class='Druid')
+DRUID_ENTANGLE = Spell("Entangle", level=1, _class='Druid')
+DRUID_FAERIE_FIRE = Spell("Faerie_Fire", level=1, _class='Druid')
+DRUID_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class='Druid')
+DRUID_GOODBERRY = Spell("Goodberry", level=1, _class='Druid')
+DRUID_HEALING_WORD = Spell("Healing_Word", level=1, _class='Druid')
+DRUID_JUMP = Spell("Jump", level=1, _class='Druid')
+DRUID_LONGSTRIDER = Spell("Longstrider", level=1, _class='Druid')
+DRUID_PURIFY_FOOD_AND_DRINK = Spell("Purify_Food_and_Drink", level=1, _class='Druid')
+DRUID_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class='Druid')
+DRUID_THUNDERWAVE = Spell("Thunderwave", level=1, _class='Druid')
+# DRUID LISTS
+DRUID_CANTRIPS = makeSpellList('Druid', level=0)
+DRUID_FIRST_LEVEL = makeSpellList('Druid', level=1)
+# PALADIN FIRST LEVEL
+PALADIN_BLESS = Spell("Bless", level=1, _class='Paladin')
+PALADIN_COMMAND = Spell("Command", level=1, _class='Paladin')
+PALADIN_COMPELLED_DUEL = Spell("Compelled_Duel", level=1, _class='Paladin')
+PALADIN_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class='Paladin')
+PALADIN_DETECT_EVIL_AND_GOOD = Spell("Detect_Evil_and_Good", level=1, _class='Paladin')
+PALADIN_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Paladin')
+PALADIN_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class='Paladin')
+PALADIN_DIVINE_FAVOR = Spell("Divine_Favor", level=1, _class='Paladin')
+PALADIN_HEROISM = Spell("Heroism", level=1, _class='Paladin')
+PALADIN_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class='Paladin')
+PALADIN_SEARING_SMITE = Spell("Searing_Smite", level=1, _class='Paladin')
+PALADIN_SHIELD_OF_FAITH = Spell("Shield_of_Faith", level=1, _class='Paladin')
+PALADIN_THUNDEROUS_SMITE = Spell("Thunderous_Smite", level=1, _class='Paladin')
+PALADIN_WRATHFUL_SMITE= Spell("Wrathful_Smite", level=1, _class='Paladin')
+# PALADIN LISTS
+PALADIN_FIRST_LEVEL = makeSpellList('Paladin', level=1)
+# RANGER FIRST LEVEL
+RANGER_ALARM = Spell("Alarm", level=1, _class='Ranger')
+RANGER_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class='Ranger')
+RANGER_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class='Ranger')
+RANGER_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Ranger')
+RANGER_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class='Ranger')
+RANGER_ENSNARING_STRIKE = Spell("Ensnaring_Strike", level=1, _class='Ranger')
+RANGER_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class='Ranger')
+RANGER_GOODBERRY = Spell("Goodberry", level=1, _class='Ranger')
+RANGER_HAIL_OF_THORNS = Spell("Hail_of_Thorns", level=1, _class='Ranger')
+RANGER_HUNTERS_MARK = Spell("Hunters_Mark", level=1, _class='Ranger')
+RANGER_JUMP = Spell("Jump", level=1, _class='Ranger')
+RANGER_LONGSTRIDER = Spell("Longstrider", level=1, _class='Ranger')
+RANGER_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class='Ranger')
+# RANGER LISTS
+RANGER_FIRST_LEVEL = makeSpellList('Ranger', level=1)
+# SORCERER CANTRIPS
+SORCERER_ACID_SPLASH = Spell("Acid_Splash", level=0, _class='Sorcerer')
+SORCERER_BLADE_WARD = Spell("Blade_Ward", level=0, _class='Sorcerer')
+SORCERER_CHILL_TOUCH = Spell("Chill_Touch", level=0, _class='Sorcerer')
+SORCERER_DANCING_LIGHTS = Spell("Dancing_Lights", level=0, _class='Sorcerer')
+SORCERER_FIRE_BOLT = Spell("Fire_Bolt", level=0, _class='Sorcerer')
+SORCERER_FRIENDS = Spell("Friends", level=0, _class='Sorcerer')
+SORCERER_LIGHT = Spell("Light", level=0, _class='Sorcerer')
+SORCERER_MAGE_HAND = Spell("Mage_Hand", level=0, _class='Sorcerer')
+SORCERER_MENDING = Spell("Mending", level=0, _class='Sorcerer')
+SORCERER_MESSAGE = Spell("Message", level=0, _class='Sorcerer')
+SORCERER_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class='Sorcerer')
+SORCERER_POISON_SPRAY = Spell("Poison_Spray", level=0, _class='Sorcerer')
+SORCERER_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class='Sorcerer')
+SORCERER_RAY_OF_FROST = Spell("Ray_of_Frost", level=0, _class='Sorcerer')
+SORCERER_SHOCKING_GRASP = Spell("Shocking_Grasp", level=0, _class='Sorcerer')
+SORCERER_TRUE_STRIKE = Spell("True_Strike", level=0, _class='Sorcerer')
+# SORCERER FIRST LEVEL
+SORCERER_BURNING_HANDS = Spell("Burning_Hands", level=1, _class='Sorcerer')
+SORCERER_CHARM_PERSON = Spell("Charm_Person", level=1, _class='Sorcerer')
+SORCERER_CHROMATIC_ORB = Spell("Chromatic_Orb", level=1, _class='Sorcerer')
+SORCERER_COLOR_SPRAY = Spell("Color_Spray", level=1, _class='Sorcerer')
+SORCERER_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class='Sorcerer')
+SORCERER_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Sorcerer')
+SORCERER_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class='Sorcerer')
+SORCERER_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class='Sorcerer')
+SORCERER_FALSE_LIFE = Spell("False_Life", level=1, _class='Sorcerer')
+SORCERER_FEATHER_FALL = Spell("Feather_Fall", level=1, _class='Sorcerer')
+SORCERER_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class='Sorcerer')
+SORCERER_JUMP = Spell("Jump", level=1, _class='Sorcerer')
+SORCERER_MAGE_ARMOR = Spell("Mage_Armor", level=1, _class='Sorcerer')
+SORCERER_MAGIC_MISSILE = Spell("Magic_Missile", level=1, _class='Sorcerer')
+SORCERER_RAY_OF_SICKNESS = Spell("Ray_of_Sickness", level=1, _class='Sorcerer')
+SORCERER_SHIELD = Spell("Shield", level=1, _class='Sorcerer')
+SORCERER_SILENT_IMAGE = Spell("Silent_Image", level=1, _class='Sorcerer')
+SORCERER_SLEEP = Spell("Sleep", level=1, _class='Sorcerer')
+SORCERER_THUNDERWAVE = Spell("Thunderwave", level=1, _class='Sorcerer')
+SORCERER_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class='Sorcerer')
+# SORCERER LISTS
+SORCERER_CANTRIPS = makeSpellList('Sorcerer', level=0)
+SORCERER_FIRST_LEVEL = makeSpellList('Sorcerer', level=1)
+# WARLOCK CANTRIPS
+WARLOCK_BLADE_WARD = Spell("Blade_Ward", level=0, _class='Warlock')
+WARLOCK_CHILL_TOUCH = Spell("Chill_Touch", level=0, _class='Warlock')
+WARLOCK_ELDRITCH_BLAST = Spell("Eldritch_Blast", level=0, _class='Warlock')
+WARLOCK_FRIENDS = Spell("Friends", level=0, _class='Warlock')
+WARLOCK_MAGE_HAND = Spell("Mage_Hand", level=0, _class='Warlock')
+WARLOCK_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class='Warlock')
+WARLOCK_POISON_SPRAY = Spell("Poison_Spray", level=0, _class='Warlock')
+WARLOCK_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class='Warlock')
+WARLOCK_TRUE_STRIKE = Spell("True_Strike", level=0, _class='Warlock')
+# WARLOCK FIRST LEVEL
+WARLOCK_ARMOR_OF_AGATHYS = Spell("Armor_of_Agathys", level=1, _class='Warlock')
+WARLOCK_ARMS_OF_HADAR = Spell("Arms_of_Hadar", level=1, _class='Warlock')
+WARLOCK_CHARM_PERSON = Spell("Charm_Person", level=1, _class='Warlock')
+WARLOCK_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class='Warlock')
+WARLOCK_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class='Warlock')
+WARLOCK_HELLISH_REBUKE = Spell("Hellish_Rebuke", level=1, _class='Warlock')
+WARLOCK_HEX = Spell("Hex", level=1, _class='Warlock')
+WARLOCK_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class='Warlock')
+WARLOCK_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class='Warlock')
+WARLOCK_UNSEEN_SERVANT = Spell("Unseen_Servant", level=1, _class='Warlock')
+WARLOCK_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class='Warlock')
+# WARLOCK LISTS
+WARLOCK_CANTRIPS = makeSpellList('Warlock', level=0)
+WARLOCK_FIRST_LEVEL = makeSpellList('Warlock', level=1)
+# WIZARD CANTRIP
+WIZARD_ACID_SPLASH = Spell("Acid_Splash", level=0, _class='Wizard')
+WIZARD_BLADE_WARD = Spell("Blade_Ward", level=0, _class='Wizard')
+WIZARD_CHILL_TOUCH = Spell("Chill_Touch", level=0, _class='Wizard')
+WIZARD_DANCING_LIGHTS = Spell("Dancing_Lights", level=0, _class='Wizard')
+WIZARD_FIRE_BOLT = Spell("Fire_Bolt", level=0, _class='Wizard')
+WIZARD_FRIENDS = Spell("Friends", level=0, _class='Wizard')
+WIZARD_LIGHT = Spell("Light", level=0, _class='Wizard')
+WIZARD_MAGE_HAND = Spell("Mage_Hand", level=0, _class='Wizard')
+WIZARD_MENDING = Spell("Mending", level=0, _class='Wizard')
+WIZARD_MESSAGE = Spell("Message", level=0, _class='Wizard')
+WIZARD_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class='Wizard')
+WIZARD_POISON_SPRAY = Spell("Poison_Spray", level=0, _class='Wizard')
+WIZARD_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class='Wizard')
+WIZARD_RAY_OF_FROST = Spell("Ray_of_Frost", level=0, _class='Wizard')
+WIZARD_SHOCKING_GRASP = Spell("Shocking_Grasp", level=0, _class='Wizard')
+WIZARD_TRUE_STRIKE = Spell("True_Strike", level=0, _class='Wizard')
+# WIZARD FIRST LEVEL
+WIZARD_ALARM = Spell("Alarm", level=1, _class='Wizard')
+WIZARD_BURNING_HANDS = Spell("Burning_Hands", level=1, _class='Wizard')
+WIZARD_CHARM_PERSON = Spell("Charm_Person", level=1, _class='Wizard')
+WIZARD_CHROMATIC_ORB = Spell("Chromatic_Orb", level=1, _class='Wizard')
+WIZARD_COLOR_SPRAY = Spell("Color_Spray", level=1, _class='Wizard')
+WIZARD_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class='Wizard')
+WIZARD_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class='Wizard')
+WIZARD_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class='Wizard')
+WIZARD_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class='Wizard')
+WIZARD_FALSE_LIFE = Spell("False_Life", level=1, _class='Wizard')
+WIZARD_FEATHER_FALL = Spell("Feather_Fall", level=1, _class='Wizard')
+WIZARD_FIND_FAMILIAR = Spell("Find_Familiar", level=1, _class='Wizard')
+WIZARD_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class='Wizard')
+WIZARD_GREASE = Spell("Grease", level=1, _class='Wizard')
+WIZARD_IDENTIFY = Spell("Identify", level=1, _class='Wizard')
+WIZARD_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class='Wizard')
+WIZARD_JUMP = Spell("Jump", level=1, _class='Wizard')
+WIZARD_LONGSTRIDER = Spell("Longstrider", level=1, _class='Wizard')
+WIZARD_MAGE_ARMOR = Spell("Mage_Armor", level=1, _class='Wizard')
+WIZARD_MAGIC_MISSILE = Spell("Magic_Missile", level=1, _class='Wizard')
+WIZARD_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class='Wizard')
+WIZARD_RAY_OF_SICKNESS = Spell("Ray_of_Sickness", level=1, _class='Wizard')
+WIZARD_SHIELD = Spell("Shield", level=1, _class='Wizard')
+WIZARD_SLEEP = Spell("Sleep", level=1, _class='Wizard')
+WIZARD_TASHAS_HIDEOUS_LAUGHTER = Spell("Tashas_Hideous_Laughter", level=1, _class='Wizard')
+WIZARD_TENSERS_FLOATING_DISK = Spell("Tensers_Floating_Disk", level=1, _class='Wizard')
+WIZARD_THUNDERWAVE = Spell("Thunderwave", level=1, _class='Wizard')
+WIZARD_UNSEEN_SERVANT = Spell("Unseen_Servant", level=1, _class='Wizard')
+WIZARD_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class='Wizard')
+# WIZARD LISTS
+WIZARD_CANTRIPS = makeSpellList('Wizard', level=0)
+WIZARD_FIRST_LEVEL = makeSpellList('Wizard', level=1)
 
 
 
@@ -761,7 +1006,7 @@ BARBARIAN.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIEL
 BARBARIAN.saving_throws = [STR, CON]
 BARBARIAN.skills = {'Choose 2': [ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATURE, PERCEPTION, SURVIVAL]}
 BARBARIAN.hit_dice = "1d12"
-BARBARIAN.initial_health = [12, CON.modifier]
+BARBARIAN.initial_health = 12
 BARBARIAN.starting_money = ["2d4", 10, gp]
 BARBARIAN.equipment = [ {'Choose 1': [GREATAXE, {'Choose 1': MARTIAL_WEAPONS}]}, {'Choose 1': [(HANDAXE, HANDAXE), {'Choose 1': SIMPLE_WEAPONS}]}, JAVELIN, JAVELIN, JAVELIN, JAVELIN]
 BARBARIAN.equipment_pack = EXPLORERS_PACK
@@ -771,41 +1016,47 @@ BARD.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF], 'Weapons': [SIMPLE_WEAPONS_P
 BARD.saving_throws = [DEX, CHA]
 BARD.skills = {'Choose 3': SKILLS}
 BARD.hit_dice = "1d6"
-BARD.initial_health = [8, CON.modifier]
+BARD.initial_health = 8
 BARD.starting_money = ["5d4", 10, gp]
 BARD.equipment = [ {'Choose 1': [RAPIER, LONGSWORD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [LUTE, {'Choose 1': MUSICAL_INSTRUMENT}]}, LEATHER_ARMOR, DAGGER ]
 BARD.equipment_pack = {'Choose 1': [DIPLOMATS_PACK, ENTERTAINERS_PACK]},
-BARD.cantrips = {'Choose 2': []}
-BARD.spell_slots = {'1st Level': {'Choose 2': []}}
-BARD.spells = {'Choose 4': []}
+BARD.cantrips = {'Choose 2': BARD_CANTRIPS}
+BARD.spells = {'1st Level': {'Choose 4': BARD_FIRST_LEVEL}}
+BARD.spell_slots = {'1st Level': 2}
+BARD.spellcasting_ab = CHA
+
 
 CLERIC.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE_WEAPONS_PROF], 'Tools': None }
 CLERIC.saving_throws = [WIS, CHA]
 CLERIC.skills = {'Choose 2': [HISTORY, INSIGHT, MEDICINE, PERSUASION, RELIGION]}
 CLERIC.hit_dice = "1d8"
-CLERIC.initial_health = [8, CON.modifier]
+CLERIC.initial_health = 8
 CLERIC.starting_money = ["5d4", 10, gp]
 CLERIC.equipment = [ {'Choose 1': [MACE, WARHAMMER]}, {'Choose 1': [SCALE_MAIL, LEATHER_ARMOR, CHAIN_MAIL]}, {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, SHIELD, {'Choose 1': HOLY_SYMBOL} ]
 CLERIC.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
-CLERIC.cantrips = {'Choose 3': []}
-CLERIC.spells = {'1st Level': {'Choose 2': []}}
+CLERIC.cantrips = {'Choose 3': CLERIC_CANTRIPS}
+CLERIC.spells = {'1st Level': {'Choose 2': CLERIC_FIRST_LEVEL}}
+CLERIC.spellcasting_ab = WIS
+CLERIC.requires_subclass = True
 
 DRUID.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS], 'Weapons': [CLUB, DAGGER, DART, JAVELIN, MACE, QUARTERSTAFF, SCIMITAR, SICKLE, SLING, SPEAR], 'Tools': {'Has': [HERBALISM_KIT]} }
 DRUID.saving_throws = [INT, WIS]
 DRUID.skills = {'Choose 2': [ARCANA, ANIMAL_HANDLING, INSIGHT, MEDICINE, NATURE, PERCEPTION, RELIGION, SURVIVAL]}
 DRUID.hit_dice = "1d8"
-DRUID.initial_health = [8, CON.modifier]
+DRUID.initial_health = 8
 DRUID.starting_money = ["2d4", 10, gp]
 DRUID.equipment = [ {'Choose 1': [SHIELD, {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [SCIMITAR, {'Choose 1': MELEE_SIMPLE_WEAPONS}]}, LEATHER_ARMOR, {'Choose 1': DRUIDIC_FOCUS} ]
 DRUID.equipment_pack = EXPLORERS_PACK
-DRUID.cantrips = {'Choose 2': []}
-DRUID.spells = {'1st Level': {'Choose 2': []}}
+DRUID.cantrips = {'Choose 2': DRUID_CANTRIPS} 
+DRUID.spells = {'1st Level': DRUID_FIRST_LEVEL}
+DRUID.spell_slots = {'1st Level': 2}
+DRUID.spellcasting_ab = WIS
 
 FIGHTER.proficiencies = { 'Armor': [ALL_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE_WEAPONS_PROF, MARTIAL_WEAPONS_PROF], 'Tools': None }
 FIGHTER.saving_throws = [STR, CON]
 FIGHTER.skills = {'Choose 2': [ACROBATICS, ANIMAL_HANDLING, ATHLETICS, HISTORY, INSIGHT, INTIMIDATION, PERCEPTION, SURVIVAL]}
 FIGHTER.hit_dice = "1d10"
-FIGHTER.initial_health = [10, CON.modifier]
+FIGHTER.initial_health = 10
 FIGHTER.starting_money = ["5d4", 10, gp]
 FIGHTER.equipment = [ {'Choose 1': [CHAIN_MAIL, (LEATHER_ARMOR, LONGBOW, ARROWS)]}, {'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': [MARTIAL_WEAPONS, SHIELD]}, {'Choose 1': [(LIGHT_CROSSBOW, CROSSBOW_BOLTS), (HANDAXE, HANDAXE)]}]
 FIGHTER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
@@ -814,7 +1065,7 @@ MONK.proficiencies = { 'Armor': None, 'Weapons': [SIMPLE_WEAPONS_PROF, SHORTSWOR
 MONK.saving_throws = [STR, DEX]
 MONK.skills = {'Choose 2': [ACROBATICS, ATHLETICS, HISTORY, INSIGHT, RELIGION, STEALTH]}
 MONK.hit_dice = "1d8"
-MONK.initial_health = [8, CON.modifier]
+MONK.initial_health = 8
 MONK.starting_money = ["5d4", 1, gp]
 MONK.equipment = [{'Choose 1': [SHORTSWORD, {'Choose 1':SIMPLE_WEAPONS}]}] + [DART for _ in range(10)]
 MONK.equipment_pack = {'Choose 1': [EXPLORERS_PACK, DUNGEONEERS_PACK]}
@@ -823,7 +1074,7 @@ PALADIN.proficiencies = { 'Armor': [ALL_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE
 PALADIN.saving_throws = [WIS, CHA]
 PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSUASION, RELIGION]}
 PALADIN.hit_dice = "1d10"
-PALADIN.initial_health = [10, CON.modifier]
+PALADIN.initial_health = 10
 PALADIN.starting_money = ["5d4", 10, gp]
 PALADIN.equipment = [ {'Choose 1': [ [{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}] ]}, {'Choose 1': [ [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS} ]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
 PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
@@ -832,7 +1083,7 @@ RANGER.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS]
 RANGER.saving_throws = [STR, DEX]
 RANGER.skills = {'Choose 3': [ANIMAL_HANDLING, ATHLETICS, INSIGHT, INVESTIGATION, NATURE, PERCEPTION, STEALTH, SURVIVAL]}
 RANGER.hit_dice = "1d10"
-RANGER.initial_health = [10, CON.modifier]
+RANGER.initial_health = 10
 RANGER.starting_money = ["5d4", 10, gp]
 RANGER.equipment = [ {'Choose 1': [LEATHER_ARMOR, SCALE_MAIL]}, {'Choose 1': [[SHORTSWORD, SHORTSWORD], {'Choose 2': MELEE_SIMPLE_WEAPONS}]}, LONGBOW, QUIVER, ARROWS ] 
 RANGER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
@@ -841,7 +1092,7 @@ ROGUE.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF], 'Weapons': [SIMPLE_WEAPONS_
 ROGUE.saving_throws = [DEX, INT]
 ROGUE.skills = {'Choose 4': [ACROBATICS, ATHLETICS, DECEPTION, INSIGHT, INTIMIDATION, INVESTIGATION, PERCEPTION, PERFORMANCE, PERSUASION, SLEIGHT_OF_HAND, STEALTH]}
 ROGUE.hit_dice = "1d8"
-ROGUE.initial_health = [8, CON.modifier]
+ROGUE.initial_health = 8
 ROGUE.starting_money = ["4d4", 10, gp]
 ROGUE.equipment = [ {'Choose 1': [RAPIER, SHORTSWORD]}, {'Choose 1': [[SHORTBOW, QUIVER, ARROWS], SHORTSWORD]}, LEATHER_ARMOR, DAGGER, DAGGER, THIEVES_TOOLS ]
 ROGUE.equipment_pack = {'Choose 1': [BURGLURS_PACK, DUNGEONEERS_PACK, EXPLORERS_PACK]}
@@ -850,37 +1101,40 @@ SORCERER.proficiencies = { 'Armor': None, 'Weapons': [DAGGER, DART, SLING, QUART
 SORCERER.saving_throws = [CON, CHA]
 SORCERER.skills = {'Choose 2': [ARCANA, DECEPTION, INSIGHT, INTIMIDATION, PERSUASION, RELIGION]}
 SORCERER.hit_dice = "1d6"
-SORCERER.initial_health = [6, CON.modifier]
+SORCERER.initial_health = 6
 SORCERER.starting_money = ["3d4", 10, gp]
 SORCERER.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER ]
 SORCERER.equipment_pack = {'Choose 1': [DUNGEONEERS_PACK, EXPLORERS_PACK]}
-SORCERER.cantrips = {'Choose 4' []:}
-SORCERER.spells = {'1st Level': {'Choose 2': []}}
-SORCERER.spell_slots = {'1st Level': {'Choose 2': []}}
+SORCERER.cantrips = {'Choose 4': SORCERER_CANTRIPS} 
+SORCERER.spells = {'1st Level': {'Choose 2': SORCERER_FIRST_LEVEL}}
+SORCERER.spell_slots = {'1st Level': 2}
+SORCERER.spellcasting_ab = CHA
 
 WARLOCK.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF], 'Weapons': [SIMPLE_WEAPONS_PROF], 'Tools': None }
 WARLOCK.saving_throws = [WIS, CHA]
 WARLOCK.skills = {'Choose 2': [ARCANA, DECEPTION, HISTORY, INTIMIDATION, INVESTIGATION, NATURE, RELIGION]}
 WARLOCK.hit_dice = "1d8"
-WARLOCK.initial_health = [8, CON.modifier]
+WARLOCK.initial_health = 8
 WARLOCK.starting_money = ["4d4", 10, gp]
 WARLOCK.equipment = [ {'Choose 1': [[LIGHT_CROSSBOW, CROSSBOW_BOLTS], {'Choose 1': SIMPLE_WEAPONS}]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, DAGGER, DAGGER, LEATHER_ARMOR, {'Choose 1': SIMPLE_WEAPONS} ]
 WARLOCK.equipment_pack = {'Choose 1': [SCHOLARS_PACK, DUNGEONEERS_PACK]}
-WARLOCK.cantrips = {'Choose 2' []:}
-WARLOCK.spells = {'1st Level': {'Choose 2': []}}
-WARLOCK.spell_slots = {'1st Level': {'Choose 1': []}}
+WARLOCK.cantrips = {'Choose 2': WARLOCK_CANTRIPS}
+WARLOCK.spells = {'1st Level': {'Choose 2': WARLOCK_FIRST_LEVEL}}
+WARLOCK.spell_slots = {'1st Level': 1}
+WARLOCK.spellcasting_ab = CHA
 
 WIZARD.proficiencies = { 'Armor': None, 'Weapons': [DAGGER, DART, SLING, QUARTERSTAFF, LIGHT_CROSSBOW], 'Tools': None }
 WIZARD.saving_throws = [INT, WIS]
 WIZARD.skills = {'Choose 2': [ARCANA, HISTORY, INSIGHT, INVESTIGATION, MEDICINE, RELIGION]}
 WIZARD.hit_dice = "1d6"
-WIZARD.initial_health = [6, CON.modifier]
+WIZARD.initial_health = 6
 WIZARD.starting_money = ["4d4", 10, gp]
 WIZARD.equipment = [ {'Choose 1': [QUARTERSTAFF, DAGGER]}, {'Choose 1': [COMPONENT_POUCH, {'Choose 1': ARCANE_FOCUS}]}, SPELLBOOK ]
 WIZARD.equipment_pack = {'Choose 1': [SCHOLARS_PACK, EXPLORERS_PACK]}
-WIZARD.cantrips = {'Choose 3' []:}
-WIZARD.spells = {'1st Level': {'Choose 2': []}}
-WIZARD.spellbook = {'1st Level': {'Choose 6': []}}
+WIZARD.cantrips = {'Choose 3': WIZARD_CANTRIPS}
+WIZARD.spells = {'1st Level': {'Choose 6': WIZARD_FIRST_LEVEL}}
+WIZARD.spell_slots = {'1st Level': 2}
+WIZARD.spellcasting_ab = INT
 
 CLASSES = [BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD]
 
@@ -916,18 +1170,18 @@ COLLEGE_OF_WHISPERS = _SubClass("College of Whispers", _class=BARD, xanathar=Tru
 COLLEGE_OF_CREATION = _SubClass("College of Creation", _class=BARD, tasha=True)
 COLLEGE_OF_ELOQUENCE = _SubClass("College of Eloquence", _class=BARD, tasha=True)
 # CLERIC
-KNOWLEDGE_DOMAIN = _SubClass("Knowledge Domain", _class=CLERIC)
-LIFE_DOMAIN = _SubClass("Life Domain", _class=CLERIC)
-LIGHT_DOMAIN = _SubClass("Light Domain", _class=CLERIC)
-NATURE_DOMAIN = _SubClass("Nature Domain", _class=CLERIC)
-TEMPEST_DOMAIN = _SubClass("Tempest Domain", _class=CLERIC)
-TRICKERY_DOMAIN = _SubClass("Trickery Domain", _class=CLERIC)
-WAR_DOMAIN = _SubClass("War Domain", _class=CLERIC)
-FORGE_DOMAIN = _SubClass("Forge Domain", _class=CLERIC, xanathar=True)
-GRAVE_DOMAIN = _SubClass("Grave Domain", _class=CLERIC, xanathar=True)
-ORDER_DOMAIN = _SubClass("Order Domain", _class=CLERIC, ravnica=True, tasha=True)
-PEACE_DOMAIN = _SubClass("Peace Domain", _class=CLERIC, tasha=True)
-TWILIGHT_DOMAIN = _SubClass("Twilight Domain", _class=CLERIC, tasha=True)
+KNOWLEDGE_DOMAIN = _SubClass("Knowledge Domain", _class=CLERIC, spells=[CLERIC_COMMAND, BARD_IDENTIFY], language={'Choose 2': LANGUAGES}, profs={'Skills': {'Choose 2': [ARCANA, HISTORY, NATURE, RELIGION]}})
+LIFE_DOMAIN = _SubClass("Life Domain", _class=CLERIC, spells=[CLERIC_BLESS, CLERIC_CURE_WOUNDS], profs={'Armor': HEAVY_ARMOR_PROF})
+LIGHT_DOMAIN = _SubClass("Light Domain", _class=CLERIC, spells=[WIZARD_BURNING_HANDS, BARD_FAERIE_FIRE], cantrip=[CLERIC_LIGHT])
+NATURE_DOMAIN = _SubClass("Nature Domain", _class=CLERIC, spells=[BARD_ANIMAL_FRIENDSHIP, BARD_SPEAK_WITH_ANIMALS], cantrip=[{'Choose 1': DRUID_CANTRIPS}], profs={'Skill': {'Choose 1': [ANIMAL_HANDLING, NATURE, SURVIVAL]}})
+TEMPEST_DOMAIN = _SubClass("Tempest Domain", _class=CLERIC, spells=[DRUID_FOG_CLOUD, BARD_THUNDERWAVE], profs={'Weapon': MARTIAL_WEAPONS_PROF, 'Armor': HEAVY_ARMOR_PROF})
+TRICKERY_DOMAIN = _SubClass("Trickery Domain", _class=CLERIC, spells=[BARD_CHARM_PERSON, BARD_DISGUISE_SELF])
+WAR_DOMAIN = _SubClass("War Domain", _class=CLERIC, spells=[PALADIN_DIVINE_FAVOR, CLERIC_SHIELD_OF_FAITH], profs={'Weapon': MARTIAL_WEAPONS_PROF, 'Armor': HEAVY_ARMOR_PROF})
+# FORGE_DOMAIN = _SubClass("Forge Domain", _class=CLERIC, xanathar=True)
+# GRAVE_DOMAIN = _SubClass("Grave Domain", _class=CLERIC, xanathar=True)
+# ORDER_DOMAIN = _SubClass("Order Domain", _class=CLERIC, ravnica=True, tasha=True)
+# PEACE_DOMAIN = _SubClass("Peace Domain", _class=CLERIC, tasha=True)
+# TWILIGHT_DOMAIN = _SubClass("Twilight Domain", _class=CLERIC, tasha=True)
 # DRUID
 CIRCLE_OF_THE_LAND = _SubClass("Circle of the Land", _class=DRUID)
 CIRCLE_OF_THE_MOON = _SubClass("Circle of the Moon", _class=DRUID)
@@ -1015,251 +1269,6 @@ ARMORER = _SubClass("Armorer", _class=ARTIFICER, tasha=True)
 ARTILLERIST = _SubClass("Artillerist", _class=ARTIFICER, tasha=True)
 BATTLE_SMITH = _SubClass("Battle_Smith", _class=ARTIFICER, tasha=True)
 
-"""
-    SPELLS & CANTRIPS
-"""
-# BARD CANTRIPS
-BARD_BLADE_WARD = Spell("Blade_Ward", level=0, _class=BARD)
-BARD_DANCING_LIGHTS = Spell("Dancing_Lights", level=0, _class=BARD)
-BARD_FRIENDS = Spell("Friends", level=0, _class=BARD)
-BARD_LIGHT = Spell("Light", level=0, _class=BARD)
-BARD_MAGE_HAND = Spell("Mage_Hand", level=0, _class=BARD)
-BARD_MENDING = Spell("Mending", level=0, _class=BARD)
-BARD_MESSAGE = Spell("Message", level=0, _class=BARD)
-BARD_MINOR_ILLUSION = Spell("Minor_Illusion", level=0, _class=BARD)
-BARD_PRESTIDIGITATION = Spell("Prestidigitation", level=0, _class=BARD)
-BARD_TRUE_STRIKE = Spell("True_Strike", level=0, _class=BARD)
-BARD_VICIOUS_MOCKERY = Spell("Vicious_Mockery", level=0, _class=BARD)
-# BARD 1ST LEVEL
-BARD_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class=BARD)
-BARD_BANE = Spell("Bane", level=1, _class=BARD)
-BARD_CHARM_PERSON = Spell("Charm_Person", level=1, _class=BARD)
-BARD_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class=BARD)
-BARD_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class=BARD)
-BARD_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=BARD)
-BARD_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class=BARD)
-BARD_DISSONANT_WHISPERS = Spell("Dissonant_Whispers", level=1, _class=BARD)
-BARD_FAERIE_FIRE = Spell("Faerie_Fire", level=1, _class=BARD)
-BARD_FEATHER_FALL = Spell("Feather_Fall", level=1, _class=BARD)
-BARD_HEALING_WORD = Spell("Healing_Word", level=1, _class=BARD)
-BARD_HEROISM = Spell("Heroism", level=1, _class=BARD)
-BARD_IDENTIFY = Spell("Identify", level=1, _class=BARD)
-BARD_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class=BARD)
-BARD_LONGSTRIDER = Spell("Longstrider", level=1, _class=BARD)
-BARD_SILENT_IMAGE = Spell("Silent_Image", level=1, _class=BARD)
-BARD_SLEEP = Spell("Sleep", level=1, _class=BARD)
-BARD_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class=BARD)
-BARD_TASHAS_HIDEOUS_LAUGHTER = Spell("Tashas_Hideous_Laughter", level=1, _class=BARD)
-BARD_THUNDERWAVE = Spell("Thunderwave", level=1, _class=BARD)
-BARD_UNSEEN_SERVENT = Spell("Unseen_Servent", level=1, _class=BARD)
-# BARD LISTS
-BARD_CANTRIPS = makeSpellList(BARD, level=0)
-BARD_FIRST_LEVEL = makeSpellList(BARD, level=1)
-# CLERIC CANTRIP
-CLERIC_GUIDANCE = Spell("Guidance", level=0, _class=CLERIC)
-CLERIC_LIGHT = Spell("Light", level=0, _class=CLERIC)
-CLERIC_MENDING = Spell("Mending", level=0, _class=CLERIC)
-CLERIC_RESISTANCE = Spell("Resistance", level=0, _class=CLERIC)
-CLERIC_SACRED_FLAME = Spell("Sacred_Flame", level=0, _class=CLERIC)
-CLERIC_SPARE_THE_DYING = Spell("Spare_the_Dying", level=0, _class=CLERIC)
-CLERIC_THAUMATURGY = Spell("Thaumaturgy", level=0, _class=CLERIC)
-# CLERIC FIRST LEVEL
-CLERIC_BANE = Spell("Bane", level=0, _class=CLERIC)
-CLERIC_BLESS = Spell("Bless", level=0, _class=CLERIC)
-CLERIC_COMMAND = Spell("Command", level=0, _class=CLERIC)
-CLERIC_CREATE_OR_DESTORY_WATER = Spell("Create_or_Destory_Water", level=0, _class=CLERIC)
-CLERIC_CURE_WOUNDS = Spell("Cure_Wounds", level=0, _class=CLERIC)
-CLERIC_DETECT_EVIL_AND_GOOD = Spell("Detect_Evil_and_Good", level=0, _class=CLERIC)
-CLERIC_DETECT_MAGIC = Spell("Detect_Magic", level=0, _class=CLERIC)
-CLERIC_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=0, _class=CLERIC)
-CLERIC_GUIDING_BOLT = Spell("Guiding_Bolt", level=0, _class=CLERIC)
-CLERIC_HEALING_WORD = Spell("Healing_Word", level=0, _class=CLERIC)
-CLERIC_INFLICT_WOUNDS = Spell("Inflict_Wounds", level=0, _class=CLERIC)
-CLERIC_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=0, _class=CLERIC)
-CLERIC_PURIFY_FOOD_AND_DRINK = Spell("Purify_Food_and_Drink", level=0, _class=CLERIC)
-CLERIC_SANCTUARY = Spell("Sanctuary", level=0, _class=CLERIC)
-CLERIC_SHIELD_OF_FAITH = Spell("Shield_of_Faith", level=0, _class=CLERIC)
-# CLERIC LISTS
-CLERIC_CANTRIPS = makeSpellList(CLERIC, level=0)
-CLERIC_FIRST_LEVEL = makeSpellList(CLERIC, level=1)
-# DRUID CANTRIP
-DRUID_DRUIDCRAFT = Spell("Druidcraft", level=1, _class=DRUID)
-DRUID_GUIDANCE = Spell("Guidance", level=1, _class=DRUID)
-DRUID_MENDING = Spell("Mending", level=1, _class=DRUID)
-DRUID_POISON_SPRAY = Spell("Poison_Spray", level=1, _class=DRUID)
-DRUID_PRODUCE_FLAME = Spell("Produce_Flame", level=1, _class=DRUID)
-DRUID_RESISTANCE = Spell("Resistance", level=1, _class=DRUID)
-DRUID_SHILLELAGH = Spell("Shillelagh", level=1, _class=DRUID)
-DRUID_THRON_WHIP = Spell("Thron_Whip", level=1, _class=DRUID)
-# DRUID FIRST LEVEL
-DRUID_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class=DRUID)
-DRUID_CHARM_PERSON = Spell("Charm_Person", level=1, _class=DRUID)
-DRUID_CREATE_OR_DESTROY_WATER = Spell("Create_or_Destroy_Water", level=1, _class=DRUID)
-DRUID_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class=DRUID)
-DRUID_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=DRUID)
-DRUID_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class=DRUID)
-DRUID_ENTANGLE = Spell("Entangle", level=1, _class=DRUID)
-DRUID_FAERIE_FIRE = Spell("Faerie_Fire", level=1, _class=DRUID)
-DRUID_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class=DRUID)
-DRUID_GOODBERRY = Spell("Goodberry", level=1, _class=DRUID)
-DRUID_HEALING_WORD = Spell("Healing_Word", level=1, _class=DRUID)
-DRUID_JUMP = Spell("Jump", level=1, _class=DRUID)
-DRUID_LONGSTRIDER = Spell("Longstrider", level=1, _class=DRUID)
-DRUID_PURIFY_FOOD_AND_DRINK = Spell("Purify_Food_and_Drink", level=1, _class=DRUID)
-DRUID_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class=DRUID)
-DRUID_THUNDERWAVE = Spell("Thunderwave", level=1, _class=DRUID)
-# DRUID LISTS
-DRUID_CANTRIPS = makeSpellList(DRUID, level=0)
-DRUID_FIRST_LEVEL = makeSpellList(DRUID, level=1)
-# PALADIN FIRST LEVEL
-PALADIN_BLESS = Spell("Bless", level=1, _class=PALADIN)
-PALADIN_COMMAND = Spell("Command", level=1, _class=PALADIN)
-PALADIN_COMPELLED_DUEL = Spell("Compelled_Duel", level=1, _class=PALADIN)
-PALADIN_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class=PALADIN)
-PALADIN_DETECT_EVIL_AND_GOOD = Spell("Detect_Evil_and_Good", level=1, _class=PALADIN)
-PALADIN_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=PALADIN)
-PALADIN_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class=PALADIN)
-PALADIN_DIVINE_FAVOR = Spell("Divine_Favor", level=1, _class=PALADIN)
-PALADIN_HEROISM = Spell("Heroism", level=1, _class=PALADIN)
-PALADIN_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class=PALADIN)
-PALADIN_SEARING_SMITE = Spell("Searing_Smite", level=1, _class=PALADIN)
-PALADIN_SHIELD_OF_FAITH = Spell("Shield_of_Faith", level=1, _class=PALADIN)
-PALADIN_THUNDEROUS_SMITE = Spell("Thunderous_Smite", level=1, _class=PALADIN)
-PALADIN_WRATHFUL_SMITE= Spell("Wrathful_Smite", level=1, _class=PALADIN)
-# PALADIN LISTS
-PALADIN_FIRST_LEVEL = makeSpellList(PALADIN, level=1)
-# RANGER FIRST LEVEL
-RANGER_ALARM = Spell("Alarm", level=1, _class=RANGER)
-RANGER_ANIMAL_FRIENDSHIP = Spell("Animal_Friendship", level=1, _class=RANGER)
-RANGER_CURE_WOUNDS = Spell("Cure_Wounds", level=1, _class=RANGER)
-RANGER_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=RANGER)
-RANGER_DETECT_POISON_AND_DISEASE = Spell("Detect_Poison_and_Disease", level=1, _class=RANGER)
-RANGER_ENSNARING_STRIKE = Spell("Ensnaring_Strike", level=1, _class=RANGER)
-RANGER_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class=RANGER)
-RANGER_GOODBERRY = Spell("Goodberry", level=1, _class=RANGER)
-RANGER_HAIL_OF_THORNS = Spell("Hail_of_Thorns", level=1, _class=RANGER)
-RANGER_HUNTERS_MARK = Spell("Hunters_Mark", level=1, _class=RANGER)
-RANGER_JUMP = Spell("Jump", level=1, _class=RANGER)
-RANGER_LONGSTRIDER = Spell("Longstrider", level=1, _class=RANGER)
-RANGER_SPEAK_WITH_ANIMALS = Spell("Speak_with_Animals", level=1, _class=RANGER)
-# RANGER LISTS
-RANGER_FIRST_LEVEL = makeSpellList(RANGER, level=1)
-# SORCERER CANTRIPS
-SORCERER_ACID_SPLASH = Spell("Acid_Splash", level=1, _class=SORCERER)
-SORCERER_BLADE_WARD = Spell("Blade_Ward", level=1, _class=SORCERER)
-SORCERER_CHILL_TOUCH = Spell("Chill_Touch", level=1, _class=SORCERER)
-SORCERER_DANCING_LIGHTS = Spell("Dancing_Lights", level=1, _class=SORCERER)
-SORCERER_FIRE_BOLT = Spell("Fire_Bolt", level=1, _class=SORCERER)
-SORCERER_FRIENDS = Spell("Friends", level=1, _class=SORCERER)
-SORCERER_LIGHT = Spell("Light", level=1, _class=SORCERER)
-SORCERER_MAGE_HAND = Spell("Mage_Hand", level=1, _class=SORCERER)
-SORCERER_MENDING = Spell("Mending", level=1, _class=SORCERER)
-SORCERER_MESSAGE = Spell("Message", level=1, _class=SORCERER)
-SORCERER_MINOR_ILLUSION = Spell("Minor_Illusion", level=1, _class=SORCERER)
-SORCERER_POISON_SPRAY = Spell("Poison_Spray", level=1, _class=SORCERER)
-SORCERER_PRESTIDIGITATION = Spell("Prestidigitation", level=1, _class=SORCERER)
-SORCERER_RAY_OF_FROST = Spell("Ray_of_Frost", level=1, _class=SORCERER)
-SORCERER_SHOCKING_GRASP = Spell("Shocking_Grasp", level=1, _class=SORCERER)
-SORCERER_TRUE_STRIKE = Spell("True_Strike", level=1, _class=SORCERER)
-# SORCERER FIRST LEVEL
-SORCERER_BURNING_HANDS = Spell("Burning_Hands", level=1, _class=SORCERER)
-SORCERER_CHARM_PERSON = Spell("Charm_Person", level=1, _class=SORCERER)
-SORCERER_CHROMATIC_ORB = Spell("Chromatic_Orb", level=1, _class=SORCERER)
-SORCERER_COLOR_SPRAY = Spell("Color_Spray", level=1, _class=SORCERER)
-SORCERER_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class=SORCERER)
-SORCERER_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=SORCERER)
-SORCERER_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class=SORCERER)
-SORCERER_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class=SORCERER)
-SORCERER_FALSE_LIFE = Spell("False_Life", level=1, _class=SORCERER)
-SORCERER_FEATHER_FALL = Spell("Feather_Fall", level=1, _class=SORCERER)
-SORCERER_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class=SORCERER)
-SORCERER_JUMP = Spell("Jump", level=1, _class=SORCERER)
-SORCERER_MAGE_ARMOR = Spell("Mage_Armor", level=1, _class=SORCERER)
-SORCERER_MAGIC_MISSILE = Spell("Magic_Missile", level=1, _class=SORCERER)
-SORCERER_RAY_OF_SICKNESS = Spell("Ray_of_Sickness", level=1, _class=SORCERER)
-SORCERER_SHIELD = Spell("Shield", level=1, _class=SORCERER)
-SORCERER_SILENT_IMAGE = Spell("Silent_Image", level=1, _class=SORCERER)
-SORCERER_SLEEP = Spell("Sleep", level=1, _class=SORCERER)
-SORCERER_THUNDERWAVE = Spell("Thunderwave", level=1, _class=SORCERER)
-SORCERER_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class=SORCERER)
-# SORCERER LISTS
-SORCERER_CANTRIPS = makeSpellList(SORCERER, level=0)
-SORCERER_FIRST_LEVEL = makeSpellList(SORCERER, level=1)
-# WARLOCK CANTRIPS
-WARLOCK_BLADE_WARD = Spell("Blade_Ward", level=1, _class=WARLOCK)
-WARLOCK_CHILL_TOUCH = Spell("Chill_Touch", level=1, _class=WARLOCK)
-WARLOCK_ELDRITCH_BLAST = Spell("Eldritch_Blast", level=1, _class=WARLOCK)
-WARLOCK_FRIENDS = Spell("Friends", level=1, _class=WARLOCK)
-WARLOCK_MAGE_HAND = Spell("Mage_Hand", level=1, _class=WARLOCK)
-WARLOCK_MINOR_ILLUSION = Spell("Minor_Illusion", level=1, _class=WARLOCK)
-WARLOCK_POISON_SPRAY = Spell("Poison_Spray", level=1, _class=WARLOCK)
-WARLOCK_PRESTIDIGITATION = Spell("Prestidigitation", level=1, _class=WARLOCK)
-WARLOCK_TRUE_STRIKE = Spell("True_Strike", level=1, _class=WARLOCK)
-# WARLOCK FIRST LEVEL
-WARLOCK_ARMOR_OF_AGATHYS = Spell("Armor_of_Agathys", level=1, _class=WARLOCK)
-WARLOCK_ARMS_OF_HADAR = Spell("Arms_of_Hadar", level=1, _class=WARLOCK)
-WARLOCK_CHARM_PERSON = Spell("Charm_Person", level=1, _class=WARLOCK)
-WARLOCK_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class=WARLOCK)
-WARLOCK_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class=WARLOCK)
-WARLOCK_HELLISH_REBUKE = Spell("Hellish_Rebuke", level=1, _class=WARLOCK)
-WARLOCK_HEX = Spell("Hex", level=1, _class=WARLOCK)
-WARLOCK_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class=WARLOCK)
-WARLOCK_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class=WARLOCK)
-WARLOCK_UNSEEN_SERVANT = Spell("Unseen_Servant", level=1, _class=WARLOCK)
-WARLOCK_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class=WARLOCK)
-# WARLOCK LISTS
-WARLOCK_CANTRIPS = makeSpellList(WARLOCK, level=0)
-WARLOCK_FIRST_LEVEL = makeSpellList(WARLOCK, level=1)
-# WIZARD CANTRIP
-WIZARD_ACID_SPLASH = Spell("Acid_Splash", level=1, _class=WIZARD)
-WIZARD_BLADE_WARD = Spell("Blade_Ward", level=1, _class=WIZARD)
-WIZARD_CHILL_TOUCH = Spell("Chill_Touch", level=1, _class=WIZARD)
-WIZARD_DANCING_LIGHTS = Spell("Dancing_Lights", level=1, _class=WIZARD)
-WIZARD_FIRE_BOLT = Spell("Fire_Bolt", level=1, _class=WIZARD)
-WIZARD_FRIENDS = Spell("Friends", level=1, _class=WIZARD)
-WIZARD_LIGHT = Spell("Light", level=1, _class=WIZARD)
-WIZARD_MAGE_HAND = Spell("Mage_Hand", level=1, _class=WIZARD)
-WIZARD_MENDING = Spell("Mending", level=1, _class=WIZARD)
-WIZARD_MESSAGE = Spell("Message", level=1, _class=WIZARD)
-WIZARD_MINOR_ILLUSION = Spell("Minor_Illusion", level=1, _class=WIZARD)
-WIZARD_POISON_SPRAY = Spell("Poison_Spray", level=1, _class=WIZARD)
-WIZARD_PRESTIDIGITATION = Spell("Prestidigitation", level=1, _class=WIZARD)
-WIZARD_RAY_OF_FROST = Spell("Ray_of_Frost", level=1, _class=WIZARD)
-WIZARD_SHOCKING_GRASP = Spell("Shocking_Grasp", level=1, _class=WIZARD)
-WIZARD_TRUE_STRIKE = Spell("True_Strike", level=1, _class=WIZARD)
-# WIZARD FIRST LEVEL
-WIZARD_ALARM = Spell("Alarm", level=1, _class=WIZARD)
-WIZARD_BURNING_HANDS = Spell("Burning_Hands", level=1, _class=WIZARD)
-WIZARD_CHARM_PERSON = Spell("Charm_Person", level=1, _class=WIZARD)
-WIZARD_CHROMATIC_ORB = Spell("Chromatic_Orb", level=1, _class=WIZARD)
-WIZARD_COLOR_SPRAY = Spell("Color_Spray", level=1, _class=WIZARD)
-WIZARD_COMPREHEND_LANGUAGES = Spell("Comprehend_Languages", level=1, _class=WIZARD)
-WIZARD_DETECT_MAGIC = Spell("Detect_Magic", level=1, _class=WIZARD)
-WIZARD_DISGUISE_SELF = Spell("Disguise_Self", level=1, _class=WIZARD)
-WIZARD_EXPEDITIOUS_RETREAT = Spell("Expeditious_Retreat", level=1, _class=WIZARD)
-WIZARD_FALSE_LIFE = Spell("False_Life", level=1, _class=WIZARD)
-WIZARD_FEATHER_FALL = Spell("Feather_Fall", level=1, _class=WIZARD)
-WIZARD_FIND_FAMILIAR = Spell("Find_Familiar", level=1, _class=WIZARD)
-WIZARD_FOG_CLOUD = Spell("Fog_Cloud", level=1, _class=WIZARD)
-WIZARD_GREASE = Spell("Grease", level=1, _class=WIZARD)
-WIZARD_IDENTIFY = Spell("Identify", level=1, _class=WIZARD)
-WIZARD_ILLUSORY_SCRIPT = Spell("Illusory_Script", level=1, _class=WIZARD)
-WIZARD_JUMP = Spell("Jump", level=1, _class=WIZARD)
-WIZARD_LONGSTRIDER = Spell("Longstrider", level=1, _class=WIZARD)
-WIZARD_MAGE_ARMOR = Spell("Mage_Armor", level=1, _class=WIZARD)
-WIZARD_MAGIC_MISSILE = Spell("Magic_Missile", level=1, _class=WIZARD)
-WIZARD_PROTECTION_FROM_EVIL_AND_GOOD = Spell("Protection_from_Evil_and_Good", level=1, _class=WIZARD)
-WIZARD_RAY_OF_SICKNESS = Spell("Ray_of_Sickness", level=1, _class=WIZARD)
-WIZARD_SHIELD = Spell("Shield", level=1, _class=WIZARD)
-WIZARD_SLEEP = Spell("Sleep", level=1, _class=WIZARD)
-WIZARD_TASHAS_HIDEOUS_LAUGHTER = Spell("Tashas_Hideous_Laughter", level=1, _class=WIZARD)
-WIZARD_TENSERS_FLOATING_DISK = Spell("Tensers_Floating_Disk", level=1, _class=WIZARD)
-WIZARD_THUNDERWAVE = Spell("Thunderwave", level=1, _class=WIZARD)
-WIZARD_UNSEEN_SERVANT = Spell("Unseen_Servant", level=1, _class=WIZARD)
-WIZARD_WITCH_BOLT = Spell("Witch_Bolt", level=1, _class=WIZARD)
-# WIZARD LISTS
-WIZARD_CANTRIPS = makeSpellList(WIZARD, level=0)
-WIZARD_FIRST_LEVEL = makeSpellList(WIZARD, level=1)
 
 """
     RACE MECHANICS
