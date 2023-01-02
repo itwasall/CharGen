@@ -23,7 +23,7 @@ class PartyMember:
         self._class = Core.DEFAULT_CLASS
         self._subclass = None
         self.level = 1
-        self.languages = [Core.DEFAULT_LANGUAGE]
+        self.languages = []
         """ Ability Scores """
         self.STR = Core.STR
         self.DEX = Core.DEX
@@ -89,6 +89,22 @@ class PartyMember:
 
     def getStats(self):
         print(f"STR: {self.ability_scores['STR'].value} || DEX: {self.ability_scores['DEX'].value} || CON: {self.ability_scores['CON'].value}\nINT: {self.ability_scores['INT'].value} || WIS: {self.ability_scores['WIS'].value} || CHA: {self.ability_scores['CHA'].value}")
+
+    def getEquipment(self):
+        self.equipment = [equip.name if not isinstance(equip, str) else equip for equip in self.equipment]
+        for item in self.equipment:
+            if self.equipment.count(item) > 1:
+                new_item = f"{item} x{self.equipment.count(item)}"
+                while item in self.equipment:
+                    self.equipment.pop(self.equipment.index(item))
+                self.equipment.append(new_item)
+        self.equipment.sort()
+        print(self.equipment)
+
+    def getSpells(self):
+        print(f"Cantrips: {self.cantrips}")
+        print(f"Known spells: {self.spells}")
+        print(f"Prepared: {self.spell_slots}")
 
 global CHARACTER
 CHARACTER = PartyMember('Jeff')
@@ -173,6 +189,8 @@ def genLanguage(languages, banlist=None):
     return return_languages
 
 def raiseAbilityScore(data: tuple):
+    print(CHARACTER.race)
+    print(data)
     match data[0]:
         case Core.STR:
             CHARACTER.ability_scores['STR'] += data[1]
@@ -193,8 +211,10 @@ def genRaceAttributeBonus(data):
             raiseAbilityScore(item)
         elif isinstance(item, dict):
             unpacked_item = unpackChoice(item)
-            print(unpacked_item)
-            raiseAbilityScore(unpackChoice(item)[0])
+            if isinstance(unpacked_item, list):
+                genRaceAttributeBonus(unpacked_item)
+            else:
+                raiseAbilityScore(unpackChoice(item))
 
 def genSpells(spells = None, spell_slots = None, _class = None):
     # Druid exception (the first one like 1600 lines in :c )
@@ -212,7 +232,7 @@ def genSpells(spells = None, spell_slots = None, _class = None):
         #   of 's', meaning the 'spell_' of 'spell_slots' will be dealt with before
         #   'spells'. Can't allocated spells to spell slots if you've no spells to do so
         #   with, so hurry, more shitey code : ) 
-        if len(CHARACTER.spells['1st Level']) == 0:
+        if not isinstance(CHARACTER.spells, list) and len(CHARACTER.spells['1st Level']) == 0:
             if isinstance(_class.spells['1st Level'], dict):
                 CHARACTER.spells = unpackChoice(_class.spells['1st Level'])
             elif isinstance(_class.spells['1st Level'], list):
@@ -230,10 +250,62 @@ def genSkills(_class):
     for skill in skills:
         CHARACTER.SKILLS[skill.name].prof = True
 
+def genSubClass(subclass):
+    char_subclass_attributes = attrAsDict(subclass)
+    attributes_generated = []
+
+    for attr in char_subclass_attributes:
+        match list(attr.keys())[0]:
+            case 'spells':
+                genSpells(spells=attr['spells'])
+                # CHARACTER.spells = [spell for spell in subclass.spells]
+                prepped_spells = []
+                if not isinstance(CHARACTER.spell_slots, list):
+                    if isinstance(CHARACTER.spell_slots['1st Level'], list):
+                        CHARACTER.spell_slots['1st Level'].append(prepped_spells)
+                    else:
+                        for i in range(CHARACTER.spell_slots['1st Level']):
+                            prepped_spells.append(random.choice(CHARACTER.spells))
+                            CHARACTER.spell_slots = prepped_spells
+            case 'profs':
+                for key in attr['profs'].keys():
+                    match key:
+                        case 'Weapon':
+                            try:
+                                CHARACTER.proficiencies['Weapon'].append(attr['profs']['Weapon'])
+                            except:
+                                CHARACTER.proficiencies['Weapon'] = attr['profs']['Weapon']
+                        case 'Armor':
+                            try:
+                                CHARACTER.proficiencies['Armor'].append(attr['profs']['Armor'])
+                            except:
+                                CHARACTER.proficiencies['Armor'] = attr['profs']['Armor']
+                        case 'Skill':
+                            skills = unpackChoice(attr['profs']['Skill'])
+                            for skill in skills:
+                                CHARACTER.SKILLS[skill.name].prof=True
+            case 'language':
+                langs = unpackChoice(attr['language'])
+                for lang in langs:
+                    if lang not in CHARACTER.languages:
+                        CHARACTER.languages.append(lang)
+                    else:
+                        pass
+            case 'cantrip':
+                if isinstance(attr['cantrip'], dict):
+                    cantrips = unpackChoice(attr['cantrip'])
+                else:
+                    cantrips = attr['cantrip']
+                for cantrip in cantrips:
+                    CHARACTER.cantrips.append(cantrip)
+
+
+
+
 def genClass(ability_score_rolls):
     char_class = random.choice(CLASSES)
-    print(char_class.name)
-
+    # char_class = Core.CLERIC
+    CHARACTER._class = char_class
     top_rolls = ability_score_rolls[0:2]
     bottom_rolls = ability_score_rolls[2:]
     
@@ -250,9 +322,6 @@ def genClass(ability_score_rolls):
                 CHARACTER.saving_throws = attr['saving_throws']
                 top_skill = random.choice(CHARACTER.saving_throws)
                 for ab in [i for i in CHARACTER.ability_scores.keys()]:
-                    print(ab)
-                    print(top_rolls, bottom_rolls)
-                    CHARACTER.getStats()
                     if ab == top_skill.name and ab in [i.name for i in CHARACTER.saving_throws]:
                         CHARACTER.ability_scores[ab] += top_rolls[0]
                     elif ab != top_skill.name and ab in [i.name for i in CHARACTER.saving_throws]:
@@ -282,14 +351,17 @@ def genClass(ability_score_rolls):
                 attributes_generated.append('equipment_pack')
                 if isinstance(attr['equipment_pack'], list):
                     CHARACTER.equipment += attr['equipment_pack']
-                elif isinstance(attr['equipment_pack'], list):
-                    CHARACTER.equipment += unpackChoice(attr['equipment_pack'])
+                elif isinstance(attr['equipment_pack'], dict):
+                    CHARACTER.equipment += unpackChoice(attr['equipment_pack'])[0]
             case 'cantrips':
                 attributes_generated.append('cantrips')
                 CHARACTER.cantrips = unpackChoice(attr['cantrips'])
             case 'spells':
                 attributes_generated.append('spells')
-                CHARACTER.spells = genSpells(spells=attr['spells'])
+                if isinstance(CHARACTER.spells, list) or len(CHARACTER.spells['1st Level']) != 0:
+                    pass
+                else:
+                    CHARACTER.spells = genSpells(spells=attr['spells'])
             case 'spell_slots':
                 attributes_generated.append('spell_slots')
                 CHARACTER.spell_slots = genSpells(spell_slots=attr['spell_slots']['1st Level'], _class=char_class)
@@ -297,20 +369,22 @@ def genClass(ability_score_rolls):
                 attributes_generated.append('spellcasting_ab')
                 CHARACTER.spellcasting_ability_score = attr['spellcasting_ab']
                 CHARACTER.spell_save_dc = 0
+            case 'requires_subclass':
+                subclasses = [subclass for subclass in Core._SubClass.items if subclass._class == char_class]
+                CHARACTER.subclass = random.choice(subclasses)
+                genSubClass(CHARACTER.subclass)
+
             case _:
                 attributes_generated.append('_getattr')
                 attributes_generated.append('items')
                 attributes_generated.append('name')
 
 
-    print("generated: ", attributes_generated)
-    print("not generated: ", [list(attr.keys())[0] for attr in char_class_attributes if list(attr.keys())[0] not in attributes_generated])
 
 
 def genRace(subrace=None):
     if subrace == None:
-        # char_race = random.choice(Core.RACES)
-        char_race = Core.ELF
+        char_race = random.choice(Core.RACES)
         CHARACTER.race = char_race
     else:
         char_race = subrace
@@ -347,6 +421,18 @@ def genRace(subrace=None):
                 CHARACTER.languages = list(Core.flatten(genLanguage(char_race.language)))
             case 'racial_prof':
                 attributes_generated.append('racial_prof')
+                for key in attr['racial_prof'].keys():
+                    match key:
+                        case 'Weapon':
+                            try:
+                                CHARACTER.proficiencies['Weapon'].append(attr['racial_prof']['Weapon'])
+                            except: 
+                                CHARACTER.proficiencies['Weapon'] = attr['racial_prof']['Weapon']
+                        case 'Armor':
+                            try:
+                                CHARACTER.proficiencies['Armor'].append(attr['racial_prof']['Armor'])
+                            except:
+                                CHARACTER.proficiencies['Armor'] = attr['racial_prof']['Armor']
                 CHARACTER.proficiencies = attr['racial_prof']
             case 'ancestory':
                 attributes_generated.append('ancestory')
@@ -365,6 +451,60 @@ def genRace(subrace=None):
                     char_alignment = genAlignment((False, False))
                 if 'size' not in attributes_generated:
                     char_size = "SIZE NOT FOUND"
+
+def genBackground():
+    char_bg = random.choice(BACKGROUNDS)
+    char_bg_attributes = attrAsDict(char_bg)
+
+    CHARACTER.background = char_bg
+
+    attributes_generated = []
+
+    for attr in char_bg_attributes:
+        match list(attr.keys())[0]:
+            case 'skill_profs':
+                attributes_generated.append('skill_profs')
+                for skill in attr['skill_profs']:
+                    CHARACTER.SKILLS[skill.name].prof = True
+            case 'tool_profs':
+                if len(attr['tool_profs']) == 0:
+                    pass
+                CHARACTER.proficiencies['Tool'] = []
+                attributes_generated.append('tool_profs')
+                for tool in attr['tool_profs']:
+                    if isinstance(tool, dict):
+                        tool = unpackChoice(tool)[0]
+                    if tool in CHARACTER.proficiencies['Tool']:
+                        pass
+                    else:
+                        CHARACTER.proficiencies['Tool'].append(tool)
+            case 'language':
+                attributes_generated.append('langauge')
+                for lang in attr['language']:
+                    if isinstance(lang, dict):
+                        lang = unpackChoice(lang)[0]
+                    if lang in CHARACTER.languages:
+                        pass
+                    else:
+                        CHARACTER.languages.append(lang)
+            case 'equipment':
+                attributes_generated.append('equipment')
+                for equip in attr['equipment']:
+                    if isinstance(equip, dict):
+                        equip = unpackChoice(equip)[0]
+                    CHARACTER.equipment.append(equip)
+            case 'money':
+                attributes_generated.append('money')
+                CHARACTER.money += attr['money'][0]
+            case _:
+                attributes_generated.append('_getattr')
+                attributes_generated.append('name')
+
+
+
+    
+
+
         
 
 def genCharacter():
@@ -380,6 +520,7 @@ def genCharacter():
 
     genRace()
     genClass(ability_score_rolls)
+    genBackground()
 
     # char_race = random.choice(RACES)
     char_race = [i for i in RACES if i.name == 'Dragonborn'][0]
@@ -391,7 +532,12 @@ def genCharacter():
 #    print(char_race, char_subrace)
     char_class = random.choice(CLASSES)
     # print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
+    print(CHARACTER.race.name)
+    print(CHARACTER._class.name)
+    print(CHARACTER.background.name)
     CHARACTER.getStats()
+    CHARACTER.getEquipment()
+    CHARACTER.getSpells()
     return "nice"
 
-print(genCharacter())
+genCharacter()

@@ -199,7 +199,7 @@ class AbilityScore:
             return f"{self.name} - {self.value} ({self.modifier})"
 
     def __add__(self, value:int):
-        self.value = self.value + value
+        self.value += value
         return AbilityScore(self.name, self.value)
 
     def __iadd__(self, value):
@@ -1036,6 +1036,7 @@ CLERIC.equipment = [ {'Choose 1': [MACE, WARHAMMER]}, {'Choose 1': [SCALE_MAIL, 
 CLERIC.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 CLERIC.cantrips = {'Choose 3': CLERIC_CANTRIPS}
 CLERIC.spells = {'1st Level': {'Choose 2': CLERIC_FIRST_LEVEL}}
+CLERIC.spell_slots = {'1st Level': 2}
 CLERIC.spellcasting_ab = WIS
 CLERIC.requires_subclass = True
 
@@ -1290,7 +1291,7 @@ DRAGON_ANCESTORIES = [item for item in RaceMechanic.items if item.category=='Dra
     RACE
 """
 DRAGONBORN = Race("Dragonborn", ab_score=[(STR, 2), (CON, 1)], age=[15, 80], alignment=("None", "Good"), size='Medium', speed=30, language=[COMMON, DRACONIC], ancestory={'Choose 1': DRAGON_ANCESTORIES}, traits=['Breath Weapon'])
-DWARF = Race("Dwarf", ab_score=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), size='Small', speed=25, language=[COMMON, DWARVISH], racial_prof={'Weapon': [BATTLEAXE, HANDAXE, LIGHT_HAMMER, WARHAMMER], 'Tool': {'Choose 1': [SMITHS_TOOLS, BREWERS_SUPPLIES, MASONS_TOOLS]}})
+DWARF = Race("Dwarf", ab_score=[(CON, 2)], age=[50, 350], alignment=("Lawful", "None"), size='Small', speed=25, language=[COMMON, DWARVISH], racial_prof={'Weapon': [BATTLEAXE, HANDAXE, LIGHT_HAMMER, WARHAMMER], 'Tool': {'Choose 1': [SMITHS_TOOLS, BREWERS_SUPPLIES, MASONS_TOOLS]}}, has_subrace=True)
 ELF = Race("Elf", ab_score=[(DEX, 2)], age=[100, 750], alignment=("Chaotic", "None"), size='Medium', speed=30, language=[COMMON, ELVISH], racial_prof={'Skill': [PERCEPTION]}, darkvision=60, has_subrace=True)
 GNOME = Race("Gnome", ab_score=[(INT, 2)], age=[40, 350], alignment=("None", "Good"), size='Small', speed=25, language=[COMMON, GNOMISH], darkvision=60, has_subrace=True)
 HALFLING = Race("Halfling", ab_score=[(DEX, 2)], age=[20, 150], alignment=("Lawful", "Good"), size='Small', speed=25, language=[COMMON, HALFLING], has_subrace=True)
