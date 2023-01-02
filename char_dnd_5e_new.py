@@ -31,6 +31,7 @@ class PartyMember:
         self.INT = Core.INT
         self.WIS = Core.WIS
         self.CHA = Core.CHA
+        self.ability_scores = {'STR': self.STR, 'DEX': self.DEX, 'CON': self.CON, 'INT': self.INT, 'WIS': self.WIS, 'CHA': self.CHA}
         """ Skills """
         self.SKILLS = {
             # STR
@@ -85,6 +86,9 @@ class PartyMember:
 
     def __format__(self):
         return self.name
+
+    def getStats(self):
+        print(f"STR: {self.ability_scores['STR'].value} || DEX: {self.ability_scores['DEX'].value} || CON: {self.ability_scores['CON'].value}\nINT: {self.ability_scores['INT'].value} || WIS: {self.ability_scores['WIS'].value} || CHA: {self.ability_scores['CHA'].value}")
 
 global CHARACTER
 CHARACTER = PartyMember('Jeff')
@@ -171,17 +175,17 @@ def genLanguage(languages, banlist=None):
 def raiseAbilityScore(data: tuple):
     match data[0]:
         case Core.STR:
-            CHARACTER.STR += data[1]
+            CHARACTER.ability_scores['STR'] += data[1]
         case Core.DEX:
-            CHARACTER.DEX += data[1]
+            CHARACTER.ability_scores['DEX'] += data[1]
         case Core.CON:
-            CHARACTER.CON += data[1]
+            CHARACTER.ability_scores['CON'] += data[1]
         case Core.INT:
-            CHARACTER.INT += data[1]
+            CHARACTER.ability_scores['INT'] += data[1]
         case Core.WIS:
-            CHARACTER.WIS += data[1]
+            CHARACTER.ability_scores['WIS'] += data[1]
         case Core.CHA:
-            CHARACTER.CHA += data[1]
+            CHARACTER.ability_scores['CHA'] += data[1]
 
 def genRaceAttributeBonus(data):
     for item in data:
@@ -226,10 +230,13 @@ def genSkills(_class):
     for skill in skills:
         CHARACTER.SKILLS[skill.name].prof = True
 
-def genClass():
+def genClass(ability_score_rolls):
     char_class = random.choice(CLASSES)
     print(char_class.name)
 
+    top_rolls = ability_score_rolls[0:2]
+    bottom_rolls = ability_score_rolls[2:]
+    
     char_class_attributes = attrAsDict(char_class)
     attributes_generated = []
 
@@ -237,8 +244,24 @@ def genClass():
         match list(attr.keys())[0]:
             case 'proficiencies':
                 attributes_generated.append('proficiencies')
+
             case 'saving_throws':
                 attributes_generated.append('saving_throws')
+                CHARACTER.saving_throws = attr['saving_throws']
+                top_skill = random.choice(CHARACTER.saving_throws)
+                for ab in [i for i in CHARACTER.ability_scores.keys()]:
+                    print(ab)
+                    print(top_rolls, bottom_rolls)
+                    CHARACTER.getStats()
+                    if ab == top_skill.name and ab in [i.name for i in CHARACTER.saving_throws]:
+                        CHARACTER.ability_scores[ab] += top_rolls[0]
+                    elif ab != top_skill.name and ab in [i.name for i in CHARACTER.saving_throws]:
+                        CHARACTER.ability_scores[ab] += top_rolls[1]
+                    else:
+                        idx = random.randint(0, len(bottom_rolls)-1)
+                        CHARACTER.ability_scores[ab] += bottom_rolls[idx]
+                        bottom_rolls.pop(idx)
+
             case 'skills':
                 attributes_generated.append('skills')
                 genSkills(char_class)
@@ -349,14 +372,14 @@ def genCharacter():
     ability_score_rolls = []
     for _ in range(6):
         rolls = diceRoll("4d6", summed=False)
-        sortReverse(rolls)
+        rolls = sortReverse(rolls)
         rolls.pop()
-        ability_score_rolls.append(rolls)
+        ability_score_rolls.append(sum(rolls))
     
-    ability_score_rolls.sort()
+    ability_score_rolls = sortReverse(ability_score_rolls)
 
     genRace()
-    genClass()
+    genClass(ability_score_rolls)
 
     # char_race = random.choice(RACES)
     char_race = [i for i in RACES if i.name == 'Dragonborn'][0]
@@ -368,7 +391,7 @@ def genCharacter():
 #    print(char_race, char_subrace)
     char_class = random.choice(CLASSES)
     # print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
-    print(CHARACTER.hit_points)
+    CHARACTER.getStats()
     return "nice"
 
 print(genCharacter())
