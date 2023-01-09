@@ -335,9 +335,9 @@ def run_demo():
     i_item = choose_interesting_item()
     i_item.name = i_item.name.lower()
     if ancestory == ORC:
-        print(f'You are an {ancestory.name} {profession.name} with {i_item.name}')
+        print(f'You are an {ancestory.name} {profession.name} with {i_item.name} as a keepsake')
     else:
-        print(f'You are a {ancestory.name} {profession.name} with {i_item.name}')
+        print(f'You are a {ancestory.name} {profession.name} with {i_item.name} as a keepsake')
 
 
 for i in range(10):
