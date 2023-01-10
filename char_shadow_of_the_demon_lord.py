@@ -1,4 +1,10 @@
 import random
+"""
+TODO:
+    - Insert random.choice's in Interesting Item's where applicable 
+    - Flesh out Ancestries
+    - Flesh out Novice/Expert/Master Paths
+"""
 
 def dice(dicestring):
     throws, sides = dicestring.split("d")
