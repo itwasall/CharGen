@@ -6,6 +6,9 @@ TODO:
     - Flesh out Novice/Expert/Master Paths
 """
 
+def attrAsDict(_class):
+    return [{i: _class._getattr(i)} for i in dir(_class) if not i.startswith("__")]
+
 def dice(dicestring):
     throws, sides = dicestring.split("d")
     return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
@@ -84,18 +87,53 @@ INTELLECT = AttributeScore('Intellect')
 WILL = AttributeScore('Will')
 
 STAT_BLOCK = AttributeBlock(STRENGTH, AGILITY, INTELLECT, WILL)
-print(STAT_BLOCK)
+# print(STAT_BLOCK)
 
 """
     ANCESTORIES
 """
-HUMAN = Ancestory("Human")
-CHANGELING = Ancestory("Changling")
-CLOCKWORK = Ancestory("Clockwork")
-DWARF = Ancestory("Dwarf")
-GOBLIN = Ancestory("Goblin")
-ORC = Ancestory("Orc")
+# ssb = Starting_Stat_Block
+HUMAN = Ancestory("Human", height=[3, 7], weight=[50, 500], age=[18, 70], ssb=[10, 10, 10, 10], stat_increase={'Any': 1}, perception={'Intellect': '='}, defence={'Agility': '='}, health={'Strength': '='}, healing_rate={'Health': ['1/4', 'down']}, size=[0.5, 1], speed=10, power=0, damage=0, insanity=0, corruption=0, language=['Common', {'Choose': '1'}])
+CHANGELING = Ancestory("Changling", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
+CLOCKWORK = Ancestory("Clockwork", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
+DWARF = Ancestory("Dwarf", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
+GOBLIN = Ancestory("Goblin", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
+ORC = Ancestory("Orc", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
 ANCESTORIES = [HUMAN, CHANGELING, CLOCKWORK, DWARF, GOBLIN, ORC]
+
+def gen_ancestory_demo():
+    an = random.choice(ANCESTORIES)
+    an_attr = attrAsDict(an)
+    attributes_generated = []
+
+    for attr in an_attr:
+        match list(attr.keys())[0]:
+            case 'ssb':
+                pass
+            case 'stat_increase':
+                pass
+            case 'perception':
+                pass
+            case 'defence':
+                pass
+            case 'health':
+                pass
+            case 'healing_rate':
+                pass
+            case 'size':
+                pass
+            case 'speed':
+                pass
+            case 'power':
+                pass
+            case 'damage':
+                pass
+            case 'insanity':
+                pass
+            case 'corruption':
+                pass
+            case 'language':
+                pass
 
 """
     PROFESSIONS
@@ -287,10 +325,10 @@ TABLE3_ITEM9 = InterestingItem(f"A {random.choice(['light', 'heavy'])} shield wi
 TABLE3_ITEM10= InterestingItem(f"A fancy set of clothes bearing a curious stain.")
 TABLE3_ITEM11= InterestingItem(f"A personal servant.")
 TABLE3_ITEM12= InterestingItem(f"A silver holy symbol or a fine religious icon.")
-TABLE3_ITEM13= InterestingItem(f"A bag of {dice('2d6')} rocks, acorns, severed heads, or yummy mushrooms.")
+TABLE3_ITEM13= InterestingItem(f"A bag of {dice('2d6')} {random.choice(['rocks', 'acorns', 'severed heads', 'yummy mushrooms'])}.")
 TABLE3_ITEM14= InterestingItem(f"A music box that plays a sad, sad song when opened.")
 TABLE3_ITEM15= InterestingItem(f"A bag of 100 marbles.")
-TABLE3_ITEM16= InterestingItem(f"A glass jar filled with saliva, a sack filled with rotting chicken parts, or an unseemly scar.")
+TABLE3_ITEM16= InterestingItem(f"A glass jar filled with {random.choice(['saliva', 'a sack filled with rotting chicken parts', 'an unseemly scar'])}.")
 TABLE3_ITEM17= InterestingItem(f"A small bag containing 3d6 teeth, a necklace of 1d6 ears, or {dice('1d6')} severed heads tied together by their hair.")
 TABLE3_ITEM18= InterestingItem(f"A newborn baby that might or might not be yours.")
 TABLE3_ITEM19= InterestingItem(f"A box of six fine white candles.")
@@ -301,12 +339,12 @@ TABLE4_ITEM1 = InterestingItem(f"A glass jar holding a beetle covered in glowing
 TABLE4_ITEM2 = InterestingItem(f"A pair of boots that grants you 1 boon for rolls to sneak or a gray cloak that grants you 1 boon for rolls to hide.")
 TABLE4_ITEM3 = InterestingItem(f"A glass jar containing a strange organ suspended in alcohol.")
 TABLE4_ITEM4 = InterestingItem(f"A tiny glass cage.")
-TABLE4_ITEM5 = InterestingItem(f"A box containing 1d6 bottles of ink, each a different color.")
+TABLE4_ITEM5 = InterestingItem(f"A box containing {sum([dice('1d6'), 1])} bottles of ink, each a different color.")
 TABLE4_ITEM6 = InterestingItem(f"A tiny inert mechanical owl.")
 TABLE4_ITEM7 = InterestingItem(f"A length of rope, 20 yards long, that cannot be cut.")
 TABLE4_ITEM8 = InterestingItem(f"A badge from a mercenary company.")
-TABLE4_ITEM9 = InterestingItem(f"A box of cigars or a pipe and pouch of tobacco.")
-TABLE4_ITEM10= InterestingItem(f"A medallion depicting a hideous woman’s face.")
+TABLE4_ITEM9 = InterestingItem(f"{random.choice(['A box of cigars', 'a pipe and pouch of tobacco'])}.")
+TABLE4_ITEM10= InterestingItem(f"A medallion depicting a hideous woman's face.")
 TABLE4_ITEM11= InterestingItem(f"A spiked collar, skin clamps, and a scourge.")
 TABLE4_ITEM12= InterestingItem(f"A ten-pound bag of flour.")
 TABLE4_ITEM13= InterestingItem(f"A bronze plate with a name scratched on its face.")
@@ -319,16 +357,16 @@ TABLE4_ITEM19= InterestingItem(f"A bottle labeled 'Eye of Newt.'")
 TABLE4_ITEM20= InterestingItem(f"A bag of beans.")
 ITEM_TABLE_4 = [TABLE4_ITEM1, TABLE4_ITEM2, TABLE4_ITEM3, TABLE4_ITEM4, TABLE4_ITEM5, TABLE4_ITEM6, TABLE4_ITEM7, TABLE4_ITEM8, TABLE4_ITEM9, TABLE4_ITEM10, TABLE4_ITEM11, TABLE4_ITEM12, TABLE4_ITEM13, TABLE4_ITEM14, TABLE4_ITEM15, TABLE4_ITEM16, TABLE4_ITEM17, TABLE4_ITEM18, TABLE4_ITEM19, TABLE4_ITEM20]
 # TABLE 5
-TABLE5_ITEM1 = InterestingItem(f"A jar of grease or a bottle of glue.")
+TABLE5_ITEM1 = InterestingItem(f"{random.choice(['A jar of grease', 'a bottle of glue'])}.")
 TABLE5_ITEM2 = InterestingItem(f"A glass globe filled with swirling mist.")
-TABLE5_ITEM3 = InterestingItem(f"A cloak with 2d20 pockets hidden in the lining.")
+TABLE5_ITEM3 = InterestingItem(f"A cloak with {dice('2d20')} pockets hidden in the lining.")
 TABLE5_ITEM4 = InterestingItem(f"A pair of spectacles that sometimes let you see through up to 1 inch of solid rock.")
 TABLE5_ITEM5 = InterestingItem(f"A small blue box that's bigger on the inside (twice normal capacity).")
 TABLE5_ITEM6 = InterestingItem(f"A small steel ball.")
 TABLE5_ITEM7 = InterestingItem(f"A petrified hand that twitches in the light of a full moon.")
 TABLE5_ITEM8 = InterestingItem(f"The true name of a very minor devil.")
 TABLE5_ITEM9 = InterestingItem(f"An animated mouse skeleton.")
-TABLE5_ITEM10= InterestingItem(f"A weapon of the GM's choice that always emits light in a 1-yard radius.")
+TABLE5_ITEM10= InterestingItem(f"A weapon that always emits light in a 1-yard radius.")
 TABLE5_ITEM11= InterestingItem(f"A pouch that holds {sum([dice('1d6'), 1])} pinches of dust that, when sprinkled over stone, causes up to a 1-yard cube of material to become soft clay.")
 TABLE5_ITEM12= InterestingItem(f"A jar of paint that refills itself once each day at dawn.")
 TABLE5_ITEM13= InterestingItem(f"A tiny metal ball that when released floats 1 inch above any solid surface.")
@@ -351,7 +389,7 @@ TABLE6_ITEM7 = InterestingItem(f"A recurring and disturbing dream.")
 TABLE6_ITEM8 = InterestingItem(f"A trunk filled with body parts.")
 TABLE6_ITEM9 = InterestingItem(f"A wagon or cart pulled by a sad donkey.")
 TABLE6_ITEM10= InterestingItem(f"Three small white mice that whisper strange things to you while you sleep.")
-TABLE6_ITEM11= InterestingItem(f"A tremor, a facial tic, or an irritating laugh.")
+TABLE6_ITEM11= InterestingItem(f"{random.choice(['A tremor', 'a facial tic', 'an irritating laugh'])}.")
 TABLE6_ITEM12= InterestingItem(f"A thermometer.")
 TABLE6_ITEM13= InterestingItem(f"A collapsible pole, 3 yards long.")
 TABLE6_ITEM14= InterestingItem(f"A shadow you cast that never quite matches your movements.")
@@ -485,5 +523,5 @@ def run_demo():
 
 
 for i in range(10):
-    # run_demo()
+    run_demo()
     pass
