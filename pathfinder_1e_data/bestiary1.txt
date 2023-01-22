@@ -164,7 +164,6 @@ Base Atk +17; CMB +26; CMD 40
 Feats Blind-Fight, Cleave, Great Fortitude, Improved 
 Initiative, Improved Sunder, Iron Will, Lightning Reflexes, 
 Power Attack, Toughness
-
 Skills Acrobatics +24, Craft (any one) +26, Diplomacy +27, Fly 
 +26, Heal +24, Intimidate +27, Knowledge (history) +23, 
 Knowledge (planes) +26, Knowledge (religion) +26, Perception 
@@ -7659,83 +7658,7 @@ Environment temperate swamps
 Organization solitary, pair, or grove (3–6)
 Treasure incidental
 SPECIAL ABILITIES
-Engulf (Ex) If a giant flytrap begins its turn 
-with an opponent at least two size categories 
-smaller than itself grappled in one of its 
-mouths, it can close its jaws completely 
-around the foe by making a new combat 
-maneuver check (as though attempting 
-to pin the foe). If it succeeds, it engulfs 
-the prey and inflicts 1d8+7 points of damage 
-and 2d6 acid damage as the cavity 
-floods with digestive enzymes. 
-The seal formed is airtight, so 
-an engulfed creature risks 
-suffocation. Engulf is a 
-special form of pinning, 
-and an engulfed 
-creature can 
-escape in the 
-
-same way as he can from being pinned, but since an 
-engulfed creature is contained wholly inside the plant’s 
-jaws, the flytrap’s victim cannot be targeted by effects or 
-attacks that require line of sight or line of effect. A giant 
-flytrap that is grappling or pinning a foe cannot attack other 
-targets with that bite, but is not otherwise hindered.
-A hardy plant that grows in areas with poor soil but 
-abundant animal life, this dangerous predator is an 
-immense version of its more common (and much smaller) 
-kin. Whereas the smaller f lytraps supplement their 
-growth by catching insects, the giant f lytrap does the 
-same with animals, humanoids, and anything else foolish 
-enough to draw too near. Local legends call this plant 
-names like “mancatcher,” “snapperjaw plant,” “dragonleaf 
-plant,” “cowbiter,” and “green gulper,” but adventurers 
-know it simply as the giant f lytrap.
-As the giant f lytrap’s prey are generally much smarter 
-than insects, this huge plant has evolved into a much 
-more aggressive hunter than its smaller brethren. It 
-can lumber slowly along the ground, using its 
-writhing roots like tentacles to relocate to 
-more populous hunting grounds, and is quite 
-canny at blending in with the surrounding 
-foliage. A giant f lytrap’s jaws and stalks are 
-swift-moving—it reaches out and snaps at 
-passersby with lightning speed. The 
-plant itself even has a modicum 
-of intelligence, and is capable of 
-limited tactical choices, such as 
-knowing when to break off an 
-attack against a powerful foe.
-While most giant f lytraps have 
-four sets of jaws, some can have 
-as few as one, and others eight or more. 
-As a general rule, you should increase a giant 
-f lytrap’s HD by 2 and its natural armor bonus by +1 for 
-each additional bite attack you give it, increasing its 
-CR by +1 for each time you increase its attacks and 
-HD in this manner. If you increase the plant 
-by more than 3 or 4 bites (and thus by 
-more than 6 or 8 Hit Dice), 
-consult Table 1–1 on page 291 
-to make sure that the plant’s 
-CR remains appropriate.
-A giant f lytrap’s stalks are 
-20 feet long, but generally 
-sprawl relatively close to the 
-central mass—a set of full-grown 
-f lytrap jaws is 7 feet 
-across. A giant 
-f lytrap weighs 
-9,000 pounds.
-
-This towering plant is a mass of vines and barbs. Several stalks 
-are horribly mobile, each ending in a set of green, toothy jaws.
-
-134
-
-134
+Engulf (Ex) If a giant flytrap begins its turn with an opponent at least two size categories smaller than itself grappled in one of its mouths, it can close its jaws completely around the foe by making a new combat maneuver check (as though attempting to pin the foe). If it succeeds, it engulfs the prey and inflicts 1d8+7 points of damage and 2d6 acid damage as the cavity floods with digestive enzymes. The seal formed is airtight, so an engulfed creature risks suffocation. Engulf is a special form of pinning, and an engulfed creature can escape in the same way as he can from being pinned, but since an engulfed creature is contained wholly inside the plant’s jaws, the flytrap’s victim cannot be targeted by effects or attacks that require line of sight or line of effect. A giant flytrap that is grappling or pinning a foe cannot attack other targets with that bite, but is not otherwise hindered.
 
 Frog, Giant Frog, Poison
 gIAnT fROg CR 1
@@ -7764,13 +7687,7 @@ Environment temperate or warm marshes and aquatic
 Organization solitary, pair, or army (3–8)
 Treasure none
 SPECIAL ABILITIES
-Tongue (Ex) A giant frog’s tongue is a primary attack with reach 
-equal to three times the frog’s normal reach (15 feet for a 
-Medium giant frog). A giant frog’s tongue deals no damage on 
-a hit, but can be used to grab. A giant frog does not gain the 
-grappled condition while using its tongue in this manner.
-Giant frogs have razor-sharp teeth lining their 
-mouths. They are 6 feet long and weigh 200 pounds.
+Tongue (Ex) A giant frog’s tongue is a primary attack with reach equal to three times the frog’s normal reach (15 feet for a Medium giant frog). A giant frog’s tongue deals no damage on a hit, but can be used to grab. A giant frog does not gain the grappled condition while using its tongue in this manner. Giant frogs have razor-sharp teeth lining their mouths. They are 6 feet long and weigh 200 pounds.
 Frog Companions
 Starting Statistics: Size Medium; Speed 30 ft., 
 swim 30 ft.; AC +1 natural armor; Attack bite 
@@ -7809,31 +7726,7 @@ Environment warm marshes and aquatic
 Organization solitary, pair, or army (3–12)
 Treasure none
 SPECIAL ABILITIES
-Poison (Ex) Injury; save Fort DC 10; frequency 1/round for 6 
-rounds; effect 1d2 Con damage; cure 1 save
-Poisonous frogs are a bright green color, with additional 
-bright yellow, red, or blue markings. They are just over a 
-foot long and weigh 10 pounds. The poison of poisonous 
-frogs is often gathered by primitive tribes and 
-used to coat darts and arrows for hunting.
-You can make a larger poison frog either 
-by applying the giant simple template or 
-by giving a normal giant frog a poison 
-frog’s venomous bite.
-
-This creature looks like a normal frog, with moist, mottled, 
-blackish-green skin, but grown to truly monstrous size.
-
-This small frog is bright green and red, with electric-blue stripes 
-on its hind legs.
-
-FFllyyttrraapp,, GGiiaant–Frog
-
-nt–Frog
-
-135
-
-135
+Poison (Ex) Injury; save Fort DC 10; frequency 1/round for 6 rounds; effect 1d2 Con damage; cure 1 save Poisonous frogs are a bright green color, with additional bright yellow, red, or blue markings. They are just over a foot long and weigh 10 pounds. The poison of poisonous frogs is often gathered by primitive tribes and used to coat darts and arrows for hunting. You can make a larger poison frog either by applying the giant simple template or by giving a normal giant frog a poison frog’s venomous bite.
 
 Froghemoth
 fROghEMOTh CR 13
@@ -7867,58 +7760,8 @@ Environment temperate marsh
 Organization solitary
 Treasure standard
 SPECIAL ABILITIES
-All-Around Vision (Ex) A 
-froghemoth’s stalked eyes 
-allow it to see in all directions 
-at once. It cannot be flanked.
-Slowed by Electricity (Ex) 
-Although a froghemoth is 
-immune to damage 
-from electricity, 
-whenever 
-it would 
-otherwise 
-take such 
-damage it is 
-instead slowed for 1 
-round.
-
-This immense, three-eyed frog-like creature rears up on powerful 
-hind legs. In place of arms, four huge tentacles thrash and writhe.
-
-Thankfully rare, the froghemoth is one of the deep 
-swampland’s most ferocious and monstrous predators. 
-Capable of catching and eating dinosaurs and even 
-dragons, the froghemoth is a frighteningly effective 
-ambush hunter. When lying in wait for prey, the 
-immense creature secrets itself in deep marsh pools and 
-mud so that only the top of its eyestalk emerges from 
-the surface. The froghemoth’s eyes are incredibly keen, 
-but even more impressive is the monster’s tongue. Like 
-a snake, a froghemoth can “taste” its surroundings with 
-extraordinary accuracy.
-Scholars have long debated the origin of this strangely 
-immense predator, arguing that its unusual senses, 
-physiology, and resistances make it something more than 
-an animal. Druids and other servants of the natural world 
-agree—the froghemoth may act like an animal, but it never 
-seems fully “comfortable” in its environs. Perpetually ill-
-tempered, a froghemoth often seems to kill simply for the 
-sake of killing—vomiting up partially digested meals in 
-favor of new prey when it encounters such. It’s not unheard 
-of to find these strange creatures far from their normal 
-habitations, as if the marsh didn’t agree with them and 
-sent them wandering in search of a new home. Some sages 
-argue that the froghemoth isn’t from this world at all, and 
-that these wanderings are instinctual urges to seek out its 
-true home—a home not represented by the strange world 
-in which the beast finds itself trapped.
-A froghemoth is 22 feet tall at the shoulder and 
-weighs 16,000 pounds.
-
-136
-
-136
+All-Around Vision (Ex) A froghemoth’s stalked eyes allow it to see in all directions at once. It cannot be flanked.
+Slowed by Electricity (Ex) Although a froghemoth is immune to damage from electricity, whenever it would otherwise take such damage it is instead slowed for 1 round.
 
 Gargoyle
 gARgOyLE CR 4
@@ -7946,57 +7789,7 @@ Environment any
 Organization solitary, pair, or wing (3–12)
 Treasure standard
 SPECIAL ABILITIES
-freeze (Ex) A gargoyle can hold itself so still it appears to 
-be a statue. A gargoyle that uses freeze can take 
-20 on its Stealth check to hide in plain sight as a 
-stone statue.
-Gargoyles often appear to be winged stone 
-statues, for they can perch indefinitely without 
-moving, allowing them to surprise their foes. 
-Gargoyles tend toward obsessive-compulsive 
-behaviors that are as varied as their kind is plentiful. 
-Books, stolen trinkets, weapons, and grisly trophies 
-harvested from fallen foes are just a few examples of the 
-types of things a gargoyle might collect to decorate its lair 
-and territory. Gargoyles tend toward a solitary lifestyle, 
-though they sometimes form fearsome groups called 
-“wings” for protection and sport. In certain conditions, 
-a tribe of gargoyles might even ally with other creatures, 
-but even the most stable alliances with a gargoyle tribe 
-can collapse for the smallest of reasons—gargoyles 
-are nothing if not treacherous, petty, and vindictive. 
-Gargoyles have been known to dwell in the heart of the 
-largest of cities, crouching amid the decorations of stone 
-cathedrals and buildings where they hide in plain sight 
-
-Seemingly carved from a dark gray stone, this sinister crouching 
-humanoid resembles a horned, winged demon.
-
-FFrroogghheemmooth–Gargoyle
-
-th–Gargoyle
-
-by day and swoop down to feed on vagabonds, beggars, 
-and other unfortunates at night.
-The longer a tribe of gargoyles abides in a region of 
-ruins or buildings, the more its members come to resemble 
-that region’s architectural styles. The changes a gargoyle’s 
-appearance undergoes are slow and subtle, but over the 
-course of years, it can shift radically.
-One unusual variant of gargoyle dwells not amid 
-buildings and ruins but under the waves of the sea. These 
-creatures are known as kapoacinths—they have the same 
-basic statistics as normal gargoyles, save that they have the 
-aquatic subtype and their wings grant them a swim speed 
-of 60 feet (but are useless for actual f light). Kapoacinths 
-dwell in shallow, coastal regions where they can shamble 
-up from the surf to prey on those that reside there. They 
-are more likely to form wings, as kapoacinths prefer group 
-living to a solitary lifestyle.
-
-137
-
-137
+freeze (Ex) A gargoyle can hold itself so still it appears to be a statue. A gargoyle that uses freeze can take 20 on its Stealth check to hide in plain sight as a stone statue.
 
 Gelatinous Cube
 gELATInOUS CUBE CR 3
@@ -8023,69 +7816,9 @@ Organization solitary
 Treasure incidental
 SPECIAL ABILITIES
 Acid (Ex) A gelatinous cube’s acid does not harm metal or stone.
-Engulf (Ex) Although it moves slowly, a gelatinous cube can 
-simply engulf Large or smaller creatures in its path as a 
-standard action. It cannot make a slam attack during a 
-round in which it engulfs. The gelatinous cube merely has to 
-move over the opponents, affecting as many as it can cover. 
-Opponents can make attacks of opportunity against the cube, 
-but if they do so they are not entitled to a saving throw. Those 
-who do not attempt attacks of opportunity can attempt a DC 
-12 Reflex save to avoid being engulfed—on a success, they 
-are pushed back or aside (opponent’s choice) as the cube 
-moves forward. Engulfed creatures are subject to the cube’s 
-paralysis and acid, gain the pinned condition, are in danger 
-of suffocating, and are trapped within its body until they are 
-no longer pinned. The save DC is Strength-based.
-Paralysis (Ex) A gelatinous cube secretes an anesthetizing 
-slime. A target hit by a cube’s melee or engulf attack must 
-succeed on a DC 20 Fortitude save or be paralyzed for 3d6 
-rounds. The cube can automatically engulf a paralyzed 
-opponent. The save DC is Constitution-based.
-Transparent (Ex) Due to its lack of coloration, a gelatinous cube 
-is difficult to discern. A DC 15 Perception check is required to 
-notice a motionless gelatinous cube. Any creature 
-that fails to notice a gelatinous cube and walks 
-into it is automatically engulfed.
-
-One of the dungeon’s most unusual and specialized 
-predators, gelatinous cubes spend their existence mindlessly 
-roaming dungeon halls and dark caverns, swallowing up 
-organic material such as plants, refuse, carrion, and even 
-living creatures. Materials the cube cannot digest, such as 
-metal and stone, can eventually fill up the creature’s mass 
-with such detritus, and at times the creature may excrete 
-some of this material out of its body. Often the treasure and 
-possessions of past victims remain inside the gelatinous 
-cube, leaving a ghostly impression of their material remains.
-Sages believe these creatures evolved as a specialized 
-advancement of gray oozes. Some beings use gelatinous 
-cubes as protectors of dungeons and underground 
-fortifications, trapping the immense creatures in massive 
-metal crates and transporting them through either slave 
-power or magic to their final guard posts. They make 
-particularly efficient waste disposal mechanisims as 
-well—a tribe that can trap a gelatinous cube in a pit 
-or other area that it cannot climb out of can use it as a 
-midden or even a deadly trap, depending only on the 
-ingenuity of the creatures who caught it.
-Gelatinous cubes are generally 10 feet to a side and 
-weigh upward of 15,000 pounds, though subterranean 
-explorers report larger specimens trawling the deepest 
-caves and corridors. In locations with plentiful sources 
-of food, gelatinous cubes can exist for hundreds of years, 
-if not thousands. However, if denied organic material for 
-more than 6 months, a gelatinous cube begins shrinking. 
-Eventually this stresses its walls and the creature leaks 
-rapidly evaporating slimy liquid until its body collapses 
-and disappears completely.
-
-Bits of broken weapons, coins, and a partially digested skeleton 
-are visible inside this quivering cube of slime.
-
-138
-
-138
+Engulf (Ex) Although it moves slowly, a gelatinous cube can simply engulf Large or smaller creatures in its path as a standard action. It cannot make a slam attack during a round in which it engulfs. The gelatinous cube merely has to move over the opponents, affecting as many as it can cover. Opponents can make attacks of opportunity against the cube, but if they do so they are not entitled to a saving throw. Those who do not attempt attacks of opportunity can attempt a DC 12 Reflex save to avoid being engulfed—on a success, they are pushed back or aside (opponent’s choice) as the cube moves forward. Engulfed creatures are subject to the cube’s paralysis and acid, gain the pinned condition, are in danger of suffocating, and are trapped within its body until they are no longer pinned. The save DC is Strength-based.
+Paralysis (Ex) A gelatinous cube secretes an anesthetizing slime. A target hit by a cube’s melee or engulf attack must succeed on a DC 20 Fortitude save or be paralyzed for 3d6 rounds. The cube can automatically engulf a paralyzed opponent. The save DC is Constitution-based.
+Transparent (Ex) Due to its lack of coloration, a gelatinous cube is difficult to discern. A DC 15 Perception check is required to notice a motionless gelatinous cube. Any creature that fails to notice a gelatinous cube and walks into it is automatically engulfed.
 
 Genie, Djinni
 DjInnI CR 5
@@ -8125,42 +7858,7 @@ Environment any (Plane of Air)
 Organization solitary, pair, company (3–6), or band (7–10)
 Treasure standard (masterwork scimitar, other gear)
 SPECIAL ABILITIES
-Air Mastery (Ex) Airborne creatures take a –1 penalty on 
-attack and damage rolls against a djinni.
-The djinn (singular djinni) are genies from the Plane of 
-Air. They are said to be made of the stuff of clouds, with 
-the strength of the mightiest storms. A djinni is about 10 
-feet tall and weighs about 1,000 pounds. 
-Djinn disdain physical combat, preferring to use their 
-magical powers and aerial abilities against foes. A djinni 
-overmatched in combat usually takes f light and becomes 
-a whirlwind to harass those who follow. When faced with 
-
-This creature stands nearly twice as tall as a human, although its 
-lower torso trails away into a vortex of mist and wind.
-
-GGeellatinous Cube–Genie, Djinni
-
-atinous Cube–Genie, Djinni
-
-no other option than melee combat, most djinn prefer to 
-wield masterwork scimitars two-handed.
-Among other genies, djinn get along well with jann and 
-marids. They are frequently at odds with the shaitans, 
-and are sworn enemies of the efreet, despising these fiery 
-genies more than any other genie race. So legendary is 
-the conf lict between the efreet and the djinn that many 
-spellcasters attempt (to varying degrees of success) to 
-secure a djinni’s servitude by promising to aid the cause 
-against their hated enemies.
-A small percentage of djinn are noble. Noble djinn, often 
-called viziers, have 10 Hit Dice, Strength 23, and Charisma 
-17, and can grant three wishes to any being (nongenies only) 
-who captures them. Djinn nobles are CR 8.
-
-139
-
-139
+Air Mastery (Ex) Airborne creatures take a –1 penalty on attack and damage rolls against a djinni. The djinn (singular djinni) are genies from the Plane of Air. They are said to be made of the stuff of clouds, with the strength of the mightiest storms. A djinni is about 10 feet tall and weighs about 1,000 pounds. 
 
 Genie, Efreeti
 EfREETI CR 8
@@ -8203,42 +7901,8 @@ Organization solitary, pair, company (3–6), or
 band (7–12)
 Treasure standard (mwk falchion, other gear)
 SPECIAL ABILITIES
-Change Size (Sp) Twice per day, an efreeti 
-can magically change a creature’s size. This 
-works just like an enlarge person or reduce 
-person spell (the efreeti chooses when using 
-the ability), except that the ability can work 
-on the efreeti. A DC 13 Fortitude save negates 
-the effect. The save DC is Charisma-based. This is the 
-equivalent of a 2nd-level spell.
-
-heat (Ex) An efreeti’s body deals 1d6 points of fire damage 
-whenever it hits in melee, or in each round it grapples.
-The efreet (singular efreeti) are genies from the Plane of 
-Fire. An efreeti stands about 12 feet tall and weighs about 
-2,000 pounds. 
-Efreet have few allies among geniekind. They certainly 
-hate djinn, and attack them on sight. They hold an equally 
-strong enmity for marids, and view the jann as frail and 
-weak. Efreet often work closely with shaitans, yet even 
-then alliances are temporary at best.
-A small percentage of efreet are noble. Noble efreet, 
-often called maliks, have 13 Hit Dice and gain the following 
-spell-like abilities: 3/day—fireball, heat metal; 1/day—greater 
-invisibility, pyroclastic storm (as ice storm, with fire instead of 
-cold damage). A noble efreeti’s caster level for its spell-like 
-abilities is 15th. Noble efreet are CR 10.
-
-This muscular giant has crimson skin, smoldering eyes, and 
-small black horns. Smoke rises in curls from its f lesh.
-
-140
-
-140
-
-GGeenniiee,,  EEffrreeeti–Genie, Janni
-
-eti–Genie, Janni
+Change Size (Sp) Twice per day, an efreeti can magically change a creature’s size. This works just like an enlarge person or reduce person spell (the efreeti chooses when using the ability), except that the ability can work on the efreeti. A DC 13 Fortitude save negates the effect. The save DC is Charisma-based. This is the equivalent of a 2nd-level spell.
+heat (Ex) An efreeti’s body deals 1d6 points of fire damage whenever it hits in melee, or in each round it grapples. The efreet (singular efreeti) are genies from the Plane of Fire. An efreeti stands about 12 feet tall and weighs about 2,000 pounds. 
 
 Genie, Janni
 jAnnI CR 4
@@ -8287,66 +7951,8 @@ pair, company (3–6), or band (7–12)
 Treasure standard (chainmail, composite 
 longbow [+3 Str], scimitar, other gear)
 SPECIAL ABILITIES
-Change Size (Sp) Twice per day, a janni can magically change 
-a creature’s size. This works just like an enlarge person 
-
-This regal figure looks like a tall, well-proportioned human, save 
-that its eyes sparkle with strange light.
-
-or reduce person spell (the janni chooses when using the 
-ability), except that the ability can work on the efreeti. A 
-DC 13 Fortitude save negates the effect. The save DC is 
-Charisma-based. This is the equivalent of a 2nd-level spell.
-Elemental Endurance (Ex) Jann can remain on the Planes of 
-Air, Earth, Fire, or Water for up to 48 hours at a time. Failure 
-to return to the Material Plane before that time expires 
-causes a janni to take 1 point of damage per additional hour 
-spent on the elemental plane, until it dies or returns to the 
-Material Plane.
-The jann (singular janni) are the weakest of the genies. 
-Jann are formed out of all four elements and must 
-therefore spend most of their time on the Material 
-Plane. Some lore even casts the janni as the most 
-“human” of the genie races, although most jann 
-are quick to correct this insult, usually with 
-the edge of a sword. A janni is human-sized, 
-standing about 6 feet tall and weighing 
-about 180 pounds.
-Jann are physically strong and 
-courageous, and do not take kindly 
-to insult or injury. Most are quite 
-prone to seeing insult even when 
-none is intended by the speaker. If 
-overwhelmed in battle, they 
-escape using f light and 
-invisibility, returning later 
-with reinforcements.
-Jann enjoy their privacy, 
-preferring the solitude of the deep 
-desert and isolated oases. They are 
-usually suspicious of humans, but 
-are often willing to give them the 
-benefit of the doubt. Jann have a strong 
-cultural tradition of hospitality, and 
-will never turn away someone in need of 
-food, water, or shelter, though they might 
-expect payment in the form of a favor at 
-some later date. 
-Among the other genie races, jann 
-generally have good relations with both 
-djinn and shaitans. While not actively 
-enemies, jann dislike the proud and aloof 
-marids. Jann have a distinct aversion to the 
-efreet, who often try to enslave them or conscript 
-them into their armies.
-A small percentage of jann are noble. Noble 
-jann, often called sheikhs or amirs, have 9 Hit 
-Dice, Strength 19, and Intelligence 18, and gain the 
-following spell-like abilities: 3/day—augury, detect 
-magic, and divination. A noble janni’s caster level for its 
-spell-like abilities is 12th. Noble jann are CR 7. 141
-
-141
+Change Size (Sp) Twice per day, a janni can magically change a creature’s size. This works just like an enlarge person or reduce person spell (the janni chooses when using the ability), except that the ability can work on the efreeti. A DC 13 Fortitude save negates the effect. The save DC is Charisma-based. This is the equivalent of a 2nd-level spell.
+Elemental Endurance (Ex) Jann can remain on the Planes of Air, Earth, Fire, or Water for up to 48 hours at a time. Failure to return to the Material Plane before that time expires causes a janni to take 1 point of damage per additional hour spent on the elemental plane, until it dies or returns to the Material Plane.
 
 MARID CR 9
 XP 6,400
@@ -8402,53 +8008,9 @@ Environment any (Plane of Water)
 Organization solitary, pair, company (3–6), or band (7–12)
 Treasure standard (masterwork trident, other gear)
 SPECIAL ABILITIES
-Water Mastery (Ex) A marid gains a +1 bonus on attack and 
-damage rolls if both it and its opponent are touching water. 
-If the opponent or the marid is touching the ground, the 
-marid takes a –4 penalty on attack and damage rolls.
-Water’s fury (Su) As a standard action, a marid can release 
-a jet of water in a 60-foot line that deals 1d6 points of 
-damage and blinds the target struck for 1d6 rounds. A DC 
-18 Reflex save reduces the damage by half and negates the 
-blinding effect. The save DC is Constitution-based.
-Vortex (Su) A marid can transform into a vortex of swirling, 
-churning water once every 10 mintues. This ability 
-functions identically to the whirlwind ability 
-(see page 306 for full 
-details on this special 
-attack), save that it can 
-only be used while the 
-marid is underwater; a 
-marid cannot leave a body 
-of water while in vortex form.
-Marids are genies from the 
-Plane of Water. The most 
-powerful of all the genie 
-races, they are said to possess 
-the strength of the ocean’s currents 
-and teeth made of pearl. A marid 
-stands about 16 feet 
-tall and weighs nearly 
-2,500 pounds.
-The marids are perhaps 
-the most unpredictable 
-and capricious of the genies, 
-a quality that the others 
-(particularly shaitans) find 
-to be both aggravating and 
-embarrassing to the entire 
-genie culture. Many marids 
-become dancers, storytellers, 
-performers, or other types of artists, and 
-often travel to the Material Plane in disguise 
-to seek out new audiences.
-A small percentage of marids can lay claim to 
-nobility. Noble marids, often called shahzadas, 
-have 14 Hit Dice and gain the following spell-like 
-abilities: 3/day—cone of cold, ice storm; 1/day—elemental 
-swarm (water elementals only), permanent image. A noble 
-marid’s caster level for its spell-like abilities is 20th. 
-Noble marids are CR 11.
+Water Mastery (Ex) A marid gains a +1 bonus on attack and damage rolls if both it and its opponent are touching water. If the opponent or the marid is touching the ground, the marid takes a –4 penalty on attack and damage rolls.
+Water’s fury (Su) As a standard action, a marid can release a jet of water in a 60-foot line that deals 1d6 points of damage and blinds the target struck for 1d6 rounds. A DC 18 Reflex save reduces the damage by half and negates the blinding effect. The save DC is Constitution-based.
+Vortex (Su) A marid can transform into a vortex of swirling, churning water once every 10 mintues. This ability functions identically to the whirlwind ability (see page 306 for full details on this special attack), save that it can only be used while the marid is underwater; a marid cannot leave a body of water while in vortex form.
 
 Genie, Marid
 This being resembles a powerful giant with hairless blue-green 
@@ -8502,45 +8064,10 @@ Organization solitary, pair, company (3–6),
 or band (7–12)
 Treasure standard (masterwork scimitar, other treasure)
 SPECIAL ABILITIES
-Earth Mastery (Ex) A shaitan gains a +1 bonus on attack 
-and damage rolls and a +2 bonus on opposed Strength-
-based checks if both it and its foe are touching the ground. 
-It takes a –4 penalty on attack and damage rolls against 
-airborne or waterborne opponents. 
-
-Metalmorph (Su) As a standard action, a shaitan may touch 
-a single metal object of no more than 10 pounds and 
-transform it into any other metal for 1 day. 
-Stone Curse (Su) If a shaitan wins a bull rush check by 5 or 
-more and pushes its target into a stone barrier, the target 
-must make a DC 19 Reflex save or be forced into the barrier 
-as if the target had cast meld into stone until the victim 
-makes a successful DC 19 Fortitude save as a full-round 
-action to exit the stone. The save DCs are Strength-based.
-Stone glide (Su) This functions as the earth elemental’s earth 
-glide ability, except the shaitan can move through stone, 
-dirt, crystal, or metal.
-Shaitans are boastful and proud genies from the Plane of 
-Earth with f lesh of metal, gems, or stone. A shaitan stands 
-about 11 feet tall and weighs roughly 5,000 pounds.
-Some shaitans are noble. Often called pashas, they 
-have 18 Hit Dice and gain the spell-like 
-ability earthquake, usable once per day, as 
-well as the ability to grant up to three wishes 
-per day (nongenies only). A noble shaitan’s 
-caster level for its spell-like abilities is 18th. 
-Noble shaitans are CR 13.
-
-This being resembles a towering human with skin of polished 
-stone and glittering agate eyes.
-
-GGeenniiee,, MMaarriidd––GGeenniiee,, Shaitan
-
-Shaitan
-
-143
-
-143
+Earth Mastery (Ex) A shaitan gains a +1 bonus on attack and damage rolls and a +2 bonus on opposed Strength- based checks if both it and its foe are touching the ground. It takes a –4 penalty on attack and damage rolls against airborne or waterborne opponents. 
+Metalmorph (Su) As a standard action, a shaitan may touch a single metal object of no more than 10 pounds and transform it into any other metal for 1 day. 
+Stone Curse (Su) If a shaitan wins a bull rush check by 5 or more and pushes its target into a stone barrier, the target must make a DC 19 Reflex save or be forced into the barrier as if the target had cast meld into stone until the victim makes a successful DC 19 Fortitude save as a full-round action to exit the stone. The save DCs are Strength-based.
+Stone glide (Su) This functions as the earth elemental’s earth glide ability, except the shaitan can move through stone, dirt, crystal, or metal. Shaitans are boastful and proud genies from the Plane of 
 
 Ghost
 This spectral, horrifying figure glides silently through the air, 
@@ -8753,56 +8280,7 @@ Environment any land
 Organization solitary, gang (2–4), or pack (7–12)
 Treasure standard
 SPECIAL ABILITIES
-Disease (Su) Ghoul Fever: Bite—injury; save Fort DC 12; onset 
-1 day; frequency 1 day; effect 1d3 Con and 1d3 Dex damage; 
-cure 2 consecutive saves. The save DC is Charisma-based. 
-A humanoid who dies of ghoul fever rises as a ghoul at the 
-next midnight. A humanoid who becomes a ghoul in this 
-way retains none of the abilities it possessed in life. It is not 
-under the control of any other ghouls, but it hungers for 
-the flesh of the living and behaves like a normal ghoul in all 
-respects. A humanoid of 4 Hit Dice or more rises as a ghast.
-Ghouls are undead that haunt graveyards and eat corpses. 
-Legends hold that the first ghouls were either cannibalistic 
-humans whose unnatural hunger dragged them back 
-from death or humans who in life fed on the rotting 
-remains of their kin and died (and were reborn) 
-from the foul disease—the true source of these 
-undead scavengers is unclear.
-Ghouls lurk on the edges of civilization (in 
-or near cemeteries or in city sewers) where 
-they can find ample supplies of their favorite 
-food. Though they prefer rotting bodies and 
-often bury their victims for a while to improve their 
-
-This humanoid creature has long, sharp teeth, and its pallid f lesh 
-is stretched tightly over its starved frame.
-
-taste, they eat fresh kills if they are hungry enough. 
-Though most surface ghouls live primitively, rumors 
-speak of ghoul cities deep underground led by priests 
-who worship ancient cruel gods or strange demon lords 
-of hunger. These “civilized” ghouls are no less horrific 
-in their eating habits, and in fact the concept of a well-
-laid ghoul banquet table is perhaps even more horrifying 
-than the concept of taking a meal fresh from the coffin.
-Ghast
-Ghasts are ghouls with the advanced monster template. A 
-ghast’s paralysis even affects elves. Ghasts roam in packs 
-of their own kind or lead groups of common ghouls. The 
-stink of death and corruption surrounding these creatures 
-is overwhelming, granting them the stench extraordinary 
-ability (10-foot radius, Fort DC 15 negates, sickened for 
-1d6+4 minutes).
-Lacedon
-These aquatic cousins of the ghoul lurk near hidden reefs 
-or other places where ships are likely to meet their ends. 
-Lacedons have a base land speed of 30 feet and a 
-swim speed of 30 feet.
-
-146
-
-146
+Disease (Su) Ghoul Fever: Bite—injury; save Fort DC 12; onset 1 day; frequency 1 day; effect 1d3 Con and 1d3 Dex damage; cure 2 consecutive saves. The save DC is Charisma-based. A humanoid who dies of ghoul fever rises as a ghoul at the next midnight. A humanoid who becomes a ghoul in this way retains none of the abilities it possessed in life. It is not under the control of any other ghouls, but it hungers for the flesh of the living and behaves like a normal ghoul in all respects. A humanoid of 4 Hit Dice or more rises as a ghast.
 
 Giant, Cloud
 CLOUD gIAnT CR 11
@@ -8841,48 +8319,7 @@ and 2–5 griffons), or tribe (6–20 plus 1 sorcerer or cleric
 oracle of 7th–12th level and 2–5 griffons)
 Treasure standard (chain shirt, morningstar, other treasure)
 SPECIAL ABILITIES
-Oversized Weapon (Ex) A cloud giant can wield 
-Gargantuan weapons without penalty. Most favor the 
-use of immense morningstars.
-Cloud giants’ skin ranges in color from milky white 
-to powder blue. Adult males are about 18 feet tall 
-and weigh around 5,000 pounds. Females 
-are slightly shorter and lighter. Cloud giants 
-can live to be 400 years old, and dress in the 
-finest clothing and jewelry available. To many, 
-appearance indicates station. The better the clothes 
-and the finer the jewelry, the more important the 
-
-This towering giant has finely chiseled features. Her skin is pale 
-and smooth, and her long wispy hair flutters as if in a breeze.
-
-GGhhoouull––GGIiaant, Cloud
-
-nt, Cloud
-
-wearer. They also appreciate music, and most can play one 
-or more instruments (the harp is a favorite). 
-Cloud giants have an unusually wide alignment spread—
-approximately half are good and half are evil. Good cloud 
-giants build roads from their settlements to connect 
-with other humanoid roads in order to foster trade. It’s 
-not uncommon to see a good cloud giant walking among 
-humans, for example, in a human city near a tall mountain 
-range. Evil cloud giants tend not to bother with permanent 
-settlements and instead live on high peaks in crude 
-shelters, only coming down to raid villages for whatever 
-they might need. These two philosophies often see violent 
-and long-lasting wars erupt between neighboring tribes.
-Legends abound of magical cloud giant cities nestled 
-in the very clouds themselves that float with the winds 
-and circumnavigate the world. While most cloud giants 
-recognize this as a fantasy, there are some who not only 
-claim to have seen them but have dedicated the 
-entirety of their long lives to finding them again.
-
-147
-
-147
+Oversized Weapon (Ex) A cloud giant can wield Gargantuan weapons without penalty. Most favor the use of immense morningstars.
 
 Giant, Fire
 fIRE gIAnT CR 10
@@ -8921,43 +8358,7 @@ or ranger of 8th–9th level as king; and 17–38 hell hounds,
 12–22 trolls, 7–12 ettins, and 1–2 young red dragons)
 Treasure standard (half-plate, greatsword, other treasure)
 SPECIAL ABILITIES
-heated Rock (Su) Fire giants transfer the heat of their bodies to 
-rocks as part of an attack action when they throw rocks. A 
-heated rock deals 1d6 points of additional fire damage on a hit.
-Fire giants are the most rigid and militaristic of all the 
-giant races. They constantly train for war and practice 
-brutal tactics on anyone and everyone that gets in their 
-way. Their rigid command structure is complete with 
-soldiers, officers, and even generals, and they obey orders 
-from their kings unquestioningly.
-Fire giants have bright orange hair that f lickers and 
-glows almost as if it were af lame. An adult male is 12 to 
-
-16 feet tall, has a chest that measures 9 feet around, and 
-weighs about 7,000 pounds. Females are slightly shorter 
-and lighter. Fire giants can live to be 350 years old.
-Fire giants wear sturdy cloth or leather garments 
-colored red, orange, yellow, or black. Warriors wear 
-helmets and half-plate armor of blackened steel and 
-wield large greatswords that they use to cut swaths 
-across the battlefield. In large groups, fire giants fight 
-with brutal and efficient group tactics, and aren’t afraid 
-to sacrifice one or two of their members to draw an 
-enemy into an ambush.
-Fire giants prefer hot locations—the hotter, the better. 
-They’ve been found in deserts, volcanoes, hot springs, 
-and deep beneath the earth near lava vents. They live 
-in castles, walled settlements, or large caverns, and the 
-design of these locations ref lects their rigid, militaristic 
-lifestyle, with officers living in better quarters than the 
-rank-and-file.
-
-This lumbering giant has short stumpy legs and powerful, 
-muscular arms. Its hair and beard seem to be made of fire.
-
-148
-
-148
+heated Rock (Su) Fire giants transfer the heat of their bodies to rocks as part of an attack action when they throw rocks. A heated rock deals 1d6 points of additional fire damage on a hit.
 
 Giant, Frost
 fROST gIAnT CR 9
@@ -9183,51 +8584,7 @@ Organization solitary, gang (2–5), band (4–8), hunting party
 1–3 elders, and 4–6 dire bears)
 Treasure standard (greatclub, other treasure)
 SPECIAL ABILITIES
-Improved Rock Catching (Ex) A stone giant gains a +4 racial 
-bonus on its Reflex save when attempting to catch a 
-thrown rock with rock catching. This ability otherwise 
-works like the rock catching ability (see page 303).
-Stone giants prefer thick leather garments, dyed 
-in shades of brown and gray to match the stone around 
-them. Adults are about 12 feet tall, weigh about 1,500 
-pounds, and can live to be 800 years old.
-Stone giants fight from a distance whenever possible, 
-but if they can’t avoid melee, they favor gigantic clubs 
-chiseled out of stone. A favorite tactic of stone giants 
-is to stand nearly motionless, blending in with the 
-background, then move forward to throw rocks and 
-surprise their foes.
-Stone giants prefer living in enormous caves in high-
-altitude, rocky peaks. They rarely live more than a few 
-days’ travel from other bands of stone giants, and even 
-
-raise shared herds of goats and other livestock between 
-tribes. Older stone giants tend to wander away from the 
-tribe for a significant period of time in their later years, 
-either living in seclusion somewhere or attempting to 
-merge into other humanoid civilizations. After decades 
-of this self-imposed exile, those who return do so as 
-stone giant elders.
-Stone Giant Elders
-Some stone giants develop special abilities related to 
-their environment. Called elders, these stone giants have 
-Charisma scores of at least 15 and three spell-like abilities 
-(CL 10th). Once per day they can use stone shape, stone tell, 
-and either transmute rock to mud or transmute mud to rock 
-(DC 17). The save DC is Charisma-based. One in 10 elders 
-is a sorcerer, usually of 3rd to 6th level. Stone giant elders 
-add +1 to their CR.
-
-This giant has chiseled, muscular features and a f lat, forward-
-sloping head, looking almost as if it were carved of stone.
-
-GGiiaant, Hill–Giant, Stone
-
-nt, Hill–Giant, Stone
-
-151
-
-151
+Improved Rock Catching (Ex) A stone giant gains a +4 racial bonus on its Reflex save when attempting to catch a thrown rock with rock catching. This ability otherwise works like the rock catching ability (see page 303).
 
 Giant, Storm
 STORM gIAnT CR 13
@@ -9283,61 +8640,8 @@ This giant is a towering, muscular human of heroic proportions,
 with bronze skin, dark hair, and sparkling green eyes.
 
 SPECIAL ABILITIES
-Militant (Ex) Storm giants are proficient with all simple and all 
-martial weapons.
-Water Breathing (Ex) Storm giants can breathe water as well 
-as air.
-Storm giants tend toward tanned complexions, though 
-some rare specimens have violet skin, deep violet or 
-blue-black hair, and silvery gray or purple eyes. Such 
-violet coloration is considered to be good luck among 
-storm giants, and those possessing it tend to become 
-leaders among their kind. Adults are typically 21 feet 
-tall and weigh 12,000 pounds. Storm giants can live to 
-be 600 years old. When at rest, they prefer to wear short, 
-loose tunics belted at the waist, sandals or bare feet, and 
-headbands. They wear a few pieces of simple but finely 
-crafted jewelry, with anklets (favored by barefoot 
-giants), rings, or circlets being most common. Yet 
-when they outfit themselves for battle, they don 
-shimmering breastplates and 
-wield enormous greatswords 
-and bows.
-Storm giants tend to be 
-reclusive, prefering to dwell 
-along remote coastlines or 
-on tropical islands. Yet 
-like their namesakes, 
-they are prone to violent 
-mood swings. Storm 
-giants are quick to anger 
-in the face of evil and can be 
-brutal, dangerous foes when 
-insulted. In battle, they prefer 
-to send a hail of arrows to 
-rain down on their foes, only 
-drawing their greatswords 
-after opponents get inside 
-their bow range.
-Storm giants live in well-
-constructed towers, castles, 
-or walled settlements, and 
-prefer to live off the land. 
-They maintain enormous, 
-well-tended gardens and 
-manage hundreds of acres 
-of farmland per group. They 
-often hire other humanoids, 
-such as elves or humans, to 
-help them run their massive 
-farms. A storm giant enclave 
-often takes responsibility for 
-the safety of an entire island or 
-stretch of coastline. 
-
-152
-
-152
+Militant (Ex) Storm giants are proficient with all simple and all martial weapons.
+Water Breathing (Ex) Storm giants can breathe water as well as air.
 
 Gibbering Mouther
 gIBBERIng MOUThER CR 5
@@ -9367,67 +8671,13 @@ Environment any underground
 Organization solitary
 Treasure standard
 SPECIAL ABILITIES
-All-Around Vision (Ex) A gibbering mouther sees in all 
-directions at once. It cannot be flanked.
-Amorphous (Ex) A gibbering mouther’s body is malleable and 
-shapeless. It is immune to precision damage (like sneak 
-attacks) and critical hits, and can move through an area as 
-small as one-quarter its space without squeezing or one-
-eighth its space when squeezing.
-Blood Drain (Ex) On a successful grapple check after grabbing, 
-several of the creature’s mouths attach to its target. Each 
-round it maintains its grapple, its mouths automatically 
-deal 1d4 points of bite damage and 1 point of 
-Constitution damage as it drains its victim’s blood.
-Engulf (Ex) This ability functions as swallow whole, 
-except for the following changes. An engulfed creature 
-is trapped in the gibbering mouther’s body, where 
-several of its mouths continue to feed and drain 
-blood. A gibbering mouther can engulf only one foe 
-of its size or smaller at a time. If an engulfed creature 
-cuts its way free (the mouther’s damage reduction 
-still applies to those inside), the mouther simply flows 
-together again and can still use its engulf attack.
-
-This horrid mass of eyes, mouths, and formless f lesh stares in 
-all directions, its countless maws yammering ceaselessly.
-
-GGiiaant, Storm–Gibbering Mouther
-
-nt, Storm–Gibbering Mouther
-
-gibbering (Su) As a free action, a gibbering mouther can emit 
-a cacophony of maddening sound. All creatures other than 
-gibbering mouthers within 60 feet must succeed on a DC 
-13 Will save or be confused for 1 round. This is a mind-
-affecting compulsion insanity effect. A creature that saves 
-cannot be affected by the same mouther’s gibbering for 24 
-hours. The save DC is Constitution-based.
-ground Manipulation (Su) At will as a standard action, a 
-gibbering mouther can cause stone and earth under its 
-body to grow soft and muddy. The ground remains muddy 
-for 1 minute after the mouther moves off of the location. 
-A gibbering mouther can move through these areas with 
-ease, but other creatures treat them as difficult terrain.
-Spittle (Ex) Each round as a free action, a gibbering mouther 
-can emit a stream of acidic spittle at one target within 30 
-feet. On a successful attack, the target is blinded for 1d4 
-rounds unless he succeeds on a DC 18 Fortitude save. The 
-save DC is Constitution-based.
-Disgusting, loathsome, and hungry—these are the only 
-words that properly describe the gibbering mouther. A 
-foul beast that lurks in underground caves, sewers, and 
-nightmares, mouthers have no societal, ecological or 
-religious significance other than their ability to drive 
-those that listen to them mad. Some scholars believe that 
-gibbering mouthers are a lesser variant of the much more 
-dangerous shoggoth, while others theorize they are a 
-punishment by some powerful being or deity inf licted on 
-those who have offended it.
-
-153
-
-153
+All-Around Vision (Ex) A gibbering mouther sees in all directions at once. It cannot be flanked.
+Amorphous (Ex) A gibbering mouther’s body is malleable and shapeless. It is immune to precision damage (like sneak attacks) and critical hits, and can move through an area as small as one-quarter its space without squeezing or one- eighth its space when squeezing.
+Blood Drain (Ex) On a successful grapple check after grabbing, several of the creature’s mouths attach to its target. Each round it maintains its grapple, its mouths automatically deal 1d4 points of bite damage and 1 point of Constitution damage as it drains its victim’s blood.
+Engulf (Ex) This ability functions as swallow whole, except for the following changes. An engulfed creature is trapped in the gibbering mouther’s body, where several of its mouths continue to feed and drain blood. A gibbering mouther can engulf only one foe of its size or smaller at a time. If an engulfed creature cuts its way free (the mouther’s damage reduction still applies to those inside), the mouther simply flows together again and can still use its engulf attack.
+gibbering (Su) As a free action, a gibbering mouther can emit a cacophony of maddening sound. All creatures other than gibbering mouthers within 60 feet must succeed on a DC 13 Will save or be confused for 1 round. This is a mind- affecting compulsion insanity effect. A creature that saves cannot be affected by the same mouther’s gibbering for 24 hours. The save DC is Constitution-based.
+ground Manipulation (Su) At will as a standard action, a gibbering mouther can cause stone and earth under its body to grow soft and muddy. The ground remains muddy for 1 minute after the mouther moves off of the location. A gibbering mouther can move through these areas with ease, but other creatures treat them as difficult terrain.
+Spittle (Ex) Each round as a free action, a gibbering mouther can emit a stream of acidic spittle at one target within 30 feet. On a successful attack, the target is blinded for 1d4 rounds unless he succeeds on a DC 18 Fortitude save. The save DC is Constitution-based.
 
 Girallon
 gIRALLOn CR 6
@@ -9697,51 +8947,7 @@ Environment temperate forest, swamp, or underground
 Organization solitary or pack (2–12)
 Treasure none
 SPECIAL ABILITIES
-Allergic Reaction (Ex) A goblin dog’s dander is highly irritating 
-to all creatures save those with the goblinoid subtype. A 
-non-goblinoid creature damaged by a goblin dog’s bite, 
-who deals damage to a goblin dog with a natural weapon 
-or unarmed attack, or who otherwise comes into contact 
-with a goblin dog (including attempts to grapple or ride 
-the creature) must make a DC 12 Fortitude save or break 
-out in an itching rash. A creature affected by this rash takes 
-a –2 penalty to Dexterity and Charisma for 1 day (multiple 
-allergic reactions do not stack). Remove disease or any 
-magical healing removes the rash instantly. This is a disease 
-effect. The save DC is Constitution-based.
-Loathed by men and beasts alike, goblin dogs are ugly, 
-stinking, craven, and foul-tempered. It’s no surprise that 
-goblins find kindred spirits in these shunned, disgusting 
-beasts. Constantly itching, aff licted with a species-wide 
-mange exacerbated by prolific dander, even the healthiest 
-goblin dog looks sickly and starved.
-Despite its name, the goblin dog is in fact a species of 
-rodent grown monstrously large. Their long-legged shape 
-and proclivity to hunt and run in packs earned them their 
-popular name, a name that many goblins take issue with, 
-as it galls the average goblin to consider these, their favored 
-mounts, having anything at all to do with actual dogs. Of 
-course, being goblins, they haven’t bothered to come up 
-
-This mangy canine’s face has the same f lat nose, beady eyes, and 
-protruding teeth as a rat grown grotesquely large.
-
-with alternate names for goblin dogs. Perhaps they don’t 
-realize they can.
-Contact with a goblin dog’s infested, mangy hide causes 
-most other creatures to break out into hives, a condition 
-known as “goblin rash.” Goblinoids seem to be immune 
-to this aff liction, and are fond of keeping goblin dogs as 
-guardians and mounts.
-Despite their skin conditions and disorders, goblin 
-dogs are highly resistant to disease. Their favored food 
-is carrion—the riper, the better. That many goblin tribes 
-let their goblin dogs run free in their lairs is the single 
-reason most goblin dens aren’t filthier than they actually 
-are; constantly hungry, a goblin dog eats anything it can 
-chew that it finds left behind by other, more discerning 
-palates.
-A goblin dog is 5 feet long but weighs only 75 pounds.
+Allergic Reaction (Ex) A goblin dog’s dander is highly irritating to all creatures save those with the goblinoid subtype. A non-goblinoid creature damaged by a goblin dog’s bite, who deals damage to a goblin dog with a natural weapon or unarmed attack, or who otherwise comes into contact with a goblin dog (including attempts to grapple or ride the creature) must make a DC 12 Fortitude save or break out in an itching rash. A creature affected by this rash takes a –2 penalty to Dexterity and Charisma for 1 day (multiple allergic reactions do not stack). Remove disease or any magical healing removes the rash instantly. This is a disease effect. The save DC is Constitution-based.
 Goblin Dog Companions
 Starting Statistics: Size Small; Speed 50 ft.; Attack bite 
 (1d4); Ability Scores Str 11, Dex 16, Con 11, Int 2, Wis 
@@ -9750,10 +8956,6 @@ vision, scent.
 4th-Level Advancement: Size Medium; AC +1 natural 
 armor; Attack bite (1d6); Ability Scores Str +4, Dex –2, 
 Con +4.
-
-157
-
-157
 
 Golem 
 Golems are magically created automatons of great 
@@ -9888,63 +9090,17 @@ Environment any
 Organization solitary or gang (2–4)
 Treasure none
 SPECIAL ABILITIES
-Berserk (Ex) When a clay golem enters combat, there is a 
-cumulative 1% chance each round that its elemental spirit 
-breaks free and the golem goes berserk. This chance resets 
-to 0% after one minute of inactivity. A berserk golem 
-attacks the nearest living creature or smashes some object 
-smaller than itself if no creature is within reach. Once it 
-goes berserk, no known method can reestablish control.
-Cursed Wound (Ex) The damage a clay golem deals doesn’t heal 
-naturally and resists magical healing. A character attempting 
-to use magical healing on a creature damaged by a clay 
-golem must succeed on a DC 26 caster level check, or the 
-healing has no effect on the injured creature.
-haste (Su) After it has engaged in at least 1 round of combat, a 
-clay golem can haste itself once per day as a free action. The 
-effect lasts 3 rounds and is otherwise the same as the spell.
-Immunity to Magic (Ex) A clay golem is immune to any spell 
-or spell-like ability that allows spell resistance. In addition, 
-certain spells and effects function differently against the 
-creature, as noted below.
-•	A	move earth spell drives the golem back 120 feet and deals 
-3d12 points of damage to it (no save).
-•	A	disintegrate spell slows the golem (as the slow spell) for 
-1d6 rounds and deals 1d12 points of damage (no save).
-•	An	earthquake spell cast directly at a clay golem stops it 
-from moving on its next turn and deals 5d10 points of 
-
-damage (no save).
-•	Any	magical	attack	against	a	clay	golem	that	deals	acid	
-damage heals 1 point of damage for every 3 points of damage 
-it would otherwise deal. If the amount of healing would cause 
-the golem to exceed its full normal hit points, it gains any 
-excess as temporary hit points. A clay golem gets no saving 
-throw against magical attacks that deal acid damage.
-A clay golem wears no clothing except for a metal or stiff 
-leather garment around its hips. It stands over 8 feet tall 
-and weighs 600 pounds.
-Construction
-A clay golem’s body must be sculpted from a single block of 
-clay weighing at least 1,000 pounds, treated with rare oils 
-and powders worth 1,500 gp.
+Berserk (Ex) When a clay golem enters combat, there is a cumulative 1% chance each round that its elemental spirit breaks free and the golem goes berserk. This chance resets to 0% after one minute of inactivity. A berserk golem attacks the nearest living creature or smashes some object smaller than itself if no creature is within reach. Once it goes berserk, no known method can reestablish control.
+Cursed Wound (Ex) The damage a clay golem deals doesn’t heal naturally and resists magical healing. A character attempting to use magical healing on a creature damaged by a clay golem must succeed on a DC 26 caster level check, or the healing has no effect on the injured creature.
+haste (Su) After it has engaged in at least 1 round of combat, a clay golem can haste itself once per day as a free action. The effect lasts 3 rounds and is otherwise the same as the spell.
+Immunity to Magic (Ex) A clay golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. •	A	move earth spell drives the golem back 120 feet and deals 3d12 points of damage to it (no save). •	A	disintegrate spell slows the golem (as the slow spell) for 1d6 rounds and deals 1d12 points of damage (no save). •	An	earthquake spell cast directly at a clay golem stops it from moving on its next turn and deals 5d10 points of damage (no save). •	Any	magical	attack	against	a	clay	golem	that	deals	acid	damage heals 1 point of damage for every 3 points of damage it would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. A clay golem gets no saving throw against magical attacks that deal acid damage. A clay golem wears no clothing except for a metal or stiff leather garment around its hips. It stands over 8 feet tall and weighs 600 pounds. Construction
+A clay golem’s body must be sculpted from a single block of clay weighing at least 1,000 pounds, treated with rare oils and powders worth 1,500 gp.
 CLAy gOLEM
 CL 11th; Price 41,500 gp
 COnSTRUCTIOn
 Requirements Craft Construct, animate objects, bless, 
 commune, prayer, resurrection, creator must be caster level 11th; 
 Skill Craft (sculptures) or Craft (pottery) DC 16; Cost 21,500 gp
-
-This lumbering figure is sculpted from soft clay. It wears filthy 
-rags and crude jewelry, and its face is only vaguely humanoid.
-
-GGoolleemm––GGoolleemm,, CCllay
-
-ay
-
-159
-
-159
 
 Golem, Flesh
 A hideous monstrosity crafted from body parts stitched together 
@@ -9972,63 +9128,9 @@ Environment any
 Organization solitary or gang (2–4)
 Treasure none
 SPECIAL ABILITIES
-Berserk (Ex) When a flesh golem enters 
-combat, there is a cumulative 1% chance 
-each round that its elemental 
-spirit breaks free and the 
-golem goes berserk. The 
-uncontrolled golem goes on 
-a rampage, attacking the nearest 
-living creature or smashing some object 
-smaller than itself if no creature is within 
-reach, then moving on to spread more 
-destruction. The golem’s creator, if within 
-60 feet, can try to regain control by speaking 
-firmly and persuasively to the golem, which 
-requires a DC 19 Charisma check. It takes 1 
-minute of inactivity by the golem to reset the 
-golem’s berserk chance to 0%.
-Immunity to Magic (Ex) A flesh golem is 
-immune to any spell or spell-like ability 
-that allows spell resistance. In addition, 
-certain spells and effects function 
-differently against the creature, 
-as noted below.
-•	A	magical	attack	that	deals	cold	or	fire	damage	slows	a	flesh	
-golem (as the slow spell) for 2d6 rounds (no save).
-•	A	magical	attack	that	deals	electricity	damage	breaks	any	slow 
-
-effect on the golem and heals 1 point of damage for every 
-3 points of damage the attack would otherwise deal. If the 
-amount of healing would cause the golem to exceed its full 
-normal hit points, it gains any excess as temporary hit points. 
-A flesh golem gets no saving throw against attacks that deal 
-electricity damage.
-A f lesh golem is a ghoulish collection of stolen humanoid 
-body parts, stitched together into a single composite 
-form. Its cadaverous f lesh has a sickly green or yellowish 
-tint. A f lesh golem wears whatever clothing its creator 
-desires, usually just a ragged pair of trousers. It has no 
-possessions and no weapons. A f lesh golem stands 8 feet 
-tall and weighs 500 pounds.
-A f lesh golem cannot speak, although it can emit 
-a hoarse roar of sorts. It walks and moves with a stiff-
-jointed gait, as if not in complete control of its body.
-Although most f lesh golems are mindless, there are 
-persistent rumors of unusual golems who somehow 
-retain the memories of a previous life. The head (and 
-thus brain) of such f lesh golems must be 
-just the right combination of 
-fresh and (in its previous life) 
-strong-willed, and even then luck 
-and chance during the golem’s 
-creation seem just as important 
-in retaining the creature’s mind. 
-Certainly most who construct f lesh 
-golems prefer mindless slaves 
-over free-willed creations, and as 
-a result intelligent f lesh golems are 
-rare indeed.
+Berserk (Ex) When a flesh golem enters combat, there is a cumulative 1% chance each round that its elemental spirit breaks free and the golem goes berserk. The uncontrolled golem goes on a rampage, attacking the nearest living creature or smashing some object smaller than itself if no creature is within reach, then moving on to spread more destruction. The golem’s creator, if within 60 feet, can try to regain control by speaking firmly and persuasively to the golem, which requires a DC 19 Charisma check. It takes 1 minute of inactivity by the golem to reset the golem’s berserk chance to 0%.
+Immunity to Magic (Ex) A flesh golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. •	A	magical	attack	that	deals	cold	or	fire	damage	slows	a	flesh	golem (as the slow spell) for 2d6 rounds (no save). •	A	magical	attack	that	deals	electricity	damage	breaks	any	slow effect on the golem and heals 1 point of damage for every 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. 
+A flesh golem gets no saving throw against attacks that deal electricity damage.
 Construction
 The pieces of a f lesh golem must come 
 from normal humanoid corpses that have 
@@ -10048,10 +9150,6 @@ dead, bull’s strength, geas/quest, limited
 wish, creator must be caster level 8th; 
 Skill Craft (leather) or Heal DC 13; 
 Cost 10,500 gp
-
-160
-
-160
 
 ICE gOLEM CR 5
 XP 1,600
@@ -10077,44 +9175,9 @@ Environment any cold
 Organization solitary or gang (2–4)
 Treasure none
 SPECIAL ABILITIES
-Cold (Ex) An ice golem’s body generates intense cold, dealing 
-1d6 points of damage with its touch. Creatures attacking an 
-ice golem with unarmed strikes or natural weapons take this 
-same cold damage each time one of their attacks hits.
-Icy Destruction (Ex) When reduced to 0 hit points, an ice golem 
-shatters in an explosion of jagged shards of ice. All creatures 
-within a 10-foot burst take 3d6 points of slashing damage 
-and 2d6 points of cold damage; a DC 13 Reflex save halves the 
-damage. The save DC is Constitution-based.
-Immunity to Magic (Ex) An ice golem is immune to any spell 
-or spell-like ability that allows spell resistance, with the 
-exception of spells and spell-like abilities that have the Fire 
-descriptor, which affect it normally. In addition, certain 
-spells and effects function differently against the creature, 
-as noted below.
-•	A	magical	attack	that	deals	electricity	damage	slows	an	
-ice golem (as the slow spell) for 2d6 rounds, with no 
-saving throw.
-•	A	magical	attack	that	deals	cold	damage	breaks	any	slow 
-effect on the golem and heals 1 point of damage for every 
-3 points of damage the attack would otherwise deal. If the 
-amount of healing would cause the golem to exceed its full 
-normal hit points, it gains any excess as temporary hit points. 
-An ice golem gets no saving throw against cold effects.
-
-Golem, Ice
-This icy statue stands a head taller than a normal human. A rime 
-of frost coats it, and razor-sharp shards of ice adorn its limbs.
-
-GGoolleemm,, FFlleesshh––GGoolleemm,, IIccee
-
-Ice golems are humanoid automatons formed of carved 
-ice. Their appearance can range from roughly chiseled 
-figures of ice and snow to elaborately detailed ice 
-sculptures and beautiful crystalline statues.
-Ice golems cannot speak, and move with the sound of 
-cracking and popping ice. An ice golem stands 7 feet tall 
-and weighs 500 pounds.
+Cold (Ex) An ice golem’s body generates intense cold, dealing 1d6 points of damage with its touch. Creatures attacking an ice golem with unarmed strikes or natural weapons take this same cold damage each time one of their attacks hits.
+Icy Destruction (Ex) When reduced to 0 hit points, an ice golem shatters in an explosion of jagged shards of ice. All creatures within a 10-foot burst take 3d6 points of slashing damage and 2d6 points of cold damage; a DC 13 Reflex save halves the damage. The save DC is Constitution-based.
+Immunity to Magic (Ex) An ice golem is immune to any spell or spell-like ability that allows spell resistance, with the exception of spells and spell-like abilities that have the Fire descriptor, which affect it normally. In addition, certain spells and effects function differently against the creature, as noted below. •	A	magical	attack	that	deals	electricity	damage	slows	an	ice golem (as the slow spell) for 2d6 rounds, with no saving throw. •	A	magical	attack	that	deals	cold	damage	breaks	any	slow effect on the golem and heals 1 point of damage for every 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. An ice golem gets no saving throw against cold effects.
 Construction
 An ice golem’s body must be constructed from a single 
 block of ice weighing at least 1,000 pounds. The ice is 
@@ -10126,10 +9189,6 @@ COnSTRUCTIOn
 Requirements Craft Construct, chill touch, cone of cold, geas/
 quest, ice storm, resist energy (cold), creator must be caster 
 level 12th; Skill Craft (sculptures) DC 17; Cost 9,500 gp
-
-161
-
-161
 
 Golem, Iron
 IROn gOLEM CR 13
@@ -10155,74 +9214,9 @@ Environment any
 Organization solitary or gang (2–4)
 Treasure none
 SPECIAL ABILITIES
-Breath Weapon (Su) As a free 
-action once every 1d4+1 
-rounds, an iron golem can 
-exhale a 10-foot cube of 
-poisonous gas. This gas 
-cloud persists for 1 round; 
-any creature within the area 
-when the golem creates it (as 
-well as any creature that passes 
-through the cloud during the 
-remainder of that round) is 
-exposed to the cloud’s poisonous 
-effects. This poison is magically 
-created each time the golem uses 
-this power. 
-Breath weapon—inhaled; save Fort 19; 
-frequency 1/round for 4 rounds; effect 1d4 
-Constitution damage; cure 2 saves. The save 
-DC is Constitution-based.
-Immunity to Magic (Ex) An iron golem is immune 
-to spells or spell-like abilities that allow spell 
-resistance. Certain spells and effects function 
-differently against it, as noted below.
-•	A	magical	attack	that	deals	electricity	damage	
-slows an iron golem (as the slow spell) for 3 
-
-This iron automaton stands twice as tall as a normal human. Its 
-heavy footfalls shake the ground with bone-jarring force.
-
-rounds, with no saving throw.
-•	A	magical	attack	that	deals	fire	damage	breaks	any	slow 
-effect on the golem and heals 1 point of damage for each 
-3 points of damage the attack would otherwise deal. If 
-the amount of healing would cause the golem to exceed 
-its full normal hit points, it gains any excess as temporary 
-hit points. An iron golem gets no saving throw against 
-fire effects.
-•	An	iron	golem	is	affected	normally	by	rust	attacks,	such	
-as those of a rust monster or a rusting grasp spell.
-Powerful Blows (Ex) An iron golem inflicts one and a half 
-times its Strength modifier and threatens a critical hit on a 
-19–20 with its slam attacks.
-An iron golem has a humanoid body made from iron. It 
-can be sculpted into any shape its creator desires, but it 
-almost always displays armor of some sort, from simple 
-and utilitarian to ceremonial and ornate. Its features 
-are much smoother than those of a stone golem. 
-Iron golems sometimes carry a weapon in one hand, 
-though they rarely use these, relying 
-instead on their slam attacks. 
-An iron golem is 12 feet tall and 
-weighs about 5,000 pounds. An iron 
-golem cannot speak or make any 
-vocal noise, nor does it have any 
-distinguishable odor.
-Although the practice 
-has fallen out of favor 
-in modern times, the 
-ancients of certain powerful 
-civilizations once took 
-great pride in crafting iron 
-golems of tremendous size 
-and strength. These golems, 
-which are never smaller than 
-Huge, still exist in remote 
-parts of the world, mindlessly 
-following the orders of a long-
-dead empire.
+Breath Weapon (Su) As a free action once every 1d4+1 rounds, an iron golem can exhale a 10-foot cube of poisonous gas. This gas cloud persists for 1 round; any creature within the area when the golem creates it (as well as any creature that passes through the cloud during the remainder of that round) is exposed to the cloud’s poisonous effects. This poison is magically created each time the golem uses this power. Breath weapon—inhaled; save Fort 19; frequency 1/round for 4 rounds; effect 1d4 Constitution damage; cure 2 saves. The save DC is Constitution-based.
+Immunity to Magic (Ex) An iron golem is immune to spells or spell-like abilities that allow spell resistance. Certain spells and effects function differently against it, as noted below. •	A	magical	attack	that	deals	electricity	damage	slows an iron golem (as the slow spell) for 3 rounds, with no saving throw. •	A	magical	attack	that	deals	fire	damage	breaks	any	slow effect on the golem and heals 1 point of damage for each 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. An iron golem gets no saving throw against fire effects. •	An	iron	golem	is	affected	normally	by	rust	attacks,	such	as those of a rust monster or a rusting grasp spell.
+Powerful Blows (Ex) An iron golem inflicts one and a half times its Strength modifier and threatens a critical hit on a 19–20 with its slam attacks.
 Construction
 An iron golem’s body is sculpted from 5,000 
 pounds of iron, smelted with rare tinctures 
@@ -10234,10 +9228,6 @@ Requirements Craft Construct, cloudkill, geas/quest,
 limited wish, polymorph any object, creator must 
 be caster level 16th; Skill Craft (armor) or Craft 
 (weapons) DC 21; Cost 80,000 gp
-
-162
-
-162
 
 Golem, Stone
 STOnE gOLEM CR 11
@@ -10263,35 +9253,8 @@ Environment any
 Organization solitary or gang (2–4)
 Treasure none
 SPECIAL ABILITIES
-Immunity to Magic (Ex) A stone golem is 
-immune to any spell or spell-like ability that 
-allows spell resistance. In addition, certain 
-spells and effects function differently against the 
-creature, as noted below.
-•	A	transmute rock to mud spell slows a stone golem 
-(as the slow spell) for 2d6 rounds, with no saving throw, 
-while transmute mud to rock heals all of its lost hit points.
-•	A	stone to flesh spell does not actually change the 
-golem’s structure but negates its damage reduction and 
-immunity to magic for 1 full round.
-Slow (Su) A stone golem can use a slow effect, as the spell, as 
-a free action once every 2 rounds. The effect has a range of 
-10 feet in a burst centered on the golem and a duration of 7 
-rounds, requiring a DC 17 Will save to negate. The save DC 
-is Constitution-based.
-A stone golem has a humanoid body made from stone, 
-frequently stylized to suit its creator. For example, it might 
-look like it is wearing armor, with a particular symbol carved 
-on the breastplate, or have designs worked into the stone of 
-its limbs. Its head is often carved to resemble a helmet or 
-the head of some beast. While it may be sculpted to carry a 
-stone shield or stone weapon such as a sword, these aesthetic 
-choices do not affect its combat abilities.
-
-Like most golems, a stone golem cannot speak and 
-makes no sound other than the grinding of stone against 
-stone when it moves. A stone golem is 9 feet tall and weighs 
-around 2,000 pounds.
+Immunity to Magic (Ex) A stone golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. •	A	transmute rock to mud spell slows a stone golem (as the slow spell) for 2d6 rounds, with no saving throw, while transmute mud to rock heals all of its lost hit points. •	A	stone to flesh spell does not actually change the golem’s structure but negates its damage reduction and immunity to magic for 1 full round.
+Slow (Su) A stone golem can use a slow effect, as the spell, as a free action once every 2 rounds. The effect has a range of 10 feet in a burst centered on the golem and a duration of 7 rounds, requiring a DC 17 Will save to negate. The save DC is Constitution-based.
 Construction
 A stone golem’s body is chiseled from a single block of hard 
 stone, such as granite, weighing at least 3,000 pounds. The 
@@ -10303,15 +9266,6 @@ Requirements Craft Construct, antimagic field, geas/quest,
 limited wish, symbol of stunning, creator must be caster level 
 14th; Skill Craft (sculpture) or Craft (stonemasonry) DC 19; 
 Cost 55,000 gp
-
-This towering stone automaton bears the likeness of an archaic, 
-armored warrior. It moves with ponderous but inexorable steps.
-
-GGooelelmm,,  IIrroonn––GGoolleemm,, SSttoonnee
-
-163
-
-163
 
 Golem, Wood
 WOOD gOLEM CR 6
@@ -10336,56 +9290,12 @@ Environment any
 Organization solitary or gang (24)
 Treasure none
 SPECIAL ABILITIES
-Immunity to Magic (Ex) A wood golem is immune to any 
-spell or spell-like ability that allows spell resistance, with 
-the exception of spells and spell-like abilities that have the 
-Fire descriptor, which affect it normally. In addition, certain 
-spells and effects function differently against the creature, 
-as noted below.
-•	Warp wood or wood shape slows a wood golem (as the 
-slow spell) for 2d6 rounds (no save).
-•	Repel wood drives the golem back 60 feet and deals 
-2d12 points of damage to it (no save).
-•	A	magical	attack	that	deals	cold	damage	breaks	
-any slow effect on the golem and heals 1 
-point of damage for every 3 points of 
-damage the attack would otherwise deal. 
-If the amount of healing would cause 
-the golem to exceed its full normal hit 
-points, it gains any excess as temporary 
-hit points. A wood golem gets no saving 
-throw against attacks that deal cold 
-damage.
-Splintering (Su) As a free action once every 1d4+1 
-rounds, a wood golem can launch a barrage of razor-sharp 
-wooden splinters from its body in a 20-foot-radius burst. 
-All creatures caught within this area take 6d6 points of 
-slashing damage (Reflex DC 14 halves). The save DC is 
-Constitution-based.
-
-A wood golem is carved from rare woods, assembled into 
-a roughly humanoid body with articulated limbs. Their 
-creators usually leave their bodies almost unfinished, with 
-individual pieces of lumber and unworked wood apparent 
-and obvious as part of their construction. A wood golem 
-stands 6-1/2 feet tall and weighs 400 pounds.
-Construction
-The pieces of a wood golem are assembled from blocks of 
-fine wood and sprinkled with rare powders and crushed 
-herbs worth at least 300 gp.
-WOOD gOLEM
-CL 12th; Price 19,300 gp
+Immunity to Magic (Ex) A wood golem is immune to any spell or spell-like ability that allows spell resistance, with the exception of spells and spell-like abilities that have the Fire descriptor, which affect it normally. In addition, certain spells and effects function differently against the creature, as noted below. •	Warp wood or wood shape slows a wood golem (as the slow spell) for 2d6 rounds (no save). •	Repel wood drives the golem back 60 feet and deals 2d12 points of damage to it (no save). •	A	magical	attack	that	deals	cold	damage	breaks	any slow effect on the golem and heals 1 point of damage for every 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. A wood golem gets no saving throw against attacks that deal cold damage.
+Splintering (Su) As a free action once every 1d4+1 rounds, a wood golem can launch a barrage of razor-sharp wooden splinters from its body in a 20-foot-radius burst. All creatures caught within this area take 6d6 points of slashing damage (Reflex DC 14 halves). The save DC is Constitution-based.
 COnSTRUCTIOn
 Requirements Craft Construct, alarm, animate objects, cat’s 
 grace, geas/quest, limited wish, creator must be caster level 
 12th; Skill Craft (carpentry) DC 17; Cost 8,800 gp
-
-This human-sized automaton resembles a crude humanoid figure 
-made of cast-off pieces of wood.
-
-164
-
-164
 
 Gorgon
 gORgOn CR 8
@@ -10416,61 +9326,7 @@ Organization solitary, pair, pack (3–4),
 or herd (5–12)
 Treasure none
 SPECIAL ABILITIES
-Breath Weapon A gorgon can use its breath 
-weapon once every 1d4+1 rounds to 
-create a 60-foot cone of green gas. 
-Those caught in the area of the gas can 
-attempt a DC 21 Fortitude save to 
-resist the effects, but those who fail 
-the save are immediately petrified. 
-This petrification is temporary—each 
-round, a petrified creature can attempt 
-a new DC 21 Fortitude save to recover from the 
-petrification as long as it is not caught within the area 
-of effect of the gorgon’s breath weapon a second time 
-while petrified. A creature exposed to the gorgon’s breath a 
-second time while already petrified becomes permanently 
-petrified, and can no longer attempt to make additional 
-Fortitude saves to recover naturally. The save 
-DC is Constitution-based.
-Gorgons are magical, foul-tempered 
-creatures—while they might appear 
-
-to be constructs at first glance, beneath their artifical-
-looking armor plates they are made of flesh and bone. Like 
-aggressive bulls, they challenge any unfamiliar creature 
-they encounter, often trampling their opponent’s corpse 
-or shattering its stony remnants until the creature is 
-unrecognizable. The females are just as dangerous as the 
-males, and the two sexes appear identical. A typical gorgon 
-stands 6 feet tall and 8 feet long. It weighs 4,000 pounds.
-Gorgons derive nutrients from the consumption 
-of minerals, particularly the stone of their petrified 
-victims, and any statues they create are likely to be 
-gnawed thoroughly. They cannot digest metal or gems, 
-so their dung (which resembles bitter-smelling gray 
-powder) often contains small, raw crystals and nuggets 
-of ore. Their aggression toward all other creatures 
-means that there are few to no predators or other prey 
-animals in their grazing grounds. Each herd is led by a 
-dominant bull; solitary gorgons are usually adolescent 
-bulls driven out of their herd by the lead bull.
-Their f lesh is tough but beefy (once the armored hide 
-is removed), and to those who acquire the taste, quite 
-filling. Many stone giant tribes believe eating gorgon 
-meat enhances their own natural armor. Powdered 
-gorgon horn is worth 250 gp as an alternate material 
-component for magic items using bull’s strength, stoneskin, 
-f lesh to stone, statue, and similar magic.
-
-This bull-like creature seems to be made of interlocking metallic 
-plates. Faint plumes of green smoke puff from its mouth.
-
-GGoolleemm,, WWoooodd––GGoorrggoonn
-
-165
-
-165
+Breath Weapon A gorgon can use its breath weapon once every 1d4+1 rounds to create a 60-foot cone of green gas. Those caught in the area of the gas can attempt a DC 21 Fortitude save to resist the effects, but those who fail the save are immediately petrified. This petrification is temporary—each round, a petrified creature can attempt a new DC 21 Fortitude save to recover from the petrification as long as it is not caught within the area of effect of the gorgon’s breath weapon a second time while petrified. A creature exposed to the gorgon’s breath a second time while already petrified becomes permanently petrified, and can no longer attempt to make additional Fortitude saves to recover naturally. The save DC is Constitution-based.
 
 Gray Ooze
 gRAy OOzE CR 4
@@ -10495,92 +9351,8 @@ Environment cold marshes and underground
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Acid (Ex) The digestive acid that covers a gray ooze dissolves 
-metals and organic material, but not stone. Each slam and 
-constrict attack deals 1d6 additional acid damage. Armor or 
-clothing worn by a creature grappled by a gray ooze takes 
-the same amount of acid damage unless the wearer succeeds 
-on a DC 20 Reflex saving throw. A wooden or metal weapon 
-that strikes a gray ooze takes 1d6 acid damage unless the 
-weapon’s wielder succeeds on a DC 20 Reflex save. The 
-ooze’s touch deals 12 points of acid damage 
-per round to wooden or metal objects, but the 
-ooze must remain in contact with the material 
-for 1 full round in order to deal this damage. The 
-save DCs are Constitution-based.
-Transparent (Ex) Due to its lack of vivid 
-coloration, a gray ooze is difficult to 
-discern from its surroundings in most 
-environments. A DC 15 Perception 
-check is required to notice the 
-gray ooze. Any creature 
-that fails to notice a gray 
-ooze and walks into it 
-automatically suffers 
-damage as if struck by the 
-ooze’s slam attack and is 
-immediately subject to a grab 
-attempt by the ooze.
-
-Slinking their way through cold swamps and bleary 
-marshlands, or sometimes even dungeons and caverns, 
-gray oozes consume any organic materials they encounter. 
-Despite its lack of intelligence, the gray ooze is a most 
-problematic creature due to its transparency. While 
-the ooze cannot easily climb walls or swim, its habit of 
-lurking in the thick mud that lines the banks of marsh 
-pools or lying in harmless-looking pools on dull-colored 
-dungeon f loors makes it dangerously easy to overlook 
-and step on.
-Some sages believe that the gray ooze is the result of a 
-failed alchemical experiment, while others postulate that 
-the first gray oozes spontaneously arose from a cesspit 
-of magical detritus. Of course, these theories that gray 
-oozes are not living organisms, but rather the alchemical 
-result of an unfortunate mixture of rare caustic f luids 
-and magical waste, are derided by many who dwell in 
-areas plagued by the creatures but which do not have a 
-long history of magical pollution.
-Variant Gray Oozes
-The gray ooze adapts readily and swiftly to changes in 
-environments, the simple structure of its primeval form 
-and its method of using fission to reproduce all but 
-ensuring that such changes occur. Listed below are two 
-such variants that adventurers have encountered.
-Crystal Ooze (CR 4): The crystal ooze is an aquatic variant 
-that dwells in deeper waters than most commonly found 
-in the gray ooze’s beloved swamps. A crystal ooze has the 
-aquatic subtype and a swim speed of 30 ft. The crystal ooze 
-lacks the gray ooze’s constrict ability, but it does secrete a 
-paralytic toxin that causes those whom it strikes to become 
-paralyzed for 3d6 rounds if they fail a Fortitude saving throw 
-(the save DC is Constitution-based).
-Id Ooze (CR 6): Perhaps the strangest 
-variant gray oozes are those that have 
-developed a rudimentary intelligence, 
-including the ability to communicate 
-telepathically with other oozes, or even the 
-ability to blast enemies with pulses of raw 
-mental power. Id oozes are advanced 
-gray oozes with an Intelligence 
-score of 2 (and thus gain skill 
-ranks and feats—typically 4 
-ranks in Stealth, Improved 
-Initiative, and Toughness), can 
-communicate basic empathic 
-information with other id 
-oozes within 100 feet via 
-telepathy, and can use 
-lesser confusion at will as 
-a spell-like ability (CL 
-equals the id ooze’s HD).
-
-A seemingly mundane puddle, patch of moist stone, or glistening rock 
-is suddenly revealed to be more as a terrible pseudopod lashes out.
-
-166
-
-166
+Acid (Ex) The digestive acid that covers a gray ooze dissolves metals and organic material, but not stone. Each slam and constrict attack deals 1d6 additional acid damage. Armor or clothing worn by a creature grappled by a gray ooze takes the same amount of acid damage unless the wearer succeeds on a DC 20 Reflex saving throw. A wooden or metal weapon that strikes a gray ooze takes 1d6 acid damage unless the weapon’s wielder succeeds on a DC 20 Reflex save. The ooze’s touch deals 12 points of acid damage per round to wooden or metal objects, but the ooze must remain in contact with the material for 1 full round in order to deal this damage. The save DCs are Constitution-based.
+Transparent (Ex) Due to its lack of vivid coloration, a gray ooze is difficult to discern from its surroundings in most environments. A DC 15 Perception check is required to notice the gray ooze. Any creature that fails to notice a gray ooze and walks into it automatically suffers damage as if struck by the ooze’s slam attack and is immediately subject to a grab attempt by the ooze.
 
 Green Hag
 gREEn hAg CR 5
@@ -10615,85 +9387,8 @@ Environment temperate marshes
 Organization solitary or coven (3 hags of any kind)
 Treasure standard
 SPECIAL ABILITIES
-Weakness (Su) A green hag’s claws sap strength from 
-those she strikes. Each time a green hag hits a 
-foe with her claw attack, the victim takes 2 points of 
-Strength damage unless he resists the weakness with 
-a DC 16 Fortitude save. Alternatively, a green hag can 
-attempt to inflict even greater weakness on a foe by 
-making a touch attack—this variant requires a standard 
-action, and cannot be attempted in the same round the 
-hag makes claw attacks. The opponent touched must 
-succeed on a DC 16 Fortitude save or take 2d4 points of 
-Strength damage. The save DC is Charisma-based.
-Mimicry (Ex) A green hag can imitate the sounds of almost 
-any animal found near its lair.
-Terrifying crones known to haunt foul swamps and tangled 
-forests, green hags harbor an intense hatred for all 
-
-beauty and purity. Making use of their varied deceptive 
-abilities, these crones delight in murdering innocents, 
-unhinging noble minds, and debasing the pure of heart. 
-They are particularly fond of using disguise self to assume 
-the forms of alluring young maidens and then seducing 
-young men away from their lovers or families. In this 
-form, they can infect such noble and upstanding citizens 
-with all manner of debauchery and scandal. Some green 
-hags prefer to reveal their true natures to their lovers at a 
-moment precisely engineered to drive the man mad with 
-horror and shame. Others drag out their dalliances and 
-do what they can to utterly ruin the lives of the men they 
-seduce before showing the broken shell that remains the 
-truth. In the end, the luckiest of these unfortunate lovers 
-end up being eaten by their green hag companions—for 
-the unlucky, their final doom can be much worse, for the 
-cruel imagination of the green hag is vast. 
-A typical green hag stands between 5 and 6 feet tall and 
-weighs just under 160 pounds.
- Hag Covens
-When three hags of any type 
-gather, they can form a coven 
-to gain increased magical 
-ability. Any combination 
-of hags can form a coven, 
-but green hags are the most 
-common members of such 
-foul gatherings.
-Whenever all three hags of a 
-particular coven are within 10 
-feet of one another, all three of 
-them can work together to use 
-any of the following spell-like 
-abilities: animate dead, baleful 
-polymorph (DC 18), blight (DC 17), bestow curse 
-(DC 17), clairaudience/clairvoyance, charm 
-monster (DC 17), commune, control weather, 
-dream, forcecage, mind blank, mirage arcana 
-(DC 18), reincarnate, speak with dead, veil 
-(DC 19), vision.
-All three hags must take a full-
-round action to take part in this form of 
-cooperative magic. All coven spell-like 
-abilities function at CL 9th (or at the highest 
-CL available to the most powerful hag in the 
-coven). The save DCs are Charisma-based, 
-and function as if with a Charisma score of 16 unless 
-one of the hags has a higher Charisma score, in which 
-case the spell-like ability DCs are adjusted by that 
-hag’s Charisma modifier.
-At the GM’s discretion, certain more powerful hag 
-covens might have additional spell-like abilities.
-
-Knots of dark, moldering hair spill over the features of this sickly, 
-thin, green-skinned crone.
-
-GGrray Ooze–Green Hag
-
-ay Ooze–Green Hag
-
-167
-
-167
+Weakness (Su) A green hag’s claws sap strength from those she strikes. Each time a green hag hits a foe with her claw attack, the victim takes 2 points of Strength damage unless he resists the weakness with a DC 16 Fortitude save. Alternatively, a green hag can attempt to inflict even greater weakness on a foe by making a touch attack—this variant requires a standard action, and cannot be attempted in the same round the hag makes claw attacks. The opponent touched must succeed on a DC 16 Fortitude save or take 2d4 points of Strength damage. The save DC is Charisma-based.
+Mimicry (Ex) A green hag can imitate the sounds of almost any animal found near its lair. Terrifying crones known to haunt foul swamps and tangled forests, green hags harbor an intense hatred for all beauty and purity. Making use of their varied deceptive abilities, these crones delight in murdering innocents, unhinging noble minds, and debasing the pure of heart. They are particularly fond of using disguise self to assume the forms of alluring young maidens and then seducing young men away from their lovers or families. In this form, they can infect such noble and upstanding citizens with all manner of debauchery and scandal. Some green hags prefer to reveal their true natures to their lovers at a moment precisely engineered to drive the man mad with horror and shame. Others drag out their dalliances and do what they can to utterly ruin the lives of the men they seduce before showing the broken shell that remains the truth. In the end, the luckiest of these unfortunate lovers end up being eaten by their green hag companions—for the unlucky, their final doom can be much worse, for the cruel imagination of the green hag is vast. 
 
 Griffon
 gRIffOn CR 4
@@ -11069,59 +9764,7 @@ Environment temperate marshes
 Organization solitary, pair, or flight (3–12)
 Treasure standard (leather armor, morningstar, and other treasure)
 SPECIAL ABILITIES
-Captivating Song (Su) A harpy’s song has the power to infect 
-the minds of those that hear it, calling them to the harpy’s 
-side. When a harpy sings, all creatures aside from other 
-harpies within a 300-foot spread must succeed on a DC 
-16 Will saving throw or become captivated. A creature that 
-successfully saves is not subject to the same harpy’s song 
-for 24 hours. A victim under the effects of the captivating 
-song moves toward the harpy using the most direct means 
-available. If the path leads them into a dangerous area such 
-as through fire or off a cliff, that creature receives a second 
-saving throw to end the effect before moving into peril. 
-Captivated creatures can take no actions other than to 
-defend themselves. A victim within 5 feet of the harpy 
-simply stands and offers no resistance to the harpy’s 
-attacks. This effect continues for as long as the harpy sings 
-and for 1 round thereafter. This is a sonic mind-affecting 
-charm effect. The save DC is Charisma-based.
-Often viewed as vicious and corrupted creatures, harpies 
-know how creatures think and act. This understanding 
-gives them an advantage when it comes to finding their 
-favorite meals. While creatures of the wild easily fall 
-victim to their captivating songs, these vile bird-women 
-
-prefer their meals spiced with complex sentient thoughts. 
-Easy prey makes for a boring meal.
-While ultimately savage and without remorse for their 
-actions, a number of harpies live close to humanoid 
-societies and enjoy parlaying with creatures that they see 
-as potential meals.
-Harpies tend to wear baubles and trinkets stolen 
-from their victims, as they like to indulge in the shiny 
-ornaments of mankind. Up close, these creatures reek 
-with the stench of consumed victims, and they rarely let 
-creatures not yet captivated too near, lest they smell the 
-gore and decay upon their feathers. For this reason, many 
-harpies wear perfumes and scented oils.
-Harpies appear wildly different in different lands. Some 
-seem like an amalgam of vultures and women, while others 
-bear the regal markings of hawks or falcons in their 
-feathers. Rare clutches of harpies in isolated 
-and tropical parts of the world even have 
-colorful feathers akin to parrots.
-
-Save for the tattered wings and taloned feet, this creature 
-resembles a feral woman with a wild look about her.
-
-172
-
-172
-
-HHaarrppy–Hell Hound
-
-y–Hell Hound
+Captivating Song (Su) A harpy’s song has the power to infect the minds of those that hear it, calling them to the harpy’s side. When a harpy sings, all creatures aside from other harpies within a 300-foot spread must succeed on a DC 16 Will saving throw or become captivated. A creature that successfully saves is not subject to the same harpy’s song for 24 hours. A victim under the effects of the captivating song moves toward the harpy using the most direct means available. If the path leads them into a dangerous area such as through fire or off a cliff, that creature receives a second saving throw to end the effect before moving into peril. Captivated creatures can take no actions other than to defend themselves. A victim within 5 feet of the harpy simply stands and offers no resistance to the harpy’s attacks. This effect continues for as long as the harpy sings and for 1 round thereafter. This is a sonic mind-affecting charm effect. The save DC is Charisma-based.
 
 Hell Hound Hell Hound, Nessian
 hELL hOUnD CR 3
@@ -11253,18 +9896,7 @@ Environment temperate plains
 Organization solitary, pair, or herd (3–30)
 Treasure none
 SPECIAL ABILITIES
-Stampede (Ex)  A stampede occurs if three or more 
-creatures with stampede make a trample 
-attack while remaining 
-adjacent to each other. 
-While stampeding, the 
-creatures can trample 
-foes of their size or 
-smaller, and the trample’s 
-save DC increases by +2.
-Aurochs (both singular and 
-plural) are large herd animals 
-similar to  domesticated cattle.
+Stampede (Ex)  A stampede occurs if three or more creatures with stampede make a trample attack while remaining adjacent to each other. While stampeding, the creatures can trample foes of their size or smaller, and the trample’s save DC increases by +2. Aurochs (both singular and plural) are large herd animals similar to  domesticated cattle.
 Aurochs Companions
 Starting Statistics: Size Medium; Speed 40 ft.; 
 AC +1 natural armor, Attack gore (1d6); Ability 
@@ -11481,80 +10113,11 @@ Environment any
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury; save Fort DC 13; frequency 1/minute for 
-60 minutes; effect sleep for 1 minute; cure 1 save. The save DC 
-is Constitution-based and includes a +2 racial bonus.
-Telepathic Link (Su) A homunculus cannot speak, but the 
-process of creating one links it telepathically with its 
-creator. A homunculus knows what its master knows and 
-can convey to him or her everything it sees and hears, out 
-to a distance of 1,500 feet.
-A homunculus is a miniature servant created by a 
-spellcaster from his own blood. They are weak combatants 
-but make effective spies, messengers, and scouts. A 
-homunculus’s creator determines its precise features; 
-some are more refined looking, but most creators don’t 
-bother to improve the creature’s appearance beyond the 
-minimum necessary for functioning.
-Homunculi are little more than tools designed to 
-carry out assigned tasks. They are extensions of their 
-creators, sharing the same alignment and basic nature. 
-
-A homunculus never willingly travels more than a mile 
-from its master, though it can be removed forcibly. If 
-this occurs, the creature does everything in its power 
-to return to this range, as it cannot communicate with 
-its master beyond this distance. An attack that destroys 
-a homunculus deals 2d10 points 
-of damage to its master. If the 
-creature’s master is slain, the 
-homunculus goes insane—it 
-loses its Intelligence score, 
-all feats, and all skill 
-ranks, and generally 
-claims the immediate 
-surroundings as its 
-domain, mindlessly 
-attacking any who 
-intrude upon its lair.
-On rare occasions, 
-a homunculus freed 
-from its servitude rises 
-above its master’s original 
-intent and becomes more 
-than a half-insane construct 
-guardian of a long-forgotten 
-lair. In some cases, a homunculus might even 
-come to see itself as the rightful heir to its 
-master’s legacy, or even the reincarnated 
-spirit of the master himself.
-Construction
-A homunculus is shaped from a mixture of clay, ash, 
-mandrake root, spring water, and one pint of the creator’s 
-own blood. These materials cost 50 gp. After the body is 
-sculpted, it is animated through an extended magical 
-ritual that requires a specially prepared laboratory or 
-workroom, similar to an alchemist’s laboratory, and 
-costing an additional 1,000 gp to supply. If the creator is 
-personally constructing the creature’s body, the building 
-and ritual can be performed together. A homunculus with 
-more than 2 Hit Dice can be created, but each additional 
-Hit Die adds +2,000 gp to the cost to create.
-The person whose blood is used to form a homunculus’s 
-body becomes its master; it is possible for one person to 
-give blood for the creation, another to sculpt the base 
-material, and another to magically animate it as a minion 
-for the one who provided the blood.
-hOMUnCULUS
-CL 7th; Price 2,050 gp
+Poison (Ex) Bite—injury; save Fort DC 13; frequency 1/minute for 60 minutes; effect sleep for 1 minute; cure 1 save. The save DC is Constitution-based and includes a +2 racial bonus. Telepathic Link (Su) A homunculus cannot speak, but the process of creating one links it telepathically with its creator. A homunculus knows what its master knows and can convey to him or her everything it sees and hears, out to a distance of 1,500 feet.
 COnSTRUCTIOn
 Requirements Craft Construct, arcane eye, mirror image, 
 mending; Skill Craft (leather) or Craft (sculptures) DC 12; Cost 
 1,050 gp. 
-
-176
-
-176
 
 hORSE CR 1
 XP 400
@@ -11579,30 +10142,8 @@ Environment temperate plains
 Organization solitary, pair, or herd (3–30)
 Treasure none
 SPECIAL ABILITIES
-Docile (Ex) Unless specifically trained for combat (see the Handle 
-Animal skill on page 97 of the Pathfinder RPG Core Rulebook), a 
-horse’s hooves are treated as secondary attacks.
-Horses stand 5 to 6 feet tall at the shoulder and 
-weigh between 1,000 and 1,500 pounds.
-The statistics above are for a typical riding 
-horse, called by some a “light horse.” Some 
-horses are larger and heartier, bred for labor 
-such as pulling plows or carriages. These 
-horses are called “heavy horses” and 
-gain the following adjustments to 
-the base statistics detailed above.
-Heavy Horse: A heavy 
-horse gains the advanced 
-simple template. In 
-addition, it also gains a 
-bite attack that inflicts 
-1d4 damage, and its 
-hoof damage increases 
-to 1d6. As with a light 
-horse, a heavy horse can 
-be specifically trained for 
-combat with the Handle 
-Animal skill.
+Docile (Ex) Unless specifically trained for combat (see the Handle Animal skill on page 97 of the Pathfinder RPG Core Rulebook), a horse’s hooves are treated as secondary attacks. Horses stand 5 to 6 feet tall at the shoulder and weigh between 1,000 and 1,500 pounds. The statistics above are for a typical riding horse, called by some a “light horse.” Some horses are larger and heartier, bred for labor such as pulling plows or carriages. These horses are called “heavy horses” and gain the following adjustments to the base statistics detailed above.
+Heavy Horse: A heavy horse gains the advanced simple template. In addition, it also gains a bite attack that inflicts 1d4 damage, and its hoof damage increases to 1d6. As with a light horse, a heavy horse can be specifically trained for combat with the Handle Animal skill.
 
 Horse Horse, Pony
 POny CR 1/2
@@ -11693,56 +10234,10 @@ Environment temperate marshes
 Organization solitary
 Treasure standard
 SPECIAL ABILITIES
-fast healing (Ex) A hydra’s fast healing ability is equal to its 
-current number of heads (minimum fast healing 5). This fast 
-healing applies only to damage inflicted on the hydra’s body.
-hydra Traits (Ex) A hydra can be killed by severing all of 
-its heads or slaying its body. Any attack that is not an 
-attempt to sever a head affects the body, including area 
-attacks or attacks that cause piercing or bludgeoning 
-damage. To sever a head, an opponent must make a 
-sunder attempt with a slashing weapon targeting a head. 
-A head is considered a separate weapon with hardness 0 
-and hit points equal to the hydra’s HD. To sever a head, 
-an opponent must inflict enough damage to reduce 
-the head’s hit points to 0 or less. Severing a head deals 
-damage to the hydra’s body equal to the hydra’s current 
-HD. A hydra can’t attack with a severed head, but takes no 
-other penalties.
-Regenerate head (Ex) When a hydra’s head is destroyed, two 
-heads regrow in 1d4 rounds. A hydra cannot have more 
-than twice its original number of heads at any one time. To 
-prevent new heads from growing, at least 5 points of acid 
-or fire damage must be dealt to the stump (a touch attack 
-to hit) before they appear. Acid or fire damage from area 
-attacks can affect stumps and the body simultaneously. A 
-
-Multiple angry snake-like heads rise from the sleek, serpentine 
-body of this terrifying monster.
-
-hydra doesn’t die from losing its heads until all are cut off 
-and the stumps seared by acid or fire.
-You can make more powerful hydras by increasing their 
-Hit Dice—each added HD increases the hydra’s statistics as 
-appropriate, but also gives it one additional head and a +1 
-increase to its natural armor. A hydra’s CR increases by +1 
-for each Hit Die it gains.
-Cryohydra/Pyrohydra (+2 CR): Variants of the standard 
-hydra, the cryohydra lives in cold marshes or on glaciers, 
-while the pyrohydra prefers deserts or volcanic mountains. 
-A cryohydra gains the Cold subtype, while a pyrohydra gains 
-the Fire subtype. Each of its heads has a breath weapon (15-
-ft. cone, 3d6 cold damage [cryohydra] or 3d6 fire damage 
-[pyrohydra], Reflex half) useable every 1d4 rounds. The save 
-DC is 10 + 1/2 the hydra’s HD + the hydra’s Con modifier. 
-Although fire attacks cannot prevent a pyrohydra’s neck 
-stump from growing new heads (since it is immune to fire), 
-5 points of cold damage does. Acid works normally on both 
-hydra variants.
-
-178
-
-178
+fast healing (Ex) A hydra’s fast healing ability is equal to its current number of heads (minimum fast healing 5). This fast healing applies only to damage inflicted on the hydra’s body.
+hydra Traits (Ex) A hydra can be killed by severing all of its heads or slaying its body. Any attack that is not an attempt to sever a head affects the body, including area attacks or attacks that cause piercing or bludgeoning damage. To sever a head, an opponent must make a sunder attempt with a slashing weapon targeting a head. A head is considered a separate weapon with hardness 0 and hit points equal to the hydra’s HD. To sever a head, an opponent must inflict enough damage to reduce the head’s hit points to 0 or less. Severing a head deals damage to the hydra’s body equal to the hydra’s current HD. A hydra can’t attack with a severed head, but takes no other penalties.
+Regenerate head (Ex) When a hydra’s head is destroyed, two heads regrow in 1d4 rounds. A hydra cannot have more than twice its original number of heads at any one time. To prevent new heads from growing, at least 5 points of acid or fire damage must be dealt to the stump (a touch attack to hit) before they appear. Acid or fire damage from area attacks can affect stumps and the body simultaneously. A hydra doesn’t die from losing its heads until all are cut off and the stumps seared by acid or fire. You can make more powerful hydras by increasing their Hit Dice—each added HD increases the hydra’s statistics as appropriate, but also gives it one additional head and a +1 increase to its natural armor. A hydra’s CR increases by +1 for each Hit Die it gains.
+Cryohydra/Pyrohydra (+2 CR): Variants of the standard hydra, the cryohydra lives in cold marshes or on glaciers, while the pyrohydra prefers deserts or volcanic mountains. A cryohydra gains the Cold subtype, while a pyrohydra gains the Fire subtype. Each of its heads has a breath weapon (15- ft. cone, 3d6 cold damage [cryohydra] or 3d6 fire damage [pyrohydra], Reflex half) useable every 1d4 rounds. The save DC is 10 + 1/2 the hydra’s HD + the hydra’s Con modifier. Although fire attacks cannot prevent a pyrohydra’s neck stump from growing new heads (since it is immune to fire), 5 points of cold damage does. Acid works normally on both hydra variants.
 
 Hyena Hyena, Dire
 hyEnA CR 1
@@ -11875,57 +10370,8 @@ Environment any underground
 Organization solitary, brood (2–6), or tribe (7–16)
 Treasure double
 SPECIAL ABILITIES
-Body Thief (Su) As a full-round action that provokes 
-an attack of opportunity, an intellect devourer can 
-reduce its size, crawl into the mouth of a helpless 
-or dead creature, and burrow into the victim’s 
-skull to devour its brain. This is a coup de grace 
-attempt that inflicts 8d4+3d6+8 points of damage. 
-If the victim is slain (or already dead), the intellect 
-devourer usurps control of the body and may use it 
-as its own, as if it controlled the target via a dominate 
-monster spell. The intellect devourer has full access to 
-all of the host’s defensive and offensive abilities save 
-for spellcasting and spell-like abilities (although the 
-intellect devourer can still use its own 
-spell-like abilities). A host body may not 
-
-have been dead for longer than 1 day for this ability to 
-function, and even successfully inhabited bodies decay 
-to uselessness in 7 days (unless this time is extended via 
-gentle repose). As long as the intellect devourer occupies 
-the body, it knows (and can speak) the languages known 
-by the victim and basic information about the victim’s 
-identity and personality, yet has none of the victim’s 
-specific memories or knowledge. Damage done to a host 
-body does not harm the intellect devourer, and if the host 
-body is slain, the intellect devourer emerges and is dazed 
-for 1 round. Raise dead cannot restore a victim of body 
-theft, but resurrection or more powerful magic can.
-Vulnerable to Protection from Evil (Ex) An intellect devourer 
-is treated as a summoned creature for the purpose of 
-determining how it is affected by a protection from evil spell.
-Thought by some to be invaders from another dimension 
-or planet, the sinister intellect devourers are certainly one 
-of the world’s cruelest races. Incapable of experiencing 
-emotions or wallowing in the sins of physical pleasure on 
-their own, intellect devourers are forced to steal bodies in 
-order to indulge their gluttony, lust, and cruelty. Stories 
-tell of entire cities of these creatures deep underground, 
-where host bodies are worn like clothes to hideous orgies 
-and vile feasts. Lone intellect devourers often dwell in 
-ruins or caves on the edge of a civilized region so they can 
-make periodic forays into town to “shop” for an attractive 
-new body.
-An intellect devourer is 3 feet long and weighs about 
-60 pounds.
-
-Devoid of a head, or any features at all save for four short, clawed 
-legs, this creature’s body looks like a large, glistening brain.
-
-180
-
-180
+Body Thief (Su) As a full-round action that provokes an attack of opportunity, an intellect devourer can reduce its size, crawl into the mouth of a helpless or dead creature, and burrow into the victim’s skull to devour its brain. This is a coup de grace attempt that inflicts 8d4+3d6+8 points of damage. If the victim is slain (or already dead), the intellect devourer usurps control of the body and may use it as its own, as if it controlled the target via a dominate monster spell. The intellect devourer has full access to all of the host’s defensive and offensive abilities save for spellcasting and spell-like abilities (although the intellect devourer can still use its own spell-like abilities). A host body may not have been dead for longer than 1 day for this ability to function, and even successfully inhabited bodies decay to uselessness in 7 days (unless this time is extended via gentle repose). As long as the intellect devourer occupies the body, it knows (and can speak) the languages known by the victim and basic information about the victim’s identity and personality, yet has none of the victim’s specific memories or knowledge. Damage done to a host body does not harm the intellect devourer, and if the host body is slain, the intellect devourer emerges and is dazed for 1 round. Raise dead cannot restore a victim of body theft, but resurrection or more powerful magic can.
+Vulnerable to Protection from Evil (Ex) An intellect devourer is treated as a summoned creature for the purpose of determining how it is affected by a protection from evil spell. Thought by some to be invaders from another dimension or planet, the sinister intellect devourers are certainly one of the world’s cruelest races. Incapable of experiencing emotions or wallowing in the sins of physical pleasure on their own, intellect devourers are forced to steal bodies in order to indulge their gluttony, lust, and cruelty. Stories tell of entire cities of these creatures deep underground, where host bodies are worn like clothes to hideous orgies and vile feasts. Lone intellect devourers often dwell in ruins or caves on the edge of a civilized region so they can make periodic forays into town to “shop” for an attractive new body.
 
 Invisible Stalker
 InVISIBLE STALkER CR 7
@@ -11954,60 +10400,8 @@ Environment any (Plane of Air)
 Organization solitary
 Treasure standard
 SPECIAL ABILITIES
-Improved Tracking (Ex) An invisible stalker takes no penalty to 
-Survival checks when tracking and moving at any speed. 
-natural Invisibility (Ex) This ability is constant—an invisible 
-stalker remains invisible at all times, even when attacking. 
-As this ability is inherent, it is not subject to the invisibility 
-purge spell. Against foes that cannot pinpoint it, the 
-invisible stalker gains a +20 bonus on Stealth checks when 
-moving, or +40 when standing still—these bonuses are not 
-included in the statistics above.
-Very little is known about these enigmatic and mysterious 
-creatures, as their very nature makes details of their true 
-form difficult to discern. Brought to this world from 
-the Plane of Air, these creatures fulfill tasks for those 
-who conjure them. Invisible stalkers act as guardians, 
-assassins, and trackers, occupations in which they excel. 
-Their natural invisibility and skill at stealth allow them 
-to follow their quarry without detection and give them the 
-upper hand when it comes to exterminating a mark.
-Many invisible stalkers resent this and see these petty 
-tasks as nothing more than chores dictated by mortals. 
-When given a particularly complex or bothersome task, an 
-
-invisible stalker seeks to find a loophole in a poorly worded 
-instruction. For instance, wizards calling an invisible 
-stalker into service with the instructions “protect me 
-from danger” might find themselves escorted to a faraway 
-hidden location, or even brought to the Plane of Air.
-Due to their constant summoning, many invisible 
-stalkers harbor hostility for those dwelling on the Material 
-Plane. Those invisible stalkers new to the mortal world 
-only know the stories of their kind and tend to keep an 
-open mind about the intentions of those who call them. 
-Over time, or in the service of a particularly vile master, 
-invisible stalkers form negative opinions of these creatures 
-of f lesh and bone, leading to their tendency to pervert 
-their instructions and cause harm to their masters. For 
-older and more experienced invisible stalkers, the only 
-thing protecting those who summon them is the magic 
-that binds them. These creatures automatically try to use 
-inconsistencies in the wording of their tasks and literal 
-twists on the intention to find a way to inconvenience, 
-injure, or even kill the priest or arcanist that brought them 
-to the plane.
-
-No true form can be detected, yet a sense of force and hulking 
-malevolence is undeniable in this creature’s presence.
-
-IIntellect Devourer–Invisible Stalker
-
-ntellect Devourer–Invisible Stalker
-
-181
-
-181
+Improved Tracking (Ex) An invisible stalker takes no penalty to Survival checks when tracking and moving at any speed. 
+natural Invisibility (Ex) This ability is constant—an invisible stalker remains invisible at all times, even when attacking. As this ability is inherent, it is not subject to the invisibility purge spell. Against foes that cannot pinpoint it, the invisible stalker gains a +20 bonus on Stealth checks when moving, or +40 when standing still—these bonuses are not included in the statistics above.
 
 Iron Cobra
 IROn COBRA CR 2
@@ -12032,68 +10426,9 @@ Environment any
 Organization solitary, pair, or nest (3–10)
 Treasure none
 SPECIAL ABILITIES
-find Target (Su) Once per day, an iron cobra’s creator can 
-order it to find and kill a specific creature within 1 mile, 
-which it does as if guided by discern location. The creator 
-must have seen or be holding an item from the specified 
-creature for this order to function.
-Poison (Ex) An iron cobra’s bite injects poison from a hidden 
-reservoir within its body. Because it is a construct, the 
-cobra does not naturally produce this poison, and its creator 
-must refill this reservoir manually. The reservoir holds 
-enough poison for 3 successful bite attacks, after which the 
-creature merely deals bite damage. Refilling the reservoir 
-takes 5 rounds and provokes attacks of opportunity. The 
-creator can fill the reservoir with any injury poison (typically 
-black adder venom), though acid, alchemical substances, 
-and even stranger liquids have been used. 
-Black Adder Venom: Bite—injury; save Fort DC 11; frequency 
-1/round for 6 rounds; effect 1d2 Con damage; cure 1 save.
-The iron cobra is a simple construct that resembles 
-a hooded cobra made out of metal. The iron cobra is 
-typically used as a bodyguard or guardian of treasure, 
-though its magical ability to unerringly locate creatures 
-means it is also used as an assassin. Since an 
-iron cobra’s poison reservoir can contain 
-multiple types of venom, the construct’s 
-specific use can be further tailored by 
-
-varying the poison used. Some spellcasters even fill these 
-reservoirs with potions, so that when the cobra bites, it 
-injects the potion into its target. This is a somewhat 
-dangerous method for gaining the effects of a potion, but 
-it does free up the cobra’s master to do other things in a 
-combat round apart from quaffing potions.
-Iron is the most common material for these creations, 
-but some crafters prefer more exotic materials when 
-creating the serpentine constructs.
-Adamantine Cobra (+1 CR): This cobra is more solidly 
-built than others. Its natural armor bonus increases to 
-+12, it gains +5 hp per HD, and it gains DR 10/—.
-Darkwood Cobra (+0 CR): This cobra is more mobile; it 
-gains a swim speed of 30 ft. and a climb speed of 20 ft.
-Mithral Cobra (+1 CR): This cobra is much swifter. Its 
-Dexterity increases by +4 and its speed to 70 ft., and it can 
-make 2 bite attacks per round as a full attack action.
-Construction
-An iron cobra’s body is built from 100 pounds of magically 
-treated materials (typically iron).
-IROn COBRA
-CL 7th; Price 4,000 gp (iron); 20,000 gp (adamantine), 5,000 
-(darkwood), or 10,000 gp (mithral)
-COnSTRUCTIOn
-Requirements Craft Construct, animate object, discern location, 
-geas/quest; Skill Craft (armor), Craft (blacksmithing), Craft 
-(carpentry [for darkwood cobras only]), or Craft (weapons) 
-DC 15; Cost 2,000 gp (iron); 10,000 gp (adamantine); 2,500 
-gp (darkwood); 5,000 gp (mithral)
-
-This creature resembles a small, metallic cobra. Its body is made 
-of overlapping iron plates, and its eyes are pinpoints of red light.
-
-182
-
-182
+find Target (Su) Once per day, an iron cobra’s creator can order it to find and kill a specific creature within 1 mile, which it does as if guided by discern location. The creator must have seen or be holding an item from the specified creature for this order to function.
+Poison (Ex) An iron cobra’s bite injects poison from a hidden reservoir within its body. Because it is a construct, the cobra does not naturally produce this poison, and its creator must refill this reservoir manually. The reservoir holds enough poison for 3 successful bite attacks, after which the creature merely deals bite damage. Refilling the reservoir takes 5 rounds and provokes attacks of opportunity. The creator can fill the reservoir with any injury poison (typically black adder venom), though acid, alchemical substances, and even stranger liquids have been used. 
+Black Adder Venom: Bite—injury; save Fort DC 11; frequency 1/round for 6 rounds; effect 1d2 Con damage; cure 1 save.
 
 Kobold
 kOBOLD CR 1/4
@@ -12137,76 +10472,7 @@ sergeant of 3rd level per 20 adults,
 Treasure NPC gear (leather armor, 
 spear, sling, other treasure)
 SPECIAL ABILITIES
-Crafty (Ex) Craft (trapmaking) and 
-Stealth are always class skills for a 
-kobold.
-Kobolds are creatures of the dark, 
-found most commonly in enormous 
-underground warrens or the dark 
-
-corners of the forest where the sun is unable to reach. Due 
-to their physical similarities, kobolds loudly proclaim 
-themselves the scions of dragonkind, destined to rule the 
-earth beneath the wings of their great god-cousins, but 
-most dragons have little use for the obnoxious pests.
-While they may speak loudly of divine right and 
-manifest destiny, kobolds are keenly aware of their own 
-weakness. Cowards and schemers, they never fight fair if 
-they can help it, instead setting up ambushes and double-
-crosses, holing up in their warrens behind countless 
-crude but ingenious traps, or rolling over the enemy in 
-vast, yipping hordes.
-Kobold coloration varies even among siblings from 
-the same egg clutch, ranging through the colors of the 
-chromatic dragons, with red being the most common but 
-white, green, blue, and black kobolds not unheard of.
-Kobold Characters
-Kobolds are defined by their class levels—they do not 
-possess racial Hit Dice. A kobold with NPC class levels 
-takes a –3 penalty to its CR (rather than the normal –2 
-penalty). All kobolds have the following racial traits.
-–4 Strength, +2 Dexterity, –2 Constitution: Kobolds 
-are fast but weak.
-Small: Kobolds are Small and gain a +1 size 
-bonus to their AC, a +1 size bonus on attack rolls, 
-a –1 penalty to their CMB and CMD, and a +4 
-size bonus on Stealth checks.
-Normal Speed: Kobolds have a base 
-speed of 30 feet.
-Darkvision: Kobolds can see in the dark up to 
-60 feet.
-Armor: Kobolds have a +1 natural 
-armor bonus.
-Crafty: Kobolds gain a 
-+2 racial bonus on Craft 
-(trapmaking), Perception, 
-and Profession 
-(miner) checks. Craft 
-(trapmaking) and 
-Stealth are always class 
-skills for a kobold.
-Weakness: Light 
-sensitivity (see page 301).
-Languages: Kobolds 
-begin play speaking 
-only Draconic. 
-Kobolds who have 
-high Intelligence 
-scores can choose 
-any of the following bonus 
-languages: Common, Dwarven, 
-Gnome, and Undercommon.
-
-This short, reptilian humanoid has scaled skin, a snout filled 
-with tiny teeth, and a long tail.
-
-IIrroonn CCoobbrraa––KKoobboold
-
-ld
-
-183
-
-183
+Crafty (Ex) Craft (trapmaking) and Stealth are always class skills for a kobold.
 
 Kraken
 kRAkEn CR 18
