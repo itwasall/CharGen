@@ -125,6 +125,7 @@ def sortReverse(l: list):
 
 def attrAsDict(_class):
     return [{i: _class._getattr(i)} for i in dir(_class) if not i.startswith("__")]
+    # return _class.__dict__
 
 def unpackChoice(data: dict, dupes_allowed=False) -> list:
     def getRandomChoice(value: list, amt: int, dupes_allowed=False) -> list:
@@ -189,8 +190,8 @@ def genLanguage(languages, banlist=None):
     return return_languages
 
 def raiseAbilityScore(data: tuple):
-    print(CHARACTER.race)
-    print(data)
+    # print(CHARACTER.race)
+    # print(data)
     match data[0]:
         case Core.STR:
             CHARACTER.ability_scores['STR'] += data[1]
