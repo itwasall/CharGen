@@ -2435,41 +2435,6 @@ round on the chuul’s turn or be paralyzed for 6 rounds. The
 save DC is Constitution-based. While held in the tentacles, 
 paralyzed or not, a victim automatically takes 1d8+7 points 
 of damage each round from the creature’s mandibles.
-Chuuls are armored, crustacean-like predators that 
-lurk beneath the surfaces of shallow ponds and 
-mires, bursting from concealment to snatch up prey 
-in their chitinous pincers and then paralyzing them 
-with their mouth tentacles before eating them alive.
-Chuuls are excellent swimmers but prefer to attack 
-land-bound creatures or those wallowing in shallow 
-water. Once they seize their victims, chuuls often drag 
-grappled foes back into deep water to drown them. 
-
-Lizardfolk are by far the chuul’s favorite prey, though 
-those pale chuul breeds that live underground prefer 
-morlocks, duergar, unwary drow, and other unfortunates 
-who get too close to their subterranean waterways—with 
-the exception of troglodytes, whose f lavor chuuls find 
-particularly offensive.
-Chuuls are surprisingly intelligent, leading many to 
-speculate fruitlessly on their origins and motivations. 
-They speak a chittering, burbling dialect of Common, 
-but few are inclined to speak to those outside their race, 
-and if chuul society exists beyond their frenzied mating 
-season, humanoids have yet to record it. Instead, chuul 
-intellects seem entirely devoted to seeking out the perfect 
-ambush sites to attack other intelligent creatures and 
-decorating their elaborate lairs with trophies from their 
-kills. Though the chuuls themselves seem uninterested in 
-using tools of any kind, they have an almost compulsive 
-need to collect keepsakes from their victims.
-A typical chuul is 8 feet tall and weighs 650 pounds.
-
-Chuul
-This lobster-like creature has a thick armored shell. A pair of tiny 
-eyes gleams above a mouth full of writhing tentacles.
-
-llustration bby Kevin Yan
 
 Cloaker
 CLOAkER CR 5
@@ -2524,34 +2489,6 @@ takes a –2 penalty on attack and damage rolls. Those
 in the area for more than 6 consecutive rounds must 
 save (Will negates) or enter a trance, helpless until the 
 moaning stops.
-Cloakers are immune to these sonic, mind-affecting 
-attacks. A creature that successfully saves against the 
-cloaker’s fear, nausea, or unnerve moans cannot be affected 
-by that same moan effect from that cloaker for 24 hours. All 
-of the save DCs against a cloaker’s moan are DC 15. Save 
-DCs are Charisma-based.
-Shadow Shift (Su) When in dim illumination, a cloaker can 
-manipulate shadows as a free action to create one of three 
-effects: blur (lasts 1d4 rounds, self only), mirror image (CL 6th), 
-or silent image (DC 15, CL 6th, save DC is Charisma-based).
-Resembling hideously evil f lying manta rays, cloakers are 
-mysterious and paranoid creatures. A typical specimen 
-has an 8-foot wingspan and weighs 100 pounds.
-A cloaker’s motives are hidden and confusing, and 
-they distrust even their own kind. Their strange shape 
-allows them to disguise themselves as a variety of cloaks, 
-tapestries, and other mundane objects, and stories linger 
-of cloakers that ally with other creatures, hitching a ride 
-on their backs and aiding in their ally’s protection for their 
-own inscrutable reasons. A rare few are priests of ancient 
-gods, leading cults of cloakers and skum to undertake all 
-manner of hideous 
-rites and working 
-toward singularly 
-sinister goals.
-
-This ray-like creature opens a toothy maw and leers with glaring 
-red eyes. Behind it whips a menacing tail of segmented bone.
 
 CChhuuuull––CCllooaakkeerr
 
@@ -2579,58 +2516,7 @@ Environment temperate plains
 Organization solitary, pair, flight (3–5), or flock (6–12)
 Treasure none
 SPECIAL ABILITIES
-Petrification (Su) A cockatrice’s bite causes flesh to calcify and 
-harden—multiple bites can cause a living creature to fossilize 
-into stone. Each time a creature is damaged by a cockatrice’s 
-bite attack, it must succeed on a DC 12 Fortitude save or take 
-1d4 points of Dexterity damage as its flesh and bones stiffen and 
-harden. (This slow petrification does not alter a bitten creature’s 
-natural armor.) A creature that is reduced to 0 Dexterity by 
-a cockatrice’s bites immediately turns completely to stone, 
-as if petrified by a flesh to stone spell. Every day, a creature 
-petrified by a cockatrice in this manner can attempt a new 
-DC 12 Fortitude save to recover from the petrification, at 
-which point the victim returns to flesh with 1 Dexterity (and 
-thereafter can be restored to full Dexterity by natural healing 
-or magic as normal)—but after a petrified creature fails 
-three of these Fortitude saves in a row, the petrified state 
-becomes permanent. A creature restored to flesh via 
-magic has its Dexterity damage caused by cockatrice 
-bites removed, but not any existing Dexterity 
-damage from other sources. A cockatrice is immune 
-to the petrification ability of itself and of other 
-cockatrices, but other petrification attacks affect 
-them normally. The save DC is 
-Constitution-based.
-Stupid, vicious, and repulsive, 
-cockatrices are avoided by other creatures due 
-to their magical ability to turn f lesh 
-
-to stone. Legends say that the first cockatrice emerged 
-from an egg laid by a cockerel and incubated by a toad. 
-Whether or not the story is true, today’s cockatrices breed 
-true in terrifying and filthy dens haphazardly excavated by as 
-many as a dozen of the squawking creatures. Males greatly 
-outnumber females in these f locks, and are distinguished 
-only by their wattles and combs. The typical cockatrice 
-stands just over 2 feet high and weighs 5 pounds.
-While their diet consists primarily of seeds and 
-petrified insects (which conveniently double in the 
-creature’s gizzard as both gastroliths and nutrition as they 
-grind away), cockatrices fiercely defend their territories 
-from anything they deem a threat, and the wanderings of 
-rogue males seeking new spots to build dens sometimes 
-bring them into unintentional contact with humanoids, 
-with devastating results. 
-The cockatrice’s strange ability to turn other creatures 
-to stone is the creature’s greatest defense, and a cockatrice 
-lair is invariably littered with petrified remnants of foes. 
-In an ironic twist of fate, however, weasels and ferrets—
-the creatures most likely to slip into cockatrices’ nests and 
-consume their eggs—appear to be completely immune 
-to the effect. For unknown reasons, cockatrices are both 
-terrified of and enraged by conventional roosters, and are 
-equally likely to f lee or attack when confronted by one.
+Petrification (Su) A cockatrice’s bite causes flesh to calcify and harden—multiple bites can cause a living creature to fossilize into stone. Each time a creature is damaged by a cockatrice’s bite attack, it must succeed on a DC 12 Fortitude save or take 1d4 points of Dexterity damage as its flesh and bones stiffen and harden. (This slow petrification does not alter a bitten creature’s natural armor.) A creature that is reduced to 0 Dexterity by a cockatrice’s bites immediately turns completely to stone, as if petrified by a flesh to stone spell. Every day, a creature petrified by a cockatrice in this manner can attempt a new DC 12 Fortitude save to recover from the petrification, at which point the victim returns to flesh with 1 Dexterity (and thereafter can be restored to full Dexterity by natural healing or magic as normal)—but after a petrified creature fails three of these Fortitude saves in a row, the petrified state becomes permanent. A creature restored to flesh via magic has its Dexterity damage caused by cockatrice bites removed, but not any existing Dexterity damage from other sources. A cockatrice is immune to the petrification ability of itself and of other cockatrices, but other petrification attacks affect them normally. The save DC is Constitution-based.
 
 COUATL CR 10
 XP 9,600
@@ -2695,41 +2581,7 @@ spells from the cleric list as well as those normally available
 to a sorcerer. Cleric spells are considered arcane spells for 
 a couatl, meaning that the creature does not need a divine 
 focus to cast them.
-Poison (Ex) Injury—bite; save Fortitude DC 16; frequency 1/
-minute for 10 minutes; effect 1d4 Str; cure 2 consecutive 
-saves. The DC is Constitution-based.
-Couatls are servants of lawful and good deities, though 
-some operate independently of any greater being. Respected 
-and admired for their wisdom and beauty, they try to steer 
-mortals onto the right path and use their powers to fight 
-evil, particularly those known to shift between the planes. 
-Some couatls are viewed as benevolent gods by isolated 
-societies, and while most couatls cringe at the thought of 
-pretending to be a god, they allow such misconceptions 
-to continue since they allow the couatls to guide and 
-coax these societies onto paths of peace and cooperation 
-with their neighbors. A couatl is about 12 feet long, with a 
-wingspan of about 15 feet. It weighs 1,800 pounds.
-As native outsiders, couatls must eat. They prefer the 
-same foods as true snakes, such as mammals 
-and birds, though they have been 
-known to eat evil humanoids.
-
-As they would rather 
-spend their time promoting 
-their agenda than hunting, couatls 
-appreciate offers of food, particularly 
-small boars and large game fowl.
-A couatl sometimes shows its favor to 
-an adventurer or party that has done it a service by 
-gifting the group with 1d4 of its brightly colored feathers. 
-Such a freely given feather, if used as an additional 
-material component, allows a spellcaster to cast planar 
-ally to conjure that specific couatl without 
-expending the typical payment of gold 
-or other valuables—provided the the 
-couatl approves of the service asked 
-for by the spellcaster. 49
+Poison (Ex) Injury—bite; save Fortitude DC 16; frequency 1/ minute for 10 minutes; effect 1d4 Str; cure 2 consecutive saves. The DC is Constitution-based.
 
 Crab, Giant Crab Swarm
 gIAnT CRAB CR 2
@@ -2755,29 +2607,7 @@ Environment any aquatic
 Organization solitary or cast (2–12)
 Treasure none
 SPECIAL ABILITIES
-Water Dependency (Ex) Giant crabs can survive out of the 
-water for 1 hour per point of Constitution. Beyond this 
-limit, a giant crab runs the risk of suffocation, as if it 
- were drowning.
-Giant crabs behave much like their smaller cousins, feeding 
-on both plant material like algae and fungus and animal 
-matter such as fish, seabirds, and even unwary humanoids. 
-The coloration of a giant crab’s hard exoskeleton varies 
-widely depending on species, and over time even shifts in 
-response to its diet. 
-Other species of giant crab exist as well, some smaller 
-but most quite a bit larger. You can adjust the stats given 
-here by changing Hit Dice and size (changing Strength, 
-Dexterity, and Constitution as appropriate) to represent a 
-wide range of different species of giant crab. The following 
-table lists the most common variants.
-Species CR Size hD
-King crab 1/4 Tiny 1d8
-Coconut crab 1/2 Small 1d8
-Rock crab 4 Large 5d8
-Shark-eating crab 7 Huge 8d8
-Great reef crab 10 Gargantuan 11d8
-Shipwrecker crab 13 Colossal 14d8
+Water Dependency (Ex) Giant crabs can survive out of the water for 1 hour per point of Constitution. Beyond this limit, a giant crab runs the risk of suffocation, as if it were drowning.
 
 CRAB SWARM CR 4
 XP 1,200
@@ -2838,28 +2668,9 @@ Environment warm rivers and marshes
 Organization solitary, pair, or colony (3–12)
 Treasure none
 SPECIAL ABILITIES
-Death Roll (Ex) When grappling a foe of its size or smaller, 
-a crocodile can perform a death roll upon making a 
-successful grapple check. As it clings to its foe, it tucks 
-in its legs and rolls rapidly, twisting and wrenching its 
-victim. The crocodile inflicts its bite damage and knocks 
-the creature prone. If successful, the crocodile maintains 
-its grapple.
-hold Breath (Ex) A crocodile can hold its 
-breath for a number of rounds equal 
-to 4 times its Constitution score 
-before it risks drowning.
-Sprint (Ex) Once per minute a crocodile 
-may sprint, increasing its land speed to 40 feet for 
-1 round.
-A crocodile is a primeval reptile that dwells in swamps or 
-along the banks of rivers, a habitat that often puts it 
-in violent contact with unsuspecting prey that 
-come to the water’s edge to drink.
-The typical crocodile is 14 feet long 
-and weighs 1,400 pounds, but larger 
-species exist. You can use these statistics 
-for similar creatures, such as alligators. 
+Death Roll (Ex) When grappling a foe of its size or smaller, a crocodile can perform a death roll upon making a successful grapple check. As it clings to its foe, it tucks in its legs and rolls rapidly, twisting and wrenching its victim. The crocodile inflicts its bite damage and knocks the creature prone. If successful, the crocodile maintains its grapple.
+hold Breath (Ex) A crocodile can hold its breath for a number of rounds equal to 4 times its Constitution score before it risks drowning.
+Sprint (Ex) Once per minute a crocodile may sprint, increasing its land speed to 40 feet for 1 round.
 
 DIRE CROCODILE CR 9
 XP 6,400
@@ -2931,45 +2742,7 @@ Organization solitary or conclave (2–6) or tribe (7–18)
 Treasure standard (hide armor, Large greataxe, Large 
 heavy crossbow, other treasure)
 SPECIAL ABILITIES
-flash of Insight (Su) Once per day as an immediate action, 
-a cyclops can peer into an occluded visual spectrum of 
-possible futures, gaining insight that allows it to select the 
-exact result of one die roll before the roll is made. This 
-effect can alter an action taken by the cyclops only, and 
-cannot be applied to the rolls of others.
-Many thousands of years ago, the solemn cyclopes ruled 
-vast kingdoms, yet today their glories are long forgotten. 
-What few cyclopes survive seldom aspire higher than 
-protecting their lairs and seeking out their next meals. 
-This latter task occupies a great deal of their focus, for 
-the monstrous appetites and vacuous hunger of the 
-cyclopes control the race’s destiny and may have led to 
-their original downfall so long ago. 
-The average cyclops stands 9 feet tall and weighs 
-600 pounds. Both males and females are almost 
-
-completely bald, with stringy patches of dark hair 
-occasionally hanging down from above the ears. A bushy, 
-expressive brow couples with a cyclops’s massive eye to 
-make the creature’s attitude easily known.
-Cyclopean history is a vanishing thing inscribed on the 
-crumbling walls of vine-choked lost cities that fell long 
-before even the rise of the elves, when dragons and giants 
-ruled a landscape unspoiled by the petty ephemeral races 
-that rule today. Because things have fallen so far, a given 
-cyclops is less likely to know the near-mythic triumphs of 
-lost ages than even a semi-educated human.
-Ancient records, the oral traditions of other giantish 
-races, and the scattered accounts of tribal natives of the 
-southern jungles speak of much larger, more primal 
-“great cyclopes,” imposing titans with shaggy legs and a 
-massive horn above an inquisitive eye. These creatures are 
-thought to have been either the leaders or the war beasts 
-of the ancient race, and modern cyclopes honor them as 
-elusive, destructive living gods.
-
-A single huge eye stares from the forehead of this nine-foot-tall 
-giant. Below this sole orb, an even larger mouth gapes like a cave.
+flash of Insight (Su) Once per day as an immediate action, a cyclops can peer into an occluded visual spectrum of possible futures, gaining insight that allows it to select the exact result of one die roll before the roll is made. This effect can alter an action taken by the cyclops only, and cannot be applied to the rolls of others.
 
 Dark Creeper
 DARk CREEPER CR 2
@@ -3001,57 +2774,10 @@ Organization solitary, pair, gang (3–6), or clan (20–80 plus 1
 dark stalker per 20 dark creepers)
 Treasure standard (dagger, black poison [3 doses], other gear)
 SPECIAL ABILITIES
-Death Throes (Su) When a dark creeper is slain, its body combusts 
-in a flash of bright white light, leaving its gear in a heap on the 
-ground. All creatures within a 10-foot burst must make a DC 13 
-Fortitude save or be blinded for 1d6 rounds. Other dark creepers 
-within 10 feet are automatically blinded for at least 1 round, due 
-to their light blindness. The save is Constitution-based. 
-Poison Use (Ex) Dark creepers are skilled in the use of poison 
-and never risk accidentally poisoning themselves. Dark 
-creepers favor a foul-smelling black paste distilled from 
-certain deep-underground fungi known as black smear—
-injury; save Fort DC 15; frequency 1/round for 6 rounds; 
-effect 1d2 Str; cure 1 save.
-Rag Armor (Ex) A dark creeper’s multiple layers of filthy rags 
-function as leather armor when worn by one of their kind.
-See in Darkness (Su) A dark creeper can see perfectly in darkness 
-of any kind, including that created by deeper darkness.
-Dark creepers lurk in the black places deep below 
-the surface of the world, venturing forth at night or 
-
-into neighboring societies when the urge to steal and 
-cause mayhem grows too great to resist. Endless layers 
-of filthy, moldering black cloth shroud these small 
-creatures, leading some to believe that the creature 
-inside is smaller still. Usually encountered in groups, 
-dark creepers f lee from bright light, but are quite brave 
-in the dark.
-Dark creepers stand just under 4 feet tall and weigh 
-80 pounds. Their f lesh is pale and moist, and their eyes 
-are milky white. Dark creepers exude a foul stench of 
-sweat and spoiled food, owing primarily to the fact that 
-they never take off their clothing—instead piling on new 
-layers when the outermost one grows too ragged.
-For all the mayhem and trouble a pack of dark creepers 
-can cause, this is nothing compared to the dangers a tribe 
-led by the taller, even more sinister dark stalkers represents. 
-Dark creepers treat their tall, lithe masters almost like 
-gods, presenting them with offerings and obeying their 
-every whim. Invariably, several dark stalkers serve as 
-leaders to dark creeper tribes, with all of the tribe’s heavy 
-work and labor falling on the diminutive shoulders of the 
-creepers, freeing the dark stalkers for their own decadent 
-pleasures. Yet the dark creepers themselves see no inherent 
-imbalance in this arrangement—to a dark creeper, a life in 
-the servitude of a dark stalker is a life fulfilled.
-
-Filthy, reeking black rags wrap this small humanoid from head to 
-toe, leaving only its hands and pale white nose visible.
-
-CCyclops–Dark Creeper
-
-yclops–Dark Creeper
+Death Throes (Su) When a dark creeper is slain, its body combusts in a flash of bright white light, leaving its gear in a heap on the ground. All creatures within a 10-foot burst must make a DC 13 Fortitude save or be blinded for 1d6 rounds. Other dark creepers within 10 feet are automatically blinded for at least 1 round, due to their light blindness. The save is Constitution-based. 
+Poison Use (Ex) Dark creepers are skilled in the use of poison and never risk accidentally poisoning themselves. Dark creepers favor a foul-smelling black paste distilled from certain deep-underground fungi known as black smear— injury; save Fort DC 15; frequency 1/round for 6 rounds; effect 1d2 Str; cure 1 save.
+Rag Armor (Ex) A dark creeper’s multiple layers of filthy rags function as leather armor when worn by one of their kind.
+See in Darkness (Su) A dark creeper can see perfectly in darkness of any kind, including that created by deeper darkness.
 
 Dark Stalker
 DARk STALkER CR 4
@@ -3093,71 +2819,9 @@ Treasure NPC gear (leather
 armor, short swords [2], black 
 smear [6], other treasure)
 SPECIAL ABILITIES
-Death Throes (Su) When a dark stalker is slain, 
-its body combusts in a flash of white-hot 
-flame. This acts like a fireball that deals 3d6 
-points of fire damage to all creatures within a 
-20-foot-radius burst. A DC 15 Reflex save halves this damage. 
-A dark stalker’s gear and treasure are unaffected by this 
-explosion. This save is Constitution-based.
-Poison Use (Ex) Dark stalkers are skilled in the use of poison 
-and never risk accidentally poisoning themselves. Like 
-
-their diminutive kin, the dark creepers, dark stalkers use 
-black poison on their weapons and generally carry six doses 
-on them. 
-Black Smear—injury; save Fort DC 15; frequency 1/round 
-for 6 rounds; effect 1d2 Str; cure 1 save. The poison DC is 
-Constitution-based.
-See in Darkness (Su) A dark stalker can see perfectly in darkness 
-of any kind, including that created by deeper darkness.
-The strange and mysterious dark stalkers are the undisputed 
-leaders of dark folk society. Deep underground, these creatures 
-dwell in strange villages (some rumors suggest entire cities) 
-built of stone and fungus in remote caverns where they are 
-served and worshiped by their coarser, diminutive kin, the 
-dark creepers. Dark stalkers come to the surface rarely, but 
-when they do it is on a mission, and with a force of creatures 
-such that it never ends well for those they seek to rob 
-or torment.
-Dark stalkers are tall, frail humanoids with incredibly 
-pale skin. They constantly wear multiple layers of dark 
-cloth and black leather armor, yet unlike their lesser 
-kin, a dark stalker’s garb is always 
-clean and spotless. Each dark stalker 
-carries a pair of short swords—
-they prefer these weapons 
-to all others. Dark stalkers 
-are 6 feet tall and weigh 100 
-pounds.
-In a fight, dark stalkers are not 
-above sacrificing lesser creatures, 
-including dark creepers, to win the 
-day or cover their retreat if things 
-go poorly. They hate well-lit areas 
-and always prefer to fight under 
-the cover of deeper darkness. Dark 
-stalkers rarely fight to the death if 
-it can be avoided, preferring to slip 
-away if things begin to look grim.
-The origins of the dark stalkers 
-and the dark creepers are shrouded 
-in mystery, made more difficult to 
-decipher by the fact that the dark 
-stalkers do not keep records of 
-their history. Many scholars 
-believe that, just as the drow 
-descended from elves, so 
-too must the dark folk have 
-descended from humanity, their 
-eerie powers and spell-like abilities 
-the result of generation upon generation of 
-devotion to profane and sinister magic. 
-Alas, the truth of the race’s history may 
-never be known.
-
-This tall humanoid’s pale brow and black, soulless eyes are all 
-that can be seen above a black scarf wrapped around its face.
+Death Throes (Su) When a dark stalker is slain, its body combusts in a flash of white-hot flame. This acts like a fireball that deals 3d6 points of fire damage to all creatures within a 20-foot-radius burst. A DC 15 Reflex save halves this damage.  A dark stalker’s gear and treasure are unaffected by this explosion. This save is Constitution-based.
+Poison Use (Ex) Dark stalkers are skilled in the use of poison and never risk accidentally poisoning themselves. Like their diminutive kin, the dark creepers, dark stalkers use black poison on their weapons and generally carry six doses on them.  Black Smear—injury; save Fort DC 15; frequency 1/round for 6 rounds; effect 1d2 Str; cure 1 save. The poison DC is Constitution-based.
+See in Darkness (Su) A dark stalker can see perfectly in darkness of any kind, including that created by deeper darkness.
 
 Darkmantle
 DARkMAnTLE CR 1
@@ -3186,172 +2850,7 @@ Environment any underground
 Organization solitary, pair, or clutch (3–12)
 Treasure none
 SPECIAL ABILITIES
-grab (Ex) A darkmantle can use its grab attack 
-against a foe of any size.
-A darkmantle’s tentacle-span measures just under 5 feet—
-when attached to a cave roof and disguised as a stalactite, 
-its length varies from 2 to 3 feet. A typical darkmantle 
-weighs 40 pounds. The creatures’ heads and bodies 
-are usually the color of basalt or dark granite, but 
-their webbed tentacles can change color to 
-match their surroundings.
-The darkmantle isn’t a particularly good 
-climber, but it can cling to a cave roof like 
-a bat, hanging by the hooks at the ends of 
-its tentacles so that its dangling body looks nearly 
-indistinguishable from a stalactite. In this hidden 
-position, the darkmantle waits for prey to pass beneath, 
-at which point it drops and swoops down to attack 
-its victim, slamming its body against the foe 
-and attempting to wrap its webbed tentacles 
-around the target. If the darkmantle misses its 
-prey, it swoops back up and drops again until its 
-prey is vanquished or the darkmantle is grievously 
-
-injured (in which case the creature f lutters back up to 
-the roof to hide and hope its “prey” leaves it alone). The 
-darkmantle’s inborn ability to cloak the area around it 
-in magical darkness gives it an additional advantage 
-over foes that rely upon light to see.
-Darkmantles prefer to dwell and hunt in the caves and 
-passageways that are closest to the surface, as these tend 
-to possess more traffic for the monsters to feed upon. Yet 
-they do not confine themselves to these dark caverns, and 
-can sometimes be found dwelling in ruined fortresses or 
-even in the sewers of bustling cities. Anywhere food is 
-plentiful and there’s a ceiling to cling to is a possible den 
-for a darkmantle.
-A darkmantle’s life cycle is swift—young grow to 
-maturity in a matter of months, and most die of old 
-age after only a few years. As a result, generations of 
-darkmantles quickly accrue, and over the years the 
-evolution of these creatures is similarly swift. In this 
-manner, a cavern’s ecosystem can have a significant 
-effect on a group of darkmantles’ appearance, abilities, 
-and tactics. Aquatic caverns might develop darkmantles 
-that can swim, while those beset with volcanism might 
-generate darkmantles with a resistance to fire. Other 
-darkmantle variants might develop much stonier 
-hides, and instead of swooping down to crush prey 
-might simply drop and pierce them through with their 
-stalactite-like lengths. The deepest, darkest caverns are 
-rumored to host darkmantles of incredible size, capable 
-of smothering multiple human-sized foes at once in 
-their leathery folds.
-
-As this creature falls from the cavern roof, it opens like a hideous 
-octopus, its thin, hook-lined tentacles connected by a fleshy web.
-
-DDaarrkk SStalker–Darkmantle
-
-talker–Darkmantle
-
-Demon
-Demons exist for one reason—to destroy. Where their 
-more lawful counterparts, the devils of Hell, seek to 
-twist mortal minds and values to remake and reshape 
-them into ref lections of their own evil, demons seek 
-only to maim, ruin, and feed. They recruit mortal life 
-only if such cohorts speed along the eventual destruction 
-of hope and goodness. Death is, in some ways, their 
-enemy—for a mortal who dies can often escape a demon’s 
-depredations and f lee to his just reward in the afterlife. It 
-is the prolonging of mortal pain and suffering that fuels 
-a demon’s lusts and desires, for it is partially from mortal 
-sin and cruelty that these monstrous fiends were born.
-Demons are the most prolific and among the most 
-destructive of the fiendish races, yet despite what some 
-lore might preach, they were not the first forms of life to 
-rise in the stinking pits of ruin and cruelty known across 
-the multiverse as the Abyss. Before the first f ledgling 
-deity gazed upon reality, before mortal life drew its 
-breath, before even the Material Plane itself had fully 
-formed, the Abyss was infested with life.
-Known to many scholars as “proto-demons,” these 
-wretched and deadly beings were the qlippoth. Today, 
-because of the inf luence of sinful mortal souls upon the 
-Abyss, mixed with unholy tamperings at the hands of the 
-daemonic keepers of Abaddon and the cruel whims of fate 
-and evolution, the rule of the qlippoth has receded. The 
-proto-demons dwell now in the noxious and forgotten 
-corners of the Abyss, and the far more fecund and prolific 
-demons rule now in their stead. With each evil mortal 
-soul that finds its way into the Abyss, the ranks of the 
-demonic hordes—a single soul can fuel the manifestation 
-of dozens or even hundreds of demons, with the exact 
-nature of the sins carried by the soul guiding the shapes 
-and roles of the newly formed fiends.
-The Abyss is a vast (some say infinite) realm, far larger 
-than any other plane save possibly the primal chaos of the 
-Maelstrom itself. As befits such a vast and varied realm, 
-the demonic host is likewise diverse. Some carry in their 
-frames humanoid shapes, while others are twisted beasts. 
-Some f lop on land while others f lap in air or sea. Some 
-are schemers and manipulators of emotion and politics, 
-others are destructive engines of ruin. Yet all demons work 
-to the same goal—pain and suffering for mortal life in all 
-its forms.
-Yet despite this, mortals have sought demonic aid since 
-the start. Be it an instinctual draw to self-destruction or a 
-misguided lust for power, conjurers to this day continue to 
-draw forth demons with forbidden magic. Some conjure 
-demons for lore, while others call upon them to serve 
-as assassins or guards. Demons view such summoners 
-with a mix of hatred and thanks, for most demons lack 
-
-the ability to come to the Material Plane to wreak havoc 
-on their own. They depend on the mad to call them up 
-from the Abyss, and while they gnash their fangs and 
-rail against the commands and strictures enforced, most 
-demons find ways to twist their summoners’ demands so 
-that even the most tightly controlled demonic slave leaves 
-a trace of ruin and despair in its wake. More often than 
-not, a foolish spellcaster makes a fatal mistake in the 
-conjuring and pays for it with blood, unwittingly releasing 
-a terrible blight upon the world as his conjuration breaks 
-free of his control.
-The truly mad call upon demons to offer themselves, 
-both body and soul, in the misguided belief that alliance 
-with the demonic can buy salvation and protection when 
-the demonic apocalypse finally comes to call. Tales of 
-desperate kings who sought to engage demons to serve as 
-generals for their armies or of lunatics who seek demonic 
-sires to gift them with horrific children are common 
-enough, yet worst are those mortals who worship the most 
-powerful demons as gods, and who pledge their lives in 
-support of that which would bring destruction to all.
-
-Demon Lords
-Demon lords are the most powerful of their kind—and as 
-with the demonic horde itself, they are countless and varied. 
-Although mighty, and in some cases gods themselves, no 
-demon lord can claim rule of the Abyss as a whole—the best 
-one can attain is rulership over a handful of Abyssal realms, 
-and most can barely maintain sway over even one layer of the 
-Abyss. Another category of unique demons exists between 
-the mighty balor race and the demon lords—these are 
-nascent demon lords, powerful entities that, in time, might 
-achieve enough power that the Abyss takes note and elevates 
-them to the status of actual demon lords.
-The following list of demon lords is by no means complete, 
-but it does enumerate many whose influence can be felt 
-across countless worlds.
-Abraxas, Master of the Final Incantation
-Baphomet, Lord of the Minotaurs
-Dagon, the Shadow in the Sea
-Demogorgon, the Maws of Madness
-Flauros, the Burning Maw
-Haagenti, the Whispers Within
-Jubilex, the Faceless Lord
-Kostchtchie, the Deathless Frost
-Lamashtu, the Demon Queen
-Nocticula, Our Lady in Shadow
-Orcus, Prince of Undeath
-Pazuzu, King of the Wind Demons
-Shax, the Blood Marquis
-Socothbenoth, the Silken Sin
-
-              
+grab (Ex) A darkmantle can use its grab attack against a foe of any size.
 
 Demon, Babau
 BABAU CR 6 
@@ -3392,50 +2891,7 @@ Treasure standard
 (longspear,  other 
 treasure)
 SPECIAL ABILITIES
-Protective Slime (Su) A layer of acidic slime 
-coats a babau’s skin. Any creature that strikes 
-a babau with a natural attack or unarmed strike 
-takes 1d8 points of acid damage from this slime if it fails a DC 
-18 Reflex save. A creature that strikes a babau with a melee 
-weapon must make a DC 18 Reflex save or the weapon takes 
-1d8 points of acid damage; if this damage penetrates the 
-weapon’s hardness, the weapon gains the broken 
-condition. Ammunition that strikes a babau is 
-automatically destroyed after it inflicts its damage.
-
-This emaciated figure looks like a horned human skeleton 
-smothered within a bone-tight hide of slimy leather.
-
-DDeemmoonn––DDeemmoon, Babau
-
-n, Babau
-
-The babau is an assassin, a murderer, and a sadist—
-certainly not traits unusual in the demons, yet the babau’s 
-penchant for stealth and surprise sets it apart from its 
-generally less-subtle kin. With no need to eat (although 
-most babaus relish the f lavor of mortal meat on their 
-thin, raspy tongues), a babau can wait in ambush for years 
-or decades—their inhuman patience in anticipating a 
-well-conceived murder also setting them apart from the 
-other denizens of the Abyss. Babaus obsess over the act 
-of killing and take great pride in their grisly art, often 
-leaving behind some form of grim marker or obscure 
-signature, whether it be a distinctive modus operandi, an 
-unnerving token, or other profane evidence. 
-A babau typically carries a longspear or other weapon 
-with which it can strike at foes beyond its normal reach, 
-but given the opportunity, a babau prefers to fight 
-with its teeth or claws. The foul, caustic sludge that 
-constantly seeps from their f lesh prevents them from 
-wearing armor unless it is specially treated or resistant 
-to acid.
-A babau is 6 feet tall but weighs only 140 pounds. They 
-form from mortal souls of lone killers—those who, in life, 
-took pleasure in more personal and intimate murders. 
-Loosed upon the Material Plane, a babau often finds itself 
-in the same role, haunting the shadowy corners of 
-the world as remorseless assassins.
+Protective Slime (Su) A layer of acidic slime coats a babau’s skin. Any creature that strikes a babau with a natural attack or unarmed strike takes 1d8 points of acid damage from this slime if it fails a DC 18 Reflex save. A creature that strikes a babau with a melee weapon must make a DC 18 Reflex save or the weapon takes 1d8 points of acid damage; if this damage penetrates the weapon’s hardness, the weapon gains the broken condition. Ammunition that strikes a babau is automatically destroyed after it inflicts its damage.
 
 Demon, Balor
 BALOR CR 20 
@@ -3488,115 +2944,11 @@ Treasure standard (+1 unholy longsword, +1 flaming whip,
 other treasure)
 
 SPECIAL ABILITIES
-Death Throes (Su) When killed, a balor explodes in a blinding 
-flash of fire that deals 100 points of damage (half fire, half 
-unholy damage) to anything within 100 feet (Reflex DC 33 
-halves). The save DC is Constitution-based.
-Entangle (Ex) If a balor strikes a Medium or smaller foe with 
-its whip, the balor can immediately attempt a grapple 
-check without provoking an attack of opportunity. If the 
-balor wins the check, it draws the foe into an adjacent 
-square. The foe gains the grappled condition, but the 
-balor does not.
-flaming Body (Su) A balor’s body is covered in dancing flames. 
-Anyone striking a balor with a natural weapon or unarmed 
-strike takes 1d6 points of fire damage. A creature that 
-grapples a balor or is grappled by one takes 6d6 points of 
-fire damage each round the grapple persists.
-Vorpal Strike (Su) Any slashing weapon a balor wields 
-(including its standard longsword and whip) gains the 
-vorpal weapon quality. Weapons retain this quality  
-for one hour after the balor releases the weapon, but 
-after this the weapon reverts to its standard magical 
-qualities, if any.
-Whip Mastery (Ex) A balor treats a whip as a light weapon for 
-the purposes of two-weapon fighting, and can inflict lethal 
-damage on a foe regardless of the foe’s armor.
-When folk whisper frightened tales of the demonic, what 
-most envision is a towering figure of fire and f lesh, a 
-horned nightmare armed with f laming whip and sword 
-f lying through the night in search of its latest victim. The 
-demon these folk fear is the balor, and that fear is justly 
-placed, for few demons can match the mighty balor in 
-strength or brutality.
-On the Abyss, most balors serve demon lords as generals 
-or captains (those balors who don’t are even more potent, 
-and are known as balor lords—see below). A balor typically 
-commands vast legions of demons, and while it often lets 
-these slavering and eager minions fight its battles, the balor 
-is far from a coward. If presented with an opportunity to join 
-a fight, few balors choose to resist.
-In combat, a balor relies upon its spell-like abilities 
-to fight foes wise enough to avoid melee range, favoring 
-destructive powers like fire storm or implosion and saving 
-dominate monster for use against the rare foe it would 
-prefer to capture alive. A balor usually uses telekinesis to 
-disarm ranged weapons or pull foes into melee—with the 
-use of a quickened telekinesis, a balor can use the latter 
-tactic and still inf lict a full-round attack on a hapless foe. 
-A balor reduced to fewer than 50 hit points almost always 
-seeks to f lee via teleportation, but if that and f light prove 
-impossible it seeks to position itself such that, if it is 
-slain, its death throes are as devastating as possible to 
-the enemy host.
-
-This winged fiend’s horned head and fanged visage present the 
-perfection of the demonic form, fire spurting from its f lesh.
-
-DDeemmoon, Balor
-
-n, Balor
-
-A balor stands 14 feet in height and weighs 4,500 pounds. 
-Only the cruelest mortal souls can fuel the creation of a 
-balor—unlike in the cases of most other demons, it often 
-takes multiple souls of powerful villains to trigger the 
-birthing of a new balor.
-Balor Lords
-Even more terrible than the typical balor are those who 
-do not call a demon lord their master, but instead are 
-masters themselves. A balor lord typically rules over a 
-region no larger than half the size of the realm in which 
-it resides (as only full demon lords can command the 
-rule of an entire Abyssal realm), and even though most 
-balor lords rule much smaller regions (generally areas 
-comparable in size to a single continent), their power is 
-vast indeed.
-A balor lord is typically a CR 21 to CR 25 monster (a 
-range shared with the various unique nascent demon 
-lords, with the range of CR 26 and above being the domain 
-of the demon lords themselves), and as such serves quite 
-well as the final villain in a long-running campaign. The 
-majority of balor lords have several levels of barbarian, 
-fighter, or ranger (although ranger balor lords never 
-form bonds with animals), but some instead have levels 
-of bard, rogue, sorcerer, or wizard. Cleric balor lords are 
-
-unknown, as they see themselves as objects of worship, 
-not the other way around, although rumors persist of 
-powerful balor clerics that directly serve demon lords or 
-even evil gods.
-In addition to any benefits a balor lord might gain 
-from its class levels, all balor lords possess one additional 
-unique ability over and above those granted by its race and 
-class. Listed here are three sample balor lord abilities, but 
-these samples are by no means the entirety of the strange 
-powers a balor lord might wield.
-Lifedrinker (Su) Whenever the balor lord slays a living 
-foe, it receives the benefits of a heal spell (CL 20th). This 
-ability can activate up to once per round.
-Master of Magic (Su) The balor lord has additional 
-spell-like abilities (20 spell levels’ worth of 1st–4th level 
-spells usable at will and 20 spell levels’ worth of 5th–8th 
-level spells usable 3 times a day).
-Soul Swallow (Su) As a standard action, the balor lord 
-can inhale the soul of a living creature within 30 feet. The 
-target must make a Fortitude save (DC 10 + 1/2 balor lord’s 
-racial HD + the balor lord’s Charisma modifier) or die. 
-The body of a humanoid creature killed in this manner 
-immediately transforms into a demon under the balor 
-lord’s command (a babau, succubus, or shadow demon, 
-according to the balor lord’s whim).
+Death Throes (Su) When killed, a balor explodes in a blinding flash of fire that deals 100 points of damage (half fire, half unholy damage) to anything within 100 feet (Reflex DC 33 halves). The save DC is Constitution-based.
+Entangle (Ex) If a balor strikes a Medium or smaller foe with its whip, the balor can immediately attempt a grapple check without provoking an attack of opportunity. If the balor wins the check, it draws the foe into an adjacent square. The foe gains the grappled condition, but the balor does not.
+flaming Body (Su) A balor’s body is covered in dancing flames.  Anyone striking a balor with a natural weapon or unarmed strike takes 1d6 points of fire damage. A creature that grapples a balor or is grappled by one takes 6d6 points of fire damage each round the grapple persists.
+Vorpal Strike (Su) Any slashing weapon a balor wields (including its standard longsword and whip) gains the vorpal weapon quality. Weapons retain this quality  for one hour after the balor releases the weapon, but after this the weapon reverts to its standard magical qualities, if any.
+Whip Mastery (Ex) A balor treats a whip as a light weapon for the purposes of two-weapon fighting, and can inflict lethal damage on a foe regardless of the foe’s armor.
 
 Demon, Dretch
 DRETCh CR 2 
