@@ -130,8 +130,8 @@ Fort +19, Ref +11, Will +19; +4 vs. poison, +4 resistance vs. evil
 DR 10/evil; Immune acid, cold, petrification; Resist electricity 
 10, fire 10; SR 27
 Offense
-Speed 30 ft., fly 90 ft. (good)
-Melee +3 holy greatsword +27/+22/+17 (3d6+15/19–20) 
+  Speed 30 ft., fly 90 ft. (good)
+  Melee +3 holy greatsword +27/+22/+17 (3d6+15/19–20) 
 or slam +24 (2d8+12) 
 Space 10 ft.; Reach 10 ft.
 Spell-Like Abilities (CL 16th)
@@ -207,8 +207,8 @@ Fort +25, Ref +14, Will +23; +4 vs. poison, +4 resistance vs. evil
 DR 15/epic and evil; Immune acid, cold, petrification; Resist 
 electricity 10, fire 10; SR 34
 Offense
-Speed 50 ft., fly 150 ft. (good)
-Melee +5 dancing greatsword +35/+30/+25/+20 (3d6+18) or slam 
+  Speed 50 ft., fly 150 ft. (good)
+  Melee +5 dancing greatsword +35/+30/+25/+20 (3d6+18) or slam 
 +30 (2d8+13)
 Ranged +5 composite longbow (+9 Str bonus) +31 (2d6+14 plus 
 slaying arrow) 
@@ -370,8 +370,8 @@ hp 36 (3d10+20)
 Fort +1, Ref +1, Will –4
 Defensive Abilities hardness 5 (or more); Immune construct traits
 Offense
-Speed 30 ft.
-Melee slam +5 (1d6+3)
+  Speed 30 ft.
+  Melee slam +5 (1d6+3)
 STATISTICS
 Str 14, Dex 10, Con —, Int —, Wis 1, Cha 1
 Base Atk +3; CMB +5; CMD 15
@@ -408,28 +408,6 @@ hardness increases to 8 and it gains a +1 increase to its
 natural armor bonus.
 Trample (Ex, 2 CP): The object gains the trample special 
 attack (see page 305 for damage and save DC).
-
-An animated object is not simply one monster, but a whole 
-category. The stats presented here are for a Medium animated 
-object (with 2 CP that have not been spent to gain additional 
-abilities), but any object can become animated, most 
-commonly via the spell animate objects. Permanent animated 
-objects can be built using the Craft Construct feat (see page 
-314). Unless an animated object uses a Construction Point to 
-be made of another material, all animated objects are made 
-of wood or material of equivalent hardness. Creating an 
-animated object of a different size than Medium can be done 
-simply by adjusting the object’s size (and thus adjusting its 
-Strength, Dexterity, natural armor bonus, and size modifier 
-to attack and AC as detailed on page 296) and Hit Dice.
-Size Sample Object hD CP CR
-Tiny Candelabra 1d10 1 1/2
-Small Chair 2d10+10 1 2
-Medium Cage 3d10+20 2 3
-Large Statue 4d10+30 3 5
-Huge Wagon 7d10+40 4 7
-Gargantuan Catapult 10d10+60 5 9
-Colossal Ship 13d10+80 6 11
 
 Animated Object
 The skeleton locked within rattles as this animated cage lurches 
@@ -484,40 +462,6 @@ and camels, and rarely come in contact with
 civilization due to their remote locations. (A 
 desert ankheg is a Huge advanced ankheg.)
 
-In combat, an ankheg prefers to attack with its bite. 
-Against multiple foes, an ankheg often grabs one of 
-the available targets and then attempts to retreat to 
-safety, burrowing into the ground. A creature carried 
-underground can still breathe with difficulty (the 
-ankheg needs to breathe as well, so its tunnels are 
-relatively porous), but is often eaten alive before its allies 
-can rescue it.
-Ankhegs burrow with their legs and mandibles, 
-moving with unsettling speed through loose soil, sand, 
-gravel, and the like—they cannot burrow through solid 
-stone. Burrowing ankhegs can construct tunnels by 
-pausing frequently to shore up the walls with a thicker, 
-less caustic secretion from their mouths. If an ankheg 
-chooses to make a permanent tunnel when burrowing, it 
-moves at half speed. A typical ankheg tunnel is 10 feet tall 
-and wide, roughly circular in cross-section, and from 60 
-to 150 feet long ([1d10 + 5] × 10). Clusters of ankhegs often 
-share the same territory and create intricate winding 
-networks of tunnels under farmlands, sometimes 
-resulting in sinkholes where too many burrow at once.
-Although ankhegs resemble immense vermin, they are 
-in fact much more intelligent than the typical arachnid 
-and, given time and a talented trainer, can even be trained 
-to serve as mounts or beasts of burden. The fact that even 
-“domesticated” ankhegs are prone to squirting acid when 
-frightened or startled makes them unsafe at best in most 
-heavily populated regions, but for more savage races like 
-hobgoblins, troglodytes, and particularly orcs, ankhegs 
-make popular guardians or even pets.
-
-This burrowing, bug-like monster scuttles about on six legs, 
-drooling noxious green ichor from its clacking mandibles. 
-
 AAnniimmated Object–Ankheg
 
 ated Object–Ankheg
@@ -532,8 +476,8 @@ hp 49 (11d8)
 Fort +7, Ref +5, Will +3
 Defensive Abilities swarm traits; Immune weapon damage
 Offense
-Speed 30 ft., climb 30 ft.
-Melee swarm (3d6)
+  Speed 30 ft., climb 30 ft.
+  Melee swarm (3d6)
 Space 10 ft.; Reach 0 ft.
 Special Attacks cling, consume, distraction (DC 15)
 STATISTICS
@@ -560,15 +504,7 @@ Consume (Ex) An army ant swarm can rapidly consume
 any creature it swarms over. Against helpless or nauseated 
 targets, an army ant swarm attack deals 6d6 points  
 of damage.
-The notoriety of the army ant swarm 
-is well earned. Constantly on the 
-march, a hive of army ants 
-is capable of eating 
-anything that gets 
-in the way of its 
-unabating swath 
-of destruction 
-and ruin.
+
 
 Ant, Giant Army Ant Swarm
 A thin, six-legged ant the size of a pony stands at the ready, its 
@@ -587,8 +523,8 @@ hp 18 (2d8+9)
 Fort +6, Ref +0, Will +1
 Immune mind-affecting effects
 Offense
-Speed 50 ft., climb 20 ft.
-Melee bite +3 (1d6+2 plus grab), sting +3 (1d4+2 plus 
+  Speed 50 ft., climb 20 ft.
+  Melee bite +3 (1d6+2 plus grab), sting +3 (1d4+2 plus 
 poison)
 STATISTICS
 Str 14, Dex 10, Con 17, Int —, Wis 13, Cha 11
@@ -634,8 +570,8 @@ Defense
 hp 19 (3d8+6)
 Fort +7, Ref +5, Will +2
 Offense
-Speed 30 ft., climb 30 ft.
-Melee 2 slams +3 (1d6+2)
+  Speed 30 ft., climb 30 ft.
+  Melee 2 slams +3 (1d6+2)
 Space 10 ft.; Reach 10 ft.
 STATISTICS
 Str 15, Dex 15, Con 14, Int 2, Wis 12, Cha 7
@@ -648,30 +584,7 @@ Environment warm forests
 Organization solitary, pair, 
 or troop (3–12)
 Treasure none
-An adult male ape 
-is 8 feet tall and can 
-weigh as much as 
-400 pounds. While 
-generally shy and 
-peaceful creatures when 
-left to their own business, 
-gorillas are territorial and 
-become highly aggressive 
-when provoked. This stat block 
-can generally be used for any 
-of the larger types of primates, 
-such as gorillas—for smaller apes 
-like orangutans and chimpanzees, apply 
-the young simple template. Even smaller 
-primates should use the stats for monkeys 
-found on page 132.
-Gorillas typically make a large show of force 
-before actually attacking, thumping their chests 
-with their palms, stamping their feet, and roaring 
-loudly. Any opponents who refuse to f lee after this 
-display are attacked. Troops of apes fight together 
-in a frenzy, tearing opponents to pieces with 
-their hands and teeth.
+
 
 Ape, Gorilla Ape, Dire
 DIRE APE (gIgAnTOPIThECUS)  CR 3
@@ -683,8 +596,8 @@ Defense
 hp 30 (4d8+12)
 Fort +7, Ref +6, Will +4
 Offense
-Speed 30 ft., climb 30 ft.
-Melee bite +6 (1d6+4), 2 claws +6 (1d4+4)
+  Speed 30 ft., climb 30 ft.
+  Melee bite +6 (1d6+4), 2 claws +6 (1d4+4)
 Space 10 ft.; Reach 10 ft.
 Special Attacks rend (2 claws, 1d4+6)
 STATISTICS
@@ -696,37 +609,6 @@ ECOLOgy
 Ecology warm forests
 Organization solitary, pair, or troop (3–6)
 Treasure incidental
-Known to many scholars as the 
-gigantopithecus, the dire ape 
-is a much more dangerous 
-and bestial creature than 
-the relatively peaceful 
-gorilla. An adult male 
-dire ape stands 9 feet tall 
-and weighs 1,200 pounds. 
-The dire ape attacks 
-anything that intrudes on 
-its territory, including other 
-dire apes not of its troop, and 
-does not break off the attack 
-until the trespasser is dead 
-or runs off.
-A dire ape makes no 
-displays of toughness or 
-warnings before it attacks—
-it simply leaps into action with 
-little or no provocation, tearing 
-at its opponents with claws and 
-teeth. If a dire ape is stymied by a 
-heavily armored foe, it attempts to 
-grapple its foe, pin it to the ground, 
-and rend it.
-
-Large, deep-set eyes peer from beneath this great ape’s thick brow 
-as it lumbers forward on its legs and knuckles.
-
-Sharp teeth fill this large, feral ape’s mouth, and its long, muscular 
-arms stretch to the ground, ending in wickedly curved claws.
 
 AAnt–Ape
 
@@ -850,8 +732,8 @@ hp 39 (6d10+6)
 Fort +6, Ref +5, Will +5; +4 vs. poison, +2 resistance vs. evil
 DR 10/evil; Immune electricity, petrification; SR 15
 Offense
-Speed 40 ft.
-Melee bite +8 (1d8+3), slam +8 (1d4+1) or mwk greatsword 
+  Speed 40 ft.
+  Melee bite +8 (1d8+3), slam +8 (1d4+1) or mwk greatsword 
 +9/+4 (1d8+2), bite +3 (1d8+2) 
 Spell-Like Abilities (CL 6th)
 Constant—detect evil, magic circle against evil
@@ -886,34 +768,6 @@ wolves or dogs. Well trained, they prefer to make
 use of their greatswords in battle, though 
 they are equally adept with their natural 
 
-weapons. Hound archons loathe killing mortals and prefer 
-to disarm or incapacitate even evil individuals when they 
-can. Against fiends and the irredeemably corrupt, though, 
-they show no mercy.
-Hound archons are disciplined soldiers and sentinels. 
-Occasionally good-aligned deities send them to watch 
-over specific places and individuals they take a particular 
-interest in. Under the guise of unassuming but friendly 
-strays, such secret defenders might follow their ward or 
-guard their post subtly for years. 
-In Heaven’s armies, exceptional hound archon 
-paladins lead their fellows into combat, taking on roles 
-as captains and knights. They lead incursions against 
-fiendish holdings, whether that entails strikes against 
-daemonic fortresses or liberating the captives of night 
-hag soul collectors. Such missions make hound archons 
-perhaps the most likely celestials one might encounter 
-upon the Lower Planes, and packs of swift-moving wolves 
-occasionally reveal themselves to be welcome saviors to 
-those lost within such realms. Regardless of their orders, 
-hound archons universally exhibit a particular hatred 
-of canine fiends, abandoning all mercy and going out of 
-their way to put an end to the evils of barghests, glabrezus, 
-yeth hounds, and similar depraved outsiders.
-
-This canine-headed humanoid’s well-groomed appearance and 
-polished greatsword show it to be more than a common beast.
-
 AArrcchhoonn––AArrcchhoon, Hound
 
 n, Hound
@@ -931,8 +785,8 @@ hp 13 (2d10+2)
 Fort +4, Ref +3, Will +0; +4 vs. poison, +2 resistance vs. evil
 DR 10/evil; Immune electricity, petrification
 Offense
-Speed fly 60 ft. (perfect)
-Ranged 2 light rays +3 ranged touch (1d6) 
+  Speed fly 60 ft. (perfect)
+  Ranged 2 light rays +3 ranged touch (1d6) 
 Spell-Like Abilities (CL 3rd):
 At Will—aid, continual flame, detect 
 evil, greater teleport (self plus 
@@ -1037,8 +891,8 @@ hp 175 (14d10+98)
 Fort +16, Ref +9, Will +14; +4 vs. poison, +2 resistance vs. evil
 DR 10/evil; Immune electricity, petrification; SR 25
 Offense
-Speed 40 ft., fly 90 ft. (good)
-Melee +4 greatsword +23/+18/+13 (2d6+11) 
+  Speed 40 ft., fly 90 ft. (good)
+  Melee +4 greatsword +23/+18/+13 (2d6+11) 
 Special Attacks trumpet
 Spell-Like Abilities (CL 14th)
 Constant—magic circle against evil
@@ -1074,29 +928,6 @@ Treasure standard
 SPECIAL ABILITIES
 Spells Trumpet archons can cast divine spells as 14th-level clerics. 
 
-They do not gain access to domains or other cleric abilities.
-Trumpet (Su) All creatures except archons within 100 feet of 
-the trumpet’s blast must succeed on a DC 19 Fortitude save 
-or be paralyzed for 1d4 rounds. The save DC is Charisma-
-based. The archon can also command its trumpet to 
-become a +4 greatsword as a free action. Out of the archon’s 
-hands, it is a chunk of useless metal. 
-Messengers of good deities and mighty celestials, trumpet 
-archons serve as the vanguard of divine armies and rally 
-the legions of heaven to war. When lawful good deities 
-have the need to communicate directly with a group of 
-mortals, they often send trumpet archons to act as their 
-intermediaries. Trumpet archons speak with clear, musical 
-voices. Their otherworldly eyes are white and pupilless.
-All trumpet archons carry a gleaming magical trumpet 
-or horn with which they create wondrous music, sound 
-calls to other archons, paralyze enemies, or defend the 
-virtuous. They typically adorn their trumpet with the 
-standard of their liege. 
-
-Lithe and beautiful, with skin the color of marble, this being hovers 
-upon powerful, white wings and radiates a sense of serenity.
-
 AArrcchhoon, Lantern–Archon, Trumpet
 
 n, Lantern–Archon, Trumpet
@@ -1112,8 +943,8 @@ hp 30 (4d8+12)
 Fort +7, Ref +1, Will +2
 Immune electricity, plant traits; Resist cold 10 and fire 10
 Offense
-Speed 5 ft.
-Melee slam +7 (1d8+7 plus grab) 
+  Speed 5 ft.
+  Melee slam +7 (1d8+7 plus grab) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks constrict (1d8+7), entangle
 STATISTICS
@@ -1134,154 +965,12 @@ Entangle (Su) An assassin vine can, as a free action, cause
 plants within 30 feet of it to animate and grasp at foes. This 
 ability is otherwise similar to entangle (CL 4th, DC 13). The 
 save DC is Wisdom-based.
-The assassin vine is a carnivorous plant that collects its 
-own grisly fertilizer by grabbing and crushing animals and 
-depositing the carcasses near its roots. These remarkable 
-plants can see minute movements in the earth and air and 
-detect changes in light and heat through their broad leaves, 
-giving them exceptional awareness of the area around 
-them. Possessing no intelligence or agenda, they lash out 
-at whatever living things pass nearby, regardless of the 
-target’s size, sentience, or potential deadliness. A mature 
-plant consists of a main vine, about 20 feet long; smaller 
-vines up to 5 feet long branch off from the main vine about 
-every 6 inches. These small vines bear clusters of leaves, 
-and in late summer they produce bunches of small fruits 
-that resemble wild blackberries. The fruit is tough and 
-has a hearty and typically bitter f lavor, although some say 
-
-the berries change in taste depending on what victims 
-composted a given plant’s roots. The most murderous 
-assassin vines supposedly produce the sweetest berries. 
-An assassin vine can move about, but usually stays put 
-unless it needs to seek prey in a new vicinity. The plants 
-use simple tactics, lying still until prey comes within reach 
-and then attacking. Once an assassin vine is engaged, it 
-pursues prey (albeit slowly) in order to catch and compost 
-the creature. The plants prove tenacious, as long as their 
-quarry remains within sight. Once a creature moves 
-beyond the plant’s ability to perceive it, the unthinking 
-vine falls still and lies in wait for the next passerby. 
-Assassin vines lurk within dense forests and swamps, 
-but some might encroach upon poorly tended fields and 
-vineyards. The vine’s seeds might be spread far by birds 
-swift enough to pluck them and escape. Tales often tell 
-of assassin vines appearing in flower beds or infiltrating 
-greenhouses, murderous surprises planted by rivals and 
-enemies or arbitrary doom dropped by unsuspecting wing.
-
-This gnarled vine, as thick as a man’s arm and bearing hand-
-shaped leaves, convulses across the ground in an unnatural slither.
 
 AAssssaassssiinn VViinne–Azata
 
 e–Azata
 
 Azata
-Azatas are a race of celestials native to the plane of Elysium, 
-where the pursuit of freedom and goodness is paramount. 
-Azatas are champions of these concepts, great bards, 
-knights, and explorers who roam the planes in search of 
-good folk in need of their help. Frequently described as the 
-most elven or fey-like celestials, azatas nevertheless often 
-have strange, inhuman shapes or can take elemental or 
-eldritch forms. Most have some knightly or courtly title, 
-such as duke, countess, or prince, apparently hereditary, 
-perhaps from a celestial monarchy long abandoned 
-and forgotten. Azatas do not exploit these titles to exert 
-inf luence over each other, instead using them for personal 
-identification or a bit of self-importance. They are deadly 
-and resolute foes of evil, fearless and clever in battle. 
-It is not surprising that the three best-known kinds of 
-azatas can all f ly, for they rarely stay in one place for long 
-and prefer the thrill of motion and discovery to creature 
-comforts. Most azata “settlements” are little more than 
-a collection of tents around a landmark, gathered over 
-the course of a day to share news, stories, and perhaps 
-good-natured duels, and then packed up again a few days 
-later. Such temporary settlements are colorful and have a 
-celebratory atmosphere, as azatas are quick to greet any of 
-their kind as old friends. Although few can predict when 
-and where an azata community might arise, some groups 
-or breeds of azatas gather in cycles for traditional festivals 
-and reunions. Such gatherings typically take place at a 
-time of mystical consequence, such as on the evening 
-of the lunar equinox, or during less predictable times, 
-such as upon the wedding of two seers, and always in a 
-place of pristine or stunning natural wonder. All azatas 
-fundamentally know when and where the closest or next 
-gathering of their people might occur, and while none 
-are required or even expected to attend, all are welcome. 
-These gatherings do not preclude more permanent azata 
-holdings and communes, however, and the heights of 
-Elysium endlessly ring with the songs of azata choirs.
-While the stoic, homebound archons call their cousins 
-f lighty, azatas are driven by a crusading nature and feel 
-bored when forced to stay in one place too long. This 
-tendency also means they are unlikely to agree to serve 
-mortals for an extended period of time, preferring 
-to arrive, get the job done, and move on to some other 
-quest or challenge. As much as they seek to spread the 
-cause of freedom and joy, azatas realize that they cannot 
-enforce such virtues throughout the multiverse. Without 
-darkness there can be no light, and without struggle there 
-can be no victory. Understanding this, these celestials 
-remain removed from the majority of mortal conf licts, 
-preferring to act as advisors in such situations rather 
-than champions, granting goodly mortals ownership 
-
-over their own triumphs. In cases where the forces of evil 
-act overtly, however, and intrude upon mortal worlds, 
-azatas are quick to rally to defend such realms and aid 
-those who have no hope of defending themselves.
-Azatas generally work together, but their powerful 
-personalities and strong sense of individual freedom often 
-see them disagreeing on how best to handle a particular 
-situation. While both parties have the greater good at 
-heart, these arguments can fester and grow into long-
-lasting grudges. In cases where a single azata is convinced 
-his way is right, he might even enter a sort of self-imposed 
-exile, abandoning the support of his kin so he can launch a 
-one-azata crusade against the cruelties of the multiverse.
-Most azatas originate from the untamable beauty of 
-Elysium, created and nourished by the inf lux of goodly 
-mortal souls. Like most other outsiders, they cannot 
-reproduce with each other in the mortal fashion, and often 
-tryst with mortals who prove charming and good spirited. 
-Azatas dally frequently with their own kind, being quick 
-to seek out feelings of love, joy, and companionship, 
-but rarely feel bound or exclusive to merely one lover, 
-regardless of its race.
-Azatas speak Celestial, Draconic, and Infernal, but 
-can speak with almost any creature because of their 
-truespeech special ability. See page 311 for full details on 
-truespeech and other shared azata traits.
-
-Azata Empyreal Lords
-Among the ranks of the empyreal lords, the divine champions 
-of the Upper Planes, stand several unique and potent members 
-of the azata race. While some of these unique celestials hold 
-influence over vast realms and legions of followers, others 
-are lone wanderers and questing heroes seeking only to use 
-their guile, wisdom, and prowess to spread joy and freedom. 
-The following list names several of the most famed azata 
-empyreal lords known and revered upon countless planes 
-and worlds.
- Atonga, of Seas and Songs
- Aizen Myo-o, the Red Wisdom
- Cernunnos, the Stag Lord
- Connla, the Wolfhound’s Son
- The Forgotten, Free Even from Memory
- Itzamna, Who Watches from Clouds
- Lada, Lady of Dance
- Maahes, the Guardian Beast
- Muyingwa, the Seed Thrower
- Ibeji, the Twins
- Ogma, the Champion
- Tsukuyomi, Prince of the Moon
- Qetesh, the Sacred Lover
- Vikramaditya, Wise and Valorous King
-
 Azata, Bralani
 BRALAnI CR 6
 XP 2,400
@@ -1295,8 +984,8 @@ Fort +9, Ref +9, Will +6
 DR 10/cold iron or evil; Immune electricity, petrification; 
 Resist cold 10, fire 10; SR 17
 Offense
-Speed 40 ft., fly 100 ft. (perfect)
-Melee +1 scimitar +13/+8 (1d6+8/18–20) or slam +12 (1d6+7)
+  Speed 40 ft., fly 100 ft. (perfect)
+  Melee +1 scimitar +13/+8 (1d6+8/18–20) or slam +12 (1d6+7)
 Ranged +1 composite longbow +12/+7 (1d8+6/×3) 
 Special Attacks whirlwind blast
 Spell-Like Abilities (CL 6th)
@@ -1332,31 +1021,6 @@ cannot be dispelled, nor does the bralani revert to any
 particular form when killed (both shapes are its true form). 
 A true seeing spell reveals both forms simultaneously.
 
-Bralanis are among the fiercest and wildest of the azatas, 
-living from moment to moment and always on the lookout 
-for chances to test their skill in battle. In addition to their 
-elf-like forms, they can take the shape of whirlwinds of 
-dust, snow, or sand. In the mortal realm, they are often 
-mistaken for djinn. They delight in violent weather, not 
-for the destructive qualities of such events, but for the 
-intensity and energy, and many tales describe bralani as 
-spirits who laugh as they sail amid the strongest storms.
-Bralanis do not need to eat, but they enjoy doing so. 
-Most prefer elven food, fiery human dishes, and spiced 
-wine. Because of their similarities to elementals and fey, 
-they sometimes act as intermediaries between mortals, 
-elementals, and fey, though they prefer to arrange 
-temporary truces that allow the interested parties to 
-conduct their own negotiations on neutral ground. When 
-taking the role of mediators—or whenever else such 
-opportunities present themselves—bralani are quick to 
-suggest friendly competitions or games to end disputes 
-and enjoy creating challenges or complicated contests to 
-test both physical and mental mortal prowess.
-
-Silver-white hair the color of a lightning strike whips about this 
-poised elf-like archer, his eyes swirling with vibrant colors.
-
 Azata, Ghaele
 ghAELE CR 13
 XP 25,600
@@ -1372,8 +1036,8 @@ Fort +17, Ref +11, Will +16
 DR 10/cold iron and evil; Immune electricity, petrification; 
 Resist cold 10, fire 10; SR 25
 Offense
-Speed 50 ft., fly 150 ft. (perfect)
-Melee +2 holy greatsword +22/+17/+12 (2d6+12) 
+  Speed 50 ft., fly 150 ft. (perfect)
+  Melee +2 holy greatsword +22/+17/+12 (2d6+12) 
 Ranged 2 light rays +14 (2d12) 
 Special Attacks gaze
 Spell-Like Abilities (CL 13th)
@@ -1459,8 +1123,8 @@ hp 73 (7d10+35)
 Fort +7, Ref +10, Will +10
 Immune electricity, petrification, poison; Resist cold 10, fire 10
 Offense
-Speed 30 ft., fly 70 ft. (average)
-Melee +1 longsword +12/+7 (2d6+8/19–20), tail slap +6 (2d6+2 
+  Speed 30 ft., fly 70 ft. (average)
+  Melee +1 longsword +12/+7 (2d6+8/19–20), tail slap +6 (2d6+2 
 plus grab) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks bardic performance (20 rounds/day), 
@@ -1498,29 +1162,6 @@ competence, and suggestion aspects.
 Spells A lillend casts spells as a 7th-level bard. They favor 
 enchantment and healing spells.
 
-Among the azatas, lillends are the tale-tellers and chroniclers, 
-gathering lore and recording stories in the form of epic 
-poems and songs. They are generally peaceful, though they 
-are swift to act if they believe a piece of rare art or a talented 
-artist is threatened. A lillend’s lower section is about 20 feet 
-long, and a typical lillend weighs 3,800 pounds.
-Although they have no need of mortal nourishment, 
-it is said that lillends sup on the joy of music, art, and 
-performance. They also love unspoiled wilderness and 
-seek out places in the mortal realm that remind them of 
-the beauty of their home plane. From the lore of numerous 
-races come tales of these muses, particularly those that have 
-taken a vested interest in the training of a single talented 
-prodigy or the ongoing creation of some fantastic work of 
-art. Such legends sometimes prove true, as all lillends have 
-their favorite works, creations, and artists, and often visit the 
-Material Plane to enjoy their splendor and make sure they 
-remain safe. In the defense of such beauty, lillends prove 
-passionate foes, calling upon the might of nearby allies or 
-crushing philistines in their striking but deadly coils.
-
-This creature has the body of a seductive, winged elven woman 
-from the waist up and that of a snake from the waist down.
 
 Barghest
 BARghEST CR 4
@@ -1533,8 +1174,8 @@ hp 45 (6d10+12)
 Fort +6, Ref +7, Will +7
 DR 5/magic
 Offense
-Speed 30 ft.
-Melee bite +10 (1d6+4), 2 claws +10 (1d4+4)
+  Speed 30 ft.
+  Melee bite +10 (1d6+4), 2 claws +10 (1d4+4)
 Special Attacks feed
 Spell-Like Abilities (CL 6th)
 At will—blink, levitate, misdirection
@@ -1564,12 +1205,6 @@ a barghest reaches 4 growth points, it sheds its skin and
 becomes a greater barghest, losing all of its growth points 
 (and bonuses) but gaining the stats presented on this page 
 for a greater barghest. 
-Said to be fiendish relations of all goblinoid races, the 
-hateful barghests come to the Material Plane to feed. 
-As they consume the bodies of innocents, they grow 
-increasingly powerful. A barghest eventually sheds its skin 
-to transform into a greater barghest, at which point it often 
-seeks out a tribe of goblins or other creatures to rule.
 
 gREATER BARghEST CR 7
 XP 3,200
@@ -1581,8 +1216,8 @@ hp 85 (9d10+36)
 Fort +9, Ref +10, Will +10
 DR 10/magic
 Offense
-Speed 40 ft.
-Melee bite +14 (1d8+6), 2 claws +15 (1d6+6)
+  Speed 40 ft.
+  Melee bite +14 (1d8+6), 2 claws +15 (1d6+6)
 Spell-Like Abilities (CL 9th)
 At will— blink, invisibility sphere, levitate, misdirection
 1/day—charm monster (DC 16), crushing despair (DC 16), 
@@ -1618,8 +1253,8 @@ Fort +8, Ref +3, Will +2
 Immune cold, plant traits
 Weaknesses cold lethargy
 Offense
-Speed 20 ft.
-Melee slam +10 (1d8+7 plus spores)
+  Speed 20 ft.
+  Melee slam +10 (1d8+7 plus spores)
 Special Attacks hallucination cloud, spores
 STATISTICS
 Str 20, Dex 13, Con 16, Int —, Wis 11, Cha 1
@@ -1687,8 +1322,8 @@ Defense
 hp 52 (7d10+14)
 Fort +9, Ref +4, Will +5
 Offense
-Speed 20 ft.
-Melee bite +10 (1d8+4)
+  Speed 20 ft.
+  Melee bite +10 (1d8+4)
 Special Attacks gaze
 STATISTICS
 Str 16, Dex 8, Con 15, Int 2, Wis 13, Cha 11
@@ -1726,36 +1361,6 @@ lifelike poses—the petrified remains of
 those unfortunate enough to stumble 
 across the basilisk.
 
-Basilisks have the ability to consume the creatures 
-they petrify, their churning stomach acid dissolving and 
-extracting nutrients from the stone, but the process is 
-slow and inefficient, making them lazy and sluggish. As a 
-result, basilisks rarely stalk prey or chase those who avoid 
-their gaze, counting on their stealth and the element of 
-surprise to keep them safe and fed. When not lying in 
-wait for the small mammals, birds, and reptiles that 
-normally make up their diet, basilisks spend their time 
-sleeping in their lairs, and those brave enough to capture 
-basilisks or hide treasure near them find that they make 
-natural guardians and watchdogs. 
-An adult basilisk is 13 feet long, with fully half of that 
-made up by its long tail, and weighs 300 pounds. Some 
-breeds have short, curved horns on their noses or small 
-crests of bony growths topping their heads like crowns. 
-Though normally solitary creatures, coming together 
-only to mate and lay eggs, in particularly dangerous areas 
-small groups may band together for protection and attack 
-intruders en masse.
-For unknown reasons, weasels and ferrets are immune to 
-the basilisk’s stare, and sometimes sneak into basilisk lairs 
-while a parent is hunting in order to consume its young. 
-Some legends suggest that a basilisk’s blood can transmute 
-common stones into other material, but this is likely a case 
-of witnesses misinterpreting the magical restoration of 
-previously petrified creatures or body parts.
-
-This squat, reptilian monster has eight legs, bony spurs jutting 
-from its back, and eyes that glow with pale green fire. 
 
 BBaassiiddiirroonndd––BBaassiilisk
 
@@ -1770,8 +1375,8 @@ Defense
 hp 22 (4d8+4)
 Fort +5, Ref +6, Will +3
 Offense
-Speed 20 ft., fly 40 ft. (good)
-Melee bite +5 (1d8+4)
+  Speed 20 ft., fly 40 ft. (good)
+  Melee bite +5 (1d8+4)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 17, Dex 15, Con 13, Int 2, Wis 14, Cha 6
@@ -1818,8 +1423,8 @@ hp 13 (3d8)
 Fort +3, Ref +7, Will +3
 Defensive Abilities swarm traits; Immune weapon damage
 Offense
-Speed 5 ft., fly 40 ft. (good)
-Melee swarm (1d6)
+  Speed 5 ft., fly 40 ft. (good)
+  Melee swarm (1d6)
 Space 10 ft.; Reach 0 ft.
 Special Attacks distraction (DC 11), wounding
 STATISTICS
@@ -1873,8 +1478,8 @@ Defense
 hp 42 (5d8+20)
 Fort +8, Ref +5, Will +2
 Offense
-Speed 40 ft.
-Melee 2 claws +7 (1d6+5 plus grab), bite +7 (1d6+5)
+  Speed 40 ft.
+  Melee 2 claws +7 (1d6+5 plus grab), bite +7 (1d6+5)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 21, Dex 13, Con 19, Int 2, Wis 12, Cha 6
@@ -1921,8 +1526,8 @@ Defense
 hp 95 (10d8+50)
 Fort +12, Ref +8, Will +4
 Offense
-Speed 40 ft.
-Melee 2 claws +13 (1d6+7 plus grab), bite +13 (1d8+7) 
+  Speed 40 ft.
+  Melee 2 claws +13 (1d6+7 plus grab), bite +13 (1d8+7) 
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 25, Dex 13, Con 21, Int 2, Wis 12, Cha 10
@@ -1981,8 +1586,8 @@ hp 150 (12d10+84)
 Fort +15, Ref +11, Will +7
 DR 10/good
 Offense
-Speed 40 ft., climb 20 ft.
-Melee bite +19 (2d6+9 plus rot) and 2 claws +19 (2d4+9/19–20) 
+  Speed 40 ft., climb 20 ft.
+  Melee bite +19 (2d6+9 plus rot) and 2 claws +19 (2d4+9/19–20) 
 Space 15 ft.; Reach 15 ft.
 Special Attacks dismantle armor, penetrating strike, web (+11 
 ranged, DC 23, 12 hp)
@@ -2016,30 +1621,7 @@ magical for the purposes of penetrating
 damage reduction. Against creatures with 
 the demon type, its natural weapons are 
 also treated as cold iron and good.
-Rot (Su) A bebilith’s bite causes a horrible 
-withering and weakening of the flesh, 
-resulting in a hideous melting and foul 
-
-rotting effect. This catastrophic withering begins on the 
-round the creature is bitten and continues for another 4 
-rounds thereafter, for 5 rounds of withering in all. Each 
-round the rot persists, the target must succeed on a DC 23 
-Fortitude save or take 2 points of Constitution damage. If 
-the target makes two consecutive saving throws in a row, 
-the effect is cured. Heal can also halt the rot effect. The save 
-DC is Constitution-based.
-The Abyss is a terrible place, yet even in this horrific 
-realm there exist predators and wild beasts that prey 
-upon the demonic horde—the bebilith being the most 
-notorious, a creature evolved to hunt and slay demons. 
-Far more intelligent than its verminous shape would 
-suggest, it is perhaps a blessing that the bebilith is such 
-a focused and devoted hunter of demons, for had these 
-dangerous outsiders more of a mind to conquer and 
-expand empires, their ability to plane shift would make 
-them a menace indeed. Although, as an outsider, the 
-bebilith has no biological need to eat, it does enjoy the 
-sensation of chewing on demonic f lesh.
+Rot (Su) A bebilith’s bite causes a horrible withering and weakening of the flesh, resulting in a hideous melting and foul rotting effect. This catastrophic withering begins on the round the creature is bitten and continues for another 4 rounds thereafter, for 5 rounds of withering in all. Each round the rot persists, the target must succeed on a DC 23 Fortitude save or take 2 points of Constitution damage. If the target makes two consecutive saving throws in a row, the effect is cured. Heal can also halt the rot effect. The save DC is Constitution-based.
 
 fIRE BEETLE CR 1/3
 XP 135
@@ -2051,8 +1633,8 @@ hp 4 (1d8)
 Fort +2, Ref +0, Will +0
 Immune mind-affecting effects
 Offense
-Speed 30 ft., fly 30 ft. (poor)
-Melee bite +1 (1d4)
+  Speed 30 ft., fly 30 ft. (poor)
+  Melee bite +1 (1d4)
 STATISTICS
 Str 10, Dex 11, Con 11, Int —, Wis 10, Cha 7
 Base Atk +0; CMB –1; CMD 9 (17 vs. trip)
@@ -2075,19 +1657,7 @@ two most common variants are detailed below.
 Mining Beetle (CR 1/2): A mining beetle is an 
 advanced fire beetle with the advanced simple 
 template and a burrowing speed of 20 feet.
-Flash Beetle (CR 1/2): A flash 
-beetle is an advanced fire beetle 
-that can create a bright flash of 
-light once an hour. When 
-a flash beetle does so, 
-all creatures in a 10-
-foot burst must 
-make a DC 12 
-Fortitude save 
-or be dazzled 
-for 1d3 rounds. 
-The save DC is 
-Constitution-based.
+Flash Beetle (CR 1/2): A flash beetle is an advanced fire beetle that can create a bright flash of light once an hour. When a flash beetle does so, all creatures in a 10- foot burst must make a DC 12 Fortitude save or be dazzled for 1d3 rounds.  The save DC is Constitution-based.
 
 Beetle, Fire Beetle, Giant Stag
 gIAnT STAg BEETLE CR 4
@@ -2100,8 +1670,8 @@ hp 45 (7d8+14)
 Fort +7, Ref +2, Will +2
 Immune mind-affecting effects
 Offense
-Speed 20 ft., fly 20 ft. (poor)
-Melee bite +8 (2d8+6)
+  Speed 20 ft., fly 20 ft. (poor)
+  Melee bite +8 (2d8+6)
 Space 10 ft.; Reach 5 ft.
 Special Attacks trample (1d6+6, DC 17)
 STATISTICS
@@ -2159,8 +1729,8 @@ hp 105 (10d10+50)
 Fort +12, Ref +8, Will +5
 Immune electricity
 Offense
-Speed 40 ft., climb 20 ft.
-Melee bite +15 (2d6+9 plus grab)
+  Speed 40 ft., climb 20 ft.
+  Melee bite +15 (2d6+9 plus grab)
 Space 15 ft.; Reach 10 ft.
 Special Attacks breath weapon (20-foot line, 7d6 electricity 
 damage, Reflex DC 20 for half), constrict (2d6+9), rake 
@@ -2197,30 +1767,6 @@ pounds. In addition to the two prominent horns on its
 head, many have additional decorative spines at regular 
 intervals along the central ridges of their backs.
 
-While territorial and bestial in its fury, the behir 
-is neither stupid nor necessarily evil, though its self-
-centeredness and tendency to lay claim to everything 
-visible from its high lairs frequently bring it into conf lict 
-with other races. As such, a behir can often be bought off 
-or reasoned with by those brave negotiators willing to get 
-close enough to make their pitch. In these cases, a behir’s 
-tendency to attack first and ask questions later (or not at 
-all) means that anyone seeking to strike a deal must bring 
-powerful incentives and impress the behir immediately 
-with his offer.
-It’s often been speculated that behirs are somehow 
-related to blue dragons, but the exact nature of this 
-link remains unknown. Most dragons deny any such 
-association and look down on the behir for its relative 
-lack of intelligence—a snubbing that infuriates the 
-already short-tempered behir. Thanks to this casual 
-disparagement, many behirs carry deep grudges against 
-dragons, and attack without pause any who cross into 
-their territories.
-
-This slithering, multilegged blue reptile has a fearsome head 
-crowned with two large, curling horns.
-
 Black Pudding
 BLACk PUDDIng CR 7
 XP 3,200
@@ -2232,8 +1778,8 @@ hp 105 (10d8+60)
 Fort +9, Ref –2, Will –2
 Defensive Abilities split, ooze traits
 Offense
-Speed 20 ft., climb 20 ft.
-Melee slam +8 (2d6+4 plus 2d6 acid plus grab)
+  Speed 20 ft., climb 20 ft.
+  Melee slam +8 (2d6+4 plus 2d6 acid plus grab)
 Space 15 ft.; Reach 10 ft.
 Special Attacks constrict (2d6+4 plus 2d6 acid), corrosion
 STATISTICS
@@ -2275,26 +1821,6 @@ suction, it moves at half speed. Because of the suction, a
 black pudding’s CMD score gets a +10 circumstance bonus 
 to resist bull rush, awesome blows, and other attacks and 
 effects that attempt to physically move it from its location.
-Black puddings are the scavengers of the underworld, 
-constantly on the lookout for a meal. They can sense 
-organic or metallic objects within 60 feet and mindlessly 
-attack such items or beings until they are dissolved or the 
-ooze is killed. A black pudding reproduces by breaking 
-off a piece of its body and forming a new, smaller black 
-pudding, which grows to full size in 1 month’s time. Some 
-of the more intelligent creatures in the underworld use 
-black puddings as natural garbage disposals, creating 
-stone pits to house the pudding and throwing organic 
-refuse or foes in as needed.
-Larger specimens of black puddings have been encountered 
-in the deepest parts of the world, with Gargantuan individuals 
-having up to 30 HD. Other colored puddings are rumored to 
-exist, with white ones living in the arctic, brown ones living in 
-swamps, and tan ones living in deserts.
-
-This black, amorphous blob piles up on itself, a quivering mound 
-of midnight sludge that glistens darkly before surging forward.
-
 BBeehhiirr––BBllaacckk PPuuddddiinngg
 
 Boar Boar, Dire
@@ -2308,8 +1834,8 @@ hp 18 (2d8+9)
 Fort +6, Ref +3, Will +1
 Defensive Abilities ferocity
 Offense
-Speed 40 ft.
-Melee gore +4 melee (1d8+4)
+  Speed 40 ft.
+  Melee gore +4 melee (1d8+4)
 STATISTICS
 Str 17, Dex 10, Con 17, Int 2, Wis 13, Cha 4
 Base Atk +1; CMB +4; CMD 14
@@ -2356,8 +1882,8 @@ hp 42 (5d8+20)
 Fort +7, Ref +4, Will +2
 Defensive Abilities ferocity
 Offense
-Speed 40 ft.
-Melee gore +8 melee (2d6+9)
+  Speed 40 ft.
+  Melee gore +8 melee (2d6+9)
 STATISTICS
 Str 23, Dex 10, Con 17, Int 2, Wis 13, Cha 8
 Base Atk +3; CMB +10; CMD 20
@@ -2412,8 +1938,8 @@ Defense
 hp 22 (3d8+9)
 Fort +5, Ref +0, Will +1
 Offense
-Speed 20 ft., swim 30 ft.
-Melee morningstar +5 (1d8+3), tongue –4 touch (sticky tongue)
+  Speed 20 ft., swim 30 ft.
+  Melee morningstar +5 (1d8+3), tongue –4 touch (sticky tongue)
 Special Attacks terrifying croak
 STATISTICS
 Str 15, Dex 9, Con 14, Int 8, Wis 11, Cha 10
@@ -2460,34 +1986,6 @@ that succeed at this save cannot be affected again by the
 same boggard’s croak for 24 hours. Creatures that are already 
 shaken become frightened for 1d4 rounds instead. The save 
 DC is Charisma-based and includes a +2 racial bonus.
-Boggards resemble anthropomorphic frogs or toads, 
-complete with webbed hands and feet, large eyes, and overly 
-wide mouths. These creatures make their homes near large 
-rivers or deep in marshes. There they make small villages 
-composed of mud mounds on the banks. Boggards start 
-out life as tadpoles in breeding ponds, eventually growing 
-to a length of 3 feet before sprouting arms and legs and 
-becoming capable of terrestrial living. Acceptance into the 
-clan then depends on the young boggard’s successful hunt 
-to kill a sentient humanoid. Those who fail are exiled from 
-the clan. As boggards age, they continue to grow and 
-lose their coloration. Exceptionally old boggards bear 
-completely white skin covering massive corpulent 
-bodies. Some of these boggards rank among the 
-caste of priest-kings and enjoy a life of grotesque 
-pleasures ruling their clans.
-Though often hunched over, boggards 
-stand 5 feet tall and weigh close to 200 
-pounds. These creatures live for 50 years, 
-though the harsh swamps and infighting usually 
-cut these years short.
-
-Bulbous eyes glare atop this creature’s decidedly toad-like head. A 
-multitude of warts and bumps decorate its greenish skin.
-
-Boar–Boggard
-
-Boar–Boggard
 
 Bugbear
 BUgBEAR CR 2
@@ -2500,8 +1998,8 @@ shield)
 hp 16 (3d8+3)
 Fort +2, Ref +4, Will +1
 Offense
-Speed 30 ft.
-Melee morningstar +5 (1d8+3)
+  Speed 30 ft.
+  Melee morningstar +5 (1d8+3)
 Ranged javelin +3 (1d6+3)
 STATISTICS
 Str 16, Dex 13, Con 13, Int 10, Wis 10, Cha 9
@@ -2520,49 +2018,6 @@ morningstar, 3 javelins, other treasure)
 SPECIAL ABILITIES
 Stalker (Ex) Perception and Stealth are always 
 class skills for bugbears.
-The bugbear is the largest of the 
-goblinoid races, a lumbering brute that 
-stands at least a head taller than most 
-humans. They are loners, preferring to 
-live and kill on their own rather than 
-form tribes of their own kind, yet it 
-isn’t uncommon to find small bands of 
-bugbears working together, or dwelling 
-in goblin or hobgoblin tribes where they 
-function as elite guards or executioners. 
-Bugbears do not form large warrens like 
-goblins or nations like hobgoblins; they prefer smaller-scale 
-mayhem that lets them keep their favorite acts (murder and 
-torture) on a more personal level. Humans are a bugbear’s 
-favored prey, and most count the flesh of humanity as a 
-dietary staple. Grisly trophies of ears or fingers are common 
-bugbear decorations.
-
-Bugbears, when they turn to religion, favor gods of 
-murder and violence, with various demon lords being 
-favorites.
-A typical bugbear stands 7 feet in height and weighs 
-400 pounds.
-The Nature of Goblinoid Evil
-Goblins, hobgoblins, and bugbears, despite having 
-superficial similarities, each represent a different face 
-of evil. Hobgoblins are ordered and methodical in their 
-evil, forming vast armies, warbands, and despotic nations. 
-Goblins are the primal evil, seeking only cruelty and petty 
-victimization as they can find it, be that among their own 
-kind or against their neighbors. Yet the evil personified by 
-the bugbear may be the most terrifying, for they actively 
-seek to inf lict pain and suffering in the most destructive 
-ways possible. When a hobgoblin kills, it’s because of 
-tradition and order. When a goblin kills, it’s for fun. But 
-when a bugbear holds its blade, it kills only when it can 
-be assured that the murder will cause maximum pain and 
-suffering to those its weapon does not touch; to a bugbear, 
-the true goal of murder is to strike not at the victim, but at 
-those who held the victim dear.
-
-This dark-furred creature raises a spiked morningstar, its tiny, 
-milk-white eyes glittering with the thrill of the coming kill.
 
 Bulette
 BULETTE CR 7
@@ -2575,8 +2030,8 @@ Defense
 hp 84 (8d10+40)
 Fort +11, Ref +8, Will +5
 Offense
-Speed 40 ft., burrow 20 ft.
-Melee bite +13 (2d8+9/19–20) and 2 claws +12 (2d6+6)
+  Speed 40 ft., burrow 20 ft.
+  Melee bite +13 (2d8+9/19–20) and 2 claws +12 (2d6+6)
 Space 15 ft.; Reach 10 ft.
 Special Attacks leap, savage bite
 STATISTICS
@@ -2610,47 +2065,6 @@ fin cutting a distinctive wake behind it, the
 bulette launches itself free of stone and soil to 
 tear into its prey without remorse, giving rise to 
 the common appellation “landshark.”
-Bulettes are notoriously foul-tempered, attacking 
-far larger creatures with no regard for personal safety. 
-
-Solitary beasts except for the occasional mated pair, 
-they spend most of their time patrolling the perimeters 
-of territories that can stretch up to 30 square miles, 
-hunting game and punishing interlopers with a fury 
-that shakes the hillsides.
-Bulettes are perfect eating machines, consuming bones, 
-armor, and even magical items with their powerful jaws 
-and churning stomach acid. Lacking other food, the 
-bulette might gnaw on inanimate objects, yet for unknown 
-reasons no bulette voluntarily consumes elf f lesh—a 
-peccadillo many point to as evidence that elven wizardry 
-was involved in its creation. Dwarves are also rarely eaten 
-by the beasts, though the bulette still slaughters members 
-of either race on sight. Half lings, on the other hand, are 
-among the beast’s favorite meals, and no half ling with any 
-sense ventures into bulette country casually.
-The  bulette is a cunning fighter, surprising foes with 
-its impressive agility. One of its favorite tactics is to 
-charge forward and launch itself into the air in order to 
-drop on its prey with all four razor-sharp claws extended. 
-Folklore claims that the f lesh behind the beast’s dorsal 
-crest is particularly tender, and that those willing and 
-able to wait until the 
-fin is raised in the 
-excitement of combat or 
-mating can target it for a 
-killing blow—yet most who 
-have faced the landshark agree 
-that the best way to win a 
-fight with a bulette is to 
-avoid it entirely.
-
-This armor-plated creature’s toothy maw gapes wide as a fin-like 
-dorsal plate rises between its shoulders.
-
-BBuuggbbeeaarr––BBuullette
-
-ette
 
 Cat, Cheetah Cat, Leopard
 ChEETAh CR 2
@@ -2662,8 +2076,8 @@ Defense
 hp 19 (3d8+6)
 Fort +5, Ref +7, Will +2
 Offense
-Speed 50 ft.; sprint
-Melee bite +6 (1d6+3 plus trip), 2 claws +6 (1d3+3) 
+  Speed 50 ft.; sprint
+  Melee bite +6 (1d6+3 plus trip), 2 claws +6 (1d3+3) 
 STATISTICS
 Str 17, Dex 19, Con 15, Int 2, Wis 12, Cha 6
 Base Atk +2; CMB +5; CMD 19 (23 vs. trip)
@@ -2687,11 +2101,6 @@ An adult cheetah is 4-1/2
 feet long and weighs 
 140 pounds.
 
-This large, sleek feline has a golden coat spotted with black. Its 
-long and powerful legs are obviously capable of great speed.
-
-With each graceful step, this leopard’s steely muscles ripple 
-beneath its spotted fur.
 LEOPARD CR 2
 XP 600
 N Medium animal 
@@ -2701,8 +2110,8 @@ Defense
 hp 19 (3d8+6)
 Fort +5, Ref +7, Will +2
 Offense
-Speed 30 ft., climb 20 ft.
-Melee bite +6 (1d6+3 plus grab), 2 claws +6 (1d3+3) 
+  Speed 30 ft., climb 20 ft.
+  Melee bite +6 (1d6+3 plus grab), 2 claws +6 (1d3+3) 
 Special Attacks pounce, rake (2 claws +6, 1d3+3)
 STATISTICS
 Str 16, Dex 19, Con 15, Int 2, Wis 13, Cha 6
@@ -2751,8 +2160,8 @@ hp 22 (3d8+9)
 Fort +6, Ref +2, Will +1
 Immune mind-affecting effects
 Offense
-Speed 20 ft., climb 20 ft.
-Melee 2 claws +5 (1d4+3) 
+  Speed 20 ft., climb 20 ft.
+  Melee 2 claws +5 (1d4+3) 
 Ranged filament +3 (drag) 
 Special Attacks pull (filament, 10 feet)
 STATISTICS 
@@ -2782,51 +2191,6 @@ active at a time.
 Pull (Ex) A cave fisher has a +4 
 racial bonus on CMB checks 
 made using its pull special attack.
-The cave fisher is a highly specialized predator 
-that dwells in caves. The creature’s mode of 
-hunting is unique—it clambers up a cave wall to 
-settle on a ledge or in a crack, typically at a height 
-of at least 30 feet. Ledges overlooking bridges and 
-lower ledges overlooking chasms are favored hunting 
-
-This man-sized, crab-like monstrosity clings tenaciously to the 
-rough stone, its enormous pincers held out menacingly before it.
-
-CCat–Cave Fisher
-
-at–Cave Fisher
-
-grounds for the cave fisher. The creature lies in wait until 
-prey approaches within 60 feet, at which point it extrudes 
-a thin cord of silk at blinding speed, lashing at the target 
-as with a whip. The filament is incredibly sticky, and 
-once the fisher strikes food with it, it reels in its meal 
-to feed, trusting its position on a higher ledge to prevent 
-any allies the meal may have from molesting it as it eats. 
-Collections of bones and lengths of discarded filaments 
-are sure signs of cave fisher habitation.
-A cave fisher produces its filament from glands in 
-its body; when it reels in a victim, it generally eats the 
-filament along with its meal. It’s impossible to harvest 
-new filaments from a dead cave fisher, but filaments 
-harvested from living ones are incredibly light and strong, 
-functioning as silk rope once the sticky adhesive on a 
-length decomposes (which generally takes 3d6 minutes). 
-A cave fisher’s filament glands are useful in constructing 
-sovereign glue and similar sticky magical items. A single 
-cave fisher’s glands count as 100 gp worth of raw materials, 
-offsetting the total cost of the item’s final creation.
-Although cave fishers have many superficial similarities 
-to crabs, they do not fare well in water and aren’t very good 
-swimmers. Nevertheless, many cave fishers lair upon ledges 
-overlooking swift-f lowing subterranean rivers, giving 
-them a relatively steady stream of food, especially in cases 
-where such rivers are used as trade routes. Those who 
-ply these rivers frequently travel with a few spare slaves 
-or some unwanted livestock, and when they approach a 
-known cave fisher haunt, they send down the unfortunate 
-animal or slave on a raft to distract the monster’s hunger.
-A cave fisher is 7 feet long and weighs 400 pounds.
 
 Centaur
 CEnTAUR CR 3
@@ -2839,8 +2203,8 @@ Defense
 hp 30 (4d10+8)
 Fort +3, Ref +6, Will +6
 Offense
-Speed 50 ft.
-Melee longsword +5 (1d8+2/19–20), 2 hooves +0 (1d6+1)
+  Speed 50 ft.
+  Melee longsword +5 (1d8+2/19–20), 2 hooves +0 (1d6+1)
 Ranged spear +5 (1d8+2/×3)
 Space 10 ft., Reach 5 ft.
 STATISTICS
@@ -2877,26 +2241,6 @@ of 2,000 pounds, there are vast regional variations—from
 lean plains-runners to burly mountain hunters. Centaurs 
 typically live to be about 60 years old.
 
-Aloof with other races and at odds even with their own 
-kind, the centaurs are an old race only slowly coming to 
-accept the modern world. While the majority of centaurs 
-still live in tribes roaming vast plains or the fringes of 
-eldritch forests, many have abandoned the isolationist 
-ways of their ancestors to walk among the more 
-cosmopolitan cities of the world. Often such free-spirited 
-centaurs are considered outcasts and are shunned by 
-their own tribes, making the decision to leave a heavy 
-one. In some rare cases, however, whole tribes under 
-progressive leaders have come to trade or make alliances 
-with other humanoid communities—typically elves, but 
-sometimes gnomes, and rarely humans or dwarves. Many 
-races remain wary of centaurs, though, largely due to 
-legends of territorial beastmen and the regular, violent 
-encounters the centaurs have with stubborn settlers and 
-expansionist countries. 
-
-This creature has the sun-bronzed upper body of a seasoned 
-warrior and the lower body of a sleek warhorse.
 
 Centipede, Giant Centipede Swarm
 gIAnT CEnTIPEDE CR 1/2
@@ -2909,8 +2253,8 @@ hp 5 (1d8+1)
 Fort +3, Ref +2, Will +0
 Immune mind-affecting effects
 Offense
-Speed 40 ft., climb 40 ft.
-Melee bite +2 (1d6–1 plus poison)
+  Speed 40 ft., climb 40 ft.
+  Melee bite +2 (1d6–1 plus poison)
 Special Attacks poison
 STATISTICS
 Str 9, Dex 15, Con 12, Int —, Wis 10, Cha 2
@@ -2957,8 +2301,8 @@ hp 31 (9d8–9)
 Fort +5, Ref +7, Will +3
 Defensive Abilities swarm traits, Immune weapon damage
 Offense
-Speed 30 ft., climb 30 ft.
-Melee swarm (2d6 plus poison)
+  Speed 30 ft., climb 30 ft.
+  Melee swarm (2d6 plus poison)
 Space 10 ft.; Reach 0 ft.
 Special Attacks distraction (DC 13), poison
 STATISTICS
@@ -2974,19 +2318,7 @@ SPECIAL ABILITIES
 Poison (Ex) Bite—injury; save Fort 
 DC 13; frequency 1/round for 
 6 rounds; effect 1d4 Dex 
-damage; cure 1 save. The save 
-DC is Constitution-based and 
-includes a +2 racial bonus.
-
-This lengthy, segmented horror writhes and twists, pulsing its 
-venomous mandibles in search of prey.
-
-A writhing mass of legs and poisonous pincers swarms across the 
-ground in a deadly, undulating wave.
-
-CCeentaur–Centipede
-
-ntaur–Centipede
+damage; cure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
 
 Chimera
 ChIMERA CR 7
@@ -2999,8 +2331,8 @@ Defense
 hp 85 (9d10+36)
 Fort +9, Ref +7, Will +6
 Offense
-Speed 30 ft., fly 50 ft. (poor)
-Melee bite +12 (2d6+4), bite +12 (1d8+4), gore +12 (1d8+4), 2 
+  Speed 30 ft., fly 50 ft. (poor)
+  Melee bite +12 (2d6+4), bite +12 (1d8+4), gore +12 (1d8+4), 2 
 claws +12 (1d6+4)
 Space 10 ft.; Reach 5 ft.
 Special Attacks breath weapon
@@ -3032,37 +2364,6 @@ d10 head Color Breath Weapon
 5–6 Green 20-foot cone of acid
 7–8 Red 20-foot cone of fire
 9–10 White 20-foot cone of cold
-Chimeras are monstrous creatures born of 
-primordial evil. Hateful and hungry, they hunt 
-on the ground or in the air. A chimera’s dragon 
-
-head may be of any evil dragon type, with the corresponding 
-breath weapon, and its wings usually match the scales on 
-its head. Chimeras speak with three overlapping voices, but 
-rarely do so, typically only when playing toady to a more 
-powerful creature. A chimera is 5 feet tall at the shoulder, 
-nearly 10 feet long, and weighs 700 pounds.
-Chimeras prefer meat but can subsist on vegetable matter 
-if necessary (although being forced to do so generally 
-leaves the beasts more ill-tempered than usual). Their 
-f light means they can pick and choose their prey, and they 
-usually hunt a large area in search of easy food. They are 
-too stupid and belligerent to acquire followers, though 
-sometimes a tribe of kobolds might give them offerings. 
-Conversely, they are just intelligent and stubborn enough 
-that they make poor pets, and only a significantly more 
-powerful creature can keep them submissive. They may 
-form equal partnerships with a respectful humanoid or 
-similar creature, and even consent to be used as a mount. 
-A pride of chimeras is very leonine in its hierarchy, with a 
-dominant male leading the group and most of the hunting 
-done by the females. A solitary chimera may be a young 
-male or a female with cubs nearby.
-
-This winged monster has the body of a lion, though two more 
-heads f lank its central feline one—a dragon and a horned goat.
-
-CChhiimmeerraa––CChhookkeerr
 
 Choker
 ChOkER CR 2
@@ -3074,8 +2375,8 @@ Defense
 hp 16 (3d8+3)
 Fort +2, Ref +3, Will +4
 Offense
-Speed 20 ft., climb 10 ft.
-Melee 2 tentacles +6 (1d4+3 plus grab)
+  Speed 20 ft., climb 10 ft.
+  Melee 2 tentacles +6 (1d4+3 plus grab)
 Space 5 ft.; Reach 10 ft.
 Special Attacks constrict (1d4+3), strangle
 STATISTICS
@@ -3095,49 +2396,6 @@ victims by the neck. A creature that is grappled by a choker
 cannot speak or cast spells with verbal components.
 Quickness (Su) A choker is supernaturally quick. It can take an 
 extra move action during its turn each round.
-Underground predators that often dwell on the outskirts 
-of subterranean ruins or in the deep shadows of nameless 
-cavern outposts, chokers lurk in the darkness and lash out 
-with their long, rubbery arms to grasp prey as it passes by. 
-They seldom attack multiple enemies at once, stalking their 
-quarry until they can isolate a weaker victim from its pack.
-Chokers walk with a disturbing, almost comical gait due 
-to their extremely limber legs. Weighing only 35 pounds 
-and standing no taller than a half ling, chokers have no 
-problem skittering across walls and ceilings, often 
-lodging themselves into shadowy corners, tunnel 
-intersections, walls, or staircases. A choker will 
-attempt to grasp creatures of almost any size, but 
-prefers lone prey of its size or smaller. 
-Chokers appear to have little culture 
-of their own, gathering only brief ly to 
-mate before their wanderlust and hunger 
-
-This hunched-over wretch has long, pliable arms like tentacles 
-capped with five wide, spiny claws.
-
-spurs them again to a solitary existence. Their just-
-better-than-animalistic intelligence grants them a 
-fascination with the trappings of society even if they do 
-not truly understand it. Accordingly, the grubby lair of 
-a choker (often situated in a difficult-to-reach nook or 
-cranny) usually contains valuable objects such as rings, 
-brooches, cloak clasps, and loose coins gathered from 
-devoured victims.
-This fascination occasionally compels a choker to 
-abandon its subterranean home for a closer study of 
-the sunlit world’s many civilizations. These chokers 
-feel most at home in the darkened narrow alleyways 
-of human cities, squeezing themselves into sewers, 
-forgotten alcoves, barrels, and similar cramped, 
-overlooked spaces. Chokers prefer to keep hidden during 
-the light of day, emerging from their hidey-holes under 
-cover of darkness to hunt for food and cruel pleasure. 
-Favorite tactics include using their long arms to scoop 
-prey off the street from the safety of a nearby rooftop, 
-attacking sleeping families by squeezing through an 
-open chimney, or tapping on a window to bring their 
-curious food within grasping distance.
 
 ChUUL CR 7
 XP 3,200
@@ -3149,8 +2407,8 @@ hp 85 (10d8+40)
 Fort +7, Ref +6, Will +9
 Immune poison
 Offense
-Speed 30 ft., swim 20 ft.
-Melee 2 claws +14 (2d6+7 plus grab)
+  Speed 30 ft., swim 20 ft.
+  Melee 2 claws +14 (2d6+7 plus grab)
 Space 10 ft.; Reach 5 ft.
 Special Attacks constrict (2d6+7), paralytic tentacles
 STATISTICS
@@ -3224,8 +2482,8 @@ hp 51 (6d8+24)
 Fort +6, Ref +5, Will +7
 Defensive Abilities shadow shift
 Offense
-Speed 10 ft., fly 40 ft. (average)
-Melee bite +8 (1d6+5), tail slap +3 (1d8+2)
+  Speed 10 ft., fly 40 ft. (average)
+  Melee bite +8 (1d6+5), tail slap +3 (1d8+2)
 Space 10 ft.; Reach 10 ft. (5 ft. with bite)
 Special Attacks engulf, moan
 STATISTICS
@@ -3309,8 +2567,8 @@ Defense
 hp 27 (5d10)
 Fort +4, Ref +7, Will +2
 Offense
-Speed 20 ft., fly 60 ft. (poor)
-Melee bite +9 (1d4–2 plus petrification)
+  Speed 20 ft., fly 60 ft. (poor)
+  Melee bite +9 (1d4–2 plus petrification)
 STATISTICS
 Str 6, Dex 17, Con 11, Int 2, Wis 13, Cha 8
 Base Atk +5; CMB +2; CMD 16
@@ -3384,8 +2642,8 @@ Defense
 hp 126 (12d10+60)
 Fort +9, Ref +13, Will +14
 Offense
-Speed 20 ft., fly 60 ft. (good)
-Melee bite +16 (1d8+7 plus grab and poison) 
+  Speed 20 ft., fly 60 ft. (good)
+  Melee bite +16 (1d8+7 plus grab and poison) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks constrict (1d8+7)
 Spell-Like Abilities (CL 9th)
@@ -3484,8 +2742,8 @@ hp 19 (3d8+6)
 Fort +5, Ref +2, Will +1
 Immune mind-affecting effects
 Offense
-Speed 30 ft., swim 20 ft.
-Melee 2 claws +4 (1d4+2 plus grab)
+  Speed 30 ft., swim 20 ft.
+  Melee 2 claws +4 (1d4+2 plus grab)
 Special Attacks constrict (1d4+2)
 STATISTICS
 Str 15, Dex 13, Con 14, Int —, Wis 10, Cha 2
@@ -3531,8 +2789,8 @@ hp 38 (7d8+7)
 Fort +6, Ref +4, Will +2
 Immune mind-affecting effects, swarm traits, weapon damage
 Offense
-Speed 30 ft., swim 20 ft.
-Melee swarm (2d6)
+  Speed 30 ft., swim 20 ft.
+  Melee swarm (2d6)
 Space 10 ft.; Reach 0 ft.
 Special Attacks distraction (DC 14)
 STATISTICS
@@ -3564,8 +2822,8 @@ Defense
 hp 22 (3d8+9)
 Fort +6, Ref +4, Will +2
 Offense
-Speed 20 ft., swim 30 ft.; sprint
-Melee bite +5 (1d8+4 plus grab) and tail slap +0 (1d12+2)
+  Speed 20 ft., swim 30 ft.; sprint
+  Melee bite +5 (1d8+4 plus grab) and tail slap +0 (1d12+2)
 Space 10 ft.; Reach 5 ft.
 Special Attacks death roll (1d8+6 plus trip)
 STATISTICS
@@ -3612,8 +2870,8 @@ Defense
 hp 138 (12d8+84)
 Fort +15, Ref +8, Will +8
 Offense
-Speed 20 ft., swim 30 ft.; sprint
-Melee bite +18 (3d6+13/19–20 plus grab) and tail slap +13 (4d8+6)
+  Speed 20 ft., swim 30 ft.; sprint
+  Melee bite +18 (3d6+13/19–20 plus grab) and tail slap +13 (4d8+6)
 Space 20 ft.; Reach 15 ft.
 Special Attacks death roll (3d6+19 plus trip), swallow whole 
 (3d6+13, AC 16, 13 hp)
@@ -3653,8 +2911,8 @@ hp 65 (10d8+20)
 Fort +9, Ref +2, Will +4
 Defensive Abilities ferocity
 Offense
-Speed 30 ft.
-Melee greataxe +11 (3d6+7/×3)
+  Speed 30 ft.
+  Melee greataxe +11 (3d6+7/×3)
 Ranged heavy crossbow +5 (2d8/19–20/×3)
 Space 10 ft.; Reach 10 ft.
 STATISTICS
@@ -3724,8 +2982,8 @@ hp 19 (3d8+6)
 Fort +3, Ref +6, Will +1
 Weaknesses light blindness
 Offense
-Speed 30 ft.
-Melee dagger +6 (1d3/19–20 plus poison)
+  Speed 30 ft.
+  Melee dagger +6 (1d3/19–20 plus poison)
 Special Attacks death throes, sneak attack (+1d6)
 Spell-Like Abilities (CL 3rd)
 At will—darkness, detect magic
@@ -3806,8 +3064,8 @@ hp 39 (6d8+12)
 Fort +4, Ref +9, Will +2
 Weaknesses light blindness
 Offense
-Speed 30 ft.
-Melee 2 short swords +6/+6 (1d6+2 plus poison/19–20)
+  Speed 30 ft.
+  Melee 2 short swords +6/+6 (1d6+2 plus poison/19–20)
 Special Attacks death throes, sneak attack (+3d6)
 Spell-Like Abilities (CL 6th)
 At will—deeper darkness, detect magic, fog cloud
@@ -3912,8 +3170,8 @@ Defense
 hp 15 (2d10+4)
 Fort +5, Ref +3, Will +0
 Offense
-Speed 20 ft., fly 30 ft. (poor)
-Melee slam +6 (1d4+4 plus grab)
+  Speed 20 ft., fly 30 ft. (poor)
+  Melee slam +6 (1d4+4 plus grab)
 Special Attacks constrict (1d4+4)
 Spell-Like Abilities (CL 5th)
 1/day—darkness
@@ -4107,8 +3365,8 @@ Fort +10, Ref +6, Will +5
 Defensive Abilities protective slime; DR 10/cold iron or good; 
 Immune electricity, poison; Resist acid 10, cold 10, fire 10; SR 17
 Offense
-Speed 30 ft.
-Melee 2 claws +12 (1d6+5), bite +12 (1d6+5) or longspear +12/+7 
+  Speed 30 ft.
+  Melee 2 claws +12 (1d6+5), bite +12 (1d6+5) or longspear +12/+7 
 (1d8+7), bite +7 (1d6+2)
 Space 5 ft.; Reach 5 ft. (10 ft. with longspear)
 Special Attacks sneak attack +2d6
@@ -4194,8 +3452,8 @@ Fort +29, Ref +17, Will +25
 DR 15/cold iron and good; Immune electricity, fire, poison; 
 Resist acid 10, cold 10; SR 31
 Offense
-Speed 40 ft., fly 90 ft. (good)
-Melee +1 vorpal unholy longsword +31/+26/+21/+16 (2d6+13), 
+  Speed 40 ft., fly 90 ft. (good)
+  Melee +1 vorpal unholy longsword +31/+26/+21/+16 (2d6+13), 
 +1 vorpal flaming whip +30/+25/+20 (1d4+7 plus 1d6 fire and 
 entangle) or 2 slams +31 (1d10+12) 
 Space 10 ft.; Reach 10 ft. (20 ft. with whip)
@@ -4352,8 +3610,8 @@ Fort +5, Ref +0, Will +3
 DR 5/cold iron or good; Immune electricity, poison; Resist 
 acid 10, cold 10, fire 10
 Offense
-Speed 20 ft.
-Melee 2 claws +4 (1d4+1), bite +4 (1d4+1)
+  Speed 20 ft.
+  Melee 2 claws +4 (1d4+1), bite +4 (1d4+1)
 Spell-Like Abilities (CL 2nd)
 1/day—cause fear (DC 11), stinking cloud (DC 13), summon 
 (level 1, 1 dretch 35%)
@@ -4430,8 +3688,8 @@ Fort +18, Ref +4, Will +11
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
 10, fire 10; SR 24
 Offense
-Speed 40 ft.
-Melee 2 pincers +20 (2d8+10/19–20), 2 claws +20 (1d6+10), bite 
+  Speed 40 ft.
+  Melee 2 pincers +20 (2d8+10/19–20), 2 claws +20 (1d6+10), bite 
 +20 (1d8+10)
 Space 15 ft.; Reach 15 ft.
 Special Attacks rend (2 pincers, 2d8+15)
@@ -4501,8 +3759,8 @@ Fort +16, Ref +3, Will +9
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
 10, fire 10; SR 22
 Offense
-Speed 30 ft., swim 30 ft. 
-Melee bite +17 (4d4+8 plus grab), 2 claws +17 (1d8+8 plus grab) 
+  Speed 30 ft., swim 30 ft. 
+  Melee bite +17 (4d4+8 plus grab), 2 claws +17 (1d8+8 plus grab) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks nausea
 Spell-Like Abilities (CL 13th)
@@ -4582,8 +3840,8 @@ Fort +25, Ref +18, Will +13
 DR 10/cold iron and good; Immune electricity and poison; 
 Resist acid 10, cold 10, fire 10; SR 28
 Offense
-Speed 40 ft.
-Melee +1 longsword +24/+19/+14/+9 (2d6+8/17–20), 5 +1 
+  Speed 40 ft.
+  Melee +1 longsword +24/+19/+14/+9 (2d6+8/17–20), 5 +1 
 longswords +24 (2d6+4/17–20), tail slap +19 (2d6+3 plus grab) 
 or 6 slams +24 (1d8+7), tail slap +19 (2d6+3 plus grab)
 Space 10 ft.; Reach 10 ft.
@@ -4651,8 +3909,8 @@ Fort +9, Ref +9, Will +9
 DR 10/cold iron or good; Immune death effects, electricity, 
 paralysis, poison; Resist acid 10, cold 10, fire 10; SR 19
 Offense
-Speed 30 ft., fly 60 ft. (average)
-Melee 2 claws +15 (1d6+6), bite +15 (1d8+6) 
+  Speed 30 ft., fly 60 ft. (average)
+  Melee 2 claws +15 (1d6+6), bite +15 (1d8+6) 
 Special Attacks consume life, death-stealing gaze, sneak attack +2d6
 Spell-Like Abilities (CL 8th)
 At will—deeper darkness, greater teleport (self plus 50 lbs. of 
@@ -4730,8 +3988,8 @@ Fort +22, Ref +9, Will +21
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
 10, fire 10; SR 25
 Offense
-Speed 30 ft., fly 40 ft. (poor)
-Melee bite +23 (3d8+11/19–20), 2 claws +23 (2d6+11)
+  Speed 30 ft., fly 40 ft. (poor)
+  Melee bite +23 (3d8+11/19–20), 2 claws +23 (2d6+11)
 Space 15 ft.; Reach 15 ft.
 Special Attacks unholy nimbus
 Spell-Like Abilities (CL 12th)
@@ -4805,8 +4063,8 @@ electricity, poison;
 Resist acid 10, cold 
 10, fire 10
 Offense
-Speed 20 ft., fly 50 ft. (perfect)
-Melee 2 claws +7 (1d3–1 plus 
+  Speed 20 ft., fly 50 ft. (perfect)
+  Melee 2 claws +7 (1d3–1 plus 
 poison), bite +7 (1d4–1) 
 Space 2-1/2 ft.; Reach 0 ft.
 Spell-Like Abilities (CL 6th)
@@ -4915,8 +4173,8 @@ Defensive Abilities incorporeal; DR 10/cold iron or good;
 Immune cold, electricity, poison; Resist acid 10, fire 10; SR 17
 Weaknesses sunlight powerlessness
 Offense
-Speed fly 40 ft. (perfect)
-Melee 2 claws +11 touch (1d6 plus 1d6 cold), bite +11 touch 
+  Speed fly 40 ft. (perfect)
+  Melee 2 claws +11 touch (1d6 plus 1d6 cold), bite +11 touch 
 (1d8 plus 1d6 cold) 
 Special Attacks pounce, sprint, shadow blend
 Spell-Like Abilities (CL 10th)
@@ -4984,8 +4242,8 @@ Fort +7, Ref +9, Will +10
 DR 10/cold iron or good; Immune electricity, fire, poison; 
 Resist acid 10, cold 10; SR 18
 Offense
-Speed 30 ft., fly 50 ft. (average)
-Melee 2 claws +11 (1d6+1)
+  Speed 30 ft., fly 50 ft. (average)
+  Melee 2 claws +11 (1d6+1)
 Special Attacks energy drain, profane gift
 Spell-Like Abilities (CL 12th)
 Constant—detect good, tongues
@@ -5059,8 +4317,8 @@ Fort +13, Ref +10, Will +6
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
 10, fire 10; SR 20
 Offense
-Speed 30 ft., fly 50 ft. (average)
-Melee 2 claws +13 (2d6+5), bite +13 (1d8+5), 2 talons +13 (1d6+5)
+  Speed 30 ft., fly 50 ft. (average)
+  Melee 2 claws +13 (2d6+5), bite +13 (1d8+5), 2 talons +13 (1d6+5)
 Space 10 ft.; Reach 10 ft.
 Special Attacks dance of ruin, spores, stunning screech
 Spell-Like Abilities (CL 12th)
@@ -5142,8 +4400,8 @@ Fort +5, Ref +3, Will +6
 SR 14
 Weaknesses vulnerability to sunlight
 Offense
-Speed 20 ft.
-Melee short sword +5 (1d4) or aklys +5 (1d6)
+  Speed 20 ft.
+  Melee short sword +5 (1d4) or aklys +5 (1d6)
 Ranged repeating light crossbow +5 (1d8/19–20 plus poison) 
 or aklys +5 (1d6)
 Special Attacks sneak attack +1d6
@@ -5354,8 +4612,8 @@ Fort +14, Ref +14, Will +8
 Defensive Abilities barbed defense; DR 10/good; Immune 
 fire, poison; Resist acid 10, cold 10; SR 22
 Offense
-Speed 30 ft.
-Melee 2 claws +18 (2d8+6/19–20 plus fear and grab)
+  Speed 30 ft.
+  Melee 2 claws +18 (2d8+6/19–20 plus fear and grab)
 Special Attacks fear, impale 3d8+9
 Spell-Like Abilities (CL 12th)
 At will—greater teleport (self plus 50 lbs. of objects only), 
@@ -5429,8 +4687,8 @@ Fort +9, Ref +7, Will +3
 DR 5/good or silver; Immune fire, poison; Resist acid 10, cold 
 10; SR 16
 Offense
-Speed 40 ft.
-Melee glaive +11/+6 melee (1d10+6 plus infernal wound) or 2 
+  Speed 40 ft.
+  Melee glaive +11/+6 melee (1d10+6 plus infernal wound) or 2 
 claws +10 melee (1d6+4)
 Space 5 ft.; Reach 5 ft. (10 ft. with glaive)
 Special Attacks beard
@@ -5505,8 +4763,8 @@ hp 105 (10d10+50)
 Fort +12, Ref +12, Will +7
 DR 10/good; Immune fire, poison; Resist acid 10, cold 10; SR 20
 Offense
-Speed 40 ft., fly 60 ft. (good)
-Melee bite +14 melee (1d8+5), 2 claws +14 melee (1d6+5), sting 
+  Speed 40 ft., fly 60 ft. (good)
+  Melee bite +14 melee (1d8+5), 2 claws +14 melee (1d6+5), sting 
 +14 melee (3d4+5 plus poison)
 Space 10 ft.; Reach 10 ft.
 Spell-Like Abilities (CL 12th)
@@ -5581,8 +4839,8 @@ Fort +11, Ref +12, Will +7
 DR 5/good; Immune fire, poison; 
 Resist acid 10, cold 10; SR 19
 Offense
-Speed 30 ft., fly 50 ft. (good)
-Melee +1 longsword +15/+10 
+  Speed 30 ft., fly 50 ft. (good)
+  Melee +1 longsword +15/+10 
 (1d8+8/19–20)
 Ranged +1 flaming composite 
 longbow +14/+14/+9 
@@ -5690,8 +4948,8 @@ Fort +18, Ref +17, Will +13
 DR 10/good and silver; Immune fire, poison; Resist acid 10, 
 cold 10; SR 27
 Offense
-Speed 30 ft., fly 50 ft. (average)
-Melee +1 unholy spiked chain +26/+21/+16 (2d6+11 
+  Speed 30 ft., fly 50 ft. (average)
+  Melee +1 unholy spiked chain +26/+21/+16 (2d6+11 
 plus stun), bite +22 (2d8+5), tail +22 (2d6+5 plus 
 infernal wound) or 2 claws +24 (2d6+10), bite +24 
 (2d8+10), tail +22 (2d6+5 plus infernal wound)
@@ -5759,8 +5017,8 @@ hp 161 (14d10+84); regeneration 5 (good weapons, good spells)
 Fort +15, Ref +14, Will +12
 DR 10/good; Immune fire, cold, poison; Resist acid 10; SR 24
 Offense
-Speed 40 ft., fly 60 ft. (good)
-Melee +1 frost spear +21/+16/+11 (2d6+10/×3 plus 1d6 cold 
+  Speed 40 ft., fly 60 ft. (good)
+  Melee +1 frost spear +21/+16/+11 (2d6+10/×3 plus 1d6 cold 
 plus slow), bite +14 (2d6+6), tail +14 (3d6+3 plus slow)
 Space 10 ft.; Reach 10 ft.
 Spell-Like Abilities (CL 13th)
@@ -5831,8 +5089,8 @@ hp 16 (3d10); fast healing 2
 Fort +1, Ref +6, Will +4
 DR 5/good or silver; Immune fire, poison; Resist acid 10, cold 10
 Offense
-Speed 20 ft., fly 50 ft. (perfect)
-Melee sting +8 (1d4 plus poison)
+  Speed 20 ft., fly 50 ft. (perfect)
+  Melee sting +8 (1d4 plus poison)
 Space 2-1/2 ft.; Reach 0 ft.
 Spell-Like Abilities (CL 6th)
 Constant—detect good, detect magic
@@ -5916,8 +5174,8 @@ Fort +4, Ref +3, Will +0
 DR 5/good or silver; Immune fire, mind-affecting effects, 
 poison; Resist acid 10, cold 10
 Offense
-Speed 20 ft.
-Melee 2 claws +2 (1d4)
+  Speed 20 ft.
+  Melee 2 claws +2 (1d4)
 STATISTICS
 Str 11, Dex 10, Con 12, Int —, Wis 11, Cha 5
 Base Atk +2; CMB +2; CMD 12
@@ -5996,8 +5254,8 @@ Fort +24, Ref +21, Will +18
 DR 15/good and silver; Immune fire, poison; Resist acid 10, 
 cold 10; SR 31
 Offense
-Speed 40 ft., fly 60 ft. (average)
-Melee 2 claws +32 (2d8+13), 2 wings +30 (2d6+6), bite +32 
+  Speed 40 ft., fly 60 ft. (average)
+  Melee 2 claws +32 (2d8+13), 2 wings +30 (2d6+6), bite +32 
 (4d6+13 plus poison and disease), tail slap +30 (2d8+6 
 plus grab)
 Space 10 ft., Reach 10 ft.
@@ -6167,8 +5425,8 @@ hp 133 (14d8+70)
 Fort +9, Ref +7, Will +12
 Defensive Abilities spell deflection, undead traits; SR 22
 Offense
-Speed 30 ft., fly 20 ft. (perfect)
-Melee 2 claws +18 (1d8+9 plus energy drain)
+  Speed 30 ft., fly 20 ft. (perfect)
+  Melee 2 claws +18 (1d8+9 plus energy drain)
 Space 10 ft.; Reach 10 ft. 
 Special Attacks devour soul, 
 energy drain (1 level, 
@@ -6268,8 +5526,8 @@ Defense
 hp 75 (10d8+30)
 Fort +12, Ref +7, Will +4
 Offense
-Speed 30 ft.
-Melee tail +14 (3d6+12 plus stun)
+  Speed 30 ft.
+  Melee tail +14 (3d6+12 plus stun)
 Space 15 ft.; Reach 15 ft.
 STATISTICS
 Str 27, Dex 10, Con 17, Int 2, Wis 13, Cha 8
@@ -6315,8 +5573,8 @@ Defense
 hp 171 (18d8+90)
 Fort +18, Ref +11, Will +9
 Offense
-Speed 30 ft.
-Melee tail +22 (4d6+19) 
+  Speed 30 ft.
+  Melee tail +22 (4d6+19) 
 Space 20 ft.; Reach 20 ft.
 Special Attack trample (2d6+19, DC 32)
 STATISTICS
@@ -6361,8 +5619,8 @@ Defense
 hp 34 (4d8+16)
 Fort +8, Ref +6, Will +2
 Offense
-Speed 60 ft.
-Melee 2 talons +5 (1d8+2),bite +5 (1d6+2), foreclaws +0 (1d4+1) 
+  Speed 60 ft.
+  Melee 2 talons +5 (1d8+2),bite +5 (1d6+2), foreclaws +0 (1d4+1) 
 Special Attacks pounce
 STATISTICS
 Str 15, Dex 15, Con 19, Int 2, Wis 12, Cha 14
@@ -6408,8 +5666,8 @@ Defense
 hp 105 (10d8+60)
 Fort +14, Ref +9, Will +6
 Offense
-Speed 20 ft., swim 50 ft. 
-Melee bite +13 (2d8+12) 
+  Speed 20 ft., swim 50 ft. 
+  Melee bite +13 (2d8+12) 
 Space 15 ft.; Reach 20 ft.
 STATISTICS
 Str 26, Dex 15, Con 20, Int 2, Wis 13, Cha 9
@@ -6446,8 +5704,8 @@ Defense
 hp 32 (5d8+10)
 Fort +6, Ref +8, Will +3
 Offense
-Speed 10 ft., fly 50 ft. (clumsy) 
-Melee bite +5 (2d6+4) 
+  Speed 10 ft., fly 50 ft. (clumsy) 
+  Melee bite +5 (2d6+4) 
 Space 10 ft.; Reach 10 ft.
 STATISTICS
 Str 16, Dex 19, Con 15, Int 2, Wis 15, Cha 12
@@ -6492,8 +5750,8 @@ Defense
 hp 90 (12d8+36)
 Fort +13, Ref +10, Will +5
 Offense
-Speed 30 ft.
-Melee tail +16 (4d6+12 plus trip) 
+  Speed 30 ft.
+  Melee tail +16 (4d6+12 plus trip) 
 Space 15 ft.; Reach 15 ft.
 STATISTICS
 Str 27, Dex 14, Con 17, Int 2, Wis 13, Cha 10
@@ -6548,8 +5806,8 @@ Defense
 hp 153 (18d8+72)
 Fort +15, Ref +12, Will +10
 Offense
-Speed 40 ft.
-Melee bite +20 (4d6+22/19–20 plus grab)
+  Speed 40 ft.
+  Melee bite +20 (4d6+22/19–20 plus grab)
 Space 20 ft.; Reach 20 ft.
 Special Attacks swallow whole (2d8+11, AC 17, hp 15)
 STATISTICS
@@ -6602,8 +5860,8 @@ Defense
 hp 119 (14d8+56)
 Fort +15, Ref +8, Will +5
 Offense
-Speed 30 ft.
-Melee gore +17 (2d10+12) 
+  Speed 30 ft.
+  Melee gore +17 (2d10+12) 
 Space 15 ft.; Reach 15 ft.
 Special Attacks powerful charge (gore, 4d10+16), trample 
 (1d8+12, DC 25)
@@ -6653,8 +5911,8 @@ Defense
 hp 6 (1d8+2)
 Fort +4, Ref +3, Will +1
 Offense
-Speed 40 ft.
-Melee bite +2 (1d4+1)
+  Speed 40 ft.
+  Melee bite +2 (1d4+1)
 STATISTICS
 Str 13, Dex 13, Con 15, Int 2, Wis 12, Cha 6
 Base Atk +0; CMB +0; CMD 11 (15 vs. trip)
@@ -6701,8 +5959,8 @@ Defense
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
-Speed 40 ft.
-Melee bite +3 (1d6+3 plus trip) 
+  Speed 40 ft.
+  Melee bite +3 (1d6+3 plus trip) 
 STATISTICS
 Str 15, Dex 15, Con 15, Int 2, Wis 12, Cha 6
 Base Atk +1; CMB +3; CMD 15 (19 vs. trip)
@@ -6736,8 +5994,8 @@ Defense
 hp 67 (9d8+27)
 Fort +9, Ref +8, Will +5
 Offense
-Speed swim 80 ft.
-Melee bite +13 (2d6+12)
+  Speed swim 80 ft.
+  Melee bite +13 (2d6+12)
 Space 15 ft.; Reach 10 ft.
 STATISTICS
 Str 27, Dex 15, Con 16, Int 2, Wis 15, Cha 6
@@ -6784,8 +6042,8 @@ Defense
 hp 11 (2d8+2)
 Fort +4, Ref +5, Will +1
 Offense
-Speed swim 80 ft.
-Melee slam +3 (1d4+1) 
+  Speed swim 80 ft.
+  Melee slam +3 (1d4+1) 
 STATISTICS
 Str 12, Dex 15, Con 13, Int 2, Wis 13, Cha 6
 Base Atk +1; CMB +2; CMD 14
@@ -6835,8 +6093,8 @@ hp 26 (4d10+4)
 Fort +4, Ref +5, Will +6
 Immune charm, sleep
 Offense
-Speed 30 ft.
-Melee 2 claws +8 (1d8+4)
+  Speed 30 ft.
+  Melee 2 claws +8 (1d8+4)
 Spell-Like Abilities (CL 18th)
 At will—detect thoughts (DC 13)
 STATISTICS
@@ -7168,8 +6426,8 @@ hp 76 (8d12+24)
 Fort +9, Ref +8, Will +7
 Immune acid, paralysis, sleep
 Offense
-Speed 60 ft., fly 150 ft. (average), swim 60 ft.
-Melee bite +13 (1d8+6), 2 claws +12 (1d6+4), 2 wings +7 (1d4+2)
+  Speed 60 ft., fly 150 ft. (average), swim 60 ft.
+  Melee bite +13 (1d8+6), 2 claws +12 (1d6+4), 2 wings +7 (1d4+2)
 Special Attacks breath weapon (60-ft. line, DC 17, 6d6 acid)
 STATISTICS
 Str 19, Dex 14, Con 17, Int 10, Wis 13, Cha 10
@@ -7191,8 +6449,8 @@ hp 161 (14d12+70)
 Fort +14, Ref +10, Will +12
 DR 5/magic; Immune acid, paralysis, sleep; SR 22
 Offense
-Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
-
+  Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
+  
 Dragon (Chromatic), Black
 
 Dragon (Chromatic), Black
@@ -7229,8 +6487,8 @@ hp 297 (22d12+154)
 Fort +20, Ref +13, Will +18
 DR 15/magic; Immune acid, paralysis, sleep, SR 27
 Offense
-Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
-Melee bite +32 (2d8+16 plus 4d6 acid), 2 claws 
+  Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
+  Melee bite +32 (2d8+16 plus 4d6 acid), 2 claws 
 +31 (2d6+11), 2 wings +29 (1d8+5), tail +29 
 (2d6+16)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
@@ -7362,8 +6620,8 @@ hp 95 (10d12+30)
 Fort +10, Ref +8, Will +8
 Immune electricity, paralysis, sleep
 Offense
-Speed 40 ft., burrow 20 ft., fly 200 ft. (poor)
-Melee bite +15 (2d6+7), 2 claws +14 (1d8+5), 2 wings +12 
+  Speed 40 ft., burrow 20 ft., fly 200 ft. (poor)
+  Melee bite +15 (2d6+7), 2 claws +14 (1d8+5), 2 wings +12 
 (1d6+2), tail slap +12 (1d8+7)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (80-ft. line, DC 18, 6d8 
@@ -7395,8 +6653,8 @@ hp 184 (16d12+80)
 Fort +15, Ref +10, Will +13
 DR 5/magic; Immune electricity, paralysis, sleep; SR 24
 Offense
-Speed 40 ft., burrow 20 ft., fly 200 ft. (poor)
-Melee bite +23 (2d8+12), 2 claws +22 (2d6+8), 2 wings +20 
+  Speed 40 ft., burrow 20 ft., fly 200 ft. (poor)
+  Melee bite +23 (2d8+12), 2 claws +22 (2d6+8), 2 wings +20 
 (1d8+4), tail slap +20 (2d6+12)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (100-ft. line, DC 23, 12d8 
@@ -7432,8 +6690,8 @@ hp 324 (24d12+168)
 Fort +21, Ref +13, Will +19
 DR 15/magic; Immune electricity, paralysis, sleep; SR 29
 Offense
-Speed 40 ft., burrow 20 ft., fly 250 ft. (clumsy)
-Melee bite +33 (4d6+18/19–20), 2 claws +32 (2d8+12), 2 
+  Speed 40 ft., burrow 20 ft., fly 250 ft. (clumsy)
+  Melee bite +33 (4d6+18/19–20), 2 claws +32 (2d8+12), 2 
 wings +30 (2d6+6), tail slap +30 (2d8+18)
 Space 20 ft.; Reach 15 ft. (20 ft. with bite)
 Special Attacks breath weapon (120-ft. line, DC 29, 
@@ -7547,8 +6805,8 @@ hp 85 (9d12+27)
 Fort +9, Ref +7, Will +9
 Immune acid, paralysis, sleep
 Offense
-Speed 40 ft., fly 200 ft. (poor), swim 40 ft.
-Melee bite +13 (2d6+7), 2 claws +13 (1d8+5), 2 wings +8 (1d6+2), 
+  Speed 40 ft., fly 200 ft. (poor), swim 40 ft.
+  Melee bite +13 (2d6+7), 2 claws +13 (1d8+5), 2 wings +8 (1d6+2), 
 tail slap +8 (1d8+7)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (40-ft. cone, DC 17, 6d6 acid)
@@ -7573,8 +6831,8 @@ hp 172 (15d12+75)
 Fort +14, Ref +9, Will +14
 DR 5/magic; Immune acid, paralysis, sleep; SR 23
 Offense
-Speed 40 ft., fly 200 ft. (poor), swim 40 ft.
-Melee bite +21 (2d8+12/19–20), 2 claws +21 (2d6+8/19–20), 
+  Speed 40 ft., fly 200 ft. (poor), swim 40 ft.
+  Melee bite +21 (2d8+12/19–20), 2 claws +21 (2d6+8/19–20), 
 
 Chromatic Dragon, Green
 Scales the color of emeralds armor this ferocious dragon. A single 
@@ -7619,8 +6877,8 @@ Fort +20, Ref +12, Will +20
 DR 15/magic; Immune acid, paralysis, sleep; 
 SR 28
 Offense
-Speed 40 ft., fly 250 ft. (clumsy), swim 40 ft.
-Melee bite +31 (4d6+18/19–20), 2 claws +31 
+  Speed 40 ft., fly 250 ft. (clumsy), swim 40 ft.
+  Melee bite +31 (4d6+18/19–20), 2 claws +31 
 (2d8+12/19–20), 2 wings +29 (2d6+6), tail 
 slap +29 (2d8+18)
 Space 20 ft.; Reach 15 ft. (20 ft. with bite)
@@ -7739,8 +6997,8 @@ Fort +11, Ref +8, Will +10
 Immune fire, paralysis, sleep
 Weaknesses vulnerability to cold
 Offense
-Speed 40 ft., fly 200 ft. (poor)
-Melee bite +17 (2d6+10), 2 claws +17 (1d8+7), 2 wings +12 
+  Speed 40 ft., fly 200 ft. (poor)
+  Melee bite +17 (2d6+10), 2 claws +17 (1d8+7), 2 wings +12 
 (1d6+3), tail slap +12 (1d8+10)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (40-ft. cone, DC 19, 6d10 fire)
@@ -7774,8 +7032,8 @@ Dragon (Chromatic), Red
 DR 5/magic; Immune fire, paralysis, sleep; SR 25
 Weaknesses vulnerability to cold
 Offense
-Speed 40 ft., fly 200 ft. (poor)
-Melee bite +25 (2d8+15), 2 claws +25 (2d6+10), 2 wings +23 
+  Speed 40 ft., fly 200 ft. (poor)
+  Melee bite +25 (2d8+15), 2 claws +25 (2d6+10), 2 wings +23 
 (1d8+5), tail slap +23 (2d6+15)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (50-ft. cone, DC 24, 12d10 fire), crush
@@ -7813,8 +7071,8 @@ DR 15/magic; Immune fire,
 paralysis, sleep; SR 30
 Weaknesses vulnerability to cold
 Offense
-Speed 40 ft., fly 250 ft. (clumsy)
-Melee bite +35 (4d6+21/19–20), 2 claws 
+  Speed 40 ft., fly 250 ft. (clumsy)
+  Melee bite +35 (4d6+21/19–20), 2 claws 
 +35 (2d8+14), 2 wings +33 (2d6+7), tail 
 slap +33 (2d8+21)
 Space 20 ft.; Reach 15 ft. (20 ft. with bite)
@@ -7931,8 +7189,8 @@ Fort +8, Ref +7, Will +5
 Immune cold, paralysis, sleep
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft., burrow 30 ft., fly 150 ft. (average), swim 60 ft.
-Melee bite +11 (1d8+6), 2 claws +11 (1d6+4), 2 wings +6 (1d4+2)
+  Speed 30 ft., burrow 30 ft., fly 150 ft. (average), swim 60 ft.
+  Melee bite +11 (1d8+6), 2 claws +11 (1d6+4), 2 wings +6 (1d4+2)
 Space 5 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (30-ft. cone, DC 16, 6d4 cold)
 STATISTICS
@@ -7968,8 +7226,8 @@ Fort +13, Ref +9, Will +10
 DR 5/magic; Immune cold, paralysis, sleep; SR 21
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft., burrow 30 ft., fly 200 ft. (poor), swim 60 ft.
-Melee bite +20 (2d6+10/19–20), 2 claws +19 (1d8+7), 2 wings 
+  Speed 30 ft., burrow 30 ft., fly 200 ft. (poor), swim 60 ft.
+  Melee bite +20 (2d6+10/19–20), 2 claws +19 (1d8+7), 2 wings 
 +14 (1d6+3), tail slap +14 (1d8+10)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (40-ft. cone, DC 21, 12d4 cold)
@@ -8001,8 +7259,8 @@ DR 15/magic; Immune cold, paralysis, sleep;
 SR 26
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft., burrow 30 ft., fly 200 ft. (poor), 
-swim 60 ft.
+  Speed 30 ft., burrow 30 ft., fly 200 ft. (poor), 
+  swim 60 ft.
 Melee bite +31 (2d8+16/19–20), 2 claws +30 
 (2d6+11), 2 wings +25 (1d8+5), tail slap 
 +25 (2d6+16)
@@ -8122,8 +7380,8 @@ Fort +9, Ref +8, Will +7
 Immune fire, paralysis, sleep
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., burrow 30 ft., fly 150 ft. (average)
-Melee bite +12 (1d8+6), 2 claws +12 (1d6+4), 2 wings +7 (1d4+2)
+  Speed 60 ft., burrow 30 ft., fly 150 ft. (average)
+  Melee bite +12 (1d8+6), 2 claws +12 (1d6+4), 2 wings +7 (1d4+2)
 Space 5 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (60-ft. line, DC 17, 6d4 fire), 
 sleep breath
@@ -8161,8 +7419,8 @@ Dragon (Metallic), Brass
 DR 5/magic; Immune fire, paralysis, sleep; SR 22
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., burrow 30 ft., fly 200 ft. (poor)
-Melee bite +20 (2d6+10), 2 claws +20 (1d8+7), 2 wings +15 
+  Speed 60 ft., burrow 30 ft., fly 200 ft. (poor)
+  Melee bite +20 (2d6+10), 2 claws +20 (1d8+7), 2 wings +15 
 (1d6+3), tail slap +15 (1d8+10)
 Special Attacks breath weapon (80-ft. line, DC 22, 12d4 fire), 
 desert wind, sleep breath
@@ -8198,8 +7456,8 @@ DR 15/magic; Immune fire, paralysis,
 sleep; SR 27
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., burrow 30 ft., fly 200 ft. (poor)
-Melee bite +31 (2d8+16), 2 claws +31 (2d6+11), 2 wings 
+  Speed 60 ft., burrow 30 ft., fly 200 ft. (poor)
+  Melee bite +31 (2d8+16), 2 claws +31 (2d6+11), 2 wings 
 +29 (1d8+5), tail slap +29 (2d6+16)
 Special Attacks breath weapon (100-ft. line, DC 28, 20d4 
 fire), crush, desert wind, sandstorm, sleep breath
@@ -8319,8 +7577,8 @@ hp 95 (10d12+30)
 Fort +10, Ref +8, Will +10
 Immune electricity, paralysis, sleep
 Offense
-Speed 40 ft., fly 200 ft. (poor), swim 60 ft.
-Melee bite +14 (2d6+7), 2 claws +14 (1d8+5), 2 wings +12 
+  Speed 40 ft., fly 200 ft. (poor), swim 60 ft.
+  Melee bite +14 (2d6+7), 2 claws +14 (1d8+5), 2 wings +12 
 (1d6+2), tail +12 (1d8+7)
 Special Attacks breath weapon (80-ft. line, DC 18, 6d6 
 electricity), repulsion breath
@@ -8357,8 +7615,8 @@ Dragon (Metallic), Bronze
 
 DR 5/magic; Immune electricity, paralysis, sleep; SR 24
 Offense
-Speed 40 ft., fly 200 ft. (poor), swim 60 ft.
-Melee bite +22 (2d8+12), 2 claws +22 (2d6+8), 2 wings +20 
+  Speed 40 ft., fly 200 ft. (poor), swim 60 ft.
+  Melee bite +22 (2d8+12), 2 claws +22 (2d6+8), 2 wings +20 
 (1d8+4), tail slap +20 (2d6+12)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (100-ft. line, DC 23, 12d6 
@@ -8395,8 +7653,8 @@ Fort +21, Ref +13, Will +21
 DR 15/magic; Immune electricity, 
 paralysis, sleep; SR 29
 Offense
-Speed 40 ft., fly 250 ft. (clum.), sw. 60 ft.
-Melee bite +32 (4d6+18/19–20), 2 
+  Speed 40 ft., fly 250 ft. (clum.), sw. 60 ft.
+  Melee bite +32 (4d6+18/19–20), 2 
 claws +32 (2d8+12/19–20), 2 wings 
 +30 (2d6+6), tail slap +30 (2d8+18)
 Space 20 ft.; Reach 15 ft. (20 ft. w/bite)
@@ -8511,8 +7769,8 @@ hp 85 (9d12+27)
 Fort +9, Ref +8, Will +8
 Defensive Abilities uncanny dodge; Immune acid, paralysis, sleep
 Offense
-Speed 40 ft., fly 150 ft. (average); climb stone
-Melee bite +13 (1d8+6/19–20), 2 claws +13 (1d6+4), 2 wings +8 (1d4+2)
+  Speed 40 ft., fly 150 ft. (average); climb stone
+  Melee bite +13 (1d8+6/19–20), 2 claws +13 (1d6+4), 2 wings +8 (1d4+2)
 Space 5 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (60-ft. line, DC 17, 6d6 acid), 
 slow breath (30-ft. cone, DC 17, slowed for 1d6+3 rounds)
@@ -8553,8 +7811,8 @@ Dragon (Metallic), Copper
 Defensive Abilities uncanny dodge; DR 5/magic; Immune 
 acid, paralysis, sleep; SR 23
 Offense
-Speed 40 ft., fly 200 ft. (poor); climb stone
-Melee bite +21 (2d6+10/19–20), 2 claws +21 (1d8+7/19–20), 2 
+  Speed 40 ft., fly 200 ft. (poor); climb stone
+  Melee bite +21 (2d6+10/19–20), 2 claws +21 (1d8+7/19–20), 2 
 wings +16 (1d6+3), tail +16 (1d8+10)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks b. weapon (80-ft. line, DC 22, 12d6 acid), slow breath
@@ -8588,8 +7846,8 @@ Fort +20, Ref +13, Will +19
 Defensive Abilities uncanny dodge; DR 15/magic; 
 Immune acid, paralysis, sleep; SR 28
 Offense
-Speed 40 ft., fly 200 ft. (poor); climb stone
-Melee bite +32 (2d8+16/19–20), 2 claws +32 (2d6+11/19–20), 2 
+  Speed 40 ft., fly 200 ft. (poor); climb stone
+  Melee bite +32 (2d8+16/19–20), 2 claws +32 (2d6+11/19–20), 2 
 wings +27 (1d8+5), tail slap +27 (2d6+16)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (100-ft. line, DC 28, 20d6 
@@ -8708,8 +7966,8 @@ hp 126 (12d12+48)
 Fort +12, Ref +9, Will +13
 Immune fire, paralysis, sleep; Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
-Melee bite +18 (2d6+10), 2 claws +18 (1d8+7/19–20), 2 wings 
+  Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
+  Melee bite +18 (2d6+10), 2 claws +18 (1d8+7/19–20), 2 wings 
 +16 (1d6+3), tail +16 (1d8+10)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (80-ft. cone, DC 20, 6d10 fire), 
@@ -8749,8 +8007,8 @@ Fort +17, Ref +11, Will +18
 DR 5/magic; Immune fire, paralysis, sleep; SR 26
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., fly 250 ft. (poor), swim 60 ft.
-Melee bite +26 (2d8+15/19–20), 2 claws +26 (2d6+10/19–20), 2 
+  Speed 60 ft., fly 250 ft. (poor), swim 60 ft.
+  Melee bite +26 (2d8+15/19–20), 2 claws +26 (2d6+10/19–20), 2 
 wings +24 (1d8+5), tail +24 (2d6+15)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (50-ft. cone, DC 25, 12d10 fire), 
@@ -8786,8 +8044,8 @@ DR 15/magic; Immune fire, paralysis,
 sleep; SR 31
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft., fly 250 ft. (clumsy), swim 60 ft.
-Melee bite +36 (4d6+21/19–20), 2 claws +36 
+  Speed 60 ft., fly 250 ft. (clumsy), swim 60 ft.
+  Melee bite +36 (4d6+21/19–20), 2 claws +36 
 (2d8+14/19–20), 2 wings +34 (2d6+7/19–
 20), tail +34 (2d8+21/19–20)
 Space 20 ft.; Reach 15 ft. (20 
@@ -8911,8 +8169,8 @@ Fort +10, Ref +8, Will +12
 Immune acid, cold, paralysis, sleep
 Weaknesses vulnerability to fire
 Offense
-Speed 40 ft., fly 200 ft. (average); cloudwalking, graceful flight
-Melee bite +16 (2d6+7), 2 claws +15 (1d8+5), 2 wings +13 (1d6+2), 
+  Speed 40 ft., fly 200 ft. (average); cloudwalking, graceful flight
+  Melee bite +16 (2d6+7), 2 claws +15 (1d8+5), 2 wings +13 (1d6+2), 
 tail +13 (1d8+7)
 Space 10 ft.; Reach 5 ft. (10 ft. with bite)
 Special Attacks breath weapon (40-ft. cone, DC 18, 6d8 cold), 
@@ -8952,8 +8210,8 @@ Fort +15, Ref +12, Will +17
 DR 5/magic; Immune acid, cold, paralysis, sleep; SR 25
 Weaknesses vulnerability to fire
 Offense
-Speed 40 ft., fly 200 ft. (average); cloudwalking, graceful flight
-Melee bite +24 (2d8+12), 2 claws +23 (2d6+8), 2 wings +21 
+  Speed 40 ft., fly 200 ft. (average); cloudwalking, graceful flight
+  Melee bite +24 (2d8+12), 2 claws +23 (2d6+8), 2 wings +21 
 (1d8+4), tail slap +21 (2d6+12)
 Space 15 ft.; Reach 10 ft. (15 ft. with bite)
 Special Attacks breath weapon (50-ft. cone, DC 23, 12d8 cold), 
@@ -9001,8 +8259,8 @@ Defensive Abilities reflective scales; DR 15/magic; Immune
 acid, cold, paralysis, sleep; SR 30
 Weaknesses vulnerability to fire
 Offense
-Speed 40 ft., fly 250 ft. (poor); cloudwalking, graceful flight
-Melee bite +34 (4d6+18/19–20), 2 claws +33 (2d8+12), 2 wings 
+  Speed 40 ft., fly 250 ft. (poor); cloudwalking, graceful flight
+  Melee bite +34 (4d6+18/19–20), 2 claws +33 (2d8+12), 2 wings 
 +31 (2d6+6), tail slap +31 (2d8+18)
 Space 20 ft.; Reach 15 ft. (20 ft. with bite)
 Special Attacks breath weapon (60-ft. cone, DC 29, 20d8 
@@ -9063,8 +8321,8 @@ hp 126 (12d12+48)
 Fort +12, Ref +8, Will +9
 Immune fire, sleep, paralysis
 Offense
-Speed 20 ft., swim 30 ft.
-Melee bite +18 (3d6+8), 2 claws +18 (2d6+8)
+  Speed 20 ft., swim 30 ft.
+  Melee bite +18 (3d6+8), 2 claws +18 (2d6+8)
 Space 15 ft.; Reach 10 ft.
 Special Attacks breath weapon, capsize
 STATISTICS
@@ -9160,8 +8418,8 @@ hp 76 (9d8+36)
 Fort +7, Ref +5, Will +9
 Immune sleep; SR 18
 Offense
-Speed 30 ft., climb 20 ft.
-Melee mwk heavy mace +9/+4 (1d8+3), bite +3 (1d4+1 plus poison)
+  Speed 30 ft., climb 20 ft.
+  Melee mwk heavy mace +9/+4 (1d8+3), bite +3 (1d4+1 plus poison)
 Ranged mwk composite longbow +8/+3 (1d8+2/×3)
 Space 10 ft.; Reach 5 ft.
 Special Attacks web (+7 ranged, DC 18, hp 9)
@@ -9236,8 +8494,8 @@ Fort +2, Ref +2, Will –1; +2 vs. enchantment
 Immune sleep; SR 7
 Weaknesses light blindness
 Offense
-Speed 30 ft.
-Melee rapier +3 (1d6/18–20)
+  Speed 30 ft.
+  Melee rapier +3 (1d6/18–20)
 Ranged hand crossbow +3 (1d4/19–20 plus poison)
 Spell-Like Abilities (CL 1st)
 1/day—dancing lights, darkness, faerie fire
@@ -9403,8 +8661,8 @@ Fort +4, Ref +4, Will +6; +2 vs. enchantment
 Immune sleep; SR 14
 Weaknesses light blindness
 Offense
-Speed 20 ft.
-Melee mwk rapier +6 (1d6+1/18–20)
+  Speed 20 ft.
+  Melee mwk rapier +6 (1d6+1/18–20)
 Ranged hand crossbow +5 (1d4/19–20 
 plus poison)
 Special Attacks bleeding touch (6/day), 
@@ -9456,8 +8714,8 @@ Fort +5, Ref +9, Will +7
 DR 5/cold iron
 Weaknesses tree dependent
 Offense
-Speed 30 ft.
-Melee dagger +7 (1d4) 
+  Speed 30 ft.
+  Melee dagger +7 (1d4) 
 Ranged masterwork longbow +8 (1d8) 
 Spell-Like Abilities (CL 6th)
 Constant—speak with plants
@@ -9540,8 +8798,8 @@ Fort +4, Ref –1, Will +1; +2 vs. spells
 Immune paralysis, phantasms, poison
 Weaknesses light sensitivity
 Offense
-Speed 20 ft.
-Melee warhammer +3 (1d8+1/×3)
+  Speed 20 ft.
+  Melee warhammer +3 (1d8+1/×3)
 Ranged light crossbow +0 (1d8/19–20)
 Spell-Like Abilities (CL 3rd)
 1/day—enlarge person (self only), invisibility (self only)
@@ -9625,8 +8883,8 @@ hp 26 (4d10+4)
 Fort +5, Ref +7, Will +3
 Defensive Abilities evasion
 Offense
-Speed 10 ft., fly 80 ft. (average)
-Melee 2 claws +7 (1d8+4), bite +7 (1d6+4) 
+  Speed 10 ft., fly 80 ft. (average)
+  Melee 2 claws +7 (1d8+4), bite +7 (1d6+4) 
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 18, Dex 17, Con 12, Int 10, Wis 15, Cha 11
@@ -9672,8 +8930,8 @@ Defense
 hp 5 (1d8+1)
 Fort +3, Ref +4, Will +2
 Offense
-Speed 10 ft., fly 80 ft. (average)
-Melee 2 talons +3 (1d4), bite +3 (1d4)
+  Speed 10 ft., fly 80 ft. (average)
+  Melee 2 talons +3 (1d4), bite +3 (1d4)
 Space 2-1/2 ft. Reach 0 ft.
 STATISTICS
 Str 10, Dex 15, Con 12, Int 2, Wis 15, Cha 7
@@ -9729,8 +8987,8 @@ hp 17 (2d8+8)
 Fort +7, Ref +5, Will +0
 Resist electricity 10
 Offense
-Speed 5 ft., swim 30 ft.
-Melee bite +3 (1d6+1) and tail –2 touch (1d6 
+  Speed 5 ft., swim 30 ft.
+  Melee bite +3 (1d6+1) and tail –2 touch (1d6 
 electricity)
 STATISTICS
 Str 13, Dex 14, Con 19, Int 1, Wis 10, 
@@ -9781,8 +9039,8 @@ Defense
 hp 52 (7d8+21)
 Fort +8, Ref +9, Will +3
 Offense
-Speed swim 30 ft.
-Melee bite +11 (2d6+9 plus grab) 
+  Speed swim 30 ft.
+  Melee bite +11 (2d6+9 plus grab) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks gnaw
 STATISTICS
@@ -9843,8 +9101,8 @@ hp 13 (2d10+2)
 Fort +4, Ref +6, Will +0
 Defensive Abilities air mastery; Immune elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee slam +6 (1d4+1)
+  Speed fly 100 ft. (perfect)
+  Melee slam +6 (1d4+1)
 Special Attacks whirlwind (DC 12)
 STATISTICS
 Str 12, Dex 17, Con 12, Int 4, Wis 11, Cha 11
@@ -9862,8 +9120,8 @@ hp 30 (4d10+8)
 Fort +6, Ref +9, Will +1
 Defensive Abilities air mastery; Immune elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee slam +9 (1d6+3)
+  Speed fly 100 ft. (perfect)
+  Melee slam +9 (1d6+3)
 Special Attacks whirlwind (DC 14)
 STATISTICS
 Str 14, Dex 21, Con 14, Int 4, Wis 11, Cha 11
@@ -9882,8 +9140,8 @@ hp 68 (8d10+24)
 Fort +9, Ref +13, Will +2
 Defensive Abilities air mastery; DR 5/—; Immune elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee 2 slams +14 (1d8+4)
+  Speed fly 100 ft. (perfect)
+  Melee 2 slams +14 (1d8+4)
 Space 10 ft.; Reach 10 ft.
 Special Attacks whirlwind (DC 18)
 STATISTICS
@@ -9903,8 +9161,8 @@ hp 95 (10d10+40)
 Fort +11, Ref +16, Will +5
 Defensive Abilities air mastery; DR 5/—; Immune elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee 2 slams +17 (2d6+6)
+  Speed fly 100 ft. (perfect)
+  Melee 2 slams +17 (2d6+6)
 Space 15 ft.; Reach 15 ft.
 Special Attacks whirlwind (DC 21)
 STATISTICS
@@ -9934,8 +9192,8 @@ Fort +12, Ref +18, Will +6
 Defensive Abilities air mastery; DR 10/—; Immune 
 elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee 2 slams +21 (2d8+7)
+  Speed fly 100 ft. (perfect)
+  Melee 2 slams +21 (2d8+7)
 Space 15 ft.; Reach 15 ft.
 Special Attacks whirlwind (DC 23)
 STATISTICS
@@ -9959,8 +9217,8 @@ Fort +14, Ref +21, Will +7
 Defensive Abilities air mastery; DR 10/—; 
 Immune elemental traits
 Offense
-Speed fly 100 ft. (perfect)
-Melee 2 slams +25 (2d8+9)
+  Speed fly 100 ft. (perfect)
+  Melee 2 slams +25 (2d8+9)
 Space 15 ft.; Reach 15 ft.
 Special Attacks whirlwind (DC 27)
 STATISTICS
@@ -10037,8 +9295,8 @@ hp 13 (2d10+2)
 Fort +4, Ref –1, Will +3
 Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee slam +6 (1d6+4)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee slam +6 (1d6+4)
 Special Attacks earth mastery
 STATISTICS
 Str 16, Dex 8, Con 13, Int 4, Wis 11, Cha 11
@@ -10057,8 +9315,8 @@ hp 34 (4d10+12)
 Fort +7, Ref +0, Will +4
 Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee slam +9 (1d8+7)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee slam +9 (1d8+7)
 Special Attacks earth mastery
 STATISTICS
 Str 20, Dex 8, Con 17, Int 4, Wis 11, Cha 11
@@ -10077,8 +9335,8 @@ hp 68 (8d10+24)
 Fort +9, Ref +1, Will +6
 DR 5/—; Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee 2 slams +14 (2d6+7)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee 2 slams +14 (2d6+7)
 Space 10 ft.; Reach 10 ft.
 Special Attacks earth mastery
 STATISTICS
@@ -10098,8 +9356,8 @@ hp 95 (10d10+40)
 Fort +11, Ref +2, Will +7
 DR 5/—; Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee 2 slams +17 (2d8+9)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee 2 slams +17 (2d8+9)
 Space 15 ft.; Reach 15 ft.
 Special Attacks earth mastery
 
@@ -10131,8 +9389,8 @@ hp 136 (13d10+65)
 Fort +13, Ref +3, Will +8
 DR 10/—; Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee 2 slams +21 (2d10+10)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee 2 slams +21 (2d10+10)
 Space 15 ft.; Reach 15 ft.
 Special Attacks earth mastery
 STATISTICS
@@ -10153,8 +9411,8 @@ hp 168 (16d10+80)
 Fort +15, Ref +4, Will +10
 DR 10/—; Immune elemental traits
 Offense
-Speed 20 ft., burrow 20 ft., earth glide
-Melee 2 slams +26 (2d10+12/19–20)
+  Speed 20 ft., burrow 20 ft., earth glide
+  Melee 2 slams +26 (2d10+12/19–20)
 Space 15 ft.; Reach 15 ft.
 Special Attacks earth mastery
 STATISTICS
@@ -10202,8 +9460,8 @@ Fort +8, Ref +11, Will +4
 DR 5/—; Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 50 ft.
-Melee 2 slams +12 (1d8+2 plus burn)
+  Speed 50 ft.
+  Melee 2 slams +12 (1d8+2 plus burn)
 Space 10 ft.; Reach 10 ft.
 Special Attacks burn (1d8, DC 16)
 STATISTICS
@@ -10225,8 +9483,8 @@ Fort +9, Ref +14, Will +5
 DR 5/—, Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft.
-Melee 2 slams +15 (2d6+4 plus burn)
+  Speed 60 ft.
+  Melee 2 slams +15 (2d6+4 plus burn)
 Space 15 ft.; Reach 15 ft.
 Special Attacks burn (2d6, DC 17)
 STATISTICS
@@ -10262,8 +9520,8 @@ Fort +3, Ref +4, Will +0
 Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 50 ft.
-Melee slam +4 (1d4 plus burn)
+  Speed 50 ft.
+  Melee slam +4 (1d4 plus burn)
 Special Attacks burn (1d4, DC 11)
 STATISTICS
 Str 10, Dex 13, Con 10, Int 4, Wis 11, Cha 11
@@ -10282,8 +9540,8 @@ Fort +6, Ref +7, Will +1
 Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 50 ft.
-Melee slam +7 (1d6+1 plus burn)
+  Speed 50 ft.
+  Melee slam +7 (1d6+1 plus burn)
 Special Attacks burn (1d6, DC 14)
 STATISTICS
 Str 12, Dex 17, Con 14, Int 4, Wis 11, Cha 11
@@ -10305,8 +9563,8 @@ Fort +12, Ref +16, Will +6
 DR 5/—, Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft.
-Melee 2 slams +19 (2d8+7 plus burn)
+  Speed 60 ft.
+  Melee 2 slams +19 (2d8+7 plus burn)
 Space 15 ft.; Reach 15 ft.
 Special Attacks burn (2d8, DC 20)
 STATISTICS
@@ -10329,8 +9587,8 @@ Fort +14, Ref +19, Will +7
 DR 10/—, Immune elemental traits, fire
 Weaknesses vulnerability to cold
 Offense
-Speed 60 ft.
-Melee 2 slams +23 (2d8+8 plus burn)
+  Speed 60 ft.
+  Melee 2 slams +23 (2d8+8 plus burn)
 Space 15 ft.; Reach 15 ft.
 Special Attacks burn (2d10, DC 22)
 STATISTICS
@@ -10400,8 +9658,8 @@ hp 13 (2d10+2)
 Fort +4, Ref +3, Will +0
 Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee slam +5 (1d6+3)
+  Speed 20 ft., swim 90 ft.
+  Melee slam +5 (1d6+3)
 Special Attacks drench, vortex (DC 13), water mastery
 STATISTICS
 Str 14, Dex 10, Con 13, Int 4, Wis 11, Cha 11
@@ -10420,8 +9678,8 @@ hp 30 (4d10+8)
 Fort +6, Ref +5, Will +1
 Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee slam +7 (1d8+4)
+  Speed 20 ft., swim 90 ft.
+  Melee slam +7 (1d8+4)
 Special Attacks drench, vortex (DC 15), water mastery
 STATISTICS
 Str 16, Dex 12, Con 15, Int 4, Wis 11, Cha 11
@@ -10440,8 +9698,8 @@ hp 68 (8d10+24)
 Fort +9, Ref +8, Will +2
 DR 5/—; Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee 2 slams +12 (1d8+5)
+  Speed 20 ft., swim 90 ft.
+  Melee 2 slams +12 (1d8+5)
 Space 10 ft.; Reach 10 ft.
 Special Attacks drench, vortex (DC 19), water mastery
 STATISTICS
@@ -10461,8 +9719,8 @@ hp 95 (10d10+40)
 Fort +11, Ref +11, Will +3
 DR 5/—; Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee 2 slams +15 (2d6+7)
+  Speed 20 ft., swim 90 ft.
+  Melee 2 slams +15 (2d6+7)
 Space 15 ft.; Reach 15 ft.
 Special Attacks drench, vortex (DC 22), water mastery
 STATISTICS
@@ -10496,8 +9754,8 @@ hp 123 (13d10+52)
 Fort +12, Ref +15, Will +4
 DR 10/—; Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee 2 slams +20 (2d8+9)
+  Speed 20 ft., swim 90 ft.
+  Melee 2 slams +20 (2d8+9)
 Space 15 ft.; Reach 15 ft.
 Special Attacks drench, vortex (DC 25), water mastery
 STATISTICS
@@ -10518,8 +9776,8 @@ hp 152 (16d10+64)
 Fort +14, Ref +18, Will +5
 DR 10/—; Immune elemental traits
 Offense
-Speed 20 ft., swim 90 ft.
-Melee 2 slams +24 (2d10+10/19–20)
+  Speed 20 ft., swim 90 ft.
+  Melee 2 slams +24 (2d10+10/19–20)
 Space 15 ft.; Reach 15 ft.
 Special Attacks drench, vortex (DC 28), water mastery
 STATISTICS
@@ -10564,8 +9822,8 @@ Defense
 hp 93 (11d8+44)
 Fort +13, Ref +7, Will +6
 Offense
-Speed 40 ft.
-Melee gore +16 (2d8+10), slam +16 (2d6+10)
+  Speed 40 ft.
+  Melee gore +16 (2d8+10), slam +16 (2d6+10)
 Space 15 ft.; Reach 10 ft.
 Special Attacks trample (2d8+15; DC 25)
 STATISTICS
@@ -10596,8 +9854,8 @@ Defense
 hp 133 (14d8+70)
 Fort +14, Ref +10, Will +7
 Offense
-Speed 40 ft.
-Melee gore +21 (2d8+12), slam +20 (2d6+12)
+  Speed 40 ft.
+  Melee gore +21 (2d8+12), slam +20 (2d6+12)
 Space 15 ft.; Reach 15 ft.
 Special Attacks trample (2d8+18, DC 29)
 STATISTICS
@@ -10658,8 +9916,8 @@ Defense
 hp 30 (4d8+12)
 Fort +6, Ref +4, Will +6
 Offense
-Speed 30 ft., climb 30 ft.
-Melee bite +5 (1d6+2 plus poison) and 2 claws +5 (1d4+2)
+  Speed 30 ft., climb 30 ft.
+  Melee bite +5 (1d6+2 plus poison) and 2 claws +5 (1d4+2)
 Special Attacks traps, web (+6 ranged, DC 15, hp 4)
 STATISTICS
 Str 14, Dex 17, Con 17, Int 6, Wis 15, Cha 8
@@ -10736,8 +9994,8 @@ Defense
 hp 65 (10d8+20)
 Fort +9, Ref +2, Will +5
 Offense
-Speed 40 ft.
-Melee 2 flails +12/+12/+7/+7 (2d6+6)
+  Speed 40 ft.
+  Melee 2 flails +12/+12/+7/+7 (2d6+6)
 Ranged 2 javelins +5 (1d8+6)
 Space 10 ft.; Reach 10 ft.
 Special Attacks superior two-weapon fighting
@@ -10830,8 +10088,8 @@ Defense
 hp 2 (1d8–2)
 Fort +0, Ref +4, Will +2
 Offense
-Speed 5 ft., fly 40 ft. (good)
-Melee bite +6 (1d3–4) 
+  Speed 5 ft., fly 40 ft. (good)
+  Melee bite +6 (1d3–4) 
 Space 1 ft.; Reach 0 ft.
 STATISTICS
 Str 1, Dex 15, Con 6, Int 2, 
@@ -10856,8 +10114,8 @@ Defense
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +1
 Offense
-Speed 30 ft.
-Melee 2 claws +4 (1d2–4), bite +4 (1d3–4) 
+  Speed 30 ft.
+  Melee 2 claws +4 (1d2–4), bite +4 (1d3–4) 
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 3, Dex 15, Con 8, Int 2, Wis 12, Cha 7
@@ -10883,8 +10141,8 @@ hp 4 (1d8)
 Fort +2, Ref +5, 
 Will +2
 Offense
-Speed 10 ft., fly 60 ft. 
-(average)
+  Speed 10 ft., fly 60 ft. 
+  (average)
 Melee 2 talons +5 (1d4–2)
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
@@ -10909,8 +10167,8 @@ Defense
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +1
 Offense
-Speed 20 ft., climb 20 ft.
-Melee bite +4 (1d4–4) 
+  Speed 20 ft., climb 20 ft.
+  Melee bite +4 (1d4–4) 
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 3, Dex 15, Con 8, Int 1, Wis 12, Cha 2
@@ -10936,8 +10194,8 @@ Defense
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
-Speed 30 ft., climb 30 ft.
-Melee bite +4 melee (1d3–4)
+  Speed 30 ft., climb 30 ft.
+  Melee bite +4 melee (1d3–4)
 Space 2-1/2 ft.; Reach 0 ft. 
 STATISTICS
 Str 3, Dex 15, Con 10, Int 2, Wis 12, Cha 5
@@ -10960,8 +10218,8 @@ Defense
 hp 4 (1d8)
 Fort +2, Ref +5, Will +2
 Offense
-Speed 10 ft., fly 60 ft. (average)
-Melee 2 talons +5 (1d4–2)
+  Speed 10 ft., fly 60 ft. (average)
+  Melee 2 talons +5 (1d4–2)
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 6, Dex 17, Con 11, Int 2, Wis 15, Cha 6
@@ -10985,8 +10243,8 @@ Defense
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
-Speed 15 ft., climb 15 ft., swim 15 ft.
-Melee bite +4 (1d3–4)
+  Speed 15 ft., climb 15 ft., swim 15 ft.
+  Melee bite +4 (1d3–4)
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 2, Dex 15, Con 11, Int 2, Wis 13, Cha 2
@@ -11019,8 +10277,8 @@ Defense
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +2
 Offense
-Speed 10 ft., fly 40 ft. (average)
-Melee bite +4 (1d3–4)
+  Speed 10 ft., fly 40 ft. (average)
+  Melee bite +4 (1d3–4)
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 2, Dex 15, Con 8, Int 2, Wis 15, Cha 7
@@ -11042,8 +10300,8 @@ Defense
 hp 2 (1d8–2)
 Fort +0, Ref +3, Will +2
 Offense
-Speed 5 ft.
-Space 1 ft.; Reach 0 ft.
+  Speed 5 ft.
+  Space 1 ft.; Reach 0 ft.
 STATISTICS
 Str 1, Dex 12, Con 6, Int 1, Wis 15, Cha 4
 Base Atk +0; CMB –3; CMD 2 (6 vs, trip)
@@ -11064,8 +10322,8 @@ Defense
 hp 3 (1d8–1)
 Fort +1, Ref +5, Will +1
 Offense
-Speed 20 ft., climb 20 ft., swim 20 ft.
-Melee bite +5 (1d2–2 plus poison) 
+  Speed 20 ft., climb 20 ft., swim 20 ft.
+  Melee bite +5 (1d2–2 plus poison) 
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 4, Dex 17, Con 8, Int 1, Wis 13, Cha 2
@@ -11091,8 +10349,8 @@ Defense
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
-Speed 20 ft., climb 20 ft.
-Melee bite +4 (1d3–4 plus attach) 
+  Speed 20 ft., climb 20 ft.
+  Melee bite +4 (1d3–4 plus attach) 
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 3, Dex 15, Con 10, Int 2, Wis 12, Cha 5
@@ -11125,8 +10383,8 @@ Fort +17, Ref +8, Will +5
 Immune mind-affecting effects, paralysis, poison, polymorph, 
 sleep, stun; Resist acid 20
 Offense
-Speed 10 ft.
-Melee 4 bites +15 (1d8+7 plus grab) 
+  Speed 10 ft.
+  Melee 4 bites +15 (1d8+7 plus grab) 
 Space 15 ft.; Reach 15 ft.
 Special Attacks engulf
 STATISTICS
@@ -11232,8 +10490,8 @@ Defense
 hp 15 (2d8+6)
 Fort +6, Ref +6, Will –1
 Offense
-Speed 30 ft., swim 30 ft.
-Melee bite +3 (1d6+2 plus grab) or tongue +3 touch (grab) 
+  Speed 30 ft., swim 30 ft.
+  Melee bite +3 (1d6+2 plus grab) or tongue +3 touch (grab) 
 Space 5 ft.; Reach 5 ft. (15 ft. with tongue)
 Special Attacks pull (tongue, 5 feet), swallow whole (1d4 
 bludgeoning damage, AC 10, 1 hp), tongue
@@ -11279,8 +10537,8 @@ Defense
 hp 4 (1d8)
 Fort +2, Ref +3, Will –1
 Offense
-Speed 10 ft., swim 20 ft.
-Melee bite +3 (1 plus poison)
+  Speed 10 ft., swim 20 ft.
+  Melee bite +3 (1 plus poison)
 Space 2-1/2 ft.; Reach 0 ft.
 STATISTICS
 Str 2, Dex 12, Con 11, Int 1, Wis 9, Cha 10
@@ -11333,8 +10591,8 @@ Fort +12, Ref +8, Will +11
 Immune electricity (partial); Resist fire 10
 Weaknesses slowed by electricity
 Offense
-Speed 20 ft., swim 30 ft.
-Melee bite +20 (2d6+10/19–20 plus grab), 4 tentacles +18 
+  Speed 20 ft., swim 30 ft.
+  Melee bite +20 (2d6+10/19–20 plus grab), 4 tentacles +18 
 (1d8+5 plus grab), tongue +18 (1d4+5 plus grab)
 Space 15 ft.; Reach 15 ft. (30 ft. with tongue)
 Special Attacks constrict (tentacle, 1d6+10), swallow whole 
@@ -11416,8 +10674,8 @@ hp 42 (5d10+15)
 Fort +4, Ref +6, Will +4
 DR 10/magic
 Offense
-Speed 40 ft., fly 60 ft. (average)
-Melee 2 claws +7 (1d6+2), bite +7 (1d4+2), gore +7 (1d4+2)
+  Speed 40 ft., fly 60 ft. (average)
+  Melee 2 claws +7 (1d6+2), bite +7 (1d4+2), gore +7 (1d4+2)
 STATISTICS
 Str 15, Dex 14, Con 16, Int 6, Wis 11, Cha 7
 Base Atk +5; CMB +7; CMD 19
@@ -11494,8 +10752,8 @@ hp 50 (4d8+32)
 Fort +9, Ref –4, Will –4
 Immune electricity, ooze traits
 Offense
-Speed 15 ft.
-Melee slam +2 (1d6 plus 1d6 acid)
+  Speed 15 ft.
+  Melee slam +2 (1d6 plus 1d6 acid)
 Space 10 ft.; Reach 5 ft.
 Special Attacks engulf, paralysis
 STATISTICS
@@ -11583,8 +10841,8 @@ hp 52 (7d10+14)
 Fort +4, Ref +9, Will +7
 Immune acid
 Offense
-Speed 20 ft., fly 60 ft. (perfect)
-Melee 2 slams +10 (1d8+4) or mwk scimitar +11/+6 (1d8+4/18–20)
+  Speed 20 ft., fly 60 ft. (perfect)
+  Melee 2 slams +10 (1d8+4) or mwk scimitar +11/+6 (1d8+4/18–20)
 Space 10 ft.; Reach 10 ft.
 Special Attacks air mastery, whirlwind (1/10 minutes, 10–50 ft. 
 tall, 1d8+4 damage, DC 17)
@@ -11658,8 +10916,8 @@ hp 95 (10d10+40)
 Fort +7, Ref +10, Will +9
 Immune fire; Vulnerability cold
 Offense
-Speed 20 ft., fly 40 ft. (perfect)
-Melee 2 slams +15 (1d8+6 plus 1d6 fire) or mwk falchion 
+  Speed 20 ft., fly 40 ft. (perfect)
+  Melee 2 slams +15 (1d8+6 plus 1d6 fire) or mwk falchion 
 +16/+11 (2d6+9/18–20)
 Space 10 ft.; Reach 10 ft.
 Special Attacks change size, heat
@@ -11737,8 +10995,8 @@ hp 39 (6d10+6)
 Fort +6, Ref +7, Will +4
 Resist fire 10
 Offense
-Speed 20 ft., fly 20 ft. (perfect);  30 ft., fly 15 ft. 
-(perfect) in chainmail
+  Speed 20 ft., fly 20 ft. (perfect);  30 ft., fly 15 ft. 
+  (perfect) in chainmail
 Melee scimitar +9/+4 (1d6+4/18–20)
 Ranged composite longbow +8/+3 (1d8+3/×3)
 Special Attacks change size
@@ -11843,8 +11101,8 @@ Defense
 hp 114 (12d10+48)
 Fort +10, Ref +12, Will +10
 Offense
-Speed 20 ft., swim 60 ft.
-Melee 2 slams +17 (2d6+6) or mwk trident +18/+13/+8 (2d6+9)
+  Speed 20 ft., swim 60 ft.
+  Melee 2 slams +17 (2d6+6) or mwk trident +18/+13/+8 (2d6+9)
 Space 10 ft.; Reach 10 ft.
 Special Attacks vortex (1/10 minutes, 
 10–50 ft. tall, 1d8+4 damage, DC 17),  
@@ -11955,8 +11213,8 @@ hp 85 (9d10+36)
 Fort +10, Ref +4, Will +8
 Immune electricity
 Offense
-Speed 20 ft., burrow 60 ft., climb 20 ft.
-Melee 2 slams +13 (2d6+5) or mwk scimitar 
+  Speed 20 ft., burrow 60 ft., climb 20 ft.
+  Melee 2 slams +13 (2d6+5) or mwk scimitar 
 +14/+9 (1d8+7/18–20)
 Space 10 ft.; Reach 10 ft.
 Special Attacks earth mastery, metalmorph, 
@@ -12042,8 +11300,8 @@ Fort +7, Ref +6, Will +7
 Defensive Abilities channel resistance +4, incorporeal, 
 rejuvenation; Immune undead traits
 Offense
-Speed fly 30 ft. (perfect)
-Melee corrupting touch +6 (7d6, Fort. DC 18 half)
+  Speed fly 30 ft. (perfect)
+  Melee corrupting touch +6 (7d6, Fort. DC 18 half)
 Special Attacks frightful moan (DC 18)
 STATISTICS
 Str —, Dex 12, Con —, Int 10, Wis 11, Cha 20
@@ -12222,8 +11480,8 @@ hp 13 (2d8+4)
 Fort +2, Ref +2, Will +5
 Defensive Abilities channel resistance +2
 Offense
-Speed 30 ft.
-Melee bite +3 (1d6+1 plus disease and paralysis) and 2 claws +3 
+  Speed 30 ft.
+  Melee bite +3 (1d6+1 plus disease and paralysis) and 2 claws +3 
 (1d6+1 plus paralysis) 
 Special Attacks paralysis (1d4+1 rounds, DC 13, elves are 
 immune to this effect)
@@ -12301,8 +11559,8 @@ hp 168 (16d8+96)
 Fort +16, Ref +6, Will +10
 Defensive Abilities rock catching
 Offense
-Speed 50 ft.
-Melee morningstar +22/+17/+12 (4d6+18) or 2 slams +22 (2d6+12) 
+  Speed 50 ft.
+  Melee morningstar +22/+17/+12 (4d6+18) or 2 slams +22 (2d6+12) 
 Ranged rock +12 (2d6+18)
 Space 15 ft.; Reach 15 ft.
 Special Attacks rock throwing (140 ft.)
@@ -12381,8 +11639,8 @@ Fort +14, Ref +4, Will +9
 Defensive Abilities rock catching; Immune fire
 Weaknesses vulnerability to cold 
 Offense
-Speed 40 ft. (30 ft. in armor)
-Melee greatsword +21/+16/+11 (3d6+15) or 2 slams +20 (1d8+10)
+  Speed 40 ft. (30 ft. in armor)
+  Melee greatsword +21/+16/+11 (3d6+15) or 2 slams +20 (1d8+10)
 Ranged rock +10 (1d8+15 plus 1d6 fire)
 Space 10 ft.; Reach 10 ft.
 Special Attacks heated rock, rock throwing (120 ft.)
@@ -12456,8 +11714,8 @@ Fort +14, Ref +3, Will +6
 Defensive Abilities rock catching; Immune cold
 Weaknesses vulnerability to fire
 Offense
-Speed 40 ft.
-Melee greataxe +18/+13 (3d6+13) or 2 slams 
+  Speed 40 ft.
+  Melee greataxe +18/+13 (3d6+13) or 2 slams 
 +18 (1d8+9) 
 Ranged rock +9 (1d8+13)
 Space 10 ft.; Reach 10 ft.
@@ -12569,8 +11827,8 @@ hp 85 (10d8+40)
 Fort +11, Ref +2, Will +3
 Defensive Abilities rock catching
 Offense
-Speed 40 ft. (30 ft. in armor)
-Melee greatclub +14/+9 (2d8+10) or 2 slams +13 (1d8+7)
+  Speed 40 ft. (30 ft. in armor)
+  Melee greatclub +14/+9 (2d8+10) or 2 slams +13 (1d8+7)
 Ranged rock +6 (1d8+10)
 Space 10 ft.; Reach 10 ft.
 Special Attacks rock throwing (120 ft.)
@@ -12648,8 +11906,8 @@ hp 102 (12d8+48)
 Fort +12, Ref +6, Will +7
 Defensive Abilities improved rock catching
 Offense
-Speed 40 ft.
-Melee greatclub +16/+11 (2d8+12) or 2 slams +16 (1d8+8)
+  Speed 40 ft.
+  Melee greatclub +16/+11 (2d8+12) or 2 slams +16 (1d8+8)
 Ranged rock +11/+6 (1d8+12)
 Space 10 ft.; Reach 10 ft.
 Special Attacks rock throwing (180 ft.)
@@ -12726,8 +11984,8 @@ hp 199 (19d8+114)
 Fort +17, Ref +8, Will +13
 Defensive Abilities rock catching; Immune electricity
 Offense
-Speed 50 ft., swim 40 ft. (35 ft., swim 30 ft. in armor) 
-Melee mwk greatsword +27/+22/+17 (4d6+21/17–20) or 
+  Speed 50 ft., swim 40 ft. (35 ft., swim 30 ft. in armor) 
+  Melee mwk greatsword +27/+22/+17 (4d6+21/17–20) or 
 2 slams +26 (2d6+14)
 Ranged mwk composite longbow +15/+10/+5 
 (3d6+14/×3)
@@ -12836,8 +12094,8 @@ Fort +8, Ref +4, Will +5
 Defensive Abilities amorphous; DR 5/bludgeoning; Immune 
 critical hits, precision damage
 Offense
-Speed 10 ft., swim 20 ft.
-Melee 6 bites +7 (1d4 plus grab)
+  Speed 10 ft., swim 20 ft.
+  Melee 6 bites +7 (1d4 plus grab)
 Special Attacks blood drain, engulf (6d4 damage plus 2 Con 
 damage, AC 13, hp 4), gibbering, ground manipulation, 
 spittle (+6 ranged touch)
@@ -12925,8 +12183,8 @@ Defense
 hp 73 (7d10+35)
 Fort +9, Ref +8, Will +5
 Offense
-Speed 40 ft., climb 40 ft.
-Melee bite +10 (1d6+4), 4 claws +10 (1d4+4 plus rend) 
+  Speed 40 ft., climb 40 ft.
+  Melee bite +10 (1d6+4), 4 claws +10 (1d4+4 plus rend) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks rend (4 claws, 1d4+6)
 STATISTICS
@@ -13001,8 +12259,8 @@ Defense
 hp 11 (2d8+2)
 Fort +4, Ref +0, Will +0
 Offense
-Speed 30 ft.
-Melee spear +3 (1d8+3/×3)
+  Speed 30 ft.
+  Melee spear +3 (1d8+3/×3)
 Ranged spear +1 (1d8+2/×3)
 STATISTICS
 Str 15, Dex 10, Con 13, Int 8, Wis 11, Cha 8
@@ -13084,8 +12342,8 @@ Defense
 hp 6 (1d10+1)
 Fort +3, Ref +2, Will –1
 Offense
-Speed 30 ft.
-Melee short sword +1 (1d4/19–20)
+  Speed 30 ft.
+  Melee short sword +1 (1d4/19–20)
 Ranged short bow +3 (1d4/×3)
 STATISTICS
 Str 11, Dex 15, Con 12, Int 10, Wis 9, Cha 6
@@ -13170,8 +12428,8 @@ hp 9 (1d8+5)
 Fort +4, Ref +4, Will +1
 Immune disease
 Offense
-Speed 50 ft.
-Melee bite +2 (1d6+3 plus allergic reaction) 
+  Speed 50 ft.
+  Melee bite +2 (1d6+3 plus allergic reaction) 
 STATISTICS
 Str 15, Dex 14, Con 15, Int 2, Wis 12, Cha 8
 Base Atk +0; CMB +2; CMD 14
@@ -13361,8 +12619,8 @@ Fort +4, Ref +3, Will +4
 DR 10/adamantine and bludgeoning; Immune construct 
  traits, magic
 Offense
-Speed 20 ft.
-Melee 2 slams +19 (2d10+7 plus cursed wound)
+  Speed 20 ft.
+  Melee 2 slams +19 (2d10+7 plus cursed wound)
 Space 10 ft.; Reach 10 ft.
 Special Attacks berserk, haste
 STATISTICS
@@ -13444,8 +12702,8 @@ hp 79 (9d10+30)
 Fort +3, Ref +2, Will +3
 DR 5/adamantine; Immune construct traits, magic
 Offense
-Speed 30 ft.
-Melee 2 slams +13 (2d8+5)
+  Speed 30 ft.
+  Melee 2 slams +13 (2d8+5)
 Space 10 ft.; Reach 10 ft.
 Special Attacks berserk
 STATISTICS
@@ -13549,8 +12807,8 @@ Fort +2, Ref +1, Will +2
 DR 5/adamantine; Immune construct traits, cold, magic
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft.
-Melee 2 slams +9 (1d6+3 plus 1d6 cold)
+  Speed 30 ft.
+  Melee 2 slams +9 (1d6+3 plus 1d6 cold)
 Special Attacks breath weapon (20-ft. cone, 3d6 cold damage, 
 Reflex DC 13 half, usable once every 1d4 rounds), cold (1d6), 
 icy destruction
@@ -13628,8 +12886,8 @@ hp 129 (18d10+30)
 Fort +6, Ref +5, Will +6
 DR 15/adamantine; Immune construct traits, magic
 Offense
-Speed 20 ft.
-Melee 2 slams +28 (2d10+16/19–20)
+  Speed 20 ft.
+  Melee 2 slams +28 (2d10+16/19–20)
 Space 10 ft.; Reach 10 ft.
 Special Attacks breath weapon, powerful blows
 STATISTICS
@@ -13736,8 +12994,8 @@ hp 107 (14d10+30)
 Fort +4, Ref +3, Will +4
 DR 10/adamantine; Immune construct traits, magic
 Offense
-Speed 20 ft.
-Melee 2 slams +22 (2d10+9)
+  Speed 20 ft.
+  Melee 2 slams +22 (2d10+9)
 Space 10 ft.; Reach 10 ft.
 Special Attacks slow
 STATISTICS
@@ -13810,8 +13068,8 @@ Fort +2, Ref +5, Will +2
 DR 5/adamantine; Immune construct traits, magic
 Weaknesses vulnerable to fire
 Offense
-Speed 30 ft.
-Melee 2 slams +12 (2d6+4)
+  Speed 30 ft.
+  Melee 2 slams +12 (2d6+4)
 Special Attacks splintering
 STATISTICS
 Str 18, Dex 17, Con 25 Int —, Wis 17, Cha 1
@@ -13883,8 +13141,8 @@ Defense
 hp 100 (8d10+56)
 Fort +13, Ref +6, Will +7
 Offense
-Speed 30 ft.
-Melee gore +14 (2d8+7), 2 hooves +9 (1d6+3)
+  Speed 30 ft.
+  Melee gore +14 (2d8+7), 2 hooves +9 (1d6+3)
 Space 10 ft.; Reach 5 ft.
 Special Attacks breath weapon (60-foot cone, turn to stone, 
 Fortitude DC 21 negates), trample (2d8+10, DC 21)
@@ -13968,8 +13226,8 @@ hp 50 (4d8+32)
 Fort +9, Ref –4, Will –4
 Defensive Abilities ooze traits; Immune cold, fire
 Offense
-Speed 10 ft.
-Melee slam +6 (1d6+4 plus 1d6 acid and grab)
+  Speed 10 ft.
+  Melee slam +6 (1d6+4 plus 1d6 acid and grab)
 Special Attacks acid, constrict (1d6+1 plus 1d6 acid)
 STATISTICS
 Str 16, Dex 1, Con 26, Int —, Wis 1, Cha 1
@@ -14078,8 +13336,8 @@ hp 58 (9d10+9)
 Fort +6, Ref +7, Will +7
 SR 16
 Offense
-Speed 30 ft., swim 30 ft.
-Melee 2 claws +13 (1d4+4 plus weakness)
+  Speed 30 ft., swim 30 ft.
+  Melee 2 claws +13 (1d4+4 plus weakness)
 Spell-Like Abilities (CL 9th)
 Constant—pass without trace, tongues, water breathing
 At will—dancing lights, disguise self (DC 13), ghost sound (DC 12), 
@@ -14191,8 +13449,8 @@ Defense
 hp 42 (5d10+15)
 Fort +7, Ref +6, Will +4
 Offense
-Speed 30 ft., fly 80 ft. (average)
-Melee bite +8 (1d6+3), 2 talons +7 (1d6+3)
+  Speed 30 ft., fly 80 ft. (average)
+  Melee bite +8 (1d6+3), 2 talons +7 (1d6+3)
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +7, 1d4+3)
 STATISTICS
@@ -14281,8 +13539,8 @@ DR 5/magic; Immune charm, compulsion,
 disease, poison; Resist acid 10, cold 
 10, electricity 10; SR 15
 Offense
-Speed 60 ft., fly 120 ft. (good)
-Melee gore +10 (1d8+6), 2 
+  Speed 60 ft., fly 120 ft. (good)
+  Melee gore +10 (1d8+6), 2 
 hooves +7 (1d3+3)
 Space 10 ft.; Reach 5 ft.
 Special Attacks smite evil 1/
@@ -14376,8 +13634,8 @@ hp 73 (7d10+35)
 Fort +12, Ref +4, Will +5
 Immune acid, sleep, paralysis
 Offense
-Speed 20 ft., fly 40 ft. (average)
-Melee bite +14 (1d8+7), 2 claws +14 (1d4+7)
+  Speed 20 ft., fly 40 ft. (average)
+  Melee bite +14 (1d8+7), 2 claws +14 (1d4+7)
 Special Attacks breath weapon (60-foot line of acid, 7d6 acid 
 damage, Reflex DC 18 half), gaze (DC 18, see page 29)
 STATISTICS
@@ -14457,8 +13715,8 @@ Fort +8, Ref +7, Will +6
 Defensive Abilities natural cunning*; DR 5/magic; Immune 
 poison; Resist acid 10, cold 10, electricity 10, fire 10; SR 17
 Offense
-Speed 30 ft., fly 60 ft. (average)
-Melee greataxe +11/+6 (3d6+9/×3), bite +6 (1d8+3), gore +6 (1d6+3)
+  Speed 30 ft., fly 60 ft. (average)
+  Melee greataxe +11/+6 (3d6+9/×3), bite +6 (1d8+3), gore +6 (1d6+3)
 Space 10 ft.; Reach 10 ft.
 Special Attacks smite good 1/day, powerful charge (gore +13, 2d6+9)
 Spell-Like Abilities (CL 6th)
@@ -14539,8 +13797,8 @@ Defense
 hp 38 (7d10)
 Fort +4, Ref +7, Will +6
 Offense
-Speed 20 ft., fly 80 ft. (average)
-Melee morningstar +8/+3 (1d8+1), 2 talons +3 (1d6)
+  Speed 20 ft., fly 80 ft. (average)
+  Melee morningstar +8/+3 (1d8+1), 2 talons +3 (1d6)
 Special Attacks captivating song
 STATISTICS
 Str 12, Dex 15, Con 10, Int 7, Wis 12, Cha 17
@@ -14620,8 +13878,8 @@ Fort +6, Ref +5, Will +1
 Immune fire
 Weaknesses vulnerability to cold
 Offense
-Speed 40 ft.
-Melee bite +5 (1d8+1 plus 1d6 fire)
+  Speed 40 ft.
+  Melee bite +5 (1d8+1 plus 1d6 fire)
 Special Attacks breath weapon (10-ft. cone, once every 2d4 
 rounds, 2d6 fire damage, Reflex DC 14 for half)
 STATISTICS
@@ -14668,8 +13926,8 @@ Fort +13, Ref +10, Will +5
 Immune fire
 Weaknesses vulnerability to cold
 Offense
-Speed 40 ft.
-Melee bite +20 (2d6+12/19–20 plus 2d6 fire) 
+  Speed 40 ft.
+  Melee bite +20 (2d6+12/19–20 plus 2d6 fire) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks breath weapon (30-ft. cone, once every 1d4 
 rounds, 10d6 fire damage, Reflex DC 21 half)
@@ -14724,8 +13982,8 @@ Defense
 hp 22 (3d8+9)
 Fort +6, Ref +3, Will +1
 Offense
-Speed 40 ft.
-Melee gore +7 (1d8+9) 
+  Speed 40 ft.
+  Melee gore +7 (1d8+9) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks stampede, trample (2d6+9, DC 17)
 STATISTICS
@@ -14771,8 +14029,8 @@ Defense
 hp 42 (5d8+20)
 Fort +8, Ref +4, Will +1
 Offense
-Speed 40 ft.
-Melee gore +10 (2d6+12) 
+  Speed 40 ft.
+  Melee gore +10 (2d6+12) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks stampede (see aurochs), trample (2d6+12, DC 20)
 STATISTICS
@@ -14832,8 +14090,8 @@ Defense
 hp 11 (1d10+6)
 Fort +5, Ref +2, Will +1
 Offense
-Speed 30 ft.
-Melee longsword +3 (1d8+2/19–20) 
+  Speed 30 ft.
+  Melee longsword +3 (1d8+2/19–20) 
 Ranged longbow +2 (1d8/×3) 
 STATISTICS
 Str 15, Dex 15, Con 16, Int 10, Wis 12, Cha 8
@@ -14949,8 +14207,8 @@ Fort +0, Ref +4, Will +1
 Defensive Abilities 
 construct traits
 Offense
-Speed 20 ft., fly 50 ft. 
-(good)
+  Speed 20 ft., fly 50 ft. 
+  (good)
 Melee 1 bite +3 (1d4–1 
 plus poison) 
 Space 2-1/2 ft.; Reach 0 ft.
@@ -15050,8 +14308,8 @@ Defense
 hp 15 (2d8+6)
 Fort +6, Ref +5, Will +1
 Offense
-Speed 50 ft.
-Melee 2 hooves –2 (1d4+1)
+  Speed 50 ft.
+  Melee 2 hooves –2 (1d4+1)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 16, Dex 14, Con 17, Int 2, Wis 13, Cha 7
@@ -15099,8 +14357,8 @@ Defense
 hp 13 (2d8+4)
 Fort +5, Ref +4, Will +0
 Offense
-Speed 40 ft.
-Melee 2 hooves –3 (1d3)
+  Speed 40 ft.
+  Melee 2 hooves –3 (1d3)
 STATISTICS
 Str 13, Dex 13, Con 14, Int 2, Wis 11, Cha 4
 Base Atk +1; CMB +2; CMD 13 (17 vs. trip)
@@ -15163,8 +14421,8 @@ Defense
 hp 47 (5d10+20); fast healing 5
 Fort +9, Ref +7, Will +3
 Offense
-Speed 20 ft., swim 20 ft.
-Melee 5 bites +6 (1d8+3) 
+  Speed 20 ft., swim 20 ft.
+  Melee 5 bites +6 (1d8+3) 
 Space 15 ft.; Reach 10 ft.
 Special Attacks pounce
 STATISTICS
@@ -15239,8 +14497,8 @@ Defense
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
-Speed 50 ft.
-Melee bite +3 (1d6+3 plus trip) 
+  Speed 50 ft.
+  Melee bite +3 (1d6+3 plus trip) 
 STATISTICS
 Str 14, Dex 15, Con 15, Int 2, Wis 13, Cha 6
 Base Atk +1; CMB +3; CMD 15
@@ -15286,8 +14544,8 @@ Defense
 hp 26 (4d8+8)
 Fort +6, Ref +6, Will +2
 Offense
-Speed 50 ft. 
-Melee bite +6 (2d6+6 plus trip) 
+  Speed 50 ft. 
+  Melee bite +6 (2d6+6 plus trip) 
 Space 10 ft.; Reach 10 ft.
 STATISTICS
 Str 18, Dex 15, Con 15, Int 2, Wis 13, Cha 6
@@ -15338,8 +14596,8 @@ DR 10/adamantine and magic; Immune fire, mind-affecting
 effects; Resist cold 20, electricity 20, sonic 20; SR 23
 Weaknesses vulnerability to protection from evil
 Offense
-Speed 40 ft.
-Melee 4 claws +13 (1d4+1)
+  Speed 40 ft.
+  Melee 4 claws +13 (1d4+1)
 Special Attacks body thief, sneak attack +3d6
 Spell-Lilke Abilities (CL 8th)
 Constant—detect magic
@@ -15423,8 +14681,8 @@ hp 80 (7d10+42)
 Fort +13, Ref +11, Will +4
 Defensive Abilities natural invisibility; Immune elemental traits
 Offense
-Speed 30 ft., fly 30 (perfect)
-Melee 2 slams +12 (2d6+4)
+  Speed 30 ft., fly 30 (perfect)
+  Melee 2 slams +12 (2d6+4)
 STATISTICS
 Str 18, Dex 19, Con 22, Int 14, Wis 15, Cha 11
 Base Atk +7; CMB +11; CMD 25
@@ -15505,8 +14763,8 @@ hp 15 (1d10+10)
 Fort +0, Ref +2, Will +0
 DR 5/—; Immune construct traits; SR 13
 Offense
-Speed 40 ft.
-Melee bite +3 (1d6+1 plus poison) 
+  Speed 40 ft.
+  Melee bite +3 (1d6+1 plus poison) 
 STATISTICS
 Str 12, Dex 15, Con —, Int —, Wis 11, Cha 1
 Base Atk +1; CMB +1; CMD 13 (can’t be tripped)
@@ -15592,8 +14850,8 @@ hp 4 (1d8)
 Fort +2, Ref +1, Will –1
 Weaknesses light sensitivity
 Offense
-Speed 30 ft.
-Melee spear +1 (1d6–1)
+  Speed 30 ft.
+  Melee spear +1 (1d6–1)
 Ranged sling +3 (1d3)
 STATISTICS
 Str 9, Dex 13, Con 10, Int 10,
@@ -15704,8 +14962,8 @@ hp 290 (20d10+180)
 Fort +21, Ref +12, Will +11
 Immune cold, mind-affecting effects, poison
 Offense
-Speed 10 ft., swim 40 ft., jet 280 ft.
-Melee 2 arms +26 (2d6+10/19–20 plus grab), 8 tentacles +24 
+  Speed 10 ft., swim 40 ft., jet 280 ft.
+  Melee 2 arms +26 (2d6+10/19–20 plus grab), 8 tentacles +24 
 (1d8+5 plus grab), bite +26 (2d8+10)
 Space 20 ft.; Reach 20 ft. (60 ft. with arm, 40 ft. with tentacle)
 Special Attacks constrict (tentacles, 1d8+10), ink cloud, rend ship
@@ -15793,8 +15051,8 @@ silver weapons)
 Fort +8, Ref +9, Will +3
 DR 5/silver or good; Immune cold; SR 17
 Offense
-Speed 30 ft.
-Melee 4 chains +11 (2d4+2)
+  Speed 30 ft.
+  Melee 4 chains +11 (2d4+2)
 Space 5 ft; Reach 5 ft. (10 ft. with chains)
 Special Attacks dancing chains, 
 unnerving gaze
@@ -15901,8 +15159,8 @@ Defense
 hp 67 (9d10+18)
 Fort +6, Ref +9, Will +11
 Offense
-Speed 60 ft.
-Melee +1 dagger +13/+8 (1d4+5/19–20), touch +7 (1d4 Wisdom 
+  Speed 60 ft.
+  Melee +1 dagger +13/+8 (1d4+5/19–20), touch +7 (1d4 Wisdom 
 drain), 2 claws +7 (1d4+2)
 Space 10 ft.; Reach 5 ft.
 Special Attacks Wisdom drain
@@ -15982,8 +15240,8 @@ Fort +4, Ref +2, Will +1
 Immune mind-affecting effects
 Weaknesses susceptible to salt
 Offense
-Speed 5 ft., swim 20 ft.
-Melee bite +2 (1d6 plus attach)
+  Speed 5 ft., swim 20 ft.
+  Melee bite +2 (1d6 plus attach)
 Special Attacks blood drain
 STATISTICS
 Str 11, Dex 12, Con 14, Int —, Wis 10, Cha 1
@@ -16030,8 +15288,8 @@ Fort +7, Ref +6, Will +2
 Immune mind-affecting effects, swarm traits, weapon damage
 Weaknesses susceptible to salt (see giant leech)
 Offense
-Speed 5 ft., swim 30 ft.
-Melee swarm (2d6 plus poison)
+  Speed 5 ft., swim 30 ft.
+  Melee swarm (2d6 plus poison)
 Space 10 ft.; Reach 0 ft.
 Special Attacks blood drain, distraction (DC 15)
 STATISTICS
@@ -16084,8 +15342,8 @@ Fort +6, Ref +7, Will +11
 Defensive Abilities channel resistance +4; DR 15/bludgeoning 
 and magic; Immune cold, electricity, undead traits
 Offense
-Speed 30 ft.
-Melee touch +5 (1d8+5 plus paralyzing touch)
+  Speed 30 ft.
+  Melee touch +5 (1d8+5 plus paralyzing touch)
 Special Attacks grave touch* (9/day), paralyzing touch (DC 18), 
 power over undead* (9/day, DC 18)
 Spells Prepared (CL 11th)
@@ -16266,8 +15524,8 @@ Defensive Abilities freedom of movement; DR 15/cold
 iron; Immune curse effects, fire, mind-affecting effects, 
 paralysis, poison, sleep; SR 25
 Offense
-Speed 40 ft., fly 100 ft. (average), swim 60 ft.
-Melee bite +23 (2d8+12/19–20 plus poison), 2 claws +23 
+  Speed 40 ft., fly 100 ft. (average), swim 60 ft.
+  Melee bite +23 (2d8+12/19–20 plus poison), 2 claws +23 
 (1d8+12), tail +18 (2d6+6 plus grab) 
 Space 20 ft.; Reach 20 ft.
 Special Attacks breath weapon, constrict (tail, 2d6+18), 
@@ -16350,8 +15608,8 @@ Defensive Abilities freedom of movement; DR 15/cold
 iron; Immune cold, curse effects, mind-affecting effects, 
 paralysis, poison, sleep; SR 28
 Offense
-Speed 40 ft., climb 40 ft., fly 100 ft. (average), swim 40 ft.
-Melee bite +24 (3d8+14/19–20 plus poison), 2 claws +24 
+  Speed 40 ft., climb 40 ft., fly 100 ft. (average), swim 40 ft.
+  Melee bite +24 (3d8+14/19–20 plus poison), 2 claws +24 
 (2d6+14), tail +19 (3d6+7 plus grab) 
 Space 30 ft.; Reach 30 ft.
 Special Attacks breath weapon, constrict (tail, 3d6+21), death curse
@@ -16439,8 +15697,8 @@ Defensive Abilities freedom of movement; DR 20/cold iron;
 Immune acid, curse effects, flanking mind-affecting effects, 
 paralysis, poison, sleep; SR 31
 Offense
-Speed 40 ft., fly 100 ft. (average), swim 80 ft.
-Melee 2 bites +30 (3d8+16/19–20 plus poison), 2 claws +30 
+  Speed 40 ft., fly 100 ft. (average), swim 80 ft.
+  Melee 2 bites +30 (3d8+16/19–20 plus poison), 2 claws +30 
 (2d6+16), tail +25 (3d6+8 plus grab) 
 Space 30 ft.; Reach 30 ft.
 Special Attacks breath weapon, constrict (tail, 3d6+24), death curse
@@ -16513,8 +15771,8 @@ Defense
 hp 32 (5d8+10)
 Fort +6, Ref +7, Will +2
 Offense
-Speed 40 ft.
-Melee bite +7 (1d8+5 plus grab), 2 claws +7 (1d4+5)
+  Speed 40 ft.
+  Melee bite +7 (1d8+5 plus grab), 2 claws +7 (1d4+5)
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +7, 1d4+5)
 STATISTICS
@@ -16561,8 +15819,8 @@ Defense
 hp 60 (8d8+24)
 Fort +9, Ref +8, Will +3
 Offense
-Speed 40 ft.
-Melee bite +12 (1d8+7 plus grab), 2 claws +13 (1d6+7)
+  Speed 40 ft.
+  Melee bite +12 (1d8+7 plus grab), 2 claws +13 (1d6+7)
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +13, 1d6+7)
 STATISTICS
@@ -16625,8 +15883,8 @@ Defense
 hp 22 (3d8+9)
 Fort +8, Ref +5, Will +2
 Offense
-Speed 30 ft., swim 30 ft. 
-Melee bite +5 (1d8+4 plus grab and poison)
+  Speed 30 ft., swim 30 ft. 
+  Melee bite +5 (1d8+4 plus grab and poison)
 STATISTICS
 Str 17, Dex 15, Con 17, Int 2, Wis 12, Cha 6
 Base Atk +2; CMB +5 (+9 grapple); CMD 17 (21 vs. trip)
@@ -16672,8 +15930,8 @@ Defense
 hp 59 (7d8+28)
 Fort +11, Ref +8, Will +4
 Offense
-Speed 30 ft., climb 30 ft.
-Melee bite +9 (2d6+5), tail +4 (1d8+2)
+  Speed 30 ft., climb 30 ft.
+  Melee bite +9 (2d6+5), tail +4 (1d8+2)
 Space 10 ft.; Reach 5 ft.
 Special Attacks intimidating charge
 STATISTICS
@@ -16731,8 +15989,8 @@ Defense
 hp 11 (2d8+2)
 Fort +4, Ref +0, Will +0
 Offense
-Speed 30 ft., swim 15 ft.
-Melee morningstar +2 (1d8+1), claw 
+  Speed 30 ft., swim 15 ft.
+  Melee morningstar +2 (1d8+1), claw 
 +0 (1d4), bite +0 (1d4)
 Ranged javelin +1 (1d6+1)
 STATISTICS
@@ -16925,8 +16183,8 @@ hp 18 (2d8+6)
 Fort +2, Ref +5, Will +3
 Defensive Abilities evasion
 Offense
-Speed 30 ft.
-Melee short sword +3 (1d6+1/19–20) 
+  Speed 30 ft.
+  Melee short sword +3 (1d6+1/19–20) 
 Ranged light crossbow +3 (1d8/19–20)
 Special Attacks sneak attack +1d6
 STATISTICS
@@ -16956,8 +16214,8 @@ hp 20 (2d8+8)
 Fort +3, Ref +6, Will +3
 Defensive Abilities evasion; DR 10/silver
 Offense
-Speed 30 ft.
-Melee short sword +4 (1d6+2/19–20), bite –1 
+  Speed 30 ft.
+  Melee short sword +4 (1d6+2/19–20), bite –1 
 (1d4+1 plus disease and curse of lycanthropy; DC 15)
 Ranged light crossbow +4 (1d8/19–20)
 Special Attacks sneak attack +1d6
@@ -17009,8 +16267,8 @@ hp 19 (2d10+4)
 Fort +5, Ref +1, Will +2 (+3 vs. fear)
 Defensive Abilities bravery +1
 Offense
-Speed 30 ft. (20 ft. in armor)
-Melee longsword +5 (1d8+4/19–20) 
+  Speed 30 ft. (20 ft. in armor)
+  Melee longsword +5 (1d8+4/19–20) 
 Ranged light crossbow +3 (1d8/19–20) 
 STATISTICS
 Str 17, Dex 13, Con 14, Int 8, Wis 14, Cha 8
@@ -17038,8 +16296,8 @@ hp 21 (2d10+6)
 Fort +6, Ref +2, Will +2 (+3 vs. fear)
 Defensive Abilities bravery +1; DR 10/silver
 Offense
-Speed 30 ft. (20 ft. in armor)
-Melee longsword +6 (1d8+6/19–20), bite +1 
+  Speed 30 ft. (20 ft. in armor)
+  Melee longsword +6 (1d8+6/19–20), bite +1 
 (1d6+1 plus trip and curse of lycanthropy)
 Ranged light crossbow +4 (1d8/19–20) 
 STATISTICS
@@ -17117,8 +16375,8 @@ Defense
 hp 57 (6d10+24)
 Fort +9, Ref +7, Will +3
 Offense
-Speed 30 ft., fly 50 ft. (clumsy)
-Melee bite +10 (1d8+5), 2 claws +10 (2d4+5)
+  Speed 30 ft., fly 50 ft. (clumsy)
+  Melee bite +10 (1d8+5), 2 claws +10 (2d4+5)
 Ranged 4 spikes +8 (1d6+5)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
@@ -17195,8 +16453,8 @@ hp 30 (4d8+12)
 Fort +7, Ref +2, Will +3
 Immune mind-affecting effects
 Offense
-Speed 30 ft., climb 30 ft. fly 40 ft. (poor)
-Melee 2 claws +5 (1d6+3 plus grab) 
+  Speed 30 ft., climb 30 ft. fly 40 ft. (poor)
+  Melee 2 claws +5 (1d6+3 plus grab) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks lunge, mandibles, sudden strike
 STATISTICS
@@ -17284,8 +16542,8 @@ Defense
 hp 76 (8d10+32)
 Fort +6, Ref +8, Will +7
 Offense
-Speed 30 ft.
-Melee dagger +10/+5 (1d4/19–20), snake bite +5 (1d4 plus poison) 
+  Speed 30 ft.
+  Melee dagger +10/+5 (1d4/19–20), snake bite +5 (1d4 plus poison) 
 Ranged mwk longbow +11/+6 (1d8/×3) 
 Special Attacks petrifying gaze
 STATISTICS
@@ -17393,8 +16651,8 @@ hp 19 (3d10+3); fast healing 2
 Fort +2, Ref +5, Will +3
 DR 5/magic
 Offense
-Speed 30 ft., fly 40 ft. (average)
-Melee 2 claws +5 (1d3+1)
+  Speed 30 ft., fly 40 ft. (average)
+  Melee 2 claws +5 (1d3+1)
 Special Attacks breath weapon (15-foot cone, effect based on 
 type, Reflex DC 13 for half)
 Spell-Like Abilities (CL 6th)
@@ -17568,8 +16826,8 @@ Defense
 hp 7 (1d10+2)
 Fort +4, Ref +1, Will –1
 Offense
-Speed 5 ft., swim 50 ft.
-Melee trident +2 (1d8+1)
+  Speed 5 ft., swim 50 ft.
+  Melee trident +2 (1d8+1)
 Ranged heavy crossbow +2 (1d8/19–20)
 STATISTICS
 Str 13, Dex 13, Con 14, Int 10, Wis 9, Cha 10
@@ -17660,8 +16918,8 @@ hp 52 (7d8+21)
 Fort +5, Ref +5, Will +6
 Immune acid
 Offense
-Speed 10 ft.
-Melee slam +10 (1d8+6 plus adhesive)
+  Speed 10 ft.
+  Melee slam +10 (1d8+6 plus adhesive)
 Special Attacks constrict (slam, 1d8+6)
 STATISTICS
 Str 19, Dex 12, Con 17, Int 10, Wis 13, Cha 10
@@ -17746,8 +17004,8 @@ hp 45 (6d10+12)
 Fort +6, Ref +5, Will +5
 Defensive Abilities natural cunning
 Offense
-Speed 30 ft.
-Melee greataxe +9/+4 (3d6+6/×3) and gore +4 (1d6+4)
+  Speed 30 ft.
+  Melee greataxe +9/+4 (3d6+6/×3) and gore +4 (1d6+4)
 Space 10 ft.; Reach 10 ft.
 Special Attacks powerful charge (gore +11, 2d6+6)
 STATISTICS
@@ -17827,8 +17085,8 @@ Fort +0, Ref +3, Will +3
 DR 2/cold iron
 Weaknesses light sensitivity
 Offense
-Speed 20 ft., climb 20 ft.
-Melee dagger +0 (1d3–1/19–20) 
+  Speed 20 ft., climb 20 ft.
+  Melee dagger +0 (1d3–1/19–20) 
 Ranged dart +2 (1d3–1) 
 Special Attacks hatred
 Spell-Like Abilities (CL 1st)
@@ -17919,8 +17177,8 @@ hp 91 (14d8+28)
 Fort +6, Ref +10, Will +9
 Immune undead traits
 Offense
-Speed 30 ft.
-Melee 2 slams +15 (2d8+5 plus grab), tongue +10 melee touch 
+  Speed 30 ft.
+  Melee 2 slams +15 (2d8+5 plus grab), tongue +10 melee touch 
 (paralysis)
 Special Attacks create spawn, paralysis (1d4 minutes, DC 19)
 STATISTICS
@@ -18026,8 +17284,8 @@ Fort +3, Ref +9, Will +5
 Immune disease, poison
 Weaknesses light blindness
 Offense
-Speed 40 ft., climb 30 ft.
-Melee club +5 (1d6+2), bite +0 (1d4+1)
+  Speed 40 ft., climb 30 ft.
+  Melee club +5 (1d6+2), bite +0 (1d4+1)
 Special Attacks leap attack, sneak attack +1d6, swarming
 STATISTICS
 Str 14, Dex 19, Con 15, Int 5, Wis 14, Cha 6
@@ -18115,8 +17373,8 @@ Fort +4, Ref +2, Will +8
 DR 5/—; Immune undead traits
 Weaknesses vulnerable to fire
 Offense
-Speed 20 ft.
-Melee slam +14 (1d8+10 plus mummy rot)
+  Speed 20 ft.
+  Melee slam +14 (1d8+10 plus mummy rot)
 STATISTICS
 Str 24, Dex 10, Con —, Int 6, Wis 15, Cha 15
 Base Atk +6; CMB +13; CMD 23
@@ -18189,8 +17447,8 @@ hp 85 (10d8+40)
 Fort +7, Ref +10, Will +9 (+11 vs. charm effects)
 Defensive Abilities guarded thoughts; Immune poison
 Offense
-Speed 40 ft.
-Melee bite +8 (1d4+1), sting +8 (2d4+2 plus poison)
+  Speed 40 ft.
+  Melee bite +8 (1d4+1), sting +8 (2d4+2 plus poison)
 Space 10 ft.; Reach 5 ft.
 Spells known (CL 7th)
 3rd (5/day)—displacement, lightning bolt (DC 16)
@@ -18272,8 +17530,8 @@ Defense
 hp 114 (12d8+60)
 Fort +9, Ref +12, Will +12
 Offense
-Speed 40 ft.
-Melee bite +13 (2d6+7 plus poison)
+  Speed 40 ft.
+  Melee bite +13 (2d6+7 plus poison)
 Ranged spit +14 touch (poison)
 Space 10 ft.; Reach 5 ft.
 Spells known (CL 9th)
@@ -18353,8 +17611,8 @@ Defense
 hp 95 (10d8+50)
 Fort +8, Ref +10, Will +10
 Offense
-Speed 40 ft., swim 20 ft.
-Melee bite +10 (2d6+6 plus poison)
+  Speed 40 ft., swim 20 ft.
+  Melee bite +10 (2d6+6 plus poison)
 Space 10 ft.; Reach 5 ft.
 Special Attacks charming gaze
 Spells known (CL 7th)
@@ -18445,8 +17703,8 @@ hp 230 (20d8+140)
 Fort +15, Ref +4, Will +16
 DR 10/cold iron; SR 26
 Offense
-Speed 30 ft., fly 60 ft. (good)
-Melee 4 tongues +21 (3d6+10/19–20 plus grab)
+  Speed 30 ft., fly 60 ft. (good)
+  Melee 4 tongues +21 (3d6+10/19–20 plus grab)
 Space 20 ft.; Reach 20 ft.
 Special Attacks breath weapon (50-ft. cone, 14d10 acid, Reflex 
 DC 27 half, once every 1d4 rounds), mind thrust, psychic 
@@ -18536,8 +17794,8 @@ Fort +14, Ref +8, Will +11
 DR 10/cold iron and magic; Immune charm, cold, fear, fire, 
 sleep; SR 24
 Offense
-Speed 30 ft.
-Melee 2 claws +13 (1d4+5), bite +13 (2d6+5 plus disease)
+  Speed 30 ft.
+  Melee 2 claws +13 (1d4+5), bite +13 (2d6+5 plus disease)
 Special Attacks dream haunting
 Spell-Like Abilities (CL 8th)
 Constant—detect chaos, detect evil, detect good, detect law, 
@@ -18615,8 +17873,8 @@ Defense
 hp 51 (6d10+18)
 Fort +8, Ref +7, Will +3
 Offense
-Speed 40 ft., fly 90 ft. (good)
-Melee  bite +9 (1d4+4), 2 hooves +4 (1d6+2 plus 1d4 fire)
+  Speed 40 ft., fly 90 ft. (good)
+  Melee  bite +9 (1d4+4), 2 hooves +4 (1d6+2 plus 1d4 fire)
 Space 10 ft.; Reach 5 ft.
 Special Attacks smoke
 Spell-Like Abilities (CL 6th)
@@ -18663,8 +17921,8 @@ Defense
 hp 147 (14d10+70)
 Fort +14, Ref +11, Will +7
 Offense
-Speed 40 ft., fly 90 ft. (good)
-Melee bite +22 (2d6+10), 2 hooves +17 (2d6+5 plus 1d6 fire)
+  Speed 40 ft., fly 90 ft. (good)
+  Melee bite +22 (2d6+10), 2 hooves +17 (2d6+5 plus 1d6 fire)
 Space 15 ft.; Reach 10 ft.
 Special Attacks smoke (DC 22)
 Spell-Like Abilities (CL 15th)
@@ -18706,8 +17964,8 @@ hp 60 (8d6+32)
 Fort +13, Ref +18, Will +16
 DR 10/cold iron
 Offense
-Speed 30 ft., swim 20 ft.
-Melee mwk dagger +10 (1d4/19–20)
+  Speed 30 ft., swim 20 ft.
+  Melee mwk dagger +10 (1d4/19–20)
 Special Attacks stunning glance
 Spell-Like Abilities (CL 8th)
 1/day—dimension door
@@ -18819,8 +18077,8 @@ Fort +8, Ref –3, Will –3
 Defensive Abilities split; Immune electricity, mind-affecting 
 effects, ooze traits, slashing and piercing damage
 Offense
-Speed 10 ft., climb 10 ft.
-Melee slam +5 (2d4+3 plus 1d4 acid and grab)
+  Speed 10 ft., climb 10 ft.
+  Melee slam +5 (2d4+3 plus 1d4 acid and grab)
 Space 10 ft.; Reach 5 ft.
 Special Attacks constrict (2d4+3 plus 1d4 acid)
 STATISTICS
@@ -18909,8 +18167,8 @@ hp 13 (2d8+4)
 Fort +5, Ref +6, Will +1
 Defensive Abilities ink cloud
 Offense
-Speed 20 ft., swim 30 ft., jet 200 ft.
-Melee bite +5 (1d3+1 plus poison), tentacles +3 (grab)
+  Speed 20 ft., swim 30 ft., jet 200 ft.
+  Melee bite +5 (1d3+1 plus poison), tentacles +3 (grab)
 STATISTICS
 Str 12, Dex 17, Con 14, Int 2, Wis 13, Cha 3
 Base Atk +1; CMB +1 (+5 grapple); CMD 14 (can’t be tripped)
@@ -18956,8 +18214,8 @@ hp 90 (12d8+36)
 Fort +11, Ref +12, Will +7
 Defensive Abilities ink cloud (30-foot-radius sphere)
 Offense
-Speed 20 ft., swim 30 ft., jet 200 ft.
-Melee bite +13 (1d8+5 plus poison), 8 tentacles +11 (1d4+2 plus grab)
+  Speed 20 ft., swim 30 ft., jet 200 ft.
+  Melee bite +13 (1d8+5 plus poison), 8 tentacles +11 (1d4+2 plus grab)
 Space 10 ft.; Reach 10 ft. (20 ft. with tentacle)
 Special Attack constrict (tentacle, 1d4+2)
 STATISTICS
@@ -19002,8 +18260,8 @@ Defense
 hp 30 (4d8+12)
 Fort +6, Ref +0, Will +3
 Offense
-Speed 30 ft. (40 ft. base)
-Melee greatclub +7 (2d8+7) 
+  Speed 30 ft. (40 ft. base)
+  Melee greatclub +7 (2d8+7) 
 Ranged javelin +1 (1d8+5) 
 Space 10 ft.; Reach 10 ft.
 STATISTICS
@@ -19083,8 +18341,8 @@ hp 92 (8d10+48); regeneration 5 (fire or acid)
 Fort +12, Ref +5, Will +10
 SR 19
 Offense
-Speed 40 ft., fly 60 ft. (good)
-Melee greatsword +14/+9 (3d6+10) 
+  Speed 40 ft., fly 60 ft. (good)
+  Melee greatsword +14/+9 (3d6+10) 
 Ranged composite longbow +10 (2d6+7) 
 Space 10 ft.; Reach 10 ft.
 Spell-Like Abilities (CL 9th)
@@ -19158,8 +18416,8 @@ hp 6 (1d10+1)
 Fort +3, Ref +0, Will –1
 Defensive Abilities ferocity
 Offense
-Speed 30 ft.
-Melee falchion +4 (2d4+4/18–20)
+  Speed 30 ft.
+  Melee falchion +4 (2d4+4/18–20)
 Ranged javelin +1 (1d6+3)
 STATISTICS
 Str 17, Dex 11, Con 12, Int 7, Wis 8, Cha 6
@@ -19237,8 +18495,8 @@ hp 39 (6d8+12)
 Fort +3, Ref +2, Will +6
 Immune disease
 Offense
-Speed 20 ft.
-Melee bite +7 (1d8+4 plus disease), 2 tentacles +3 (1d6+2 
+  Speed 20 ft.
+  Melee bite +7 (1d8+4 plus disease), 2 tentacles +3 (1d6+2 
 plus grab)
 Space 10 ft.; Reach 10 ft. (15 ft. with tentacle)
 Special Attacks constrict (tentacle, 1d6+2)
@@ -19322,8 +18580,8 @@ Defense
 hp 47 (5d10+20)
 Fort +10, Ref +5, Will +2
 Offense 
-Speed 30 ft.
-Melee 2 claws +8 (1d6+4 plus grab), bite +8 (1d6+4)
+  Speed 30 ft.
+  Melee 2 claws +8 (1d6+4 plus grab), bite +8 (1d6+4)
 Space 10 ft.; Reach 5 ft. 
 STATISTICS
 Str 19, Dex 12, Con 18, Int 2, Wis 12, Cha 10
@@ -19399,8 +18657,8 @@ Defense
 hp 34 (4d10+12)
 Fort +7, Ref +6, Will +4
 Offense
-Speed 60 ft., fly 120 ft. (average)
-Melee bite +7 (1d3+4), 2 hooves +2 (1d6+2)
+  Speed 60 ft., fly 120 ft. (average)
+  Melee bite +7 (1d3+4), 2 hooves +2 (1d6+2)
 Space 10 ft.; Reach 5 ft.
 Spell-Like Abilities (CL 4th)
 Constant—detect evil (60-ft. radius), detect good (60-ft. radius)
@@ -19487,8 +18745,8 @@ hp 51 (6d10+18)
 Fort +8, Ref +8, Will +3
 Defensive Abilities ethereal jaunt
 Offense
-Speed 40 ft., climb 20 ft.
-Melee bite +10 (2d6+7 plus poison and grab)
+  Speed 40 ft., climb 20 ft.
+  Melee bite +10 (2d6+7 plus poison and grab)
 Space 10 ft.; Reach 5 ft.
 Special Attacks ethereal ambush
 STATISTICS
@@ -19587,8 +18845,8 @@ resurrection; DR 15/evil;
 Immune fire SR 26
 Weaknesses vulnerable to cold
 Offense
-Speed 30 ft., fly 90 ft. (good)
-Melee 2 talons +24 (2d6+8/19–20 plus 1d6 fire) and bite 
+  Speed 30 ft., fly 90 ft. (good)
+  Melee 2 talons +24 (2d6+8/19–20 plus 1d6 fire) and bite 
 +24 (2d8+8 plus 1d6 fire) 
 Space 20 ft.; Reach 20 ft. 
 Spell-Like Abilities (CL 18th)
@@ -19681,8 +18939,8 @@ Fort +2, Ref +9, Will +6
 Defensive Abilities invisibility; 
 DR 10/cold iron; SR 15
 Offense
-Speed 20 ft., fly 60 ft. (good)
-Melee short sword +8 
+  Speed 20 ft., fly 60 ft. (good)
+  Melee short sword +8 
 (1d4–2/19–20)
 Ranged longbow +8 
 (1d6–2/×3)
@@ -19787,8 +19045,8 @@ hp 15 (2d12+2)
 Fort +4, Ref +5, Will +4
 Immune paralysis, sleep; SR 12
 Offense
-Speed 15 ft., fly 60 ft. (good)
-Melee sting +6 (1d3–2 plus poison), bite +6 (1d2–2) 
+  Speed 15 ft., fly 60 ft. (good)
+  Melee sting +6 (1d3–2 plus poison), bite +6 (1d2–2) 
 Space 2-1/2 ft.; Reach 0 ft. (5 ft. with tail)
 STATISTICS
 Str 7, Dex 15, Con 13, Int 10, Wis 12, Cha 10
@@ -19867,8 +19125,8 @@ Defense
 hp 200 (16d10+112)
 Fort +17, Ref +8, Will +4
 Offense
-Speed 20 ft., burrow 20 ft., swim 10 ft.
-Melee bite +25 (4d8+12/19–20 plus grab), sting +25 (2d8+12 
+  Speed 20 ft., burrow 20 ft., swim 10 ft.
+  Melee bite +25 (4d8+12/19–20 plus grab), sting +25 (2d8+12 
 plus poison)
 Space 20 ft.; Reach 15 ft. 
 Special Attacks swallow whole (4d8+18 bludgeoning damage, 
@@ -19950,8 +19208,8 @@ hp 115 (10d10+60)
 Fort +9, Ref +12, Will +8
 DR 15/good and piercing; SR 25
 Offense
-Speed 40 ft.
-Melee +1 kukri +16/+11 (1d4+3/15–20), claw +10 (1d4+1), bite +10 
+  Speed 40 ft.
+  Melee +1 kukri +16/+11 (1d4+3/15–20), claw +10 (1d4+1), bite +10 
 (1d6+1)
 Special Attacks detect thoughts
 Spells known (CL 7th)
@@ -20063,8 +19321,8 @@ Defense
 hp 5 (1d8+1)
 Fort +3, Ref +5, Will +1
 Offense
-Speed 40 ft., climb 20 ft., swim 20 ft.
-Melee bite +1 (1d4 plus disease)
+  Speed 40 ft., climb 20 ft., swim 20 ft.
+  Melee bite +1 (1d4 plus disease)
 Special Attacks disease
 STATISTICS
 Str 10, Dex 17, Con 13, Int 2, Wis 13, Cha 4
@@ -20111,8 +19369,8 @@ hp 16 (3d8+3)
 Fort +4, Ref +5, Will +2
 Defensive Abilities swarm traits
 Offense
-Speed 15 ft., climb 15 ft., swim 15 ft.
-Melee swarm (1d6 plus disease)
+  Speed 15 ft., climb 15 ft., swim 15 ft.
+  Melee swarm (1d6 plus disease)
 Space 10 ft.; Reach 0 ft.
 Special Attacks disease, distraction (DC 12)
 STATISTICS
@@ -20171,8 +19429,8 @@ hp 94 (9d10+45)
 Fort +11, Ref +7, Will +4
 Immune fire, cold
 Offense
-Speed 30 ft., burrow 20 ft.
-Melee bite +13 (3d6+9 plus grab)
+  Speed 30 ft., burrow 20 ft.
+  Melee bite +13 (3d6+9 plus grab)
 Space 15 ft.; Reach 15 ft.
 Special Attacks heat, swallow whole (2d6+9 plus 8d6 fire, AC 
 15, hp 9)
@@ -20250,8 +19508,8 @@ hp 137 (15d10+55); fast healing 5
 Fort +7, Ref +10, Will +5
 Defensive Abilities construct traits
 Offense
-Speed 50 ft.
-Melee bite +19 (1d8+6 plus grab), 4 claws +19 (2d6+6/19–20) 
+  Speed 50 ft.
+  Melee bite +19 (1d8+6 plus grab), 4 claws +19 (2d6+6/19–20) 
 Space 15 ft.; Reach 15 ft.
 Special Attacks eye rays (+16 ranged touch)
 Spell-Like Abilities (CL 20th)
@@ -20358,8 +19616,8 @@ Defense
 hp 42 (5d8+20)
 Fort +10, Ref +4, Will +2
 Offense
-Speed 40 ft.
-Melee gore +8 (2d6+9)
+  Speed 40 ft.
+  Melee gore +8 (2d6+9)
 Space 10 ft.; Reach 5 ft.
 Special Attacks powerful charge (gore, 4d6+12)
 STATISTICS
@@ -20405,8 +19663,8 @@ Defense
 hp 76 (8d8+40)
 Fort +13, Ref +6, Will +3
 Offense
-Speed 30 ft.
-Melee gore +14 (2d8+13)
+  Speed 30 ft.
+  Melee gore +14 (2d8+13)
 Space 10 ft.; Reach 5 ft.
 Special Attacks powerful charge (gore, 4d8+18), trample 
 (2d6+13, DC 23)
@@ -20468,8 +19726,8 @@ Defense
 hp 120 (16d8+48)
 Fort +13, Ref +14, Will +8
 Offense
-Speed 20 ft., fly 80 ft. (average)
-
+  Speed 20 ft., fly 80 ft. (average)
+  
 nevertheless may find themselves accidentally consumed 
 by the feeding roc.
 Rocs are equally comfortable over land and sea. While 
@@ -20570,8 +19828,8 @@ Fort +13, Ref +5, Will +13
 Immune electricity; Resist cold 10; SR 27
 Weaknesses vulnerability to fire
 Offense
-Speed 10 ft.
-Melee bite +20 (4d8+18/19–20)
+  Speed 10 ft.
+  Melee bite +20 (4d8+18/19–20)
 Ranged 6 strands +10 touch (1d6 Strength)
 Space 10 ft.; Reach 10 ft.
 Special Attacks pull (strand, 5 feet), strands
@@ -20653,8 +19911,8 @@ Defense
 hp 27 (5d8+5)
 Fort +2, Ref +4, Will +5
 Offense
-Speed 40 ft., climb 10 ft.
-Melee bite +6 (1d3), antennae +1 touch (rust)
+  Speed 40 ft., climb 10 ft.
+  Melee bite +6 (1d3), antennae +1 touch (rust)
 STATISTICS
 Str 10, Dex 17, Con 13, Int 2, Wis 13, Cha 8
 Base Atk +3; CMB +3; CMD 16 (20 vs. trip)
@@ -20741,8 +19999,8 @@ hp 15 (2d10+4)
 Fort +4, Ref +4, Will +4
 Weaknesses light blindness
 Offense
-Speed 30 ft., swim 60 ft.
-Melee trident +4 (1d8+3), bite –1 (1d4+1) or 2 claws +4 (1d4+2), 
+  Speed 30 ft., swim 60 ft.
+  Melee trident +4 (1d8+3), bite –1 (1d4+1) or 2 claws +4 (1d4+2), 
 bite +4 (1d4+2)
 Ranged heavy crossbow +3 (1d10/19–20) 
 Special Attacks blood frenzy
@@ -20829,8 +20087,8 @@ Fort +10, Ref +7, Will +6
 DR 10/magic; Immune fire
 Weaknesses vulnerability to cold
 Offense
-Speed 20 ft.
-Melee spear +11/+6 (1d8+4/×3 plus 1d6 fire), tail slap +6 (2d6+1 
+  Speed 20 ft.
+  Melee spear +11/+6 (1d8+4/×3 plus 1d6 fire), tail slap +6 (2d6+1 
 plus 1d6 fire and grab)
 Space 5 ft.; Reach 5 ft. (10 ft. with tail)
 Special Attacks constrict (2d6+4 plus 1d6 fire), heat
@@ -20900,8 +20158,8 @@ hp 44 (8d6+16)
 Fort +4, Ref +8, Will +8
 DR 5/cold iron
 Offense
-Speed 40 ft.
-Melee dagger +6 (1d4+2/19–20), horns +1 (1d6+1)
+  Speed 40 ft.
+  Melee dagger +6 (1d4+2/19–20), horns +1 (1d6+1)
 Ranged short bow +6 (1d6/×3)
 Special Attacks pipes
 Spell-Like Abilities (CL 8th)
@@ -21010,8 +20268,8 @@ hp 37 (5d8+15)
 Fort +7, Ref +1, Will +1
 Immune mind-affecting effects
 Offense
-Speed 50 ft.
-Melee 2 claws +6 (1d6+4 plus grab), sting +6 (1d6+4 plus poison) 
+  Speed 50 ft.
+  Melee 2 claws +6 (1d6+4 plus grab), sting +6 (1d6+4 plus poison) 
 Space 10 ft.; Reach 10 ft.
 Special Attacks constrict (1d6+4)
 STATISTICS
@@ -21098,8 +20356,8 @@ hp 38 (4d10+16)
 Fort +5, Ref +7, Will +5
 SR 15
 Offense
-Speed 30 ft., swim 40 ft.
-Melee 2 claws +8 (1d6+4)
+  Speed 30 ft., swim 40 ft.
+  Melee 2 claws +8 (1d6+4)
 Special Attacks evil eye
 STATISTICS
 Str 19, Dex 16, Con 18, Int 12, Wis 13, Cha 15
@@ -21211,8 +20469,8 @@ hp 187 (15d10+105)
 Fort +16, Ref +13, Will +7
 Defensive Abilities elusive; Immune cold; Resist fire 30
 Offense
-Speed 20 ft., swim 60 ft.
-Melee bite +23 (4d8+12 plus grab), tail slap +18 (3d6+6 plus grab)
+  Speed 20 ft., swim 60 ft.
+  Melee bite +23 (4d8+12 plus grab), tail slap +18 (3d6+6 plus grab)
 Space 20 ft.; Reach 20 ft. 
 Special Attacks capsize, constrict (3d6+18), swallow whole 
 (4d8+18 bludgeoning damage, AC 18, hp 18)
@@ -21322,8 +20580,8 @@ Fort +3, Ref +3, Will +4
 Defensive Abilities incorporeal, channel resistance +2; 
 Immune undead traits
 Offense
-Speed fly 40 ft. (good)
-Melee incorporeal touch +4 (1d6 Strength damage)
+  Speed fly 40 ft. (good)
+  Melee incorporeal touch +4 (1d6 Strength damage)
 Special Attacks create spawn
 STATISTICS
 Str —, Dex 14, Con —, Int 6, Wis 12, Cha 15
@@ -21370,8 +20628,8 @@ Fort +5, Ref +8, Will +7
 Defensive Abilities incorporeal, channel resistance +2; 
 Immune undead traits
 Offense
-Speed fly 40 ft. (good)
-Melee incorporeal touch +11 (1d8 Strength)
+  Speed fly 40 ft. (good)
+  Melee incorporeal touch +11 (1d8 Strength)
 Special Attacks create spawn (as per shadow), strength damage
 STATISTICS
 Str —, Dex 20, Con —, Int 6, Wis 12, Cha 15
@@ -21437,8 +20695,8 @@ Fort +9, Ref +5, Will +5
 Defensive Abilities plant traits; Immune electricity; Resist 
 fire 10
 Offense
-Speed 20 ft., swim 20 ft.
-Melee 2 slams +11 (2d6+5 plus grab)
+  Speed 20 ft., swim 20 ft.
+  Melee 2 slams +11 (2d6+5 plus grab)
 Space 10 ft.; Reach 10 ft.
 Special Attacks constrict (2d6+7)
 STATISTICS
@@ -21512,8 +20770,8 @@ Defense
 hp 22 (4d8+4)
 Fort +7, Ref +5, Will +2
 Offense
-Speed swim 60 ft.
-Melee bite +5 (1d8+4)
+  Speed swim 60 ft.
+  Melee bite +5 (1d8+4)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 17, Dex 12, Con 13, Int 1, 
@@ -21560,8 +20818,8 @@ Defense
 hp 112 (15d8+45)
 Fort +14, Ref +13, Will +8
 Offense
-Speed swim 60 ft.
-Melee bite +17 (4d10+15/19–20 plus 
+  Speed swim 60 ft.
+  Melee bite +17 (4d10+15/19–20 plus 
 grab)
 Space 20 ft.; Reach 20 ft.
 Special Attacks swallow whole (2d6+15 
@@ -21614,8 +20872,8 @@ hp 19 (3d10+3)
 Fort +4, Ref +5, Will +2
 Immune electricity
 Offense
-Speed 40 ft., climb 20 ft., swim 20 ft.
-Melee bite +4 (1d4) 
+  Speed 40 ft., climb 20 ft., swim 20 ft.
+  Melee bite +4 (1d4) 
 Special Attacks shock
 STATISTICS
 Str 10, Dex 15, Con 13, Int 2, Wis 13, Cha 6
@@ -21694,8 +20952,8 @@ Fort +19, Ref +14, Will +15
 DR 10/—; Immune blindness, charm effects, cold, deafness, 
 ooze traits, sonic; Resist acid 20, electricity 20, fire 20; SR 30
 Offense
-Speed 50 ft., climb 30 ft., swim 50 ft.
-Melee 4 slams +30 (3d6+15/19–20 plus grab) 
+  Speed 50 ft., climb 30 ft., swim 50 ft.
+  Melee 4 slams +30 (3d6+15/19–20 plus grab) 
 Space 15 ft.; Reach 30 ft.
 Special Attacks constrict (3d6+15), maddening cacophony, 
 engulf (4d6+22 bludgeoning damage plus 8d6 acid damage, 
@@ -21780,8 +21038,8 @@ hp 4 (1d8)
 Fort +0, Ref +2, Will +2
 DR 5/bludgeoning; Immune cold, undead traits
 Offense
-Speed 30 ft.
-Melee broken scimitar +0 (1d6), claw –3 (1d4+1) or
+  Speed 30 ft.
+  Melee broken scimitar +0 (1d6), claw –3 (1d4+1) or
 2 claws +2 (1d4+2)
 STATISTICS
 Str 15, Dex 14, Con —, Int —, Wis 10, Cha 10
@@ -21968,8 +21226,8 @@ hp 17 (3 HD; 2d8+1d10+3)
 Fort +3 Ref +1 Will +3; channel resistance +4
 DR 5/bludgeoning; Immune cold, undead traits
 Offense
-Speed 30 ft.
-Melee mwk longsword +7 (1d8+3/19–20)
+  Speed 30 ft.
+  Melee mwk longsword +7 (1d8+3/19–20)
 STATISTICS
 Str 17, Dex 13, Con —, Int 9, Wis 10, Cha 12
 Base Atk +2; CMB +5; CMD 16
@@ -22040,8 +21298,8 @@ hp 20 (2d10+9)
 Fort +3, Ref +4, Will +3
 Resist cold 10
 Offense
-Speed 20 ft., swim 40 ft.
-Melee trident +4 (1d8+2), claw +2 (1d4+1), bite +2 (1d6+1) 
+  Speed 20 ft., swim 40 ft.
+  Melee trident +4 (1d8+2), claw +2 (1d4+1), bite +2 (1d6+1) 
 Ranged trident +3 (1d8+2) 
 STATISTICS
 Str 15, Dex 13, Con 17, Int 10, Wis 10, Cha 6
@@ -22127,8 +21385,8 @@ DR 10/slashing or piercing Immune acid, mind-affecting
 effects
 Weaknesses susceptible to salt
 Offense
-Speed 20 ft.
-Melee tongue +15 (2d10+12 plus 2d8 acid)
+  Speed 20 ft.
+  Melee tongue +15 (2d10+12 plus 2d8 acid)
 Ranged spit acid +3 (10d6 acid)
 Space 15 ft.; Reach 15 ft.
 STATISTICS
@@ -22204,8 +21462,8 @@ Defense
 hp 19 (3d8+6)
 Fort +4, Ref +6, Will +2
 Offense
-Speed 20 ft., climb 20 ft., swim 20 ft.
-Melee bite +5 (1d4+4 plus grab)
+  Speed 20 ft., climb 20 ft., swim 20 ft.
+  Melee bite +5 (1d4+4 plus grab)
 Special Attacks constrict (1d4+4)
 STATISTICS
 Str 17, Dex 17, Con 12, Int 1, Wis 12, Cha 2
@@ -22252,8 +21510,8 @@ Defense
 hp 13 (2d8+4)
 Fort +5, Ref +4, Will +1
 Offense
-Speed 20 ft., climb 20 ft., swim 20 ft.
-Melee bite +2 (1d4–1 plus poison) 
+  Speed 20 ft., climb 20 ft., swim 20 ft.
+  Melee bite +2 (1d4–1 plus poison) 
 STATISTICS
 Str 8, Dex 13, Con 14, Int 1, Wis 13, Cha 2
 Base Atk +1; CMB +0; CMD 11 (can’t be tripped)
@@ -22324,8 +21582,8 @@ Fort +4, Ref +5, Will +9
 Defensive Abilities incorporeal, channel resistance +2
 Weaknesses resurrection vulnerability, sunlight powerlessness
 Offense
-Speed fly 80 ft. (perfect)
-Melee incorporeal touch +9 (1d8 plus energy drain) 
+  Speed fly 80 ft. (perfect)
+  Melee incorporeal touch +9 (1d8 plus energy drain) 
 Special Attacks create spawn, energy drain (2 levels, DC 16)
 STATISTICS
 Str —, Dex 16, Con —, Int 14, Wis 16, Cha 15
@@ -22389,8 +21647,8 @@ Defense
 hp 102 (12d10+36)
 Fort +11, Ref +9, Will +10
 Offense
-Speed 40 ft., fly 60 ft. (poor)
-Melee 2 claws +17 (2d6+6/19–20)
+  Speed 40 ft., fly 60 ft. (poor)
+  Melee 2 claws +17 (2d6+6/19–20)
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +17, 2d6+6)
 Spell-Like Abilities (CL 12th)
@@ -22479,8 +21737,8 @@ hp 16 (3d8+3)
 Fort +4, Ref +4, Will +1
 Immune mind-affecting effects
 Offense
-Speed 30 ft., climb 30 ft.
-Melee bite +2 (1d6 plus poison) 
+  Speed 30 ft., climb 30 ft.
+  Melee bite +2 (1d6 plus poison) 
 Special Attack web (+5 ranged, DC 12, hp 2)
 STATISTICS
 Str 11, Dex 17, Con 12, Int —, Wis 
@@ -22529,8 +21787,8 @@ Defensive Abilities swarm traits; Immune
 mind-affecting effects, weapon damage
 Weaknesses swarm traits
 Offense
-Speed 20 ft., climb 20 ft.
-Melee swarm (1d6 plus poison 
+  Speed 20 ft., climb 20 ft.
+  Melee swarm (1d6 plus poison 
 and distraction)
 Space 10 ft.; Reach 0 ft.
 Special Attacks 
@@ -22581,8 +21839,8 @@ hp 13 (3d8)
 Fort +3, Ref +7, Will +2
 Defensive Ability ink cloud (5-ft. radius)
 Offense
-Speed swim 60 ft., jet 240 ft.
-Melee bite +4 (1d3+2), tentacles +2 (1d4+1 plus grab)
+  Speed swim 60 ft., jet 240 ft.
+  Melee bite +4 (1d3+2), tentacles +2 (1d4+1 plus grab)
 STATISTICS
 Str 15, Dex 15, Con 11, Int 2, Wis 12, Cha 2
 Base Atk +2; CMB +4 (+8 grapple); CMD 16
@@ -22628,8 +21886,8 @@ hp 102 (12d8+48)
 Fort +14, Ref +13, Will +5
 Defensive Ability ink cloud (20-ft. radius)
 Offense
-Speed swim 60 ft., jet 260 ft.
-Melee bite +14 (2d6+7), 2 arms +14 (1d6+7), tentacles +12 
+  Speed swim 60 ft., jet 260 ft.
+  Melee bite +14 (2d6+7), 2 arms +14 (1d6+7), tentacles +12 
 (4d6+3 plus grab) 
 Space 15 ft.; Reach 15 ft. (30 ft. with arms and tentacles)
 Special Attacks constrict (4d6+10)
@@ -22686,8 +21944,8 @@ Defense
 hp 5 (1d10)
 Fort +2, Ref +6, Will +1
 Offense
-Speed 10 ft., fly 40 ft. (average)
-Melee touch +7 (attach)
+  Speed 10 ft., fly 40 ft. (average)
+  Melee touch +7 (attach)
 Space 2-1/2 ft.; Reach 0 ft.
 Special Attacks blood drain
 STATISTICS
@@ -22765,8 +22023,8 @@ hp 15 (1d10+5)
 Fort +6, Ref +6, Will +2
 SR 12
 Offense
-Speed 20 ft. (15 ft. in armor)
-Melee heavy pick +3 (1d4+1/×4) 
+  Speed 20 ft. (15 ft. in armor)
+  Melee heavy pick +3 (1d4+1/×4) 
 Ranged light crossbow +4 (1d6/19–20) 
 Special Attacks favored enemy (dwarf +2), +1 to attack vs. 
 dwarven and reptilian humanoids
@@ -22880,8 +22138,8 @@ DR 15/epic; Immune ability damage, acid, bleed, disease,
 energy drain, fire, mind-affecting effects, paralysis, 
 permanent wounds, petrification, poison, polymorph; SR 36
 Offense
-Speed 40 ft.
-Melee bite +37 (4d8+15/15–20/×3 plus grab), 2 claws +37 
+  Speed 40 ft.
+  Melee bite +37 (4d8+15/15–20/×3 plus grab), 2 claws +37 
 (1d12+15), 2 gores +37 (1d10+15), tail slap +32 (3d8+7)
 Ranged 6 spines +25 (2d10+15/×3) 
 Space 30 ft.; Reach 30 ft. (60 ft. with tail slap)
@@ -22963,8 +22221,8 @@ Defense
 hp 9 (1d8+1)
 Fort +1, Ref +5, Will +2
 Offense
-Speed 30 ft.
-Melee dagger +3 (1d4+1/19–20), bite –2 (1d3)
+  Speed 30 ft.
+  Melee dagger +3 (1d4+1/19–20), bite –2 (1d3)
 Ranged short bow +3 (1d6/×3)
 Special Attacks sneak attack +1d6
 STATISTICS
@@ -23052,8 +22310,8 @@ hp 10 (1d8+2)
 Fort +2, Ref +5, Will +1
 Resist cold 5, electricity 5, fire 5
 Offense
-Speed 30 ft.
-Melee short sword +3 (1d6+1/19–20)
+  Speed 30 ft.
+  Melee short sword +3 (1d6+1/19–20)
 Ranged light crossbow +3 (1d8/19–20) 
 Special Attacks sneak attack +1d6
 Spell-Like Abilities (CL 1st)
@@ -23126,8 +22384,8 @@ Defense
 hp 45 (6d8+18)
 Fort +8, Ref +7, Will +3
 Offense
-Speed 40 ft.
-Melee 2 claws +10 (1d8+6 plus grab), bite +9 (2d6+6 plus grab) 
+  Speed 40 ft.
+  Melee 2 claws +10 (1d8+6 plus grab), bite +9 (2d6+6 plus grab) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +10, 1d8+6)
 STATISTICS
@@ -23174,8 +22432,8 @@ Defense
 hp 105 (14d8+42)
 Fort +12, Ref +11, Will +5
 Offense
-Speed 40 ft.
-Melee 2 claws +18 (2d4+8 plus grab), bite +18 (2d6+8/19–20 
+  Speed 40 ft.
+  Melee 2 claws +18 (2d4+8 plus grab), bite +18 (2d6+8/19–20 
 plus grab) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks pounce, rake (2 claws +18, 2d4+8)
@@ -23219,8 +22477,8 @@ Fort +13, Ref +3, Will +9
 Defensive Abilities plant traits; DR 10/slashing
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft.
-Melee 2 slams +17 (2d6+9/19–20)
+  Speed 30 ft.
+  Melee 2 slams +17 (2d6+9/19–20)
 Ranged rock +7 (2d6+9)
 Space 15 ft.; Reach 15 ft.
 Special Attacks rock throwing (180 ft.), trample (2d6+13, DC 25)
@@ -23328,8 +22586,8 @@ Defense
 hp 13 (2d8+4)
 Fort +7, Ref –1, Will +0
 Offense
-Speed 30 ft.
-Melee club +2 (1d6+1), claw –3 (1d4), bite –3 (1d4) or 
+  Speed 30 ft.
+  Melee club +2 (1d6+1), claw –3 (1d4), bite –3 (1d4) or 
 2 claws +2 (1d4+1), bite +2 (1d4+1)
 Ranged javelin +0 (1d6) 
 STATISTICS
@@ -23414,8 +22672,8 @@ Defense
 hp 63 (6d8+36); regeneration 5 (acid or fire)
 Fort +11, Ref +4, Will +3
 Offense
-Speed 30 ft.
-Melee bite +8 (1d8+5), 2 claws +8 (1d6+5)
+  Speed 30 ft.
+  Melee bite +8 (1d8+5), 2 claws +8 (1d6+5)
 Space 10 ft.; Reach 10 ft.
 Special Attacks rend (2 claws, 1d6+7)
 STATISTICS
@@ -23497,8 +22755,8 @@ hp 34 (4d10+12)
 Fort +7, Ref +7, Will +6; +2 resistance vs. evil
 Immune charm, compulsion, poison
 Offense
-Speed 60 ft.
-Melee gore +8 (1d8+4), 2 hooves +5 (1d3+2)
+  Speed 60 ft.
+  Melee gore +8 (1d8+4), 2 hooves +5 (1d3+2)
 Space 10 ft.; Reach 5 ft.
 Special Attacks powerful charge (gore, 2d8+8)
 Spell-Like Abilities (CL 9th)
@@ -23592,8 +22850,8 @@ Defensive Abilities channel resistance +4; DR 10/magic and
 silver; Immune undead traits; Resist cold 10, electricity 10
 Weaknesses vampire weaknesses
 Offense
-Speed 30 ft.
-Melee slam +8 (1d4+4 plus energy drain)
+  Speed 30 ft.
+  Melee slam +8 (1d4+4 plus energy drain)
 Special Attacks blood drain, children of the night, create 
 spawn, dominate (DC 22), energy drain (2 levels, DC 22)
 Bloodline Spell-Like Ability (CL 8th, +7 touch)
@@ -23815,8 +23073,8 @@ Dex, +3 natural)
 hp 19 (3d10+3)
 Fort +4, Ref +4, Will +2
 Offense
-Speed fly 30 ft. (good)
-Melee bite +5 (1d4 plus poison)
+  Speed fly 30 ft. (good)
+  Melee bite +5 (1d4 plus poison)
 Special Attacks kiss, poison, shriek
 STATISTICS
 Str 10, Dex 13, Con 13, Int 5, Wis 12, Cha 8
@@ -23921,8 +23179,8 @@ Fort +3, Ref +2, Will +0
 Defensive Abilities plant traits, DR 5/slashing or bludgeoning; 
 Immune electricity
 Offense
-Speed 30 ft.
-Melee 2 claws +1 (1d4) or longspear +1 (1d6)
+  Speed 30 ft.
+  Melee 2 claws +1 (1d4) or longspear +1 (1d6)
 STATISTICS
 Str 11, Dex 14, Con 12, Int 8, Wis 11, Cha 11
 Base Atk +0; CMB –1; CMD 11
@@ -24032,8 +23290,8 @@ hp 30 (4d8+12)
 Fort +7, Ref +0, Will +1
 Immune plant traits
 Offense
-Speed 10 ft.
-Melee 4 tentacles +4 (1d4+1 plus rot) 
+  Speed 10 ft.
+  Melee 4 tentacles +4 (1d4+1 plus rot) 
 Space 5 ft.; Reach 10 ft.
 STATISTICS
 Str 12, Dex 8, Con 16, Int —, Wis 11, Cha 9
@@ -24139,8 +23397,8 @@ Fort +8, Ref +2, Will +2
 Immune mind-affecting 
 effects
 Offense
-Speed 20 ft., fly 60 ft. 
-(good)
+  Speed 20 ft., fly 60 ft. 
+  (good)
 Melee sting +6 (1d8+6 
 plus poison)
 Space 10 ft.; Reach 5 ft.
@@ -24189,8 +23447,8 @@ traits; Immune weapon
 damage
 Weakness swarm traits
 Offense
-Speed 5 ft., fly 40 ft. (good)
-Melee swarm (2d6 plus poison) 
+  Speed 5 ft., fly 40 ft. (good)
+  Melee swarm (2d6 plus poison) 
 Space 10 ft.; Reach 0 ft.
 Special Attacks distraction 
 (DC 13), poison
@@ -24250,8 +23508,8 @@ Fort +3, Ref +2, Will +5
 Defensive Abilities undead traits
 Weaknesses resurrection vulnerability
 Offense
-Speed 30 ft.
-Melee slam +4 (1d4+1 plus energy drain)
+  Speed 30 ft.
+  Melee slam +4 (1d4+1 plus energy drain)
 Special Attacks create spawn, energy drain 
 (1 level, DC 14)
 STATISTICS
@@ -24361,8 +23619,8 @@ Fort +3, Ref +12, Will +9
 Defensive Abilities natural 
 invisibility; Immune magic
 Offense
-Speed fly 50 ft. (perfect)
-Melee shock +16 touch (2d8 
+  Speed fly 50 ft. (perfect)
+  Melee shock +16 touch (2d8 
 electricity)
 STATISTICS
 Str 1, Dex 29, Con 10, Int 15, 
@@ -24472,8 +23730,8 @@ Defense
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
-Speed 50 ft.
-Melee bite +2 (1d6+1 plus trip)
+  Speed 50 ft.
+  Melee bite +2 (1d6+1 plus trip)
 STATISTICS
 Str 13, Dex 15, Con 15, Int 2, Wis 12, Cha 6
 Base Atk +1; CMB +2; CMD 14 (18 vs. trip)
@@ -24520,8 +23778,8 @@ Defense
 hp 37 (5d8+15)
 Fort +7, Ref +6, Will +2
 Offense
-Speed 50 ft.
-Melee bite +7 (1d8+6 plus trip)
+  Speed 50 ft.
+  Melee bite +7 (1d8+6 plus trip)
 Space 10 ft.; Reach 5 ft.
 STATISTICS
 Str 19, Dex 15, Con 17, Int 2, Wis 12, Cha 10
@@ -24579,8 +23837,8 @@ Defense
 hp 22 (3d8+9)
 Fort +5, Ref +5, Will +2
 Offense
-Speed 30 ft., burrow 10 ft., climb 10 ft.
-Melee 2 claws +4 (1d6+2), bite +4 (1d4+2) 
+  Speed 30 ft., burrow 10 ft., climb 10 ft.
+  Melee 2 claws +4 (1d6+2), bite +4 (1d4+2) 
 Special Attacks rage
 STATISTICS
 Str 15, Dex 15, Con 15, Int 2, Wis 12, Cha 10
@@ -24627,8 +23885,8 @@ Defense
 hp 42 (5d8+20)
 Fort +7, Ref +7, Will +2
 Offense
-Speed 30 ft., climb 10 ft.
-Melee 2 claws +6 (1d8+4), bite +6 (1d6+4)
+  Speed 30 ft., climb 10 ft.
+  Melee 2 claws +6 (1d8+4), bite +6 (1d6+4)
 Space 10 ft.; Reach 5 ft.
 Special Attacks rage
 STATISTICS
@@ -24691,8 +23949,8 @@ Defense
 hp 26 (4d10+4)
 Fort +5, Ref +6, Will +3
 Offense
-Speed 30 ft.
-Melee bite +7 (1d6+4 plus trip) 
+  Speed 30 ft.
+  Melee bite +7 (1d6+4 plus trip) 
 STATISTICS
 Str 17, Dex 15, Con 13, Int 6, Wis 14, Cha 10
 Base Atk +4; CMB +7; CMD 19 (23 vs. trip)
@@ -24741,8 +23999,8 @@ Fort +9, Ref +6, Will +3
 Immune cold
 Weaknesses vulnerability to fire
 Offense
-Speed 30 ft.
-Melee bite +10 (1d8+7 plus 1d6 cold and trip) 
+  Speed 30 ft.
+  Melee bite +10 (1d8+7 plus 1d6 cold and trip) 
 Space 10 ft.; Reach 5 ft.
 Special Attacks breath weapon (every 1d4 rounds, 15-ft. cone, 
 6d6 cold damage, Reflex half DC 17)
@@ -24801,8 +24059,8 @@ Defensive Abilities channel resistance +2, incorporeal;
 Immune undead traits
 Weaknesses sunlight powerlessness
 Offense
-Speed fly 60 ft. (good)
-Melee incorporeal touch +6 (1d6 negative energy plus 1d6 Con drain) 
+  Speed fly 60 ft. (good)
+  Melee incorporeal touch +6 (1d6 negative energy plus 1d6 Con drain) 
 Special Attack create spawn
 STATISTICS
 Str —, Dex 16, Con —, Int 14, Wis 14, Cha 21
@@ -24878,8 +24136,8 @@ hp 73 (7d12+28)
 Fort +9, Ref +6, Will +8
 Immune sleep, paralysis
 Offense
-Speed 20 ft., fly 60 ft. (poor)
-Melee sting +10 melee (1d6+4 plus poison), bite +10 melee 
+  Speed 20 ft., fly 60 ft. (poor)
+  Melee sting +10 melee (1d6+4 plus poison), bite +10 melee 
 (2d6+4 plus grab), 2 wings +5 (1d6+2)
 Space 10 ft.; Reach 5 ft.
 Special Attack rake (2 talons +10, 1d6+4)
@@ -24951,8 +24209,8 @@ hp 67 (9d10+18)
 Fort +8, Ref +10, Will +6
 SR 17
 Offense
-Speed 40 ft.
-Melee short swords +13/+13/+8 (1d6+3/19–20), claw +13 (1d4+3 
+  Speed 40 ft.
+  Melee short swords +13/+13/+8 (1d6+3/19–20), claw +13 (1d4+3 
 plus grab), bite +7 (1d3+1 plus paralysis), or 4 claws +13 
 (1d4+3 plus grab), bite +12 (1d3+3 plus paralysis)
 Ranged 2 longbows +13 (1d8/×3)
@@ -25032,8 +24290,8 @@ Fort +8, Ref +2, Will +5
 DR 5/bludgeoning; Immune cold, fire, flanking; Resist 
 electricity 10
 Offense
-Speed 20 ft., burrow 20 ft.; earth glide
-Melee bite +10 (4d6+3), 3 claws +10 (1d4+3)
+  Speed 20 ft., burrow 20 ft.; earth glide
+  Melee bite +10 (4d6+3), 3 claws +10 (1d4+3)
 STATISTICS
 Str 17, Dex 10, Con 17, Int 10, Wis 11, Cha 10
 Base Atk +7; CMB +10; CMD 20 (22 vs. trip)
@@ -25141,8 +24399,8 @@ hp 22 (3d8+9)
 Fort +6, Ref +3, Will +1
 Defensive Abilities plant traits
 Offense
-Speed 5 ft.
-Melee tendril +5 (1d4+4) 
+  Speed 5 ft.
+  Melee tendril +5 (1d4+4) 
 Space 5 ft., Reach 10 ft.
 Special Attacks create yellow musk zombie, pollen spray
 STATISTICS
@@ -25217,8 +24475,8 @@ hp 30 (4d10+8)
 Fort +3, Ref +6, Will +6
 DR 5/silver
 Offense
-Speed 40 ft., fly 60 ft. (good)
-Melee bite +7 (2d6+4 plus sinister bite and trip)
+  Speed 40 ft., fly 60 ft. (good)
+  Melee bite +7 (2d6+4 plus sinister bite and trip)
 Special Attacks bay
 STATISTICS
 Str 17, Dex 15, Con 15, Int 6, Wis 14, Cha 10
@@ -25329,8 +24587,8 @@ Fort +6, Ref +6, Will +6
 Immune cold
 Weaknesses vulnerability to fire
 Offense
-Speed 40 ft., climb 30 ft.
-Melee 2 claws +9 (1d6+4 plus 1d6 cold)
+  Speed 40 ft., climb 30 ft.
+  Melee 2 claws +9 (1d6+4 plus 1d6 cold)
 Space 10 ft.; Reach 10 ft.
 Special Attacks frightful gaze, rend (2 claws, 1d6+6 plus 
 1d6 cold)
@@ -25421,8 +24679,8 @@ hp 12 (2d8+3)
 Fort +0, Ref +0, Will +3
 DR 5/slashing; Immune undead traits
 Offense
-Spd 30 ft.
-Melee slam +4 (1d6+4)
+  Spd 30 ft.
+  Melee slam +4 (1d6+4)
 STATISTICS
 Str 17, Dex 10, Con —, Int —, Wis 10, Cha 10
 Base Atk +1; CMB +4; CMD 14
