@@ -10,6 +10,13 @@ def flatten(*n):
 def attrAsDict(_class):
     return [{i: _class._getattr(i) for i in dir(_class) if not i.startswith("__")}]
 
+
+class PartyMember:
+    def __init__(self, **kwargs):
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+
 class ABC:
     def __init__(self, name, **kwargs):
         self.name = name
@@ -25,10 +32,20 @@ class ABC:
     def _getattr(self, attribute):
         return self.__getattribute__(attribute)
 
-class PartyMember:
-    def __init__(self, **kwargs):
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
+
+class Item(ABC):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Item.items.append(self)
+
+
+class Weapon(Item):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Weapon.items.append(self)
+
 
 class Skill(ABC):
     items = []
@@ -47,6 +64,7 @@ class Style(ABC):
         self.rating_max = 8
         Style.items.append(self)
 
+
 class Focus(ABC):
     items = []
     def __init__(self, name, **kwargs):
@@ -55,11 +73,13 @@ class Focus(ABC):
         self.rating_max = 5
         Focus.items.append(self)
 
+
 class Archetype(ABC):
     items = []
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Archetype.items.append(self)
+
 
 """
     SKILLS
@@ -90,7 +110,7 @@ ARCHERY = Focus('Archery')
 BOATS = Focus('Boats')
 BRAWLING = Focus('Brawling')
 CARRIAGES = Focus('Carriages')
-CONCRETE = Focus('Concrete')
+CONCERNTRATE = Focus('Concerntrate')
 COUNSEL = Focus('Counsel')
 DECEIVE = Focus('Deceive')
 ENGINEERING = Focus('Engineering')
@@ -127,6 +147,12 @@ def gen_rating(rating_min: int, rating_max: int) -> int:
     return random.randint(rating_min, rating_max)
 
 """
+    ITEMS
+"""
+# WEAPONS
+SWORD = Weapon('Sword', damage=3, hq_buff=1, cost=50, qualities=['Melee'])
+
+"""
     ARCHETYPES
 """
 ASSASSIN = Archetype('Assassin', skills={FIGHT: 2, TALK: 2, 'Choose 1': [MOVE, STUDY]}, styles={'Choose 2': [CAREFULLY, CLEVERLY, QUIETLY]}, focuses=[LOCKS, STEALTH, STREETWISE, RESOLVE, POISONS], talents=['Bespoke Bloodletting', 'The Great Equalizer', 'Inhumane Determination', 'Outisder\'s Grin'], belongings=[], contacts=[])
@@ -139,6 +165,6 @@ GUIDE = Archetype('Guide', skills={MOVE: 2, SURVIVE: 2, 'Choose 1': [TALK, TINKE
 HUNTER = Archetype('Hunter', skills={SURVIVE: 2, TINKER: 2, 'Choose 1': [FIGHT, STUDY]}, styles={'Choose 2': [CAREFULLY, CLEVERLY, QUIETLY]}, focuses=[ARCHERY, EXPLOSIVES, FIREARMS, STEALTH, STREETWISE, TRACKING, WILDERNESS], talents=['Ambush Expertise', 'Familiar Tactics', 'Predator\'s Patience', 'Trapper'], belongings=[], contacts=[])
 INVENTOR = Archetype('Inventor', skills={STUDY: 2, TINKER: 2, 'Choose 1': [SURVIVE, TALK]}, styles={'Choose 2': [BOLDLY, CAREFULLY, CLEVERLY]}, focuses=[CARRIAGES, ENGINEERING, EXPLOSIVES, FIREARMS, LOCKS, MEDICINE, NATURAL_PHILOSOPHY, SURGERY], talents=['Controlled Detonation', 'Personal Notes', 'Pushing the Boundaries of Progress', 'Salvage for Parts'], belongings=[], contacts=[])
 SCHOLAR = Archetype('Scholar', skills={TALK: 2, STUDY: 2, 'Choose 1': [SURVIVE, TINKER]}, styles={'Choose 2': [BOLDLY, CLEVERLY, FORCEFULLY]}, focuses=[COUNSEL, ETIQUETTE, HISTORY, MEDICINE, NATURAL_PHILOSOPHY, SOCIETY, THEOLOGY, VOID_LORE], talents=['Deep Expertise', 'Did the Research', 'Erudite Exposition', 'Librarian'], belongings=[], contacts=[])
-SCOUT = Archetype('Scout', skills={MOVE: 2, STUDY: 2}, styles={}, focuses=[], talents=[], belongings=[], contacts=[])
-SHARPSHOOTER = Archetype('Sharpshooter', skills={}, styles={}, focuses=[], talents=[], belongings=[], contacts=[])
-MISCREANT = Archetype('Miscreant', skills={}, styles={}, focuses=[], talents=[], belongings=[], contacts=[])
+SCOUT = Archetype('Scout', skills={MOVE: 2, STUDY: 2, 'Choose 1': [FIGHT, TALK]}, styles={'Choose 2': [CAREFULLY, CLEVERLY, QUIETLY]}, focuses=[CONCERNTRATE, ETIQUETTE, FREERUNNING, INNUENDO, RESOLVE, SOCIETY, STEALTH, STREETWISE, TRACKING], talents=['Constantly Alert', 'Fighting Fit', 'Hit and Run', 'Like a Shadow'], belongings=[], contacts=[])
+SHARPSHOOTER = Archetype('Sharpshooter', skills={FIGHT: 2, TINKER: 2, 'Choose 1': [MOVE, STUDY]}, styles={'Choose 2': [BOLDLY, CAREFULLY, SWIFTLY]}, focuses=[ARCHERY, ENGINEERING, EXPLOSIVES, FIREARMS, RESOLVE, STEALTH], talents=['Crack Shot', 'Exploit Weakness', 'Prized Weapon', 'Saboteur'], belongings=[], contacts=[])
+MISCREANT = Archetype('Miscreant', skills={FIGHT: 2, SURVIVE: 2, 'Choose 1': [MOVE, TALK]}, styles={'Choose 2': [BOLDLY, CAREFULLY, FORCEFULLY]}, focuses=[BRAWLING, INTIMIDATE, RESILIANCE, RESOLVE, SWORDS], talents=['Dautless', 'Fight Dirty', 'Put Your Back Into It!', 'Shoulder Charge'], belongings=[], contacts=[])
