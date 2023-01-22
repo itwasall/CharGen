@@ -93,7 +93,7 @@ STAT_BLOCK = AttributeBlock(STRENGTH, AGILITY, INTELLECT, WILL)
     ANCESTORIES
 """
 # ssb = Starting_Stat_Block
-HUMAN = Ancestory("Human", height=[3, 7], weight=[50, 500], age=[18, 70], ssb=[10, 10, 10, 10], stat_increase={'Any': 1}, perception={'Intellect': '='}, defence={'Agility': '='}, health={'Strength': '='}, healing_rate={'Health': ['1/4', 'down']}, size=[0.5, 1], speed=10, power=0, damage=0, insanity=0, corruption=0, language=['Common', {'Choose': '1'}])
+HUMAN = Ancestory("Human", height=[3, 7], weight=[50, 500], age=[18, 70], ssb=[10, 10, 10, 10], stat_increase={'Any': 1}, perception={'Intellect': '='}, defence={'Agility': '='}, health={'Strength': '='}, healing_rate={'Health': ['1/4', 'down']}, size=[0.5, 1], speed=10, power=0, damage=0, insanity=0, corruption=0, language=['Common', {'Choose': '1'}]6)
 CHANGELING = Ancestory("Changling", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
 CLOCKWORK = Ancestory("Clockwork", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
 DWARF = Ancestory("Dwarf", ssb=[], stat_increase={}, perception=, defence=, health=, healing_rate=, size=, speed=, power=, damage=, insanity=, corruption=, language=[])
