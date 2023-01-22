@@ -11,11 +11,6 @@ def attrAsDict(_class):
     return [{i: _class._getattr(i) for i in dir(_class) if not i.startswith("__")}]
 
 
-class PartyMember:
-    def __init__(self, **kwargs):
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-
 
 class ABC:
     def __init__(self, name, **kwargs):
@@ -45,6 +40,13 @@ class Weapon(Item):
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Weapon.items.append(self)
+
+
+class Armor(Item):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Armor.items.append(self)
 
 
 class Skill(ABC):
@@ -150,7 +152,35 @@ def gen_rating(rating_min: int, rating_max: int) -> int:
     ITEMS
 """
 # WEAPONS
-SWORD = Weapon('Sword', damage=3, hq_buff=1, cost=50, qualities=['Melee'])
+SWORD = Weapon('Sword', damage=3, cost=50, qualities=['Melee'], hq_buff=1)
+CUDGEL = Weapon('Cudgel', damage=2, cost=10, qualities=['Awkward', 'Melee'])
+KNIFE = Weapon('Knife', damage=2, cost=20, qualities=['Melee'])
+KNUCKLEDUSTERS = Weapon('Knuckledusters', damage=2, cost=10, qualities=['Melee'])
+PISTOL = Weapon('Pistol', damage=4, cost=150, qualities=['Messy', 'Ranged (Nearby)'], ammo_cost=3)
+RIFLE = Weapon('Rifle', damage=5, cost=300, qualities=['Messy', 'Ranged (Distant)'], ammo_cost=5)
+CROSSBOW = Weapon('Crossbow', damage=3, cost=100, qualities=['Ranged (Nearby)'], ammo_types={'Standard': {'Cost': 4}, 'Sleep': {'Cost': 20, 'Truth': 'Fast Asleep'}, 'Incendiary': {'Cost': 30, 'Quality': 'Burn'}})
+GRENADE = Weapon('Grenade', damage=4, cost=70, qualities=['Awkward', 'Blast', 'Ranged (Nearby)'])
+CHOKEDUST_GRENADE = Weapon('Chokedust_Grenade', damage=0, cost=70, qualities=['Awkward', 'Blast', 'Ranged (Nearby)'], truths=['Choking and Disoriented'])
+SPRINGRAZOR = Weapon('Springrazor', damage=8, cost=50, qualities=['Blast', 'Mine', 'Messy'])
+ARC_MINE = Weapon('Arc_Mine', damage=8, cost=70, qualities=['Blast', 'Mine'])
+# ARMOR
+TREATED_CLOTH = Armor('Treated_Cloth', protection=1, cost=60, stackable=False)
+ARMORED_MANTLE = Armor('Armored_Mantle', protection=2, cost=120, stackable=False)
+HELMET = Armor('Helmet', protection=1, cost=20, stackable=True)
+# OTHER ITEMS
+BLUEPRINTS_AND_SCHEMATICS = Item('Blueprints_and_Schematics', cost=100)
+BUGLARS_TOOLS = Item('Buglars_Tools', cost=50)
+CHEATERS_TOOLS = Item('Cheaters_Tools', cost=30)
+CLIMBING_GEAR = Item('Climbing_Gear', cost=50, hq_cost=100)
+CONCEALED_CLOTHING = Item('Concealed_Clothing', cost=50)
+DISGUISE_KIT = Item('Disguise_Kit', cost=50, hq_cost=100)
+FINE_CLOTHING_AND_ACCESSORIES = Item('Fine_Clothing_and_Accessories', cost=150, hq_cost=1000)
+FORGED_PAPERS = Item('Forged_Papers', cost=50, hq_cost=100)
+PIEROS_SPIRITUAL_REMEDY = Item('Pieros_Spiritual_Remedy', cost=100, lq_cost=25)
+SABOTEURS_TOOLS = Item('Saboteurs_Tools', cost=100, hq_cost=200)
+SPYGLASS = Item('Spyglass', cost=100, hq_cost=200)
+TINKERING_TOOLS = Item('Tinkering_Tools', cost=200, hq_cost=400)
+
 
 """
     ARCHETYPES
@@ -168,3 +198,70 @@ SCHOLAR = Archetype('Scholar', skills={TALK: 2, STUDY: 2, 'Choose 1': [SURVIVE, 
 SCOUT = Archetype('Scout', skills={MOVE: 2, STUDY: 2, 'Choose 1': [FIGHT, TALK]}, styles={'Choose 2': [CAREFULLY, CLEVERLY, QUIETLY]}, focuses=[CONCERNTRATE, ETIQUETTE, FREERUNNING, INNUENDO, RESOLVE, SOCIETY, STEALTH, STREETWISE, TRACKING], talents=['Constantly Alert', 'Fighting Fit', 'Hit and Run', 'Like a Shadow'], belongings=[], contacts=[])
 SHARPSHOOTER = Archetype('Sharpshooter', skills={FIGHT: 2, TINKER: 2, 'Choose 1': [MOVE, STUDY]}, styles={'Choose 2': [BOLDLY, CAREFULLY, SWIFTLY]}, focuses=[ARCHERY, ENGINEERING, EXPLOSIVES, FIREARMS, RESOLVE, STEALTH], talents=['Crack Shot', 'Exploit Weakness', 'Prized Weapon', 'Saboteur'], belongings=[], contacts=[])
 MISCREANT = Archetype('Miscreant', skills={FIGHT: 2, SURVIVE: 2, 'Choose 1': [MOVE, TALK]}, styles={'Choose 2': [BOLDLY, CAREFULLY, FORCEFULLY]}, focuses=[BRAWLING, INTIMIDATE, RESILIANCE, RESOLVE, SWORDS], talents=['Dautless', 'Fight Dirty', 'Put Your Back Into It!', 'Shoulder Charge'], belongings=[], contacts=[])
+
+def make_choice(key, value):
+    def make_multi_choice(amt):
+        choice = None
+        options = []
+        while choice == None or len(options) < amt: 
+            choice = random.choice(value)
+            if choice in options:
+                options.pop(options.index(choice))
+            options.append(choice)
+        return options
+    if not isinstance(value, list):
+        raise TypeError('value argument for function "make_choice" is not type list') 
+    match key:
+        case 'Choose 1':
+            return random.choice(value)
+        case 'Choose 2':
+            return make_multi_choice(2)
+
+
+class PartyMember:
+    def __init__(self, **kwargs):
+        self.name = None
+        # Skills
+        self.Fight = None
+        self.Move = None
+        self.Study = None
+        self.Survive = None
+        self.Talk = None
+        self.Tinker = None
+        # Styles
+        self.Boldy = None
+        self.Carefully = None
+        self.Cleverly = None
+        self.Forcefully = None
+        self.Swiftly = None
+        self.Quietly = None
+        # Focuses
+        self.focuses = []
+        # Belongings 
+        self.belongings = []
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+
+    def key_match_skills(self, skills: dict):
+        for key in skills.keys():
+            match key:
+                case 'Fight':
+                    self.Fight += skills[FIGHT]
+                case 'Move':
+                    self.Move += skills[MOVE]
+                case 'Study':
+                    self.Study += skills[STUDY]
+                case 'Survive':
+                    self.Survive += skills[SURVIVE]
+                case 'Talk':
+                    self.Talk += skills[TALK]
+                case 'Tinker':
+                    self.Tinker += skills[TINKER]
+                case 'Choose 1':
+                    choices = make_choice(key, skills[key])
+                    self.key_match_skills({choice: 1 for choice in choices})
+
+
+
+    def set_skills(self, skills: dict) -> None:
+        pass
