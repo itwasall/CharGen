@@ -37,273 +37,93 @@ Aasimar
       solitary, pair, or team (3–6)
     Treasure 
       NPC gear (scale mail, heavy mace, light crossbow with 10 bolts, other treasure)
-  Aasimars are humans with a significant amount of celestial or other good outsider blood in their ancestry. Aasimars are not always good, but it is a natural tendency for them, and they gravitate to good faiths or organizations associated with celestials. Aasimar heritage can hide for generations, only to appear suddenly in the child of two apparently human parents. Most societies interpret aasimar births as good omens. Aasimars look mostly human except for some minor physical trait that reveals their unusual heritage. Typical aasimar features are hair that shines like metal, unusual eye or skin color, or even glowing golden halos. 
 
 Aboleth
-ABOLETh CR 7
-XP 3,200
-LE Huge aberration (aquatic)
-Init +5; Senses darkvision 60 ft.; Perception +14
-Aura mucus cloud (5 feet)
-Defense
-AC 20, touch 9, flat-footed 19; (+1 Dex, +11 natural, –2 size)
-hp 84 (8d8+48)
-Fort +8, Ref +5, Will +11
-Offense
-Speed 10 ft., swim 60 ft.
-Melee 4 tentacles +10 (1d6+5 plus slime)
-Space 15 ft.; Reach 15 ft.
-Spell-Like Abilities (CL 16th)
-At will—hypnotic pattern (DC 15), illusory wall (DC 17), mirage 
-arcana (DC 18), persistent image (DC 18), programmed 
-image (DC 19), project image (DC 20), veil (DC 19)
-3/day—dominate monster (DC 22)
-STATISTICS
-Str 20, Dex 12, Con 22, Int 15, Wis 17, Cha 17
-Base Atk +6; CMB +13; CMD 24 (can’t be tripped)
-Feats Improved Initiative, Iron Will, Lightning Reflexes, 
-Weapon Focus (tentacle)
-Skills Bluff +11, Intimidate +14, Knowledge (any one) +13, 
-Perception +14, Spellcraft +13, Swim +24
-Languages Aboleth, Aklo, Aquan, Undercommon
-ECOLOgy
-Environment any aquatic
-Organization solitary, pair, brood (3–6), or shoal (7–19)
-Treasure double
-SPECIAL ABILITIES
-Mucus Cloud (Ex) While underwater, an aboleth 
-exudes a cloud of transparent slime. All 
-creatures adjacent to an aboleth must 
-succeed on a DC 20 Fortitude save each 
-round or lose the ability to breathe air 
-(but gain the ability to breathe water) for 3 
-hours. Renewed contact with an aboleth’s mucus cloud and 
-failing another save extends the effect for another 3 hours. 
-The save DC is Constitution-based.
-Slime (Ex) A creature hit by an aboleth’s tentacle 
-must succeed on a DC 20 Fortitude save or 
-his skin and flesh transform into a clear, slimy 
-membrane over the course of 1d4 rounds. The creature’s new 
-“flesh” is soft and tender, reducing its Constitution score 
-by 4 as long as it persists. If the creature’s flesh isn’t kept 
-moist, it dries quickly and the victim takes 1d12 points of 
-damage every 10 minutes. Remove disease and similar effects 
-
-can restore an afflicted creature to normal, but immunity to 
-disease offers no protection from this attack. The save DC is 
-Constitution-based.
-As befits their hideous primeval appearance, the 
-hermaphroditic aboleths are among the world’s oldest 
-forms of life. Ancient even when the gods first turned 
-their eyes to the Material Plane, the aboleths have always 
-existed apart from other mortal life, alien and cold and 
-endlessly plotting. They once ruled the world with vast 
-empires, and today view most other forms of life as either 
-food or slaves—and sometimes both. They disdain the 
-gods and see themselves as the true masters of creation. 
-An aboleth is 25 feet long and weighs 6,500 pounds.
-In the darkest reaches of the sea, aboleths still dwell in 
-grotesque cities built in nauseating and cyclopean styles. 
-There they are served by countless slaves culled from 
-every nation, air-breathing and aquatic alike, although 
-the air-breathing slaves are doubly bound by magic and 
-the need to constantly replenish their water-breathing 
-ability via the excretions of their aboleth masters. Lone 
-aboleths are often advance scouts for these hidden cities, 
-seeking out new slaves.
-
-Four long tentacles writhe from this three-eyed fish-like creature’s 
-f lanks, and its green body glistens with thick, clear slime.
-
-Angel 
-Angels are a race of celestials, beings who live on the good-
-aligned outer planes.
-Angels can be of any good alignment. Lawful angels hail 
-from Heaven, neutral angels from Nirvana, and chaotic 
-angels from Elysium, though the majority serve one good 
-deity or another and call their patron’s realm their home. 
-Most mortals assume that angels never lie, cheat, or steal, 
-are impeccably honorable in all their dealings, and are the 
-most trustworthy and diplomatic of all the celestials; while 
-this is generally true, there are exceptions, especially as 
-some angels serve good-aligned trickster gods and other 
-chaotic entities.
-The original and most powerful angels predate the 
-mortal races. They were among the first creations of the 
-gods of good, and those that survive to this day are among 
-the more powerful non-divine beings in the multiverse. 
-While new angels are still periodically created by the gods, 
-most modern angels were once good mortals, their souls 
-transforming into something greater upon reaching their 
-destination in the planes. Often an angel’s true form is 
-reminiscent of its mortal self, only taller, brighter, and 
-more powerful. The relationship between good mortal 
-soul and angel is common knowledge, and many mortal 
-religions assume that all members of the faith in good 
-standing become angels of some type in the afterlife. 
-Others confuse the issue by conf lating famous mortals 
-(such as saints and martyrs) with preexisting angels that 
-have similar names, or suggesting that angels take human 
-form to perform great deeds as mortals, returning to the 
-heavens when their duties are over.
-All angels are blessed with extraordinary beauty, though 
-their actual appearances vary widely. Their natural 
-shapechanging ability means they may appear to mortals 
-as male or female, depending on their personal preference 
-or the will of their deity. As they are spiritual creatures 
-given a physical form rather than creatures of f lesh born 
-of other creatures, their gender is mutable; some angels 
-always use a male form, some strictly a female one, and 
-others use either or both, or prefer an androgynous or 
-sexless shape.
-Technically, the word “angel” refers to several types of 
-humanoid angels—solars, planetars, and devas (of which 
-the astral deva is the most common; other types exist as 
-well)—though many mortals use the term loosely and 
-apply it to any celestial, whether an angel, one of the 
-guardian archons, fey-like azatas, beast-like agathions, or 
-any other creature of the good planes. The angels do not 
-take affront at this, as they have more important things to 
-deal with than mortal nomenclature.
-Angels speak Celestial, Draconic, and Infernal, though 
-they can communicate with almost any creature because 
-
-of their truespeech ability. All angels possess a number of 
-similar traits, as detailed on page 310 of this book. Most 
-angels also have additional powers beyond these traits, 
-depending on the role their deity assigns them. For 
-example, an angelic guardian of volcanoes might have the 
-fire subtype, or the protector of a sunken city might be 
-aquatic, amphibious, and able to use her wings to swim.
-Angelic Choirs
-Whereas there are evil and cruel counterparts for all the 
-other good races, the legions of fiends do not possess a 
-clear analogue for the race of angels. Many scholars have 
-debated the reasons for this strange lack of symmetry 
-among the good and evil outsiders, and while most have 
-come to believe that this is simply an example of good’s 
-inherent willingness to rise above specific alignments for 
-everyone’s benefit, the exact reason may never be known.
-Since angels can be of any good alignment, they 
-represent the needs and desires of all three major good 
-outsider races. While some angels devote their energies 
-to all three, most have a particular favorite among the 
-races in keeping with that angel’s particular alignment. 
-While their true forms never vary between alignments, 
-angels will often use their change shape ability to appear 
-more like an archon, agathion, or azata as the situation 
-and the angel’s personality demands.
-Angels are further subdivided into their own specific 
-hierarchy known as the Triad of Choirs. The bulk of 
-the angel race consists of the devas—these are the most 
-common angels, and numerous different specialties 
-exist, with the astral deva presented here merely the best 
-known. Devas of the third choir have two wings. The 
-second choir consists solely of the four-winged planetars, 
-while the rulers of the angelic race are the six-winged 
-solars. These are the mightiest of all angels, and the most 
-powerful of them can directly oppose even the will of a 
-demigod if the situation calls for it.
-
-Fallen Angels
-Many religions include stories of angels rebelling against a 
-creator or becoming corrupt and evil. Sadly, this is indeed 
-possible, though thankfully rare, and only the proudest or 
-weakest-willed angels succumb to this fate. Fallen angels are 
-exiles of the good realms, hunted by their former brethren 
-and easy targets for fiends as well. The fallen lose some of the 
-grace and light of their untainted kin, though many are said 
-to still be tragically beautiful. Rarer still are those fallen angels 
-strong and clever enough to join the legions of Hell, and who 
-are often transformed into some type of devil, or those who 
-become demons of the Abyss and carve out a niche in that 
-horrible realm or come to serve a greater demon. 
-
-AAbboolleth–Angel
-
-eth–Angel
+  ABOLETh CR 7
+  XP 3,200
+  LE Huge aberration (aquatic)
+  Init +5; Senses darkvision 60 ft.; Perception +14
+  Aura mucus cloud (5 feet)
+  Defense
+    AC 20, touch 9, flat-footed 19; (+1 Dex, +11 natural, –2 size)
+    hp 84 (8d8+48)
+    Fort +8, Ref +5, Will +11
+  Offense
+    Speed 10 ft., swim 60 ft.
+    Melee 4 tentacles +10 (1d6+5 plus slime)
+    Space 15 ft.; Reach 15 ft.
+    Spell-Like Abilities (CL 16th)
+      At will—hypnotic pattern (DC 15), illusory wall (DC 17), mirage arcana (DC 18), persistent image (DC 18), programmed image (DC 19), project image (DC 20), veil (DC 19) 3/day—dominate monster (DC 22)
+  STATISTICS
+    Str 20, Dex 12, Con 22, Int 15, Wis 17, Cha 17
+    Base Atk +6; CMB +13; CMD 24 (can’t be tripped)
+  Feats 
+    Improved Initiative, Iron Will, Lightning Reflexes, 
+    Weapon Focus (tentacle)
+  Skills 
+    Bluff +11, Intimidate +14, Knowledge (any one) +13, Perception +14, Spellcraft +13, Swim +24
+  Languages 
+    Aboleth, Aklo, Aquan, Undercommon
+  ECOLOgy
+    Environment 
+      any aquatic
+    Organization 
+      solitary, pair, brood (3–6), or shoal (7–19)
+    Treasure 
+      double
+  SPECIAL ABILITIES
+    Mucus Cloud (Ex) 
+      While underwater, an aboleth exudes a cloud of transparent slime. All creatures adjacent to an aboleth must succeed on a DC 20 Fortitude save each round or lose the ability to breathe air (but gain the ability to breathe water) for 3 hours. Renewed contact with an aboleth’s mucus cloud and failing another save extends the effect for another 3 hours. The save DC is Constitution-based.
+    Slime (Ex) 
+      A creature hit by an aboleth’s tentacle must succeed on a DC 20 Fortitude save or his skin and flesh transform into a clear, slimy membrane over the course of 1d4 rounds. The creature’s new “flesh” is soft and tender, reducing its Constitution score by 4 as long as it persists. If the creature’s flesh isn’t kept moist, it dries quickly and the victim takes 1d12 points of damage every 10 minutes. Remove disease and similar effects can restore an afflicted creature to normal, but immunity to disease offers no protection from this attack. The save DC is Constitution-based.
 
 Angel, Astral Deva
-ASTRAL DEVA CR 14
-XP 38,400
-NG Medium outsider (angel, extraplanar, good)
-Init +8; Senses darkvision 60 ft., low-light vision; Perception +26
-Aura protective aura
-Defense
-AC 29, touch 14, flat-footed 25 (+4 Dex, +15 natural; +4 
-deflection vs. evil)
-hp 172 (15d10+90)
-Fort +16, Ref +13, Will +11; +4 vs. poison, +4 resistance vs. evil
-Defensive Abilities uncanny dodge; DR 10/evil; Immune acid, 
-cold, petrification; Resist electricity 10, fire 10; SR 25
-Offense
-Speed 50 ft., fly 100 ft. (good)
-Melee +2 disrupting warhammer +26/+21/+16 (1d8+14/×3 plus 
-stun) or slam +23 (1d8+12) 
-Spell-Like Abilities (CL 13th)
-At Will—aid, continual flame, detect evil, discern lies (DC 
-20), dispel evil (DC 21), dispel magic, holy aura (DC 24), 
-holy smite (DC 20), holy word (DC 23), invisibility (self 
-only), plane shift (DC 23), remove curse, remove disease, 
-remove fear
-7/day—cure light wounds, see invisibility
-1/day—blade barrier (DC 22), heal
-STATISTICS
-Str 26, Dex 19, Con 21, Int 18, Wis 18, Cha 23
-Base Atk +15; CMB +23; CMD 37
-Feats Alertness, Cleave, Great Fortitude, Improved Initiative, Iron 
-Will, Power Attack, Toughness, Weapon Focus (warhammer)
-Skills Acrobatics +22, Craft (any one) +22, Diplomacy +24, 
-Escape Artist +9, Fly +26, Intimidate +24, Knowledge 
-(planes) +22, Knowledge (religion) +22, Perception +26, 
-Sense Motive +26, Stealth +22
-Languages Celestial, Draconic, Infernal; truespeech
-SQ change shape (alter self )
-ECOLOgy
-Environment any good-aligned plane
-Organization solitary, pair, or squad (3–6)
-Treasure double (+2 disrupting warhammer)
-SPECIAL ABILITIES
-Stun (Su) If an astral deva strikes an opponent twice in one 
-round with its warhammer, that creature must succeed on 
-a DC 25 Fortitude save or be stunned for 1d6 rounds. The 
-save DC is Strength-based.
-Uncanny Dodge (Ex) This ability functions identically to the 
-rogue ability. If a deva gains uncanny dodge from a class 
-level, he instead gains improved uncanny dodge.
+  ASTRAL DEVA CR 14
+  XP 38,400
+  NG Medium outsider (angel, extraplanar, good)
+  Init +8; Senses darkvision 60 ft., low-light vision; Perception +26
+  Aura protective aura
+  Defense
+    AC 29, touch 14, flat-footed 25 (+4 Dex, +15 natural; +4 deflection vs. evil) hp 172 (15d10+90)
+    Fort +16, Ref +13, Will +11; +4 vs. poison, +4 resistance vs. evil
+    Defensive Abilities 
+      uncanny dodge; DR 10/evil; Immune acid, cold, petrification; Resist electricity 10, fire 10; SR 25
+  Offense
+    Speed 50 ft., fly 100 ft. (good)
+    Melee +2 disrupting warhammer +26/+21/+16 (1d8+14/×3 plus stun) or slam +23 (1d8+12) 
+  Spell-Like Abilities (CL 13th)
+    At Will—aid, continual flame, detect evil, discern lies (DC 20), dispel evil (DC 21), dispel magic, holy aura (DC 24), holy smite (DC 20), holy word (DC 23), invisibility (self only), plane shift (DC 23), remove curse, remove disease, remove fear 7/day—cure light wounds, see invisibility 1/day—blade barrier (DC 22), heal
+  STATISTICS
+    Str 26, Dex 19, Con 21, Int 18, Wis 18, Cha 23
+    Base Atk +15; CMB +23; CMD 37
+  Feats 
+    Alertness, Cleave, Great Fortitude, Improved Initiative, Iron Will, Power Attack, Toughness, Weapon Focus (warhammer)
+  Skills 
+    Acrobatics +22, Craft (any one) +22, Diplomacy +24, Escape Artist +9, Fly +26, Intimidate +24, Knowledge (planes) +22, Knowledge (religion) +22, Perception +26, Sense Motive +26, Stealth +22
+  Languages 
+    Celestial, Draconic, Infernal; truespeech
+  SQ change shape (alter self )
+  ECOLOgy
+    Environment 
+     any good-aligned plane
+    Organization 
+      solitary, pair, or squad (3–6)
+    Treasure 
+      double (+2 disrupting warhammer)
+  SPECIAL ABILITIES
+    Stun (Su) 
+      If an astral deva strikes an opponent twice in one round with its warhammer, that creature must succeed on a DC 25 Fortitude save or be stunned for 1d6 rounds. The save DC is Strength-based.
+    Uncanny Dodge (Ex) 
+      This ability functions identically to the rogue ability. If a deva gains uncanny dodge from a class level, he instead gains improved uncanny dodge.
 
-Astral devas are messengers of the gods of good. They watch 
-over planar travelers and sponsor powerful mortals, pushing 
-them to take on good causes. A typical astral deva looks human 
-except for its wings, though some look like other humanoid 
-races and a rare few have even more unusual forms. An astral 
-deva is 7-1/2 feet tall and weighs 250 pounds.
-Astral devas are usually created by deities from the 
-souls of good mortals, though some souls spontaneously 
-transform into astral devas without the intervention of 
-a deity. Their skills and abilities make them excellent 
-scouts and elite agents for celestial armies. They often 
-carry long, f lowing scrolls upon which are writ messages 
-and judgments from the gods. An astral deva’s scrolls 
-frequently contain hints of prophecies and major events 
-yet to come, and as such the devas are fiercely protective 
-of the contents of these scrolls and let none, not even 
-other astral devas, peruse them.
-
-This tall, human-like creature has long, feathery wings and a 
-gentle inner radiance that makes it difficult to look directly at.
-     
-7
-    
 Angel, Planetar
 PLAnETAR CR 16
 XP 76,800
 NG Large outsider  (angel, extraplanar, good)
-Init +8; Senses darkvision 60 ft., detect evil, detect snares and 
-pits, low-light vision, true seeing; Perception +27
+Init +8; Senses darkvision 60 ft., detect evil, detect snares and pits, low-light vision, true seeing; Perception +27
 Aura protective aura
 Defense
-AC 32, touch 13, flat-footed 28 (+4 Dex, +19 natural, –1 size; +4 
+  AC 32, touch 13, flat-footed 28 (+4 Dex, +19 natural, –1 size; +4 
 deflection vs. evil)
 hp 229 (17d10+136); regeneration 10 (evil weapons and effects)
 Fort +19, Ref +11, Will +19; +4 vs. poison, +4 resistance vs. evil
@@ -379,7 +199,7 @@ Init +9; Senses darkvision 60 ft., low-light vision, detect evil,
 detect snares and pits, true seeing; Perception +33
 Aura protective aura
 Defense
-AC 44, touch 11, flat-footed 42 (+14 armor, +1 Dex, +1 dodge, 
+  AC 44, touch 11, flat-footed 42 (+14 armor, +1 Dex, +1 dodge, 
 +19 natural, –1 size; +4 deflection vs. evil)
 hp 363 (22d10+242); regeneration 15 (evil artifacts, effects, 
 and spells)
@@ -545,7 +365,7 @@ XP 800
 N Medium construct
 Init +0; Senses darkvision 60 ft., low-light vision; Perception –5
 Defense
-AC 14, touch 10, flat-footed 12 (+4 natural)
+  AC 14, touch 10, flat-footed 12 (+4 natural)
 hp 36 (3d10+20)
 Fort +1, Ref +1, Will –4
 Defensive Abilities hardness 5 (or more); Immune construct traits
@@ -622,7 +442,7 @@ N Large magical beast
 Init +0; Senses darkvision 60 ft., low-light vision, tremorsense 
 60 ft.; Perception +8
 Defense
-AC 16, touch 9, flat-footed 16 (+7 natural, –1 size)
+  AC 16, touch 9, flat-footed 16 (+7 natural, –1 size)
 hp 28 (3d10+12)
 Fort +6, Ref +3, Will +2
 Offense
@@ -707,7 +527,7 @@ XP 1,600
 N Fine vermin (swarm)
 Init +2; Senses darkvision 60 ft., scent; Perception +4
 Defense
-AC 20, touch 20, flat-footed 18; (+8 size, +2 Dex)
+  AC 20, touch 20, flat-footed 18; (+8 size, +2 Dex)
 hp 49 (11d8)
 Fort +7, Ref +5, Will +3
 Defensive Abilities swarm traits; Immune weapon damage
@@ -762,7 +582,7 @@ XP 600
 N Medium vermin
 Init +0; Senses darkvision 60 ft., scent; Perception +5
 Defense
-AC 15, touch 10, flat-footed 15; (+5 natural)
+  AC 15, touch 10, flat-footed 15; (+5 natural)
 hp 18 (2d8+9)
 Fort +6, Ref +0, Will +1
 Immune mind-affecting effects
@@ -810,7 +630,7 @@ XP 600
 N Large animal
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 14, touch 11, flat-footed 12; (+2 Dex, +3 natural, –1 size)
+  AC 14, touch 11, flat-footed 12; (+2 Dex, +3 natural, –1 size)
 hp 19 (3d8+6)
 Fort +7, Ref +5, Will +2
 Offense
@@ -859,7 +679,7 @@ XP 800
 N Large animal
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 15, touch 11, flat-footed 13; (+2 Dex, +4 natural, –1 size)
+  AC 15, touch 11, flat-footed 13; (+2 Dex, +4 natural, –1 size)
 hp 30 (4d8+12)
 Fort +7, Ref +6, Will +4
 Offense
@@ -1025,7 +845,7 @@ Init +4; Senses darkvision 60 ft., detect evil, low-light vision,
 scent; Perception +10
 Aura aura of menace (DC 16), magic circle against evil
 Defense
-AC 19, touch 10, flat-footed 19 (+9 natural; +2 deflection vs. evil)
+  AC 19, touch 10, flat-footed 19 (+9 natural; +2 deflection vs. evil)
 hp 39 (6d10+6)
 Fort +6, Ref +5, Will +5; +4 vs. poison, +2 resistance vs. evil
 DR 10/evil; Immune electricity, petrification; SR 15
@@ -1106,7 +926,7 @@ Init +4; Senses darkvision 60 ft., low-light vision;
 Perception +4
 Aura aura of menace (DC 12)
 Defense
-AC 15, touch 11, flat-footed 15 (+4 natural, +1 size; +2 deflect vs. evil)
+  AC 15, touch 11, flat-footed 15 (+4 natural, +1 size; +2 deflect vs. evil)
 hp 13 (2d10+2)
 Fort +4, Ref +3, Will +0; +4 vs. poison, +2 resistance vs. evil
 DR 10/evil; Immune electricity, petrification
@@ -1211,7 +1031,7 @@ LG Medium outsider (archon, extraplanar, good, lawful)
 Init +7; Senses darkvision 60 ft., low-light vision; Perception +22
 Aura aura of menace (DC 22), magic circle against evil
 Defense
-AC 27, touch 13, flat-footed 24 (+3 Dex, +14 natural; +2 
+  AC 27, touch 13, flat-footed 24 (+3 Dex, +14 natural; +2 
 deflection vs. evil)
 hp 175 (14d10+98)
 Fort +16, Ref +9, Will +14; +4 vs. poison, +2 resistance vs. evil
@@ -1287,7 +1107,7 @@ XP 800
 N Large plant
 Init +0; Senses blindsight 30 ft., low-light vision; Perception +1
 Defense
-AC 15, touch 9, flat-footed 15 (+6 natural, –1 size)
+  AC 15, touch 9, flat-footed 15 (+6 natural, –1 size)
 hp 30 (4d8+12)
 Fort +7, Ref +1, Will +2
 Immune electricity, plant traits; Resist cold 10 and fire 10
@@ -1469,7 +1289,7 @@ CG Medium outsider (azata, chaotic, extraplanar, good,
 shapechanger)
 Init +8; Senses darkvision 60 ft., low-light vision; Perception +15
 Defense
-AC 20, touch 14, flat-footed 16 (+4 Dex, +6 natural)
+  AC 20, touch 14, flat-footed 16 (+4 Dex, +6 natural)
 hp 66 (7d10+28)
 Fort +9, Ref +9, Will +6
 DR 10/cold iron or evil; Immune electricity, petrification; 
@@ -1546,7 +1366,7 @@ Init +5; Senses darkvision 60 ft., detect evil, low-light vision, see
 invisibility; Perception +20
 Aura holy aura
 Defense
-AC 27, touch 15, flat-footed 26 (+4 deflection, +1 Dex, +12 natural)
+  AC 27, touch 15, flat-footed 26 (+4 deflection, +1 Dex, +12 natural)
 hp 136 (13d10+65)
 Fort +17, Ref +11, Will +16
 DR 10/cold iron and evil; Immune electricity, petrification; 
@@ -1634,7 +1454,7 @@ XP 3,200
 CG Large outsider (azata, chaotic, extraplanar, good)
 Init +3; Senses low-light vision, darkvision 60 ft.; Perception +13
 Defense
-AC 20, touch 12, flat-footed 17 (+3 Dex, +8 natural, –1 size)
+  AC 20, touch 12, flat-footed 17 (+3 Dex, +8 natural, –1 size)
 hp 73 (7d10+35)
 Fort +7, Ref +10, Will +10
 Immune electricity, petrification, poison; Resist cold 10, fire 10
@@ -1708,7 +1528,7 @@ XP 1,200
 LE Medium outsider (evil, extraplanar, lawful, shapechanger)
 Init +6; Senses darkvision 60 ft., scent; Perception +11
 Defense
-AC 17, touch 12, flat-footed 15 (+2 Dex, +5 natural)
+  AC 17, touch 12, flat-footed 15 (+2 Dex, +5 natural)
 hp 45 (6d10+12)
 Fort +6, Ref +7, Will +7
 DR 5/magic
@@ -1756,7 +1576,7 @@ XP 3,200
 LE Large outsider (evil, extraplanar, lawful, shapechanger)
 Init +6; Senses darkvision 60 ft., scent; Perception +16
 Defense
-AC 20, touch 11, flat-footed 18 (+2 Dex, +9 natural, –1 size)
+  AC 20, touch 11, flat-footed 18 (+2 Dex, +9 natural, –1 size)
 hp 85 (9d10+36)
 Fort +9, Ref +10, Will +10
 DR 10/magic
@@ -1786,14 +1606,13 @@ AAzzaata, Lillend–Barghest
 
 ta, Lillend–Barghest
 
-         
 Basidirond
 BASIDIROnD CR 5
 XP 1,600
 N Medium plant
 Init +1; Senses low-light vision, tremorsense; Perception +0
 Defense
-AC 18, touch 11, flat-footed 17 (+1 Dex, +7 natural)
+  AC 18, touch 11, flat-footed 17 (+1 Dex, +7 natural)
 hp 52 (7d8+21)
 Fort +8, Ref +3, Will +2
 Immune cold, plant traits
@@ -1864,7 +1683,7 @@ XP 1,600
 N Medium magical beast
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +10
 Defense
-AC 17, touch 9, flat-footed 17 (–1 Dex, +8 natural)
+  AC 17, touch 9, flat-footed 17 (–1 Dex, +8 natural)
 hp 52 (7d10+14)
 Fort +9, Ref +4, Will +5
 Offense
@@ -1947,7 +1766,7 @@ XP 600
 N Large animal
 Init +2; Senses blindsense 40 ft.; Perception +12
 Defense
-AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
+  AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
 hp 22 (4d8+4)
 Fort +5, Ref +6, Will +3
 Offense
@@ -1994,7 +1813,7 @@ XP 600
 N Diminutive animal (swarm)
 Init +2; Senses blindsense 20 ft., low-light vision; Perception +15
 Defense
-AC 16, touch 16, flat-footed 14 (+2 Dex, +4 size)
+  AC 16, touch 16, flat-footed 14 (+2 Dex, +4 size)
 hp 13 (3d8)
 Fort +3, Ref +7, Will +3
 Defensive Abilities swarm traits; Immune weapon damage
@@ -2044,14 +1863,13 @@ wings that open wider than two men with arms outstretched.
 Hundreds of high-pitched squeaks fill the air as a mass of small, 
 carnivorous bats surges forth, all of them hungry for blood.
 
-         
 Bear, Grizzly Bear, Dire
 gRIzzLy BEAR CR 4
 XP 1,200
 N Large animal
 Init +1; Senses low-light vision, scent ; Perception +6
 Defense
-AC 16, touch 10, flat-footed 15 (+1 Dex, +6 natural, –1 size)
+  AC 16, touch 10, flat-footed 15 (+1 Dex, +6 natural, –1 size)
 hp 42 (5d8+20)
 Fort +8, Ref +5, Will +2
 Offense
@@ -2099,7 +1917,7 @@ XP 3,200
 N Large animal
 Init +5; Senses low-light vision, scent; Perception +12
 Defense
-AC 18, touch 10, flat-footed 17 (+1 Dex, +8 natural, –1 size)
+  AC 18, touch 10, flat-footed 17 (+1 Dex, +8 natural, –1 size)
 hp 95 (10d8+50)
 Fort +12, Ref +8, Will +4
 Offense
@@ -2158,7 +1976,7 @@ XP 9,600
 CE Huge outsider (chaotic, evil, extraplanar)
 Init +5; Senses darkvision 60 ft., scent; Perception +16
 Defense
-AC 22, touch 9, flat-footed 21 (+1 Dex, +13 natural, –2 size)
+  AC 22, touch 9, flat-footed 21 (+1 Dex, +13 natural, –2 size)
 hp 150 (12d10+84)
 Fort +15, Ref +11, Will +7
 DR 10/good
@@ -2228,7 +2046,7 @@ XP 135
 N Small vermin
 Init +0; Senses low-light vision; Perception +0
 Defense
-AC 12, touch 11, flat-footed 12 (+1 natural, +1 size)
+  AC 12, touch 11, flat-footed 12 (+1 natural, +1 size)
 hp 4 (1d8)
 Fort +2, Ref +0, Will +0
 Immune mind-affecting effects
@@ -2277,7 +2095,7 @@ XP 1,200
 N Large vermin
 Init +0; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
+  AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
 hp 45 (7d8+14)
 Fort +7, Ref +2, Will +2
 Immune mind-affecting effects
@@ -2330,14 +2148,13 @@ BBeebbiilith–Beetle
 
 lith–Beetle
 
-         
 Behir
 BEhIR CR 8
 XP 4,800
 N Huge magical beast
 Init +1; Senses darkvision 60 ft., low-light vision; Perception +6
 Defense
-AC 21, touch 9, flat-footed 20 (+1 Dex, +12 natural, –2 size)
+  AC 21, touch 9, flat-footed 20 (+1 Dex, +12 natural, –2 size)
 hp 105 (10d10+50)
 Fort +12, Ref +8, Will +5
 Immune electricity
@@ -2410,7 +2227,7 @@ XP 3,200
 N Huge ooze
 Init –5; Senses blindsight 60 ft.; Perception –5
 Defense
-AC 3, touch 3, flat-footed 3 (–2 size, –5 Dex)
+  AC 3, touch 3, flat-footed 3 (–2 size, –5 Dex)
 hp 105 (10d8+60)
 Fort +9, Ref –2, Will –2
 Defensive Abilities split, ooze traits
@@ -2486,7 +2303,7 @@ XP 600
 N Medium animal
 Init +0; Senses low-light vision, scent; Perception +6
 Defense
-AC 14, touch 10, flat-footed 14 (+4 natural)
+  AC 14, touch 10, flat-footed 14 (+4 natural)
 hp 18 (2d8+9)
 Fort +6, Ref +3, Will +1
 Defensive Abilities ferocity
@@ -2534,7 +2351,7 @@ XP 1,200
 N Large animal
 Init +4; Senses low-light vision, scent; Perception +12
 Defense
-AC 15, touch 9, flat-footed 15 (+6 natural, –1 size)
+  AC 15, touch 9, flat-footed 15 (+6 natural, –1 size)
 hp 42 (5d8+20)
 Fort +7, Ref +4, Will +2
 Defensive Abilities ferocity
@@ -2591,7 +2408,7 @@ XP 600
 CE Medium humanoid (boggard)
 Init -1; Senses darkvision 60 ft., low-light vision; Perception +4
 Defense
-AC 14, touch 9, flat-footed 14 (+2 armor, –1 Dex, +3 natural)
+  AC 14, touch 9, flat-footed 14 (+2 armor, –1 Dex, +3 natural)
 hp 22 (3d8+9)
 Fort +5, Ref +0, Will +1
 Offense
@@ -2678,7 +2495,7 @@ XP 600
 CE Medium humanoid (goblinoid)
 Init +1; Senses darkvision 60 ft., scent; Perception +8
 Defense
-AC 17, touch 11, flat-footed 16 (+2 armor, +1 Dex, +3 natural, +1 
+  AC 17, touch 11, flat-footed 16 (+2 armor, +1 Dex, +3 natural, +1 
 shield)
 hp 16 (3d8+3)
 Fort +2, Ref +4, Will +1
@@ -2754,7 +2571,7 @@ N Huge magical beast
 Init +6; Senses darkvision 60 ft., low-light vision, scent, 
 tremorsense 60 ft.; Perception +11
 Defense
-AC 22, touch 10, flat-footed 20 (+2 Dex, +12 natural, –2 size)
+  AC 22, touch 10, flat-footed 20 (+2 Dex, +12 natural, –2 size)
 hp 84 (8d10+40)
 Fort +11, Ref +8, Will +5
 Offense
@@ -2841,7 +2658,7 @@ XP 600
 N Medium animal 
 Init +8; Senses low-light vision, scent; Perception +5
 Defense
-AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
+  AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
 hp 19 (3d8+6)
 Fort +5, Ref +7, Will +2
 Offense
@@ -2880,7 +2697,7 @@ XP 600
 N Medium animal 
 Init +4; Senses low-light vision, scent; Perception +5
 Defense
-AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
+  AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
 hp 19 (3d8+6)
 Fort +5, Ref +7, Will +2
 Offense
@@ -2929,7 +2746,7 @@ XP 600
 N Medium vermin 
 Init +1; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 15, touch 11, flat-footed 14 (+1 Dex, +4 natural)
+  AC 15, touch 11, flat-footed 14 (+1 Dex, +4 natural)
 hp 22 (3d8+9)
 Fort +6, Ref +2, Will +1
 Immune mind-affecting effects
@@ -3017,7 +2834,7 @@ XP 800
 N Large monstrous humanoid
 Init +6; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 20, touch 11, flat-footed 18 (+6 armor, +2 Dex, +1 natural, 
+  AC 20, touch 11, flat-footed 18 (+6 armor, +2 Dex, +1 natural, 
 +2 shield, –1 size)
 hp 30 (4d10+8)
 Fort +3, Ref +6, Will +6
@@ -3087,7 +2904,7 @@ XP 200
 N Medium vermin
 Init +2; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 5 (1d8+1)
 Fort +3, Ref +2, Will +0
 Immune mind-affecting effects
@@ -3135,7 +2952,7 @@ N Diminutive vermin (swarm)
 Init +4; Senses darkvision 60 ft., tremorsense 30 ft.; 
 Perception +4
 Defense
-AC 18, touch 18, flat-footed 14 (+4 Dex, +4 size)
+  AC 18, touch 18, flat-footed 14 (+4 Dex, +4 size)
 hp 31 (9d8–9)
 Fort +5, Ref +7, Will +3
 Defensive Abilities swarm traits, Immune weapon damage
@@ -3178,7 +2995,7 @@ CE Large magical beast
 Init +5; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +10
 Defense
-AC 19, touch 10, flat-footed 18 (+1 Dex, +9 natural, –1 size)
+  AC 19, touch 10, flat-footed 18 (+1 Dex, +9 natural, –1 size)
 hp 85 (9d10+36)
 Fort +9, Ref +7, Will +6
 Offense
@@ -3253,7 +3070,7 @@ XP 600
 CE Small aberration
 Init +6; Senses darkvision 60 ft.; Perception +1
 Defense
-AC 17, touch 13, flat-footed 15 (+2 Dex, +4 natural, +1 size)
+  AC 17, touch 13, flat-footed 15 (+2 Dex, +4 natural, +1 size)
 hp 16 (3d8+3)
 Fort +2, Ref +3, Will +4
 Offense
@@ -3327,7 +3144,7 @@ XP 3,200
 CE Large aberration (aquatic)
 Init +7; Senses darkvision 60 ft.; Perception +19
 Defense
-AC 22, touch 12, flat-footed 19 (+3 Dex, +10 natural, –1 size)
+  AC 22, touch 12, flat-footed 19 (+3 Dex, +10 natural, –1 size)
 hp 85 (10d8+40)
 Fort +7, Ref +6, Will +9
 Immune poison
@@ -3402,7 +3219,7 @@ XP 1,600
 CN Large aberration 
 Init +7; Senses darkvision 60 ft.; Perception +14
 Defense
-AC 19, touch 12, flat-footed 16 (+3 Dex, +7 natural, –1 size)
+  AC 19, touch 12, flat-footed 16 (+3 Dex, +7 natural, –1 size)
 hp 51 (6d8+24)
 Fort +6, Ref +5, Will +7
 Defensive Abilities shadow shift
@@ -3488,7 +3305,7 @@ XP 800
 N Small magical beast
 Init +3; Senses darkvision 60 ft., low-light vision; Perception +10
 Defense
-AC 15, touch 15, flat-footed 11 (+3 Dex, +1 dodge, +1 size)
+  AC 15, touch 15, flat-footed 11 (+3 Dex, +1 dodge, +1 size)
 hp 27 (5d10)
 Fort +4, Ref +7, Will +2
 Offense
@@ -3563,7 +3380,7 @@ LG Large outsider (native)
 Init +7; Senses darkvision 60 ft., detect chaos/evil/good/law; 
 Perception +23
 Defense
-AC 22, touch 13, flat-footed 18 (+3 Dex, +1 dodge, +9 natural, –1 size)
+  AC 22, touch 13, flat-footed 18 (+3 Dex, +1 dodge, +9 natural, –1 size)
 hp 126 (12d10+60)
 Fort +9, Ref +13, Will +14
 Offense
@@ -3662,7 +3479,7 @@ XP 600
 N Medium vermin (aquatic)
 Init +1; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
+  AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
 hp 19 (3d8+6)
 Fort +5, Ref +2, Will +1
 Immune mind-affecting effects
@@ -3709,7 +3526,7 @@ XP 1,200
 N Diminutive vermin (aquatic, swarm)
 Init +2; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 18, touch 16, flat-footed 16 (+2 Dex, +2 natural, +4 size)
+  AC 18, touch 16, flat-footed 16 (+2 Dex, +2 natural, +4 size)
 hp 38 (7d8+7)
 Fort +6, Ref +4, Will +2
 Immune mind-affecting effects, swarm traits, weapon damage
@@ -3743,7 +3560,7 @@ XP 600
 N Large animal
 Init +1; Senses low-light vision; Perception +8
 Defense
-AC 14, touch 10, flat-footed 13 (+1 Dex, +4 natural, –1 size)
+  AC 14, touch 10, flat-footed 13 (+1 Dex, +4 natural, –1 size)
 hp 22 (3d8+9)
 Fort +6, Ref +4, Will +2
 Offense
@@ -3791,7 +3608,7 @@ XP 6,400
 N Gargantuan animal
 Init +4; Senses low-light vision; Perception +14
 Defense
-AC 21, touch 6, flat-footed 21 (+15 natural, –4 size)
+  AC 21, touch 6, flat-footed 21 (+15 natural, –4 size)
 hp 138 (12d8+84)
 Fort +15, Ref +8, Will +8
 Offense
@@ -3830,7 +3647,7 @@ XP 1,600
 NE Large humanoid (giant)
 Init –1; Senses low-light vision; Perception +11
 Defense
-AC 19, touch 8, flat-footed 19 (+4 armor, –1 Dex, +7 natural, –1 
+  AC 19, touch 8, flat-footed 19 (+4 armor, –1 Dex, +7 natural, –1 
 size)
 hp 65 (10d8+20)
 Fort +9, Ref +2, Will +4
@@ -3902,7 +3719,7 @@ XP 600
 CN Small humanoid (dark folk)
 Init +3; Senses see in darkness; Perception +4
 Defense
-AC 16, touch 14, flat-footed 13 (+2 armor, +3 Dex, +1 size)
+  AC 16, touch 14, flat-footed 13 (+2 armor, +3 Dex, +1 size)
 hp 19 (3d8+6)
 Fort +3, Ref +6, Will +1
 Weaknesses light blindness
@@ -3984,7 +3801,7 @@ XP 1,200
 CN Medium humanoid (dark folk)
 Init +4; Senses see in darkness; Perception +8
 Defense
-AC 18, touch 14, flat-footed 14 (+2 armor, +4 Dex, +2 natural)
+  AC 18, touch 14, flat-footed 14 (+2 armor, +4 Dex, +2 natural)
 hp 39 (6d8+12)
 Fort +4, Ref +9, Will +2
 Weaknesses light blindness
@@ -4091,7 +3908,7 @@ N Small magical beast
 Init +4; Senses blindsight 90 ft., darkvision 60 ft., low-light 
 vision; Perception +4
 Defense
-AC 13, touch 11, flat-footed 13 (+2 natural, +1 size)
+  AC 13, touch 11, flat-footed 13 (+2 natural, +1 size)
 hp 15 (2d10+4)
 Fort +5, Ref +3, Will +0
 Offense
@@ -4284,7 +4101,7 @@ XP 2,400
 CE Medium outsider (chaotic, demon, evil, extraplanar)
 Init +5; Senses darkvision 60 ft., see invisibility; Perception +19
 Defense
-AC 19, touch 11, flat-footed 18 (+1 Dex, +8 natural)
+  AC 19, touch 11, flat-footed 18 (+1 Dex, +8 natural)
 hp 73 (7d10+35)
 Fort +10, Ref +6, Will +5
 Defensive Abilities protective slime; DR 10/cold iron or good; 
@@ -4370,7 +4187,7 @@ Init +11; Senses darkvision 60 ft., low-light vision, true seeing;
 Perception +38
 Aura flaming body, unholy aura (DC 26)
 Defense
-AC 36, touch 20, flat-footed 29 (+4 deflection, +7 Dex, +16 
+  AC 36, touch 20, flat-footed 29 (+4 deflection, +7 Dex, +16 
 natural, –1 size)
 hp 370 (20d10+260)
 Fort +29, Ref +17, Will +25
@@ -4529,7 +4346,7 @@ XP 600
 CE Small outsider (chaotic, demon, evil, extraplanar)
 Init +0; Senses darkvision 60 ft.; Perception +5
 Defense
-AC 14, touch 11, flat-footed 14 (+3 natural, +1 size)
+  AC 14, touch 11, flat-footed 14 (+3 natural, +1 size)
 hp 18 (2d10+7)
 Fort +5, Ref +0, Will +3
 DR 5/cold iron or good; Immune electricity, poison; Resist 
@@ -4607,7 +4424,7 @@ XP 25,600
 CE Huge outsider (chaotic, demon, evil, extraplanar)
 Init +0; Senses darkvision 60 ft., true seeing; Perception +26
 Defense
-AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
+  AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
 hp 186 (12d10+120)
 Fort +18, Ref +4, Will +11
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
@@ -4678,7 +4495,7 @@ CE Large outsider (aquatic, chaotic, demon, evil, extraplanar)
 Init +4; Senses darkvision 60 ft.; Perception +23
 Aura stench (DC 24, 10 rounds)
 Defense
-AC 25, touch 9, flat-footed 25 (+16 natural, –1 size)
+  AC 25, touch 9, flat-footed 25 (+16 natural, –1 size)
 hp 145 (10d10+90)
 Fort +16, Ref +3, Will +9
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
@@ -4747,7 +4564,6 @@ the environment.
 This fiend’s armored f lesh is scaly and moist. Its large, toothy 
 mouth gapes below a pair of hungry, reptilian eyes.
 
-         
 DDeemmoon, Hezrou–Demon, Marilith
 
 n, Hezrou–Demon, Marilith
@@ -4759,7 +4575,7 @@ CE Large outsider (chaotic, demon, evil, extraplanar)
 Init +4; Senses darkvision 60 ft., true seeing; Perception +31
 Aura unholy aura (DC 25)
 Defense
-AC 32, touch 17, flat-footed 28 (+4 deflection, +4 Dex, +15 
+  AC 32, touch 17, flat-footed 28 (+4 deflection, +4 Dex, +15 
 natural, –1 size)
 hp 264 (16d10+176)
 Fort +25, Ref +18, Will +13
@@ -4829,7 +4645,7 @@ XP 4,800
 CE Medium outsider (chaotic, demon, evil, native)
 Init +7; Senses darkvision 60 ft.; Perception +23
 Defense
-AC 21, touch 13, flat-footed 18 (+3 Dex, +8 natural)
+  AC 21, touch 13, flat-footed 18 (+3 Dex, +8 natural)
 hp 103 (9d10+54)
 Fort +9, Ref +9, Will +9
 DR 10/cold iron or good; Immune death effects, electricity, 
@@ -4907,7 +4723,7 @@ CE Huge outsider (chaotic, demon, evil, extraplanar)
 Init +5; Senses darkvision 60 ft., true seeing; Perception +31
 Aura unholy aura (DC 23)
 Defense
-AC 29, touch 13, flat-footed 28 (+4 deflection, +1 Dex, +16 
+  AC 29, touch 13, flat-footed 28 (+4 deflection, +1 Dex, +16 
 natural, –2 size)
 hp 203 (14d10+126)
 Fort +22, Ref +9, Will +21
@@ -4980,7 +4796,7 @@ XP 600
 CE Tiny outsider (chaotic, demon, evil, extraplanar)
 Init +6; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 16, touch 14, flat-footed 14 (+2 Dex, +2 natural, +2 size)
+  AC 16, touch 14, flat-footed 14 (+2 Dex, +2 natural, +2 size)
 hp 16 (3d10); fast healing 2
 Fort +1, Ref +5, Will +4
 DR 5/cold iron or 
@@ -5092,7 +4908,7 @@ CE Medium outsider (chaotic, demon, evil, extraplanar,
 incorporeal)
 Init +8; Senses darkvision 60 ft.; Perception +20
 Defense
-AC 18, touch 18, flat-footed 14 (+4 deflection, +4 Dex)
+  AC 18, touch 18, flat-footed 14 (+4 deflection, +4 Dex)
 hp 59 (7d10+21)
 Fort +5, Ref +11, Will +7
 Defensive Abilities incorporeal; DR 10/cold iron or good; 
@@ -5162,7 +4978,7 @@ XP 3,200
 CE Medium outsider (chaotic, demon, evil, extraplanar)
 Init +3; Senses darkvision 60 ft., detect good; Perception +21, 
 Defense
-AC 20, touch 13, flat-footed 17 (+3 Dex, +7 natural)
+  AC 20, touch 13, flat-footed 17 (+3 Dex, +7 natural)
 hp 84 (8d10+40)
 Fort +7, Ref +9, Will +10
 DR 10/cold iron or good; Immune electricity, fire, poison; 
@@ -5237,7 +5053,7 @@ XP 6,400
 CE Large outsider (chaotic, demon, evil, extraplanar)
 Init +6; Senses darkvision 60 ft.; Perception +23
 Defense
-AC 22, touch 11, flat-footed 20 (+2 Dex, +11 natural, –1 size)
+  AC 22, touch 11, flat-footed 20 (+2 Dex, +11 natural, –1 size)
 hp 112 (9d10+63)
 Fort +13, Ref +10, Will +6
 DR 10/good; Immune electricity, poison; Resist acid 10, cold 
@@ -5319,7 +5135,7 @@ XP 800
 CE Small humanoid (derro)
 Init +6; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 17, touch 13, flat-footed 15 (+2 armor, +2 Dex, +2 natural, 
+  AC 17, touch 13, flat-footed 15 (+2 armor, +2 Dex, +2 natural, 
 +1 size)
 hp 25 (3d8+12)
 Fort +5, Ref +3, Will +6
@@ -5532,7 +5348,7 @@ LE Medium outsider (devil, evil, extraplanar, lawful)
 Init +6; Senses darkvision 60 ft., see in darkness; 
 Perception +21
 Defense
-AC 26, touch 16, flat-footed 20 (+6 Dex, +10 natural)
+  AC 26, touch 16, flat-footed 20 (+6 Dex, +10 natural)
 hp 138 (12d10+72)
 Fort +14, Ref +14, Will +8
 Defensive Abilities barbed defense; DR 10/good; Immune 
@@ -5565,7 +5381,7 @@ Organization solitary, pair, team (3–5), or squad (6–11)
 Treasure standard
 SPECIAL ABILITIES
 Barbed Defense (Su) A creature that strikes a 
-hamatula with a melee weapon, an unarmed 
+  hamatula with a melee weapon, an unarmed 
 strike, or a natural weapon takes 1d8+6 points 
 of piercing damage from the devil’s barbs. Melee weapons 
 with reach do not endanger a user in this way.
@@ -5607,7 +5423,7 @@ LE Medium outsider (devil, evil, extraplanar, lawful)
 Init +6; Senses darkvision 60 ft., see in darkness; 
 Perception +10
 Defense
-AC 19, touch 12, flat-footed 17 (+2 Dex, +7 natural)
+  AC 19, touch 12, flat-footed 17 (+2 Dex, +7 natural)
 hp 57 (6d10+24)
 Fort +9, Ref +7, Will +3
 DR 5/good or silver; Immune fire, poison; Resist acid 10, cold 
@@ -5684,7 +5500,7 @@ LE Large outsider (devil, evil, extraplanar, lawful)
 Init +9; Senses darkvision 60 ft., see in darkness; Perception +19
 Aura fear aura (5 ft., DC 19, 1d6 rounds)
 Defense
-AC 25, touch 14, flat-footed 20 (+5 Dex, +11 natural, –1 size)
+  AC 25, touch 14, flat-footed 20 (+5 Dex, +11 natural, –1 size)
 hp 105 (10d10+50)
 Fort +12, Ref +12, Will +7
 DR 10/good; Immune fire, poison; Resist acid 10, cold 10; SR 20
@@ -5758,7 +5574,7 @@ LE Medium outsider (devil, evil, extraplanar, lawful)
 Init +6; Senses darkvision 60 ft., see in darkness, true seeing; 
 Perception +16
 Defense
-AC 23, touch 17, flat-footed 16 (+6 Dex, +1 
+  AC 23, touch 17, flat-footed 16 (+6 Dex, +1 
 dodge, +6 natural)
 hp 94 (9d10+45)
 Fort +11, Ref +12, Will +7
@@ -5868,7 +5684,7 @@ LE Large outsider (devil, evil, extraplanar, lawful)
 Init +8; Senses darkvision 60 ft., see in darkness; Perception +24
 Aura fear aura (5 ft., DC 23)
 Defense
-AC 35, touch 17, flat-footed 27 (+8 Dex, +18 natural, –1 size)
+  AC 35, touch 17, flat-footed 27 (+8 Dex, +18 natural, –1 size)
 hp 217 (15d10+135); regeneration 5 (good weapons, good spells)
 Fort +18, Ref +17, Will +13
 DR 10/good and silver; Immune fire, poison; Resist acid 10, 
@@ -5938,7 +5754,7 @@ LE Large outsider (devil, evil, extraplanar, lawful)
 Init +9; Senses darkvision 60 ft., see in darkness; Perception +27
 Aura fear (10 ft., DC 22)
 Defense
-AC 32, touch 14, flat-footed 27 (+5 Dex, +18 natural, –1 size)
+  AC 32, touch 14, flat-footed 27 (+5 Dex, +18 natural, –1 size)
 hp 161 (14d10+84); regeneration 5 (good weapons, good spells)
 Fort +15, Ref +14, Will +12
 DR 10/good; Immune fire, cold, poison; Resist acid 10; SR 24
@@ -6009,7 +5825,7 @@ LE Tiny outsider (devil, evil, extraplanar, lawful)
 Init +3; Senses darkvision 60 ft., detect good, detect magic, see 
 in darkness; Perception +7
 Defense
-AC 17, touch 16, flat-footed 13 (+3 Dex, +1 dodge, +1 natural, 
+  AC 17, touch 16, flat-footed 13 (+3 Dex, +1 dodge, +1 natural, 
 +2 size)
 hp 16 (3d10); fast healing 2
 Fort +1, Ref +6, Will +4
@@ -6094,7 +5910,7 @@ LE Medium outsider (devil, evil, extraplanar, lawful)
 Init +0; Senses darkvision 60 ft., see in darkness; 
 Perception +0
 Defense
-AC 14, touch 10, flat-footed 14 (+4 natural)
+  AC 14, touch 10, flat-footed 14 (+4 natural)
 hp 13 (2d10+2)
 Fort +4, Ref +3, Will +0
 DR 5/good or silver; Immune fire, mind-affecting effects, 
@@ -6174,7 +5990,7 @@ Init +13; Senses darkvision 60 ft., see in darkness;
 Perception +33
 Aura fear (20 ft., DC 23)
 Defense
-AC 38, touch 18, flat-footed 29 (+9 Dex, +20 natural, –1 size)
+  AC 38, touch 18, flat-footed 29 (+9 Dex, +20 natural, –1 size)
 hp 350 (20d10+240); regeneration 5 (good weapons, good spells)
 Fort +24, Ref +21, Will +18
 DR 15/good and silver; Immune fire, poison; Resist acid 10, 
@@ -6346,7 +6162,7 @@ XP 12,800
 NE Large undead (extraplanar)
 Init +7; Senses darkvision 60 ft.; Perception +20
 Defense
-AC 25, touch 12, flat-footed 22 (+3 Dex, +13 natural, –1 size)
+  AC 25, touch 12, flat-footed 22 (+3 Dex, +13 natural, –1 size)
 hp 133 (14d8+70)
 Fort +9, Ref +7, Will +12
 Defensive Abilities spell deflection, undead traits; SR 22
@@ -6448,7 +6264,7 @@ XP 2,400
 N Huge animal
 Init +0; Senses low-light vision, scent; Perception +14 
 Defense
-AC 22, touch 8, flat-footed 22 (+14 natural, –2 size)
+  AC 22, touch 8, flat-footed 22 (+14 natural, –2 size)
 hp 75 (10d8+30)
 Fort +12, Ref +7, Will +4
 Offense
@@ -6495,7 +6311,7 @@ XP 9,600
 N Gargantuan animal 
 Init +0; Senses low-light vision, scent; Perception +27
 Defense
-AC 18, touch 6, flat-footed 18 (+12 natural, –4 size)
+  AC 18, touch 6, flat-footed 18 (+12 natural, –4 size)
 hp 171 (18d8+90)
 Fort +18, Ref +11, Will +9
 Offense
@@ -6541,7 +6357,7 @@ XP 800
 N Medium animal 
 Init +6; Senses low-light vision, scent; Perception +14
 Defense
-AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
+  AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
 hp 34 (4d8+16)
 Fort +8, Ref +6, Will +2
 Offense
@@ -6588,7 +6404,7 @@ XP 3,200
 N Huge animal 
 Init +2; Senses low-light vision, scent; Perception +14
 Defense
-AC 20, touch 11, flat-footed 17 (+2 Dex, +1 dodge, +9 natural, –2 size)
+  AC 20, touch 11, flat-footed 17 (+2 Dex, +1 dodge, +9 natural, –2 size)
 hp 105 (10d8+60)
 Fort +14, Ref +9, Will +6
 Offense
@@ -6625,7 +6441,7 @@ XP 800
 N Large animal 
 Init +8; Senses low-light vision, scent; Perception +11 
 Defense
-AC 16, touch 14, flat-footed 11 (+4 Dex, +1 dodge, +2 natural, 
+  AC 16, touch 14, flat-footed 11 (+4 Dex, +1 dodge, +2 natural, 
 –1 size)
 hp 32 (5d8+10)
 Fort +6, Ref +8, Will +3
@@ -6672,7 +6488,7 @@ XP 3,200
 N Huge animal 
 Init +6; Senses low-light vision, scent; Perception +16 
 Defense
-AC 22, touch 10, flat-footed 20 (+2 Dex, +12 natural, –2 size)
+  AC 22, touch 10, flat-footed 20 (+2 Dex, +12 natural, –2 size)
 hp 90 (12d8+36)
 Fort +13, Ref +10, Will +5
 Offense
@@ -6728,7 +6544,7 @@ XP 6,400
 N Gargantuan animal 
 Init +5; Senses low-light vision, scent; Perception +37
 Defense
-AC 21, touch 7, flat-footed 20 (+1 Dex, +14 natural, –4 size)
+  AC 21, touch 7, flat-footed 20 (+1 Dex, +14 natural, –4 size)
 hp 153 (18d8+72)
 Fort +15, Ref +12, Will +10
 Offense
@@ -6782,7 +6598,7 @@ XP 4,800
 N Huge animal 
 Init –1; Senses low-light vision, scent; Perception +21 
 Defense
-AC 21, touch 7, flat-footed 21 (–1 Dex, +14 natural, –2 size)
+  AC 21, touch 7, flat-footed 21 (–1 Dex, +14 natural, –2 size)
 hp 119 (14d8+56)
 Fort +15, Ref +8, Will +5
 Offense
@@ -6833,7 +6649,7 @@ XP 135
 N Small animal
 Init +1; Senses low-light vision, scent; Perception +8
 Defense
-AC 13, touch 12, flat-footed 12 (+1 Dex, +1 natural, +1 size)
+  AC 13, touch 12, flat-footed 12 (+1 Dex, +1 natural, +1 size)
 hp 6 (1d8+2)
 Fort +4, Ref +3, Will +1
 Offense
@@ -6881,7 +6697,7 @@ XP 200
 N Medium Animal 
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
+  AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
@@ -6910,14 +6726,13 @@ brown eyes.
 This burly dog is fitted with a small saddle. A low, menacing 
 growl rumbles up from its chest.
 
-         
 ORCA CR 5
 XP 1,600
 N Huge animal
 Init +6; Senses blindsight 120 ft., low-light vision; 
 Perception +19
 Defense
-AC 16, touch 10, flat-footed 14 (+2 Dex, +6 natural, –2 size)
+  AC 16, touch 10, flat-footed 14 (+2 Dex, +6 natural, –2 size)
 hp 67 (9d8+27)
 Fort +9, Ref +8, Will +5
 Offense
@@ -6965,7 +6780,7 @@ N Medium animal
 Init +2; Senses blindsight 120 ft., low-light vision; 
 Perception +9
 Defense
-AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
+  AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
 hp 11 (2d8+2)
 Fort +4, Ref +5, Will +1
 Offense
@@ -7006,7 +6821,6 @@ vision, hold breath.
 Scores Str +2, Dex +2, Con +2; Special 
 Qualities blindsight 120 ft.
 
-         
 Dolphin–Doppelganger
 
 Dolphin–Doppelganger
@@ -7016,7 +6830,7 @@ XP 800
 N Medium monstrous humanoid (shapechanger)
 Init +1; Senses darkvision 60 ft.; Perception +9
 Defense
-AC 16, touch 12, flat-footed 14 (+1 Dex, +1 dodge, +4 natural)
+  AC 16, touch 12, flat-footed 14 (+1 Dex, +1 dodge, +4 natural)
 hp 26 (4d10+4)
 Fort +4, Ref +5, Will +6
 Immune charm, sleep
@@ -7105,7 +6919,6 @@ functions like the
 spell polymorph rather 
 than alter self.
 
-         
 Dragon
 True dragons are divided into two broad categories: chromatic 
 and metallic. Chromatic dragons are almost universally evil, 
@@ -7350,7 +7163,7 @@ XP 3,200
 CE Medium dragon (water)
 Init +6; Senses dragon senses; Perception +14
 Defense
-AC 21, touch 12, flat-footed 19 (+2 Dex, +9 natural)
+  AC 21, touch 12, flat-footed 19 (+2 Dex, +9 natural)
 hp 76 (8d12+24)
 Fort +9, Ref +8, Will +7
 Immune acid, paralysis, sleep
@@ -7373,14 +7186,13 @@ CE Large dragon (water)
 Init +5; Senses dragon senses; Perception +24
 Aura frightful presence (180 ft., DC 19)
 Defense
-AC 28, touch 10, flat-footed 27 (+1 Dex, +18 natural, –1 size)
+  AC 28, touch 10, flat-footed 27 (+1 Dex, +18 natural, –1 size)
 hp 161 (14d12+70)
 Fort +14, Ref +10, Will +12
 DR 5/magic; Immune acid, paralysis, sleep; SR 22
 Offense
 Speed 60 ft., fly 200 ft. (poor), swim 60 ft.
 
-         
 Dragon (Chromatic), Black
 
 Dragon (Chromatic), Black
@@ -7412,7 +7224,7 @@ CE Huge dragon (water)
 Init +4; Senses  dragon senses; Perception +34
 Aura frightful presence (300 ft., DC 25)
 Defense
-AC 38, touch 8, flat-footed 38 (+30 natural, –2 size)
+  AC 38, touch 8, flat-footed 38 (+30 natural, –2 size)
 hp 297 (22d12+154)
 Fort +20, Ref +13, Will +18
 DR 15/magic; Immune acid, paralysis, sleep, SR 27
@@ -7545,7 +7357,7 @@ XP 6,400
 LE Large dragon (earth)
 Init +5; Senses dragon senses; Perception +14
 Defense
-AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
+  AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
 hp 95 (10d12+30)
 Fort +10, Ref +8, Will +8
 Immune electricity, paralysis, sleep
@@ -7563,7 +7375,7 @@ Str 21, Dex 12, Con 17, Int 12, Wis 13, Cha 12
 Base Atk +10; CMB +16; CMD 27 (31 vs. trip)
 Feats Dazzling Display, Improved Initiative, Multiattack, 
 Shatter Defenses, Weapon Focus (bite)
-Skills Appraise +14, Fly +8, Intimidate +14, Knowledge (local) 
+  Skills Appraise +14, Fly +8, Intimidate +14, Knowledge (local) 
 +14, Perception +14, Stealth +10, Survival +14
 Languages Common, Draconic
 SQ sound imitation
@@ -7573,9 +7385,8 @@ LE Huge dragon (earth)
 Init +4; Senses dragon senses; Perception +22
 Aura electricity (5 ft., 1d6 elect.), frightful presence (180 ft., DC 21)
 Defense
-AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
+  AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
 
-         
 Dragon (Chromatic), Blue
 
 Dragon (Chromatic), Blue
@@ -7603,7 +7414,7 @@ Str 27, Dex 10, Con 21, Int 16, Wis 17, Cha 16
 Base Atk +16; CMB +26; CMD 36 (40 vs. trip)
 Feats Combat Casting, Dazzling Display, Deadly Stroke, 
 Hover, Improved Initiative, Multiattack, Shatter Defenses, 
-Weapon Focus (bite)
+  Weapon Focus (bite)
 Skills Appraise +22, Fly +11, Intimidate +22, Knowledge 
 (local) +22, Knowledge (geography) +22, Perception +22, 
 Spellcraft +22, Stealth +11, Survival +22
@@ -7616,7 +7427,7 @@ Init +3; Senses dragon senses; Perception +32
 Aura electricity (10 ft., 2d6 electricity), frightful 
 presence (300 ft., DC 27)
 Defense
-AC 37, touch 5, flat-footed 37 (–1 Dex, +32 natural, –4 size)
+  AC 37, touch 5, flat-footed 37 (–1 Dex, +32 natural, –4 size)
 hp 324 (24d12+168)
 Fort +21, Ref +13, Will +19
 DR 15/magic; Immune electricity, paralysis, sleep; SR 29
@@ -7650,7 +7461,7 @@ Feats Combat Casting, Dazzling Display, Deadly Stroke,
 Extend Spell, Hover, Improved Critical (bite), Improved 
 Initiative, Multiattack, Quicken Spell, Silent Spell, Shatter 
 Defenses, Weapon Focus (bite)
-Skills Appraise +32, Fly +10, Intimidate +32, Knowledge 
+  Skills Appraise +32, Fly +10, Intimidate +32, Knowledge 
 (arcana) +32, Knowledge (history) +32, Knowledge (local) 
 +32, Knowledge (geography) +32, Perception +32, Spellcraft 
 +32, Stealth +14, Survival +32
@@ -7731,7 +7542,7 @@ XP 4,800
 LE Large dragon (air)
 Init +1; Senses dragon senses; Perception +15
 Defense
-AC 20, touch 10, flat-footed 19 (+1 Dex, +10 natural, –1 size)
+  AC 20, touch 10, flat-footed 19 (+1 Dex, +10 natural, –1 size)
 hp 85 (9d12+27)
 Fort +9, Ref +7, Will +9
 Immune acid, paralysis, sleep
@@ -7757,7 +7568,7 @@ LE Huge dragon (air)
 Init +0; Senses dragon senses; Perception +25
 Aura frightful presence (180 ft., DC 20)
 Defense
-AC 27, touch 8, flat-footed 27 (+19 natural, –2 size)
+  AC 27, touch 8, flat-footed 27 (+19 natural, –2 size)
 hp 172 (15d12+75)
 Fort +14, Ref +9, Will +14
 DR 5/magic; Immune acid, paralysis, sleep; SR 23
@@ -7769,7 +7580,6 @@ Chromatic Dragon, Green
 Scales the color of emeralds armor this ferocious dragon. A single 
 sharp horn protrudes from the end of its toothy snout.
 
-         
 Dragon (Chromatic), Green
 
 Dragon (Chromatic), Green
@@ -7802,7 +7612,7 @@ LE Gargantuan dragon (air)
 Init –1; Senses dragon senses; Perception +35
 Aura frightful presence (300 ft., DC 26)
 Defense
-AC 36, touch 5, flat-footed 36 (–1 Dex, +31 natural, 
+  AC 36, touch 5, flat-footed 36 (–1 Dex, +31 natural, 
 –4 size)
 hp 310 (23d12+161)
 Fort +20, Ref +12, Will +20
@@ -7923,7 +7733,7 @@ XP 9,600
 CE Large dragon (fire)
 Init +5; Senses dragon senses, smoke vision; Perception +15
 Defense
-AC 22, touch 10, flat-footed 21 (+1 Dex, +12 natural, –1 size)
+  AC 22, touch 10, flat-footed 21 (+1 Dex, +12 natural, –1 size)
 hp 115 (11d12+44)
 Fort +11, Ref +8, Will +10
 Immune fire, paralysis, sleep
@@ -7953,11 +7763,10 @@ CE Huge dragon (fire)
 Init +4; Senses dragon senses, smoke vision; Perception +23
 Aura fire (5 ft., 1d6 fire), frightful presence (180 ft., DC 21)
 Defense
-AC 29, touch 8, flat-footed 29 (+21 natural, –2 size)
+  AC 29, touch 8, flat-footed 29 (+21 natural, –2 size)
 hp 212 (17d12+102)
 Fort +16, Ref +10, Will +15
 
-         
 Dragon (Chromatic), Red
 
 Dragon (Chromatic), Red
@@ -7995,7 +7804,7 @@ smoke vision; Perception +33
 Aura fire, frightful presence 
 (300 ft., DC 27)
 Defense
-AC 38, touch 5, flat-
+  AC 38, touch 5, flat-
 footed 38 (–1 Dex, 
 +33 natural, –4 size)
 hp 362 (25d12+200)
@@ -8116,7 +7925,7 @@ XP 2,400
 CE Medium dragon (cold)
 Init +6; Senses dragon senses, snow vision; Perception +12
 Defense
-AC 20, touch 12, flat-footed 18 (+2 Dex, +8 natural)
+  AC 20, touch 12, flat-footed 18 (+2 Dex, +8 natural)
 hp 66 (7d12+21)
 Fort +8, Ref +7, Will +5
 Immune cold, paralysis, sleep
@@ -8141,7 +7950,7 @@ Init +5; Senses dragon senses, snow vision; Perception +22
 Aura cold (5 ft., 1d6 cold damage), frightful presence (180 ft., 
 DC 17)
 Defense
-AC 27, touch 10, flat-footed 26 (+1 Dex, +17 natural, –1 size)
+  AC 27, touch 10, flat-footed 26 (+1 Dex, +17 natural, –1 size)
 hp 149 (13d12+65)
 
 This dragon’s scales are a frosty white. Its head is crowned with 
@@ -8151,7 +7960,6 @@ slender horns, with a thin membrane stretched between them.
 
 100
 
-         
 Dragon (Chromatic), White
 
 Dragon (Chromatic), White
@@ -8186,7 +7994,7 @@ Init +4; Senses dragon senses, snow vision; Perception +32
 Aura cold (10 ft., 2d6 cold damage), frightful presence (300 
 ft., DC 23)
 Defense
-AC 37, touch 8, flat-footed 37 (+29 natural, –2 size)
+  AC 37, touch 8, flat-footed 37 (+29 natural, –2 size)
 hp 283 (21d12+147)
 Fort +19, Ref +14, Will +16
 DR 15/magic; Immune cold, paralysis, sleep; 
@@ -8308,7 +8116,7 @@ XP 3,200
 CG Medium dragon (fire)
 Init +6; Senses blindsense 60 ft., dragon senses; Perception +14
 Defense
-AC 21, touch 12, flat-footed 19; (+2 Dex, +9 natural)
+  AC 21, touch 12, flat-footed 19; (+2 Dex, +9 natural)
 hp 76 (8d12+24)
 Fort +9, Ref +8, Will +7
 Immune fire, paralysis, sleep
@@ -8338,7 +8146,7 @@ CG Large dragon (fire)
 Init +5; Senses blindsense 60 ft., dragon senses; Perception +24
 Aura frightful presence (180 ft., DC 20)
 Defense
-AC 28, touch 10, flat-footed 27; (+1 Dex, +18 natural, –1 size)
+  AC 28, touch 10, flat-footed 27; (+1 Dex, +18 natural, –1 size)
 hp 161 (14d12+70)
 Fort +14, Ref +10, Will +12
 
@@ -8346,7 +8154,6 @@ Fort +14, Ref +10, Will +12
 
 102
 
-         
 Dragon (Metallic), Brass
 
 Dragon (Metallic), Brass
@@ -8383,7 +8190,7 @@ CG Huge dragon (fire)
 Init +4; Senses dragon senses; Perception +34
 Aura fire (10 ft., 1d6 fire), frightful presence (300 ft., DC 26)
 Defense
-AC 38, touch 8, flat-footed 38; (+30 natural, 
+  AC 38, touch 8, flat-footed 38; (+30 natural, 
 –2 size)
 hp 297 (22d12+154)
 Fort +20, Ref +13, Will +18
@@ -8507,7 +8314,7 @@ XP 6,400
 LG Large dragon (water)
 Init +1; Senses dragon senses; Perception +20
 Defense
-AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
+  AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
 hp 95 (10d12+30)
 Fort +10, Ref +8, Will +10
 Immune electricity, paralysis, sleep
@@ -8536,7 +8343,7 @@ LG Huge dragon (water)
 Init +0; Senses dragon senses; Perception +28
 Aura frightful presence (180 ft., DC 23)
 Defense
-AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
+  AC 28, touch 8, flat-footed 28 (+20 natural, –2 size)
 hp 184 (16d12+80)
 Fort +15, Ref +10, Will +15
 
@@ -8544,7 +8351,6 @@ Fort +15, Ref +10, Will +15
 
 104
 
-         
 Dragon (Metallic), Bronze
 
 Dragon (Metallic), Bronze
@@ -8582,7 +8388,7 @@ Perception +38
 Aura electricity aura, frightful 
 presence (300 ft., DC 29)
 Defense
-AC 37, touch 5, flat-footed 37; 
+  AC 37, touch 5, flat-footed 37; 
 (–1 Dex, +32 natural, –4 size)
 hp 324 (24d12+168)
 Fort +21, Ref +13, Will +21
@@ -8700,7 +8506,7 @@ XP 4,800
 CG Medium dragon (earth)
 Init +6; Senses Perception +14
 Defense
-AC 22, touch 12, flat-footed 20 (+2 Dex, +10 natural)
+  AC 22, touch 12, flat-footed 20 (+2 Dex, +10 natural)
 hp 85 (9d12+27)
 Fort +9, Ref +8, Will +8
 Defensive Abilities uncanny dodge; Immune acid, paralysis, sleep
@@ -8729,7 +8535,7 @@ CG Large dragon (earth)
 Init +5; Senses Perception +22
 Aura frightful presence (180 ft., DC 21)
 Defense
-AC 29, touch 10, flat-footed 28 (+1 Dex, +19 natural, –1 size)
+  AC 29, touch 10, flat-footed 28 (+1 Dex, +19 natural, –1 size)
 hp 172 (15d12+75)
 Fort +14, Ref +10, Will +13
 
@@ -8740,7 +8546,6 @@ to the ridged tail of this long-winged dragon.
 
 106
 
-         
 Dragon (Metallic), Copper
 
 Dragon (Metallic), Copper
@@ -8777,7 +8582,7 @@ CG Huge dragon (earth)
 Init +4; Senses dragon senses; Perception +32
 Aura frightful presence (300 ft., DC 27), slow
 Defense
-AC 39, touch 8, flat-footed 39 (+31 natural, –2 size)
+  AC 39, touch 8, flat-footed 39 (+31 natural, –2 size)
 hp 310 (23d12+161)
 Fort +20, Ref +13, Will +19
 Defensive Abilities uncanny dodge; DR 15/magic; 
@@ -8898,7 +8703,7 @@ XP 12,800
 LG Large dragon (fire)
 Init +1; Senses dragon senses Perception +22
 Defense
-AC 23, touch 10, flat-footed 22; (+1 Dex, +13 natural, –1 size)
+  AC 23, touch 10, flat-footed 22; (+1 Dex, +13 natural, –1 size)
 hp 126 (12d12+48)
 Fort +12, Ref +9, Will +13
 Immune fire, paralysis, sleep; Weaknesses vulnerability to cold
@@ -8929,13 +8734,12 @@ LG Huge dragon (fire)
 Init +0; Senses dragon senses; Perception +30
 Aura frightful presence (180 ft., DC 24)
 Defense
-AC 30, touch 8, flat-footed 30 (+22 natural, –2 size)
+  AC 30, touch 8, flat-footed 30 (+22 natural, –2 size)
 
 108
 
 108
 
-         
 Dragon (Metallic), Gold
 
 Dragon (Metallic), Gold
@@ -8974,7 +8778,7 @@ LG Gargantuan dragon (fire)
 Init –1; Senses dragon senses; Perception +40
 Aura fire, frightful presence (300 ft., DC 30)
 Defense
-AC 39, touch 5, flat-footed 39 (–1 Dex, +34 
+  AC 39, touch 5, flat-footed 39 (–1 Dex, +34 
 natural, –4 size)
 hp 377 (26d12+208)
 Fort +23, Ref +14, Will +24
@@ -9101,7 +8905,7 @@ XP 9,600
 LG Large dragon (cold)
 Init +5; Senses dragon senses; Perception +17
 Defense
-AC 22, touch 10, flat-footed 21; (+1 Dex, +12 natural, –1 size)
+  AC 22, touch 10, flat-footed 21; (+1 Dex, +12 natural, –1 size)
 hp 104 (11d12+33)
 Fort +10, Ref +8, Will +12
 Immune acid, cold, paralysis, sleep
@@ -9136,14 +8940,13 @@ Init +4; Senses dragon senses, fog vision; Perception +25
 
 110
 
-         
 Dragon (Metallic), Silver
 
 Dragon (Metallic), Silver
 
 Aura frightful presence (180 ft., DC 23)
 Defense
-AC 29, touch 8, flat-footed 29 (+21 natural, –2 size)
+  AC 29, touch 8, flat-footed 29 (+21 natural, –2 size)
 hp 195 (17d12+85)
 Fort +15, Ref +12, Will +17
 DR 5/magic; Immune acid, cold, paralysis, sleep; SR 25
@@ -9189,7 +8992,7 @@ Init +3; Senses dragon senses, fog
 vision; Perception +35
 Aura cold, frightful presence (300 ft., DC 29)
 Defense
-AC 38, touch 5, flat-footed 38; (–1 Dex, +33 
+  AC 38, touch 5, flat-footed 38; (–1 Dex, +33 
 natural, –4 size)
 hp 337 (25d12+175)
 Fort +21, Ref +15, Will +23
@@ -9255,7 +9058,7 @@ N Huge dragon (aquatic)
 Init +4; Senses low-light vision, darkvision 60 ft., scent; 
 Perception +16
 Defense
-AC 23, touch 8, flat-footed 23 (+15 natural, –2 size)
+  AC 23, touch 8, flat-footed 23 (+15 natural, –2 size)
 hp 126 (12d12+48)
 Fort +12, Ref +8, Will +9
 Immune fire, sleep, paralysis
@@ -9341,7 +9144,6 @@ their noses to the ends of their powerful tails.
 
 112
 
-         
 Dragon Turtle–Drider
 
 Dragon Turtle–Drider
@@ -9352,7 +9154,7 @@ CE Large aberration
 Init +2; Senses darkvision 120 ft., detect good, detect law, detect 
 magic; Perception +15
 Defense
-AC 20, touch 12, flat-footed 17; (+2 Dex, +1 dodge, +8 natural, 
+  AC 20, touch 12, flat-footed 17; (+2 Dex, +1 dodge, +8 natural, 
 –1 size)
 hp 76 (9d8+36)
 Fort +7, Ref +5, Will +9
@@ -9422,14 +9224,13 @@ with fanged mandibles.
 
 113
 
-         
 DROW CR 1/3
 XP 135
 Drow warrior 1
 CE Medium humanoid (elf)
 Init +2; Senses darkvision 120 ft.; Perception +2
 Defense
-AC 15, touch 12, flat-footed 13 (+2 armor, +2 Dex, +1 shield)
+  AC 15, touch 12, flat-footed 13 (+2 armor, +2 Dex, +1 shield)
 hp 4 (1d8)
 Fort +2, Ref +2, Will –1; +2 vs. enchantment
 Immune sleep; SR 7
@@ -9531,7 +9332,6 @@ engineered and encouraged among the ruling caste, and are
 
 114
 
-         
 Drow
 
 Drow
@@ -9597,7 +9397,7 @@ Female drow noble cleric 3
 CE Medium humanoid (elf)
 Init +3; Senses darkvision 120 ft.; Perception +5
 Defense
-AC 21, touch 13, flat-footed 18 (+6 armor, +3 Dex, +2 shield)
+  AC 21, touch 13, flat-footed 18 (+6 armor, +3 Dex, +2 shield)
 hp 20 (3d8+3)
 Fort +4, Ref +4, Will +6; +2 vs. enchantment
 Immune sleep; SR 14
@@ -9650,7 +9450,7 @@ XP 800
 CG Medium fey 
 Init +4; Senses low-light vision; Perception +11
 Defense
-AC 17, touch 14, flat-footed 13 (+4 Dex, +3 natural)
+  AC 17, touch 14, flat-footed 13 (+4 Dex, +3 natural)
 hp 27 (6d6+6)
 Fort +5, Ref +9, Will +7
 DR 5/cold iron
@@ -9727,7 +9527,6 @@ are killed once combat is over.
 
 116
 
-         
 Duergar
 DUERgAR CR 1/3
 XP 135
@@ -9735,7 +9534,7 @@ Duergar warrior 1
 LE Medium humanoid (dwarf)
 Init –1; Senses darkvision 120 ft; Perception +1
 Defense
-AC 17, touch 9, flat-footed 17 (+6 armor, –1 Dex, +2 shield)
+  AC 17, touch 9, flat-footed 17 (+6 armor, –1 Dex, +2 shield)
 hp 6 (1d8+2)
 Fort +4, Ref –1, Will +1; +2 vs. spells
 Immune paralysis, phantasms, poison
@@ -9816,13 +9615,12 @@ following: Aklo, Draconic, Giant, Goblin, Orc, Terran.
 
 117
 
-         
 gIAnT EAgLE CR 3
 XP 800
 NG Large magical beast
 Init +3; Senses low-light vision; Perception +15
 Defense
-AC 15, touch 12, flat-footed 12 (+3 Dex, +3 natural, –1 size)
+  AC 15, touch 12, flat-footed 12 (+3 Dex, +3 natural, –1 size)
 hp 26 (4d10+4)
 Fort +5, Ref +7, Will +3
 Defensive Abilities evasion
@@ -9870,7 +9668,7 @@ XP 200
 N Small animal 
 Init +2; Senses low-light vision; Perception +10
 Defense
-AC 14, touch 13, flat-footed 12 (+2 Dex, +1 natural, +1 size)
+  AC 14, touch 13, flat-footed 12 (+2 Dex, +1 natural, +1 size)
 hp 5 (1d8+1)
 Fort +3, Ref +4, Will +2
 Offense
@@ -9917,7 +9715,6 @@ species.
 
 118
 
-         
 EEaagglle–Eel
 
 e–Eel
@@ -9927,7 +9724,7 @@ XP 600
 N Small animal
 Init +6; Senses low-light vision; Perception +4
 Defense
-AC 15, touch 13, flat-footed 13 (+2 Dex, +2 natural, +1 size)
+  AC 15, touch 13, flat-footed 13 (+2 Dex, +2 natural, +1 size)
 hp 17 (2d8+8)
 Fort +7, Ref +5, Will +0
 Resist electricity 10
@@ -9980,7 +9777,7 @@ XP 1,600
 N Large animal (aquatic)
 Init +6; Senses low-light vision, scent; Perception +7
 Defense
-AC 19, touch 11, flat-footed 17 (+2 Dex, +8 natural, –1 size)
+  AC 19, touch 11, flat-footed 17 (+2 Dex, +8 natural, –1 size)
 hp 52 (7d8+21)
 Fort +8, Ref +9, Will +3
 Offense
@@ -10041,7 +9838,7 @@ XP 400
 N Small outsider (air, elemental, extraplanar)
 Init +7; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 17, touch 14, flat-footed 14 (+3 Dex, +3 natural, +1 size)
+  AC 17, touch 14, flat-footed 14 (+3 Dex, +3 natural, +1 size)
 hp 13 (2d10+2)
 Fort +4, Ref +6, Will +0
 Defensive Abilities air mastery; Immune elemental traits
@@ -10060,7 +9857,7 @@ XP 800
 N Medium outsider (air, elemental, extraplanar)
 Init +9; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 19, touch 16, flat-footed 13 (+5 Dex, +1 dodge, +3 natural)
+  AC 19, touch 16, flat-footed 13 (+5 Dex, +1 dodge, +3 natural)
 hp 30 (4d10+8)
 Fort +6, Ref +9, Will +1
 Defensive Abilities air mastery; Immune elemental traits
@@ -10080,7 +9877,7 @@ XP 1,600
 N Large outsider (air, elemental, extraplanar)
 Init +11; Senses darkvision 60 ft.; Perception +11
 Defense
-AC 21, touch 17, flat-footed 13 (+7 Dex, +1 dodge, +4 natural, –1 size)
+  AC 21, touch 17, flat-footed 13 (+7 Dex, +1 dodge, +4 natural, –1 size)
 hp 68 (8d10+24)
 Fort +9, Ref +13, Will +2
 Defensive Abilities air mastery; DR 5/—; Immune elemental traits
@@ -10101,7 +9898,7 @@ XP 3,200
 N Huge outsider (air, elemental, extraplanar)
 Init +13; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 22, touch 18, flat-footed 12 (+9 Dex, +1 dodge, +4 natural, –2 size)
+  AC 22, touch 18, flat-footed 12 (+9 Dex, +1 dodge, +4 natural, –2 size)
 hp 95 (10d10+40)
 Fort +11, Ref +16, Will +5
 Defensive Abilities air mastery; DR 5/—; Immune elemental traits
@@ -10122,14 +9919,13 @@ XP 6,400
 N Huge outsider (air, elemental, extraplanar)
 Init +14; Senses darkvision 60 ft.; Perception +16
 Defense
-AC 25, touch 19, flat-footed 14 (+10 Dex, +1 dodge, +6 natural, –2 size)
+  AC 25, touch 19, flat-footed 14 (+10 Dex, +1 dodge, +6 natural, –2 size)
 hp 123 (13d10+52)
 
 120
 
 120
 
-         
 EElemental, Air
 
 lemental, Air
@@ -10156,7 +9952,7 @@ N Huge outsider (air, elemental, extraplanar)
 Init +15; Senses darkvision 60 ft.; 
 Perception +19
 Defense
-AC 28, touch 20, flat-footed 16 (+11 Dex, +1 
+  AC 28, touch 20, flat-footed 16 (+11 Dex, +1 
 dodge, +8 natural, –2 size)
 hp 152 (16d10+64)
 Fort +14, Ref +21, Will +7
@@ -10236,7 +10032,7 @@ XP 400
 N Small outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +4
 Defense
-AC 17, touch 10, flat-footed 17 (–1 Dex, +7 natural, +1 size)
+  AC 17, touch 10, flat-footed 17 (–1 Dex, +7 natural, +1 size)
 hp 13 (2d10+2)
 Fort +4, Ref –1, Will +3
 Immune elemental traits
@@ -10256,7 +10052,7 @@ N Medium outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +7
 
 Defense
-AC 18, touch 9, flat-footed 18 (–1 Dex, +9 natural)
+  AC 18, touch 9, flat-footed 18 (–1 Dex, +9 natural)
 hp 34 (4d10+12)
 Fort +7, Ref +0, Will +4
 Immune elemental traits
@@ -10276,7 +10072,7 @@ N Large outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; 
 Perception +11
 Defense
-AC 18, touch 8, flat-footed 18 (–1 Dex, +10 natural, –1 size)
+  AC 18, touch 8, flat-footed 18 (–1 Dex, +10 natural, –1 size)
 hp 68 (8d10+24)
 Fort +9, Ref +1, Will +6
 DR 5/—; Immune elemental traits
@@ -10297,7 +10093,7 @@ XP 3,200
 N Huge outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +13
 Defense
-AC 19, touch 7, flat-footed 19 (–1 Dex, +12 natural, –2 size)
+  AC 19, touch 7, flat-footed 19 (–1 Dex, +12 natural, –2 size)
 hp 95 (10d10+40)
 Fort +11, Ref +2, Will +7
 DR 5/—; Immune elemental traits
@@ -10314,7 +10110,6 @@ up from the earth, faceless save for two glowing gemstone eyes.
 
 122
 
-         
 EElemental, Earth
 
 lemental, Earth
@@ -10331,7 +10126,7 @@ XP 6,400
 N Huge outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +16
 Defense
-AC 21, touch 7, flat-footed 21, (–1 Dex, +14 natural, –2 size)
+  AC 21, touch 7, flat-footed 21, (–1 Dex, +14 natural, –2 size)
 hp 136 (13d10+65)
 Fort +13, Ref +3, Will +8
 DR 10/—; Immune elemental traits
@@ -10353,7 +10148,7 @@ XP 12,800
 N Huge outsider (earth, elemental, extraplanar)
 Init –1; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +19
 Defense
-AC 23, touch 7, flat-footed 23 (–1 Dex, +16 natural, –2 size)
+  AC 23, touch 7, flat-footed 23 (–1 Dex, +16 natural, –2 size)
 hp 168 (16d10+80)
 Fort +15, Ref +4, Will +10
 DR 10/—; Immune elemental traits
@@ -10401,7 +10196,7 @@ XP 1,600
 N Large outsider (elemental, extraplanar, fire)
 Init +9; Senses darkvision 60 ft.; Perception +11
 Defense
-AC 19, touch 15, flat-footed 13 (+5 Dex, +1 dodge, +4 natural, –1 size)
+  AC 19, touch 15, flat-footed 13 (+5 Dex, +1 dodge, +4 natural, –1 size)
 hp 60 (8d10+16)
 Fort +8, Ref +11, Will +4
 DR 5/—; Immune elemental traits, fire
@@ -10423,7 +10218,7 @@ XP 3,200
 N Huge outsider (elemental, extraplanar, fire)
 Init +11; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 21, touch 16, flat-footed 13 (+7 Dex, +1 dodge, +5 natural, 
+  AC 21, touch 16, flat-footed 13 (+7 Dex, +1 dodge, +5 natural, 
 –2 size)
 hp 85 (10d10+30)
 Fort +9, Ref +14, Will +5
@@ -10446,7 +10241,7 @@ XP 6,400
 N Huge outsider (elemental, extraplanar, fire)
 Init +12; Senses darkvision 60 ft.; Perception +16
 Defense
-AC 23, touch 17, flat-footed 14 (+8 Dex, +1 dodge, +6 natural, –2 size)
+  AC 23, touch 17, flat-footed 14 (+8 Dex, +1 dodge, +6 natural, –2 size)
 
 This creature looks like a living, mobile bonfire, tongues of f lame 
 reaching out in search of things to burn.
@@ -10461,7 +10256,7 @@ XP 400
 N Small outsider (elemental, extraplanar, fire)
 Init +5; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 16, touch 13, flat-footed 14 (+1 Dex, +1 dodge, +3 natural, +1 size)
+  AC 16, touch 13, flat-footed 14 (+1 Dex, +1 dodge, +3 natural, +1 size)
 hp 11 (2d10)
 Fort +3, Ref +4, Will +0
 Immune elemental traits, fire
@@ -10481,7 +10276,7 @@ XP 800
 N Medium outsider (elemental, extraplanar, fire)
 Init +7; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 17, touch 14, flat-footed 13 (+3 Dex, +1 dodge, +3 natural)
+  AC 17, touch 14, flat-footed 13 (+3 Dex, +1 dodge, +3 natural)
 hp 30 (4d10+8)
 Fort +6, Ref +7, Will +1
 Immune elemental traits, fire
@@ -10501,7 +10296,6 @@ Knowledge (planes) +1, Perception +7
 
 124
 
-         
 EElemental, Fire
 
 lemental, Fire
@@ -10528,7 +10322,7 @@ XP 12,800
 N Huge outsider (elemental, extraplanar, fire)
 Init +13; Senses darkvision 60 ft.; Perception +19
 Defense
-AC 26, touch 18, flat-footed 16 (+9 Dex, +1 dodge, +8 natural, 
+  AC 26, touch 18, flat-footed 16 (+9 Dex, +1 dodge, +8 natural, 
 –2 size)
 hp 152 (16d10+64)
 Fort +14, Ref +19, Will +7
@@ -10601,7 +10395,7 @@ XP 400
 N Small outsider (elemental, extraplanar, water)
 Init +0; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 17, touch 11, flat-footed 17 (+6 natural, +1 size)
+  AC 17, touch 11, flat-footed 17 (+6 natural, +1 size)
 hp 13 (2d10+2)
 Fort +4, Ref +3, Will +0
 Immune elemental traits
@@ -10620,7 +10414,7 @@ XP 800
 N Medium outsider (elemental, extraplanar, water)
 Init +1; Senses darkvision 60 ft.; Perception +5
 Defense
-AC 17, touch 11, flat-footed 17 (+1 Dex, +6 natural)
+  AC 17, touch 11, flat-footed 17 (+1 Dex, +6 natural)
 
 hp 30 (4d10+8)
 Fort +6, Ref +5, Will +1
@@ -10640,7 +10434,7 @@ XP 1,600
 N Large outsider (elemental, extraplanar, water)
 Init +2; Senses darkvision 60 ft.; Perception +9
 Defense
-AC 18, touch 12, flat-footed 15 (+2 Dex, +1 dodge, +6 natural, 
+  AC 18, touch 12, flat-footed 15 (+2 Dex, +1 dodge, +6 natural, 
 –1 size)
 hp 68 (8d10+24)
 Fort +9, Ref +8, Will +2
@@ -10661,7 +10455,7 @@ XP 3,200
 N Huge outsider (elemental, extraplanar, water)
 Init +4; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 21, touch 13, flat-footed 16 (+4 Dex, +1 dodge, +8 natural, 
+  AC 21, touch 13, flat-footed 16 (+4 Dex, +1 dodge, +8 natural, 
 –2 size)
 hp 95 (10d10+40)
 Fort +11, Ref +11, Will +3
@@ -10682,7 +10476,6 @@ column of water and a crashing wave.
 
 126
 
-         
 EElemental, Water
 
 lemental, Water
@@ -10697,7 +10490,7 @@ XP 6,400
 N Huge outsider (elemental, extraplanar, water)
 Init +5; Senses darkvision 60 ft.; Perception +16
 Defense
-AC 23, touch 14, flat-footed 17 (+5 Dex, +1 dodge, +9 natural, 
+  AC 23, touch 14, flat-footed 17 (+5 Dex, +1 dodge, +9 natural, 
 –2 size)
 hp 123 (13d10+52)
 Fort +12, Ref +15, Will +4
@@ -10719,7 +10512,7 @@ XP 12,800
 N Huge outsider (elemental, extraplanar, water)
 Init +6; Senses darkvision 60 ft.; Perception +19
 Defense
-AC 24, touch 15, flat-footed 17 (+6 Dex, +1 dodge, +9 
+  AC 24, touch 15, flat-footed 17 (+6 Dex, +1 dodge, +9 
 natural, –2 size)
 hp 152 (16d10+64)
 Fort +14, Ref +18, Will +5
@@ -10767,7 +10560,7 @@ XP 3,200
 N Huge animal
 Init +0; Senses low-light vision, scent; Perception +21
 Defense
-AC 17, touch 8, flat-footed 17 (+9 natural, –2 size)
+  AC 17, touch 8, flat-footed 17 (+9 natural, –2 size)
 hp 93 (11d8+44)
 Fort +13, Ref +7, Will +6
 Offense
@@ -10799,7 +10592,7 @@ XP 6,400
 N Huge animal
 Init +1; Senses low-light vision, scent; Perception +24
 Defense
-AC 21, touch 9, flat-footed 20 (+1 Dex, +12 natural, –2 size)
+  AC 21, touch 9, flat-footed 20 (+1 Dex, +12 natural, –2 size)
 hp 133 (14d8+70)
 Fort +14, Ref +10, Will +7
 Offense
@@ -10851,7 +10644,6 @@ sweeping tusks and shaggy brown fur on its body.
 
 128
 
-         
 EElephant–Ettercap
 
 lephant–Ettercap
@@ -10862,7 +10654,7 @@ XP 800
 NE Medium aberration
 Init +7; Senses darkvision 60 ft., low-light vision; Perception +9
 Defense
-AC 15, touch 13, flat-footed 12 (+3 Dex, +2 natural)
+  AC 15, touch 13, flat-footed 12 (+3 Dex, +2 natural)
 hp 30 (4d8+12)
 Fort +6, Ref +4, Will +6
 Offense
@@ -10934,13 +10726,12 @@ if an opponent gets free.
 
 129
 
-         
 ETTIn CR 6
 XP 2,400
 CE Large humanoid (giant)
 Init +3; Senses low-light vision; Perception +12
 Defense
-AC 18, touch 8, flat-footed 18; (+2 armor, –1 Dex, +8 natural, 
+  AC 18, touch 8, flat-footed 18; (+2 armor, –1 Dex, +8 natural, 
 –1 size)
 hp 65 (10d8+20)
 Fort +9, Ref +2, Will +5
@@ -11035,7 +10826,7 @@ XP 50
 N Diminutive animal 
 Init +2; Senses blindsense 20 ft., low-light vision; Perception +6
 Defense
-AC 16, touch 16, flat-footed 14 (+2 Dex, +4 size)
+  AC 16, touch 16, flat-footed 14 (+2 Dex, +4 size)
 hp 2 (1d8–2)
 Fort +0, Ref +4, Will +2
 Offense
@@ -11061,7 +10852,7 @@ XP 100
 N Tiny animal 
 Init +2; Senses low-light vision, scent; Perception +5
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +1
 Offense
@@ -11085,7 +10876,7 @@ XP 135
 N Tiny animal
 Init +3; Senses low-light vision; Perception +14
 Defense
-AC 15, touch 15, flat-
+  AC 15, touch 15, flat-
 footed 12 (+3 Dex, 
  +2 size)
 hp 4 (1d8)
@@ -11114,7 +10905,7 @@ XP 65
 N Tiny animal 
 Init +2; Senses low-light vision; Perception +1
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +1
 Offense
@@ -11127,7 +10918,6 @@ Base Atk +0; CMB +0; CMD 6 (10 vs. trip) 131
 
 131
 
-         
 Feats Weapon Finesse 
 Skills Acrobatics +10, Climb +10, Stealth +14; Racial Modifiers 
 +8 Acrobatics
@@ -11142,7 +10932,7 @@ XP 100
 N Tiny animal
 Init +2; Senses low-light vision; Perception +5
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
@@ -11166,7 +10956,7 @@ XP 135
 N Tiny animal
 Init +3; Senses low-light vision; Perception +10
 Defense
-AC 15, touch 15, flat-footed 12 (+3 Dex, +2 size)
+  AC 15, touch 15, flat-footed 12 (+3 Dex, +2 size)
 hp 4 (1d8)
 Fort +2, Ref +5, Will +2
 Offense
@@ -11191,7 +10981,7 @@ XP 100
 N Tiny animal
 Init +2; Senses low-light vision, scent; Perception +1
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
@@ -11216,7 +11006,6 @@ urban areas.
 
 132
 
-         
 FFaammiiliar
 
 liar
@@ -11226,7 +11015,7 @@ XP 65
 N Tiny animal
 Init +2; Senses low-light vision; Perception +6
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 3 (1d8–1)
 Fort +1, Ref +4, Will +2
 Offense
@@ -11249,7 +11038,7 @@ XP 50
 N Diminutive animal 
 Init +1; Senses low-light vision, scent; Perception +5
 Defense
-AC 15, touch 15, flat-footed 14 (+1 Dex, +4 size)
+  AC 15, touch 15, flat-footed 14 (+1 Dex, +4 size)
 hp 2 (1d8–2)
 Fort +0, Ref +3, Will +2
 Offense
@@ -11271,7 +11060,7 @@ N Tiny animal
 Init +3; Senses low-light vision, scent; Perception +9
 
 Defense
-AC 16, touch 15, flat-footed 13 (+3 Dex, +1 natural, +2 size)
+  AC 16, touch 15, flat-footed 13 (+3 Dex, +1 natural, +2 size)
 hp 3 (1d8–1)
 Fort +1, Ref +5, Will +1
 Offense
@@ -11298,7 +11087,7 @@ XP 200
 N Tiny animal 
 Init +2; Senses low-light vision, scent; Perception +1
 Defense
-AC 15, touch 14, flat-footed 13 (+2 Dex, +1 natural, +2 size)
+  AC 15, touch 14, flat-footed 13 (+2 Dex, +1 natural, +2 size)
 hp 4 (1d8)
 Fort +2, Ref +4, Will +1
 Offense
@@ -11330,7 +11119,7 @@ N Huge plant
 Init +8; Senses low-light vision, tremorsense 60 ft.; 
 Perception +10
 Defense
-AC 22, touch 12, flat-footed 18 (+4 Dex, +10 natural, –2 size)
+  AC 22, touch 12, flat-footed 18 (+4 Dex, +10 natural, –2 size)
 hp 149 (13d8+91)
 Fort +17, Ref +8, Will +5
 Immune mind-affecting effects, paralysis, poison, polymorph, 
@@ -11433,14 +11222,13 @@ are horribly mobile, each ending in a set of green, toothy jaws.
 
 134
 
-         
 Frog, Giant Frog, Poison
 gIAnT fROg CR 1
 XP 400
 N Medium Animal 
 Init +1; Senses low-light vision, scent; Perception +3
 Defense
-AC 12, touch 11, flat-footed 11 (+1 Dex, +1 natural)
+  AC 12, touch 11, flat-footed 11 (+1 Dex, +1 natural)
 hp 15 (2d8+6)
 Fort +6, Ref +6, Will –1
 Offense
@@ -11487,7 +11275,7 @@ XP 200
 N Tiny animal
 Init +1; Senses low-light vision; Perception +3
 Defense
-AC 13, touch 13, flat-footed 12 (+1 Dex, +2 size)
+  AC 13, touch 13, flat-footed 12 (+1 Dex, +2 size)
 hp 4 (1d8)
 Fort +2, Ref +3, Will –1
 Offense
@@ -11532,7 +11320,6 @@ nt–Frog
 
 135
 
-         
 Froghemoth
 fROghEMOTh CR 13
 XP 25,600
@@ -11540,7 +11327,7 @@ N Huge aberration
 Init +5; Senses all-around vision, blindsight 30 ft., darkvision 
 60 ft.; Perception +16
 Defense
-AC 28, touch 9, flat-footed 27 (+1 Dex, +19 natural, –2 size)
+  AC 28, touch 9, flat-footed 27 (+1 Dex, +19 natural, –2 size)
 hp 184 (16d8+112)
 Fort +12, Ref +8, Will +11
 Immune electricity (partial); Resist fire 10
@@ -11618,14 +11405,13 @@ weighs 16,000 pounds.
 
 136
 
-         
 Gargoyle
 gARgOyLE CR 4
 XP 1,200
 CE Medium monstrous humanoid (earth)
 Init +6; Senses darkvision 60 ft.; Perception +5
 Defense
-AC 16, touch 12, flat-footed 14 (+2 Dex, +4 natural)
+  AC 16, touch 12, flat-footed 14 (+2 Dex, +4 natural)
 hp 42 (5d10+15)
 Fort +4, Ref +6, Will +4
 DR 10/magic
@@ -11697,14 +11483,13 @@ living to a solitary lifestyle.
 
 137
 
-         
 Gelatinous Cube
 gELATInOUS CUBE CR 3
 XP 800
 N Large ooze
 Init –5; Senses blindsight 60 ft.; Perception –5
 Defense
-AC 4, touch 4, flat-footed 4 (–5 Dex, –1 size)
+  AC 4, touch 4, flat-footed 4 (–5 Dex, –1 size)
 hp 50 (4d8+32)
 Fort +9, Ref –4, Will –4
 Immune electricity, ooze traits
@@ -11787,14 +11572,13 @@ are visible inside this quivering cube of slime.
 
 138
 
-         
 Genie, Djinni
 DjInnI CR 5
 XP 1,600
 CG Large outsider (air, extraplanar)
 Init +8; Senses darkvision 60 ft.; Perception +12
 Defense
-AC 19, touch 14, flat-footed 14 (+4 Dex, +1 dodge, +5 natural, –1 size)
+  AC 19, touch 14, flat-footed 14 (+4 Dex, +1 dodge, +5 natural, –1 size)
 hp 52 (7d10+14)
 Fort +4, Ref +9, Will +7
 Immune acid
@@ -11863,14 +11647,13 @@ who captures them. Djinn nobles are CR 8.
 
 139
 
-         
 Genie, Efreeti
 EfREETI CR 8
 XP 4,800
 LE Large outsider (extraplanar, fire)
 Init +7; Senses darkvision 60 ft., detect magic; Perception +15
 Defense
-AC 21, touch 13, flat-footed 17 (+3 Dex, +1 dodge, +8 natural, –1 size)
+  AC 21, touch 13, flat-footed 17 (+3 Dex, +1 dodge, +8 natural, –1 size)
 hp 95 (10d10+40)
 Fort +7, Ref +10, Will +9
 Immune fire; Vulnerability cold
@@ -11938,7 +11721,6 @@ small black horns. Smoke rises in curls from its f lesh.
 
 140
 
-         
 GGeenniiee,,  EEffrreeeti–Genie, Janni
 
 eti–Genie, Janni
@@ -11949,7 +11731,7 @@ XP 1,200
 N Medium outsider (native)
 Init +6; Senses darkvision 60 ft.; Perception +11
 Defense
-AC 20, touch 13, flat-footed 17 (+6 armor, +2 Dex, +1 dodge, 
+  AC 20, touch 13, flat-footed 17 (+6 armor, +2 Dex, +1 dodge, 
 +1 natural)
 hp 39 (6d10+6)
 Fort +6, Ref +7, Will +4
@@ -12051,13 +11833,12 @@ spell-like abilities is 12th. Noble jann are CR 7. 141
 
 141
 
-         
 MARID CR 9
 XP 6,400
 CN Large outsider (extraplanar, water)
 Init +8; Senses darkvision 60 ft.; Perception +17
 Defense
-AC 23, touch 14, flat-footed 18 (+4 Dex, +1 dodge, +9 natural, 
+  AC 23, touch 14, flat-footed 18 (+4 Dex, +1 dodge, +9 natural, 
 –1 size)
 hp 114 (12d10+48)
 Fort +10, Ref +12, Will +10
@@ -12162,7 +11943,6 @@ skin, deep blue eyes, f lamboyant eyebrows, and pearlescent teeth.
 
 142
 
-         
 Genie, Shaitan
 ShAITAn CR 7
 XP 3,200
@@ -12170,7 +11950,7 @@ LN Large outsider (earth, extraplanar)
 Init +5; Senses darkvision 60 ft., tremorsense 60 ft.; 
 Perception +14
 Defense
-AC 20, touch 10, flat-footed 19 (+1 Dex, +10 natural, –1 size)
+  AC 20, touch 10, flat-footed 19 (+1 Dex, +10 natural, –1 size)
 hp 85 (9d10+36)
 Fort +10, Ref +4, Will +8
 Immune electricity
@@ -12256,7 +12036,7 @@ Human ghost aristocrat 7
 CE Medium undead (augmented humanoid, incorporeal)
 Init +5; Senses darkvision 60 ft.; Perception +18
 Defense
-AC 17, touch 17, flat-footed 15 (+1 Dex, +1 dodge, +5 deflection)
+  AC 17, touch 17, flat-footed 15 (+1 Dex, +1 dodge, +5 deflection)
 hp 73 (7d8+42)
 Fort +7, Ref +6, Will +7
 Defensive Abilities channel resistance +4, incorporeal, 
@@ -12355,7 +12135,6 @@ resting in peace. The exact means varies with each spirit
 
 144
 
-         
 GGhhoosstt
 
 and may require a good deal of research, and should be 
@@ -12438,7 +12217,7 @@ XP 400
 CE Medium undead 
 Init +2; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 13 (2d8+4)
 Fort +2, Ref +2, Will +5
 Defensive Abilities channel resistance +2
@@ -12510,14 +12289,13 @@ swim speed of 30 feet.
 
 146
 
-         
 Giant, Cloud
 CLOUD gIAnT CR 11
 XP 12,800
 NG or NE Huge humanoid (giant)
 Init +1; Senses low-light vision, scent; Perception +17
 Defense
-AC 25, touch 9, flat-footed 24 (+4 armor, +1 Dex, +12 natural, 
+  AC 25, touch 9, flat-footed 24 (+4 armor, +1 Dex, +12 natural, 
 –2 size)
 hp 168 (16d8+96)
 Fort +16, Ref +6, Will +10
@@ -12597,7 +12375,7 @@ XP 9,600
 LE Large humanoid (fire, giant)
 Init –1; Senses low-light vision; Perception +14
 Defense
-AC 23, touch 8, flat-footed 23 (+7 armor, –1 Dex, +8 natural, –1 size)
+  AC 23, touch 8, flat-footed 23 (+7 armor, –1 Dex, +8 natural, –1 size)
 hp 142 (15d8+75)
 Fort +14, Ref +4, Will +9
 Defensive Abilities rock catching; Immune fire
@@ -12666,14 +12444,13 @@ muscular arms. Its hair and beard seem to be made of fire.
 
 148
 
-         
 Giant, Frost
 fROST gIAnT CR 9
 XP 6,400
 CE Large humanoid (cold, giant)
 Init –1; Senses low-light vision; Perception +10
 Defense
-AC 21, touch 8, flat-footed 21 (+4 armor, –1 Dex, +9 natural, –1 size)
+  AC 21, touch 8, flat-footed 21 (+4 armor, –1 Dex, +9 natural, –1 size)
 hp 133 (14d8+70)
 Fort +14, Ref +3, Will +6
 Defensive Abilities rock catching; Immune cold
@@ -12787,7 +12564,7 @@ XP 3,200
 CE Large humanoid (giant)
 Init –1; Senses low-light vision; Perception +6
 Defense
-AC 21, touch 8, flat-footed 21 (+4 armor, –1 Dex, +9 natural, –1 size)
+  AC 21, touch 8, flat-footed 21 (+4 armor, –1 Dex, +9 natural, –1 size)
 hp 85 (10d8+40)
 Fort +11, Ref +2, Will +3
 Defensive Abilities rock catching
@@ -12860,14 +12637,13 @@ filthy fur clothing bespeaking a brutish and backwoods lifestyle.
 
 150
 
-         
 Giant, Stone
 STOnE gIAnT CR 8
 XP 4,800
 N Large humanoid (giant)
 Init +2; Senses darkvision 60 ft., low-light vision; Perception +12
 Defense
-AC 22, touch 11, flat-footed 20 (+2 Dex, +11 natural, –1 size)
+  AC 22, touch 11, flat-footed 20 (+2 Dex, +11 natural, –1 size)
 hp 102 (12d8+48)
 Fort +12, Ref +6, Will +7
 Defensive Abilities improved rock catching
@@ -12944,7 +12720,7 @@ XP 25,600
 CG Huge humanoid (giant)
 Init +2; Senses low-light vision; Perception +27
 Defense
-AC 28, touch 10, flat-footed 26 (+6 armor, +2 Dex, +12 natural, 
+  AC 28, touch 10, flat-footed 26 (+6 armor, +2 Dex, +12 natural, 
 –2 size)
 hp 199 (19d8+114)
 Fort +17, Ref +8, Will +13
@@ -13048,14 +12824,13 @@ stretch of coastline.
 
 152
 
-         
 Gibbering Mouther
 gIBBERIng MOUThER CR 5
 XP 1,600
 N Medium aberration
 Init +3; Senses all-around vision, darkvision 60 ft.; Perception +12
 Defense
-AC 19, touch 13, flat-footed 16 (+3 Dex, +6 natural)
+  AC 19, touch 13, flat-footed 16 (+3 Dex, +6 natural)
 hp 46 (4d8+28)
 Fort +8, Ref +4, Will +5
 Defensive Abilities amorphous; DR 5/bludgeoning; Immune 
@@ -13139,7 +12914,6 @@ those who have offended it.
 
 153
 
-         
 Girallon
 gIRALLOn CR 6
 XP 2,400
@@ -13147,7 +12921,7 @@ N Large magical beast
 Init +7; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +11
 Defense
-AC 18, touch 12, flat-footed 15 (+3 Dex, +6 natural, –1 size)
+  AC 18, touch 12, flat-footed 15 (+3 Dex, +6 natural, –1 size)
 hp 73 (7d10+35)
 Fort +9, Ref +8, Will +5
 Offense
@@ -13217,14 +12991,13 @@ fur, roars in rage as it rears up to its full, towering height.
 
 154
 
-         
 Gnoll
 gnOLL CR 1
 XP 400
 CE Medium humanoid (gnoll)
 Init +0; Senses darkvision 60 ft.; Perception +2
 Defense
-AC 15, touch 10, flat-footed 15 (+2 armor, +1 natural, +2 shield)
+  AC 15, touch 10, flat-footed 15 (+2 armor, +1 natural, +2 shield)
 hp 11 (2d8+2)
 Fort +4, Ref +0, Will +0
 Offense
@@ -13299,7 +13072,6 @@ see a gnoll bard, sorcerer, or wizard.
 
 155
 
-         
 Goblin
 gOBLIn CR 1/3
 XP 135
@@ -13307,7 +13079,7 @@ Goblin warrior 1
 NE Small humanoid (goblinoid)
 Init +6; Senses darkvision 60 ft.; Perception –1
 Defense
-AC 16, touch 13, flat-footed 14 (+2 armor, +2 Dex, +1 shield, 
+  AC 16, touch 13, flat-footed 14 (+2 armor, +2 Dex, +1 shield, 
 +1 size)
 hp 6 (1d10+1)
 Fort +3, Ref +2, Will –1
@@ -13383,7 +13155,6 @@ body dwarfed by its wide, ungainly head.
 
 156
 
-         
 GGoobblin–Goblin Dog
 
 lin–Goblin Dog
@@ -13394,7 +13165,7 @@ XP 400
 N Medium animal 
 Init +2; Senses low-light vision, scent; Perception +1
 Defense
-AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
+  AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
 hp 9 (1d8+5)
 Fort +4, Ref +4, Will +1
 Immune disease
@@ -13578,14 +13349,13 @@ and either shield or shield other.
 
 158
 
-         
 Golem, Clay
 CLAy gOLEM CR 10
 XP 9,600
 N Large construct
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +0
 Defense
-AC 24, touch 8, flat-footed 24 (–1 Dex, +16 natural, –1 size)
+  AC 24, touch 8, flat-footed 24 (–1 Dex, +16 natural, –1 size)
 hp 101 (13d10+30)
 Fort +4, Ref +3, Will +4
 DR 10/adamantine and bludgeoning; Immune construct 
@@ -13669,7 +13439,7 @@ XP 3,200
 N Large construct
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +0
 Defense
-AC 20, touch 8, flat-footed 20; (–1 Dex, +12 natural, –1 size)
+  AC 20, touch 8, flat-footed 20; (–1 Dex, +12 natural, –1 size)
 hp 79 (9d10+30)
 Fort +3, Ref +2, Will +3
 DR 5/adamantine; Immune construct traits, magic
@@ -13768,13 +13538,12 @@ Cost 10,500 gp
 
 160
 
-         
 ICE gOLEM CR 5
 XP 1,600
 N Medium construct (cold)
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +0
 Defense
-AC 17, touch 9, flat-footed 17 (–1 Dex, +8 natural)
+  AC 17, touch 9, flat-footed 17 (–1 Dex, +8 natural)
 hp 53 (6d10+20)
 Fort +2, Ref +1, Will +2
 DR 5/adamantine; Immune construct traits, cold, magic
@@ -13847,7 +13616,6 @@ level 12th; Skill Craft (sculptures) DC 17; Cost 9,500 gp
 
 161
 
-         
 Golem, Iron
 IROn gOLEM CR 13
 XP 25,600
@@ -13855,7 +13623,7 @@ N Large construct
 Init –1; Senses darkvision 60 ft., low-light vision; 
 Perception +0
 Defense
-AC 28, touch 8, flat-footed 28 (–1 Dex, +20 natural, –1 size)
+  AC 28, touch 8, flat-footed 28 (–1 Dex, +20 natural, –1 size)
 hp 129 (18d10+30)
 Fort +6, Ref +5, Will +6
 DR 15/adamantine; Immune construct traits, magic
@@ -13956,7 +13724,6 @@ be caster level 16th; Skill Craft (armor) or Craft
 
 162
 
-         
 Golem, Stone
 STOnE gOLEM CR 11
 XP 12,800
@@ -13964,7 +13731,7 @@ N Large construct
 Init –1; Senses darkvision 60 ft., low-light vision; 
 Perception +0
 Defense
-AC 26, touch 8, flat-footed 26 (–1 Dex, +18 natural, –1 size)
+  AC 26, touch 8, flat-footed 26 (–1 Dex, +18 natural, –1 size)
 hp 107 (14d10+30)
 Fort +4, Ref +3, Will +4
 DR 10/adamantine; Immune construct traits, magic
@@ -14037,7 +13804,7 @@ XP 2,400
 N Medium construct
 Init +3; Senses darkvision 60 ft., low-light vision; Perception +0
 Defense
-AC 19, touch 13, flat-footed 16 (+3 Dex, +6 natural)
+  AC 19, touch 13, flat-footed 16 (+3 Dex, +6 natural)
 hp 64 (8d10+20)
 Fort +2, Ref +5, Will +2
 DR 5/adamantine; Immune construct traits, magic
@@ -14105,7 +13872,6 @@ made of cast-off pieces of wood.
 
 164
 
-         
 Gorgon
 gORgOn CR 8
 XP 4,800
@@ -14113,7 +13879,7 @@ N Large magical beast
 Init +4; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +17
 Defense
-AC 20, touch 9, flat-footed 20 (+11 natural, –1 size)
+  AC 20, touch 9, flat-footed 20 (+11 natural, –1 size)
 hp 100 (8d10+56)
 Fort +13, Ref +6, Will +7
 Offense
@@ -14191,14 +13957,13 @@ GGoolleemm,, WWoooodd––GGoorrggoonn
 
 165
 
-         
 Gray Ooze
 gRAy OOzE CR 4
 XP 1,200
 N Medium ooze
 Init –5; Senses blindsight 60 ft.; Perception –5
 Defense
-AC 5, touch 5, flat-footed 5 (–5 Dex)
+  AC 5, touch 5, flat-footed 5 (–5 Dex)
 hp 50 (4d8+32)
 Fort +9, Ref –4, Will –4
 Defensive Abilities ooze traits; Immune cold, fire
@@ -14302,14 +14067,13 @@ is suddenly revealed to be more as a terrible pseudopod lashes out.
 
 166
 
-         
 Green Hag
 gREEn hAg CR 5
 XP 1,600
 CE Medium monstrous humanoid
 Init +1; Senses darkvision 90 ft.; Perception +15
 Defense
-AC 19, touch 11, flat-footed 18 (+1 Dex, +8 natural)
+  AC 19, touch 11, flat-footed 18 (+1 Dex, +8 natural)
 hp 58 (9d10+9)
 Fort +6, Ref +7, Will +7
 SR 16
@@ -14416,7 +14180,6 @@ ay Ooze–Green Hag
 
 167
 
-         
 Griffon
 gRIffOn CR 4
 XP 1,200
@@ -14424,7 +14187,7 @@ N Large magical beast
 Init +2; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +12
 Defense
-AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
+  AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
 hp 42 (5d10+15)
 Fort +7, Ref +6, Will +4
 Offense
@@ -14502,7 +14265,6 @@ load. Riding a griffon requires an exotic saddle.
 
 168
 
-         
 Half-Celestial
 hALf-CELESTIAL UnICORn CR 4
 XP 1,200
@@ -14511,7 +14273,7 @@ Init +4; Senses darkvison 60 ft., low-light vision, scent;
 Perception +14
 Aura magic circle against evil*
 Defense
-AC 17, touch 13, flat-footed 13 (+4 Dex, +4
+  AC 17, touch 13, flat-footed 13 (+4 Dex, +4
 natural, –1 size; +2 deflection vs. evil)
 hp 42 (4d10+20)
 Fort +9, Ref +8, Will +8; +4 vs. poison
@@ -14568,7 +14330,7 @@ Type: The creature’s type changes to outsider (native).
 Do not recalculate HD, BAB, or saves.
 Armor Class: Natural armor improves by +1.
 Defenses/Qualities: It gains darkvision 60 feet; immunity 
-to disease; +4 racial bonus on saves vs. poison; acid, cold, and 
+  to disease; +4 racial bonus on saves vs. poison; acid, cold, and 
 electricity resist 10; DR 5/magic (if HD 11 or less) or 10/magic 
 (if HD 12 or more); and SR equal to CR + 11 (maximum 35). 
 
@@ -14602,7 +14364,6 @@ per racial Hit Die equal to 6 + its Intelligence modifier. 169
 
 169
 
-         
 Half-Dragon
 DRACOLISk CR 7
 XP 3,200
@@ -14610,7 +14371,7 @@ Half-black dragon basilisk
 N Medium dragon
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +14
 Defense
-AC 21, touch 9, flat-footed 21 (–1 Dex, +12 natural)
+  AC 21, touch 9, flat-footed 21 (–1 Dex, +12 natural)
 hp 73 (7d10+35)
 Fort +12, Ref +4, Will +5
 Immune acid, sleep, paralysis
@@ -14644,7 +14405,7 @@ Type: Creature type changes to dragon. Do not
 recalculate HD, BAB, or saves.
 Armor Class: Nat. armor improves by +4.
 Special Qualities and Defenses: A 
-half-dragon gains darkvision 60 feet; 
+  half-dragon gains darkvision 60 feet; 
 low-light vision; and immunity to sleep, 
 paralysis, and energy of the same type as 
 its breath weapon.
@@ -14684,14 +14445,13 @@ head to glare with hideous glowing eyes.
 
 170
 
-         
 Half-Fiend
 hALf-fIEnD MInOTAUR CR 6
 XP 2,400
 CE Large outsider (native)
 Init +2; Senses darkvision 60 ft.; Perception +14
 Defense
-AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
+  AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
 hp 57 (6d10+24)
 Fort +8, Ref +7, Will +6
 Defensive Abilities natural cunning*; DR 5/magic; Immune 
@@ -14729,7 +14489,7 @@ Type: The creature’s type changes to outsider (native).
 Do not recalculate HD, BAB, or saves.
 Armor Class: Natural armor improves by +1.
 Defenses/Qualities: Gains darkvision 60 feet; immunity 
-to poison; acid, cold, electricity, and fire resistance 10; DR 
+  to poison; acid, cold, electricity, and fire resistance 10; DR 
 5/magic (if HD 11 or less) or 10/magic (if HD 12 or more); 
 and SR equal to creature’s CR + 11 (maximum 35).
 
@@ -14774,7 +14534,7 @@ XP 1,200
 CE Medium monstrous humanoid
 Init +2; Senses darkvision 60 ft.; Perception +7
 Defense
-AC 16, touch 13, flat-footed 13 (+2 armor, +2 Dex, +1 dodge, 
+  AC 16, touch 13, flat-footed 13 (+2 armor, +2 Dex, +1 dodge, 
 +1 natural)
 hp 38 (7d10)
 Fort +4, Ref +7, Will +6
@@ -14844,7 +14604,6 @@ resembles a feral woman with a wild look about her.
 
 172
 
-         
 HHaarrppy–Hell Hound
 
 y–Hell Hound
@@ -14855,7 +14614,7 @@ XP 800
 LE Medium outsider (evil, extraplanar, fire, lawful)
 Init +5; Senses darkvision 60 ft., scent; Perception +7
 Defense
-AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
+  AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
 hp 30 (4d10+8)
 Fort +6, Ref +5, Will +1
 Immune fire
@@ -14903,7 +14662,7 @@ XP 6,400
 LE Large outsider (evil, extraplanar, fire, lawful)
 Init +6; Senses darkvision 60 ft., scent; Perception +12
 Defense
-AC 24, touch 11, flat-footed 22 (+6 armor, +2 Dex, +7 natural, –1 size)
+  AC 24, touch 11, flat-footed 22 (+6 armor, +2 Dex, +7 natural, –1 size)
 hp 126 (12d10+60)
 Fort +13, Ref +10, Will +5
 Immune fire
@@ -14961,7 +14720,7 @@ XP 600
 N Large animal
 Init +0; Senses low-light vision, scent; Perception +9
 Defense
-AC 13, touch 9, flat-footed 13 (+4 natural, –1 size)
+  AC 13, touch 9, flat-footed 13 (+4 natural, –1 size)
 hp 22 (3d8+9)
 Fort +6, Ref +3, Will +1
 Offense
@@ -15008,7 +14767,7 @@ XP 1,200
 N Large animal
 Init +0; Senses low-light vision, scent; Perception +8
 Defense
-AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
+  AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
 hp 42 (5d8+20)
 Fort +8, Ref +4, Will +1
 Offense
@@ -15062,7 +14821,6 @@ fur, and a large hump on its shoulders.
 
 174
 
-         
 Hobgoblin
 hOBgOBLIn CR 1/2
 XP 200
@@ -15070,7 +14828,7 @@ Hobgoblin fighter 1
 LE Medium humanoid (goblinoid)
 Init +2; Senses darkvision 60 ft.; Perception +2
 Defense
-AC 16, touch 12, flat-footed 14 (+3 armor, +2 Dex, +1 shield)
+  AC 16, touch 12, flat-footed 14 (+3 armor, +2 Dex, +1 shield)
 hp 11 (1d10+6)
 Fort +5, Ref +2, Will +1
 Offense
@@ -15176,7 +14934,6 @@ lin
 
 175
 
-         
 Homunculus
 This vaguely humanoid creature is about the size of a cat but 
 looks more like a toothy, winged devil.
@@ -15185,7 +14942,7 @@ XP 400
 Any alignment (same as creator) Tiny construct 
 Init +2; Senses darkvision 60 ft., low-light vision; Perception +3
 Defense
-AC 14, touch 14, flat-footed 
+  AC 14, touch 14, flat-footed 
 12 (+2 Dex, +2 size)
 hp 11 (2d10)
 Fort +0, Ref +4, Will +1
@@ -15284,13 +15041,12 @@ mending; Skill Craft (leather) or Craft (sculptures) DC 12; Cost
 
 176
 
-         
 hORSE CR 1
 XP 400
 N Large animal
 Init +2; Senses low-light vision, scent; Perception +6
 Defense
-AC 11, touch 11, flat-footed 9 (+2 Dex, –1 size)
+  AC 11, touch 11, flat-footed 9 (+2 Dex, –1 size)
 hp 15 (2d8+6)
 Fort +6, Ref +5, Will +1
 Offense
@@ -15339,7 +15095,7 @@ XP 200
 N Medium animal
 Init +1; Senses low-light vision, scent; Perception +5
 Defense
-AC 11, touch 11, flat-footed 10 (+1 Dex)
+  AC 11, touch 11, flat-footed 10 (+1 Dex)
 hp 13 (2d8+4)
 Fort +5, Ref +4, Will +0
 Offense
@@ -15396,7 +15152,6 @@ lus–Horse
 
 177
 
-         
 Hydra
 hyDRA CR 4
 XP 1,200
@@ -15404,7 +15159,7 @@ N Huge magical beast
 Init +1; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +10
 Defense
-AC 15, touch 9, flat-footed 14 (+1 Dex, +6 natural, –2 size)
+  AC 15, touch 9, flat-footed 14 (+1 Dex, +6 natural, –2 size)
 hp 47 (5d10+20); fast healing 5
 Fort +9, Ref +7, Will +3
 Offense
@@ -15474,14 +15229,13 @@ hydra variants.
 
 178
 
-         
 Hyena Hyena, Dire
 hyEnA CR 1
 XP 400
 N Medium animal
 Init +2; Senses low-light vision, scent; Perception +7
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
@@ -15528,7 +15282,7 @@ XP 800
 N Large animal
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 15, touch 11, flat-footed 13 (+2 Dex, +4 natural, –1 size)
+  AC 15, touch 11, flat-footed 13 (+2 Dex, +4 natural, –1 size)
 hp 26 (4d8+8)
 Fort +6, Ref +6, Will +2
 Offense
@@ -15571,14 +15325,13 @@ HHyyddrraa––HHyyeennaa
 
 179
 
-         
 Intellect Devourer
 InTELLECT DEVOURER CR 8
 XP 4,800
 CE Small aberration 
 Init +10; Senses blindsight 60 ft., detect magic; Perception +19
 Defense
-AC 22, touch 17, flat-footed 16 (+6 Dex, +5 natural, +1 size)
+  AC 22, touch 17, flat-footed 16 (+6 Dex, +5 natural, +1 size)
 hp 84 (8d8+48)
 Fort +7, Ref +8, Will +8
 DR 10/adamantine and magic; Immune fire, mind-affecting 
@@ -15659,14 +15412,13 @@ legs, this creature’s body looks like a large, glistening brain.
 
 180
 
-         
 Invisible Stalker
 InVISIBLE STALkER CR 7
 XP 3,200
 N Medium outsider (air, elemental, extraplanar)
 Init +8; Senses darkvision 60 ft.; Perception +12
 Defense
-AC 20, touch 14, flat-footed 16 (+4 Dex, +6 natural)
+  AC 20, touch 14, flat-footed 16 (+4 Dex, +6 natural)
 hp 80 (7d10+42)
 Fort +13, Ref +11, Will +4
 Defensive Abilities natural invisibility; Immune elemental traits
@@ -15742,14 +15494,13 @@ ntellect Devourer–Invisible Stalker
 
 181
 
-         
 Iron Cobra
 IROn COBRA CR 2
 XP 600
 N Small construct 
 Init +2; Senses darkvision 60 ft., low-light vision; Perception +0
 Defense
-AC 20, touch 13, flat-footed 18 (+2 Dex, +7 natural, +1 size)
+  AC 20, touch 13, flat-footed 18 (+2 Dex, +7 natural, +1 size)
 hp 15 (1d10+10)
 Fort +0, Ref +2, Will +0
 DR 5/—; Immune construct traits; SR 13
@@ -15829,7 +15580,6 @@ of overlapping iron plates, and its eyes are pinpoints of red light.
 
 182
 
-         
 Kobold
 kOBOLD CR 1/4
 XP 100
@@ -15837,7 +15587,7 @@ Kobold warrior 1
 LE Small humanoid (reptilian)
 Init +1; Senses darkvision 60 ft.; Perception +4
 Defense
-AC 15, touch 12, flat-footed 14 (+2 armor, +1 Dex, +1 natural, +1 size)
+  AC 15, touch 12, flat-footed 14 (+2 armor, +1 Dex, +1 natural, +1 size)
 hp 4 (1d8)
 Fort +2, Ref +1, Will –1
 Weaknesses light sensitivity
@@ -15943,14 +15693,13 @@ ld
 
 183
 
-         
 Kraken
 kRAkEn CR 18
 XP 153,600
 NE Gargantuan magical beast (aquatic)
 Init +4; Senses darkvision 120 ft., low-light vision; Perception +28
 Defense
-AC 32, touch 6, flat-footed 32 (+26 natural, –4 size)
+  AC 32, touch 6, flat-footed 32 (+26 natural, –4 size)
 hp 290 (20d10+180)
 Fort +21, Ref +12, Will +11
 Immune cold, mind-affecting effects, poison
@@ -16032,14 +15781,13 @@ feet in length and weighs
 
 184
 
-         
 Kyton
 kyTOn CR 6
 XP 2,400
 LE Medium outsider (evil, extraplanar, kyton, lawful)
 Init +7; Senses darkvision 60 ft.; Perception +14
 Defense
-AC 21, touch 13, flat-footed 18 (+4 armor, +3 Dex, +4 natural)
+  AC 21, touch 13, flat-footed 18 (+4 armor, +3 Dex, +4 natural)
 hp 60 (8d10+16); regeneration 2 (good weapons and spells, 
 silver weapons)
 Fort +8, Ref +9, Will +3
@@ -16143,14 +15891,13 @@ unfortunate victims. 185
 
 185
 
-         
 Lamia
 LAMIA CR 6
 XP 2,400
 CE Large monstrous humanoid
 Init +3; Senses darkvision 60 ft., low-light vision; Perception +15
 Defense
-AC 20, touch 13, flat-footed 16 (+3 Dex, +1 dodge, +7 natural, –1 size)
+  AC 20, touch 13, flat-footed 16 (+3 Dex, +1 dodge, +7 natural, –1 size)
 hp 67 (9d10+18)
 Fort +6, Ref +9, Will +11
 Offense
@@ -16223,14 +15970,13 @@ eyes and sharp fangs, while her lower body is that of a lion.
 
 186
 
-         
 Leech, Giant Leech Swarm
 gIAnT LEECh CR 2
 XP 600
 N Medium vermin (aquatic)
 Init +1; Senses blindsight 30 ft., scent; Perception +0
 Defense
-AC 11, touch 11, flat-footed 10 (+1 Dex)
+  AC 11, touch 11, flat-footed 10 (+1 Dex)
 hp 19 (3d8+6)
 Fort +4, Ref +2, Will +1
 Immune mind-affecting effects
@@ -16278,7 +16024,7 @@ XP 1,200
 N Diminutive vermin (aquatic, swarm)
 Init +4; Senses blindsight 30 ft.; Perception +0
 Defense
-AC 18, touch 18, flat-footed 14 (+4 Dex, +4 size)
+  AC 18, touch 18, flat-footed 14 (+4 Dex, +4 size)
 hp 39 (6d8+12)
 Fort +7, Ref +6, Will +2
 Immune mind-affecting effects, swarm traits, weapon damage
@@ -16323,7 +16069,6 @@ Leech
 
 187
 
-         
 Lich
 LICh CR 12
 XP 19,200
@@ -16332,7 +16077,7 @@ NE Medium undead (augmented humanoid)
 Init +2; Senses darkvision 60 ft., life sight*; Perception +24
 Aura fear (60-ft. radius, DC 18)
 Defense
-AC 23, touch 14, flat-footed 21 (+4 armor, +2 deflection, +2 
+  AC 23, touch 14, flat-footed 21 (+4 armor, +2 deflection, +2 
 Dex, +5 natural)
 hp 111 (11d6+55 plus 15 false life)
 Fort +6, Ref +7, Will +11
@@ -16432,7 +16177,6 @@ A pale blue light shines from where its eyes should be.
 
 188
 
-         
 Lich
 
 Lich
@@ -16515,7 +16259,7 @@ CE Gargantuan dragon
 Init +8; Senses darkvision 120 ft., low-light vision, scent, true 
 seeing; Perception +22
 Defense
-AC 29, touch 10, flat-footed 25 (+4 Dex, +19 natural, –4 size)
+  AC 29, touch 10, flat-footed 25 (+4 Dex, +19 natural, –4 size)
 hp 202 (15d12+105); regeneration 10 (cold iron)
 Fort +16, Ref +15, Will +13
 Defensive Abilities freedom of movement; DR 15/cold 
@@ -16592,7 +16336,6 @@ triple tail and powerful talons swipe at the air.
 
 190
 
-         
 Linnorm, Ice
 ICE LInnORM CR 17
 XP 102,400
@@ -16600,7 +16343,7 @@ CE Colossal dragon
 Init +10; Senses darkvision 120 ft., low-light vision, scent, true 
 seeing; Perception +26
 Defense
-AC 32, touch 8, flat-footed 26 (+6 Dex, +24 natural, –8 size)
+  AC 32, touch 8, flat-footed 26 (+6 Dex, +24 natural, –8 size)
 hp 279 (18d12+162); regeneration 10 (cold iron)
 Fort +20, Ref +19, Will +16
 Defensive Abilities freedom of movement; DR 15/cold 
@@ -16689,7 +16432,7 @@ CE Colossal dragon (aquatic)
 Init +12; Senses all-around vision, darkvision 120 ft., low-light 
 vision, scent, true seeing; Perception +40
 Defense
-AC 36, touch 10, flat-footed 28 (+8 Dex, +26 natural, –8 size)
+  AC 36, touch 10, flat-footed 28 (+8 Dex, +26 natural, –8 size)
 hp 385 (22d12+242); regeneration 15 (cold iron)
 Fort +24, Ref +23, Will +20
 Defensive Abilities freedom of movement; DR 20/cold iron; 
@@ -16761,13 +16504,12 @@ pounds.
 
 192
 
-         
 LIOn CR 3
 XP 800
 N Large Animal 
 Init +7; Senses low-light vision, scent; Perception +9
 Defense
-AC 15, touch 12, flat-footed 12 (+3 Dex, +3 natural, –1 size)
+  AC 15, touch 12, flat-footed 12 (+3 Dex, +3 natural, –1 size)
 hp 32 (5d8+10)
 Fort +6, Ref +7, Will +2
 Offense
@@ -16815,7 +16557,7 @@ XP 1,600
 N Large Animal 
 Init +6; Senses low-light vision, scent; Perception +11
 Defense
-AC 15, touch 11, flat-footed 13 (+2 Dex, +4 natural, –1 size)
+  AC 15, touch 11, flat-footed 13 (+2 Dex, +4 natural, –1 size)
 hp 60 (8d8+24)
 Fort +9, Ref +8, Will +3
 Offense
@@ -16873,14 +16615,13 @@ Linnorm, Tarn–Lion
 
 193
 
-         
 Lizard, Monitor Lizard, Giant Frilled
 MOnITOR LIzARD CR 2
 XP 600
 N Medium animal 
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
+  AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
 hp 22 (3d8+9)
 Fort +8, Ref +5, Will +2
 Offense
@@ -16927,7 +16668,7 @@ XP 1,600
 N Large animal 
 Init +5; Senses low-light vision, scent; Perception +11
 Defense
-AC 18, touch 10, flat-footed 17 (+8 armor, +1 Dex, –1 size)
+  AC 18, touch 10, flat-footed 17 (+8 armor, +1 Dex, –1 size)
 hp 59 (7d8+28)
 Fort +11, Ref +8, Will +4
 Offense
@@ -16980,14 +16721,13 @@ a brightly colored frill extends around its neck.
 
 194
 
-         
 Lizardfolk
 LIzARDfOLk CR 1
 XP 400
 N Medium humanoid (reptilian)
 Init +0; Senses Perception +1
 Defense
-AC 17, touch 10, flat-footed 17 (+5 natural, +2 shield)
+  AC 17, touch 10, flat-footed 17 (+5 natural, +2 shield)
 hp 11 (2d8+2)
 Fort +4, Ref +0, Will +0
 Offense
@@ -17066,7 +16806,6 @@ Lizard–Lizardfolk
 
 195
 
-         
 Lycanthrope
 Lycanthropes are humanoids with the ability to turn into 
 animals and animal-humanoid hybrid shapes. Natural 
@@ -17174,7 +16913,6 @@ playing a character of a powerful race.
 
 196
 
-         
 Lycanthrope, Wererat
 WERERAT (hUMAn fORM) CR 2
 XP 600
@@ -17182,7 +16920,7 @@ Human natural wererat rogue 2 (augmented humanoid)
 LE Medium humanoid (human, shapechanger)
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 16, touch 13, flat-footed 13 (+3 armor, +2 Dex, +1 dodge)
+  AC 16, touch 13, flat-footed 13 (+3 armor, +2 Dex, +1 dodge)
 hp 18 (2d8+6)
 Fort +2, Ref +5, Will +3
 Defensive Abilities evasion
@@ -17212,7 +16950,7 @@ WERERAT (hyBRID fORM)
 LE Medium humanoid (human, shapechanger)
 Init +3; Senses low-light vision, scent; Perception +8
 Defense
-AC 19, touch 14, flat-footed 15 (+3 armor, +3 Dex, +1 
+  AC 19, touch 14, flat-footed 15 (+3 armor, +3 Dex, +1 
 dodge, +2 natural)
 hp 20 (2d8+8)
 Fort +3, Ref +6, Will +3
@@ -17266,7 +17004,7 @@ Human natural werewolf fighter 2
 CE Medium humanoid (human, shapechanger)
 Init +5; Senses low-light vision, scent; Perception +4
 Defense
-AC 17, touch 11, flat-footed 16 (+6 armor, +1 Dex)
+  AC 17, touch 11, flat-footed 16 (+6 armor, +1 Dex)
 hp 19 (2d10+4)
 Fort +5, Ref +1, Will +2 (+3 vs. fear)
 Defensive Abilities bravery +1
@@ -17294,7 +17032,7 @@ shapechanger)
 Init +5; Senses low-light vision, scent; 
 Perception +4
 Defense
-AC 22, touch 12, flat-footed 20 (+6 armor, +2 
+  AC 22, touch 12, flat-footed 20 (+6 armor, +2 
 Dex, +4 natural)
 hp 21 (2d10+6)
 Fort +6, Ref +2, Will +2 (+3 vs. fear)
@@ -17368,7 +17106,6 @@ and fur coat of a wolf.
 
 198
 
-         
 Manticore
 MAnTICORE CR 5
 XP 1,600
@@ -17376,7 +17113,7 @@ LE Large magical beast
 Init +2; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +9
 Defense
-AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
+  AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
 hp 57 (6d10+24)
 Fort +9, Ref +7, Will +3
 Offense
@@ -17447,14 +17184,13 @@ nthrope, Werewolf–Manticore
 
 199
 
-         
 Mantis, Giant
 gIAnT MAnTIS CR 3
 XP 800
 N Large vermin 
 Init +1; Senses darkvision 60 ft.; Perception +6
 Defense
-AC 15, touch 10, flat-footed 14 (+1 Dex, +5 natural, –1 size)
+  AC 15, touch 10, flat-footed 14 (+1 Dex, +5 natural, –1 size)
 hp 30 (4d8+12)
 Fort +7, Ref +2, Will +3
 Immune mind-affecting effects
@@ -17538,14 +17274,13 @@ triangular and its front legs sport razor-sharp edges and claws.
 
 200
 
-         
 Medusa
 MEDUSA CR 7
 XP 3,200
 LE Medium monstrous humanoid 
 Init +6; Senses all-around vision, darkvision 60 ft.; Perception +16
 Defense
-AC 15, touch 12, flat-footed 13 ( +2 Dex, +3 natural)
+  AC 15, touch 12, flat-footed 13 ( +2 Dex, +3 natural)
 hp 76 (8d10+32)
 Fort +6, Ref +8, Will +7
 Offense
@@ -17647,14 +17382,13 @@ ntis, Giant–Medusa
 
 201
 
-         
 Mephit
 MEPhIT CR 3
 XP 800
 N Small outsider (varies)
 Init +6; Senses darkvision 60 ft.; Perception +6
 Defense
-AC 16, touch 13, flat-footed 14 (+2 Dex, +3 natural, +1 size)
+  AC 16, touch 13, flat-footed 14 (+2 Dex, +3 natural, +1 size)
 hp 19 (3d10+3); fast healing 2
 Fort +2, Ref +5, Will +3
 DR 5/magic
@@ -17753,7 +17487,6 @@ horns, and a mischievous smile.
 
 202
 
-         
 MMeepphhit
 
 it
@@ -17831,7 +17564,7 @@ Merfolk warrior 1
 N Medium humanoid (aquatic)
 Init +1; Senses low-light vision; Perception +3
 Defense
-AC 13, touch 11, flat-footed 12 (+1 Dex, +2 natural)
+  AC 13, touch 11, flat-footed 12 (+1 Dex, +2 natural)
 hp 7 (1d10+2)
 Fort +4, Ref +1, Will –1
 Offense
@@ -17916,14 +17649,13 @@ has the lower torso of a long, slender fish.
 
 204
 
-         
 Mimic
 MIMIC CR 4
 XP 1,200
 N Medium aberration (shapechanger)
 Init +5; Senses darkvision 60 ft.; Perception +11
 Defense
-AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
+  AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
 hp 52 (7d8+21)
 Fort +5, Ref +5, Will +6
 Immune acid
@@ -18004,13 +17736,12 @@ lk–Mimic
 
 205
 
-         
 MInOTAUR CR 4
 XP 1,200
 CE Large monstrous humanoid
 Init +0; Senses darkvision 60 ft.; Perception +10
 Defense
-AC 14, touch 9, flat-footed 14 (+5 natural, –1 size)
+  AC 14, touch 9, flat-footed 14 (+5 natural, –1 size)
 hp 45 (6d10+12)
 Fort +6, Ref +5, Will +5
 Defensive Abilities natural cunning
@@ -18083,7 +17814,6 @@ bull, this creature stomps its hooves as if preparing to charge.
 
 206
 
-         
 Mite
 MITE CR 1/4
 XP 100
@@ -18091,7 +17821,7 @@ LE Small fey
 Init +1; Senses darkvision 120 ft., low-light vision, scent; 
 Perception +5
 Defense
-AC 12, touch 12, flat-footed 11 (+1 Dex, +1 size)
+  AC 12, touch 12, flat-footed 11 (+1 Dex, +1 size)
 hp 3 (1d6)
 Fort +0, Ref +3, Will +3
 DR 2/cold iron
@@ -18176,7 +17906,6 @@ taur–Mite
 
 207
 
-         
 Mohrg
 A thick tangle of discolored entrails clings to this lurching skeleton’s 
 torso and winds upward to loll from its jaw like a clawed tongue.
@@ -18185,7 +17914,7 @@ XP 4,800
 CE Medium undead 
 Init +8; Senses darkvision 60 ft.; Perception +20
 Defense
-AC 23, touch 15, flat-footed 18 (+4 Dex, +1 dodge, +8 natural)
+  AC 23, touch 15, flat-footed 18 (+4 Dex, +1 dodge, +8 natural)
 hp 91 (14d8+28)
 Fort +6, Ref +10, Will +9
 Immune undead traits
@@ -18286,13 +18015,12 @@ in finishing the slaughter.
 
 208
 
-         
 MORLOCk CR 2
 XP 600
 CE Medium monstrous humanoid
 Init +8; Senses darkvision 120 ft., scent; Perception +2
 Defense
-AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
+  AC 15, touch 14, flat-footed 11 (+4 Dex, +1 natural)
 hp 22 (3d10+6)
 Fort +3, Ref +9, Will +5
 Immune disease, poison
@@ -18373,7 +18101,6 @@ sooner than that due to violence.
 
 209
 
-         
 Mummy
 MUMMy CR 5
 XP 1,600
@@ -18382,7 +18109,7 @@ Init +0; Senses darkvision 60 ft.; Perception +16
 Aura despair (30 ft., paralyzed for 1d4 rounds, Will DC 16 
 negates)
 Defense
-AC 20, touch 10, flat-footed 20 (+10 natural)
+  AC 20, touch 10, flat-footed 20 (+10 natural)
 hp 60 (8d8+24)
 Fort +4, Ref +2, Will +8
 DR 5/—; Immune undead traits
@@ -18450,14 +18177,13 @@ this humanoid moves with a shuff ling gait.
 
 210
 
-         
 Naga, Dark
 DARk nAgA CR 8
 XP 4,800
 LE Large aberration
 Init +5; Senses darkvision 60 ft., detect thoughts; Perception +19
 Defense
-AC 22, touch 15, flat-footed 16 (+5 Dex, +1 dodge, +7 natural, 
+  AC 22, touch 15, flat-footed 16 (+5 Dex, +1 dodge, +7 natural, 
 –1 size)
 hp 85 (10d8+40)
 Fort +7, Ref +10, Will +9 (+11 vs. charm effects)
@@ -18536,14 +18262,13 @@ y–Naga, Dark
 
 211
 
-         
 Naga, Guardian
 gUARDIAn nAgA CR 10
 XP 9,600
 LG Large aberration
 Init +6; Senses darkvision 60 ft.; Perception +23
 Defense
-AC 24, touch 15, flat-footed 18 (+6 Dex, +9 natural, –1 size)
+  AC 24, touch 15, flat-footed 18 (+6 Dex, +9 natural, –1 size)
 hp 114 (12d8+60)
 Fort +9, Ref +12, Will +12
 Offense
@@ -18618,14 +18343,13 @@ adorns the body of this long, brightly colored serpent.
 
 212
 
-         
 Naga, Spirit
 SPIRIT nAgA CR 9
 XP 6,400
 CE Large aberration
 Init +5; Senses darkvision 60 ft.; Perception +22
 Defense
-AC 23, touch 14, flat-footed 18 (+5 Dex, +9 natural, –1 size)
+  AC 23, touch 14, flat-footed 18 (+5 Dex, +9 natural, –1 size)
 hp 95 (10d8+50)
 Fort +8, Ref +10, Will +10
 Offense
@@ -18716,7 +18440,7 @@ CE Gargantuan aberration
 Init +2; Senses blindsight 100 ft., trace teleport 60 ft.; 
 Perception +25
 Defense
-AC 30, touch 4, flat-footed 30 (–2 Dex, +26 natural, –4 size)
+  AC 30, touch 4, flat-footed 30 (–2 Dex, +26 natural, –4 size)
 hp 230 (20d8+140)
 Fort +15, Ref +4, Will +16
 DR 10/cold iron; SR 26
@@ -18800,14 +18524,13 @@ mountain, this huge worm’s tentacled head rises like a snake’s.
 
 214
 
-         
 Night Hag
 nIghT hAg CR 9
 XP 6,400
 NE Medium outsider (evil, extraplanar)
 Init +4; Senses darkvision 60 ft.; Perception +16
 Defense
-AC 25, touch 14, flat-footed 21 (+4 Dex, +11 natural)
+  AC 25, touch 14, flat-footed 21 (+4 Dex, +11 natural)
 hp 92 (8d10+48)
 Fort +14, Ref +8, Will +11
 DR 10/cold iron and magic; Immune charm, cold, fear, fire, 
@@ -18882,14 +18605,13 @@ thelid–Night Hag
 
 215
 
-         
 Nightmare Nightmare, Cauchemar
 nIghTMARE CR 5
 XP 1,600
 NE Large outsider (evil, extraplanar)
 Init +6; Senses darkvision 60 ft.; Perception +12
 Defense
-AC 19, touch 11, flat-footed 17 (+2 Dex, +8 natural, –1 size)
+  AC 19, touch 11, flat-footed 17 (+2 Dex, +8 natural, –1 size)
 hp 51 (6d10+18)
 Fort +8, Ref +7, Will +3
 Offense
@@ -18937,7 +18659,7 @@ XP 12,800
 NE Huge outsider (evil, extraplanar)
 Init +6; Senses darkvision 60 ft.; Perception +22
 Defense
-AC 26, touch 10, flat-footed 24 (+2 Dex, +16 natural, –2 size)
+  AC 26, touch 10, flat-footed 24 (+2 Dex, +16 natural, –2 size)
 hp 147 (14d10+70)
 Fort +14, Ref +11, Will +7
 Offense
@@ -18971,7 +18693,6 @@ Hellfire shimmers in its hateful eyes.
 
 216
 
-         
 Nymph
 nyMPh CR 7
 XP 3,200
@@ -18979,7 +18700,7 @@ CG Medium fey
 Init +5; Senses low-light vision; Perception +14
 Aura blinding beauty (30 ft., DC 21)
 Defense
-AC 23, touch 23, flat-footed 17 (+7 deflection, 
+  AC 23, touch 23, flat-footed 17 (+7 deflection, 
 +5 Dex, +1 dodge)
 hp 60 (8d6+32)
 Fort +13, Ref +18, Will +16
@@ -19086,14 +18807,13 @@ htmare–Nymph
 
 217
 
-         
 Ochre Jelly
 OChRE jELLy CR 5
 XP 1,600
 N Large ooze
 Init –5; Senses blindsight 60 ft.; Perception –5
 Defense
-AC 4, touch 4, flat-footed 4 (–5 Dex, –1 size)
+  AC 4, touch 4, flat-footed 4 (–5 Dex, –1 size)
 hp 63 (6d8+36)
 Fort +8, Ref –3, Will –3
 Defensive Abilities split; Immune electricity, mind-affecting 
@@ -19178,14 +18898,13 @@ pseudopods grasping ahead of its slow approach.
 
 218
 
-         
 Octopus Octopus, Giant
 OCTOPUS CR 1
 XP 400
 N Small animal (aquatic)
 Init +3; Senses low-light vision; Perception +1
 Defense
-AC 15, touch 14, flat-footed 12 (+3 Dex, +1 natural, +1 size)
+  AC 15, touch 14, flat-footed 12 (+3 Dex, +1 natural, +1 size)
 hp 13 (2d8+4)
 Fort +5, Ref +6, Will +1
 Defensive Abilities ink cloud
@@ -19232,7 +18951,7 @@ XP 4,800
 N Large animal (aquatic)
 Init +6; Senses low-light vision; Perception +8 
 Defense
-AC 18, touch 11, flat-footed 16 (+2 Dex, +7 natural, –1 size)
+  AC 18, touch 11, flat-footed 16 (+2 Dex, +7 natural, –1 size)
 hp 90 (12d8+36)
 Fort +11, Ref +12, Will +7
 Defensive Abilities ink cloud (30-foot-radius sphere)
@@ -19279,7 +18998,7 @@ XP 800
 CE Large humanoid (giant)
 Init –1; Senses darkvision 60 ft., low-light vision; Perception +2
 Defense
-AC 17, touch 8, flat-footed 17 (+4 armor, –1 Dex, +5 natural, –1 size)
+  AC 17, touch 8, flat-footed 17 (+4 armor, –1 Dex, +5 natural, –1 size)
 hp 30 (4d8+12)
 Fort +6, Ref +0, Will +3
 Offense
@@ -19353,14 +19072,13 @@ and its puffy face features a wide mouth with ill-fitting teeth.
 
 220
 
-         
 Oni, Ogre Mage
 OgRE MAgE CR 8
 XP 4,800
 LE Large outsider (giant, native, oni, shapechanger)
 Init +7; Senses darkvision 60 ft., low-light vision; Perception +13
 Defense
-AC 21, touch 12, flat-footed 18 (+4 armor, +3 Dex, +5 natural, –1 size)
+  AC 21, touch 12, flat-footed 18 (+4 armor, +3 Dex, +5 natural, –1 size)
 hp 92 (8d10+48); regeneration 5 (fire or acid)
 Fort +12, Ref +5, Will +10
 SR 19
@@ -19429,14 +19147,13 @@ e–Oni, Ogre Mage
 
 221
 
-         
 ORC CR 1/3
 XP 135
 Orc warrior 1
 CE Medium humanoid
 Init +0; Senses darkvision 60 ft., low-light vision; Perception –1
 Defense
-AC 13, touch 10, flat-footed 13 (+3 armor)
+  AC 13, touch 10, flat-footed 13 (+3 armor)
 hp 6 (1d10+1)
 Fort +3, Ref +0, Will –1
 Defensive Abilities ferocity
@@ -19509,14 +19226,13 @@ human, with green-gray skin and greasy black hair.
 
 222
 
-         
 Otyugh
 OTyUgh CR 4
 XP 1,200
 N Large aberration
 Init +0; Senses darkvision 60 ft., scent; Perception +9
 Defense
-AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
+  AC 17, touch 9, flat-footed 17 (+8 natural, –1 size)
 hp 39 (6d8+12)
 Fort +3, Ref +2, Will +6
 Immune disease
@@ -19593,7 +19309,6 @@ c–Otyugh
 
 223
 
-         
 Owlbear
 An amalgam of fur and feathers, this bizarre half-bear, half-owl 
 monstrosity raises its huge, ursine claws in anger.
@@ -19603,7 +19318,7 @@ N Large magical beast
 Init +5; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +12
 Defense 
-AC 15, touch 10, flat-footed 14 (+1 Dex, +5 natural, –1 size)
+  AC 15, touch 10, flat-footed 14 (+1 Dex, +5 natural, –1 size)
 hp 47 (5d10+20)
 Fort +10, Ref +5, Will +2
 Offense 
@@ -19674,14 +19389,13 @@ up to 1,500 pounds.
 
 224
 
-         
 PEgASUS CR 3
 XP 800
 CG Large magical beast 
 Init +2; Senses darkvision 60 ft., detect evil, detect good, low-
 light vision, scent; Perception +11
 Defense
-AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
+  AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
 hp 34 (4d10+12)
 Fort +7, Ref +6, Will +4
 Offense
@@ -19762,14 +19476,13 @@ to be ridden by great heroes.
 
 225
 
-         
 Phase Spider
 PhASE SPIDER CR 5
 XP 1,600
 N Large magical beast
 Init +7; Senses darkvision 60 ft., low-light vision; Perception +6
 Defense
-AC 17, touch 12, flat-footed 14 (+3 Dex, +5 natural, –1 size)
+  AC 17, touch 12, flat-footed 14 (+3 Dex, +5 natural, –1 size)
 hp 51 (6d10+18)
 Fort +8, Ref +8, Will +3
 Defensive Abilities ethereal jaunt
@@ -19849,7 +19562,6 @@ surrounded by a shaggy mane of fur.
 
 226
 
-         
 Phoenix
 PhOEnIX CR 15
 XP 51,200
@@ -19865,7 +19577,7 @@ invisibility; Perception +37
 Aura shroud of flame (20 
 ft., 4d6 fire, DC 25)
 Defense
-AC 28, touch 14, flat-footed 20 (+7 Dex, +1 
+  AC 28, touch 14, flat-footed 20 (+7 Dex, +1 
 dodge, +14 natural, –4 size)
 hp 210 (20d10+100); regeneration 
 10 (cold or evil)
@@ -19953,7 +19665,6 @@ do good and actively harming those who do evil. 227
 
 227
 
-         
 Pixie
 PIXIE CR 4
 XP 1,200
@@ -19962,7 +19673,7 @@ Init +5; Senses
 low-light vision; 
 Perception +9
 Defense
-AC 18, touch 17, flat-
+  AC 18, touch 17, flat-
 footed 12 (+5 Dex, +1 
 dodge, +1 natural, +1 size)
 hp 18 (4d6+4)
@@ -20064,7 +19775,6 @@ wildly colored gossamer wings.
 
 228
 
-         
 Pseudodragon
 PSEUDODRAgOn CR 1
 XP 400
@@ -20072,7 +19782,7 @@ NG Tiny dragon
 Init +2; Senses blindsense 60 ft., darkvision 60 ft., low-light 
 vision; Perception +6
 Defense
-AC 16, touch 14, flat-footed 14 (+2 Dex, +2 natural, +2 size)
+  AC 16, touch 14, flat-footed 14 (+2 Dex, +2 natural, +2 size)
 hp 15 (2d12+2)
 Fort +4, Ref +5, Will +4
 Immune paralysis, sleep; SR 12
@@ -20146,7 +19856,6 @@ e–Pseudodragon
 
 229
 
-         
 Purple Worm
 PURPLE WORM CR 12
 XP 19,200
@@ -20154,7 +19863,7 @@ N Gargantuan magical beast
 Init –2; Senses darkvision 60 ft., tremorsense 60 ft.; 
 Perception +18
 Defense
-AC 26, touch 4, flat-footed 26 (–2 Dex, +22 natural, –4 size)
+  AC 26, touch 4, flat-footed 26 (–2 Dex, +22 natural, –4 size)
 hp 200 (16d10+112)
 Fort +17, Ref +8, Will +4
 Offense
@@ -20230,14 +19939,13 @@ armor. Its giant, tooth-filled mouth is the size of an ox.
 
 230
 
-         
 Rakshasa
 RAkShASA CR 10
 XP 9,600
 LE Medium outsider (native, shapechanger)
 Init +9; Senses darkvision 60 ft.; Perception +14
 Defense
-AC 25, touch 16, flat-footed 19 (+5 Dex, +1 dodge, +9 natural)
+  AC 25, touch 16, flat-footed 19 (+5 Dex, +1 dodge, +9 natural)
 hp 115 (10d10+60)
 Fort +9, Ref +12, Will +8
 DR 15/good and piercing; SR 25
@@ -20345,14 +20053,13 @@ ple Worm–Rakshasa
 
 231
 
-         
 Rat, Dire Rat Swarm
 DIRE RAT CR 1/3
 XP 135
 N Small animal
 Init +3; Senses low-light vision, scent; Perception +4
 Defense
-AC 14, touch 14, flat-footed 11 (+3 Dex, +1 size)
+  AC 14, touch 14, flat-footed 11 (+3 Dex, +1 size)
 hp 5 (1d8+1)
 Fort +3, Ref +5, Will +1
 Offense
@@ -20399,7 +20106,7 @@ XP 600
 N Tiny animal (swarm)
 Init +6; Senses low-light vision, scent; Perception +8
 Defense
-AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+  AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
 hp 16 (3d8+3)
 Fort +4, Ref +5, Will +2
 Defensive Abilities swarm traits
@@ -20452,7 +20159,6 @@ f lashing and claws scratching everything in its path.
 
 232
 
-         
 Remorhaz
 REMORhAz CR 7
 XP 3,200
@@ -20460,7 +20166,7 @@ N Huge magical beast
 Init +1; Senses darkvision 60 ft., low-light vision, tremorsense 
 60 ft.; Perception +16
 Defense
-AC 20, touch 9, flat-footed 19 (+1 Dex, +11 natural, –2 size)
+  AC 20, touch 9, flat-footed 19 (+1 Dex, +11 natural, –2 size)
 hp 94 (9d10+45)
 Fort +11, Ref +7, Will +4
 Immune fire, cold
@@ -20533,14 +20239,13 @@ A remorhaz is 25 feet long and weighs 10,000 pounds.
 
 233
 
-         
 Retriever
 RETRIEVER CR 11
 XP 12,800
 CE Huge construct (extraplanar)
 Init +7; Senses darkvision 60 ft., low-light vision, Perception +15
 Defense
-AC 25, touch 11, flat-footed 22 (+3 Dex, +14 natural, –2 size)
+  AC 25, touch 11, flat-footed 22 (+3 Dex, +14 natural, –2 size)
 hp 137 (15d10+55); fast healing 5
 Fort +7, Ref +10, Will +5
 Defensive Abilities construct traits
@@ -20643,14 +20348,13 @@ check requirement).
 
 234
 
-         
 Rhinoceros Rhinoceros, Woolly
 RhInOCEROS CR 4
 XP 1,200
 N Large animal
 Init +0; Senses scent; Perception +12
 Defense
-AC 16, touch 9, flat-footed 16 (+7 natural, –1 size)
+  AC 16, touch 9, flat-footed 16 (+7 natural, –1 size)
 hp 42 (5d8+20)
 Fort +10, Ref +4, Will +2
 Offense
@@ -20697,7 +20401,7 @@ XP 2,400
 N Large animal
 Init +0; Senses scent; Perception +15
 Defense
-AC 19, touch 9, flat-footed 19 (+10 natural, –1 size)
+  AC 19, touch 9, flat-footed 19 (+10 natural, –1 size)
 hp 76 (8d8+40)
 Fort +13, Ref +6, Will +3
 Offense
@@ -20754,14 +20458,13 @@ etriever–Rhinoceros
 
 235
 
-         
 Roc
 ROC CR 9
 XP 6,400
 N Gargantuan animal
 Init +6; Senses low-light vision; Perception +15
 Defense
-AC 22, touch 8, flat-footed 20 (+2 Dex, +14 natural, –4 size)
+  AC 22, touch 8, flat-footed 20 (+2 Dex, +14 natural, –4 size)
 hp 120 (16d8+48)
 Fort +13, Ref +14, Will +8
 Offense
@@ -20855,14 +20558,13 @@ opportunists, but if the scavengers don’t take care, they
 
 236
 
-         
 Roper
 ROPER CR 12
 XP 19,200
 CE Large aberration 
 Init +5; Senses darkvision 60 ft., low-light vision; Perception +24
 Defense
-AC 27, touch 10, flat-footed 26 (+1 Dex, +17 natural, –1 size)
+  AC 27, touch 10, flat-footed 26 (+1 Dex, +17 natural, –1 size)
 hp 162 (12d8+108)
 Fort +13, Ref +5, Will +13
 Immune electricity; Resist cold 10; SR 27
@@ -20941,14 +20643,13 @@ A roper is 9 feet tall and weighs 2,200 pounds.
 
 237
 
-         
 RUST MOnSTER CR 3
 XP 800
 N Medium aberration
 Init +3; Senses darkvision 60 ft., scent metals 90 ft.; 
 Perception +12
 Defense
-AC 18, touch 13, flat-footed 15 (+3 Dex, +5 natural)
+  AC 18, touch 13, flat-footed 15 (+3 Dex, +5 natural)
 hp 27 (5d8+5)
 Fort +2, Ref +4, Will +5
 Offense
@@ -21029,14 +20730,13 @@ protrusion at the end of its tail, and two long, feathery antennae.
 
 238
 
-         
 Sahuagin
 SAhUAgIn CR 2
 XP 600
 LE Medium monstrous humanoid (aquatic)
 Init +1; Senses blindsense 30 ft., darkvision 60 ft.; Perception +6
 Defense
-AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
+  AC 16, touch 11, flat-footed 15 (+1 Dex, +5 natural)
 hp 15 (2d10+4)
 Fort +4, Ref +4, Will +4
 Weaknesses light blindness
@@ -21115,7 +20815,6 @@ ter–Sahuagin
 
 239
 
-         
 Salamander
 This snake-bodied humanoid hisses with anger. Spines of crackling 
 f lame dance along the creature’s blackened, fiery-red scales.
@@ -21124,7 +20823,7 @@ XP 2,400
 CE Medium outsider (extraplanar, fire)
 Init +1; Senses darkvision 60 ft.; Perception +16
 Defense
-AC 18, touch 11, flat-footed 17 (+1 Dex, +7 natural)
+  AC 18, touch 11, flat-footed 17 (+1 Dex, +7 natural)
 hp 76 (8d10+32)
 Fort +10, Ref +7, Will +6
 DR 10/magic; Immune fire
@@ -21191,13 +20890,12 @@ it discomfort are dealt a slow and painful death.
 
 240
 
-         
 SATyR CR 4
 XP 1,200
 CN Medium fey
 Init +2; Senses low-light vision; Perception +18
 Defense
-AC 17, touch 12, flat-footed 15 (+2 Dex, +5 natural)
+  AC 17, touch 12, flat-footed 15 (+2 Dex, +5 natural)
 hp 44 (8d6+16)
 Fort +4, Ref +8, Will +8
 DR 5/cold iron
@@ -21300,7 +20998,6 @@ after birth.
 
 241
 
-         
 Scorpion, Giant
 gIAnT SCORPIOn CR 3
 XP 800
@@ -21308,7 +21005,7 @@ N Large vermin
 Init +0; Senses darkvision 60 ft., tremorsense 60 ft.; 
 Perception +4
 Defense
-AC 16, touch 9, flat-footed 16 (+7 armor, –1 size)
+  AC 16, touch 9, flat-footed 16 (+7 armor, –1 size)
 hp 37 (5d8+15)
 Fort +7, Ref +1, Will +1
 Immune mind-affecting effects
@@ -21389,7 +21086,6 @@ raised in challenge, stingered tail arched over its back.
 
 242
 
-         
 Sea Hag
 SEA hAg CR 4
 XP 1,200
@@ -21397,7 +21093,7 @@ CE Medium monstrous humanoid (aquatic)
 Init +3; Senses darkvision 60 ft.; Perception +11
 Aura horrific appearance (60 ft.)
 Defense
-AC 16, touch 13, flat-footed 13 (+3 Dex, +3 natural)
+  AC 16, touch 13, flat-footed 13 (+3 Dex, +3 natural)
 hp 38 (4d10+16)
 Fort +5, Ref +7, Will +5
 SR 15
@@ -21504,14 +21200,13 @@ pion, Giant–Sea Hag
 
 243
 
-         
 Sea Serpent
 SEA SERPEnT CR 12
 XP 19,200
 N Gargantuan magical beast (aquatic)
 Init +6; Senses darkvision 120 ft., low-light vision; Perception +8
 Defense
-AC 25, touch 8, flat-footed 23 (+17 armor, +2 Dex, –4 size)
+  AC 25, touch 8, flat-footed 23 (+17 armor, +2 Dex, –4 size)
 hp 187 (15d10+105)
 Fort +16, Ref +13, Will +7
 Defensive Abilities elusive; Immune cold; Resist fire 30
@@ -21615,14 +21310,13 @@ strike, this ship-sized serpent hisses a challenge.
 
 244
 
-         
 Shadow Shadow, Greater
 ShADOW CR 3
 XP 800
 CE Medium undead (incorporeal)
 Init +2; Senses darkvision 60 ft.; Perception +8
 Defense
-AC 15, touch 15, flat-footed 12 (+2 deflection, +2 Dex, +1 dodge)
+  AC 15, touch 15, flat-footed 12 (+2 deflection, +2 Dex, +1 dodge)
 hp 19 (3d8+6)
 Fort +3, Ref +3, Will +4
 Defensive Abilities incorporeal, channel resistance +2; 
@@ -21670,7 +21364,7 @@ XP 4,800
 CE Medium undead (incorporeal)
 Init +5; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 18, touch 18, flat-footed 12 (+2 deflection, +5 Dex, +1 dodge)
+  AC 18, touch 18, flat-footed 12 (+2 deflection, +5 Dex, +1 dodge)
 hp 58 (9d8+18)
 Fort +5, Ref +8, Will +7
 Defensive Abilities incorporeal, channel resistance +2; 
@@ -21727,7 +21421,6 @@ Sea Serpent–Shadow
 
 245
 
-         
 246
 
 246
@@ -21738,7 +21431,7 @@ XP 2,400
 N Large plant
 Init +0; Senses darkvision 60 ft., low-light vision; Perception +11
 Defense
-AC 19, touch 9, flat-footed 19 (+10 natural, –1 size)
+  AC 19, touch 9, flat-footed 19 (+10 natural, –1 size)
 hp 67 (9d8+27)
 Fort +9, Ref +5, Will +5
 Defensive Abilities plant traits; Immune electricity; Resist 
@@ -21815,7 +21508,7 @@ XP 600
 N Large animal (aquatic)
 Init +5; Senses blindsense 30 ft., keen scent; Perception +8
 Defense
-AC 14, touch 10, flat-footed 13 (+1 Dex, +4 natural, –1 size)
+  AC 14, touch 10, flat-footed 13 (+1 Dex, +4 natural, –1 size)
 hp 22 (4d8+4)
 Fort +7, Ref +5, Will +2
 Offense
@@ -21863,7 +21556,7 @@ XP 6,400
 N Gargantuan animal (aquatic)
 Init +6; Senses blindsense 30 ft., keen scent; Perception +25
 Defense
-AC 23, touch 8, flat-footed 21 (+2 Dex, +15 natural, –4 size)
+  AC 23, touch 8, flat-footed 21 (+2 Dex, +15 natural, –4 size)
 hp 112 (15d8+45)
 Fort +14, Ref +13, Will +8
 Offense
@@ -21916,7 +21609,7 @@ N Small magical beast
 Init +6; Senses darkvision 60 ft., electricity sense, low-light 
 vision; Perception +8
 Defense
-AC 16, touch 13, flat-footed 14 (+2 Dex, +3 natural, +1 size)
+  AC 16, touch 13, flat-footed 14 (+2 Dex, +3 natural, +1 size)
 hp 19 (3d10+3)
 Fort +4, Ref +5, Will +2
 Immune electricity
@@ -21995,7 +21688,7 @@ CN Huge ooze (aquatic)
 Init +11; Senses all-around vision, darkvision 120 ft., low-light 
 vision, scent, tremorsense 60 ft.; Perception +33
 Defense
-AC 33, touch 15, flat-footed 26 (+7 Dex, +18 natural, –2 size)
+  AC 33, touch 15, flat-footed 26 (+7 Dex, +18 natural, –2 size)
 hp 333 (23d8+230); fast healing 10
 Fort +19, Ref +14, Will +15
 DR 10/—; Immune blindness, charm effects, cold, deafness, 
@@ -22082,7 +21775,7 @@ XP 135
 NE Medium undead
 Init +6; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 16, touch 12, flat-footed 14 (+2 armor, +2 Dex, +2 natural)
+  AC 16, touch 12, flat-footed 14 (+2 armor, +2 Dex, +2 natural)
 hp 4 (1d8)
 Fort +0, Ref +2, Will +2
 DR 5/bludgeoning; Immune cold, undead traits
@@ -22269,7 +21962,7 @@ Human skeletal champion warrior 1
 NE Medium undead
 Init +5; Senses darkvision 60 ft.; Perception +6
 Defense
-AC 21, touch 12, flat-footed 19 (+6 armor, +1 Dex, +2 natural, 
+  AC 21, touch 12, flat-footed 19 (+6 armor, +1 Dex, +2 natural, 
 +2 shield)
 hp 17 (3 HD; 2d8+1d10+3)
 Fort +3 Ref +1 Will +3; channel resistance +4
@@ -22342,7 +22035,7 @@ XP 600
 LE Medium monstrous humanoid (aquatic)
 Init +1; Senses darkvision 60 ft.; Perception +5
 Defense
-AC 13, touch 11, flat-footed 12 (+1 Dex, +2 natural)
+  AC 13, touch 11, flat-footed 12 (+1 Dex, +2 natural)
 hp 20 (2d10+9)
 Fort +3, Ref +4, Will +3
 Resist cold 10
@@ -22427,7 +22120,7 @@ XP 4,800
 N Huge vermin
 Init –4; Senses blindsight 60 ft.; Perception +0
 Defense
-AC 20, touch 4, flat-footed 20; (–4 Dex, +16 natural, –2 size)
+  AC 20, touch 4, flat-footed 20; (–4 Dex, +16 natural, –2 size)
 hp 102 (12d8+48)
 Fort +12, Ref +0, Will +4
 DR 10/slashing or piercing Immune acid, mind-affecting 
@@ -22507,7 +22200,7 @@ XP 600
 N Medium animal 
 Init +3; Senses scent; Perception +12
 Defense
-AC 15, touch 13, flat-footed 12 (+3 Dex, +2 natural)
+  AC 15, touch 13, flat-footed 12 (+3 Dex, +2 natural)
 hp 19 (3d8+6)
 Fort +4, Ref +6, Will +2
 Offense
@@ -22555,7 +22248,7 @@ XP 400
 N Medium animal 
 Init +5; Senses low-light vision, scent; Perception +9
 Defense
-AC 14, touch 11, flat-footed 3 (+1 Dex, +3 natural)
+  AC 14, touch 11, flat-footed 3 (+1 Dex, +3 natural)
 hp 13 (2d8+4)
 Fort +5, Ref +4, Will +1
 Offense
@@ -22625,7 +22318,7 @@ LE Medium undead (incorporeal)
 Init +7; Senses darkvision 60 ft.; Perception +17
 Aura unnatural aura (30 ft.)
 Defense
-AC 15, touch 15, flat-footed 12 (+2 deflection, +3 Dex)
+  AC 15, touch 15, flat-footed 12 (+2 deflection, +3 Dex)
 hp 52 (8d8+16)
 Fort +4, Ref +5, Will +9
 Defensive Abilities incorporeal, channel resistance +2
@@ -22692,7 +22385,7 @@ N Large magical beast
 Init +5; Senses darkvision 60 ft., low-light vision; 
 Perception +21
 Defense
-AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
+  AC 21, touch 10, flat-footed 20 (+1 Dex, +11 natural, –1 size)
 hp 102 (12d10+36)
 Fort +11, Ref +9, Will +10
 Offense
@@ -22781,7 +22474,7 @@ XP 400
 N Medium vermin 
 Init +3; Senses darkvision 60 ft., tremorsense 60 ft.; Perception +4
 Defense
-AC 14, touch 13, flat-footed 11 (+1 armor, +3 Dex)
+  AC 14, touch 13, flat-footed 11 (+1 armor, +3 Dex)
 hp 16 (3d8+3)
 Fort +4, Ref +4, Will +1
 Immune mind-affecting effects
@@ -22829,7 +22522,7 @@ N Diminutive vermin (swarm)
 Init +3; Senses darkvision 60 ft., tremorsense 30 ft.; 
 Perception +4
 Defense
-AC 17, touch 17, flat-footed 14 (+3 Dex, +4 size)
+  AC 17, touch 17, flat-footed 14 (+3 Dex, +4 size)
 hp 9 (2d8)
 Fort +3, Ref +3, Will +0
 Defensive Abilities swarm traits; Immune 
@@ -22883,7 +22576,7 @@ XP 400
 N Medium animal (aquatic)
 Init +6; Senses low-light vision; Perception +7
 Defense
-AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
+  AC 13, touch 12, flat-footed 11 (+2 Dex, +1 natural)
 hp 13 (3d8)
 Fort +3, Ref +7, Will +2
 Defensive Ability ink cloud (5-ft. radius)
@@ -22930,7 +22623,7 @@ XP 6,400
 N Huge animal (aquatic)
 Init +7; Senses low-light vision; Perception +22
 Defense
-AC 20, touch 11, flat-footed 17 (+3 Dex, +9 natural, –2 size)
+  AC 20, touch 11, flat-footed 17 (+3 Dex, +9 natural, –2 size)
 hp 102 (12d8+48)
 Fort +14, Ref +13, Will +5
 Defensive Ability ink cloud (20-ft. radius)
@@ -22989,7 +22682,7 @@ N Tiny magical beast
 Init +4; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +1
 Defense
-AC 16, touch 16, flat-footed 12 (+4 Dex, +2 size)
+  AC 16, touch 16, flat-footed 12 (+4 Dex, +2 size)
 hp 5 (1d10)
 Fort +2, Ref +6, Will +1
 Offense
@@ -23067,7 +22760,7 @@ Svirfneblin ranger 1
 N Small humanoid (gnome)
 Init +2; Senses darkvision 120 ft., low-light vision; Perception +6
 Defense
-AC 15, touch 15, flat-footed 11 (+2 Dex, +2 dodge, +1 size)
+  AC 15, touch 15, flat-footed 11 (+2 Dex, +2 dodge, +1 size)
 hp 15 (1d10+5) 
 Fort +6, Ref +6, Will +2
 SR 12
@@ -23180,7 +22873,7 @@ N Colossal magical beast
 Init +7; Senses low-light vision, scent; Perception +43
 Aura frightful presence (300 ft., DC 27)
 Defense
-AC 40, touch 5, flat-footed 37 (+3 Dex, +35 natural, –8 size)
+  AC 40, touch 5, flat-footed 37 (+3 Dex, +35 natural, –8 size)
 hp 525 (30d10+360); regeneration 40
 Fort +31, Ref +22, Will +12
 DR 15/epic; Immune ability damage, acid, bleed, disease, 
@@ -23266,7 +22959,7 @@ Male tengu rogue 1
 N Medium humanoid (tengu)
 Init +3; Senses low-light vision; Perception +8
 Defense
-AC 15, touch 13, flat-footed 12 (+2 armor, +3 Dex)
+  AC 15, touch 13, flat-footed 12 (+2 armor, +3 Dex)
 hp 9 (1d8+1)
 Fort +1, Ref +5, Will +2
 Offense
@@ -23354,7 +23047,7 @@ Tiefling rogue 1
 NE Medium outsider (native)
 Init +3; Senses darkvision 60 ft.; Perception +5
 Defense
-AC 16, touch 13, flat-footed 13 (+3 armor, +3 Dex)
+  AC 16, touch 13, flat-footed 13 (+3 armor, +3 Dex)
 hp 10 (1d8+2) 
 Fort +2, Ref +5, Will +1
 Resist cold 5, electricity 5, fire 5
@@ -23429,7 +23122,7 @@ XP 1,200
 N Large animal 
 Init +6; Senses low-light vision, scent; Perception +8
 Defense
-AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
+  AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
 hp 45 (6d8+18)
 Fort +8, Ref +7, Will +3
 Offense
@@ -23477,7 +23170,7 @@ XP 4,800
 N Large animal 
 Init +6; Senses low-light vision, scent; Perception +12
 Defense
-AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
+  AC 17, touch 11, flat-footed 15 (+2 Dex, +6 natural, –1 size)
 hp 105 (14d8+42)
 Fort +12, Ref +11, Will +5
 Offense
@@ -23514,14 +23207,13 @@ ling–Tiger
 
 265
 
-         
 Treant
 TREAnT CR 8
 XP 4,800
 NG Huge plant
 Init –1; Senses low-light vision; Perception +12
 Defense
-AC 21, touch 7, flat-footed 21 (–1 Dex, +14 natural, –2 size)
+  AC 21, touch 7, flat-footed 21 (–1 Dex, +14 natural, –2 size)
 hp 114 (12d8+60)
 Fort +13, Ref +3, Will +9
 Defensive Abilities plant traits; DR 10/slashing
@@ -23632,7 +23324,7 @@ CE Medium humanoid (reptilian)
 Init –1; Senses darkvision 90 ft.; Perception +0
 Aura stench (30 ft., DC 13, 10 rounds)
 Defense
-AC 15, touch 9, flat-footed 15 (–1 Dex, +6 natural)
+  AC 15, touch 9, flat-footed 15 (–1 Dex, +6 natural)
 hp 13 (2d8+4)
 Fort +7, Ref –1, Will +0
 Offense
@@ -23711,7 +23403,6 @@ nt–Troglodyte
 
 267
 
-         
 Troll
 TROLL CR 5
 XP 1,600
@@ -23719,7 +23410,7 @@ CE Large humanoid (giant)
 Init +2; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +8
 Defense
-AC 16, touch 11, flat-footed 14; (+2 Dex, +5 natural, –1 size)
+  AC 16, touch 11, flat-footed 14; (+2 Dex, +5 natural, –1 size)
 hp 63 (6d8+36); regeneration 5 (acid or fire)
 Fort +11, Ref +4, Will +3
 Offense
@@ -23792,7 +23483,6 @@ no less violent.
 
 268
 
-         
 Unicorn
 UnICORn CR 3
 XP 800
@@ -23801,7 +23491,7 @@ Init +3; Senses darkvision 60 ft., low-light vision, scent;
 Perception +10
 Aura magic circle against evil
 Defense
-AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2 
+  AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2 
 deflection vs. evil)
 hp 34 (4d10+12)
 Fort +7, Ref +7, Will +6; +2 resistance vs. evil
@@ -23888,14 +23578,13 @@ healing magic.
 
 269
 
-         
 VAMPIRE CR 9
 XP 6,400
 Female human vampire sorcerer 8
 CE Medium undead (augmented humanoid)
 Init +8; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 23, touch 17, flat-footed 18 (+2 deflection, +4 Dex, +1 dodge, 
+  AC 23, touch 17, flat-footed 18 (+2 deflection, +4 Dex, +1 dodge, 
 +6 natural)
 hp 102 (8d6+72); fast healing 5
 Fort +13, Ref +11, Will +12
@@ -23999,7 +23688,6 @@ from a pale cheek, then smiles to reveal needle-sharp fangs.
 
 270
 
-         
 VVaammpire
 
 pire
@@ -24122,7 +23810,7 @@ NE Small outsider (evil, extraplanar)
 Init +1; Senses darkvision 60 ft.; 
 Perception +7
 Defense
-AC 14, touch 11, flat-footed 13; (+1 
+  AC 14, touch 11, flat-footed 13; (+1 
 Dex, +3 natural)
 hp 19 (3d10+3)
 Fort +4, Ref +4, Will +2
@@ -24222,13 +23910,12 @@ as such can be banished with the right magic.
 
 272
 
-         
 VEgEPygMy CR 1/2
 XP 200
 N Small plant
 Init +2; Senses darkvision 60 ft., low-light vision; Perception +7
 Defense
-AC 16, touch 13, flat-footed 14; (+2 Dex, +3 natural, +1 size)
+  AC 16, touch 13, flat-footed 14; (+2 Dex, +3 natural, +1 size)
 hp 5 (1d8+1)
 Fort +3, Ref +2, Will +0
 Defensive Abilities plant traits, DR 5/slashing or bludgeoning; 
@@ -24334,14 +24021,13 @@ sunlight persists. 273
 
 273
 
-         
 Violet Fungus
 VIOLET fUngUS CR 3
 XP 800
 N Medium plant 
 Init –1; Senses low-light vision; Perception +0
 Defense
-AC 15, touch 9, flat-footed 15 (–1 Dex, +6 natural)
+  AC 15, touch 9, flat-footed 15 (–1 Dex, +6 natural)
 hp 30 (4d8+12)
 Fort +7, Ref +0, Will +1
 Immune plant traits
@@ -24441,14 +24127,13 @@ cost 800 gp.
 
 274
 
-         
 Wasp, Giant Wasp Swarm
 gIAnT WASP CR 3
 XP 800
 N Large vermin
 Init +1; Senses darkvision 60 ft.; Perception +9
 Defense
-AC 14, touch 10, flat-footed 13; (+1 Dex, +4 natural, –1 size)
+  AC 14, touch 10, flat-footed 13; (+1 Dex, +4 natural, –1 size)
 hp 34 (4d8+16)
 Fort +8, Ref +2, Will +2
 Immune mind-affecting 
@@ -24496,7 +24181,7 @@ XP 800
 N Diminutive vermin (swarm)
 Init +1; Senses darkvision 60 ft.; Perception +9
 Defense
-AC 15, touch 15, flat-footed 14; (+1 Dex, +4 size)
+  AC 15, touch 15, flat-footed 14; (+1 Dex, +4 size)
 hp 31 (7d8)
 Fort +5, Ref +3, Will +3
 Defensive Abilities swarm 
@@ -24553,14 +24238,13 @@ et Fungus–Wasp
 
 275
 
-         
 Wight
 WIghT CR 3
 XP 800
 LE Medium undead 
 Init +1; Senses darkvision 60 ft.; Perception +11
 Defense
-AC 15, touch 11, flat-footed 14 (+1 Dex, +4 natural)
+  AC 15, touch 11, flat-footed 14 (+1 Dex, +4 natural)
 hp 26 (4d8+8)
 Fort +3, Ref +2, Will +5
 Defensive Abilities undead traits
@@ -24664,14 +24348,13 @@ skeletal in places and its eye sockets glowing with red light.
 
 276
 
-         
 Will-o’-Wisp
 WILL-O’-WISP CR 6
 XP 2,400
 CE Small aberration (air)
 Init +13; Senses darkvision 60 ft.; Perception +15
 Defense
-AC 25, touch 25, flat-footed 16; (+5 deflection, +9 
+  AC 25, touch 25, flat-footed 16; (+5 deflection, +9 
 Dex, +1 size)
 hp 40 (9d8)
 Fort +3, Ref +12, Will +9
@@ -24779,14 +24462,13 @@ ht–Will-o’-Wisp
 
 277
 
-         
 Wolf Wolf, Dire
 WOLf CR 1
 XP 400
 N Medium animal
 Init +2; Senses low-light vision, scent; Perception +8
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 13 (2d8+4)
 Fort +5, Ref +5, Will +1
 Offense
@@ -24834,7 +24516,7 @@ XP 800
 N Large animal
 Init +2; Senses low-light vision, scent; Perception +10
 Defense
-AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
+  AC 14, touch 11, flat-footed 12 (+2 Dex, +3 natural, –1 size)
 hp 37 (5d8+15)
 Fort +7, Ref +6, Will +2
 Offense
@@ -24887,14 +24569,13 @@ and sharp as knives.
 
 278
 
-         
 Wolverine Wolverine, Dire
 WOLVERInE CR 2
 XP 600
 N Medium animal
 Init +2; Senses low-light vision, scent; Perception +10
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 22 (3d8+9)
 Fort +5, Ref +5, Will +2
 Offense
@@ -24942,7 +24623,7 @@ XP 1,200
 N Large animal
 Init +7; Senses low-light vision, scent; Perception +12
 Defense
-AC 16, touch 12, flat-footed 13 (+3 Dex, +4 natural, –1 size)
+  AC 16, touch 12, flat-footed 13 (+3 Dex, +4 natural, –1 size)
 hp 42 (5d8+20)
 Fort +7, Ref +7, Will +2
 Offense
@@ -24999,7 +24680,6 @@ lverine
 
 279
 
-         
 Worg Worg, Winter Wolf
 WORg CR 2
 XP 600
@@ -25007,7 +24687,7 @@ NE Medium magical beast
 Init +2; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +11
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 26 (4d10+4)
 Fort +5, Ref +6, Will +3
 Offense
@@ -25055,7 +24735,7 @@ NE Large magical beast (cold)
 Init +5; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +11
 Defense
-AC 17, touch 10, flat-footed 16 (+1 Dex, +7 natural, –1 size)
+  AC 17, touch 10, flat-footed 16 (+1 Dex, +7 natural, –1 size)
 hp 57 (6d10+24)
 Fort +9, Ref +6, Will +3
 Immune cold
@@ -25107,7 +24787,6 @@ muzzle. Its eyes are pale blue, almost white in color.
 
 280
 
-         
 Wraith
 WRAITh CR 5
 XP 1,600
@@ -25115,7 +24794,7 @@ LE Medium undead (incorporeal)
 Init +7; Senses darkvision 60 ft., lifesense; Perception +10
 Aura unnatural aura (30 ft.)
 Defense
-AC 18, touch 18, flat-footed 14 (+5 deflection, +3 Dex)
+  AC 18, touch 18, flat-footed 14 (+5 deflection, +3 Dex)
 hp 47 (5d8+25)
 Fort +6, Ref +4, Will +6
 Defensive Abilities channel resistance +2, incorporeal; 
@@ -25187,7 +24866,6 @@ can increase the basic wraith to a Large 16 HD undead.
 
 281
 
-         
 Wyvern
 WyVERn CR 6
 XP 2,400
@@ -25195,7 +24873,7 @@ N Large dragon
 Init +5; Senses darkvision 60 ft., low-light vision, scent; 
 Perception +18
 Defense
-AC 19, touch 10, flat-footed 18 (+1 Dex, +9 natural, –1 size)
+  AC 19, touch 10, flat-footed 18 (+1 Dex, +9 natural, –1 size)
 hp 73 (7d12+28)
 Fort +9, Ref +6, Will +8
 Immune sleep, paralysis
@@ -25268,7 +24946,7 @@ XP 2,400
 LE Medium outsider (evil, extraplanar)
 Init +8; Senses darkvision 60 ft.; Perception +13
 Defense
-AC 21, touch 14, flat-footed 17 (+4 Dex, +5 natural, +2 shield)
+  AC 21, touch 14, flat-footed 17 (+4 Dex, +5 natural, +2 shield)
 hp 67 (9d10+18)
 Fort +8, Ref +10, Will +6
 SR 17
@@ -25348,7 +25026,7 @@ N Medium outsider (earth, extraplanar)
 Init +0; Senses all-around vision, darkvision 60 ft., 
 tremorsense 60 ft.; Perception +14
 Defense
-AC 21, touch 10, flat-footed 21 (+11 natural)
+  AC 21, touch 10, flat-footed 21 (+11 natural)
 hp 66 (7d10+28)
 Fort +8, Ref +2, Will +5
 DR 5/bludgeoning; Immune cold, fire, flanking; Resist 
@@ -25458,7 +25136,7 @@ XP 600
 N Medium plant 
 Init +2; Senses tremorsense 30 ft.; Perception +0
 Defense
-AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
+  AC 14, touch 12, flat-footed 12 (+2 Dex, +2 natural)
 hp 22 (3d8+9)
 Fort +6, Ref +3, Will +1
 Defensive Abilities plant traits
@@ -25534,7 +25212,7 @@ XP 800
 NE Medium outsider (evil, extraplanar)
 Init +6; Senses darkvision 60 ft., scent; Perception +9
 Defense
-AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
+  AC 15, touch 12, flat-footed 13 (+2 Dex, +3 natural)
 hp 30 (4d10+8)
 Fort +3, Ref +6, Will +6
 DR 5/silver
@@ -25645,7 +25323,7 @@ XP 1,200
 N Large monstrous humanoid (cold)
 Init +1; Senses darkvision 60 ft., scent; Perception +10
 Defense
-AC 17, touch 10, flat-footed 16 (+1 Dex, +7 natural, –1 size)
+  AC 17, touch 10, flat-footed 16 (+1 Dex, +7 natural, –1 size)
 hp 45 (6d10+12)
 Fort +6, Ref +6, Will +6
 Immune cold
@@ -25738,7 +25416,7 @@ XP 200
 NE Medium undead
 Init +0; Senses darkvision 60 ft.; Perception +0
 Defense
-AC 12, touch 10, flat-footed 12 (+2 natural)
+  AC 12, touch 10, flat-footed 12 (+2 natural)
 hp 12 (2d8+3)
 Fort +0, Ref +0, Will +3
 DR 5/slashing; Immune undead traits
@@ -26346,7 +26024,7 @@ evil 1/day as a swift action (adds Cha bonus to attack rolls
 and damage bonus equal to HD against evil foes; smite 
 persists until target is dead or the celestial creature rests).
 Celestial Creature Defenses
-hit Dice Resist Acid, Cold, and Electricity DR
+  hit Dice Resist Acid, Cold, and Electricity DR
 1–4 5 —
 5–10 10 5/evil
 11+ 15 10/evil
@@ -26407,7 +26085,7 @@ attack rolls and damage bonus equal to HD against good
 foes; smite persists until target is dead or the fiendish 
 creature rests).
 Fiendish Creature Defenses
-hit Dice Resist Cold and fire DR
+  hit Dice Resist Cold and fire DR
 1–4 5 —
 5–10 10 5/good
 11+ 15 10/good
@@ -30046,7 +29724,6 @@ CORE RULEBOOK
 
 Available 
 Now!
-     W
 
 hat is a hero without monsters to vanquish? This book presents hundreds of different 
 creatures for use in the Pathfinder Roleplaying Game. Within this tome you’ll find 
