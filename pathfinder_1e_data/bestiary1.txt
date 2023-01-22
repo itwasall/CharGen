@@ -266,97 +266,7 @@ composite longbow [+9 Str bonus])
 SPECIAL ABILITIES
 Spells 
 Solars can cast divine spells as 20th-level clerics. They do not gain access to domains or other cleric abilities.
-Slaying Arrow (Su) A solar’s bow needs no ammunition, and automatically creates a slaying arrow of the solar’s choice when drawn.
-Solars are the greatest type of angel, usually serving at the right hand of a deity or championing a cause that benefits an entire world or plane. 
-A typical solar looks roughly human, though some physically resemble other humanoid races and a rare few have even more unusual forms. A solar stands about 9 feet tall and weighs about 500 pounds, with a strong, commanding voice that is impossible to ignore. Most have silvery or golden skin.
-Blessed with an array of magical powers and the 
-spellcasting abilities of the most powerful clerics, solars 
-are powerful opponents capable of single-handedly slaying 
-mighty evils. They are the greatest trackers among the 
-celestials, the most masterful of which are said to be able 
-to track the days-old wake of a pit fiend f lying through the 
-Astral Plane. Some take on the mantle of monster-slayers 
-and hunt powerful fiends and undead such as devourers, 
-night hags, night shades, and pit fiends, even making 
-forays into the evil planes and the Negative Energy Plane 
-to destroy these creatures at their source before they can 
-bring harm to mortals. A few very old solars have succeeded 
-at this task and bear slayer-names of dread creatures that 
-are now extinct by the solar’s hand.
-Solars accept roles as guardians, usually of fundamental 
-supernatural concepts, or objects or creatures of great 
-
-This towering humanoid creature has shining topaz eyes, metallic 
-skin, and three pairs of white wings.
-
-importance. On one world, a group of solars patrols the 
-energy conduits of the sun, alert for any attempts by evil 
-races such as drow to snuff out the light and bring eternal 
-darkness. On another, seven solars stand watch over seven 
-mystical chains keeping evil gods bound within a prison 
-demiplane. On yet another, a solar with a f laming sword 
-stands watch over the original mortal paradise so that no 
-creature may enter.
-In worlds where the gods cannot take physical form, they 
-send solars to be their prophets and gurus (often pretending 
-to be mortals), laying the foundation for cults that grow 
-to become great religions. Likewise, in worlds oppressed 
-by evil, solars are the secret priests who bring hope to the 
-downtrodden, or in some cases allow themselves to be 
-martyred so that their holy essence can explode outward to 
-land and grow in the hearts of great heroes-to-be.
-Though they are not gods, the solars’ power approaches 
-that of demigods, and they often have an advisory role 
-for younger or weaker deities. In some polytheistic 
-faiths, mortals worship one or more solars as aspects or 
-near-equal servants of the true deities—never without 
-the deity’s approval—or consider notable solars to be 
-offspring, consorts, lovers, or spouses of true deities 
-(which they may be, depending on the deity).
-Unlike other angels, most solars are created from 
-an amalgam of good souls and raw divine energy to 
-directly serve the gods, but an increasing number 
-of these powerful angels have been “promoted” 
-to their existence as solars from lesser 
-creatures like planetars or devas. A few 
-rare and powerful good souls ascend 
-directly to the status of solar. The 
-oldest solars predate mortality 
-and are among the gods’ first 
-creations. These strange solars 
-are paragons of their kind and 
-have little direct interaction with 
-mortals, focusing on the protection 
-or destruction of abstract concepts 
-such as gravity, dark matter, entropy, 
-and primordial evil.
-Solars who spend a long time in 
-the Material Plane, especially those in 
-the guise of mortals, are sometimes the 
-source of half-celestial or aasimar bloodlines 
-in mortal families, due either to romantic 
-dalliances or simply the mortals’ proximity 
-to celestial energy. Actual offspring are 
-rare, and when they occur, it is always a 
-mortal mother that bears the child—
-while solars can appear as either sex, 
-the gods have not granted them the 
-capacity for pregnancy or motherhood. Indeed, this 
-
-fundamental truth is often what drives a solar to seek out 
-a mortal lover. Since begetting a child upon a mortal is 
-generally frowned upon by other solars, a solar father rarely 
-interacts directly with the fate of his lover or child, so as to 
-avoid bringing shame upon himself or his responsibilities. 
-Yet such solars still watch over their progeny from afar, and 
-in times of peril, they might even be moved to intercede to 
-aid one of their endangered children, albiet in subtle and 
-mysterious ways.
- All angels respect the power and wisdom of solars, and 
-though these mightiest of angels usually work alone, they 
-sometimes command multiple armies led by planetars, 
-acting as great field marshals for massive incursions against 
-the legions of Hell or the hordes of the Abyss.
+Slaying Arrow (Su) A solar’s bow needs no ammunition, and automatically creates a slaying arrow of the solar’s choice when drawn. Solars are the greatest type of angel, usually serving at the right hand of a deity or championing a cause that benefits an entire world or plane. A typical solar looks roughly human, though some physically resemble other humanoid races and a rare few have even more unusual forms. A solar stands about 9 feet tall and weighs about 500 pounds, with a strong, commanding voice that is impossible to ignore. Most have silvery or golden skin.
 
 AAnnggeell,, SSoollaarr
 
@@ -491,19 +401,8 @@ Organization solitary, pair, patrol (3–6 swarms), or legion
 (7–16 swarms)
 Treasure none
 SPECIAL ABILITIES
-Cling (Ex) If a creature leaves an army ant swarm’s square, 
-the swarm suffers 1d6 points of damage to reflect the loss 
-of its numbers as several of the crawling pests continue 
-to cling tenaciously to the victim. A creature with army 
-ants clinging to him takes 3d6 points of damage at the 
-end of his turn each round. As a full-round action, he can 
-remove the ants with a DC 17 Reflex save. High wind or 
-any amount of damage from an area effect destroys all 
-clinging ants. The save DC is Dexterity-based.
-Consume (Ex) An army ant swarm can rapidly consume  
-any creature it swarms over. Against helpless or nauseated 
-targets, an army ant swarm attack deals 6d6 points  
-of damage.
+Cling (Ex) If a creature leaves an army ant swarm’s square, the swarm suffers 1d6 points of damage to reflect the loss of its numbers as several of the crawling pests continue to cling tenaciously to the victim. A creature with army ants clinging to him takes 3d6 points of damage at the end of his turn each round. As a full-round action, he can remove the ants with a DC 17 Reflex save. High wind or any amount of damage from an area effect destroys all clinging ants. The save DC is Dexterity-based.
+Consume (Ex) An army ant swarm can rapidly consume  any creature it swarms over. Against helpless or nauseated targets, an army ant swarm attack deals 6d6 points  of damage.
 
 
 Ant, Giant Army Ant Swarm
@@ -538,28 +437,7 @@ Organization solitary, pair, gang (3–6), or hive (7–18 plus
 10–100 workers, 2–8 drones, and 1 queen)
 Treasure none
 SPECIAL ABILITIES
-Poison (Ex) Sting—injury; save Fort DC 12; frequency 1/round 
-for 4 rounds; effect 1d2 Str; cure 1 save
-Giant ants are as industrious as their normal-sized kin. While 
-their nests generally don’t consist of thousands, their greatly 
-increased size more than compensates.
-The statistics given above are for soldier ants—the 
-variety most commonly encountered. The following 
-simple templates can be used to create variants of the 
-standard soldier ant.
-Worker (–1 CR) Worker ants do not have a poison sting 
-attack or a grab special attack.
-Drone (+1 CR) Drones have the advanced simple 
-template and a f ly speed of 30 feet (average).
-Queen (+2 CR) The queen of a 
-nest is an immense, bloated 
-creature. She gains the 
-advanced and the giant 
-simple templates, but 
-drops her speed to 
-10 feet and loses 
-her climb speed 
-entirely.
+Poison (Ex) Sting—injury; save Fort DC 12; frequency 1/round for 4 rounds; effect 1d2 Str; cure 1 save Giant ants are as industrious as their normal-sized kin. While their nests generally don’t consist of thousands, their greatly increased size more than compensates. The statistics given above are for soldier ants—the variety most commonly encountered. The following simple templates can be used to create variants of the standard soldier ant. Worker (–1 CR) Worker ants do not have a poison sting attack or a grab special attack. Drone (+1 CR) Drones have the advanced simple template and a f ly speed of 30 feet (average). Queen (+2 CR) The queen of a nest is an immense, bloated creature. She gains the advanced and the giant simple templates, but drops her speed to 10 feet and loses her climb speed entirely.
 
 gORILLA CR 2
 XP 600
@@ -756,17 +634,7 @@ Environment any (Heaven)
 Organization solitary, pair, or squad (3–5)
 Treasure standard (masterwork greatsword, other treasure)
 SPECIAL ABILITIES
-Change Shape (Su) A hound archon can assume any canine 
-form of Small to Large size, as if using beast shape II. While 
-in canine form, the hound archon loses its bite, slam, and 
-greatsword attacks, but gains the bite attack of the form 
-it chooses. For the purposes of this ability, canines include 
-any dog-like or wolf-like creature of the animal type.
-Hound archons look like well-muscled humans with 
-canine heads typically resembling those of noble-looking 
-wolves or dogs. Well trained, they prefer to make 
-use of their greatswords in battle, though 
-they are equally adept with their natural 
+Change Shape (Su) A hound archon can assume any canine form of Small to Large size, as if using beast shape II. While in canine form, the hound archon loses its bite, slam, and greatsword attacks, but gains the bite attack of the form it chooses. For the purposes of this ability, canines include any dog-like or wolf-like creature of the animal type.
 
 AArrcchhoonn––AArrcchhoon, Hound
 
@@ -808,75 +676,9 @@ Organization solitary, pair,
 or squad (3–6)
 Treasure none
 SPECIAL ABILITIES
-gestalt (Su) Nine lantern archons can fuse together as a 
-full-round action, becoming a single Large entity that is 
-more powerful than the individual archons that make up 
-its parts. Looking like a whirlwind of dancing firefly lights, 
-the gestalt has all the powers and abilities of a Large air 
-elemental plus the following: archon, good, and lawful 
-subtypes; archon traits (aura of menace DC 16); 2 light 
-rays (2d6); DR 5/evil and magic. The archons can remain 
-in this form for 2d4 rounds. When the gestalt separates 
-back into individual lantern archons, its remaining hit 
-points are divided evenly among them; if it had less than 9 
-hit points, some of the component archons die when the 
-gestalt ends.
+gestalt (Su) Nine lantern archons can fuse together as a full-round action, becoming a single Large entity that is more powerful than the individual archons that make up its parts. Looking like a whirlwind of dancing firefly lights, the gestalt has all the powers and abilities of a Large air elemental plus the following: archon, good, and lawful subtypes; archon traits (aura of menace DC 16); 2 light rays (2d6); DR 5/evil and magic. The archons can remain in this form for 2d4 rounds. When the gestalt separates back into individual lantern archons, its remaining hit points are divided evenly among them; if it had less than 9 hit points, some of the component archons die when the gestalt ends.
 
-Light Ray (Ex) A lantern archon can fire beams of light to 
-damage foes. These light rays have a maximum range of 30 
-feet. This attack overcomes damage reduction of any type.
-Friendly and curious beings, lantern archons eagerly 
-converse with and assist other creatures. Their bodies, 
-however, are merely globes of spiritual purity and 
-pale light, and though they might interact with their 
-surroundings through pure force of will, such 
-interaction proves too weak to help with most physical 
-tasks. Their evasive natures make them exceptional at 
-scouting—at least in areas where strange lights aren’t 
-unusual—relaying messages, and overwhelming enemies 
-with surprise and group tactics. Although they appear 
-fragile, their forms guard them against all 
-but the most profane attacks. 
-A lantern archon always glows, 
-usually as bright as a torch. They 
-have total control over the color 
-of light they shed, and take 
-great pleasure in modulating 
-their colors and brightness 
-in time to music or to 
-entertain other creatures. 
-Most lantern archons 
-speak in airy, echoing 
-voices, with tones that 
-range from somber 
-whispers to hurried 
-chirping. Often, their 
-light f luctuates along 
-with their words or tones, 
-punctuating their speech 
-with sparks of light or gentle 
-pulses. As a swift action, a lantern archon 
-can dampen its light to that of a candle for 1 
-round. Only death can extinguish this light. As lantern 
-archons never sleep or eat, they make excellent watchers 
-and guardians. Lantern archons light many settlements 
-in the celestial realms in lieu of mundane or magical 
-illumination, serving as disguised sentinels always 
-watchful for approaching evil.
-Small but fast and zealous, lantern archons make 
-excellent support troops in celestial armies, swarming 
-over weak opponents or teleporting en masse to 
-f lanking positions to cut off reinforcements or escape 
-routes. These miniature archons work well together and 
-know that there is great strength in numbers, uniting 
-in times of need and desperation to form gestalts with 
-greater control over their surroundings. Especially brave 
-lantern archons might eventually be promoted into 
-a more powerful kind of archon, but most are content 
-with their status.
-
-Shedding a warm and calming radiance, this orb of light moves 
-with a preternatural silence and otherworldly grace.
+Light Ray (Ex) A lantern archon can fire beams of light to damage foes. These light rays have a maximum range of 30 feet. This attack overcomes damage reduction of any type.
 
 Archon, Trumpet
 TRUMPET ARChOn CR 14
@@ -956,15 +758,8 @@ Environment temperate forests
 Organization solitary, pair, or patch (3–6)
 Treasure incidental
 SPECIAL ABILITIES
-Camouflage (Ex) Since an assassin vine looks like a normal 
-plant when at rest, a DC 20 Perception check is required 
-to notice it before it attacks for the first time. Anyone with 
-ranks in Survival or Knowledge (nature) can use either of 
-those skills instead of Perception to notice the plant.
-Entangle (Su) An assassin vine can, as a free action, cause 
-plants within 30 feet of it to animate and grasp at foes. This 
-ability is otherwise similar to entangle (CL 4th, DC 13). The 
-save DC is Wisdom-based.
+Camouflage (Ex) Since an assassin vine looks like a normal plant when at rest, a DC 20 Perception check is required to notice it before it attacks for the first time. Anyone with ranks in Survival or Knowledge (nature) can use either of those skills instead of Perception to notice the plant.
+Entangle (Su) An assassin vine can, as a free action, cause plants within 30 feet of it to animate and grasp at foes. This ability is otherwise similar to entangle (CL 4th, DC 13). The save DC is Wisdom-based.
 
 AAssssaassssiinn VViinne–Azata
 
@@ -1006,20 +801,8 @@ Environment any (Elysium)
 Organization solitary, pair, or squad (3–6)
 Treasure double (+1 scimitar, +1 composite longbow [+5 Str])
 SPECIAL ABILITIES
-Whirlwind Blast (Su) When in wind form, a bralani can 
-attack with a scouring blast of wind, dealing 3d6 points of 
-damage in a 20-foot line (Reflex DC 17 half). The save DC is 
-Constitution-based.
-Wind form (Su) A bralani can shift between its humanoid 
-body and a body made of wind and mist as a standard 
-action. In humanoid form, it cannot fly or use its whirlwind 
-blast. In wind form, it functions as if under the effects of a 
-wind walk spell. It can make slam attacks and use spell-
-like abilities in either form. A bralani remains in one form 
-until it chooses to assume its other form. A change in form 
-cannot be dispelled, nor does the bralani revert to any 
-particular form when killed (both shapes are its true form). 
-A true seeing spell reveals both forms simultaneously.
+Whirlwind Blast (Su) When in wind form, a bralani can attack with a scouring blast of wind, dealing 3d6 points of damage in a 20-foot line (Reflex DC 17 half). The save DC is Constitution-based.
+Wind form (Su) A bralani can shift between its humanoid body and a body made of wind and mist as a standard action. In humanoid form, it cannot fly or use its whirlwind blast. In wind form, it functions as if under the effects of a wind walk spell. It can make slam attacks and use spell- like abilities in either form. A bralani remains in one form until it chooses to assume its other form. A change in form cannot be dispelled, nor does the bralani revert to any particular form when killed (both shapes are its true form). A true seeing spell reveals both forms simultaneously.
 
 Azata, Ghaele
 ghAELE CR 13
@@ -1074,43 +857,10 @@ Environment any (Elysium)
 Organization solitary, pair, or squad (3–6)
 Treasure triple (+2 holy greatsword)
 SPECIAL ABILITIES
-gaze (Su) In humanoid form, a ghaele’s gaze attack slays evil 
-creatures of 5 HD or less (range 60 feet, Will DC 18 negates, 
-shaken for 2d10 rounds on a successful save). Nonevil 
-creatures, and evil creatures with more than 5 HD, must 
-succeed on a DC 18 Will save or be shaken for 2d10 rounds. 
-A creature that saves against a ghaele’s gaze is immune to 
-that particular ghaele’s gaze for 24 hours. This is a mind-
-affecting fear effect. The save DCs are Charisma-based.
-Light form (Su) A ghaele can shift between its solid body and 
-one made of light as a standard action. In solid form, it 
-cannot fly or use light rays. In light form, it can fly and gains 
-the incorporeal quality—it can make light ray attacks or use 
-spell-like abilities in this form, but can’t make physical attacks 
-or cast spells. This ability otherwise functions similarly to a 
-bralani’s wind form ability.
-Light Ray (Ex) A ghaele’s light rays 
-have a range of 300 feet. This attack 
-bypasses all damage reduction.
-Spells Ghaeles cast divine spells as 13th-
-level clerics. They do not gain access 
-to domains or other cleric abilities.
-Ghaeles are the most knightly 
-of the azatas, hunting fiends, 
-dragons, and undead with 
-equal vigor. Most appear 
-like idealized humans 
-or elves and are quick to 
-smile—and equally quick 
-to strike against those 
-they perceive as wicked.
-
-This elegantly armored sentinel stands alert, her eyes radiating 
-divine light and her noble blade crackling with power.
-
-AAzzaata, Bralani–Azata, Ghaele
-
-ta, Bralani–Azata, Ghaele
+gaze (Su) In humanoid form, a ghaele’s gaze attack slays evil creatures of 5 HD or less (range 60 feet, Will DC 18 negates, shaken for 2d10 rounds on a successful save). Nonevil creatures, and evil creatures with more than 5 HD, must succeed on a DC 18 Will save or be shaken for 2d10 rounds. A creature that saves against a ghaele’s gaze is immune to that particular ghaele’s gaze for 24 hours. This is a mind- affecting fear effect. The save DCs are Charisma-based.
+Light form (Su) A ghaele can shift between its solid body and one made of light as a standard action. In solid form, it cannot fly or use light rays. In light form, it can fly and gains the incorporeal quality—it can make light ray attacks or use spell-like abilities in this form, but can’t make physical attacks or cast spells. This ability otherwise functions similarly to a bralani’s wind form ability.
+Light Ray (Ex) A ghaele’s light rays have a range of 300 feet. This attack bypasses all damage reduction.
+Spells Ghaeles cast divine spells as 13th- level clerics. They do not gain access to domains or other cleric abilities.
 
 Azata, Lillend
 LILLEnD CR 7
@@ -1155,12 +905,8 @@ Environment any (Elysium)
 Organization solitary, pair, or choir (3–6)
 Treasure standard (+1 longsword, masterwork harp)
 SPECIAL ABILITIES
-Bardic Performance A lillend has the bardic performance 
-ability of a 7th-level bard, granting her access to that 
-ability’s countersong, fascinate, inspire courage, inspire 
-competence, and suggestion aspects.
-Spells A lillend casts spells as a 7th-level bard. They favor 
-enchantment and healing spells.
+Bardic Performance A lillend has the bardic performance ability of a 7th-level bard, granting her access to that ability’s countersong, fascinate, inspire courage, inspire competence, and suggestion aspects.
+Spells A lillend casts spells as a 7th-level bard. They favor enchantment and healing spells.
 
 
 Barghest
@@ -1194,17 +940,7 @@ Environment any
 Organization solitary or cult (1 plus goblin tribe)
 Treasure standard
 SPECIAL ABILITIES
-feed (Su) Once per month, a barghest can devour a nonevil 
-humanoid’s corpse as a full-round action to gain a growth 
-point. It gains a bonus equal to its growth point total on 
-attack rolls, CMB rolls, saving throws, and skill checks. Its 
-maximum hit points increase by 5 for each growth point it 
-gains. For every 2 growth points, a barghest’s caster level 
-for its spell-like abilities and its CR increase by +1. When 
-a barghest reaches 4 growth points, it sheds its skin and 
-becomes a greater barghest, losing all of its growth points 
-(and bonuses) but gaining the stats presented on this page 
-for a greater barghest. 
+feed (Su) Once per month, a barghest can devour a nonevil humanoid’s corpse as a full-round action to gain a growth point. It gains a bonus equal to its growth point total on attack rolls, CMB rolls, saving throws, and skill checks. Its maximum hit points increase by 5 for each growth point it gains. For every 2 growth points, a barghest’s caster level for its spell-like abilities and its CR increase by +1. When a barghest reaches 4 growth points, it sheds its skin and becomes a greater barghest, losing all of its growth points (and bonuses) but gaining the stats presented on this page for a greater barghest. 
 
 gREATER BARghEST CR 7
 XP 3,200
@@ -1264,53 +1000,9 @@ Environment any non-cold underground
 Organization solitary, pair, or grove (3–8)
 Treasure incidental
 SPECIAL ABILITIES
-hallucination Cloud (Ex) As a standard action once per 
-minute, a basidirond can release a cloud of invisible 
-spores in a 20-foot radius. All creatures within the area 
-must succeed on a DC 16 Fortitude save or be affected by 
-powerful hallucinations as long as they remain in the cloud 
-plus 1d4 rounds after leaving the area. A new save must be 
-made each round a creature remains within the affected 
-area. A hallucination cloud persists for 5 rounds before 
-dispersing—a strong wind causes it to disperse 
-immediately. The save DC is Constitution-based. To 
-determine what hallucination is suffered each round, 
-roll 1d6 and consult the following table.
-d6 hallucination
-1 You’re sinking in quicksand! Fall prone and spend 1 
-round flailing your arms and legs as if trying to swim.
-2 Attacked by a swarm of spiders! Spend a full round 
-action to attack the floor near you with your weapon.
-3 An item you hold has turned into a viper! Drop it and 
-flee from the item at top speed for 1 round.
-4 You’re suffocating! Stand in place, hold your 
-breath, and clutch at your throat for 1 round.
-5 You’ve shrunk to 1/10th your normal size! Take no 
-actions for 1 round and monsters won’t see you.
-6 You’re melting! Grasp hold of yourself in an attempt to 
-hold yourself together, and take no actions for 1 round.
-
-Spores (Ex) Any creature struck by a basidirond’s slam attack 
-is coated with spores. The creature struck must make a 
-DC 16 Fortitude save or these spores take root in his flesh, 
-and particularly in his lungs. The save DC is Constititon-
-based.Basidirond Spores: Disease—inhaled; save Fort DC 
-16; frequency 1/round for 6 rounds; effect 1d2 Con damage; 
-cure 1 save.
-Cold Lethargy (Ex) Although a basidirond is immune to cold 
-damage, any cold effect it is exposed to slows it for 1d4 
-rounds. During this time, the basidirond cannot use its 
-hallucination cloud or spores.
-The strange fungal basidirond is a deadly plant monster 
-that feeds on mineral-rich moisture, be it runoff from 
-cave walls or fresh blood. By ensuring a constant f low 
-of nutritious moisture, canny cave dwellers can use 
-basidironds as guardians for their lairs, although they 
-must take care to avoid the plant’s hunting routes lest 
-they become its latest victims.
-
-This strange plant consists of four spidery stalks, long green 
-tendrils, and an inverted bell-shaped cap filled with spores.
+hallucination Cloud (Ex) As a standard action once per minute, a basidirond can release a cloud of invisible spores in a 20-foot radius. All creatures within the area must succeed on a DC 16 Fortitude save or be affected by powerful hallucinations as long as they remain in the cloud plus 1d4 rounds after leaving the area. A new save must be made each round a creature remains within the affected area. A hallucination cloud persists for 5 rounds before dispersing—a strong wind causes it to disperse immediately. The save DC is Constitution-based. To determine what hallucination is suffered each round, roll 1d6 and consult the following table. d6 hallucination 1 You’re sinking in quicksand! Fall prone and spend 1 round flailing your arms and legs as if trying to swim. 2 Attacked by a swarm of spiders! Spend a full round action to attack the floor near you with your weapon. 3 An item you hold has turned into a viper! Drop it and flee from the item at top speed for 1 round. 4 You’re suffocating! Stand in place, hold your breath, and clutch at your throat for 1 round. 5 You’ve shrunk to 1/10th your normal size! Take no actions for 1 round and monsters won’t see you. 6 You’re melting! Grasp hold of yourself in an attempt to hold yourself together, and take no actions for 1 round.
+Spores (Ex) Any creature struck by a basidirond’s slam attack is coated with spores. The creature struck must make a DC 16 Fortitude save or these spores take root in his flesh, and particularly in his lungs. The save DC is Constititon- based.Basidirond Spores: Disease—inhaled; save Fort DC 16; frequency 1/round for 6 rounds; effect 1d2 Con damage; cure 1 save.
+Cold Lethargy (Ex) Although a basidirond is immune to cold damage, any cold effect it is exposed to slows it for 1d4 rounds. During this time, the basidirond cannot use its hallucination cloud or spores.
 
 Basilisk
 BASILISk CR 5
@@ -1336,35 +1028,7 @@ Environment any
 Organization solitary, pair, or colony (3–6)
 Treasure incidental
 SPECIAL ABILITIES
-gaze (Ex) Turn to stone permanently (as flesh to stone), range 
-30 feet, Fortitude DC 15 negates. A creature petrified in 
-this matter that is then coated (not just splashed) with fresh 
-basilisk blood (taken from a basilisk no more than 1 hour 
-dead) is instantly restored to flesh. A single basilisk contains 
-enough blood to coat 1d3 Medium creatures in this manner. 
-The save DC is Constitution-based.
-The basilisk, often called the “King of Serpents,” is in 
-fact not a serpent at all, but rather an eight-legged reptile 
-with a nasty disposition and the ability to turn creatures 
-to stone with its gaze. Folklore holds that, much like 
-the cockatrice, the first basilisks hatched from eggs 
-laid by snakes and incubated by roosters, but little in the 
-basilisk’s physiology lends any credence to this claim.
-Basilisks live in nearly any terrestrial environment, from 
-forest to desert, and their hides tend to match and reflect 
-their surroundings—a desert-dwelling basilisk might be 
-tan or brown, while one that lives in a forest could be 
-bright green. They tend to make their lairs in caves, 
-burrows, or other sheltered areas, and these dens are 
-often marked by statues of people and animals in 
-lifelike poses—the petrified remains of 
-those unfortunate enough to stumble 
-across the basilisk.
-
-
-BBaassiiddiirroonndd––BBaassiilisk
-
-lisk
+gaze (Ex) Turn to stone permanently (as flesh to stone), range 30 feet, Fortitude DC 15 negates. A creature petrified in this matter that is then coated (not just splashed) with fresh basilisk blood (taken from a basilisk no more than 1 hour dead) is instantly restored to flesh. A single basilisk contains enough blood to coat 1d3 Medium creatures in this manner. The save DC is Constitution-based.
 
 DIRE BAT CR 2
 XP 600
@@ -1606,21 +1270,8 @@ Environment any (the Abyss)
 Organization solitary or band (2–6)
 Treasure standard
 SPECIAL ABILITIES
-Dismantle Armor (Ex) If a bebilith hits a foe with both claw 
-attacks, it can attempt to peel away the target’s armor 
-and shield as a free action by making a CMB check. 
-If the bebilith is successful, the target’s armor and 
-shield are torn from his body and dismantled, 
-falling to the ground. Armor subjected to this 
-attack loses half its hit points and gains the 
-broken condition if the target fails a DC 25 
-Reflex save. The save DC is Strength-based.
-Penetrating Strike (Su) A bebilith’s natural 
-weapons are treated as chaotic and 
-magical for the purposes of penetrating 
-damage reduction. Against creatures with 
-the demon type, its natural weapons are 
-also treated as cold iron and good.
+Dismantle Armor (Ex) If a bebilith hits a foe with both claw attacks, it can attempt to peel away the target’s armor and shield as a free action by making a CMB check. If the bebilith is successful, the target’s armor and shield are torn from his body and dismantled, falling to the ground. Armor subjected to this attack loses half its hit points and gains the broken condition if the target fails a DC 25 Reflex save. The save DC is Strength-based.
+Penetrating Strike (Su) A bebilith’s natural weapons are treated as chaotic and magical for the purposes of penetrating damage reduction. Against creatures with the demon type, its natural weapons are also treated as cold iron and good.
 Rot (Su) A bebilith’s bite causes a horrible withering and weakening of the flesh, resulting in a hideous melting and foul rotting effect. This catastrophic withering begins on the round the creature is bitten and continues for another 4 rounds thereafter, for 5 rounds of withering in all. Each round the rot persists, the target must succeed on a DC 23 Fortitude save or take 2 points of Constitution damage. If the target makes two consecutive saving throws in a row, the effect is cured. Heal can also halt the rot effect. The save DC is Constitution-based.
 
 fIRE BEETLE CR 1/3
@@ -1645,18 +1296,9 @@ Environment any
 Organization solitary, cluster (2–6) or colony (7–12)
 Treasure none
 SPECIAL ABILITIES
-Luminescence (Ex) A fire beetle’s glowing glands provide light 
-in a 10-foot radius. A dead fire beetle’s luminescent glands 
-continue to glow for 1d6 days after its death.
-Although nocturnal, the fire beetle lacks darkvision—
-it relies on its own glowing glands for illumination. 
-Caged fire beetles are a popular source of long-lasting 
-illumination among eccentrics and miners.
-Other variations on the common fire beetle exist. The 
-two most common variants are detailed below.
-Mining Beetle (CR 1/2): A mining beetle is an 
-advanced fire beetle with the advanced simple 
-template and a burrowing speed of 20 feet.
+Luminescence (Ex) A fire beetle’s glowing glands provide light in a 10-foot radius. A dead fire beetle’s luminescent glands continue to glow for 1d6 days after its death. Although nocturnal, the fire beetle lacks darkvision— it relies on its own glowing glands for illumination. Caged fire beetles are a popular source of long-lasting illumination among eccentrics and miners.
+Other variations on the common fire beetle exist. The two most common variants are detailed below.
+Mining Beetle (CR 1/2): A mining beetle is an advanced fire beetle with the advanced simple template and a burrowing speed of 20 feet.
 Flash Beetle (CR 1/2): A flash beetle is an advanced fire beetle that can create a bright flash of light once an hour. When a flash beetle does so, all creatures in a 10- foot burst must make a DC 12 Fortitude save or be dazzled for 1d3 rounds.  The save DC is Constitution-based.
 
 Beetle, Fire Beetle, Giant Stag
@@ -1748,24 +1390,7 @@ Environment warm hills and deserts
 Organization solitary or pair
 Treasure double
 SPECIAL ABILITIES
-grab (Ex) A behir’s grab attack works against creatures 
-of any size category. It can constrict the same round 
-it establishes a hold. On any round thereafter that it 
-maintains its hold, the behir can choose to rake the 
-grappled target or swallow it whole.
-Temperamental and avaricious, the behir spends most 
-of its time slithering through the sandy hills and desert 
-cliffs that make up its territory, preying upon all creatures 
-who dare to enter its hunting grounds. The creature’s six 
-pairs of powerful, clawed legs remain folded against 
-its sides most of the time, only extending in combat to 
-grapple foes or carry the behir forward in a terrifying, 
-low-slung gallop, or else when climbing the sheer cliff 
-faces common to behir lairs.
-The average behir is 40 feet long and weighs 4,000 
-pounds. In addition to the two prominent horns on its 
-head, many have additional decorative spines at regular 
-intervals along the central ridges of their backs.
+grab (Ex) A behir’s grab attack works against creatures of any size category. It can constrict the same round it establishes a hold. On any round thereafter that it maintains its hold, the behir can choose to rake the grappled target or swallow it whole.
 
 Black Pudding
 BLACk PUDDIng CR 7
@@ -1793,35 +1418,10 @@ Environment any underground
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Acid (Ex) A black pudding secretes a digestive acid that dissolves 
-organic material and metal quickly, but does not affect stone. 
-Each time a creature suffers damage from a black pudding’s 
-acid, its clothing and armor take the same amount of damage 
-from the acid. A DC 21 Reflex save prevents damage to 
-clothing and armor. A metal or wooden weapon that strikes 
-a black pudding takes 2d6 acid damage unless the weapon’s 
-wielder succeeds on a DC 21 Reflex save. If a black pudding 
-remains in contact with a wooden or metal object for 1 full 
-round, it inflicts 21 points of acid damage (no save) to the 
-object. The save DCs are Constitution-based.
-Corrosion (Ex) An opponent that is being constricted by a 
-black pudding suffers a –4 penalty on Reflex saves made to 
-resist acid damage applying to clothing and armor.
-Split (Ex) Slashing and piercing weapons deal no damage to a 
-black pudding. Instead, the creature splits into two identical 
-puddings, each with half of the original’s current hit points 
-(round down). A pudding with 10 hit points or less cannot 
-be further split and dies if reduced to 0 hit points.
-Suction (Ex) The black pudding can create powerful suction 
-against any surface as it climbs, allowing it to cling to 
-inverted surfaces with ease. A black pudding can establish 
-or release suction as a swift action, and as long as it is using 
-
-suction, it moves at half speed. Because of the suction, a 
-black pudding’s CMD score gets a +10 circumstance bonus 
-to resist bull rush, awesome blows, and other attacks and 
-effects that attempt to physically move it from its location.
-BBeehhiirr––BBllaacckk PPuuddddiinngg
+Acid (Ex) A black pudding secretes a digestive acid that dissolves organic material and metal quickly, but does not affect stone. Each time a creature suffers damage from a black pudding’s acid, its clothing and armor take the same amount of damage from the acid. A DC 21 Reflex save prevents damage to clothing and armor. A metal or wooden weapon that strikes a black pudding takes 2d6 acid damage unless the weapon’s wielder succeeds on a DC 21 Reflex save. If a black pudding remains in contact with a wooden or metal object for 1 full round, it inflicts 21 points of acid damage (no save) to the object. The save DCs are Constitution-based.
+Corrosion (Ex) An opponent that is being constricted by a black pudding suffers a –4 penalty on Reflex saves made to resist acid damage applying to clothing and armor.
+Split (Ex) Slashing and piercing weapons deal no damage to a black pudding. Instead, the creature splits into two identical puddings, each with half of the original’s current hit points (round down). A pudding with 10 hit points or less cannot be further split and dies if reduced to 0 hit points.
+Suction (Ex) The black pudding can create powerful suction against any surface as it climbs, allowing it to cling to inverted surfaces with ease. A black pudding can establish or release suction as a swift action, and as long as it is using suction, it moves at half speed. Because of the suction, a black pudding’s CMD score gets a +10 circumstance bonus to resist bull rush, awesome blows, and other attacks and effects that attempt to physically move it from its location.
 
 Boar Boar, Dire
 BOAR CR 2
@@ -1957,35 +1557,10 @@ Organization solitary, pair, or army (3–12)
 Treasure NPC gear (leather armor, morningstar, 
 other treasure)
 SPECIAL ABILITIES
-hold Breath (Ex) A boggard can hold its breath 
-for a number of rounds equal to four times its 
-Constitution score before it risks drowning or 
-suffocating.
-Sticky Tongue (Ex) A creature hit by a boggard’s tongue 
-attack cannot move more than 10 feet away from the 
-boggard and takes a –2 penalty to AC as long as the 
-tongue is attached (this penalty does not stack if multiple 
-tongues are attached). The tongue can be removed by 
-making an opposed Strength check as a standard action 
-or by dealing 2 points of slashing damage to the tongue 
-(AC 11, damage does not deplete the boggard’s actual hit 
-points). The boggard cannot move more than 10 feet away 
-from the target, but the boggard can release its tongue as 
-a free action. Unlike a giant frog, a boggard cannot pull 
-targets toward it with its tongue.
-Swamp Stride (Ex) A boggard can move through any sort 
-of natural difficult terrain at its normal speed while 
-within a swamp. Magically altered terrain affects a 
-boggard normally.
-
-Terrifying Croak (Su) Once per hour, a boggard can, as a 
-standard action, emit a loud and horrifying croak. Any non-
-boggard creature within 30 feet of the boggard must make a 
-DC 13 Will save or become shaken for 1d4 rounds. Creatures 
-that succeed at this save cannot be affected again by the 
-same boggard’s croak for 24 hours. Creatures that are already 
-shaken become frightened for 1d4 rounds instead. The save 
-DC is Charisma-based and includes a +2 racial bonus.
+hold Breath (Ex) A boggard can hold its breath for a number of rounds equal to four times its Constitution score before it risks drowning or suffocating.
+Sticky Tongue (Ex) A creature hit by a boggard’s tongue attack cannot move more than 10 feet away from the boggard and takes a –2 penalty to AC as long as the tongue is attached (this penalty does not stack if multiple tongues are attached). The tongue can be removed by making an opposed Strength check as a standard action or by dealing 2 points of slashing damage to the tongue (AC 11, damage does not deplete the boggard’s actual hit points). The boggard cannot move more than 10 feet away from the target, but the boggard can release its tongue as a free action. Unlike a giant frog, a boggard cannot pull targets toward it with its tongue.
+Swamp Stride (Ex) A boggard can move through any sort of natural difficult terrain at its normal speed while within a swamp. Magically altered terrain affects a boggard normally.
+Terrifying Croak (Su) Once per hour, a boggard can, as a standard action, emit a loud and horrifying croak. Any non- boggard creature within 30 feet of the boggard must make a DC 13 Will save or become shaken for 1d4 rounds. Creatures that succeed at this save cannot be affected again by the same boggard’s croak for 24 hours. Creatures that are already shaken become frightened for 1d4 rounds instead. The save DC is Charisma-based and includes a +2 racial bonus.
 
 Bugbear
 BUgBEAR CR 2
@@ -2016,8 +1591,7 @@ Organization solitary, pair, gang (3–6), or warband (7–12 plus
 Treasure NPC Gear (leather armor, heavy wooden shield, 
 morningstar, 3 javelins, other treasure)
 SPECIAL ABILITIES
-Stalker (Ex) Perception and Stealth are always 
-class skills for bugbears.
+Stalker (Ex) Perception and Stealth are always class skills for bugbears.
 
 Bulette
 BULETTE CR 7
@@ -2046,25 +1620,8 @@ Environment temperate hills
 Organization solitary or pair
 Treasure none
 SPECIAL ABILITIES
-Leap (Ex) A bulette can perform a special kind of pounce attack by 
-jumping into combat. When a bulette charges, it can make a 
-DC 20 Acrobatics check to jump into the air and land 
-next to its enemies. If it makes the Acrobatics check, 
-it can follow up with four claw attacks against foes 
-in reach, but cannot make a bite attack.
-Savage Bite (Ex) A bulette’s bite is particularly 
-dangerous. It applies 1-1/2 times its Strength 
-modifier to damage inflicted with its bite attack, 
-and threatens a critical hit on a 19–20.
-The creation of some unknown arcanist in 
-millennia past, the bulette has bred true to 
-become one of the fiercest predators of the 
-hills. Burrowing rapidly through the earth just 
-beneath the surface, sometimes with its armored 
-fin cutting a distinctive wake behind it, the 
-bulette launches itself free of stone and soil to 
-tear into its prey without remorse, giving rise to 
-the common appellation “landshark.”
+Leap (Ex) A bulette can perform a special kind of pounce attack by jumping into combat. When a bulette charges, it can make a DC 20 Acrobatics check to jump into the air and land next to its enemies. If it makes the Acrobatics check, it can follow up with four claw attacks against foes in reach, but cannot make a bite attack.
+Savage Bite (Ex) A bulette’s bite is particularly dangerous. It applies 1-1/2 times its Strength modifier to damage inflicted with its bite attack, and threatens a critical hit on a 19–20.
 
 Cat, Cheetah Cat, Leopard
 ChEETAh CR 2
@@ -2089,14 +1646,7 @@ Environment warm plains
 Organization solitary or pair
 Treasure none
 SPECIAL ABILITIES
-Sprint (Ex) Once per hour, a cheetah can move at 10 times its 
-normal speed (500 feet) when it makes a charge.
-The cheetah is a swift and deadly predator capable of 
-moving with incredible speed, allowing it to run 
-down unsuspecting foes hundreds of feet away. 
-The hunting cat avoids areas of dense and 
-tangled undergrowth, but has great skill at 
-lying in wait in tall grass.
+Sprint (Ex) Once per hour, a cheetah can move at 10 times its normal speed (500 feet) when it makes a charge. The cheetah is a swift and deadly predator capable of moving with incredible speed, allowing it to run down unsuspecting foes hundreds of feet away. The hunting cat avoids areas of dense and tangled undergrowth, but has great skill at lying in wait in tall grass.
 An adult cheetah is 4-1/2 
 feet long and weighs 
 140 pounds.
@@ -2173,24 +1723,8 @@ Environment any underground
 Organization solitary, pair, or tangle (3–6)
 Treasure none
 SPECIAL ABILITIES
-filament (Ex) A cave fisher can fire a thin filament of sticky 
-silk as a standard action. This touch attack has a range 
-of 60 feet and no range increment. A creature struck 
-by a cave fisher’s filament becomes attached to the 
-sticky thread. As a standard action, a creature can rip 
-the filament free with a DC 20 Strength check. A caught 
-creature can also attempt to escape a filament by making 
-a DC 25 Escape Artist check. A filament is AC 14 (touch 12), 
-has 5 hit points, and has DR 15/slashing. An application 
-of liquid with high alcohol content (or a dose of universal 
-solvent) dissolves the adhesive and 
-releases the creature caught by 
-the filament. A cave fisher 
-can have only one filament 
-active at a time.
-Pull (Ex) A cave fisher has a +4 
-racial bonus on CMB checks 
-made using its pull special attack.
+filament (Ex) A cave fisher can fire a thin filament of sticky silk as a standard action. This touch attack has a range of 60 feet and no range increment. A creature struck by a cave fisher’s filament becomes attached to the sticky thread. As a standard action, a creature can rip the filament free with a DC 20 Strength check. A caught creature can also attempt to escape a filament by making a DC 25 Escape Artist check. A filament is AC 14 (touch 12), has 5 hit points, and has DR 15/slashing. An application of liquid with high alcohol content (or a dose of universal solvent) dissolves the adhesive and releases the creature caught by the filament. A cave fisher can have only one filament active at a time.
+Pull (Ex) A cave fisher has a +4 racial bonus on CMB checks made using its pull special attack.
 
 Centaur
 CEnTAUR CR 3
@@ -2222,25 +1756,7 @@ hunters of 3rd level and 1 leader of 6th level)
 Treasure standard (breastplate, heavy steel shield, longsword, 
 spear, other treasure)
 SPECIAL ABILITIES
-Undersized Weapons (Ex) Although a centaur is Large, its upper 
-torso is the same size as that of a Medium humanoid. As a 
-result, they wield weapons as if they were one size category 
-smaller than their actual size (Medium for most centaurs).
-Legendary hunters and skilled warriors, centaurs 
-are part man and part horse. Typically found on the 
-fringes of civilization, these stoic people vary widely 
-in appearance, their skin tones typically appearing 
-deeply tanned but similar to the humans who occupy 
-nearby regions, while their lower bodies borrow the 
-colorations of local equines. Centaur hair and eyes trend 
-toward darker colors and their features tend to be broad, 
-while the overall bulk of their bodies is influenced by the 
-size of the horses their lower quarters resemble. Thus, while 
-an average centaur stands over 7 feet tall and weights upward 
-of 2,000 pounds, there are vast regional variations—from 
-lean plains-runners to burly mountain hunters. Centaurs 
-typically live to be about 60 years old.
-
+Undersized Weapons (Ex) Although a centaur is Large, its upper torso is the same size as that of a Medium humanoid. As a result, they wield weapons as if they were one size category smaller than their actual size (Medium for most centaurs).
 
 Centipede, Giant Centipede Swarm
 gIAnT CEnTIPEDE CR 1/2
@@ -2267,21 +1783,7 @@ Environment temperate or warm forest or underground
 Organization solitary, pair, or colony (3–6)
 Treasure none
 SPECIAL ABILITIES
-Poison (EX) Bite—injury; save Fort DC 13; frequency 1/round 
-for 6 rounds; effect 1d3 Dex damage; cure 1 save. The save 
-DC is Constitution-based and includes a +2 racial bonus.
-Giant centipedes attack nearly any living creatures with 
-their poisonous jaws. These creatures adapt to many 
-environments and feed voraciously on the local fauna, 
-including humanoids. The coloration of giant centipedes 
-mirrors that of normal centipedes and spans the spectrum, 
-ranging from dull hues to bright reds and fiery oranges.
-Other species of giant centipedes exist as well, some 
-smaller but most quite a bit larger. You can adjust the stats 
-given here by changing Hit Dice and size (changing Strength, 
-Dexterity, and Constitution as appropriate) to represent a 
-wide range of giant centipede species. The following table 
-lists the most common variants.
+Poison (EX) Bite—injury; save Fort DC 13; frequency 1/round for 6 rounds; effect 1d3 Dex damage; cure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
 Species CR Size hD
 House centipede 1/8 Tiny 1d8
 Sewer centipede 1/4 Small 1d8
@@ -2315,10 +1817,7 @@ Environment temperate or warm forest or underground
 Organization solitary, pair, or tangle (3–6 swarms)
 Treasure none
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury; save Fort 
-DC 13; frequency 1/round for 
-6 rounds; effect 1d4 Dex 
-damage; cure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
+Poison (Ex) Bite—injury; save Fort DC 13; frequency 1/round for 6 rounds; effect 1d4 Dex damage; cure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
 
 Chimera
 ChIMERA CR 7
@@ -2350,20 +1849,7 @@ Environment temperate hills
 Organization solitary, pair, pride (3–6), or flight (7–12)
 Treasure standard
 SPECIAL ABILITIES
-Breath Weapon (Su) A chimera’s breath weapon depends 
-on the color of its dragon head, as summarized on the 
-table below. Regardless of its type, a chimera’s breath 
-weapon is usable once every 1d4 rounds, deals 6d8 
-points of damage, and allows a DC 17 Reflex save for 
-half damage. The save DC is Constitution-based. To 
-determine a chimera’s head color and breath weapon 
-randomly, roll 1d10 and consult the table below.
-d10 head Color Breath Weapon
-1–2 Black 40-foot line of acid
-3–4 Blue 40-foot line of lightning
-5–6 Green 20-foot cone of acid
-7–8 Red 20-foot cone of fire
-9–10 White 20-foot cone of cold
+Breath Weapon (Su) A chimera’s breath weapon depends on the color of its dragon head, as summarized on the table below. Regardless of its type, a chimera’s breath weapon is usable once every 1d4 rounds, deals 6d8 points of damage, and allows a DC 17 Reflex save for half damage. The save DC is Constitution-based. To determine a chimera’s head color and breath weapon randomly, roll 1d10 and consult the table below. d10 head Color Breath Weapon 1–2 Black 40-foot line of acid 3–4 Blue 40-foot line of lightning 5–6 Green 20-foot cone of acid 7–8 Red 20-foot cone of fire 9–10 White 20-foot cone of cold
 
 Choker
 ChOkER CR 2
@@ -2391,11 +1877,8 @@ Environment any underground
 Organization solitary, pair, or clutch (3–8)
 Treasure standard
 SPECIAL ABILITIES
-Strangle (Ex) Chokers have an unerring talent for seizing their 
-victims by the neck. A creature that is grappled by a choker 
-cannot speak or cast spells with verbal components.
-Quickness (Su) A choker is supernaturally quick. It can take an 
-extra move action during its turn each round.
+Strangle (Ex) Chokers have an unerring talent for seizing their victims by the neck. A creature that is grappled by a choker cannot speak or cast spells with verbal components.
+Quickness (Su) A choker is supernaturally quick. It can take an extra move action during its turn each round.
 
 ChUUL CR 7
 XP 3,200
@@ -2426,15 +1909,7 @@ Environment temperate swamps
 Organization solitary, pair, or pack (3–6)
 Treasure standard
 SPECIAL ABILITIES
-Paralytic Tentacles (Ex) A chuul can transfer a grappled victim 
-from a claw to its tentacles as a move action. The tentacles 
-grapple with the same strength as the claw but deal no 
-damage, instead exuding a paralytic secretion. Anyone held 
-in the tentacles must succeed on a DC 19 Fortitude save each 
-round on the chuul’s turn or be paralyzed for 6 rounds. The 
-save DC is Constitution-based. While held in the tentacles, 
-paralyzed or not, a victim automatically takes 1d8+7 points 
-of damage each round from the creature’s mandibles.
+Paralytic Tentacles (Ex) A chuul can transfer a grappled victim from a claw to its tentacles as a move action. The tentacles grapple with the same strength as the claw but deal no damage, instead exuding a paralytic secretion. Anyone held in the tentacles must succeed on a DC 19 Fortitude save each round on the chuul’s turn or be paralyzed for 6 rounds. The save DC is Constitution-based. While held in the tentacles, paralyzed or not, a victim automatically takes 1d8+7 points of damage each round from the creature’s mandibles.
 
 Cloaker
 CLOAkER CR 5
@@ -2466,31 +1941,8 @@ Environment underground
 Organization solitary, pair, mob (3–6), or flock (7–12)
 Treasure standard
 SPECIAL ABILITIES
-Engulf (Ex) A cloaker can try to wrap a Medium or smaller 
-creature in its body as a standard action. The cloaker 
-attempts a grapple that does not provoke an attack 
-of opportunity. If it wins the grapple check, it 
-establishes a hold and bites the engulfed victim 
-with a +4 bonus on its attack roll. It can still use its 
-whip-like tail to strike at other targets. Attacks that 
-hit an engulfing cloaker deal half their damage to the 
-monster and half to the trapped victim.
-Moan (Ex) A cloaker can emit an infrasonic moan as a 
-standard action, with one of four effects.
-Fear: All creatures in a 30-foot spread must 
-save (Will negates) or become panicked for 2 rounds.
-Nausea: All creatures in a 30-foot cone must save (Fortitude 
-negates) or fall prone and be nauseated for 1d4+1 rounds.
-Stupor: A single creature within 30 feet is affected by hold 
-monster for 5 rounds (Will negates).
-Unnerve: Anyone within a 60-foot spread automatically 
-takes a –2 penalty on attack and damage rolls. Those 
-
-in the area for more than 6 consecutive rounds must 
-save (Will negates) or enter a trance, helpless until the 
-moaning stops.
-
-CChhuuuull––CCllooaakkeerr
+Engulf (Ex) A cloaker can try to wrap a Medium or smaller creature in its body as a standard action. The cloaker attempts a grapple that does not provoke an attack of opportunity. If it wins the grapple check, it establishes a hold and bites the engulfed victim with a +4 bonus on its attack roll. It can still use its whip-like tail to strike at other targets. Attacks that hit an engulfing cloaker deal half their damage to the monster and half to the trapped victim.
+Moan (Ex) A cloaker can emit an infrasonic moan as a standard action, with one of four effects. Fear: All creatures in a 30-foot spread must save (Will negates) or become panicked for 2 rounds. Nausea: All creatures in a 30-foot cone must save (Fortitude negates) or fall prone and be nauseated for 1d4+1 rounds. Stupor: A single creature within 30 feet is affected by hold monster for 5 rounds (Will negates). Unnerve: Anyone within a 60-foot spread automatically takes a –2 penalty on attack and damage rolls. Those in the area for more than 6 consecutive rounds must save (Will negates) or enter a trance, helpless until the moaning stops.
 
 Cockatrice
 This hideous avian creature has the body of an emaciated rooster, 
@@ -2576,11 +2028,7 @@ CCoocckkaattrriicce–Couatl
 e–Couatl
 
 SPECIAL ABILITIES
-Spells A couatl casts spells as a 9th-level sorcerer, and can cast 
-spells from the cleric list as well as those normally available 
-to a sorcerer. Cleric spells are considered arcane spells for 
-a couatl, meaning that the creature does not need a divine 
-focus to cast them.
+Spells A couatl casts spells as a 9th-level sorcerer, and can cast spells from the cleric list as well as those normally available to a sorcerer. Cleric spells are considered arcane spells for a couatl, meaning that the creature does not need a divine focus to cast them.
 Poison (Ex) Injury—bite; save Fortitude DC 16; frequency 1/ minute for 10 minutes; effect 1d4 Str; cure 2 consecutive saves. The DC is Constitution-based.
 
 Crab, Giant Crab Swarm
@@ -3135,48 +2583,7 @@ Environment any swamp (Abyss)
 Organization solitary or gang (2–4)
 Treasure standard
 SPECIAL ABILITIES
-nausea (Ex) The noxious vapors and foul fluids that 
-constantly weep and seethe from a hezrou’s body 
-are particularly heinous to those the creature 
-grapples. Each round a creature is grappled by 
-a hezrou, the grappled foe must make a DC 24 
-Fortitude save to avoid becoming nauseated. A 
-creature nauseated in this manner remains nauseated 
-until he succeeds on a DC 24 Fortitude save, or until a 
-minute has passed during which he is not grappled by 
-the hezrou, whichever condition comes first. The save 
-DC is Constitution-based.
-
-The hezrou dwells in the vast Abyssal swamps, mires, and 
-waterways, equally at home on land and in the water. The 
-presence of a hezrou has an obvious effect on the nearby 
-f lora and water, causing plant life to twist and knurl and 
-infusing water with a foul odor and brackish taste—
-signs much easier to spot on the Material Plane than the 
-Abyss. Long exposure to this corruption can cause vile 
-transformations and hideous deformities. Often, entire 
-backwater communities of deformed mutants owe their 
-twisted countenances not as much to incest and poor 
-breeding as they do to a hezrou’s proximity.
-Although quite intelligent, a hezrou can fairly be said to 
-waste its intellect. They prefer the simple pleasures—slumber, 
-the thrill of torture, the bliss of feasting on a living meal, or the 
-joy of feeling something beautiful breaking and crumbling in 
-a clenched fist. They do not often seek to build empires or lead 
-cults—although few hezrous would turn away prospective 
-minions who came to serve the demon on their own.
-These monstrous and bestial creatures form from the 
-souls of evil mortals who poisoned themselves, their kin, 
-or their surroundings, such as drug addicts, assassins, and 
-alchemists who cared not how their experiments polluted 
-the environment.
-
-This fiend’s armored f lesh is scaly and moist. Its large, toothy 
-mouth gapes below a pair of hungry, reptilian eyes.
-
-DDeemmoon, Hezrou–Demon, Marilith
-
-n, Hezrou–Demon, Marilith
+nausea (Ex) The noxious vapors and foul fluids that constantly weep and seethe from a hezrou’s body are particularly heinous to those the creature grapples. Each round a creature is grappled by a hezrou, the grappled foe must make a DC 24 Fortitude save to avoid becoming nauseated. A creature nauseated in this manner remains nauseated until he succeeds on a DC 24 Fortitude save, or until a minute has passed during which he is not grappled by the hezrou, whichever condition comes first. The save DC is Constitution-based.
 
 Demon, Marilith
 MARILITh CR 17 
@@ -3223,31 +2630,9 @@ Organization solitary, pair, or platoon (1 marilith, 1–3
 glabrezus, and 3–14 babaus)
 Treasure double (6 mwk longswords, other treasure)
 SPECIAL ABILITIES
-Crushing Coils (Ex) A creature that takes damage 
-from a marilith’s constrict attack must succeed on 
-a DC 25 Fortitude save or lose consciousness for 1d8 
-rounds. The save DC is Strength-based.
-
-This snake-bodied fiend has a six-armed woman’s torso, pointed 
-ears, and glittering, otherworldly eyes.
-
-Infuse Weapon (Su) Any weapon a marilith wields gains a +1 
-enhancement bonus to attack and damage, and strikes as 
-if it were a chaotic and evil cold iron weapon (in addition to 
-retaining the qualities of its actual composition).
-Multiweapon Mastery (Ex) A marilith never takes penalties to 
-her attack roll when fighting with multiple weapons.
-The leaders of Abyssal hordes and queens of Abyssal 
-nations, the dreaded mariliths serve demon lords as 
-governesses, advisors, and even lovers, yet their brilliance 
-as tacticians makes them most sought after as generals and 
-commanders of armies. The most powerful mariliths serve 
-no one, and instead command ravenous fiendish legions.
-A marilith is 6 to 9 feet tall and measures 20 feet from 
-head to tail tip. It weighs 4,000 pounds. Only the most 
-arrogant and proud evil souls, typically those of cruel 
-kings, sadistic generals, and exceptionally violent warlords, 
-can trigger the manifestation of a marilith.
+Crushing Coils (Ex) A creature that takes damage from a marilith’s constrict attack must succeed on a DC 25 Fortitude save or lose consciousness for 1d8 rounds. The save DC is Strength-based. This snake-bodied fiend has a six-armed woman’s torso, pointed ears, and glittering, otherworldly eyes.
+Infuse Weapon (Su) Any weapon a marilith wields gains a +1 enhancement bonus to attack and damage, and strikes as if it were a chaotic and evil cold iron weapon (in addition to retaining the qualities of its actual composition).
+Multiweapon Mastery (Ex) A marilith never takes penalties to her attack roll when fighting with multiple weapons. The leaders of Abyssal hordes and queens of Abyssal nations, the dreaded mariliths serve demon lords as governesses, advisors, and even lovers, yet their brilliance as tacticians makes them most sought after as generals and commanders of armies. The most powerful mariliths serve no one, and instead command ravenous fiendish legions.
 
 Demon, Nabasu
 nABASU CR 8 
@@ -3285,46 +2670,8 @@ Environment any (Abyss)
 Organization solitary
 Treasure standard
 SPECIAL ABILITIES
-Consume Life (Su) When a nabasu creates a ghoul 
-with its gaze attack, it gains a growth point. It 
-gains a bonus equal to its growth point total 
-on attack rolls, CMB rolls, saving throws, caster 
-level checks, and skill checks. Its maximum hit 
-points increase by 10 for each growth point, and 
-its caster level for spell-like abilities increases by 
-1. For every 2 growth points, its natural armor 
-bonus, SR,  and CR increase by 1. Every time it 
-gains a growth point it makes a DC 30 caster level 
-check—success indicates it matures (gaining both 
-the advanced and the giant simple templates) and plane 
-shifts to the Abyss in a burst of smoke. A nabasu can have a 
-
-maximum of 20 growth points—it automatically matures if it 
-has not done so already when it reaches 20 growth points.
-Death-Stealing gaze (Su) As a free action once per day per 
-growth point (minimum of 1/day), a nabasu can activate its 
-death-stealing gaze for a full round. All living creatures within 
-30 feet must succeed on a DC 18 Fortitude save or gain a 
-negative level. A humanoid slain in this manner immediately 
-transforms into a ghoul under the nabasu’s control. A nabasu’s 
-gaze can only create one ghoul per round—if multiple humans 
-perish from the gaze in a round, the nabasu picks which 
-human becomes a ghoul. The save DC is Charisma-based.
-Nabasus are birthed directly into the Material Plane from 
-the Abyss, where they feed on innocent souls to mature. 
-Only when finally sated can a nabasu return to the Abyss. 
-Rumor holds that even then the nabasu’s lifecycle does 
-not change, and that further developments await them as 
-they continue to grow. These vile demons form from the 
-souls of evil gluttons, particularly from cannibals, blood-
-drinkers, and those who prefer the tang of undead f lesh.
-
-This lanky fiend’s mouth is filled with sharp fangs, while great 
-bat-like wings stretch from its scaly hide.
-
-DDeemmoon, Nabasu–Demon, Nalfeshnee
-
-n, Nabasu–Demon, Nalfeshnee
+Consume Life (Su) When a nabasu creates a ghoul with its gaze attack, it gains a growth point. It gains a bonus equal to its growth point total on attack rolls, CMB rolls, saving throws, caster level checks, and skill checks. Its maximum hit points increase by 10 for each growth point, and its caster level for spell-like abilities increases by 1. For every 2 growth points, its natural armor bonus, SR,  and CR increase by 1. Every time it gains a growth point it makes a DC 30 caster level check—success indicates it matures (gaining both the advanced and the giant simple templates) and plane shifts to the Abyss in a burst of smoke. A nabasu can have a maximum of 20 growth points—it automatically matures if it has not done so already when it reaches 20 growth points.
+Death-Stealing gaze (Su) As a free action once per day per growth point (minimum of 1/day), a nabasu can activate its death-stealing gaze for a full round. All living creatures within 30 feet must succeed on a DC 18 Fortitude save or gain a negative level. A humanoid slain in this manner immediately transforms into a ghoul under the nabasu’s control. A nabasu’s gaze can only create one ghoul per round—if multiple humans perish from the gaze in a round, the nabasu picks which human becomes a ghoul. The save DC is Charisma-based.
 
 Demon, Nalfeshnee
 nALfEShnEE CR 14 
@@ -3369,36 +2716,7 @@ Organization solitary or warband (1 nalfeshnee, 1
 hezrou, and 2–5 vrocks)
 Treasure standard
 SPECIAL ABILITIES
-Unholy nimbus (Su) Three times per day as a free action a 
-nalfeshnee can create a nimbus of unholy light, causing 
-nauseating beams of writhing color to play around its body. 
-One round later, the light bursts in a 60-foot radius. Any 
-non-demon creature caught within this area must succeed 
-on a DC 22 Will save or be dazed for 1d10 rounds as visions 
-
-A towering, corpulent beast, this fiend has the hideous head of a 
-boar and arms ending in fatty, four-fingered hands.
-
-of madness hound it. The save DC is Charisma-based. 
-Few demons understand the inner workings of the Abyss 
-like the nalfeshnee, and it is not unusual to see a nalfeshnee 
-seeming to serve the Abyss itself rather than a demon 
-lord. Some claim stewardship over the f leshy realms that 
-birth new demons, while others guard sites of particular 
-significance deep in the plane’s secret reaches. Often, a 
-nalfeshnee’s realm in the Abyss surpasses the strength 
-and size of the largest of mortal kingdoms, for nalfeshnees 
-display a singular gift for managing and ordering the 
-chaos of the Abyss. Mortal summoners often seek them 
-out for their unparalleled yet mad intellects, ever taking 
-care to comb through bargains with such demons for 
-hidden and unwanted consequences, for there is little a 
-nalfeshnee will agree to do that does not, in some sinister 
-way, advance the needs and desires of the Abyss.
-Nalfeshnees stand 20 feet tall and weigh 8,000 pounds. 
-They form from the souls of greedy or avaricious evil 
-mortals, particularly those who ruled over empires of 
-slavery, theft, banditry, and more violent vices.
+Unholy nimbus (Su) Three times per day as a free action a nalfeshnee can create a nimbus of unholy light, causing nauseating beams of writhing color to play around its body. One round later, the light bursts in a 60-foot radius. Any non-demon creature caught within this area must succeed on a DC 22 Will save or be dazed for 1d10 rounds as visions 
 
 Demon, Quasit
 QUASIT CR 2 
@@ -3446,70 +2764,7 @@ Environment any (Abyss)
 Organization solitary or flock (2–12)
 Treasure standard
 SPECIAL ABILITIES
-Poison (Ex) Claw—injury; save Fortitude DC 13; 
-frequency 1/round for 6 rounds; effect 1d2 
-Dexterity; cure 2 consecutive saves.
-
-The quasit is perhaps the least powerful demon, yet it is not 
-the least respected—even quasits hold themselves above the 
-dretch horde, and true to their natures, dretches lack the 
-courage or drive to prove the quaits wrong. A quasit’s first 
-role in life is that of a familiar to a spellcasting master, but 
-those quasits who escape from this humiliating servitude 
-become free-willed and much more dangerous.
-A typical quasit stands a foot and a half tall, and weighs 
-only 8 pounds. Alone among the demonic horde, quasits 
-do not form from the dead souls of evil mortals. Instead, 
-they form from living souls—when a spellcaster seeks out 
-a quasit to serve him as a familiar, his 
-soul brushes against the Abyss and 
-it reacts, carving from itself a quasit 
-linked to that spellcaster’s soul and 
-forming a powerful bond between the two. 
-Newly created quasits are birthed directly 
-into the Material Plane, where they become 
-familiars, and while bonded to their 
-masters’ wills, all quasits hate and loathe 
-their lieges, as they can feel the pulse of 
-their lords’ souls and know that they 
-could have been more. A quasit serves, 
-yet it watches and waits for mistakes 
-that might cost its master’s life, 
-or even better, an error that 
-might let the quasit turn 
-against its master.
-When a quasit’s master 
-dies, the quasit can attempt 
-to follow the master’s soul 
-into the Great Beyond by 
-making a DC 15 Will save. 
-This functions as plane 
-shift, but affects only the 
-quasit and transports 
-it into the Abyss and 
-places its master’s soul in the 
-quasit’s possession as a writhing 
-larvae rather than using the evil 
-master’s soul to create new demonic 
-life. In this manner, a quasit can use 
-its newly captured soul to bargain 
-with more powerful denizens of the 
-lower planes, and perhaps secure a 
-vile transformative “promotion” 
-to a more powerful form of life in 
-the process.
-Rarely, a quasit elects to ignore 
-its master’s death and instead 
-remains on the Material Plane to 
-seek other ways to entertain itself—usually settling in an 
-urban area where there are plenty of folk to torment.
-
-Ram horns curl back from the twisted head of this tiny winged 
-demon, and its body is thin and wiry.
-
-DDeemmoon, Quasit–Demon, Shadow
-
-n, Quasit–Demon, Shadow
+Poison (Ex) Claw—injury; save Fortitude DC 13; frequency 1/round for 6 rounds; effect 1d2 Dexterity; cure 2 consecutive saves.
 
 Demon, Shadow
 ShADOW DEMOn CR 7 
@@ -3550,37 +2805,9 @@ Environment any (Abyss)
 Organization solitary, pair, or haunt (3–8)
 Treasure standard
 SPECIAL ABILITIES
-Sprint (Ex) Once per minute, a shadow demon 
-increase its fly speed to 240 feet for 1 round.
-Shadow Blend (Su) During any conditions 
-other than bright light, a shadow demon 
-can disappear into the shadows as a move-
-equivalent action, effectively becoming 
-invisible. Artificial illumination or light spells of 
-2nd level or lower do not negate this ability.
-Sunlight Powerlessness (Ex) A shadow demon is 
-utterly powerless in bright light or natural sunlight 
-
-Only this shadowy bat-winged demon’s teeth and claws have any 
-sense of physicality to them—the rest is lost in darkness.
-
-and flees from it. A shadow demon caught in such light cannot 
-attack and can take only a single move or attack action. A 
-shadow demon that is possessing a creature using magic jar 
-is not harmed by sunlight, but if it is struck by a sunbeam or 
-sunray spell while possessing a creature, the shadow demon is 
-driven out of its host automatically.
-Tales of demonic possession are common, used often by 
-the ignorant to explain strange or violent behavior. While 
-the majority of such cases are merely manifestations 
-of madness or derangement, those that are legitimate 
-possessions are often the work of shadow demons.
-Unlike many demons, shadow demons are incorporeal. 
-When a particularly envious and evil mortal soul is 
-pulled into the Abyss, it is transformed, split apart, and 
-combined with other souls until what emerges is little 
-more than jealous malevolence without the impediment 
-of a physical body.
+Sprint (Ex) Once per minute, a shadow demon increase its fly speed to 240 feet for 1 round.
+Shadow Blend (Su) During any conditions other than bright light, a shadow demon can disappear into the shadows as a move- equivalent action, effectively becoming invisible. Artificial illumination or light spells of 2nd level or lower do not negate this ability.
+Sunlight Powerlessness (Ex) A shadow demon is utterly powerless in bright light or natural sunlight 
 
 Demon, Succubus
 SUCCUBUS CR 7 
@@ -3622,40 +2849,8 @@ Environment any (Abyss)
 Organization solitary, pair, or harem (3–12)
 Treasure double
 SPECIAL ABILITIES
-Energy Drain (Su) A succubus drains energy from a mortal 
-she lures into an act of passion, such as a kiss. An unwilling 
-victim must be grappled before the succubus can use this 
-ability. The succubus’s kiss bestows one negative level. 
-The kiss also has the effect of a suggestion spell, asking the 
-victim to accept another act of passion from the succubus. 
-The victim must succeed on a DC 22 Will save to negate the 
-suggestion. The DC is 22 for the Fortitude save to remove a 
-negative level. These save DCs are Charisma-based.
-
-Profane gift (Su) Once per day as a full-round action, a 
-succubus may grant a profane gift to a willing humanoid 
-creature by touching it for 1 full round. The target gains a 
-+2 profane bonus to an ability score of his choice. A single 
-creature may have no more than one profane gift from a 
-succubus at a time. As long as the profane gift persists, the 
-succubus can communicate telepathically with the target 
-across any distance (and may use her suggestion spell-like 
-ability through it). A profane gift is removed by dispel evil or 
-dispel chaos. The succubus can remove it as well as a free 
-action (causing 2d6 Charisma drain to the victim, no save).
-Among the demon hordes, a succubus can often rise to 
-incredible heights of power through her manipulations 
-and sensual charms, and many a demonic war has raged 
-due to the subtle machinations of such creatures. A 
-succubus is formed from the souls of particularly lustful 
-and rapacious evil mortals.
-
-Tiny horns, bat-like wings, and a sinuous tail betray the demonic 
-nature of this alluring woman.
-
-DDeemmoon, Succubus–Demon, Vrock
-
-n, Succubus–Demon, Vrock
+Energy Drain (Su) A succubus drains energy from a mortal she lures into an act of passion, such as a kiss. An unwilling victim must be grappled before the succubus can use this ability. The succubus’s kiss bestows one negative level. The kiss also has the effect of a suggestion spell, asking the victim to accept another act of passion from the succubus. The victim must succeed on a DC 22 Will save to negate the suggestion. The DC is 22 for the Fortitude save to remove a negative level. These save DCs are Charisma-based.
+Profane gift (Su) Once per day as a full-round action, a succubus may grant a profane gift to a willing humanoid creature by touching it for 1 full round. The target gains a +2 profane bonus to an ability score of his choice. A single creature may have no more than one profane gift from a succubus at a time. As long as the profane gift persists, the succubus can communicate telepathically with the target across any distance (and may use her suggestion spell-like ability through it). A profane gift is removed by dispel evil or dispel chaos. The succubus can remove it as well as a free action (causing 2d6 Charisma drain to the victim, no save).
 
 Demon, Vrock
 VROCk CR 9 
@@ -3693,51 +2888,9 @@ Environment any (Abyss)
 Organization solitary, pair, or gang (3–10)
 Treasure standard
 SPECIAL ABILITIES
-Dance of Ruin (Su) A vrock can dance and chant 
-as a full-round action—at the end of 3 rounds, 
-a crackling wave of energy explodes from the 
-vrock, dealing 5d6 points of electricity damage 
-to all creatures within 100 feet. A DC 17 Reflex save 
-halves this damage. For each additional vrock that joins in 
-the dance, the damage increases by 5d6 and the DC to avoid 
-the effect increases by +1, to a maximum of 20d6 when four 
-or more vrocks are dancing (the DC continues to increase 
-with additional vrocks, but the damage does not). The dance 
-immediately ends and must be started anew if any of the 
-participating vrocks is slain, stunned, or otherwise prevented 
-from dancing. The save DC is Charisma-based.
-
-A cloud of spores and a trail of feathers surrounds this twisted 
-cross between a man and a gigantic vulture.
-
-Spores (Ex) A vrock can release a cloud of spores from its body 
-once every 3 rounds as a free action. Adjacent creatures take 
-1d8 points of damage from the spores, plus 1d4 points of 
-damage per round for 10 rounds as the spores grow into 
-thick green vines. Although ugly, the vines are harmless and 
-wither away in 1d4 days if not shaved off before then. The 
-spores can be destroyed by casting bless on the affected 
-creatures or by sprinkling them with holy water. This 
-attack can also be halted by effects that remove or provide 
-immunity to disease.
-Stunning Screech (Su) Once per hour, a vrock can emit a shrill 
-screech. All creatures except demons within a 30-foot-
-radius spread must succeed on a DC 20 Fortitude save or 
-be stunned for 1 round. The save DC is Constitution-based.
-Profane champions of the Abyss, vrocks embody all the 
-rage, hatred, and violence of that despicable realm. As 
-ravenous and grotesquely opportunistic as the scavengers 
-they resemble, vrocks delight in bloodshed, relishing 
-the sounds and sensations of ripping the still-pulsing 
-entrails from a living husk. 
-A typical vrock stands 8 
-feet tall and weighs 400 
-pounds. Vrocks generally 
-form from the evil souls 
-of hateful and wrathful 
-mortals, particularly  those 
-who were career criminals, 
-mercenaries, or assassins.
+Dance of Ruin (Su) A vrock can dance and chant as a full-round action—at the end of 3 rounds, a crackling wave of energy explodes from the vrock, dealing 5d6 points of electricity damage to all creatures within 100 feet. A DC 17 Reflex save halves this damage. For each additional vrock that joins in the dance, the damage increases by 5d6 and the DC to avoid the effect increases by +1, to a maximum of 20d6 when four or more vrocks are dancing (the DC continues to increase with additional vrocks, but the damage does not). The dance immediately ends and must be started anew if any of the participating vrocks is slain, stunned, or otherwise prevented from dancing. The save DC is Charisma-based. 
+Spores (Ex) A vrock can release a cloud of spores from its body once every 3 rounds as a free action. Adjacent creatures take 1d8 points of damage from the spores, plus 1d4 points of damage per round for 10 rounds as the spores grow into thick green vines. Although ugly, the vines are harmless and wither away in 1d4 days if not shaved off before then. The spores can be destroyed by casting bless on the affected creatures or by sprinkling them with holy water. This attack can also be halted by effects that remove or provide immunity to disease.
+Stunning Screech (Su) Once per hour, a vrock can emit a shrill screech. All creatures except demons within a 30-foot- radius spread must succeed on a DC 20 Fortitude save or be stunned for 1 round. The save DC is Constitution-based. Profane champions of the Abyss, vrocks embody all the rage, hatred, and violence of that despicable realm. As ravenous and grotesquely opportunistic as the scavengers they resemble, vrocks delight in bloodshed, relishing the sounds and sensations of ripping the still-pulsing entrails from a living husk. 
 
 Derro
 DERRO CR 3
@@ -3785,171 +2938,9 @@ short sword or aklys, repeating
 light crossbow with 10 poisoned 
 bolts, other treasure)
 SPECIAL ABILITIES
-Madness (Ex) Derros use their 
-Charisma modifier on Will 
-saves instead of their Wisdom 
-
-modifier, and are immune to insanity and confusion 
-effects. Only a miracle or wish can remove a derro’s 
-madness. If this occurs, the derro gains 6 points of 
-Wisdom and loses 6 points of Charisma.
-Poison Use (Ex) Derros are not at risk of poisoning themselves 
-when handling poison. They use Medium spider venom 
-to poison their crossbow bolts, and generally carry 10 pre-
-poisoned bolts at all times.
-Vulnerability to Sunlight (Ex) A derro takes 1 point of Con 
-damage after every hour it is exposed to sunlight.
-Though derros dwell deep under most of the surface 
-world’s cities, very few know of the sadistic creatures’ 
-existence. Descended from mysterious fey that once dwelt 
-deep underground, the derros lust for the comforts of the 
-surface, yet the light of the sun causes them to blister, 
-burn, and die. Derros often abduct surface dwellers to 
-perform hideous experiments on them in their never-
-ending quest to divine what protects those who dwell 
-above from the burning death, yet the 
-intrinsic madness that plagues all derros 
-dooms these experiments to failure 
-every time. In the end, traumatized 
-victims are returned to their homes, 
-memories not quite 
-completely wiped 
-of their ordeal, to 
-live the rest of 
-their lives in vague 
-fear of a nightmare 
-they can’t quite recall.
-A typical derro fights 
-with a short sword or a 
-repeating light crossbow 
-with plenty of poison bolts. 
-Some derros also carry an 
-aklys—a hooked throwing 
-club attached to a 20-foot- 
-long cord. This cord limits 
-the club’s range, but allows the 
-derro to retrieve it as a move-
-equivalent action after it has 
-been thrown.
-Derro leaders are typically 
-sorcerers of at least 3rd level, 
-although they also make excellent 
-rogues. Many derros wield strange 
-and unusual weapons like hooked 
-polearms, eerie whistling aklyses, long hollow spears 
-that can be filled with toxins, or crystalline 
-throwing wedges that shatter on impact to create 
-horrific bleeding wounds.
-A derro stands 3 feet tall and weighs 70 pounds.
-
-This pale blue humanoid has bulging white eyes, wild hair, four-
-fingered hands, and a large hooked club.
-
-DDeerrrroo––DDeevviill
-
-Devil
-Masters of corruption and despoilers of purity, devils seek 
-to destroy all things good and drag mortal souls back with 
-them to the depths of Hell. Possessed of deadly infernal 
-powers and unified under the banner of Asmodeus, the 
-Prince of Darkness, and his eight archdevil tyrants, the 
-legions of Hell guard and torment the foulest spirits of the 
-multiverse, but ever eye the worlds of the Material Plane in 
-search of new conquests.
-As the most numerous fiendish occupants of Hell, the 
-various forms of devils are well catalogued by diabolists. 
-Most are known by two names: an evocative title given to 
-the fiends by commoners and folklore, and an obscure, 
-ancient designation spoken by the servants of Hell and 
-those who would seek to deal with the damned.
-Born from the foulest of mortal souls—their 
-personalities and memories long since scoured by 
-millennia of torment—would-be devils rise from the 
-masses of suffering souls as lemures, revolting beings 
-of mindless evil potentiality. Only through continued 
-centuries of torture or by the edicts of more powerful 
-devils do these least of devilkind rise to become 
-deadlier fiends, graduating through a pain-wracked 
-metamorphosis dictated by their masters or the infernal 
-whims of Hell’s semi-sentient layers. While fiendish lords 
-wield transformation into greater or lesser forms as both 
-prize and punishment, some devils spontaneously rise 
-from particularly evil souls long trapped upon an infernal 
-layer. Thus, although the various diabolical breeds possess 
-recognizable abilities and hold generalized rankings in 
-the great infernal hierarchy, a devil’s type alone does not 
-always correspond to a specific tenure of torment or place 
-in the infernal chain of command. Asmodeus’s legions 
-hold respect for aptitude and experience, and a particularly 
-skilled lesser devil might come to oversee newly formed 
-members of a fundamentally more powerful form.
-Devils fill the nine layers of Hell, though certain 
-fiends are more common on specific layers than others, 
-their specialized duties or fealty to individual archdevils 
-drawing them to one torturous domain more than 
-others. Although the various types of devils tend to 
-specialize in unique forms of depravity or temptation, 
-the hierarchies of Hell are not without f lexibility for 
-uncommon individual talents. Thus, particularly 
-watchful hamatulas might join the ranks of Phlegethon’s 
-bone devil inquisitors, while veteran barbazus might 
-serve among the pit fiends of Nessus. 
-Beyond the pits of Hell, devils often travel to the 
-Material Plane at the summons of evil spellcasters. Quick 
-to bargain and willing to serve mortals to assure their 
-damnation, devils ever obey the letter of their agreements, 
-but serve the whims of Hell foremost. Thus, even the least 
-
-of devilkind might come to the Material Plane intent on 
-further corrupting souls, cleverly escaping the bonds of 
-their contracts to indulge their own plots, or to further 
-the unspeakable goals of the archdevils of Hell.
-The Ranks of Devilkind
-Diabolists speak often of the rankings of Hell, the 
-distinctions made between devils that distinguish the 
-foot soldiers from the commanders of Hell’s armies. 
-While such divisions mean little to most mortals—a devil 
-being a deadly foe in any incarnation—the hierarchies 
-and nuances of Hell’s society carry distinctions vital to 
-the survival of any who would commune with devils. What 
-distinguishes a breed of devils above or below others is 
-more than a matter of brawn, with several cunning types of 
-fiend holding priority over their fundamentally stronger 
-brethren. While a devil’s station does not mean it can 
-instantly command every other devil of inferior standing, 
-it does imply which fiends might serve their brethren or 
-hold inf luence over others.
-While the ruler of Hell is Asmodeus, his concerns are 
-much more sweeping and broad—he leaves most of the 
-lesser duties of Hell to his eight archdevils and their 
-legions of infernal dukes. Below these are the devil races 
-themselves, from the lordly and malevolent pit fiends all 
-the way down to the lowly, malformed lemure.
-The Infernal Hierarchy
-Listed here, from the absolute weakest devils to the lords 
-of Hell, is the most basic hierarchy of the infernal realm’s 
-best-known denizens.
-Least Devils: imps, lemures
-Lesser Devils: bearded devils (barbazus), erinyes, 
-barbed devils (hamatulas), bone devils (osyluths)
-Greater Devils: horned devils (cornugons), ice devils 
-(gelugons), pit fiends
-Lords of Hell: Dukes of Hell, archdevils, Asmodeus
-
-Some Known Devils
-Amid the pits of Hell plot countless diabolical lords. Here 
-is a list of just a few of the infernal personalities known to 
-diabolists.
- Astaroth, Prince of Accusers
- Baalzebul, Lord of the Flies
- Dispater, the First King
- Glasya-Labolas, Author of Bloodshed
- Moloch, the General of Hell
- Nahemah, the Dowager of Divinations
- Orobas, Speaker of Truths
- Rubicante, He Who Grows Red
- Xaphan, Who Burns the Heavens
- Zagan, the Golden Blooded
+Madness (Ex) Derros use their Charisma modifier on Will saves instead of their Wisdom modifier, and are immune to insanity and confusion effects. Only a miracle or wish can remove a derro’s madness. If this occurs, the derro gains 6 points of Wisdom and loses 6 points of Charisma.
+Poison Use (Ex) Derros are not at risk of poisoning themselves when handling poison. They use Medium spider venom to poison their crossbow bolts, and generally carry 10 pre- poisoned bolts at all times.
+Vulnerability to Sunlight (Ex) A derro takes 1 point of Con damage after every hour it is exposed to sunlight.
 
 Devil, Barbed
 BARBED DEVIL (hAMATULA) CR 11
@@ -3990,41 +2981,9 @@ Environment any (Hell)
 Organization solitary, pair, team (3–5), or squad (6–11)
 Treasure standard
 SPECIAL ABILITIES
-Barbed Defense (Su) A creature that strikes a 
-  hamatula with a melee weapon, an unarmed 
-strike, or a natural weapon takes 1d8+6 points 
-of piercing damage from the devil’s barbs. Melee weapons 
-with reach do not endanger a user in this way.
-fear (Su) A barbed devil’s fear attack affects any creature 
-it damages with its claws. A DC 20 Will save resists this 
-effect, otherwise the victim becomes frightened for 1d4 
-rounds. This is a mind-affecting fear effect. The save DC is 
-Charisma-based.
-
-From the tip of its lashing tail to the serrated features of its fang-
-filled visage, this fiery-eyed sentinel bristles with barbs.
-
-Impale (Ex) A barbed devil deals 3d8+9 points of piercing 
-damage to a grabbed opponent with a successful 
-grapple check.
-Sentinels of the vaults of Hell, jailers of the darkest 
-souls, and living weapons of the infernal forges, barbed 
-devils—known as hamatulas to diabolists—enforce the 
-strictures of the damned and safeguard the nefarious 
-works of greater devils. A hamatula enjoys the feel of 
-warm blood on its spines, and prefers to leap into melee 
-when presented with an opportunity for battle.
-Hamatulas are collectors and organizers, and are 
-favorite allies of greedy summoners as they often bring 
-with them tempting treasures from Hell’s vaults or know 
-the paths to deadly riches. Left to their own devices, the 
-lairs of these devils often bear the pierced trophies of 
-their past victims, hung like perverse bug collections on 
-bloodied walls. Most barbed devils stand upward of 7 feet 
-tall and weigh 300 pounds, though their leanly muscled 
-bodies appear much larger due to the constantly growing 
-and adjusting spines that protrude from their razor-
-sharp bodies.
+Barbed Defense (Su) A creature that strikes a hamatula with a melee weapon, an unarmed strike, or a natural weapon takes 1d8+6 points of piercing damage from the devil’s barbs. Melee weapons with reach do not endanger a user in this way.
+fear (Su) A barbed devil’s fear attack affects any creature it damages with its claws. A DC 20 Will save resists this effect, otherwise the victim becomes frightened for 1d4 rounds. This is a mind-affecting fear effect. The save DC is Charisma-based.
+Impale (Ex) A barbed devil deals 3d8+9 points of piercing damage to a grabbed opponent with a successful grapple check.
 
 Devil, Bearded
 BEARDED DEVIL (BARBAzU) CR 5
@@ -4061,47 +3020,9 @@ Environment any (Hell)
 Organization solitary, pair, squad (3–10), or troop (10–40)
 Treasure standard (glaive, other treasure)
 SPECIAL ABILITIES
-Beard (Ex) If a bearded devil hits a single opponent with both 
-claw attacks, it also lashes at the same target with its spiky, 
-filthy beard. The victim takes 1d8+2 points of damage and 
-must succeed on a DC 17 Fortitude save or contract devil 
-chills. The save DC is Constitution-based. 
-Devil Chills: Disease—injury; save Fort DC 17; onset 
-1d4 days; frequency 1/day; effect 1d4 Str damage; cure 3 
-consecutive saves.
-Infernal Wound (Su) The damage a bearded devil deals with 
-its glaive inflicts persistent wounds that cause 2 points of 
-bleed damage. Bleed caused from an infernal wound is 
-particularly difficult to stanch—a DC 17 Heal check stops 
-the damage, and any attempt to heal a creature suffering 
-from an infernal wound must succeed on a DC 16 caster 
-
-This seething devil deftly wields a vicious, saw-toothed glaive, 
-while below its toothy maw writhes a hideous, twitching beard.
-
-DDeevviill,, BBaarrbbeedd––DDeevviill,, BBeeaarrddeedd
-
-level check or the spell does not function. Success indicates 
-the healing works normally and stops all bleed effects on 
-the victim. The infernal wounds caused by a bearded devil 
-are a supernatural ability of the devil, not of the weapon.
-Elite warriors in Hell’s legions, bearded devils—or 
-barbazus—fight savagely in the name of their infernal 
-lords and command mindless hordes of the damned into 
-battle. They collect and train with their infernally forged 
-glaives among the vaults of Hell’s third layer, Erebus, but 
-inevitably return to the first layer, Avernus, to serve at the 
-side of the dread lord Barbatos.
-Barbazus are fond of making charge attacks with 
-their glaives, and try to maintain a 10-foot gap between 
-themselves and their foes so they can use their signature 
-polearms to great effect. Against a foe that has greater 
-reach (or one able to otherwise avoid the devil’s favored 
-tactic), they drop their glaives and resort to their claws 
-and hideous beards.
-At attention, bearded devils stand over 6 feet tall 
-(though their squatting battle stances often make them 
-appear shorter) and weigh upward of 200 pounds.
+Beard (Ex) If a bearded devil hits a single opponent with both claw attacks, it also lashes at the same target with its spiky, filthy beard. The victim takes 1d8+2 points of damage and must succeed on a DC 17 Fortitude save or contract devil chills. The save DC is Constitution-based. 
+Devil Chills: Disease—injury; save Fort DC 17; onset 1d4 days; frequency 1/day; effect 1d4 Str damage; cure 3 consecutive saves.
+Infernal Wound (Su) The damage a bearded devil deals with its glaive inflicts persistent wounds that cause 2 points of bleed damage. Bleed caused from an infernal wound is particularly difficult to stanch—a DC 17 Heal check stops the damage, and any attempt to heal a creature suffering from an infernal wound must succeed on a DC 16 caster 
 
 Devil, Bone
 BOnE DEVIL (OSyLUTh) CR 9
@@ -4141,41 +3062,7 @@ Environment any (Hell)
 Organization solitary, pair, or inquisition (3–10)
 Treasure standard
 SPECIAL ABILITIES
-Poison (Ex) Sting—injury; save Fort DC 20; frequency 1/
-round for 6 rounds; effect 1d3 Str damage; cure 2 
-consecutive saves. The save DC is Constitution-based.
-The interrogators and inquisitors of devilkind, 
-bone devils delight in torturing those weaker than 
-themselves—mortals, souls, and other devils 
-alike. Born of ancient heresies mired amid the 
-Styx-fed swamps of Stygia, Hell’s fifth layer, 
-bone devils—also known as osyluths—enforce 
-infernal order and the will of the archdevils. 
-
-Powerful fiends favor these terrifying sadists for their 
-unwavering devotion to Hell’s laws and the commands of 
-their masters, as osyluths eagerly report the disobedience 
-of other devils—regardless of standing—and take to the 
-craft of torture like morbid artists. Diabolists risk much 
-to bargain with them, as bone devils glean many infernal 
-secrets amid their nightmarish calcified torture hives. 
-These devils especially delight in journeying to the mortal 
-plane, as their cruel talents and service to evil spellcasters 
-often mean gaining much valuable information, which they 
-might hold in their perfect memories for centuries before 
-reporting back to their diabolical masters.
-In battle, an osyluth uses quickened invisibility after 
-each attack to confuse foes. Many osyluths carry twisted 
-and eerie bone weapons, but these tools are more for 
-torture and intimidation than actual combat. 
-Osyluths tower over lesser devils at 9 feet tall—though 
-their tails and fearsome but useless 
-wings make them appear much 
-larger—and weigh upward 
-of 400 pounds.
-
-Merging the most horrifying features of carrion-fed insect and 
-withered cadaver, this bony devil moves in unsettling lurches.
+Poison (Ex) Sting—injury; save Fort DC 20; frequency 1/ round for 6 rounds; effect 1d3 Str damage; cure 2 consecutive saves. The save DC is Constitution-based.
 
 Devil, Erinyes
 ERInyES CR 8
@@ -4226,66 +3113,7 @@ Organization solitary or trio
 Treasure triple (+1 longsword, +1 flaming composite longbow [+5 
 Str bonus], rope)
 SPECIAL ABILITIES
-
-Some calamity has befallen this angelic warrior. Wings stained 
-black shear the air as her merciless eyes search for a target.
-
-DDeevviill,, Bone–Devil, Erinyes
-
-Bone–Devil, Erinyes
-
-Entangle (Su) Each erinyes carries a 50-foot-long rope that 
-entangles opponents of any size as an animate rope spell 
-(CL 16th, DC 20). An erinyes can hurl its rope 30 feet 
-with no range penalty. An erinyes’s rope functions only 
-for the erinyes who made it and no other. The save DC is 
-Dexterity-based.
-Known by many names—the Fallen, the Ash Wings, and 
-the Furies—the devils called erinyes mock the form of 
-the angelic hosts in their exaction of vengeance and 
-bloody justice. Executioners, not judges, 
-erinyes alight upon the bladed eaves of 
-Dis, Hell’s cosmopolitan second layer, 
-ever attentive for chances to soar into 
-battle, whether in defense of Hell, on 
-the whims of diabolical masters, or at 
-the impassioned summons of jilted 
-mortal summoners. All erinyes 
-weave deadly living ropes from 
-their own hair, which they use in 
-battle to lift their foes into the air, 
-mocking and condemning their 
-victims for their transgressions 
-before dropping them from 
-great heights. 
-Erinyes appear as darkly 
-beautiful angels, augmenting 
-their sensuality with deliberate 
-bruises and scars. Yet despite 
-their beauty, erinyes are not 
-seducers—they lack the subtlety 
-and patience required for such 
-fine emotional manipulations, 
-and instead vastly prefer to solve 
-their problems with swift and 
-excruciating violence. Often, an 
-erinyes will stay her hand before 
-attempting to slay a foe simply 
-so she can draw out the victim’s 
-suffering. Death is usually the 
-only way to escape an erinyes’s 
-not-so-tender attentions, 
-and the most powerful of 
-these devils excel at keeping 
-their enemies alive but helpless so as to extend 
-their torment—many going as far as to keep their 
-victims alive with magic. Rumors hold that the most 
-powerful erinyes torturers have skills that allow their 
-torment to continue even after their subject has died 
-from their attentions.
-Most erinyes stand just under 6 feet tall and weigh 
-approximately 140 pounds, even with their black- 
-feathered wings that stretch over 10 feet wide. 75
+Entangle (Su) Each erinyes carries a 50-foot-long rope that entangles opponents of any size as an animate rope spell (CL 16th, DC 20). An erinyes can hurl its rope 30 feet with no range penalty. An erinyes’s rope functions only for the erinyes who made it and no other. The save DC is Dexterity-based.
 
 Devil, Horned
 hORnED DEVIL (CORnUgOn)  CR 16
@@ -4328,34 +3156,8 @@ Environment any (Hell)
 Organization solitary, pair, or wing (3–10)
 Treasure standard (+1 unholy spiked chain, other treasure)
 SPECIAL ABILITIES
-Infernal Wound (Su) The damage a horned devil deals with 
-its tail causes persistent wounds that deal 2d6 points of 
-bleed damage. Bleeding caused in this way is difficult to 
-staunch—a DC 26 Heal check stops the damage, and any 
-attempt to heal a creature suffering from an infernal 
-wound must succeed on a DC 26 caster level check 
-or the spell does not function. Success indicates the 
-healing works normally and stops all bleed effects.
-
-Stun (Su) Whenever a horned devil hits with a spiked chain 
-attack, the opponent must succeed on a DC 27 Fortitude 
-save or be stunned for 1d4 rounds. This ability is a function 
-of the horned devil, not of the spiked chain. The save DC is 
-Strength-based.
-Among the deadliest of the archdevils’ warriors and able 
-commanders of lesser fiends, horned devils spread the 
-rule of Hell wherever they tread. These greater devils are 
-trained, forged, and reforged to be among the most lethal, 
-merciless, and obedient warriors in the multiverse. While 
-rank-and-file horned devils are called cornugons, the 
-greatest of their kind are known as malebranche.
-A typical horned devil rises to a hulking 9 feet tall, 
-bears 14-foot-wide wings, and weighs 700 pounds.
-
-Bristling with terrible spines and a crown of deadly horns, this 
-leering winged terror wields a whirling barbed chain.
-
-DDeevviill,, HHoorrnneedd––DDeevviill,, IIccee
+Infernal Wound (Su) The damage a horned devil deals with its tail causes persistent wounds that deal 2d6 points of bleed damage. Bleeding caused in this way is difficult to staunch—a DC 26 Heal check stops the damage, and any attempt to heal a creature suffering from an infernal wound must succeed on a DC 26 caster level check or the spell does not function. Success indicates the healing works normally and stops all bleed effects.
+Stun (Su) Whenever a horned devil hits with a spiked chain attack, the opponent must succeed on a DC 27 Fortitude save or be stunned for 1d4 rounds. This ability is a function of the horned devil, not of the spiked chain. The save DC is Strength-based.
 
 Devil, Ice
 ICE DEVIL (gELUgOn) CR 13
@@ -4396,38 +3198,7 @@ Organization solitary, team (2–3), council (4–10), or contingent
 (1–3 ice devils, 2–6 horned devils, and 1–4 bone devils)
 Treasure standard (+1 frost spear, other treasure)
 SPECIAL ABILITIES
-Slow (Su) A hit from an ice devil’s tail or spear induces 
-numbing cold. The opponent must succeed on a DC 23 
-Fortitude save or be affected as though by a slow spell for 
-1d6 rounds. This effect comes from the devil in the case of 
-its weapon; it is not a quality possessed by the spear itself. 
-The save DC is Constitution-based.
-Strategists and masterminds of Hell’s armies, the 
-insectile ice devils possess some of the most cruelly 
-ingenious minds in Asmodeus’s legions. It is said that 
-
-A pair of frozen, multifaceted eyes coldly judge all before this 
-towering, insectile monstrosity.
-
-each ice devil—known as gelugons among the ranks 
-of devilkind—bears within its chest a stolen, frozen 
-mortal heart, which allows it to make decisions free of all 
-emotion. Born on the icy layer of Cocytus, Hell’s seventh 
-layer, most ice devils migrate to Caina, the eighth layer, 
-where they plot world-damning machinations from 
-courts of freezing steel. Although they are perhaps the 
-most alien and monstrous in appearance of all devils, few 
-breeds are accorded greater respect. 
-In combat, a gelugon prefers to let its minions engage 
-foes in melee so that it can hang back and appraise the foe’s 
-tactics, strengths, and weaknesses. The ice devil supports 
-its minions with its spell-like abilities, always taking care 
-to avoid impacting its minions in the area of effect of its 
-spells—this not from any sense of camaraderie, only a 
-cold and logical truth that its allies can survive longer in 
-a fight if they are not exposed to friendly fire.
-Gelugons stand at 12 feet tall, and weigh approximately 
-700 pounds.
+Slow (Su) A hit from an ice devil’s tail or spear induces numbing cold. The opponent must succeed on a DC 23 Fortitude save or be affected as though by a slow spell for 1d6 rounds. This effect comes from the devil in the case of its weapon; it is not a quality possessed by the spear itself. The save DC is Constitution-based.
 
 IMP CR 2
 XP 600
@@ -4464,50 +3235,7 @@ Environment any (Hell)
 Organization solitary, pair, or flock (3–10)
 Treasure standard
 SPECIAL ABILITIES
-Poison (Ex) Sting—injury; save Fort DC 13; frequency 1/
-round for 6 rounds; effect 1d2 Dex; cure 1 save. The 
-save DC is Constitution-based, and includes a +2 
-racial bonus.
-Born directly from the pits of Hell, imps are 
-among the least of the true devils; these vicious, 
-manipulative fiends, however, hold an important 
-role in the corruption of mortal souls. Unfettered from 
-the ranks and duties of diabolical armies, imps delight in 
-any opportunity to travel to the Material Plane and subtly 
-tempt mortals toward acts of ever-greater depravity. 
-Willingly serving spellcasters as familiars, imps play 
-
-the role of dutiful servants, often granting their masters 
-cunning advice and infernal insights. In truth, though, 
-an imp works to deliver souls to Hell, assuring that its 
-master’s soul—and as many collateral souls as possible—
-faces damnation upon death.
-Imps vary widely in appearance, ranging through a 
-spectrum of bestial traits and grotesque body shapes, 
-though most take the forms of red-skinned, winged 
-humanoids with bulbous features. Such a typical imp 
-stands a mere 2 feet tall, has a 3-foot wingspan, and 
-weighs 10 pounds.
-One in every thousand imps possesses the ability to 
-communicate telepathically with creatures within 50 feet 
-and the power to change its form into that of any Small 
-or Tiny animal, as per the spell beast shape II. These imp 
-consulars are highly prized by powerful devils, who send 
-them to serve their favored minions or to corrupt mortals 
-with great destinies. An imp consular can be summoned 
-via the Improved Familiar feat, but only by a spellcaster of 
-8th level or higher. Diabolists tell of other breeds of imps 
-with similarly specialized abilities, but if such creatures 
-truly exist they are an especially rare lot.
-Unlike most devils, imps often find themselves free 
-and alone on the Material Plane, particularly after they’ve 
-been summoned to serve as familiars and their masters 
-have perished (often indirectly due to the machinations of 
-the imp itself ). With no way to return home, these 
-imps, freed of their bonds to arcane masters, can 
-become dangerous pests or even leaders of small 
-tribes of savage humanoids like goblins 
-or kobolds.
+Poison (Ex) Sting—injury; save Fort DC 13; frequency 1/ round for 6 rounds; effect 1d2 Dex; cure 1 save. The save DC is Constitution-based, and includes a +2 racial bonus.
 
 Devil, Imp
 Fiendish wings and a whipping scorpion-like tail lash behind this 
@@ -4641,130 +3369,10 @@ ECOLOgy
 Environment any (Hell)
 Organization solitary, pair, or council (3–9)
 Treasure double
-
 SPECIAL ABILITIES
-Devil Shaping (Su) Three times per day, a pit fiend can 
-spend a minute to transform nearby lemures into other 
-lesser devils. A pit fiend can transform one lemure for 
-every Hit Die the pit fiend possesses. It can then reshape 
-these lemures into a number of Hit Dice’s worth of lesser 
-devils (see page 71) equal to the number of lemures 
-affected. For example, a typical 20 Hit Dice pit fiend 
-could transform 20 lemures into two bone devils (10 
-HD each), or three bearded devils (6 HD each, leaving 
-two lemures unchanged), or any other combination of 
-lesser devils. Lemures to be reshaped must be within 50 
-feet of the pit fiend, becoming stationary and unable to 
-move once the shaping begins. After a minute passes, the 
-lemures reform into the shape of a new lesser devil ready 
-to follow the orders of the pit fiend. Although pit fiends 
-can, technically, elevate a mass of 20 lemures into a new 
-pit fiend, most are hesitant to do so since they have no 
-special control over a devil created in this manner.
-Disease (Su) Devil Chills: Bite—injury; save Fort DC 32; onset 
-immediate; frequency 1/day; effect 1d4 Str damage; cure 3 
-consecutive saves. The save DC is Constitution-based.
-Poison (Ex) Bite—injury; save Fort DC 32; frequency 1/round 
-for 10 rounds; effect 1d6 Con damage; cure 3 consecutive 
-saves. The save DC is Constitution-based.
-Rulers of infernal realms, generals of Hell’s armies, 
-and advisors to the archfiends, pit fiends embody the 
-awesome and terrible pinnacle of devilkind. Massive, 
-physically indomitable, and possessed of ingenious 
-evil intellects, these diabolical tyrants hold great 
-autonomy whether in their service to the archfiends, in 
-their rule of vast infernal fiefdoms, or in subjugation 
-of mortal worlds. Thick muscles cling to their gigantic 
-frames, armored over by dense, bladed scales capable 
-of def lecting all but the most potent assaults. Fangs 
-as thick as daggers fill their maws, bestial visages 
-disguising some of the most insidious minds in Hell. 
-Born within the depths of Nessus, the ninth and 
-deepest layer of Hell, pit fiends are raised from the 
-ranks of cornugons and gelugons by the archdevils and 
-their dukes alone. While many travel to higher layers 
-and far from Hell to command infernal legions, most 
-remain in Nessus serving in the courts of Hell’s elite or 
-in dark councils with unknowable purposes. Pit fiends 
-always stand over 14 feet tall, with wingspans in excess 
-of 20 feet and weights over 1,000 pounds.
-Pit fiends are masters of fire and prefer lands bathed 
-in f lame. In Hell, this predisposes them to Avernus, Dis, 
-Malebolge, Nessus, and Phlegethon the layers most likely 
-to harbor their burning temple-citadels. Fanatics obsessed 
-with diabolical superiority and ironclad obedience, pit 
-fiends left to their own devices raise massive armies, 
-
-DDeevviill,, PPit Fiend
-
-it Fiend
-
-scouring the pits of Hell for the most depraved lemures 
-to transform into true fiends. When convinced they’ve 
-formed the perfect legions, they turn their attentions to 
-vulnerable demiplanes and mortal worlds, eyeing them 
-for infernal domination and the glory of conquest. In 
-the service of the archfiends or other unique infernal 
-warlords, pit fiends hold themselves to a greater cause, 
-obeying the wills of Asmodeus’s chosen nobles in the 
-hopes of one day garnering the favor of either the Prince of 
-Darkness or Hell itself. While obedient to the hierarchies 
-of their kind, they are also strict in their enforcement, and 
-should a pit fiend find itself subservient to a master 
-unfit to rule, it holds itself duty bound to cast down 
-such an incompetent lord. Thus, whether as masters or 
-servants, pit fiends embody the will of Hell’s merciless 
-law and assure that only the strongest of devilkind 
-f lourish (or dare to). 
-Only the most powerful of mortal spellcasters can 
-or dare summon a pit fiend. These devils’ reactions to 
-summoning are deliberate and swift, usually typified by 
-overwhelming rage that such insignificant beings would 
-waste their immortal time. Those that cannot weather 
-the devils’ burning rage are slain—their souls typically 
-racing the pit fiends back to Hell. Those who manage 
-to keep control of the greater devils, though, 
-intrigue them. A pit fiend might dutifully serve 
-a mortal master for centuries, but its goal is 
-always the same: to further corrupt the mortal 
-soul, assure its absolute damnation, and when 
-the mortal  inevitably dies, claim its soul and begin the 
-process of creating a perfectly corrupt lemure servant. 
-Pit fiends know they are immortal and are intelligent 
-enough to indulge in impossibly disciplined patience. 
-As such, the eldest pit fiends see in their legions 
-the faces of countless fools who once presumed 
-themselves the devils’ masters.
-Infernal Dukes
-The most powerful of pit fiends are lords in their own 
-right—members of the elite caste of infernal politics and 
-leadership known as the Dukes of Hell. While not all of 
-the Dukes of Hell are pit fiends, the majority of them 
-are. As a general rule, a pit fiend Duke of Hell has several 
-levels of a particular character class, the advanced simple 
-template, or in some cases unusual spell-like abilities or 
-unique powers over and above those of most pit fiends. 
-Listed here are three sample unique pit fiend duke 
-abilities, but these examples are by no means the entirety 
-of what strange powers an infernal duke might wield.
-Deathmastery (Su): The pit fiend duke’s ability to 
-manipulate the souls of the damned extends beyond the 
-standard devil shaping power. Whenever a pit fiend 
-slays a humanoid, it can attempt to transform the slain 
-
-creature’s soul into a ghost under the pit fiend’s control. 
-The pit fiend may control a number of ghosts in this 
-manner equal to its Charisma modifier.
-Master of Magic (Su): The pit fiend duke has additional 
-spell-like abilities (20 spell levels’ worth of 1st–4th level 
-spells usable at will and 20 spell levels’ worth of 5th–8th 
-level spells usable 3 times a day).
-Hellfire Breath (Su): The pit fiend gains a devastating 
-breath weapon that it can use once every 1d4 rounds. This 
-breath weapon is a 60-foot cone of fire (10d10 fire damage 
-and 10d10 unholy damage as per f lame strike, successful 
-Ref lex save [DC 10 + 1/2 the pit fiend’s racial HD + the pit 
-fiend’s Constitution modifier] half ).
+Devil Shaping (Su) Three times per day, a pit fiend can spend a minute to transform nearby lemures into other lesser devils. A pit fiend can transform one lemure for every Hit Die the pit fiend possesses. It can then reshape these lemures into a number of Hit Dice’s worth of lesser devils (see page 71) equal to the number of lemures affected. For example, a typical 20 Hit Dice pit fiend could transform 20 lemures into two bone devils (10 HD each), or three bearded devils (6 HD each, leaving two lemures unchanged), or any other combination of lesser devils. Lemures to be reshaped must be within 50 feet of the pit fiend, becoming stationary and unable to move once the shaping begins. After a minute passes, the lemures reform into the shape of a new lesser devil ready to follow the orders of the pit fiend. Although pit fiends can, technically, elevate a mass of 20 lemures into a new pit fiend, most are hesitant to do so since they have no special control over a devil created in this manner.
+Disease (Su) Devil Chills: Bite—injury; save Fort DC 32; onset immediate; frequency 1/day; effect 1d4 Str damage; cure 3 consecutive saves. The save DC is Constitution-based.
+Poison (Ex) Bite—injury; save Fort DC 32; frequency 1/round for 10 rounds; effect 1d6 Con damage; cure 3 consecutive saves. The save DC is Constitution-based.
 
 Devourer
 DEVOURER CR 11
@@ -4790,62 +3398,9 @@ control undead7th (DC 22), death knell2nd
 (DC 17), ghoul touch2nd (DC 17), inflict 
 serious wounds3rd (DC 18), lesser 
 planar ally4th, ray of enfeeblement1st, 
-
 SPECIAL ABILITIES
-Devour Soul (Su) By making a touch attack as a standard action, 
-a devourer can deal 12d6+18 points of damage as if using a 
-slay living spell. A DC 22 Fortitude save reduces this damage 
-to 3d6+18. The soul of a creature slain by this attack becomes 
-trapped within the devourer’s chest. The creature cannot 
-be brought back to life until the devourer’s destruction (or a 
-spell deflection—see below) releases its soul. A devourer can 
-hold only one soul at a time. The trapped essence provides 
-a devourer with 5 essence points for each Hit Die possessed 
-by the soul. A devourer must expend essence points when 
-it uses a spell-like ability equal to the spell’s level (for sake of 
-ease, spell levels for its spell-like abilities are included in its 
-stats to the left in superscript). At the start of an encounter, 
-a devourer generally has 3d4+3 essence points available. 
-The trapped essence gains one permanent negative level 
-for every 5 points of essence drained—these negative levels 
-remain if the creature is brought back to life (but 
-they do not stack with any negative levels imparted 
-by being brought back to life). A soul that is 
-completely consumed may only be restored 
-to life by a miracle or wish. The save DC is 
-Charisma-based.
-Spell Deflection (Su) If any of the 
-following spells are cast at the devourer 
-and overcome its spell resistance, they 
-instead affect a devoured soul: banishment, 
-chaos hammer, confusion, crushing despair, 
-detect thoughts, dispel evil, dominate 
-person, fear, geas/quest, holy word, 
-hypnotism, imprisonment, magic 
-jar, maze, suggestion, trap the 
-soul, or any form of charm 
-or compulsion. While none 
-of these effects harms the 
-soul, the caster makes a DC 25 
-caster level check when a spell 
-is deflected—success indicates 
-that the trapped soul is released 
-from its prison and the creature 
-whose body it belonged to can 
-now be restored to life as normal.
-Devourers are the undead 
-remnants of fiends and evil 
-spellcasters who became lost 
-beyond the farthest reaches of 
-the multiverse. Returning with 
-warped bodies, alien sentience, 
-and a hunger for life, devourers threaten 
-all souls with a terrifying, tormented 
-annihilation. These withered corpses stand 
-10 feet tall but weigh a mere 200 pounds.
-
-This dry, hovering corpse’s chest is a prison of jagged ribs, within 
-which is trapped a small tormented ghostly form.
+Devour Soul (Su) By making a touch attack as a standard action, a devourer can deal 12d6+18 points of damage as if using a slay living spell. A DC 22 Fortitude save reduces this damage to 3d6+18. The soul of a creature slain by this attack becomes trapped within the devourer’s chest. The creature cannot be brought back to life until the devourer’s destruction (or a spell deflection—see below) releases its soul. A devourer can hold only one soul at a time. The trapped essence provides a devourer with 5 essence points for each Hit Die possessed by the soul. A devourer must expend essence points when it uses a spell-like ability equal to the spell’s level (for sake of ease, spell levels for its spell-like abilities are included in its stats to the left in superscript). At the start of an encounter, a devourer generally has 3d4+3 essence points available. The trapped essence gains one permanent negative level for every 5 points of essence drained—these negative levels remain if the creature is brought back to life (but they do not stack with any negative levels imparted by being brought back to life). A soul that is completely consumed may only be restored to life by a miracle or wish. The save DC is Charisma-based.
+Spell Deflection (Su) If any of the following spells are cast at the devourer and overcome its spell resistance, they instead affect a devoured soul: banishment, chaos hammer, confusion, crushing despair, detect thoughts, dispel evil, dominate person, fear, geas/quest, holy word, hypnotism, imprisonment, magic jar, maze, suggestion, trap the soul, or any form of charm or compulsion. While none of these effects harms the soul, the caster makes a DC 25 caster level check when a spell is deflected—success indicates that the trapped soul is released from its prison and the creature whose body it belonged to can now be restored to life as normal.
 
 spectral hand2nd, suggestion3rd (DC 18), true 
 seeing6th, vampiric touch3rd (DC 18)
@@ -4892,21 +3447,7 @@ Environment warm forests and plains
 Organization solitary, pair, or herd (3–12)
 Treasure none
 SPECIAL ABILITIES
-Stun (Ex) The ankylosaurus’s tail can deliver a powerful, 
-stunning blow. A creature struck by this attack must make a 
-DC 23 save or be dazed for 1 round. If the strike is a critical 
-hit and the target fails its save, it is instead stunned for 1d4 
-rounds. The save DC is Strength-based.
-The ankylosaurus is a powerful, squat dinosaur more 
-than capable of defending itself against enemies. Its back 
-is heavily armored with thick bony plates and spikes. A 
-solid blow from an ankylosaurus’s tail can leave most 
-creatures stunned long enough for the armored dinosaur 
-to make good an escape, although once confronted, most 
-ankylosauruses are too ill-tempered and stubborn to f lee. 
-Instead, they stand their ground and use their tails to 
-great effect in battle. An ankylosaurus is 30 feet long and 
-weighs 6,000 pounds.
+Stun (Ex) The ankylosaurus’s tail can deliver a powerful, stunning blow. A creature struck by this attack must make a DC 23 save or be dazed for 1 round. If the strike is a critical hit and the target fails its save, it is instead stunned for 1d4 rounds. The save DC is Strength-based.
 Ankylosaurus Companions
 Starting Statistics: Size Medium; Speed 30 ft.; AC +9 
 natural armor; Attack tail (1d6); Ability Scores Str 10, 
@@ -5175,16 +3716,7 @@ Environment warm forest and plains
 Organization solitary, pair, or pack (3–6)
 Treasure none
 SPECIAL ABILITIES
-Powerful Bite (Ex) A 
-tyrannosaurus  applies 
-twice its Strength 
-modifier to bite 
-damage.
-The tyrannosaurus 
-is an apex predator 
-that measures 40 feet 
-long and weighs 14,000 
-pounds.
+Powerful Bite (Ex) A tyrannosaurus  applies twice its Strength modifier to bite damage.
 Tyrannosaurus Companions
 Starting Statistics: Size Medium, Speed 
 30 ft.; AC +4 natural armor; Attack bite 
@@ -5408,14 +3940,7 @@ Environment any ocean
 Organization solitary, pair, or pod (3–18)
 Treasure none
 SPECIAL ABILITIES
-hold Breath (Ex) A dolphin can hold its breath for a number 
-of minutes equal to 6 times its Constitution score before it 
-risks drowning.
-Dolphins are social predators that hunt shallow seas and 
-rivers in large family groups called pods. Sailors are fond 
-of dolphins and frequently tell tales of dolphins saving 
-drowning fishermen or killing sharks with 
-blows from their powerful snouts.
+hold Breath (Ex) A dolphin can hold its breath for a number of minutes equal to 6 times its Constitution score before it risks drowning.
 Dolphin 
 Companions
 Starting Statistics: 
@@ -5465,239 +3990,8 @@ Environment any
 Organization solitary, pair, or gang (3–6)
 Treasure NPC Gear
 SPECIAL ABILITIES
-Mimicry (Ex) A doppelganger is proficient 
-in all weapons, armor, and shields. In 
-addition, a doppelganger can use any 
-spell trigger or spell completion item 
-as if the spells were on its spell list. 
-Its caster level is equal to its racial 
-Hit Dice.
-Perfect Copy (Su) When a 
-doppelganger uses change shape, 
-it can assume the appearance of 
-specific individuals.
-Doppelgangers are strange beings 
-that can take on the shapes of 
-those they encounter. In its natural 
-form, the creature looks more or 
-less humanoid, but slender and frail, with 
-gangly limbs and half-formed facial 
-
-Doppelganger
-This grayish humanoid creature seems almost unfinished, with a 
-narrow head, gaunt limbs, and a sinister, noseless face.
-
-features. Its f lesh is pale and hairless, and its eyes are 
-vacant and white.
-Doppelgangers prefer infiltrating societies where they 
-can gather wealth and inf luence, and see little point in 
-forming cities of their own kind. Younger doppelgangers 
-practice their skills by taking over small orc or goblin tribes, 
-then move to more complicated societies like dwarven, elven, 
-and human communities. Rather than making themselves 
-targets by taking positions of leadership, they prefer to be 
-the power behind the throne, or use multiple identities to 
-manipulate inf luential citizens or entire guilds.
-Doppelgangers make excellent use of their natural 
-mimicry to stage ambushes, bait traps, and infiltrate 
-humanoid society. Although not usually evil, they are 
-interested only in themselves and regard all others as 
-playthings to be manipulated and deceived. They are 
-particularly fond of invading human societies in order to 
-indulge in their desires—some enjoy the complex dance of 
-politics while others seek constant change in the race and 
-gender of both themselves and their romantic companions. 
-While not standard, it is those doppelgangers use their gifts 
-for cruel and sadistic purposes that are most notorious, and 
-these shapeshifters are the primary cause of the race’s 
-sinister reputation. Certainly, a creature capable of 
-changing its shape has a handy way to avoid capture 
-for its crimes, and some particularly malicious 
-doppelgangers enjoy disrupting relationships by 
-posing as unfaithful lovers.
-Rumors persist of even more powerful 
-doppelgangers capable of not only 
-shifting their appearance, but 
-also skills, memories, and 
-even the extraordinary and 
-supernatural abilities of 
-creatures whose forms 
-they choose to mimic. 
-These doppelgangers’ 
-change shape ability 
-functions like the 
-spell polymorph rather 
-than alter self.
-
-Dragon
-True dragons are divided into two broad categories: chromatic 
-and metallic. Chromatic dragons are almost universally evil, 
-seeking only to slake their endless lust for food, treasure, 
-and bloodshed. Metallic dragons are generally good and 
-often protect the lands under their care.
-aGe	CateGories
-Many of a true dragon’s abilities, attacks, and other statistics 
-improve as a dragon grows older. These increases are divided 
-into 12 age categories—as a dragon ages, its base statistics 
-change as noted on the Dragon Age Categories table.
-Age Category: This is the age category’s name.
-Age in Years: This is the dragon’s actual age.
-CR: This column modifies the dragon’s base CR.
-Size: This shows how many size categories by which to 
-increase the dragon’s base size, depending on its age (from 
-Tiny to Small, Small to Medium, and so on). A true dragon 
-does not gain the standard increases to ability scores when 
-it achieves a larger size—instead, true dragons gain ability 
-score increases according to their age category, as indicated 
-on the Dragon Ability Scores table.
-Hit Dice: This shows how many additional Hit Dice a 
-dragon gains over its base Hit Dice as it grows. Increases 
-to Hit Dice grant extra hit points, feats, and skill ranks as 
-well as increase the dragon’s base attack bonus and base 
-save bonuses. Dragons have skill ranks equal to 6 + their 
-Intelligence modifier per Hit Die. A dragon’s increases to 
-ability scores for gaining Hit Dice are included in the total 
-ability score increases (see the Dragon Ability Scores table).
-Natural Armor: This shows by what amount the dragon’s 
-base natural armor bonus increases with each age category.
-Breath Weapon: Each dragon has a breath weapon (see 
-Combat) that deals a base amount of damage. This multiplier 
-increases the number of dice of damage dealt by the dragon’s 
-breath weapon. For example, a mature adult dragon with a 
-base breath weapon that deals 2d6 acid damage would deal 
-14d6 acid damage (due to the ×7 multiplier).
-CoMbat
-The Dragon Attacks and Speeds table lists the attacks 
-a dragon can employ and the damage it deals (a dash 
-indicates that a dragon of that size does not possess that 
-natural attack). Other abilities described here are gained 
-by dragons when they reach a specific age category.
-Fly Speed: A dragon’s f ly speed increases as indicated, 
-according to its size.
-Bite: This is a primary attack that deals the indicated 
-damage plus 1-1/2 times the dragon’s Strength bonus (even 
-though it has more than one attack). A dragon’s bite attack 
-has reach as if the creature were one size category larger 
-(+10 feet for Colossal dragons).
-
-Claws: These primary attacks deal the indicated damage 
-plus the dragon’s Strength bonus.
-Wings: The dragon can slam foes with its wings, even 
-when flying. Wing attacks are secondary attacks that deal 
-the indicated damage plus 1/2 the dragon’s Strength bonus.
-Tail Slap: The dragon can slap one foe each round with its 
-tail. A tail slap is a secondary attack that deals the indicated 
-damage plus 1-1/2 times the dragon’s Strength bonus (this is 
-an exception to the normal secondary attack rules).
-Crush (Ex): A f lying or jumping Huge or larger dragon 
-can land on foes as a standard action, using its whole body 
-to crush them. Crush attacks are effective only against 
-opponents three or more size categories smaller than the 
-dragon. A crush attack affects as many creatures as fit in the 
-dragon’s space. Creatures in the affected area must succeed 
-on a Ref lex save (DC equal to that of the dragon’s breath 
-weapon) or be pinned, automatically taking bludgeoning 
-damage during the next round unless the dragon moves 
-off them. If the dragon chooses to maintain the pin, it must 
-succeed at a combat maneuver check as normal. Pinned 
-foes take damage from the crush each round if they don’t 
-escape. A crush attack deals the indicated damage plus 
-1-1/2 times the dragon’s Strength bonus.
-Tail Sweep (Ex): This allows a Gargantuan or larger 
-dragon to sweep with its tail as a standard action. The 
-sweep affects a half-circle with a radius of 30 feet (or 40 feet 
-for a Colossal dragon), extending from an intersection on 
-the edge of the dragon’s space in any direction. Creatures 
-within the swept area are affected if they are four or more 
-size categories smaller than the dragon. A tail sweep 
-automatically deals the indicated damage plus 1-1/2 times 
-the dragon’s Strength bonus (round down). Affected 
-creatures can attempt Ref lex saves to take half damage (DC 
-equal to that of the dragon’s breath weapon).
-Breath Weapon (Su): Using a breath weapon is a standard 
-action. A dragon can use its breath weapon once every 1d4 
-rounds, even if it possesses more than one breath weapon. 
-A breath weapon always starts at an intersection adjacent 
-to the dragon and extends in a direction of the dragon’s 
-choice. Breath weapons come in two shapes, lines and cones, 
-whose areas vary with the dragon’s size. If a breath weapon 
-deals damage, those caught in the area can attempt Ref lex 
-saves to take half damage. The save DC against a breath 
-weapon is 10 + 1/2 dragon’s HD + dragon’s Con modifier. 
-Saves against various breath weapons use the same DC; the 
-type of saving throw is noted in the variety descriptions. A 
-dragon can use its breath weapon when it is grappling or 
-being grappled. 
-Additional Dragon Rules
-Dragon Senses (Ex): Dragons have have darkvision 120 
-ft. and blindsense 60 ft. They see four times as well as a 
-human in dim light and twice as well in normal light.
-
-Dragon
-
-Dragon
-
-Dragon Age Categories
-Age Age in natural Breath
-Category years CR Size hit Dice Armor Weapon
-1 Wyrmling 0–5 Base Base Base Base Base
-2 Very young 6–15 Base + 2 Base + 1 Base + 2 Base + 3 Base × 2
-3 Young 16–25 Base + 4 Base + 2 Base + 4 Base + 6 Base × 3
-4 Juvenile 26–50 Base + 5 Base + 2 Base + 6 Base + 9 Base × 4
-5 Young adult 51–100 Base + 7 Base + 3 Base + 8 Base + 12 Base × 5
-6 Adult 101–200 Base + 8 Base + 3 Base + 10 Base + 15 Base × 6
-7 Mature adult 201–400 Base + 9 Base + 3 Base + 12 Base + 18 Base × 7
-8 Old 401–600 Base + 11 Base + 4 Base + 14 Base + 21 Base × 8
-9 Very old 601–800 Base + 12 Base + 4 Base + 16 Base + 24 Base × 9
-10 Ancient 801–1,000 Base + 13 Base + 4 Base + 18 Base + 27 Base × 10
-11 Wyrm 1,001–1,200 Base + 14 Base + 4 Base + 20 Base + 30 Base × 11
-12 Great wyrm 1,201+ Base + 16 Base + 5 Base + 22 Base + 33 Base × 12 
-Dragon Ability Scores
-Age Category Str Dex Con Int Wis Cha
-1 Wyrmling Base Base Base Base Base Base
-2 Very young Base + 4 Base – 2 Base + 2 Base + 2 Base + 2 Base + 2
-3 Young Base + 8 Base – 2 Base + 4 Base + 2 Base + 2 Base + 2
-4 Juvenile Base + 10 Base – 2 Base + 6 Base + 4 Base + 4 Base + 4
-5 Young adult Base + 12 Base – 4 Base + 6 Base + 4 Base + 4 Base + 4
-6 Adult Base + 14 Base – 4 Base + 8 Base + 6 Base + 6 Base + 6
-7 Mature adult Base + 16 Base – 4 Base + 8 Base + 6 Base + 6 Base + 6
-8 Old Base + 18 Base – 6 Base + 10 Base + 8 Base + 8 Base + 8
-9 Very old Base + 20 Base – 6 Base + 10 Base + 8 Base + 8 Base + 8
-10 Ancient Base + 22 Base – 6 Base + 12 Base + 10 Base + 10 Base + 10
-11 Wyrm Base + 24 Base – 8 Base + 12 Base + 10 Base + 10 Base + 10
-12 Great wyrm Base + 26 Base – 8 Base + 14 Base + 12 Base + 12 Base + 12
-Dragon Attacks and Speeds
- fly Speed 1 Tail 1 Tail Breath Weapon
-Size (maneuverability) 1 Bite 2 Claws 2 Wings Slap 1 Crush Sweep Line Cone
-Tiny 100 ft. (average) 1d4 1d3 — — — — 30 ft. 15 ft.
-Small 150 ft. (average) 1d6 1d4 — — — — 40 ft. 20 ft.
-Medium 150 ft. (average) 1d8 1d6 1d4 — — — 60 ft. 30 ft.
-Large 200 ft. (poor) 2d6 1d8 1d6 1d8 — — 80 ft. 40 ft.
-Huge 200 ft. (poor) 2d8 2d6 1d8 2d6 2d8 — 100 ft. 50 ft.
-Gargantuan 250 ft. (clumsy) 4d6 2d8 2d6 2d8 4d6 2d6 120 ft. 60 ft.
-Colossal 250 ft. (clumsy) 4d8 4d6 2d8 4d6 4d8 2d8 140 ft. 70 ft.
-
-Frightful Presence (Ex): A dragon’s frightful presence 
-has a range equal to 30 feet × the dragon’s age category, but 
-otherwise functions as detailed on page 300.
-Spells: A dragon knows and casts arcane spells as a 
-sorcerer of the level indicated in its specific description. 
-Its caster level depends on its age, as shown for each type.
-Spell-Like Abilities: A dragon’s caster level for its spell-
-like abilities is equal to its total Hit Dice.
-Damage Reduction: Dragons gain damage reduction 
-as they age, as indicated on each dragon’s specific entry. 
-
-Their natural weapons are treated as magic weapons for 
-the purpose of overcoming damage reduction.
-Immunities (Ex): Every dragon is immune to sleep and 
-paralysis. In addition, a dragon is immune to one or two 
-additional forms of attack no matter what its age, as given 
-in its description.
-Spell Resistance (Ex): As dragons grow older, they 
-become more resistant to spells and spell-like abilities, 
-as indicated in the dragon descriptions. A dragon’s SR is 
-equal to 11 + its CR. 91
+Mimicry (Ex) A doppelganger is proficient in all weapons, armor, and shields. In addition, a doppelganger can use any spell trigger or spell completion item as if the spells were on its spell list. Its caster level is equal to its racial Hit Dice.
+Perfect Copy (Su) When a doppelganger uses change shape, it can assume the appearance of specific individuals.
 
 Chromatic Dragon, Black
 BLACk DRAgOn
@@ -5712,49 +4006,14 @@ Environment warm marshes
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Acid Pool (Su) An ancient or older black dragon can use its 
-breath weapon to create an acid pool as a standard action. 
-This acid pool has a radius of 5 feet per age category of 
-the dragon. When an acid pool is created, anyone inside 
-its area takes an amount of damage equal to the dragon’s 
-breath weapon (Reflex half). Any creature that starts its turn 
-touching this pool takes damage, but can make a Reflex save 
-for half. Each round, the total damage dice of the pool is 
-halved until the result would be less than 1d6. The acid pool 
-floats on water, and deals damage to anything on the surface.
-Acidic Bite (Su) At old age, a black dragon’s bite deals an 
-additional 2d6 points of acid damage. An ancient dragon’s 
-damage increases to 4d6, and a great wrym’s to 6d6.
-Charm Reptiles (Sp) A great wyrm black dragon can use this 
-ability three times per day. It works as a mass charm monster 
-spell that affects only reptilian animals. This ability is the 
-equivalent of an 8th-level spell.
-Corrupt Water (Sp) Once per day an adult or older black 
-dragon can stagnate 10 cubic feet of still water, making it 
-foul and unable to support water-breathing life. The ability 
-spoils liquids containing water. Liquid-based magic items 
-(such as potions) and items in a creature’s possession must 
-succeed on a Will save (DC equal to the dragon’s frightful 
-presence) or become ruined. This ability is the equivalent 
-of a 1st-level spell. Its range is equal to that of the dragon’s 
-frightful presence.
-Speak with Reptiles (Sp) A young or older black dragon gains the 
-constant spell-like ability to speak with reptiles. This functions 
-as speak with animals, but only with reptilian animals.
-Spell-Like Abilities (Sp) A black dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed 
-age category. Juvenile—darkness (radius 10 feet per age 
-category); Old—plant growth; Ancient—insect plague.
-Swamp Stride (Ex) A very young or older black dragon can 
-move through bogs and quicksand without penalty at its 
-normal speed.
-
-Hissing green acid drips from the fanged maw of this black-
-scaled, horned dragon.
-
-Water Breathing (Ex) A black dragon can breathe underwater 
-indefinitely and can freely use its breath weapon, spells, and 
-other abilities while submerged.
+Acid Pool (Su) An ancient or older black dragon can use its breath weapon to create an acid pool as a standard action. This acid pool has a radius of 5 feet per age category of the dragon. When an acid pool is created, anyone inside its area takes an amount of damage equal to the dragon’s breath weapon (Reflex half). Any creature that starts its turn touching this pool takes damage, but can make a Reflex save for half. Each round, the total damage dice of the pool is halved until the result would be less than 1d6. The acid pool floats on water, and deals damage to anything on the surface.
+Acidic Bite (Su) At old age, a black dragon’s bite deals an additional 2d6 points of acid damage. An ancient dragon’s damage increases to 4d6, and a great wrym’s to 6d6.
+Charm Reptiles (Sp) A great wyrm black dragon can use this ability three times per day. It works as a mass charm monster spell that affects only reptilian animals. This ability is the equivalent of an 8th-level spell.
+Corrupt Water (Sp) Once per day an adult or older black dragon can stagnate 10 cubic feet of still water, making it foul and unable to support water-breathing life. The ability spoils liquids containing water. Liquid-based magic items (such as potions) and items in a creature’s possession must succeed on a Will save (DC equal to the dragon’s frightful presence) or become ruined. This ability is the equivalent of a 1st-level spell. Its range is equal to that of the dragon’s frightful presence.
+Speak with Reptiles (Sp) A young or older black dragon gains the constant spell-like ability to speak with reptiles. This functions as speak with animals, but only with reptilian animals.
+Spell-Like Abilities (Sp) A black dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Juvenile—darkness (radius 10 feet per age category); Old—plant growth; Ancient—insect plague.
+Swamp Stride (Ex) A very young or older black dragon can move through bogs and quicksand without penalty at its normal speed.
+Water Breathing (Ex) A black dragon can breathe underwater indefinitely and can freely use its breath weapon, spells, and other abilities while submerged.
 Age Category Special Abilities Caster Level
 Wyrmling Immunity to acid, water breathing —
 Very young Swamp stride —
@@ -5768,6 +4027,7 @@ Very old DR 15/magic 9th
 Ancient Acid pool, insect plague 11th
 Wyrm DR 20/magic 13th
 Great wyrm Charm reptiles 15th
+
 yOUng BLACk DRAgOn CR 7
 XP 3,200
 CE Medium dragon (water)
@@ -5905,50 +4165,13 @@ Environment warm deserts
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Desert Thirst (Su) A blue dragon can cast create water at will 
-(CL equals its HD). Alternatively, it can destroy an equal 
-amount of liquid in a 10-foot burst. Unattended liquids 
-are instantly reduced to sand. Liquid-based magic items 
-(such as potions) and items in a creature’s possession 
-must succeed on a Will save (DC equal to the dragon’s 
-breath weapon) or be destroyed.
-Electricity Aura (Su) An adult blue dragon is surrounded by an 
-aura of electricity. Creatures within 5 feet take 1d6 points of 
-electricity damage at the beginning of the dragon’s turn. An 
-old dragon’s aura extends to 10 feet. An ancient dragon’s 
-damage increases to 2d6.
-Mirage (Su) An old or older blue dragon can make itself 
-appear to be in two places at once as a free action for 
-a number of rounds per day equal to its Hit Dice. This 
-ability functions as project image but the dragon can use 
-its breath weapon through the mirage.
-Sandstorm (Su) As a standard action, a great wyrm blue 
-dragon can create a sandstorm centered on itself with a 
-radius of 1,200 feet. Creatures other than the dragon inside 
-the storm take 2d6 points of damage per round in addition 
-to the normal sandstorm penalties (Pathfinder RPG Core 
-Rulebook 431). This sandstorm lasts for up to 1 hour, but can 
-be dismissed by the dragon as a free action. 
-Sound Imitation (Ex) A very young or older blue dragon can 
-mimic any voice or sound it has heard by making a successful 
-Bluff check against a listener’s Sense Motive check.
-Spell-Like Abilities (Sp) A blue dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed 
-age category. Young—ghost sound; Juvenile—minor image; 
-Adult—ventriloquism; Old—hallucinatory terrain; Ancient—
-veil; Great wyrm—mirage arcana.
-Storm Breath (Su) An ancient or older blue dragon can use its 
-breath weapon to create a storm of lightning. This functions 
-as call lightning storm, but the damage is equal to the 
-dragon’s breath weapon. The dragon can call down 1 bolt 
-
-Chromatic Dragon, Blue
-With scales the color of the desert sky, this large, serpentine dragon 
-moves with an unsettling grace.
-
-per round as a free action for 1d6 rounds. The save DC is 
-equal to the dragon’s breath weapon DC. Additional uses of 
-this ability extend the duration by an additional 1d6 rounds.
+Desert Thirst (Su) A blue dragon can cast create water at will (CL equals its HD). Alternatively, it can destroy an equal amount of liquid in a 10-foot burst. Unattended liquids are instantly reduced to sand. Liquid-based magic items (such as potions) and items in a creature’s possession must succeed on a Will save (DC equal to the dragon’s breath weapon) or be destroyed.
+Electricity Aura (Su) An adult blue dragon is surrounded by an aura of electricity. Creatures within 5 feet take 1d6 points of electricity damage at the beginning of the dragon’s turn. An old dragon’s aura extends to 10 feet. An ancient dragon’s damage increases to 2d6.
+Mirage (Su) An old or older blue dragon can make itself appear to be in two places at once as a free action for a number of rounds per day equal to its Hit Dice. This ability functions as project image but the dragon can use its breath weapon through the mirage.
+Sandstorm (Su) As a standard action, a great wyrm blue dragon can create a sandstorm centered on itself with a radius of 1,200 feet. Creatures other than the dragon inside the storm take 2d6 points of damage per round in addition to the normal sandstorm penalties (Pathfinder RPG Core Rulebook 431). This sandstorm lasts for up to 1 hour, but can be dismissed by the dragon as a free action. 
+Sound Imitation (Ex) A very young or older blue dragon can mimic any voice or sound it has heard by making a successful Bluff check against a listener’s Sense Motive check.
+Spell-Like Abilities (Sp) A blue dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Young—ghost sound; Juvenile—minor image; Adult—ventriloquism; Old—hallucinatory terrain; Ancient— veil; Great wyrm—mirage arcana.
+Storm Breath (Su) An ancient or older blue dragon can use its breath weapon to create a storm of lightning. This functions as call lightning storm, but the damage is equal to the dragon’s breath weapon. The dragon can call down 1 bolt per round as a free action for 1d6 rounds. The save DC is equal to the dragon’s breath weapon DC. Additional uses of this ability extend the duration by an additional 1d6 rounds.
 Age Category Special Abilities Caster Level
 Wyrmling Desert thirst, immune to electricity —
 Very young Sound imitation —
@@ -5962,6 +4185,7 @@ Very old DR 15/magic 11th
 Ancient Storm breath, veil 13th
 Wyrm DR 20/magic 15th
 Great wyrm Sandstorm, mirage arcana 17th
+
 yOUng BLUE DRAgOn CR 9
 XP 6,400
 LE Large dragon (earth)
@@ -6096,43 +4320,13 @@ Environment temperate forests
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Awaken Treants (Su) A great wyrm dragon can call on the forest 
-itself to aid it, animating a number of trees to serve as treants 
-to protect it. These treants can be called from any Huge or 
-larger living tree. A green dragon can create a single treant 
-as a standard action, up to a total of 4 treants per day. These 
-treants remain animated for up to 1 hour, at which time they 
-revert to being ordinary trees. 
-Camouflage (Ex) An old or older green dragon can use Stealth 
-to hide in any sort of natural terrain, even if the terrain does 
-not grant cover or concealment.
-Miasma (Su) An ancient or older green dragon can use its 
-breath weapon to create a cloud of acid as a standard action 
-that deals damage to any creature inside it. The cloud moves 
-with the dragon and has a radius of 20 feet. When it’s 
-created, anyone inside this area takes an amount of damage 
-equal to half the dragon’s breath weapon, with a Reflex save 
-for half damage. The number of damage dice rolled is halved 
-each round until the result would be less than 1d6. Any 
-creature that starts its turn inside the cloud takes damage, 
-but can make a Reflex save for half. A strong wind, such as 
-that created by a gust of wind, disperses the cloud in 1 round.
-Spell-Like Abilities (Sp) A green dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed 
-age category. Young—entangle; Juvenile—charm person; 
-Adult—suggestion; Old—plant growth; Ancient—dominate 
-person; Great wyrm—command plants.
-Trackless Step (Ex) An adult or older green dragon does not leave 
-a trail in natural surroundings and cannot be tracked. A green 
-dragon can choose to leave a trail, if it so desires.
-Water Breathing (Ex) A green dragon can breathe underwater 
-indefinitely and can freely use its breath weapon, spells, and 
-other abilities while submerged.
-Woodland Stride (Ex) A very young or older green dragon 
-can move through any sort of foliage at full speed without 
-taking damage or suffering impairment. Areas of foliage 
-that have been magically manipulated affect it normally.
-
+Awaken Treants (Su) A great wyrm dragon can call on the forest itself to aid it, animating a number of trees to serve as treants to protect it. These treants can be called from any Huge or larger living tree. A green dragon can create a single treant as a standard action, up to a total of 4 treants per day. These treants remain animated for up to 1 hour, at which time they revert to being ordinary trees. 
+Camouflage (Ex) An old or older green dragon can use Stealth to hide in any sort of natural terrain, even if the terrain does not grant cover or concealment.
+Miasma (Su) An ancient or older green dragon can use its breath weapon to create a cloud of acid as a standard action that deals damage to any creature inside it. The cloud moves with the dragon and has a radius of 20 feet. When it’s created, anyone inside this area takes an amount of damage equal to half the dragon’s breath weapon, with a Reflex save for half damage. The number of damage dice rolled is halved each round until the result would be less than 1d6. Any creature that starts its turn inside the cloud takes damage, but can make a Reflex save for half. A strong wind, such as that created by a gust of wind, disperses the cloud in 1 round.
+Spell-Like Abilities (Sp) A green dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Young—entangle; Juvenile—charm person; Adult—suggestion; Old—plant growth; Ancient—dominate person; Great wyrm—command plants.
+Trackless Step (Ex) An adult or older green dragon does not leave a trail in natural surroundings and cannot be tracked. A green dragon can choose to leave a trail, if it so desires.
+Water Breathing (Ex) A green dragon can breathe underwater indefinitely and can freely use its breath weapon, spells, and other abilities while submerged.
+Woodland Stride (Ex) A very young or older green dragon can move through any sort of foliage at full speed without taking damage or suffering impairment. Areas of foliage that have been magically manipulated affect it normally.
 Age Category Special Abilities Caster Level
 Wyrmling Immunity to acid, water breathing —
 Very young Woodland stride —
@@ -6285,46 +4479,16 @@ Environment warm mountains
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-fire Aura (Su) An adult red dragon is surrounded by an aura 
-of intense heat. All creatures within 5 feet take 1d6 points 
-of fire damage at the beginning of the dragon’s turn. An 
-old dragon’s aura extends to 10 feet. An ancient dragon’s 
-damage increases to 2d6.
-Incinerate (Su) A great wyrm red dragon can incinerate creatures 
-in its fiery breath. A creature reduced to fewer than 0 hit points 
-by its breath weapon must make a Fortitude save (using the 
-breath weapon’s DC). Failure indicates that the creature is 
-reduced to ash. Creatures destroyed in this way can only be 
-restored to life through true resurrection or similar magic. 
-Manipulate flames (Su) An old or older red dragon can control 
-any fire spell within 10 feet per age category of the dragon 
-as a standard action. This ability allows it to move any fire 
-effect in the area, as if it were the caster. This ability also 
-allows it to reposition a stationary fire effect, although the 
-new placement must be one allowed by the spell. Finally, for 1 
-round following the use of this ability, the dragon can control 
-any new fire spell cast within its area of control, as if it were 
-the caster. It can make all decisions allowed to the caster, 
-including canceling the spell if it so desires.
-Melt Stone (Su) An ancient or older red dragon can use its 
-breath weapon to melt rock at a range of 100 feet, affecting  
-a 5-foot-radius area per age category. The area becomes 
-lava to a depth of 1 foot. Any creature in contact with the 
-lava takes 20d6 points of fire damage on the first round, 
-10d6 on the second, and none thereafter as the lava hardens 
-and cools. If used on a wall or ceiling, treat this ability as an 
-avalanche that deals fire damage.
-Smoke Vision (Ex) A very young red dragon can see perfectly 
-in smoky conditions (such as those created by pyrotechnics).
+fire Aura (Su) An adult red dragon is surrounded by an aura of intense heat. All creatures within 5 feet take 1d6 points of fire damage at the beginning of the dragon’s turn. An old dragon’s aura extends to 10 feet. An ancient dragon’s damage increases to 2d6.
+Incinerate (Su) A great wyrm red dragon can incinerate creatures in its fiery breath. A creature reduced to fewer than 0 hit points by its breath weapon must make a Fortitude save (using the breath weapon’s DC). Failure indicates that the creature is reduced to ash. Creatures destroyed in this way can only be restored to life through true resurrection or similar magic. 
+Manipulate flames (Su) An old or older red dragon can control any fire spell within 10 feet per age category of the dragon as a standard action. This ability allows it to move any fire effect in the area, as if it were the caster. This ability also allows it to reposition a stationary fire effect, although the new placement must be one allowed by the spell. Finally, for 1 round following the use of this ability, the dragon can control any new fire spell cast within its area of control, as if it were the caster. It can make all decisions allowed to the caster, including canceling the spell if it so desires.
+Melt Stone (Su) An ancient or older red dragon can use its breath weapon to melt rock at a range of 100 feet, affecting  a 5-foot-radius area per age category. The area becomes lava to a depth of 1 foot. Any creature in contact with the lava takes 20d6 points of fire damage on the first round, 10d6 on the second, and none thereafter as the lava hardens and cools. If used on a wall or ceiling, treat this ability as an avalanche that deals fire damage.
+Smoke Vision (Ex) A very young red dragon can see perfectly in smoky conditions (such as those created by pyrotechnics).
 Spell-Like Abilities (Sp) A red dragon gains the following 
 spell-like abilities, usable at will upon reaching the listed 
 age category. Young—detect magic; Juvenile—pyrotechnics; 
 Adult—suggestion; Old—wall of fire; Ancient—find the path; 
 Great wyrm—discern location.
-
-A crown of cruel horns surrounds the head of this mighty dragon. 
-Thick scales the color of molten rock cover its long body.
-
 Age Category Special Abilities Caster Level
 Wyrmling Fire subtype —
 Very young Smoke vision —
@@ -6338,6 +4502,7 @@ Very old DR 15/magic 13th
 Ancient Melt stone, find the path 15th
 Wyrm DR 20/magic 17th
 Great wyrm Incinerate, discern location 19th
+
 yOUng RED DRAgOn CR 10
 XP 9,600
 CE Large dragon (fire)
@@ -6475,43 +4640,13 @@ Environment cold mountains
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Blizzard (Su) An ancient white dragon can use its breath 
-weapon to create a blizzard in the area around it as a 
-standard action. This creates heavy snow conditions in a 
-50-foot radius for 1 minute, centered on the dragon. This 
-snow slows movement (4 squares of movement per square 
-entered) and limits vision as fog does.
-Cold Aura (Su) An adult white dragon radiates an aura of cold. 
-All creatures within 5 feet of the dragon take 1d6 points 
-of cold damage at the beginning of the dragon’s turn. An 
-old dragon’s aura extends to 10 feet. An ancient dragon’s 
-damage increases to 2d6.
-freezing fog (Sp) An old white dragon can use this ability 
-three times per day. It is similar to an acid fog spell but 
-deals cold damage instead of acid damage. It also causes a 
-rime of slippery ice to form on any surface the fog touches, 
-creating the effect of a grease spell. The dragon is immune 
-to the grease effect because of its icewalking ability. This 
-ability is the equivalent of a 6th-level spell.
-Ice Shape (Su) A young white dragon can shape ice and 
-snow at will. This ability functions as stone shape, but only 
-targeting ice and snow, not stone. A white dragon’s caster 
-level for this effect is equal to its Hit Dice.
-Ice Tomb (Sp) A great wyrm can, as a standard action, cause a 
-creature to sink into ice. This works as imprisonment, but only 
-while the target is touching an icy surface. A white dragon 
-can use this ability once per day (CL equals dragon’s HD). 
-Targets entombed by this ability can be freed by casting 
-freedom or by physically freeing the creature from the ice 
-(Hardness 0, 360 hit points). The save DC is Charisma-based. 
-Icewalking (Ex) This ability works like the spider climb spell, but 
-the surfaces the dragon climbs must be icy. The dragon can 
-move across icy surfaces without penalty and does not need 
-to make Acrobatics checks to run or charge on ice.
-Snow Vision (Ex) A very young white dragon learns to see 
-perfectly well in snowy conditions. A white dragon does not 
-suffer any penalties to Perception checks while in snow.
-
+Blizzard (Su) An ancient white dragon can use its breath weapon to create a blizzard in the area around it as a standard action. This creates heavy snow conditions in a 50-foot radius for 1 minute, centered on the dragon. This snow slows movement (4 squares of movement per square entered) and limits vision as fog does.
+Cold Aura (Su) An adult white dragon radiates an aura of cold. All creatures within 5 feet of the dragon take 1d6 points of cold damage at the beginning of the dragon’s turn. An old dragon’s aura extends to 10 feet. An ancient dragon’s damage increases to 2d6.
+freezing fog (Sp) An old white dragon can use this ability three times per day. It is similar to an acid fog spell but deals cold damage instead of acid damage. It also causes a rime of slippery ice to form on any surface the fog touches, creating the effect of a grease spell. The dragon is immune to the grease effect because of its icewalking ability. This ability is the equivalent of a 6th-level spell.
+Ice Shape (Su) A young white dragon can shape ice and snow at will. This ability functions as stone shape, but only targeting ice and snow, not stone. A white dragon’s caster level for this effect is equal to its Hit Dice.
+Ice Tomb (Sp) A great wyrm can, as a standard action, cause a creature to sink into ice. This works as imprisonment, but only while the target is touching an icy surface. A white dragon can use this ability once per day (CL equals dragon’s HD). Targets entombed by this ability can be freed by casting freedom or by physically freeing the creature from the ice (Hardness 0, 360 hit points). The save DC is Charisma-based. 
+Icewalking (Ex) This ability works like the spider climb spell, but the surfaces the dragon climbs must be icy. The dragon can move across icy surfaces without penalty and does not need to make Acrobatics checks to run or charge on ice.
+Snow Vision (Ex) A very young white dragon learns to see perfectly well in snowy conditions. A white dragon does not suffer any penalties to Perception checks while in snow.
 Spell-Like Abilities (Sp) A white dragon gains the following 
 spell-like abilities usable at will upon reaching the listed age 
 category. Juvenile—fog cloud; Young adult—gust of wind; 
@@ -6530,6 +4665,7 @@ Very old DR 15/magic 7th
 Ancient Blizzard, wall of ice 9th
 Wyrm DR 20/magic 11th
 Great wyrm Ice tomb, control weather 13th
+
 yOUng WhITE DRAgOn CR 6
 XP 2,400
 CE Medium dragon (cold)
@@ -6668,46 +4804,13 @@ Environment warm deserts
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Desert Wind (Su) A juvenile or older brass dragon can call up 
-the desert wind to serve him. This functions as gust of wind, 
-but any creature in its path must make a Fortitude save or 
-be blinded for 1d4 rounds by the sand. The save DC for this 
-effect is equal to the dragon’s breath weapon DC.
-fire Aura (Su) An old or older brass dragon is surrounded by 
-an aura of intense heat. All creatures within 5 feet of the 
-dragon take 1d6 points of fire damage at the beginning of 
-the dragon’s turn. An ancient brass dragon’s aura extends 
-to 10 feet. A great wyrm’s damage increases to 2d6. A 
-brass dragon can suppress or activate this aura at will as a 
-free action.
-Move Sand (Sp) A young or older brass dragon can move sand 
-to excavate ruins or hide treasures. This functions as move 
-earth, but it only affects sand. The dragon uses his HD in 
-place of his caster level for this effect. This is equivalent to a 
-5th-level spell.
-Sandstorm (Su) An ancient or older brass dragon can create 
-a powerful sandstorm once per day as a full-round action. 
-This storm has a radius of 1 mile and lasts for 1 minute per 
-age category of the dragon. This functions as a sandstorm 
-(Pathfinder RPG Core Rulebook 431), except that it is also 
-accompanied by windstorm-level winds.
-Sleep Breath (Su) Instead of a line of fire, a brass dragon can 
-breathe a cone of sleep gas. Creatures within the cone must 
-succeed on a Will save or fall asleep for 1d6 rounds plus 1 
-round per age category of the dragon.
-Spell-Like Abilities (Sp) A brass dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed 
-age category. Very young—speak with animals; Juvenile—
-endure elements; Adult—suggestion; Old—control winds; 
-Ancient—control weather; Great wyrm—whirlwind.
-Summon Djinni (Sp) This ability, usable by a great wyrm brass 
-dragon once per day, works like a summon monster spell, 
-except that it summons one noble djinni. This ability is the 
-equivalent of a 9th-level spell. 
-
-A crest of horns sweeps back from the head of this dragon, leading 
-to a long neck and serpentine brass body.
-
+Desert Wind (Su) A juvenile or older brass dragon can call up the desert wind to serve him. This functions as gust of wind, but any creature in its path must make a Fortitude save or be blinded for 1d4 rounds by the sand. The save DC for this effect is equal to the dragon’s breath weapon DC.
+fire Aura (Su) An old or older brass dragon is surrounded by an aura of intense heat. All creatures within 5 feet of the dragon take 1d6 points of fire damage at the beginning of the dragon’s turn. An ancient brass dragon’s aura extends to 10 feet. A great wyrm’s damage increases to 2d6. A brass dragon can suppress or activate this aura at will as a free action.
+Move Sand (Sp) A young or older brass dragon can move sand to excavate ruins or hide treasures. This functions as move earth, but it only affects sand. The dragon uses his HD in place of his caster level for this effect. This is equivalent to a 5th-level spell.
+Sandstorm (Su) An ancient or older brass dragon can create a powerful sandstorm once per day as a full-round action. This storm has a radius of 1 mile and lasts for 1 minute per age category of the dragon. This functions as a sandstorm (Pathfinder RPG Core Rulebook 431), except that it is also accompanied by windstorm-level winds.
+Sleep Breath (Su) Instead of a line of fire, a brass dragon can breathe a cone of sleep gas. Creatures within the cone must succeed on a Will save or fall asleep for 1d6 rounds plus 1 round per age category of the dragon.
+Spell-Like Abilities (Sp) A brass dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Very young—speak with animals; Juvenile— endure elements; Adult—suggestion; Old—control winds; Ancient—control weather; Great wyrm—whirlwind.
+Summon Djinni (Sp) This ability, usable by a great wyrm brass dragon once per day, works like a summon monster spell, except that it summons one noble djinni. This ability is the equivalent of a 9th-level spell. 
 Age Category Special Abilities Caster Level
 Wyrmling Fire subtype, sleep breath —
 Very young speak with animals —
@@ -6721,6 +4824,7 @@ Very old DR 15/magic 13th
 Ancient Sandstorm, control weather 15th
 Wyrm DR 20/magic 17th
 Great wyrm Summon djinni, whirlwind 19th
+
 yOUng BRASS DRAgOn CR 7
 XP 3,200
 CG Medium dragon (fire)
@@ -6865,46 +4969,14 @@ Environment temperate coastlines
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Change Shape (Su) A young or older bronze dragon can take 
-any animal or humanoid form 3/day as if using polymorph. 
-Electricity Aura (Su) An old or older bronze dragon has an aura 
-of electricity. All creatures within 5 feet take 1d6 points of 
-electricity damage at the start of the dragon’s turn. An ancient 
-dragon’s aura is 10 feet. A great wyrm’s damage increases to 
-2d6. A bronze dragon can suppress this aura at will.
-Repulsion Breath (Su) Instead of a line of electricity, a bronze 
-dragon can breathe a cone of repulsion gas. Targets must 
-make a Will save or be compelled to do nothing but move 
-away from the dragon for 1d6 rounds plus 1 round per age 
-category. This is a mind-affecting compulsion effect.
-Spell-Like Abilities (Sp) A bronze dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed age 
-category. Very young—speak with animals; Juvenile—create 
-food and water; Adult—fog cloud; Old—detect thoughts; 
-Ancient—control water; Great wyrm—control weather.
-Tidal Wave (Su) A great wyrm bronze dragon can cause the sea 
-to rise up and crush his enemies once per day as a standard 
-action. This affects an area of coastline 120 feet in length 
-and targets all creatures within 40 feet of the shore—treat 
-the targets as if struck by an avalanche (Pathfinder RPG 
-Core Rulebook 429). Treat all creatures as if they were in the 
-bury zone. The save DC to halve this damage is equal to the 
-dragon’s breath weapon DC. Those who fail their saves take 
-full damage and are drawn 60 feet off shore and deposited 20 
-feet under the surface on the round after the wave hits.
-Vortex (Ex) Once per day, an ancient or older bronze dragon 
-can create a vortex as a standard action, just like an elder 
-water elemental (see page 127). A bronze dragon can 
-maintain this vortex for 1 round per age category.
-Water Breathing (Ex) A bronze dragon breathes water and can 
-use its breath weapon, spells, and abilities underwater.
-Wave Mastery (Su) For up to 10 minutes per age category per 
-day, a juvenile bronze dragon, along with creatures or vessels 
-within 50 feet, can move at twice its normal speed in water.
-
-This sleek dragon is covered in dull metallic scales that range in 
-color from shining bronze to mottled blue.
-
+Change Shape (Su) A young or older bronze dragon can take any animal or humanoid form 3/day as if using polymorph. 
+Electricity Aura (Su) An old or older bronze dragon has an aura of electricity. All creatures within 5 feet take 1d6 points of electricity damage at the start of the dragon’s turn. An ancient dragon’s aura is 10 feet. A great wyrm’s damage increases to 2d6. A bronze dragon can suppress this aura at will.
+Repulsion Breath (Su) Instead of a line of electricity, a bronze dragon can breathe a cone of repulsion gas. Targets must make a Will save or be compelled to do nothing but move away from the dragon for 1d6 rounds plus 1 round per age category. This is a mind-affecting compulsion effect.
+Spell-Like Abilities (Sp) A bronze dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Very young—speak with animals; Juvenile—create food and water; Adult—fog cloud; Old—detect thoughts; Ancient—control water; Great wyrm—control weather.
+Tidal Wave (Su) A great wyrm bronze dragon can cause the sea to rise up and crush his enemies once per day as a standard action. This affects an area of coastline 120 feet in length and targets all creatures within 40 feet of the shore—treat the targets as if struck by an avalanche (Pathfinder RPG Core Rulebook 429). Treat all creatures as if they were in the bury zone. The save DC to halve this damage is equal to the dragon’s breath weapon DC. Those who fail their saves take full damage and are drawn 60 feet off shore and deposited 20 feet under the surface on the round after the wave hits.
+Vortex (Ex) Once per day, an ancient or older bronze dragon can create a vortex as a standard action, just like an elder water elemental (see page 127). A bronze dragon can maintain this vortex for 1 round per age category.
+Water Breathing (Ex) A bronze dragon breathes water and can use its breath weapon, spells, and abilities underwater.
+Wave Mastery (Su) For up to 10 minutes per age category per day, a juvenile bronze dragon, along with creatures or vessels within 50 feet, can move at twice its normal speed in water.
 Age Category Special Abilities Caster Level
 Wyrmling Immunity to electricity, —
  repulsion breath, water breathing
@@ -6919,6 +4991,7 @@ Very old DR 15/magic 13th
 Ancient Vortex, control water 15th
 Wyrm DR 20/magic 17th
 Great wyrm Tidal wave, control weather 19th
+
 yOUng BROnzE DRAgOn CR 9
 XP 6,400
 LG Large dragon (water)
@@ -7059,43 +5132,14 @@ Environment warm hills
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Climb Stone (Ex) A copper dragon can climb on stone surfaces 
-as though using the spider climb spell.
-Deadly joke (Sp) Once per day, as a standard action, a great 
-wyrm copper dragon can tell a joke that kills. This affects 
-one target, and functions as power word kill. This is a 
-language-dependent sonic effect.
-Mass Laughter (Sp) An ancient copper dragon can tell a fantastic 
-joke once per day as a standard action. All creatures within 
-10 feet per age category must make a Will save or laugh for 1 
-round per age category, as if affected by hideous laughter. The 
-save DC is Charisma-based. This is equal to a 6th-level spell.
-Slow Aura (Su) An old or older copper dragon is surrounded 
-by an aura of slowness. All creatures within 5 feet of the 
-dragon must make a Will save or be affected as per slow 
-for 1 round. An ancient dragon’s aura extends to 10 feet. 
-For great wyrm copper dragons, those opponents that fail 
-their saves are slowed for 1d4 rounds. The DC of this save is 
-equal to the dragon’s breath weapon. A copper dragon can 
-suppress or activate this aura at will as a free action.
-Slow Breath (Su) Instead of a line of acid, a copper dragon can 
-breathe a cone of slowing gas. Those in the cone must make 
-a Fortitude save or be slowed (as per the spell slow) for 1d6 
-rounds plus 1 round per age category of the dragon.
-Spell-Like Abilities (Sp) A copper dragon gains the following 
-spell-like abilities, usable at will upon reaching the listed age 
-category. Very young—grease; Juvenile—hideous laughter; 
-Adult—stone shape; Old—transmute rock to mud/mud to rock; 
-Ancient—wall of stone; Great wyrm—move earth.
-Trap Master (Ex) A juvenile or older copper dragon receives a +1 
-bonus per age categroy on Craft (traps) and Perception checks 
-made to locate a trap. Upon becoming a mature adult, he can 
-also use Disable Device to disarm magic traps as if he had the 
-rogue’s Trapfinding class feature.
-Uncanny Dodge (Ex) A young or older copper dragon is always 
-looking out for an ambush. He can never be caught flat-footed. 
-This ability functions like the rogue ability of the same name.
-
+Climb Stone (Ex) A copper dragon can climb on stone surfaces as though using the spider climb spell.
+Deadly joke (Sp) Once per day, as a standard action, a great wyrm copper dragon can tell a joke that kills. This affects one target, and functions as power word kill. This is a language-dependent sonic effect.
+Mass Laughter (Sp) An ancient copper dragon can tell a fantastic joke once per day as a standard action. All creatures within 10 feet per age category must make a Will save or laugh for 1 round per age category, as if affected by hideous laughter. The save DC is Charisma-based. This is equal to a 6th-level spell.
+Slow Aura (Su) An old or older copper dragon is surrounded by an aura of slowness. All creatures within 5 feet of the dragon must make a Will save or be affected as per slow for 1 round. An ancient dragon’s aura extends to 10 feet. For great wyrm copper dragons, those opponents that fail their saves are slowed for 1d4 rounds. The DC of this save is equal to the dragon’s breath weapon. A copper dragon can suppress or activate this aura at will as a free action.
+Slow Breath (Su) Instead of a line of acid, a copper dragon can breathe a cone of slowing gas. Those in the cone must make a Fortitude save or be slowed (as per the spell slow) for 1d6 rounds plus 1 round per age category of the dragon.
+Spell-Like Abilities (Sp) A copper dragon gains the following spell-like abilities, usable at will upon reaching the listed age category. Very young—grease; Juvenile—hideous laughter; Adult—stone shape; Old—transmute rock to mud/mud to rock; Ancient—wall of stone; Great wyrm—move earth.
+Trap Master (Ex) A juvenile or older copper dragon receives a +1 bonus per age categroy on Craft (traps) and Perception checks made to locate a trap. Upon becoming a mature adult, he can also use Disable Device to disarm magic traps as if he had the rogue’s Trapfinding class feature.
+Uncanny Dodge (Ex) A young or older copper dragon is always looking out for an ambush. He can never be caught flat-footed. This ability functions like the rogue ability of the same name.
 Age Category Special Abilities Caster Level
 Wyrmling Immunity to acid, climb stone, —
  slow breath
@@ -7253,31 +5297,12 @@ Environment warm plains
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Change Shape (Su) A very young or older gold dragon can 
-assume any animal or humanoid form three times per day 
-as if using polymorph.
-Detect gems (Sp) A young or older gold dragon can detect 
-gems three times per day. This functions as locate object, 
-but can only be used to locate gemstones.
-Divine Aid (Sp) Once a week, a great wyrm gold dragon can call 
-upon celestial powers for aid. This functions as a miracle. 
-fast flight (Ex) A young or older gold dragon is treated as one 
-size category larger when determining his fly speed.
-fire Aura (Su) An old or older gold dragon is surrounded by an 
-aura of fire. All creatures within 5 feet of the dragon take 1d6 
-points of fire damage at the beginning of the dragon’s turn. 
-An ancient gold dragon’s aura extends to 10 feet. A great 
-wyrm’s damage increases to 2d6. The dragon can activate or 
-suppress this aura as a free action.
-Luck (Sp) Once per day an adult or older gold dragon can 
-touch a gem, usually one embedded in the dragon’s hide, 
-and enspell it to bring good luck. As long as the dragon 
-carries the gem, it and every good creature within a given 
-radius of it (10 ft. per age category) receives a +1 luck bonus 
-on all saving throws. If the dragon gives an enspelled gem 
-to another creature, only that bearer gets the bonus. The 
-effect lasts 1d3 hours plus 3 hours per age category of the 
-dragon. This ability is the equivalent of a 2nd-level spell.
+Change Shape (Su) A very young or older gold dragon can assume any animal or humanoid form three times per day as if using polymorph.
+Detect gems (Sp) A young or older gold dragon can detect gems three times per day. This functions as locate object, but can only be used to locate gemstones.
+Divine Aid (Sp) Once a week, a great wyrm gold dragon can call upon celestial powers for aid. This functions as a miracle. 
+fast flight (Ex) A young or older gold dragon is treated as one size category larger when determining his fly speed.
+fire Aura (Su) An old or older gold dragon is surrounded by an aura of fire. All creatures within 5 feet of the dragon take 1d6 points of fire damage at the beginning of the dragon’s turn. An ancient gold dragon’s aura extends to 10 feet. A great wyrm’s damage increases to 2d6. The dragon can activate or suppress this aura as a free action.
+Luck (Sp) Once per day an adult or older gold dragon can touch a gem, usually one embedded in the dragon’s hide, and enspell it to bring good luck. As long as the dragon carries the gem, it and every good creature within a given radius of it (10 ft. per age category) receives a +1 luck bonus on all saving throws. If the dragon gives an enspelled gem to another creature, only that bearer gets the bonus. The effect lasts 1d3 hours plus 3 hours per age category of the dragon. This ability is the equivalent of a 2nd-level spell.
 Spell-Like Abilities (Sp) A gold dragon gains the following 
 spell-like abilities upon reaching the listed age category. Its 
 caster level for these effects is equal to its Hit Dice, and any 
@@ -7285,14 +5310,7 @@ save DCs are Charisma-based. A gold dragon can use these
 abilities at will. Very young—detect evil; Juvenile—bless; 
 Adult—daylight; Old—geas/quest; Ancient—sunburst; Great 
 wyrm—foresight.
-Weakening Breath (Su) Instead of a cone of fire, a gold dragon 
-can breathe a cone of weakening gas. Creatures within the 
-cone must succeed on a Fortitude save or take 1 point of 
-Strength damage per age category (Will save half).
-
-Golden scales cover the body of this majestic dragon, and a regal 
-crest of horns arches backward above wise and piercing eyes.
-
+Weakening Breath (Su) Instead of a cone of fire, a gold dragon can breathe a cone of weakening gas. Creatures within the cone must succeed on a Fortitude save or take 1 point of Strength damage per age category (Will save half).
 Age Category Special Abilities Caster Level*
 Wyrmling Fire subtype, weakening breath —
 Very young Change shape, detect evil —
@@ -7452,42 +5470,19 @@ Environment temperate mountains
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Change Shape (Su) A silver dragon can assume any animal or 
-humanoid form three times per day as if using polymorph.
-Cloudwalking (Su) A very young or older silver dragon can 
-tread on clouds or fog as though on solid ground.
-Cold Aura (Su) An old or older silver dragon is surrounded by an 
-aura of cold. All creatures within 5 feet of the dragon take 1d6 
-points of cold damage at the beginning of the dragon’s turn. 
-An ancient dragon’s aura extends to 10 feet. A great wyrm’s 
-aura damage increases to 2d6. A silver dragon can suppress or 
-activate this aura at will as a free action.
-fog Vision (Ex) A juvenile or older silver dragon can see 
-perfectly well in fog and clouds.
-graceful flight (Ex) A young or older silver dragon’s aerial 
-maneuverability is one step better than normal.
-Paralyzing Breath (Su) Instead of a cone of cold, a silver dragon 
-can breathe a cone of paralyzing gas. Creatures within the 
-cone must succeed on a Fortitude save or be paralyzed for 
-1d6 rounds plus 1 round per age category of the dragon.
-Reflective Scales (Su) Any spell that targets an ancient or older 
-silver dragon but fails to penetrate the silver dragon’s spell 
-resistance might be reflected. If the caster level check to 
-penetrate the dragon’s spell resistance is failed by 5 or more, 
-the spell is reflected. If the check fails by 4 or less, the spell is 
-merely wasted. This otherwise functions as spell turning.
+Change Shape (Su) A silver dragon can assume any animal or humanoid form three times per day as if using polymorph.
+Cloudwalking (Su) A very young or older silver dragon can tread on clouds or fog as though on solid ground.
+Cold Aura (Su) An old or older silver dragon is surrounded by an aura of cold. All creatures within 5 feet of the dragon take 1d6 points of cold damage at the beginning of the dragon’s turn. An ancient dragon’s aura extends to 10 feet. A great wyrm’s aura damage increases to 2d6. A silver dragon can suppress or activate this aura at will as a free action.
+fog Vision (Ex) A juvenile or older silver dragon can see perfectly well in fog and clouds.
+graceful flight (Ex) A young or older silver dragon’s aerial maneuverability is one step better than normal.
+Paralyzing Breath (Su) Instead of a cone of cold, a silver dragon can breathe a cone of paralyzing gas. Creatures within the cone must succeed on a Fortitude save or be paralyzed for 1d6 rounds plus 1 round per age category of the dragon.
+Reflective Scales (Su) Any spell that targets an ancient or older silver dragon but fails to penetrate the silver dragon’s spell resistance might be reflected. If the caster level check to penetrate the dragon’s spell resistance is failed by 5 or more, the spell is reflected. If the check fails by 4 or less, the spell is merely wasted. This otherwise functions as spell turning.
 Spell-Like Abilities (Sp) A silver dragon gains the following 
 spell-like abilities, usable at will upon reaching the listed 
 age category. Very young—detect evil; Juvenile—feather 
 fall; Adult—fog cloud; Old—control winds; Ancient—control 
 weather; Great wyrm—reverse gravity.
-True Courage (Ex) A great wyrm silver dragon can fight on 
-through pain and death. When reduced to below 0 hit 
-points, it remains conscious, automatically stabilizes, and 
-can continue to act (although it is staggered). If it takes 
-damage or is the target of a spell that causes its death, it 
-remains alive for 1 round and can act normally (it is not 
-staggered for this final round).
+True Courage (Ex) A great wyrm silver dragon can fight on through pain and death. When reduced to below 0 hit points, it remains conscious, automatically stabilizes, and can continue to act (although it is staggered). If it takes damage or is the target of a spell that causes its death, it remains alive for 1 round and can act normally (it is not staggered for this final round).
 
 Metallic Dragon, Silver
 The scales of this tall, elegant dragon shine like polished silver, 
@@ -7691,72 +5686,8 @@ Environment temperate aquatic
 Organization solitary
 Treasure double
 SPECIAL ABILITIES
-Breath Weapon (Su) Cloud of steam 20 feet high, 25 feet wide, 
-and 50 feet long, once every 1d4 rounds, damage 12d6 
-fire, Reflex DC 20 half; effective both on the surface and 
-underwater. The save DC is Constitution-based.
-Capsize (Ex) A dragon turtle can attempt to capsize a boat or 
-ship by ramming it as a charge attack and making a 
-CMB check. The DC of this check is 25, or the 
-result of the boat captain’s Profession 
-(sailor) check, whichever is higher. For 
-each size category larger than the 
-dragon turtle’s size, it takes a 
-cumulative –10 penalty on this 
-CMB check.
-Dragon turtles make their 
-homes in both salt and 
-fresh water, where they rank 
-among the biggest threats to 
-sailors and those who travel by 
-
-Dragon Turtle
-This long-tailed aquatic beast resembles a massive snapping 
-turtle with draconic features.
-
-ship through the waterways of the world. Skilled mariners 
-know the territory dragon turtles claim and frequently 
-make offerings of gold and magic for safe passage or avoid 
-the area entirely. For its part, a dragon turtle quickly 
-grows to appreciate and even expect such tithes and gifts, 
-and a dragon turtle that expects gifts but is ignored is a 
-dangerous foe indeed.
-A dragon turtle’s shell varies in color between 
-individuals. Some have dull shells of brown and rust red, 
-while others have carapaces of a deep green-blue color with 
-silver highlights across the rocky ridges. The coloration of 
-the head, tail, and legs is slightly paler than the shell and 
-contains golden streaks along the crest and spines.
-Dragon turtles claim vast territories in the open seas, 
-encompassing regions often in excess of 50 square miles. 
-Here, these dangerous beasts capsize ships that fail 
-to respect their territories, adding the sunken wrecks 
-and their valuable cargoes to their lairs. Dragon turtles 
-generally make their homes in deep caves only accessible 
-through the water, and often decorate their lairs not only 
-with the wealth seized from ships they’ve sunk, but the 
-wrecks of these unfortunate ships themselves. Their 
-territorial natures and fondness for these types of lairs 
-put them in direct conf lict with other undersea races 
-such as merfolk and sahuagin. 
-Large fish, such as tuna, sturgeons, and even 
-sharks, rank among dragon turtles’ favorite foods, but 
-being omnivores, they also sometimes feed on large 
-undersea fields of seaweed. They certainly aren’t above 
-supplementing their diets with the passengers of ships 
-they sink, although such feeding is not borne of any 
-intrinsic evil or cruelty. Dragon turtles possess shells 15 
-feet in diameter, with their appendages stretching a few 
-feet further, and measure over 25 feet long from the tip of 
-their noses to the ends of their powerful tails.
-
-112
-
-112
-
-Dragon Turtle–Drider
-
-Dragon Turtle–Drider
+Breath Weapon (Su) Cloud of steam 20 feet high, 25 feet wide, and 50 feet long, once every 1d4 rounds, damage 12d6 fire, Reflex DC 20 half; effective both on the surface and underwater. The save DC is Constitution-based.
+Capsize (Ex) A dragon turtle can attempt to capsize a boat or ship by ramming it as a charge attack and making a CMB check. The DC of this check is 25, or the result of the boat captain’s Profession (sailor) check, whichever is higher. For each size category larger than the dragon turtle’s size, it takes a cumulative –10 penalty on this CMB check.
 
 DRIDER CR 7
 XP 3,200
@@ -7803,36 +5734,10 @@ Organization solitary, pair, or group (3–8)
 Treasure double (masterwork heavy mace, masterwork 
 composite longbow [+2 Str] with 20 arrows, additional treasure)
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury; save Fort DC 18; frequency 1/round 
-for 6 rounds; effect 1d2 Str; cure 1 save. The save DC is 
-Constitution-based.
-
-Drider
-The dry rasping of spidery legs brings this hideous monstrosity 
-into view—a nightmarish, centaurian fusion of drow and spider.
-
+Poison (Ex) Bite—injury; save Fort DC 18; frequency 1/round for 6 rounds; effect 1d2 Str; cure 1 save. The save DC is Constitution-based.
 Spells A drider casts spells as a 6th-level cleric, sorcerer, or 
 wizard, but does not gain any other class abilities.
-Undersized Weapons (Ex) Although a drider is Large, 
-its upper torso is the same size as that of a Medium 
-humanoid’s upper torso. As a result, it wields weapons 
-as if it were one size category smaller than its actual size 
-(Medium for most driders).
-Created from the body of a drow, warped and mutated through 
-special poisons and elixirs to take on the characteristics of a 
-giant spider, the drider is a dangerous creature.
-Driders are sexually dimorphic. A female drider’s 
-lower spider body is sleek and graceful, often similar to 
-a black widow’s body, while its upper drow torso retains 
-its alluring curves and beautiful face (with the exception 
-of sharp, poisonous fangs). A male drider’s lower body is 
-bulky like a tarantula, while its upper body is wiry and 
-bears a hideous face more spider than drow, complete 
-with fanged mandibles.
-
-113
-
-113
+Undersized Weapons (Ex) Although a drider is Large, its upper torso is the same size as that of a Medium humanoid’s upper torso. As a result, it wields weapons as if it were one size category smaller than its actual size (Medium for most driders).
 
 DROW CR 1/3
 XP 135
