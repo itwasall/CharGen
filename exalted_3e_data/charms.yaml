@@ -88,8 +88,7 @@ Fiery Arrow Attack:
     Type: Supplemental
     Keywords: Decisive-only
     Duration: Instant
-    Prerequisites: 
-    [
+    Prerequisites: [
         {
             id: Phantom Arrow Technique,
             type: charm 
@@ -105,12 +104,8 @@ There Is No Wind:
     Type: Reflexive
     Keywords: Dual
     Duration: Instant
-    Prerequisites:
-    [
-        {
-            id: Sight Without Eyes,
-            type: charm 
-        }
+    Prerequisites: [
+        { id: Sight Without Eyes, type: charm }
     ]
     Description: "The Solar graces her shot with unerring precision and fires it along a flow of Essence, causing it to slice through the air between the arrow and its mark. Her attack ignores penalties from non-visual conditions such as high winds, bad weather, flawed ammunition, and so on. In addition, her withering attack accuracy is calculated as if it were made from short range regardless of the distance shes firing from. With appropriate Awareness Charms, the Solar may use this Charm to make attacks from extreme long range."
 
