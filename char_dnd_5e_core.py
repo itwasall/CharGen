@@ -35,6 +35,15 @@ def getProficiencies(data):
             return data['Has']
 
 def getEquipment(data):
+    """
+    How the fuck this works.
+    For each item in equipment_data:
+    itemCheck:
+        Check each item if it's a 'Choose' dict
+    chooseHowMany: -> rollItems:
+            If it is: choose one/two of the items
+        if not: append it to equipment
+    """
     def unpackEquipment(data):
         unpacked_items = []
         def rollItems(data, amount):
@@ -52,22 +61,20 @@ def getEquipment(data):
                     return rollItems(data, 1)
                 case 'Choose 2':
                     return rollItems(data, 2)
-        """
-        TODO: Sort out that wack recursion
-        """
-        for item in data:
+
+        def itemCheck(item):
             if isinstance(item, dict) and len(item.keys()) == 1:
                 unpacked_dict_value = unpackEquipment(list(item.values())[0])
                 unpacked_items.append(chooseHowMany(list(item.keys())[0], unpacked_dict_value))
             elif isinstance(item, list):
                 for i in item:
-                    if isinstance(i, dict) and len(i.keys()) == 1:
-                        unpacked_dict_value = unpackEquipment(list(i.values())[0])
-                        unpacked_items.append(chooseHowMany(list(i.keys())[0], unpacked_dict_value))
-                    else:
-                        unpacked_items.append(i) 
+                    itemCheck(i)
             else:
                 unpacked_items.append(item) 
+
+        for item in data:
+            itemCheck(item)
+            
         return unpacked_items
     flatten = lambda *n: (e for a in n for e in (flatten(*a) if isinstance(a, (tuple, list)) else (a,)))    
     """ I stole this lambda from stackoverflow and have no idea how it works but it does, thanks samplebias!"""
@@ -1077,7 +1084,10 @@ PALADIN.skills = {'Choose 2': [ATHLETICS, INSIGHT, INTIMIDATION, MEDICINE, PERSU
 PALADIN.hit_dice = "1d10"
 PALADIN.initial_health = 10
 PALADIN.starting_money = ["5d4", 10, gp]
-PALADIN.equipment = [ {'Choose 1': [ [{'Choose 1': MARTIAL_WEAPONS}, SHIELD], [{'Choose 1': MARTIAL_WEAPONS}, {'Choose 1': MARTIAL_WEAPONS}] ]}, {'Choose 1': [ [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS} ]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
+PALADIN.equipment = [{'Choose 1': [
+    [{'Choose 1': MARTIAL_WEAPONS}, SHIELD], 
+    [{'Choose 2': MARTIAL_WEAPONS}]
+        ]}, {'Choose 1': [ [JAVELIN for _ in range(5)], {'Choose 1': MELEE_SIMPLE_WEAPONS} ]}, CHAIN_MAIL, {'Choose 1': HOLY_SYMBOL} ]
 PALADIN.equipment_pack = {'Choose 1': [PRIESTS_PACK, EXPLORERS_PACK]}
 
 RANGER.proficiencies = { 'Armor': [LIGHT_ARMOR_PROF, MEDIUM_ARMOR_PROF, SHIELDS], 'Weapons': [SIMPLE_WEAPONS_PROF, MARTIAL_WEAPONS_PROF], 'Tools': None }
@@ -1322,6 +1332,7 @@ if __name__ == "__main__":
     print(f"Total xanathar subclasses: {len(bingus('xanathar'))}")
     print(f"{', '.join([subclass.name for subclass in bingus('xanathar')])}")
     """
+    """
     roll_class = random.choice(CLASSES)
     print(roll_class)
 
@@ -1349,3 +1360,5 @@ if __name__ == "__main__":
     for __class in CLASSES:
         print(__class)
         print(getEquipment(__class.equipment))
+    """
+    print(getEquipment(PALADIN.equipment))
