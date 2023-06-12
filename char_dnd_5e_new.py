@@ -539,6 +539,6 @@ def genCharacter():
     CHARACTER.getStats()
     CHARACTER.getEquipment()
     CHARACTER.getSpells()
-    return "nice"
+    return None
 
 genCharacter()
