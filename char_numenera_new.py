@@ -17,10 +17,10 @@ class AbstractBaseClass:
 
 class _Stat(AbstractBaseClass):
     items = []
-    def __init__(self, name, **kwargs):
+    def __init__(self, name, value=0, **kwargs):
         super().__init__(name, **kwargs)
         _Stat.items.append(self)
-        self.value = 0
+        self.value = value
 
     def __add__(self, x: int):
         return _Stat(self.name, value=self.value+x)
@@ -51,8 +51,13 @@ MIGHT = _Stat("Might")
 SPEED = _Stat("Speed")
 INTELLECT = _Stat("Intellect")
 
+def GenStats(x,y,z):
+    MIGHT += x
+    SPEED += y
+    INTELLECT += z
+
 # Character Types
-GLAIVE = _CharType("Glaive", )
+GLAIVE = _CharType("Glaive", GenStats(11, 10, 7))
 NANO = _CharType("Nano")
 JACK = _CharType("Jack")
 ARKUS = _CharType("Arkus")
