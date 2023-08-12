@@ -1,8 +1,10 @@
 from typing import List, Tuple
 from random import choice, seed
 from chargen import roll, yaml_importer, new_seed
+import yaml
 
-chartypes = yaml_importer('numenera_data\\classes_new.yaml')
+# chartypes = yaml_importer('numenera_data\\classes_new.yaml')
+chartypes = yaml.safe_load(open('numenera_data\\classes_new.yaml', 'rt'))
 chardescs = yaml_importer('numenera_data\\descriptor.yaml')
 charfoci = yaml_importer('numenera_data\\foci.yaml')
 

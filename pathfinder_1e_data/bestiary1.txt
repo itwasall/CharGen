@@ -5769,142 +5769,8 @@ Treasure NPC Gear (leather armor, light steel shield, rapier,
 hand crossbow with 20 bolts, drow poison [2 doses], 3d6 gp, 
 other treasure)
 SPECIAL ABILITIES
-Poison Use (Ex) Drow are skilled in the use of poison and never 
-risk accidentally poisoning themselves. Drow favor an insidious 
-toxin that causes its victims to lapse into unconsciousness—
-this poison allows drow to capture slaves with great ease. 
-Drow Poison—injury; save Fort DC 13; frequency 1/minute for 2 
-minutes; initial effect unconsciousness for 1 minute; secondary 
-effect unconsciousness for 2d4 hours; cure 1 save.
-Although related to the elves, the drow are a vile and evil 
-cousin at best. Sometimes called dark elves, these cunning 
-creatures prowl the caves and tunnels of the world below, 
-ruling vast subterranean cities through fear and might. 
-Worshiping demons and enslaving most races they 
-encounter, the drow are among the underworld’s most 
-feared and hated denizens.
-Drow are shorter and a bit more slender than their 
-surface-dwelling kin, but they are otherwise physically 
+Poison Use (Ex) Drow are skilled in the use of poison and never risk accidentally poisoning themselves. Drow favor an insidious toxin that causes its victims to lapse into unconsciousness— this poison allows drow to capture slaves with great ease.  Drow Poison—injury; save Fort DC 13; frequency 1/minute for 2 minutes; initial effect unconsciousness for 1 minute; secondary effect unconsciousness for 2d4 hours; cure 1 save.  Although related to the elves, the drow are a vile and evil cousin at best. Sometimes called dark elves, these cunning creatures prowl the caves and tunnels of the world below, ruling vast subterranean cities through fear and might. 
 
-Drow
-This dark-skinned elf stands in a battle-ready pose, her hair silver 
-and eyes white and pupilless.
-
-similar. Drow have dark skin, ranging from black to a hazy 
-purple hue. Most drow have white or silver hair and white 
-or red eyes, but other colors are not unheard of.
-Drow society is ruled over by powerful nobility, 
-themselves governed by sadistic and dangerous matriarchs 
-who constantly plot and scheme against rival houses and 
-lesser kin within their own families. The majority of drow 
-are the common soldiers and decadent citizenry, with base 
-stats as presented here—drow nobles are more powerful 
-and dangerous, and are detailed on the facing page.
-In combat, drow are thoroughly ruthless, with little 
-regard for fairness or mercy. They prefer to attack from 
-ambush or to lure enemies into situations where they 
-clearly have the upper hand. If things turn against them, 
-drow are quick to f lee, leaving slaves and minions to cover 
-their escape.
-Drow Characters
-Drow are defined by their class levels—they do not possess 
-racial Hit Dice. All drow have the following racial traits.
-+2 Dexterity, +2 Charisma, –2 Constitution: Drow are 
-nimble and manipulative.
-Medium: Drow are Medium creatures, and have no 
-bonuses or penalties due to their size.
-Normal Speed: Drow have a base speed of 30 feet.
-Darkvision: Drow can see in the dark up to 120 feet.
-Drow Immunities: Drow are immune to magic 
-sleep effects and get a +2 racial bonus to saves against 
-enchantment spells.
-Keen Senses: Drow receive a +2 racial bonus on 
-Perception checks.
-Spell Resistance: Drow possess spell resistance equal to 
-6 plus their class levels.
-Spell-Like Abilities: A drow can cast dancing lights, 
-darkness, and faerie fire each once per day, using his total 
-character level as his caster level.
-Light Blindness: Abrupt exposure to bright light blinds 
-drow for 1 round; on subsequent rounds, they are dazzled 
-as long as they remain in the affected area.
-Poison Use: See Special Abilities, above.
-Weapon Familiarity: Drow are proficient with the hand 
-crossbow, rapier, and short sword.
-Languages: Drow begin play speaking Elven and 
-Undercommon. Drow with high Intelligence can choose 
-bonus languages from the following: Abyssal, Aklo, Aquan, 
-Common, Draconic, Drow Sign Language, Gnome, or Goblin.
-Drow Nobility
-About one out of every 20 drow is gifted with special 
-powers from birth—the overwhelming majority of these 
-exceptional drow are female, and as a result, drow society 
-tends to be matriarchal in nature. These special births are 
-engineered and encouraged among the ruling caste, and are 
-
-114
-
-114
-
-Drow
-
-Drow
-
-far more likely to occur when the mother is of noble heritage. 
-Strangely, the status of the father seems not to increase or 
-decrease the chances of a child being born a drow noble. 
-Common drow children born to nobles are usually put 
-to death—sacrificed to one of the many demon gods to 
-whom the drow offer worship. It is rare for a drow noble 
-to be born to common parents, but those who are usually 
-murder their parents or family before they come of age in 
-order to hide the truth of their base upbringing and to ease 
-the processes of joining one of their society’s noble houses. 
-Drow nobles are more powerful than the majority of their 
-kin, and as such they quickly rise to power within their 
-houses. Advancement through the hierarchy of a drow noble 
-house is usually accomplished through a combination of 
-assassination, seduction, and treachery, leading most drow 
-in power to be overly paranoid.
-Drow Noble Characters
-Drow nobles are defined by their class levels—they do not 
-possess racial Hit Dice. A drow noble’s challenge rating 
-is equal to her class level. Drow nobles possess all 
-of the racial traits listed above for drow characters, 
-plus the following.
-+4 Dexterity, +2 Intelligence, 
-+2 Wisdom, +2 Charisma, –2 
-Constitution. Noble drow 
-are very agile, observant, 
-and regal. These ability 
-score modifiers replace the 
-standard drow ability score 
-modifiers.
-Spell Resistance: 
-Drow nobles have spell 
-resistance equal to 11 + 
-their character level.
-Spell-Like Abilities: 
-Drow nobles can cast 
-dancing lights, deeper 
-darkness, faerie 
-fire, feather fall, 
-and levitate 
-each at will, 
-and have detect 
-magic as a constant 
-spell-like ability. A 
-drow noble can also 
-cast divine favor, dispel 
-magic, and suggestion 
-once per day each. In 
-some cases, a drow noble’s 
-spell-like abilities might vary, 
-although the level of a particular spell-
-like ability does not. A drow noble’s 
-
-caster level for her spell-like abilities is equal to her 
-character level.
 DROW nOBLE CR 3
 XP 800
 Female drow noble cleric 3
@@ -5993,53 +5859,10 @@ Organization solitary, pair, or grove (3–8)
 Treasure standard (dagger, masterwork longbow with 20 
 arrows, other treasure)
 SPECIAL ABILITIES
-Tree Meld (Su) A dryad can meld with any tree, similar to how 
-the spell meld into stone functions. She can remain melded 
-with a tree as long as she wishes.
-Tree Dependent (Su) A dryad is mystically bonded to a single, 
-enormous tree and must never stray more than 300 yards 
-from it. Most dryad trees are oak trees, but other trees 
-function as well (often having subtle influences on a specific 
-dryad’s personality and appearance). A dryad who moves 
-300 yards beyond her bonded tree immediately becomes 
-sickened. Every hour thereafter, she must make a DC 15 
-Fortitude save to resist becoming nauseated for an hour. A 
-dryad that is out of range of her bonded tree for 24 hours 
-takes 1d6 points of Constitution damage, and another 1d6 
-points of Constitution damage every day that follows—
-
-This strange, beautiful woman has f lesh that seems made of 
-wood and vibrant hair that resembles leaves and blossoms.
-
-eventually, this separation kills the dryad. A dryad can forge 
-a new bond with a new tree by performing a 24-hour ritual 
-and making a successful DC 20 Will save.
-Wild Empathy (Su) This works like the druid’s wild empathy 
-class feature, except the dryad has a +6 racial bonus on the 
-check. Dryads with druid levels add this racial modifier to 
-their wild empathy checks. 
-Woodcraft (Ex) A dryad has a +6 racial bonus to Craft checks 
-involving wood, and is always treated as if she had masterwork 
-artisan’s woodworking tools when making such checks.
-Dryads are tree-fey who prefer secluded woodlands far 
-from humanoids in need of lumber. Dryads’ main interests 
-are their own survival and that of their beloved forests, and 
-they have been known to magically coerce passersby into 
-aiding them in tasks they cannot complete. They are more 
-likely to be friendly to non-evil druids and rangers, as they 
-recognize a mutual respect for or empathy with nature.
-Dryads are benign guardians of trees, and though they 
-can do little in the way of direct violence, they can trap and 
-disable threats to their homes or turn enemies into allies. 
-Some keep one or more charmed humanoids in their 
-territory to fend off or lead away attackers. Incapacitated 
-foes are typically dragged to the edge of the forest by the 
-dryad’s allies and left there, but evil or overtly hostile ones 
-are killed once combat is over.
-
-116
-
-116
+Tree Meld (Su) A dryad can meld with any tree, similar to how the spell meld into stone functions. She can remain melded with a tree as long as she wishes.
+Tree Dependent (Su) A dryad is mystically bonded to a single, enormous tree and must never stray more than 300 yards from it. Most dryad trees are oak trees, but other trees function as well (often having subtle influences on a specific dryad’s personality and appearance). A dryad who moves 300 yards beyond her bonded tree immediately becomes sickened. Every hour thereafter, she must make a DC 15 Fortitude save to resist becoming nauseated for an hour. A dryad that is out of range of her bonded tree for 24 hours takes 1d6 points of Constitution damage, and another 1d6 points of Constitution damage every day that follows— eventually, this separation kills the dryad. A dryad can forge a new bond with a new tree by performing a 24-hour ritual and making a successful DC 20 Will save.
+Wild Empathy (Su) This works like the druid’s wild empathy class feature, except the dryad has a +6 racial bonus on the check. Dryads with druid levels add this racial modifier to their wild empathy checks. 
+Woodcraft (Ex) A dryad has a +6 racial bonus to Craft checks involving wood, and is always treated as if she had masterwork artisan’s woodworking tools when making such checks.
 
 Duergar
 DUERgAR CR 1/3
@@ -6260,17 +6083,7 @@ Environment warm fresh water
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Electricity (Ex) An electric eel 
-can produce a powerful jolt of 
-electricity from its tail, delivering 
-the jolt with a successful touch attack. 
-On a critical hit, the creature struck must 
-make a DC 15 Fortitude save or be stunned for 1d4 
-rounds. The save DC is Constitution-based.
-The electric eel is a curious fish that breathes air instead 
-of water, yet certainly its most unusual characteristic 
-is its ability to generate powerful jolts of electricity. An 
-electric eel is 6 feet long and weighs 45 pounds.
+Electricity (Ex) An electric eel can produce a powerful jolt of electricity from its tail, delivering the jolt with a successful touch attack.  On a critical hit, the creature struck must make a DC 15 Fortitude save or be stunned for 1d4 rounds. The save DC is Constitution-based.
 Electric Eel Animal Companion
 Starting Statistics: Size Small; Speed 5 ft., swim 30 ft.; 
 Attack bite (1d6); Ability Scores Str 12, Dex 14, Con 18, Int 
@@ -6280,12 +6093,6 @@ vision, electricity resistance 5.
 Scores Dex +2, Con +2; Special Qualities electricity (1d6), 
 electricity resistance 10.
 
-Eel, Electric Eel, Giant Moray
-This six-foot-long, snake-like fish moves slowly. A strange popping 
-and snapping sound occasionally emits from the creature’s body.
-
-This sixteen-foot-long eel slithers through the water with uncanny 
-grace, mouth open to display large teeth and a second set of jaws.
 gIAnT MORAy EEL CR 5
 XP 1,600
 N Large animal (aquatic)
@@ -6315,16 +6122,7 @@ Environment warm oceans
 Organization solitary, pair, or nest (3–6)
 Treasure none
 SPECIAL ABILITIES
-gnaw (Ex) If a giant moray begins 
-a round with a grabbed foe, it 
-inflicts automatic bite damage 
-(2d6+9 points of damage). A giant 
-moray eel possesses a second set of jaws in its throat that 
-aid in swallowing—it can make a second bite attack (+11 
-attack, 1d6+4) against a foe it has already grabbed.
-The moray eel is a ferocious predator, capable of holding 
-prey in its primary jaws while a smaller set of jaws inside 
-its throat chews away bite-sized portions.
+gnaw (Ex) If a giant moray begins a round with a grabbed foe, it inflicts automatic bite damage (2d6+9 points of damage). A giant moray eel possesses a second set of jaws in its throat that aid in swallowing—it can make a second bite attack (+11 attack, 1d6+4) against a foe it has already grabbed.
 Moray Eel Animal Companion
 Starting Statistics: Size Medium; AC +5 natural armor; Speed 
 swim 30 ft.; Attack bite (1d8); Ability Scores Str 14, Dex 16, Con 
@@ -6345,8 +6143,8 @@ Environment Plane of Air
 Organization solitary, pair, or gang (3–8)
 Treasure none
 SPECIAL ABILITIES
-Air Mastery (Ex) Airborne creatures take a –1 penalty on attack 
-and damage rolls against an air elemental.
+Air Mastery (Ex) Airborne creatures take a –1 penalty on attack and damage rolls against an air elemental.
+
 SMALL AIR ELEMEnTAL                                             CR 1
 XP 400
 N Small outsider (air, elemental, extraplanar)
@@ -6525,22 +6323,9 @@ Environment any (Plane of Earth)
 Organization solitary, pair, or gang (3–8)
 Treasure none
 SPECIAL ABILITIES
-Earth glide (Ex) A burrowing earth elemental can pass through 
-stone, dirt, or almost any other sort of earth except metal as 
-easily as a fish swims through water. If protected against fire 
-damage, it can even glide through lava. Its burrowing leaves 
-behind no tunnel or hole, nor does it create any ripple or 
-other sign of its presence. A move earth spell cast on an area 
-containing a burrowing earth elemental flings the elemental 
-back 30 feet, stunning the creature for 1 round unless it 
-succeeds on a DC 15 Fortitude save.
-Earth Mastery (Ex) An earth elemental gains a +1 bonus on attack 
-and damage rolls if both it and its foe are touching the ground. 
-If an opponent is airborne or waterborne, the elemental takes a 
-–4 penalty on attack and damage rolls. These modifiers apply 
-to bull rush and overrun maneuvers, whether the elemental is 
-initiating or resisting these kinds of attacks. (These modifiers 
-are not included in the statistics block.)
+Earth glide (Ex) A burrowing earth elemental can pass through stone, dirt, or almost any other sort of earth except metal as easily as a fish swims through water. If protected against fire damage, it can even glide through lava. Its burrowing leaves behind no tunnel or hole, nor does it create any ripple or other sign of its presence. A move earth spell cast on an area containing a burrowing earth elemental flings the elemental back 30 feet, stunning the creature for 1 round unless it succeeds on a DC 15 Fortitude save.
+Earth Mastery (Ex) An earth elemental gains a +1 bonus on attack and damage rolls if both it and its foe are touching the ground.  If an opponent is airborne or waterborne, the elemental takes a –4 penalty on attack and damage rolls. These modifiers apply to bull rush and overrun maneuvers, whether the elemental is initiating or resisting these kinds of attacks. (These modifiers are not included in the statistics block.)
+
 SMALL EARTh ELEMEnTAL CR 1
 XP 400
 N Small outsider (earth, elemental, extraplanar)
@@ -6890,20 +6675,10 @@ Environment any (Plane of Water)
 Organization solitary, pair, or gang (3–8)
 Treasure none
 SPECIAL ABILITIES
-Drench (Ex) The elemental’s touch puts out nonmagical flames 
-of Large size or smaller. The creature can dispel magical fire 
-it touches as dispel magic (caster level equals elemental’s HD).
-Vortex (Su) A water elemental can create a whirlpool as a 
-standard action, at will. This ability functions identically to 
-the whirlwind special attack (see page 306), but can only 
-form underwater and cannot leave the water.
-Water Mastery (Ex) A water elemental gains a +1 bonus 
-on attack and damage rolls if both it and its opponent 
-are touching water. If the opponent or the elemental is 
-touching the ground, the elemental takes a –4 penalty on 
-attack and damage rolls. These modifiers apply to bull rush 
-and overrun maneuvers, whether the elemental is initiating 
-or resisting these kinds of attacks.
+Drench (Ex) The elemental’s touch puts out nonmagical flames of Large size or smaller. The creature can dispel magical fire it touches as dispel magic (caster level equals elemental’s HD).
+Vortex (Su) A water elemental can create a whirlpool as a standard action, at will. This ability functions identically to the whirlwind special attack (see page 306), but can only form underwater and cannot leave the water.
+Water Mastery (Ex) A water elemental gains a +1 bonus on attack and damage rolls if both it and its opponent are touching water. If the opponent or the elemental is touching the ground, the elemental takes a –4 penalty on attack and damage rolls. These modifiers apply to bull rush and overrun maneuvers, whether the elemental is initiating or resisting these kinds of attacks.
+
 SMALL WATER ELEMEnTAL                                       CR 1
 XP 400
 N Small outsider (elemental, extraplanar, water)
@@ -7189,56 +6964,9 @@ Organization solitary, pair, or nest (3–6 plus 2–8
 giant spiders)
 Treasure standard
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury; save Fort DC 15; 
-frequency 1/round for 10 rounds; effect 1d2 
-Dex; cure 2 consecutive saves. The save DC 
-is Constitution based.
-Spider Empathy (Ex) This ability functions 
-as the druid’s wild empathy, save that an 
-ettercap can only use this ability on spiders. An 
-ettercap gains a +4 racial bonus on this check. Spiders 
-are mindless, but this empathic communication imparts 
-on them a modicum of implanted intelligence, allowing 
-ettercaps to train giant spiders and use them as guardians.
-Traps (Ex) The ettercap is particularly skilled at crafting 
-cunning traps with its webs. Deadfalls, nooses, and spear 
-traps are the most common traps ettercaps build with 
-their webs. An ettercap doesn’t require gold to build its 
-traps, merely time. Rules for crafting traps can be found in 
-Chapter 13 of the Pathfinder RPG Core Rulebook.
-Ettercap Deadfall: CR 3; Type mechanical; Perception DC 20; 
-Disable Device DC 20; Trigger location; Reset repair; Effect +10 
-melee (4d6), multiple targets (all targets in a 10-ft. square).
-Ettercap noose: CR 1; Type mechanical; Perception DC 20; 
-Disable Device DC 20; Trigger location; Reset repair; 
-
-This hideous purple creature walks upright like a man, but its face 
-is that of a spider, and its hands are sickle-shaped claws.
-
-Effect +15 CMB check (grapple).
-Ettercap Spear Trap: CR 2; Type mechanical; Perception DC 
-20; Disable Device DC 20; Trigger location; Reset repair; 
-Effect +15 melee (1d6+6).
-Ettercaps are typically 6 feet tall and weigh about 200 
-pounds. They are solitary creatures and rarely group 
-with others of their kind, even to mate. When they do 
-group, they tend to attract a variety of different spiders, 
-forming a strange collective of ettercaps and arachnids. 
-Ettercaps are known for building cunning traps out of 
-webs and other natural materials, using them to trap prey. 
-They build shelters out of webbing, often high up in the 
-trees away from other ground-based predators, and use 
-monstrous spiders as lookouts and guardians.
-Ettercaps are not brave creatures, but their traps often 
-ensure that the enemy never draws a weapon. When an 
-ettercap does engage its enemies, it attacks with its claws 
-and venomous bite. It usually refuses to come within 
-melee reach of any foe that is still able to move, and f lees 
-if an opponent gets free. 
-
-129
-
-129
+Poison (Ex) Bite—injury; save Fort DC 15; frequency 1/round for 10 rounds; effect 1d2 Dex; cure 2 consecutive saves. The save DC is Constitution based.
+Spider Empathy (Ex) This ability functions as the druid’s wild empathy, save that an ettercap can only use this ability on spiders. An ettercap gains a +4 racial bonus on this check. Spiders are mindless, but this empathic communication imparts on them a modicum of implanted intelligence, allowing ettercaps to train giant spiders and use them as guardians.
+Traps (Ex) The ettercap is particularly skilled at crafting cunning traps with its webs. Deadfalls, nooses, and spear traps are the most common traps ettercaps build with their webs. An ettercap doesn’t require gold to build its traps, merely time. Rules for crafting traps can be found in Chapter 13 of the Pathfinder RPG Core Rulebook.  Ettercap Deadfall: CR 3; Type mechanical; Perception DC 20; Disable Device DC 20; Trigger location; Reset repair; Effect +10 melee (4d6), multiple targets (all targets in a 10-ft. square).  Ettercap noose: CR 1; Type mechanical; Perception DC 20; Disable Device DC 20; Trigger location; Reset repair; Effect +15 CMB check (grapple).  Ettercap Spear Trap: CR 2; Type mechanical; Perception DC 20; Disable Device DC 20; Trigger location; Reset repair; Effect +15 melee (1d6+6).
 
 ETTIn CR 6
 XP 2,400
@@ -7270,65 +6998,7 @@ brown bears), band (3–6 plus 1–2 brown bears), or colony
 (3–6 plus 1–2 brown bears and 7–12 orcs or 9–16 goblins)
 Treasure standard (leather armor, 2 flails, 4 javelins, other treasure)
 SPECIAL ABILITIES
-Superior Two-Weapon fighting (Ex) An ettin fights with a 
-flail or javelin in each hand. Because each of its two heads 
-controls an arm, the ettin does not take a penalty on attack 
-or damage rolls for attacking with two weapons.
-Ettins, or two-headed giants, are vicious and unpredictable 
-hunters that stalk the night. Their two heads provide them 
-with unparalleled powers of perception, making them 
-excellent guards.
-Ettins superficially resemble hill or stone giants, 
-although their tusked facial features betray orc blood in 
-their lineage. They have pinkish-brown skin, but ettins 
-never bathe if they can help it, which usually leaves them 
-so grimy and dirty their skin resembles thick, gray 
-hide. Adult ettins are about 13 feet tall and weigh 5,200 
-pounds. They live about 75 years.
-Ettins have no language of their own but speak a pidgin 
-of Giant, Goblin, and Orc. Creatures that can speak any 
-
-of these languages must succeed on a DC 15 Intelligence 
-check to communicate with an ettin. Check once for each 
-bit of information: if the other creature speaks two of these 
-languages, the DC is 10, and for someone who speaks all 
-three, the DC is 5. 
-Though ettins aren’t very intelligent, they are cunning 
-fighters. They prefer to ambush their victims rather than 
-charge into a fight, but once the battle has started, an ettin 
-fights furiously until all enemies are dead.
-Ettins lead solitary lives, establishing lairs in secluded 
-rocky caves and hollows, often surrounded by pits and 
-trenches. Ettins sometimes keep cave bears as pets and 
-guardians for their lairs.
-A particularly powerful ettin may attract a gang of a few 
-followers, possibly with several goblin or orc allies. Such 
-gatherings are the exception rather than the rule, however, 
-and seldom last long, with individual ettins going their 
-separate ways when opportunities for pillage and plunder 
-decrease or if the leader is killed.
-Mated couples usually come 
-together to breed for only a short 
-time before going off on their 
-own again. Young ettins 
-mature quickly, reaching 
-adult size within a year, 
-when they are kicked 
-out to fend for 
-themselves.
-
-This lumbering, filthy, two-headed giant wears tattered remnants 
-of leather armor and clutches a large f lail in each fist.
-
-130
-
-130
-
-Ettin
-
-EEtttin–Familiar
-
-tin–Familiar
+Superior Two-Weapon fighting (Ex) An ettin fights with a flail or javelin in each hand. Because each of its two heads controls an arm, the ettin does not take a penalty on attack or damage rolls for attacking with two weapons.
 
 Familiar
 Presented here are the base animal statistics for all of the 
@@ -7592,10 +7262,8 @@ Environment any temperate and warm
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury; save Fort DC 9; frequency 1/round for 
-6 rounds; effect 1d2 Con; cure 1 save.
-Vipers are not particularly aggressive snakes, but their 
-poisonous bite can be deadly.
+Poison (Ex) Bite—injury; save Fort DC 9; frequency 1/round for 6 rounds; effect 1d2 Con; cure 1 save.
+
 WEASEL CR 1/2
 XP 200
 N Tiny animal 
@@ -7619,12 +7287,7 @@ Environment temperate hills
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Attach (Ex) When a weasel hits with a bite attack, it automatically 
-grapples its foe, inflicting automatic bite damage each round.
-Weasels are predators content with raiding chicken coops 
-or attacking pets when they encounter civilization. 133
-
-133
+Attach (Ex) When a weasel hits with a bite attack, it automatically grapples its foe, inflicting automatic bite damage each round.  Weasels are predators content with raiding chicken coops or attacking pets when they encounter civilization. 133
 
 Flytrap, Giant
 gIAnT fLyTRAP CR 10
@@ -10509,58 +10172,10 @@ Environment any ocean
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Ink Cloud (Ex) A kraken can emit a cloud of black, 
-venomous ink in an 80-foot spread once per 
-minute as a free action while underwater. This 
-cloud provides total concealment, which the 
-kraken can use to escape a fight that is going 
-badly. Creatures within the cloud are considered to 
-be in darkness. In addition, the ink is toxic, functioning 
-as contact poison against all creatures caught within it. 
-The ink cloud persists for 1 minute before 
-dispersing. The save DC against the poison 
-effect is Constitution-based. 
-Kraken Ink: Ink cloud—contact; save Fort 
-DC 29; frequency 1/round for 10 rounds; effect 1 
-Str damage plus nausea; cure 2 consecutive saves.
-
-This tremendous leviathan resembles a vast squid, yet the 
-markings on its body are strangely unsettling to look upon.
-
-jet (Ex) A kraken can jet backward as a full-round action, at a 
-speed of 280 feet. It must move in a straight line, but does 
-not provoke attacks of opportunity while jetting.
-Rend Ship (Ex) As a full-round action, a kraken can attempt 
-to use four of its tentacles to grapple a ship of its size 
-or smaller. It makes a CMB check opposed by the ship’s 
-captain’s Profession (sailor) check, but the kraken gets a 
-cumulative +4 bonus on the check for each size category 
-smaller than Gargantuan the ship is. If the kraken 
-grapples the ship, it holds the ship motionless; it can 
-attack targets anywhere on or within the ship with its 
-tentacles, but can only attack foes on deck with its free 
-arms and can’t attack foes at all with its beak. Each round 
-it maintains its hold on the ship, it automatically inflicts 
-bite damage on the ship’s hull.
-Tenacious grapple (Ex) A kraken does not gain the grappled 
-condition if it grapples a foe with its arms or tentacles.
-The legendary kraken is one of the greatest of sailors’ 
-fears, for here is a creature the size of a whale, one that 
-can strike from the unseen depths below, can command 
-the winds and weather that a ship needs to move, and 
-possesses the cruel intellect of the world’s most creative 
-and spiteful criminals. Some believe krakens to 
-be a punishment of the gods, while others 
-hold them to be the true lords of the deep, 
-with the air-breathing races naught but 
-their cattle.
-A kraken measures nearly 100 
-feet in length and weighs 
-4,000 pounds.
-
-184
-
-184
+Ink Cloud (Ex) A kraken can emit a cloud of black, venomous ink in an 80-foot spread once per minute as a free action while underwater. This cloud provides total concealment, which the kraken can use to escape a fight that is going badly. Creatures within the cloud are considered to be in darkness. In addition, the ink is toxic, functioning as contact poison against all creatures caught within it.  The ink cloud persists for 1 minute before dispersing. The save DC against the poison effect is Constitution-based.  Kraken Ink: Ink cloud—contact; save Fort DC 29; frequency 1/round for 10 rounds; effect 1 Str damage plus nausea; cure 2 consecutive saves.
+jet (Ex) A kraken can jet backward as a full-round action, at a speed of 280 feet. It must move in a straight line, but does not provoke attacks of opportunity while jetting.
+Rend Ship (Ex) As a full-round action, a kraken can attempt to use four of its tentacles to grapple a ship of its size or smaller. It makes a CMB check opposed by the ship’s captain’s Profession (sailor) check, but the kraken gets a cumulative +4 bonus on the check for each size category smaller than Gargantuan the ship is. If the kraken grapples the ship, it holds the ship motionless; it can attack targets anywhere on or within the ship with its tentacles, but can only attack foes on deck with its free arms and can’t attack foes at all with its beak. Each round it maintains its hold on the ship, it automatically inflicts bite damage on the ship’s hull.
+Tenacious grapple (Ex) A kraken does not gain the grappled condition if it grapples a foe with its arms or tentacles.
 
 Kyton
 kyTOn CR 6
@@ -10597,80 +10212,8 @@ Organization solitary, pair, link (3–6), or
 chain (7–20)
 Treasure standard
 SPECIAL ABILITIES
-Chain Armor (Ex) The chains that adorn 
-a kyton grant it a +4 armor bonus, 
-but are not treated as armor for the 
-purpose of arcane spell failure, armor 
-check penalties, maximum Dexterity, 
-weight, or proficiency.
-Dancing Chains (Su) A kyton can control 
-up to four chains within 20 feet as a 
-standard action, making the chains dance 
-or move as it wishes. In addition, a kyton 
-can increase these chains’ length by up to 15 feet 
-and cause them to sprout razor-edged barbs. These 
-chains attack as effectively as the kyton itself. If 
-a chain is in another creature’s possession, the 
-
-Wickedly barbed chains adorn this lean figure, and gaps in the 
-bindings reveal deathly pale f lesh etched with jagged scars.
-
-KKrraakkeenn––KKyyttoonn
-
-creature can attempt a DC 15 Will save to break the kyton’s 
-power over that chain. If the save is successful, the kyton 
-cannot attempt to control that particular chain again for 24 
-hours or until the chain leaves the creature’s possession. A 
-kyton can climb chains it controls at its normal speed without 
-making Climb checks. The save DC is Charisma-based.
-Unnerving gaze (Su) Range 30 ft., Will DC 15 negates. A kyton 
-can make its face resemble one of an opponent’s departed 
-loved ones or bitter enemies. Those who fail their saves 
-become shaken for 1d3 rounds. This is a mind-affecting fear 
-effect. The save DC is Charisma-based.
-Often classified among the ranks of the infernal and called 
-chain devils by the uninitiated, the sadomasochistic 
-kytons are not true devils. Although some 
-are known to live in Hell, kytons 
-exist outside of the hierarchies 
-established by Asmodeus and his 
-archdevils and can often be found 
-on other planes, particularly 
-on the Plane of Shadow. Many 
-suggest that kytons were natives 
-of Hell who existed there before 
-the advent of devilkind, while 
-others hypothesize they were 
-later brought to the plane by some 
-sadistic power. Regardless of their 
-origins, kytons roam the planes 
-in their lust to cause and receive 
-suffering, seeking pain through 
-violent abductions and sadistic 
-debauches.
-The kyton presented here is a 
-typical member of this fiendish race 
-of outsiders, but is by no means the 
-only type of its kind. Just as there 
-are numerous different species of 
-demon and devil, rumor holds that 
-different kinds of kytons dwell in their 
-jangling cities in Hell and on the Plane 
-of Shadow. These kytons are invariably 
-more powerful than the one presented 
-here, often having spell-like abilities or 
-hideous and unsettling special attacks 
-along the themes of torture and pain. 
-Rumor holds that the most powerful 
-kytons are completely inhuman, 
-and that these monsters are the 
-true progenators of the kyton 
-race—the kyton presented 
-here but the result of unholy 
-dalliances with their 
-unfortunate victims. 185
-
-185
+Chain Armor (Ex) The chains that adorn a kyton grant it a +4 armor bonus, but are not treated as armor for the purpose of arcane spell failure, armor check penalties, maximum Dexterity, weight, or proficiency.
+Dancing Chains (Su) A kyton can control up to four chains within 20 feet as a standard action, making the chains dance or move as it wishes. In addition, a kyton can increase these chains’ length by up to 15 feet and cause them to sprout razor-edged barbs. These chains attack as effectively as the kyton itself. If a chain is in another creature’s possession, the 
 
 Lamia
 LAMIA CR 6
@@ -10706,50 +10249,8 @@ Environment temperate deserts
 Organization solitary, pair, or cult (3–12)
 Treasure double (+1 dagger, other treasure)
 SPECIAL ABILITIES
-Undersized Weapons (Ex) Although a lamia is Large, 
-its upper torso is the same size as that of a Medium 
-humanoid. As a result, lamias wield weapons as if they 
-were one size category smaller than their actual size 
-(Medium for most lamias).
-Wisdom Drain (Su) A lamia drains 1d4 points of Wisdom 
-each time it hits with its melee touch attack. (Unlike with 
-other kinds of ability drain attacks, a lamia does not heal 
-any damage when it uses its Wisdom drain.) Lamias try to 
-use this power early in an encounter to make foes more 
-susceptible to charm monster and suggestion.
-The hate-filled inheritors of an ancient curse, lamias 
-appear as lean and attractive women from the waist up, 
-while below they possess the bodies of powerful lions. Even 
-
-their humanoid features bear distinctly feline traits, their 
-eyes slitted and feral and their teeth like predatory fangs. 
-A typical lamia stands over 6 feet tall, measures more than 
-8 feet long, and weighs upward of 650 pounds.
-Lamias are attracted to the ruined and forsaken parts of 
-the world. Crumbling keeps, abandoned cities, and forgotten 
-monuments all satisfy these deadly hunters’ cruel aesthetic—
-particularly those in arid or otherwise lifeless environs. 
-Foremost, though, lamias favor decrepit temples. They 
-delight in seeing the shrines of good deities in ruins and go 
-out of their way to bring hardship to thriving holy places.
-Lamias look to the eldest female of the group as their 
-leader, mother, and shaman, cleaving to her with fanatical 
-reverence. While lamias shun most religious followings—
-viewing such as the source of the curse that blighted 
-them with bestial forms—lamia elders claim to hear the 
-whispers of the scouring desert winds and know the cold 
-whims of the stars, drawing upon such mystical sources to 
-lead their people.
-The lamias presented here are but the most common and 
-least powerful members of this cursed race, with others 
-bearing serpentine, avian, and even more perverse forms.
-
-This creature’s upper torso is that of a comely woman with cat’s 
-eyes and sharp fangs, while her lower body is that of a lion.
-
-186
-
-186
+Undersized Weapons (Ex) Although a lamia is Large, its upper torso is the same size as that of a Medium humanoid. As a result, lamias wield weapons as if they were one size category smaller than their actual size (Medium for most lamias).
+Wisdom Drain (Su) A lamia drains 1d4 points of Wisdom each time it hits with its melee touch attack. (Unlike with other kinds of ability drain attacks, a lamia does not heal any damage when it uses its Wisdom drain.) Lamias try to use this power early in an encounter to make foes more susceptible to charm monster and suggestion.
 
 Leech, Giant Leech Swarm
 gIAnT LEECh CR 2
@@ -10777,28 +10278,9 @@ Environment temperate or warm marshes
 Organization cluster, pair, or brood (3–6)
 Treasure none
 SPECIAL ABILITIES
-Attach (Ex) When a giant leech hits with a bite attack, 
-it latches onto its target and automatically 
-grapplies. The giant leech loses its Dexterity 
-bonus to AC and has an AC of 10, but 
-holds on with great tenacity and 
-automatically inflicts bite damage each 
-round. A giant leech has a +8 racial 
-bonus to maintain its grapple on a foe 
-once it is attached. An attached giant 
-leech can be struck with a weapon or 
-grappled itself—if its prey manages to 
-win a grapple check or Escape Artist check 
-against it, the giant leech is removed.
-Blood Drain (Ex) A giant leech drains blood at the 
-end of each turn it is attached, inflicting 1 point 
-of Strength and Constitution damage.
-Susceptible to Salt (Ex) A handful of salt burns 
-a giant leech as if it were a flask of acid, 
-causing 1d6 points of damage per use.
-These invertebrate parasitic relatives of the 
-worm lurk in stagnant or slow-moving water, 
-waiting for a suitable host.
+Attach (Ex) When a giant leech hits with a bite attack, it latches onto its target and automatically grapplies. The giant leech loses its Dexterity bonus to AC and has an AC of 10, but holds on with great tenacity and automatically inflicts bite damage each round. A giant leech has a +8 racial bonus to maintain its grapple on a foe once it is attached. An attached giant leech can be struck with a weapon or grappled itself—if its prey manages to win a grapple check or Escape Artist check against it, the giant leech is removed.
+Blood Drain (Ex) A giant leech drains blood at the end of each turn it is attached, inflicting 1 point of Strength and Constitution damage.
+Susceptible to Salt (Ex) A handful of salt burns a giant leech as if it were a flask of acid, causing 1d6 points of damage per use.
 
 LEECh SWARM CR 4
 XP 1,200
@@ -10825,30 +10307,8 @@ Environment temperate or warm marshes
 Organization solitary, pair, or infestation (3–6 swarms)
 Treasure none
 SPECIAL ABILITIES
-Blood Drain (Ex) Any living creature that begins its turn 
-with a leech swarm in its space is drained of its blood 
-and takes 1d3 points of Str and Con damage.
-Poison (Ex) Swarm—injury; save Fort DC 15; 
-frequency 1/round for 2 rounds; effect 1d4 
-Dexterity drain; cure 1 save.
-This horrifying cloud of ravenous, 
-blood-draining parasites eschews the 
-stealth of a lone leech’s methods in 
-favor of swift and merciless feeding.
-
-A parasite ballooned to monstrous proportions undulates in the 
-muck, its circular maw a spiral of teeth.
-
-A mass of wriggling black creatures each the size of a man’s finger 
-stirs the stagnant water before enveloping its victim.
-
-LLaammiiaa––Leech
-
-Leech
-
-187
-
-187
+Blood Drain (Ex) Any living creature that begins its turn with a leech swarm in its space is drained of its blood and takes 1d3 points of Str and Con damage.
+Poison (Ex) Swarm—injury; save Fort DC 15; frequency 1/round for 2 rounds; effect 1d4 Dexterity drain; cure 1 save.
 
 Lich
 LICh CR 12
@@ -11066,56 +10526,11 @@ Environment cold hills
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Breath Weapon (Su) Once every 1d4 rounds as a 
-standard action, a crag linnorm can expel a 120-foot line of 
-magma, dealing 15d8 points of fire damage to all creatures 
-struck (Reflex DC 24 halves). This line of magma remains 
-red-hot for 1 round after the linnorm creates it. Creatures 
-that took damage on the first round take 6d6 fire damage 
-the second round (Reflex DC 24 negates), as does any 
-creature that walks across the line of magma. If 
-the magma was expelled while the linnorm was 
-airborne, it instead rains downward during 
-the second round as a sheet of fire no more 
-than 60 feet high that does 6d6 damage 
-(Reflex DC 24 negates) to any creature that 
-passes through it. On the third round, the line 
-of magma cools to a thin layer of brittle stone 
-that quickly degrades to powder and sand over the course 
-
-of several hours; magma that’s turned to a sheet of fire is 
-consumed entirely during the second round, leaving behind 
-only a stain of smoke in the air that swiftly disperses. The 
-save DC is Constitution-based.
-Death Curse (Su) When a creature slays a crag linnorm, the 
-slayer is affected by the curse of fire. 
-Curse of Fire: save Will DC 22; effect creature gains 
-vulnerability to fire. The save DC is Charisma-based.
-freedom of Movement (Ex) A crag linnorm is under the 
-constant effect of freedom of movement, as per the spell of 
-the same name. This effect cannot be dispelled.
-Poison (Su) Bite—injury; save Fort DC 24; frequency 1/round for 
-10 rounds; effect 2d6 fire damage and 1d4 Con drain; cure 2 
-consecutive saves. The save DC is Constitution-based.
-True Seeing (Ex) A crag linnorm has constant true seeing, as 
-per the spell of the same name.
-Like all linnorms, the deadly crag linnorm is a powerful, 
-primeval dragon, a denizen of the wild regions far north of 
-where most civilizations dare to tread. The crag linnorm 
-is among the weakest of its kind, yet still a devastating 
-predator in its own right. Favored, if not by the gods, 
-then by some primal intelligence of the mysterious world 
-of the fey, the linnorm bestows a powerful curse on any 
-who manage to slay it. A crag linnorm is 60 feet long and 
-weighs 12,000 pounds.
-
-Linnorm, Crag
-This immense, wingless dragon rears up on a serpentine body. Its 
-triple tail and powerful talons swipe at the air.
-
-190
-
-190
+Breath Weapon (Su) Once every 1d4 rounds as a standard action, a crag linnorm can expel a 120-foot line of magma, dealing 15d8 points of fire damage to all creatures struck (Reflex DC 24 halves). This line of magma remains red-hot for 1 round after the linnorm creates it. Creatures that took damage on the first round take 6d6 fire damage the second round (Reflex DC 24 negates), as does any creature that walks across the line of magma. If the magma was expelled while the linnorm was airborne, it instead rains downward during the second round as a sheet of fire no more than 60 feet high that does 6d6 damage (Reflex DC 24 negates) to any creature that passes through it. On the third round, the line of magma cools to a thin layer of brittle stone that quickly degrades to powder and sand over the course of several hours; magma that’s turned to a sheet of fire is consumed entirely during the second round, leaving behind only a stain of smoke in the air that swiftly disperses. The save DC is Constitution-based.
+Death Curse (Su) When a creature slays a crag linnorm, the slayer is affected by the curse of fire.  Curse of Fire: save Will DC 22; effect creature gains vulnerability to fire. The save DC is Charisma-based.
+freedom of Movement (Ex) A crag linnorm is under the constant effect of freedom of movement, as per the spell of the same name. This effect cannot be dispelled.
+Poison (Su) Bite—injury; save Fort DC 24; frequency 1/round for 10 rounds; effect 2d6 fire damage and 1d4 Con drain; cure 2 consecutive saves. The save DC is Constitution-based.
+True Seeing (Ex) A crag linnorm has constant true seeing, as per the spell of the same name.
 
 Linnorm, Ice
 ICE LInnORM CR 17
@@ -11151,58 +10566,11 @@ Environment cold hills and mountains
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-Breath Weapon (Su) Once every 1d4 rounds as a standard 
-action, an ice linnorm can expel a 60-foot cone of freezing, 
-viscous ooze, dealing 18d8 points of cold damage to all 
-creatures struck (Reflex DC 28 halves). The freezing ooze 
-clings to those struck, and 1 round later the ooze 
-hardens into thick sheets of ice. Creatures that 
-were damaged are frozen motionless unless they 
-can break free with a DC 25 Strength, Escape Artist, 
-or combat maneuver check.  Each round a creature 
-remains frozen it takes 1d6 points of cold damage. 
-Another creature can free a frozen target by tearing 
-away the ice (this takes 1d4 rounds) or dealing at 
-least 20 points of fire damage to the frozen target. Left 
-unattended, the ice crumbles away in 2d4 rounds on its 
-own. Creatures with the fire subtype cannot be frozen in 
-
-place by this breath weapon. Flying creatures that don’t have 
-supernatural flight fall if frozen, and swimming creatures that 
-are frozen rise toward the surface of the water at a speed of 
-60 feetper round. The save DC is Constitution-based.
-Death Curse (Su) When a creature slays an ice linnorm, the 
-slayer is affected by the curse of frost. 
-Curse of Frost: save Will DC 25; effect creature gains 
-vulnerability to cold. The save DC is Charisma-based.
-freedom of Movement (Ex) An ice linnorm is under the 
-constant effect of freedom of movement, as per the spell of 
-the same name. This effect cannot be dispelled.
-Poison (Su) Bite—injury; save Fort DC 28; frequency 1/round for 
-10 rounds; effect 4d6 cold damage and 1d6 Con drain; cure 3 
-consecutive saves. The save DC is Constitution-based.
-True Seeing (Ex) An ice linnorm has true seeing, as the spell of 
-the same name. This effect cannot be dispelled.
-The ice linnorm dwells amid glacial crevasses and atop 
-wind-blasted mountain peaks—tales speak of climbers 
-unwittingly clambering over the flanks of a particularly 
-immense ice linnorm coiled around a mountain, only to 
-find death at its furious fangs and claws at the summit of 
-their goal. During the fiercest winters, ice linnorms are 
-said to slither down to the lowlands to eat entire villages.
-An ice linnorm is 90 feet long and 
-weighs 18,000 pounds.
-
-A snake-like, dragon-headed monster of tremendous size rises up, 
-drifts of snow and ice tumbling from its coiling f lanks.
-
-Linnorm, Crag–Linnorm, Ice
-
-Linnorm, Crag–Linnorm, Ice
-
-191
-
-191
+Breath Weapon (Su) Once every 1d4 rounds as a standard action, an ice linnorm can expel a 60-foot cone of freezing, viscous ooze, dealing 18d8 points of cold damage to all creatures struck (Reflex DC 28 halves). The freezing ooze clings to those struck, and 1 round later the ooze hardens into thick sheets of ice. Creatures that were damaged are frozen motionless unless they can break free with a DC 25 Strength, Escape Artist, or combat maneuver check.  Each round a creature remains frozen it takes 1d6 points of cold damage.  Another creature can free a frozen target by tearing away the ice (this takes 1d4 rounds) or dealing at least 20 points of fire damage to the frozen target. Left unattended, the ice crumbles away in 2d4 rounds on its own. Creatures with the fire subtype cannot be frozen in place by this breath weapon. Flying creatures that don’t have supernatural flight fall if frozen, and swimming creatures that are frozen rise toward the surface of the water at a speed of 60 feetper round. The save DC is Constitution-based.
+Death Curse (Su) When a creature slays an ice linnorm, the slayer is affected by the curse of frost.  Curse of Frost: save Will DC 25; effect creature gains vulnerability to cold. The save DC is Charisma-based.
+freedom of Movement (Ex) An ice linnorm is under the constant effect of freedom of movement, as per the spell of the same name. This effect cannot be dispelled.
+Poison (Su) Bite—injury; save Fort DC 28; frequency 1/round for 10 rounds; effect 4d6 cold damage and 1d6 Con drain; cure 3 consecutive saves. The save DC is Constitution-based.
+True Seeing (Ex) An ice linnorm has true seeing, as the spell of the same name. This effect cannot be dispelled.
 
 Linnorm, Tarn
 This nightmarishly huge, snake-like dragon possesses two equally 
@@ -11241,49 +10609,12 @@ Environment cold lakes and swamps
 Organization solitary
 Treasure triple
 SPECIAL ABILITIES
-All-Around Vision (Ex) A tarn linnorm’s two heads grant it a 
-+8 racial bonus on Perception checks. It cannot be flanked.
-Breath Weapon (Su) Once every 1d4 rounds as a standard 
-action, a tarn linnorm can expel a 120-foot line or a 60-foot 
-cone of acid, dealing 22d8 points of acid damage to all 
-creatures struck (Reflex DC 32 halves). This acid creates 
-toxic fumes when it consumes organic material—on the 
-round after a creature takes acid damage from this 
-attack, it must make a DC 32 Fortitude save or take 
-2d6 points of Strength damage from the poisonous 
-fumes (this secondary effect is a poison effect). As a 
-full-round action, the linnorm may breathe acid with 
-one head and bite with the other (but not use its other 
-weapons). Alternatively, as a full-round action, it can 
-
-breathe acid from both heads to create two adjacent 60-foot-
-long cones or two separate 120-foot-long lines. In this case it 
-cannot use its breath weapon again for 2d4 rounds. The save 
-DC is Constitution-based.
-Death Curse (Su) When a creature slays a tarn linnorm, the 
-slayer is affected by the curse of death. 
-Curse of Death: save Will DC 29; effect creature can no longer 
-be affected by healing spells and does not heal damage 
-naturally from rest. The save DC is Charisma-based.
-freedom of Movement (Ex) A tarn linnorm is under the 
-constant effect of freedom of movement, as the spell of the 
-same name. This effect cannot be dispelled.
-Poison (Su) Bite—injury; save Fort DC 32; frequency 1/round for 
-10 rounds; effect 6d6 acid damage and 1d8 Con drain; cure 3 
-consecutive saves. The save DC is Constitutuion-based.
-True Seeing (Ex) A tarn linnorm has true seeing, as the spell of 
-the same name. This effect cannot be dispelled.
-Although legends speak of even more powerful linnorms, it’s 
-hard to believe after witnessing the devastation a two-headed 
-tarn linnorm can wreak. Content to slumber away the centuries 
-at the bottom of dark mountain lakes, the tarn linnorms are 
-true horrors that even the mightiest of heroes fear.
-A tarn linnorm is 120 feet long and weighs 24,000 
-pounds.
-
-192
-
-192
+All-Around Vision (Ex) A tarn linnorm’s two heads grant it a +8 racial bonus on Perception checks. It cannot be flanked.
+Breath Weapon (Su) Once every 1d4 rounds as a standard action, a tarn linnorm can expel a 120-foot line or a 60-foot cone of acid, dealing 22d8 points of acid damage to all creatures struck (Reflex DC 32 halves). This acid creates toxic fumes when it consumes organic material—on the round after a creature takes acid damage from this attack, it must make a DC 32 Fortitude save or take 2d6 points of Strength damage from the poisonous fumes (this secondary effect is a poison effect). As a full-round action, the linnorm may breathe acid with one head and bite with the other (but not use its other weapons). Alternatively, as a full-round action, it can breathe acid from both heads to create two adjacent 60-foot- long cones or two separate 120-foot-long lines. In this case it cannot use its breath weapon again for 2d4 rounds. The save DC is Constitution-based.
+Death Curse (Su) When a creature slays a tarn linnorm, the slayer is affected by the curse of death.  Curse of Death: save Will DC 29; effect creature can no longer be affected by healing spells and does not heal damage naturally from rest. The save DC is Charisma-based.
+freedom of Movement (Ex) A tarn linnorm is under the constant effect of freedom of movement, as the spell of the same name. This effect cannot be dispelled.
+Poison (Su) Bite—injury; save Fort DC 32; frequency 1/round for 10 rounds; effect 6d6 acid damage and 1d8 Con drain; cure 3 consecutive saves. The save DC is Constitutuion-based.
+True Seeing (Ex) A tarn linnorm has true seeing, as the spell of the same name. This effect cannot be dispelled.  Although legends speak of even more powerful linnorms, it’s hard to believe after witnessing the devastation a two-headed tarn linnorm can wreak. Content to slumber away the centuries at the bottom of dark mountain lakes, the tarn linnorms are true horrors that even the mightiest of heroes fear.
 
 LIOn CR 3
 XP 800
@@ -11419,30 +10750,7 @@ Environment warm forests or plains
 Organization solitary, pair, or pack (3–8)
 Treasure none
 SPECIAL ABILITIES
-Poison (Su) Bite—injury; save Fort DC 14; onset 1 minute; 
-frequency 1/hour for 6 hours; effect 1d2 Dexterity damage; 
-cure 1 save. The save DC is Constitution-based.
-Monitor lizards are large enough to pose a threat to humans, 
-and in some societies are often mistaken for dragons. 
-Some can reach lengths of 10 feet or more 
-and weights of 350 pounds.
-Monitor Lizard 
-Companions
-Starting Statistics: 
-Size Small; Speed 30 
-ft., swim 30 ft.; AC 
-+1 natural armor; 
-Attack bite (1d6 plus 
-grab); Ability Scores 
-Str 13, Dex 17, Con 
-12, Int 2, Wis 12, Cha 
-6; Special Qualities low-
-light vision, scent.
-7th-Level Advancement: 
-Size Medium; AC +2 natural 
-armor; Attack bite (1d8 plus grab and 
-poison); Ability Scores Str +4, 
-Dex –2, Con +4.
+Poison (Su) Bite—injury; save Fort DC 14; onset 1 minute; frequency 1/hour for 6 hours; effect 1d2 Dexterity damage; cure 1 save. The save DC is Constitution-based.
 
 gIAnT fRILLED LIzARD CR 5
 XP 1,600
@@ -11469,38 +10777,7 @@ Environment warm forest, plains, or hills
 Organization solitary, pair, or pack (3–8)
 Treasure none
 SPECIAL ABILITIES
-Intimidating Charge (Ex) When a giant frilled lizard charges, it 
-hisses ferociously, extends its neck frills, and darts forward 
-on its hind legs, increasing its base speed 
-to 50 feet for that round. In addition 
-to the normal effects of a 
-charge, the creature charged 
-must make a DC 13 
-Will save or be shaken 
-for 1d6 rounds. This 
-is a fear effect. 
-The save DC is 
-Charisma-based.
-This lizard is a 
-true behemoth—
-an apex predator 
-found in tropical regions. 
-Many species of giant lizard 
-exist—other species lack this lizard’s 
-intimidating charge special ability 
-but might have other special attacks 
-like grab, trip, constrict (with a bite), 
-or pounce.
-
-This immense lizard moves with a slow but relentless gait. Its feet 
-end in large talons, and ropes of drool hang from its toothy maw.
-
-This bright-eyed lizard is larger than a horse. As it hisses in anger, 
-a brightly colored frill extends around its neck.
-
-194
-
-194
+Intimidating Charge (Ex) When a giant frilled lizard charges, it hisses ferociously, extends its neck frills, and darts forward on its hind legs, increasing its base speed to 50 feet for that round. In addition to the normal effects of a charge, the creature charged must make a DC 13 Will save or be shaken for 1d6 rounds. This is a fear effect.  The save DC is Charisma-based.
 
 Lizardfolk
 LIzARDfOLk CR 1
@@ -11531,168 +10808,7 @@ Organization solitary, pair, band (3–12), or tribe (13–60)
 Treasure NPC gear (heavy wooden shield, morningstar, 3 
 javelins)
 SPECIAL ABILITIES
-hold Breath (Ex) A lizardfolk can hold its breath for a number 
-of rounds equal to 4 times its Constitution score before it 
-risks drowning.
-Lizardfolk are proud and powerful reptilian predators 
-that make their communal homes in scattered villages 
-deep within swamps and marshes. Uninterested in 
-colonization of the dry lands and content with the simple 
-weapons and rituals that have served them well for 
-millennia, lizardfolk are viewed by many other races as 
-backwater savages, but within their isolated communities 
-lizardfolk are actually a vibrant people filled with 
-tradition and an oral history stretching back to before 
-humans walked upright.
-Most lizardfolk stand 6 to 7 feet tall and weigh 200 to 
-250 pounds, their powerful muscles covered in scales of 
-gray, green, or brown. Some breeds have short dorsal 
-spikes or brightly colored frills, and all swim 
-well by moving with f licks of their powerful 
-4-foot-long tails. While completely at home in 
-
-the water, they breathe air and return to their clustered 
-mound-dwellings to breed and sleep. As their reptilian 
-blood makes them sluggish in the cold, most lizardfolk 
-hunt and work during the day and retreat to their homes 
-at night to curl up with other tribesmen in the shared 
-warmth of large peat fires.
-Though generally neutral, lizardfolks’ standoffish 
-demeanor, staunch rejection of civilization’s “gifts,” 
-and legendary ferocity in battle cause them to be viewed 
-negatively by most humanoids. These traits stem 
-from good reasons, however, as their own slow rate of 
-reproduction is no match for warm-blooded humanoids, 
-and those tribes who don’t defend their wetland territories 
-to the last breath quickly find themselves overwhelmed 
-by the mammalian hordes. As for their tendency to 
-consume the bodies of dead friends and enemies alike, 
-the practical lizardfolk are quick to point out that life is 
-hard in the swamp, and nothing should go to waste.
-The lizardfolk presented here dwell in a swampy 
-environment. Lizardfolk tribes can exist in other 
-environments as well, but they lose their swim 
-speed and instead 
-gain a climb speed 
-of 15 feet.
-
-This reptilian humanoid has green scales, a short and toothy 
-snout, and a thick alligator-like tail.
-
-Lizard–Lizardfolk
-
-Lizard–Lizardfolk
-
-195
-
-195
-
-Lycanthrope
-Lycanthropes are humanoids with the ability to turn into 
-animals and animal-humanoid hybrid shapes. Natural 
-lycanthropes are born with this ability and have perfect 
-control over their shapechanging. Aff licted lycanthropes 
-contract this ability like a curse or disease from another 
-lycanthrope; they sometimes change form involuntarily.
-Creating a Lycanthrope
-“Lycanthrope” is an inherited (for natural lycanthropes) 
-or acquired (for aff licted lycanthropes) template that can 
-be added to any humanoid.
-Challenge Rating: Same as base creature or base animal 
-(whichever is higher) + 1.
-Size and Type: The creature (referred to hereafter as 
-the base creature) gains the shapechanger subtype. The 
-lycanthrope takes on the characteristics of some type 
-of animal (referred to hereafter as the base animal) 
-within one size category of the base creature’s size. A 
-lycanthrope’s hybrid form is the same size as the base 
-animal or the base creature, whichever is larger.
-AC: In hybrid or animal form the lycanthrope has the 
-natural armor bonus of the base animal increased by +2.
-Defensive Abilities: A natural lycanthrope gains DR 10/
-silver in animal or hybrid form. An aff licted lycanthrope 
-gains DR 5/silver in animal or hybrid form.
-Speed: Same as the base creature or base animal, 
-depending on which form the lycanthrope is using. 
-Hybrids use the base creature’s speed.
-Melee: A lycanthrope gains natural attacks in animal 
-and hybrid forms according to the base animal.
-Special Attacks: A lycanthrope retains all the special 
-attacks, qualities, and abilities of the base creature. 
-In hybrid or animal form it gains the special attacks, 
-qualities, and abilities of the base animal. A lycanthrope 
-also gains low-light vision, scent, and the following:
-Change Shape (Su) All lycanthropes have three forms—a 
-humanoid form, an animal form, and a hybrid form. 
-Equipment does not meld with the new form between 
-humanoid and hybrid form, but does between those forms 
-and animal form. A natural lycanthrope can shift to any of 
-its three alternate forms as a move-equivalent action. An 
-afflicted lycanthrope can assume animal or hybrid form as 
-a full-round action by making a DC 15 Constitution check, 
-or humanoid form as a full-round action by making a DC 
-20 Constitution check. On nights when the full moon is 
-visible, an afflicted lycanthrope gains a +5 morale bonus to 
-Constitution checks made to assume animal or hybrid form, 
-but a –5 penalty to Constitution checks made to assume 
-humanoid form. An afflicted lycanthrope reverts to its 
-humanoid form automatically with the next sunrise, or after 
-8 hours of rest, whichever comes first. A slain lycanthrope 
-
-reverts to its humanoid form, although it remains dead. For 
-additional rules on this supernatural ability, see page 298.
-Curse of Lycanthropy (Su) A natural lycanthrope’s bite 
-attack in animal or hybrid form infects a humanoid target 
-with lycanthropy (Fortitude DC 15 negates). If the victim’s 
-size is not within one size category of the lycanthrope, 
-this ability has no effect.
-Lycanthropic Empathy (Ex) In any form, natural lycanthropes 
-can communicate and empathize with animals related to 
-their animal form. They can use Diplomacy to alter such 
-an animal’s attitude, and when so doing gain a +4 racial 
-bonus on the check. Aff licted lycanthropes only gain this 
-ability in animal or hybrid form.
-Ability Scores: +2 Wis, –2 Cha in all forms; +2 Str, +2 Con 
-in hybrid and animal forms. Lycanthropes have enhanced 
-senses but are not fully in control of their emotions and 
-animalistic urges. In addition to these adjustments to the 
-base creature’s stats, a lycanthrope’s ability scores change 
-when he assumes hybrid or animal form. In human form, 
-the lycanthrope’s ability scores are unchanged from the base 
-creature’s form. In animal and hybrid form, the lycanthrope’s 
-ability scores are the same as the base creature’s or the base 
-animal’s, whichever ability score is higher.
-Lycanthropy
-A creature that catches lycanthropy becomes an aff licted 
-lycanthrope, but shows no symptoms (and does not gain 
-any of the template’s adjustments or abilities) until the 
-night of the next full moon, when the victim involuntarily 
-assumes animal form and forgets his or her own identity. 
-The character remains in animal form until the next 
-dawn and remembers nothing about the entire episode (or 
-subsequent episodes) unless he makes a DC 20 Will save, in 
-which case he becomes aware of his condition.
-A remove disease or heal spell cast by a cleric of 12th level or 
-higher cures the aff liction, provided the character receives 
-the spell within 3 days of the infecting lycanthrope’s attack. 
-Alternatively, consuming a dose of wolfsbane (Pathfinder 
-RPG Core Rulebook 560) gives an aff licted lycanthrope a 
-new Fortitude save to recover from lycanthropy.
-
-Lycanthropic Player Characters
-When a PC becomes a lycanthrope, you as the GM have a choice 
-to make. In most cases, you should take control of the PC’s 
-actions whenever he is in hybrid or animal form—lycanthropy 
-shouldn’t be a method to increase a PC’s power, after all, and 
-what an afflicted lycanthrope does while in animal or hybrid 
-form is often at odds with what the character would actually 
-want. If a player wants to play a lycanthrope, he should play a 
-natural lycanthrope and follow the guidelines on page 313 for 
-playing a character of a powerful race.
-
-196
-
-196
+hold Breath (Ex) A lizardfolk can hold its breath for a number of rounds equal to 4 times its Constitution score before it risks drowning.
 
 Lycanthrope, Wererat
 WERERAT (hUMAn fORM) CR 2
@@ -11755,28 +10871,7 @@ SQ change shape (human, hybrid, and dire rat; polymorph),
 rogue talents (fast stealth), lycanthropic empathy (rats and 
 dire rats), trapfinding
 SPECIAL ABILITIES
-Disease (Ex) Filth fever: Bite—injury; save Fort DC 14; onset 
-1d3 days; frequency 1/day; effect 1d3 Dex damage and 1d3 
-Con damage; cure 2 consecutive saves. The save DC is 
-Constitution-based.
-Natural wererats tend to be short and wiry, with constantly 
-darting eyes and frequent nervous twitches. Males often 
-have thin, ragged moustaches.
-Wererats prefer cities where they can blend in with the 
-humanoid and rat population. Their abilities make them 
-especially good at thieving and spying, and in many cities 
-the thieves’ guild employs numerous wererat members.
-
-This hunched creature looks like a human in studded leather, but 
-fur covers its body. Its face is rat-like, and it has a long, naked tail.
-
-LLyyccaanthrope–Lycanthrope, Wererat
-
-nthrope–Lycanthrope, Wererat
-
-197
-
-197
+Disease (Ex) Filth fever: Bite—injury; save Fort DC 14; onset 1d3 days; frequency 1/day; effect 1d3 Dex damage and 1d3 Con damage; cure 2 consecutive saves. The save DC is Constitution-based.
 
 Lycanthrope, Werewolf
 WEREWOLf CR 2
@@ -11914,56 +11009,7 @@ Environment warm hills and marshes
 Organization solitary, pair, or pride (3–6)
 Treasure standard
 SPECIAL ABILITIES
-Spikes (Ex) With a snap of its tail, a manticore can 
-loose a volley of four spikes as a standard action (make 
-an attack roll for each spike). This attack has a range of 180 
-feet with no range increment. All targets must be within 
-30 feet of each other. The creature can launch only 24 
-spikes in any 24-hour period.
-Manticores are fierce predators that patrol a 
-wide area in search of fresh meat. A typical 
-manticore is about 10 feet long and weighs about 
-1,000 pounds. Some have more human-like 
-heads, usually with beards. Males and females 
-look much alike.
-Manticores eat any meat, even carrion, though 
-they prefer human f lesh and rarely pass up an 
-opportunity for such a delicacy. They are smart and 
-social enough to bargain with or bully evil humanoids 
-into alliances or offering tribute, and more 
-powerful creatures may hire or bribe them 
-to guard or patrol a place or area. They 
-like lairs in high places, such as 
-hilltops and caves in cliffs.
-
-Although manticores were likely a magical creation, 
-they have long since established themselves as a naturally 
-occurring species. Curiously, manticores seem strangely 
-fecund, and can interbreed with a number of other 
-similarly shaped creatures, including lions, dire lions, 
-lamias, sphinxes, and even chimeras. The progeny of a 
-manticore and an unusual mate is summarized on the 
-table below.
-Manticore’s Mate Offspring
-Lion Standard manticore
-Dire lion Advanced manticore
-Lamia Lamia with spiked tail and spikes 
- special attack
-Sphinx Sphinx with spiked tail and spikes 
- special attack
-Chimera Chimera with spiked tail and spikes 
- special attack
-
-This creature has a vaguely humanoid head, the body of a lion, 
-and the wings of a dragon. Its tail ends in long, sharp spikes.
-
-LLyyccaanthrope, Werewolf–Manticore
-
-nthrope, Werewolf–Manticore
-
-199
-
-199
+Spikes (Ex) With a snap of its tail, a manticore can loose a volley of four spikes as a standard action (make an attack roll for each spike). This attack has a range of 180 feet with no range increment. All targets must be within 30 feet of each other. The creature can launch only 24 spikes in any 24-hour period.
 
 Mantis, Giant
 gIAnT MAnTIS CR 3
@@ -11991,69 +11037,9 @@ Environment temperate forests
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Lunge (Ex) A giant mantis’s limbs are 
-capable of reaching much farther than 
-normal for a creature of its size. As a full-
-attack action, it can make a single attack with 
-its claws at double its normal reach. When a giant 
-mantis attacks with a claw in this manner, it gains 
-a +4 bonus on its attack roll. A giant mantis cannot 
-make attacks of opportunity with its lunge.
-Mandibles (Ex) A giant mantis that grabs a foe can 
-make a bite attack against that foe as a 
-secondary attack. The mantis’s bite is a +0 
-attack that inflicts 1d6+1 points of damage 
-on a hit.
-Sudden Strike (Ex) A giant mantis is 
-particularly adept at moving quickly 
-when its foes are surprised. During a 
-surprise round, a giant mantis may act 
-as if it had a full round to act, rather than 
-just one standard action. 
-Known to many as the giant praying 
-mantis for the way the creature’s deadly 
-front limbs fold under its head as it lies 
-
-in wait for food, this creature is well feared along caravan 
-tracks that pass through dense woodlands. The giant 
-mantis, a master of hiding in dense undergrowth, is 
-almost unnaturally patient as it lies in wait, striking with 
-unsettling speed as unsuspecting meals wander by.
-In many savage societies, the giant mantis is particularly 
-feared—in regions where these vermin are common, they 
-are often regarded as messengers of death sent to the world 
-by angry gods. Their swift speed, alien appearance, and 
-near-invisibility in forests give rise to many legends—
-that the giant mantis can become invisible, that it can 
-smell fear, and that the souls of those who it slays and eats 
-are digested and kept from moving on to the afterlife. 
-While the giant mantis is nothing more than an efficient 
-and deadly vermin, the numerous legends and whispers 
-regarding its supposed powers and alien intellect 
-have inspired some spellcasters to work such features 
-into their constructs as a way to make them even more 
-fearsome. There are even stories of entire societies of 
-assassins who worship an immense mantis as a god, and 
-who have taken to heart the mantis’s style of murderous 
-ambush, fighting with twin serrated rapiers.
-The giant mantis presented here stands 7 feet tall 
-and 15 feet long, and weighs 650 pounds. Larger giant 
-mantises exist in the deepest, darkest forests of the world, 
-where they might prey upon things as mighty as giants 
-or dragons. Known by various names, such as the drake-
-eating mantis, the treebender mantis, or simply the deadly 
-mantis, these immense behemoths average more than 60 
-feet in height and have a terrifying habit of destroying 
-entire villages or towns in order to satiate their ravenous 
-appetites. A deadly mantis is a giant mantis advanced to 
-Colossal size, 16 Hit Dice, and CR 14.
-
-This towering insect walks on its back four legs. Its head is 
-triangular and its front legs sport razor-sharp edges and claws.
-
-200
-
-200
+Lunge (Ex) A giant mantis’s limbs are capable of reaching much farther than normal for a creature of its size. As a full- attack action, it can make a single attack with its claws at double its normal reach. When a giant mantis attacks with a claw in this manner, it gains a +4 bonus on its attack roll. A giant mantis cannot make attacks of opportunity with its lunge.
+Mandibles (Ex) A giant mantis that grabs a foe can make a bite attack against that foe as a secondary attack. The mantis’s bite is a +0 attack that inflicts 1d6+1 points of damage on a hit.
+Sudden Strike (Ex) A giant mantis is particularly adept at moving quickly when its foes are surprised. During a surprise round, a giant mantis may act as if it had a full round to act, rather than just one standard action. 
 
 Medusa
 MEDUSA CR 7
@@ -12089,79 +11075,9 @@ Organization solitary
 Treasure double (dagger, masterwork 
 longbow with 20 arrows, other treasure)
 SPECIAL ABILITIES
-All-Around Vision (Ex) A medusa’s 
-snake-hair allows her to see in all 
-directions. Medusas gain a +4 racial 
-bonus to Perception checks and cannot 
-be flanked.
-Petrifying gaze (Su) Turn to stone 
-permanently, 30 feet, Fortitude 
-DC 16 negates. The save DC is 
-Charisma-based.
-Poison (Ex) Bite—injury; save Fort DC 
-18; frequency 1/round for 6 rounds; effect 
-1d3 Str; cure 2 consecutive saves. The save 
-DC is Constitution-based. 
-
-Medusas are human-like creatures with snakes instead 
-of hair. At distances of 30 feet or more, a medusa can 
-easily pass for a beautiful woman if she wears something 
-to cover her serpentine locks—when wearing clothing 
-that conceals her head and face, she can be mistaken for 
-a human at even closer distances. Medusas use lies and 
-disguises that conceal their faces to get close enough 
-to opponents to use their petrifying gaze, though they 
-like playing with their prey and may fire arrows from a 
-distance to lead enemies into traps. Some enjoy creating 
-intricate decorations out of their victims, using their 
-petrified remains as accents to their swampy lairs, but 
-most medusas take care to hide the evidence of their 
-previous conf licts so that new foes won’t have advance 
-warning of their presence.
-Used to concealing themselves, medusas in cities 
-are usually rogues, while those in the wilderness often 
-pass themselves off as rangers or trackers. The most 
-notorious and legendary medusas, though, 
-are those who take levels as bards or 
-clerics. Charismatic and intelligent, urban 
-medusas are often involved with 
-thieves’ guilds or other aspects of the 
-criminal underworld. Medusas may 
-form alliances with blind creatures or 
-intelligent undead, both of which are 
-immune to their stony gaze. Spellcasting 
-medusas often serve as oracles or 
-prophets, usually dwelling in remote 
-locations of legendary power 
-or infamous history. Such 
-oracle medusas take great 
-delight in their roles, 
-and if presented with the 
-proper gifts and flattery, the 
-secrets they offer can be quite 
-helpful. Of course, the lairs 
-of such potent creatures are 
-liberally decorated with statues 
-of those who have offended them, so 
-the seeker of knowledge is well advised to 
-tred carefully during such meetings.
-All known medusas are female. Rarely, a 
-medusa may decide to keep a male humanoid 
-as a mate, usually with the help of elixirs of love 
-or similar magic, and is always careful to not 
-petrify her prisoner—at least until she grows 
-tired of his company.
-
-This slender, attractive woman has strangely glowing eyes and a 
-full head of hissing snakes for hair.
-
-MMaantis, Giant–Medusa
-
-ntis, Giant–Medusa
-
-201
-
-201
+All-Around Vision (Ex) A medusa’s snake-hair allows her to see in all directions. Medusas gain a +4 racial bonus to Perception checks and cannot be flanked.
+Petrifying gaze (Su) Turn to stone permanently, 30 feet, Fortitude DC 16 negates. The save DC is Charisma-based.
+Poison (Ex) Bite—injury; save Fort DC 18; frequency 1/round for 6 rounds; effect 1d3 Str; cure 2 consecutive saves. The save DC is Constitution-based. 
 
 Mephit
 MEPhIT CR 3
@@ -12193,150 +11109,75 @@ Environment any (elemental planes)
 Organization solitary, pair, gang (3–6), mob (7–12)
 Treasure standard
 SPECIAL ABILITIES
-Breath Weapon (Su) Each type of mephit can unleash a 
-particular breath weapon every 4 rounds as a standard 
-action. The DC is Constitution-based and includes a +1 
-racial bonus.
-Mephits are the servants of powerful elemental creatures. 
-Key sites and locations on the elemental planes are full of 
-mephits scurrying about on important errands or duties. 
-Each mephit is associated with one element that defines its 
-spells and abilities. The mephit types are listed below.
+Breath Weapon (Su) Each type of mephit can unleash a particular breath weapon every 4 rounds as a standard action. The DC is Constitution-based and includes a +1 racial bonus.
+Mephits are the servants of powerful elemental creatures.  Key sites and locations on the elemental planes are full of mephits scurrying about on important errands or duties.  Each mephit is associated with one element that defines its spells and abilities. The mephit types are listed below.
+
 Air Mephit (Air)
-Air mephits are commonly found on the Plane of Air. 
-These mephits are whimsical and prone to distraction.
 •	fast healing: Works only in gusty and windy areas.
 •	Speed: Fly 60 ft. (perfect)
-•	Breath Weapon: A cone of sand and grit that deals 1d8 
-slashing damage.
+•	Breath Weapon: A cone of sand and grit that deals 1d8 slashing damage.
 •	Spell-Like Abilities: blur 1/hour, gust of wind 1/day.
 
 Dust Mephit (Air)
-Dust mephits are commonly found on the Plane of Air. 
-These mephits are irritating and persistent.
 •	fast healing: Works only in dusty environments.
 •	Speed: Fly 50 ft. (perfect)
-•	Breath Weapon: A cone of dust that deals 1d4 slashing 
-damage. The dust also causes living creatures to be 
-sickened for 3 rounds. A Reflex save halves the damage and 
-negates the sickened effect.
+•	Breath Weapon: A cone of dust that deals 1d4 slashing damage. The dust also causes living creatures to be sickened for 3 rounds. A Reflex save halves the damage and negates the sickened effect.
 •	Spell-Like Abilities: blur 1/hour, wind wall 1/day
+
 Earth Mephit (Earth)
-Earth mephits are commonly found on the Plane of Earth. 
-These mephits are plodding and humorless.
 •	fast healing: Works only while underground.
-•	Breath Weapon: A cone of rocks that deals 1d8 
-bludgeoning damage.
-•	Change Size: Once per day, an earth mephit can enlarge 
-one size category, as enlarge person, except that it only 
-works on the earth mephit. This power acts as a 2nd-
-level spell.
+•	Breath Weapon: A cone of rocks that deals 1d8 bludgeoning damage.
+•	Change Size: Once per day, an earth mephit can enlarge one size category, as enlarge person, except that it only works on the earth mephit. This power acts as a 2nd- level spell.
 •	Spell-Like Abilities: soften earth and stone 1/day
+
 Fire Mephit (Fire)
-Fire mephits are commonly found on the Plane of Fire. 
-Fire mephits are vengeful and quick to anger.
 •	fast healing: Works only while in contact with fire.
 •	Immune: Fire
 •	Weaknesses: Vulnerability to cold
 •	Breath Weapon: A cone of flames that deals 1d8 fire damage.
-•	Spell-Like Abilities: scorching ray 1/hour, heat metal 1/day 
-(DC 14)
+•	Spell-Like Abilities: scorching ray 1/hour, heat metal 1/day (DC 14)
+
 Ice Mephit (Cold)
-Ice mephits are commonly found on the Plane of Air. These 
-mephits are cruel and aloof.
+Ice mephits are commonly found on the Plane of Air. These mephits are cruel and aloof.
 •	fast healing: Works only in areas below freezing.
 •	Immune: Cold
 •	Weaknesses: Vulnerability to fire
-•	Breath Weapon: A cone of ice that deals 1d4 cold damage. 
-The cold also causes living creatures to be sickened for 3 
-rounds. A Reflex save halves the damage and negates the 
-sickened effect.
-•	Spell-Like Abilities: magic missile 1/hour, chill metal 1/day 
-(DC 14)
+•	Breath Weapon: A cone of ice that deals 1d4 cold damage.  The cold also causes living creatures to be sickened for 3 rounds. A Reflex save halves the damage and negates the sickened effect.
+•	Spell-Like Abilities: magic missile 1/hour, chill metal 1/day (DC 14)
+
 Magma Mephit (Fire)
-Magma mephits are commonly found on the Plane of Fire. 
-These mephits are dim-witted brutes.
 •	fast healing: Works only in contact with magma or lava.
 •	Immune: Fire
 •	Weaknesses: Vulnerability to cold
 •	Breath Weapon: A cone of fire that deals 1d8 fire damage.
-
-This small humanoid creature has thin, leathery wings, small 
-horns, and a mischievous smile. 
-
-202
-
-202
-
-MMeepphhit
-
-it
-
-•	Magma form (Su): Once per hour, a magma mephit can 
-assume the form of a pool of lava, 3 feet in diameter and 
-6 inches deep. While in this form, its DR increases to 20/
-magic and it cannot attack. It can move at a speed of 
-10 feet per round and can pass through small openings 
-and cracks. Anything touching this pool takes 1d6 fire 
-damage. A magma mephit may remain in this form for up 
-to 10 minutes.
+•	Magma form (Su): Once per hour, a magma mephit can assume the form of a pool of lava, 3 feet in diameter and 6 inches deep. While in this form, its DR increases to 20/ magic and it cannot attack. It can move at a speed of 10 feet per round and can pass through small openings and cracks. Anything touching this pool takes 1d6 fire damage. A magma mephit may remain in this form for up to 10 minutes.
 •	Spell-Like Abilities: pyrotechnics 1/day
+
 Ooze Mephit (Water)
-Ooze mephits are commonly found on the Plane of Water. 
-These mephits are disgusting and slow to act.
 •	fast healing: Works only in wet or muddy environments.
 •	Speed: Swim 30 ft.
-•	Breath Weapon: A cone of slime that deals 1d4 acid 
-damage. The slime also causes living creatures to be 
-sickened for 3 rounds. A Reflex save halves the damage and 
-negates the sickened effect.
-•	Spell-Like Abilities: acid arrow 1/hour, stinking cloud 1/day 
-(DC 15)
-Salt Mephit (Earth)
-Salt mephits are commonly found on the Plane of Earth. 
-These mephits are cruel and aloof.
-•	fast healing: Works only in arid environments.
-•	Breath Weapon: A cone of salt crystals that deals 1d4 
-slashing damage. The salt also causes living creatures to be 
-sickened for 3 rounds. A Reflex save halves the damage and 
-negates the sickened effect.
-•	Dehydrate (Su): Once per day a salt mephit can draw the 
-moisture from an area in a 20-foot radius centered on 
+•	Breath Weapon: A cone of slime that deals 1d4 acid damage. The slime also causes living creatures to be sickened for 3 rounds. A Reflex save halves the damage and negates the sickened effect.
+•	Spell-Like Abilities: acid arrow 1/hour, stinking cloud 1/day (DC 15)
 
-itself. Living creatures within range take 2d8 points of 
-damage (Fortitude DC 14 half; caster level 6th). This effect is 
-especially devastating to plant and aquatic creatures, which 
-take a –2 penalty on their saving throws. This ability is the 
-equivalent of a 2nd-level spell.
+Salt Mephit (Earth)
+•	fast healing: Works only in arid environments.
+•	Breath Weapon: A cone of salt crystals that deals 1d4 slashing damage. The salt also causes living creatures to be sickened for 3 rounds. A Reflex save halves the damage and negates the sickened effect.
+•	Dehydrate (Su): Once per day a salt mephit can draw the moisture from an area in a 20-foot radius centered on itself. Living creatures within range take 2d8 points of damage (Fortitude DC 14 half; caster level 6th). This effect is especially devastating to plant and aquatic creatures, which take a –2 penalty on their saving throws. This ability is the equivalent of a 2nd-level spell.
 •	Spell-Like Abilities: glitterdust 1/hour.
+
 Steam Mephit (Fire)
-Steam mephits are commonly found on the Plane of Fire. 
-These mephits are overconfident and brash.
 •	fast healing: Works only in boiling water or steam.
 •	Immune: Fire
 •	Weaknesses: Vulnerability to cold
-•	Breath weapon: A cone of steam that deals 1d4 fire damage. 
-The scalding water also causes living creatures to be 
-sickened for 3 rounds. A Reflex save halves the damage and 
-negates the sickened effect.
-•	Boiling Rain (Su): Once per day a steam mephit can create 
-a rainstorm of boiling water in a 20-foot-square area. Living 
-creatures within the area take 2d6 points of fire damage 
-(Fortitude DC 14 half; caster level 6th). This ability is the 
-equivalent of a 2nd-level spell.
+•	Breath weapon: A cone of steam that deals 1d4 fire damage.  The scalding water also causes living creatures to be sickened for 3 rounds. A Reflex save halves the damage and negates the sickened effect.
+•	Boiling Rain (Su): Once per day a steam mephit can create a rainstorm of boiling water in a 20-foot-square area. Living creatures within the area take 2d6 points of fire damage (Fortitude DC 14 half; caster level 6th). This ability is the equivalent of a 2nd-level spell.
 •	Spell-Like Abilities: blur 1/hour
+
 Water Mephit (Water)
-Water mephits are commonly found on the Plane of Water. 
-These mephits are constant jokesters.
 •	fast healing: Works only while the mephit is underwater.
 •	Speed: Swim 30 ft.
 •	Breath Weapon: A cone of acid that deals 1d8 acid damage.
-•	Spell-Like Abilities: acid arrow 1/hour, stinking cloud 1/day 
-(DC 15)
-
-203
-
-203
+•	Spell-Like Abilities: acid arrow 1/hour, stinking cloud 1/day (DC 15)
 
 Merfolk
 MERfOLk CR 1/3
@@ -12459,63 +11300,8 @@ Environment any
 Organization solitary
 Treasure incidental
 SPECIAL ABILITIES
-Adhesive (Ex) A mimic exudes a thick slime that acts as 
-a powerful adhesive, holding fast any creatures or 
-items that touch it. An adhesive-covered mimic 
-automatically grapples any creature it hits with 
-its slam attack. Opponents so grappled cannot get 
-free while the mimic is alive without removing the 
-adhesive first. A weapon that strikes an adhesive-
-coated mimic is stuck fast unless the wielder 
-succeeds on a DC 17 Reflex save. A successful DC 
-17 Strength check is needed to pry off a stuck 
-weapon. Strong alcohol or universal solvent 
-dissolves the adhesive, but the mimic can still 
-grapple normally. A mimic can dissolve its 
-adhesive at will, and the substance breaks down 
-5 rounds after the creature dies. The save DC is 
-Strength-based.
-Mimic Object (Ex) A mimic can assume the general 
-shape of any Medium object, such as a massive 
-chest, a stout bed, or a door. The creature cannot 
-substantially alter its size, though. A mimic’s body is hard 
-
-and has a rough texture, no matter what appearance 
-it might present. A mimic gains a +20 racial bonus on 
-Disguise checks when imitating an object in this manner. 
-Disguise is always a class skill for a mimic.
-Mimics are thought to be the result of an alchemist’s 
-attempt to grant life to an inanimate object through the 
-application of an eldritch reagent, the recipe for which 
-is long lost. Over time, these strange but clever creatures 
-have learned the ability to transform themselves 
-into simulacra of man-made objects, particularly in 
-locations that have infrequent traffic by small numbers 
-of creatures, thus increasing their odds of successfully 
-attacking their victims.  
-Though mimics are not inherently evil, some sages 
-believe that mimics attack humans and other intelligent 
-creatures for sport rather than merely for sustenance. 
-The desire to completely fool others is thought to be a 
-part of their being, and their surprise attacks against 
-others are a culmination of those desires. 
-A typical mimic has a volume of 150 cubic feet (5 feet 
-by 5 feet by 6 feet) and weighs about 900 pounds. Legends 
-and tales speak of mimics of much greater sizes, with 
-the ability to assume the form of houses, ships, or entire 
-dungeon complexes that they festoon with treasure (both 
-real and false) to lure unsuspecting food within.
-
-What appeared to be a chest filled with treasure comes to life as it 
-grows long, glistening tentacles and a number of sharp teeth.
-
-MMeerrffoolk–Mimic
-
-lk–Mimic
-
-205
-
-205
+Adhesive (Ex) A mimic exudes a thick slime that acts as a powerful adhesive, holding fast any creatures or items that touch it. An adhesive-covered mimic automatically grapples any creature it hits with its slam attack. Opponents so grappled cannot get free while the mimic is alive without removing the adhesive first. A weapon that strikes an adhesive- coated mimic is stuck fast unless the wielder succeeds on a DC 17 Reflex save. A successful DC 17 Strength check is needed to pry off a stuck weapon. Strong alcohol or universal solvent dissolves the adhesive, but the mimic can still grapple normally. A mimic can dissolve its adhesive at will, and the substance breaks down 5 rounds after the creature dies. The save DC is Strength-based.
+Mimic Object (Ex) A mimic can assume the general shape of any Medium object, such as a massive chest, a stout bed, or a door. The creature cannot substantially alter its size, though. A mimic’s body is hard and has a rough texture, no matter what appearance it might present. A mimic gains a +20 racial bonus on Disguise checks when imitating an object in this manner.  Disguise is always a class skill for a mimic.
 
 MInOTAUR CR 4
 XP 1,200
@@ -12543,57 +11329,7 @@ Environment temperate ruins or underground
 Organization solitary, pair, or gang (3–4)
 Treasure standard (greataxe, other treasure)
 SPECIAL ABILITIES
-natural Cunning (Ex) Although minotaurs are not 
-especially intelligent, they possess innate cunning and 
-logical ability. This gives them immunity to maze spells 
-and prevents them from ever becoming lost. Further, 
-they are never caught flat-footed.
-Nothing holds a grudge like a minotaur. Scorned 
-by the civilized races centuries ago and born from 
-a deific curse, minotaurs have hunted, slain, and 
-devoured lesser humanoids in retribution for real or 
-imagined slights for as long as anyone can remember. 
-Many cultures have legends of how the first minotaurs 
-were created by vengeful or slighted gods who 
-punished humans by twisting their forms, 
-robbing them of their intellects and beauty, and 
-giving them the heads of bulls. Yet most modern 
-minotaurs hold these legends in contempt and 
-believe that they are not divine mockeries but divine 
-paragons created by a potent and cruel demon lord 
-named Baphomet.
-The traditional minotaur’s lair is a maze, be it a legitimate 
-labyrinth constructed to baff le and confuse, an accidental 
-
-one such as a city sewer system, or a naturally occurring 
-one such as a tangle of caverns and other underground 
-passageways. Employing their innate cunning, minotaurs 
-use their maze lairs to vex unwary foes who seek them 
-out or who simply stumble into the lairs and become lost, 
-slowly hunting the intruders as they try in vain to find a way 
-out. Only when despair has truly set in does the minotaur 
-move in to strike at its lost victims. When dealing with a 
-group, minotaurs often let one creature escape, to spread 
-the tale of horror and lure others to their mazes in hope of 
-slaying the beasts. Of course, to minotaurs, these would-be 
-heroes make for delicious meals.
-Minotaurs might also be found in the employ of a more 
-powerful monster or evil creature, serving it so long 
-as they can still hunt and dine as they please. Usually 
-this means guarding some powerful object or valuable 
-location, but it can also be a sort of mercenary work, 
-hunting down the foes of its master.
-Minotaurs are relatively straightforward combatants, 
-using their horns to horribly gore the nearest living 
-creature when combat begins. 
-
-Minotaur
-With the body of a powerfully built man and the head of a snarling 
-bull, this creature stomps its hooves as if preparing to charge.
-
-206
-
-206
+natural Cunning (Ex) Although minotaurs are not especially intelligent, they possess innate cunning and logical ability. This gives them immunity to maze spells and prevents them from ever becoming lost. Further, they are never caught flat-footed.
 
 Mite
 MITE CR 1/4
@@ -12630,62 +11366,8 @@ Organization solitary, band (2–8), or tribe (9–20 plus 1
 chieftain of 2nd–4th level and 2–6 giant vermin)
 Treasure standard (dagger, 6 darts, other treasure)
 SPECIAL ABILITIES
-hatred (Ex) Mites receive a +1 bonus on attack rolls against 
-humanoid creatures of the dwarf or gnome subtype due to 
-special training against these hated foes.
-Vermin Empathy (Ex) This ability functions as a druid’s 
-wild empathy, save that a mite can only use this ability 
-on vermin. A mite gains a +4 racial bonus on this check. 
-Vermin are normally mindless, but this empathic 
-communication imparts on them a modicum of 
-implanted intelligence, allowing mites to train 
-Medium vermin and use them as mounts. Vermin 
-empathy treats swarms as if they were one 
-creature possessing a single mind—a mite can 
-thus use this ability to influence and direct the 
-actions of swarms with relative ease. 
-
-Descended from even smaller fey, the mites are among 
-the most pitiful and craven dwellers of the dark. 
-Hideously ugly, even goblins have been known to mock 
-mites for their homely appearances, mockery most mites 
-take to heart and nurture for weeks, months, or even 
-years in their tiny homes, until their distress and anger 
-finally overcome their natural cowardice and impel them 
-forth on short-lived bouts of bloody vengeance from the 
-doubtful safety of a spider’s back.
-Mites, once closer to the strange realm of the fey, have 
-grown larger and stockier after countless generations 
-spent on the Material Plane. Yet still, their stature places 
-them at the bottom of the pile in the dangerous caverns 
-in which they live. Their traditional enemies are dwarves 
-and gnomes, particularly the svirfneblin of the deep 
-underground caves. The one thing that gives them a 
-significant edge over an enemy in a fight is their natural 
-ability to empathize with normally mindless vermin—
-mites are particularly fond of spiders, centipedes, and cave 
-fishers, and a mite colony usually has a few of these far 
-more dangerous monsters on hand to defend the group.
-Although they have lost the supernatural ability to 
-tinker with magic items, luck, or mechanical objects 
-possessed by their more sinister and dangerous gremlin 
-kin, mites retain the ability to perform minor magical 
-tricks with prestidigitation, and often use these tricks to 
-annoy their enemies. When faced with dangerous foes, a 
-mite uses its doom ability to hex a foe—a mite’s eyes bulge 
-hideously open when it uses this spell-like ability.
-A mite is 3 feet tall and weighs 40 pounds.
-
-This squat humanoid seems to be nearly all head—an unfortunate 
-circumstance, considering how ugly its puffy blue face is.
-
-MMiinnootaur–Mite
-
-taur–Mite
-
-207
-
-207
+hatred (Ex) Mites receive a +1 bonus on attack rolls against humanoid creatures of the dwarf or gnome subtype due to special training against these hated foes.
+Vermin Empathy (Ex) This ability functions as a druid’s wild empathy, save that a mite can only use this ability on vermin. A mite gains a +4 racial bonus on this check. 
 
 Mohrg
 A thick tangle of discolored entrails clings to this lurching skeleton’s 
@@ -12719,82 +11401,7 @@ Organization solitary, gang (2–4), or mob
 (2–4 plus 4–12 zombies)
 Treasure standard
 SPECIAL ABILITIES
-Create Spawn (Su) Humanoid 
-creatures killed by a mohrg 
-rise immediately as fast 
-zombies under the mohrg’s 
-control. The sudden bloom of 
-unlife when a mohrg’s victim dies 
-and becomes a zombie causes 
-a surge of negative energy to 
-flow through the mohrg. Whenever 
-a mohrg creates a zombie in this 
-manner, it is healed 1d6 hit points 
-per HD possessed by the slain 
-creature and acts as if hasted for 
-the round immediately following 
-the spawn’s creation.
-Those who slay many over the course 
-of their lifetimes, be they serial killers, 
-mass-murderers, warmongering soldiers, or 
-
-battle-driven berserkers, become marked and tainted by 
-the sheer weight of their murderous deeds. When such 
-killers are brought to justice and publicly executed for 
-their heinous crimes before they have a chance to atone, 
-the remains sometimes return to unlife to continue their 
-dark work as a mohrg.
-Undead things caring less for life than they did before 
-their own deaths, mohrgs exist solely to wreak havoc on 
-the living. Sometimes mistaken for skeletons or zombies, 
-they are far more dangerous than those mindless 
-abominations, retaining some semblance of their own 
-memories—and the delight they once took in hearing the 
-screams of the dying.
-When possible, mohrgs gather in small groups, 
-seeking out lone targets much as they did in life. If faced 
-with capable foes, a mohrg attempts to incapacitate them 
-one by one, starting with divinely empowered characters 
-first, both to protect itself from holy wrath, and to make 
-the task of paralyzing and devouring the others that 
-much easier.
-Some mohrgs retain enough of their former 
-memories that they return to the favored locations 
-of their pasts, “haunting” old hideouts and 
-sometimes even resuming the depredations 
-of murderers long dead, falling back on 
-means of death and mayhem that were 
-more comfortable in their breathing days. 
-Such mohrgs are even more insane than most 
-undead beings, and can sometimes be found 
-wandering the streets of a city or town 
-in cowls and cloaks, carrying on 
-their old life’s work of slaughter and 
-murder as best they can.
-Of course, since those slain by 
-a mohrg rise soon thereafter 
-as undead themselves, the 
-murders of a mohrg do not 
-go unnoticed for long, even 
-when they take extra care to 
-prey only upon society’s dregs. 
-A sudden uprising of undead in 
-the streets is the inevitable result 
-of a mohrg’s attentions. Since these zombies remain 
-under the mohrg’s control, and since the mohrg 
-itself possesses a hateful and cruel intelligence, it 
-often holds its undead army in reserve, even 
-commanding it to lie motionless until 
-several weeks or months have passed and 
-the local graveyard is filled with 
-the sleeping dead. Then, when the 
-time is right, the mohrg calls 
-upon its army to rise and aid it 
-in finishing the slaughter.
-
-208
-
-208
+Create Spawn (Su) Humanoid creatures killed by a mohrg rise immediately as fast zombies under the mohrg’s control. The sudden bloom of unlife when a mohrg’s victim dies and becomes a zombie causes a surge of negative energy to flow through the mohrg. Whenever a mohrg creates a zombie in this manner, it is healed 1d6 hit points per HD possessed by the slain creature and acts as if hasted for the round immediately following the spawn’s creation.
 
 MORLOCk CR 2
 XP 600
@@ -12825,62 +11432,9 @@ Organization solitary, pair, band (3–6), or tribe
 (7–18)
 Treasure standard
 SPECIAL ABILITIES
-Expert Climber (Ex) A morlock can cling to cave 
-walls and even ceilings as long as the surface has 
-hand- and footholds. In effect, a morlock is treated 
-as constantly being under a nonmagical version of 
-the spell spider climb, save that it cannot cling to smooth 
-surfaces. This ability doubles the normal +8 racial bonus 
-to Climb checks normally afforded creatures with a climb 
-speed to a +16 racial bonus.
-Leap Attack (Ex) As a standard action, a morlock may make a 
-single attack during a jump. It can make this attack at any point 
-along the course of the leap—the start, the end, or while in 
-mid-air. While jumping, a morlock does not provoke attacks of 
-opportunity for leaving a threatened square.
-Swarming (Ex) Morlocks dwell and fight in cramped quarters 
-every day of their lives, and as such are quite adept at 
-swarming foes. Up to two morlocks can share the same 
-square at the same time. If two morlocks in the same 
-square attack the same foe, they are considered to be 
-flanking that foe as if they were in two opposite squares.
-
-Morlock
-Skin pale as a slug’s belly, eyes huge and bulging, this thing crawls 
-down the wall like a spider, but its shape is hideously humanoid. 
-
-MMoohhrrgg––MMoorrlloocckk
-
-Degenerate humans long lost from the world of light, 
-morlocks have regressed through years of subterranean 
-dwelling into ravenous, barely thinking beasts of the 
-endless night. They no longer remember the civilized 
-lives their ancestors led, although many morlock tribes 
-still dwell in the shattered ruins of their ancient homes. 
-Ironically, in many cases morlocks worship the statues 
-left behind by these ancestors as their gods. Morlock 
-priests of such ancestor worship have access to the 
-domains of Darkness, Earth, Madness, and Strength. A 
-typical morlock stands just over 5 feet tall and weighs 
-roughly 150 pounds.
-Morlocks move about on two legs at times, but often drop 
-down to a creepy four-limbed shuff le when speed or stealth 
-is necessary. Their wiry, often emaciated frames mask the 
-strength of their limbs and their swift reactions. 
-Morlocks typically give birth to broods of three to four 
-babies at a time, ravenous creatures born with a full set 
-of teeth and a cannibalistic predisposition. The first few 
-weeks of a brood’s life must be carefully mothered to prevent 
-attrition—it usually takes that long for the morlock young 
-to overcome their natural inclination to feed on whatever 
-is closest. Morlocks mature quickly, achieving adulthood 
-after only 5 years of life. A typical morlock can live to a ripe 
-old age of 60—although the majority of their kind die far 
-sooner than that due to violence.
-
-209
-
-209
+Expert Climber (Ex) A morlock can cling to cave walls and even ceilings as long as the surface has hand- and footholds. In effect, a morlock is treated as constantly being under a nonmagical version of the spell spider climb, save that it cannot cling to smooth surfaces. This ability doubles the normal +8 racial bonus to Climb checks normally afforded creatures with a climb speed to a +16 racial bonus.
+Leap Attack (Ex) As a standard action, a morlock may make a single attack during a jump. It can make this attack at any point along the course of the leap—the start, the end, or while in mid-air. While jumping, a morlock does not provoke attacks of opportunity for leaving a threatened square.
+Swarming (Ex) Morlocks dwell and fight in cramped quarters every day of their lives, and as such are quite adept at swarming foes. Up to two morlocks can share the same square at the same time. If two morlocks in the same square attack the same foe, they are considered to be flanking that foe as if they were in two opposite squares.
 
 Mummy
 MUMMy CR 5
@@ -12911,52 +11465,8 @@ Organization solitary, warden squad (2–6), or guardian detail
 (7–12)
 Treasure standard
 SPECIAL ABILITIES
-Despair (Su) All creatures within a 30-foot radius that see 
-a mummy must make a DC 16 Will save or be paralyzed 
-by fear for 1d4 rounds. Whether or not the save is 
-successful, that creature cannot be affected again by the 
-same mummy’s despair ability for 24 hours. This is a 
-paralysis and a mind-affecting fear affect. The save DC is 
-Charisma-based.
-Mummy Rot (Su) Curse and disease—slam; save Fort DC 
-16; onset 1 minute; frequency 1 day; effect 1d6 Con and 1d6 
-Cha; cure —. Mummy rot is both a curse and disease and 
-can only be cured if the curse is first removed, at which 
-point the disease can be magically removed. Even after the 
-curse element of mummy rot is lifted, a creature suffering 
-from it cannot recover naturally over time. Anyone casting 
-a conjuration (healing) spell on the afflicted creature 
-must succeed on a DC 20 caster level check, or the spell 
-is wasted and the healing has no effect. Anyone who dies 
-from mummy rot turns to dust and cannot be raised 
-without a resurrection or greater magic. The save DC is 
-Charisma-based.
-
-Created to guard the tombs of the honored dead, 
-mummies are ever vigilant for those who would desecrate 
-their sacred ground.
-Mummies are created through a rather lengthy and 
-gruesome embalming process, during which all of the 
-body’s major organs are removed and replaced with dried 
-herbs and f lowers. After this process, the f lesh is anointed 
-with sacred oils and wrapped in purified linens. The 
-creator then finishes the ritual with a create undead spell.
-Although most mummies are created merely as 
-guardians and remain loyal to their charge until their 
-destruction, certain powerful mummies have much more 
-free will. The majority are at least 10th-level clerics, and 
-are often kings or pharaohs who have called upon dark 
-gods or sinister necromancers to bind their souls to their 
-bodies after death—usually as a means to extend their rule 
-beyond the grave, but at times simply to escape what they 
-fear will be an eternity of torment in their own afterlife.
-
-Wrapped from head to toe in ancient strips of moldering linen, 
-this humanoid moves with a shuff ling gait.
-
-210
-
-210
+Despair (Su) All creatures within a 30-foot radius that see a mummy must make a DC 16 Will save or be paralyzed by fear for 1d4 rounds. Whether or not the save is successful, that creature cannot be affected again by the same mummy’s despair ability for 24 hours. This is a paralysis and a mind-affecting fear affect. The save DC is Charisma-based.
+Mummy Rot (Su) Curse and disease—slam; save Fort DC 16; onset 1 minute; frequency 1 day; effect 1d6 Con and 1d6 Cha; cure —. Mummy rot is both a curse and disease and can only be cured if the curse is first removed, at which point the disease can be magically removed. Even after the curse element of mummy rot is lifted, a creature suffering from it cannot recover naturally over time. Anyone casting a conjuration (healing) spell on the afflicted creature must succeed on a DC 20 caster level check, or the spell is wasted and the healing has no effect. Anyone who dies from mummy rot turns to dust and cannot be raised without a resurrection or greater magic. The save DC is Charisma-based.
 
 Naga, Dark
 DARk nAgA CR 8
@@ -12994,54 +11504,10 @@ Environment any underground
 Organization solitary or nest (2–4)
 Treasure standard
 SPECIAL ABILITIES
-Detect Thoughts (Su) A dark naga can continuously 
-use detect thoughts as per the spell (caster 
-level 9th; Will DC 18 negates). The 
-save DC is Charisma-based.
-guarded Thoughts (Ex) Dark nagas 
-are immune to any form of mind reading, 
-such as that granted by detect thoughts. This 
-ability also grants a +2 racial bonus on all 
-saves against charm effects.
-Poison (Ex) Sting—injury; save Fort DC 19; 
-frequency 1 round; effect sleep for 2d4 minutes; 
-cure 1 save.
+Detect Thoughts (Su) A dark naga can continuously use detect thoughts as per the spell (caster level 9th; Will DC 18 negates). The save DC is Charisma-based.
+guarded Thoughts (Ex) Dark nagas are immune to any form of mind reading, such as that granted by detect thoughts. This ability also grants a +2 racial bonus on all saves against charm effects.
+Poison (Ex) Sting—injury; save Fort DC 19; frequency 1 round; effect sleep for 2d4 minutes; cure 1 save.
 Spells Dark nagas cast spells as 7th-level sorcerers.
-
-Dark nagas covet luxury, wealth, and power over others. 
-With bodies covered by shimmering, eel-like black 
-scales, dark nagas slither deftly through forsaken lands 
-and abandoned ruins, scouring such places for treasures 
-and weaker creatures they might force into service. Their 
-forked tongues spread only lies, and others whom they 
-can’t manipulate they destroy with their insidious poison 
-and destructive magical abilities. A typical dark naga 
-measures approximately 12 feet long and weighs upward 
-of 300 pounds.
-Arrogant and sybaritic, dark nagas seek to dominate 
-lesser creatures, relishing the fear they inspire and power 
-over other beings. While some manage to carve indulgent 
-fiefdoms from tribes of goblins, orcs, lizardfolk, or other 
-barbarous races, the luster of cosmopolitan fineries proves 
-enticing as well, leading some to infiltrate city sewers and 
-slums to gather an urban following. They particularly 
-relish morbidly crafted jewelry and treasures, often 
-adorning themselves with jeweled bands or taking their 
-ease atop piles of treasure.
-Dark nagas hate others of their kind, especially other 
-dark nagas, seeing their brethren as deadly opponents to 
-be dispatched swiftly and mercilessly—often rightly so.
-
-A sharp-featured humanoid head crowns the powerful, sinuous 
-body of this snake-like monstrosity.
-
-MMuummmmy–Naga, Dark
-
-y–Naga, Dark
-
-211
-
-211
 
 Naga, Guardian
 gUARDIAn nAgA CR 10
@@ -13080,49 +11546,8 @@ Environment temperate plains
 Organization solitary, pair, or nest (3–6)
 Treasure standard
 SPECIAL ABILITIES
-Poison (Ex) Bite—injury or spit—contact; save Fort DC 19; 
-frequency 1/round for 6 rounds; effect 1d4 Con damage; cure 
-2 consecutive saves. The save DC is Constitution-based.
-Spells A guardian naga casts spells as a 9th-level sorcerer, 
-and can cast spells from the cleric list as well as those 
-normally available to a sorcerer. Cleric spells are 
-considered arcane spells for a guardian naga.
-Spit (Ex) A guardian naga can spit its venom up to 30 
-feet as a standard action. This is a ranged touch 
-attack with no range increment. Opponents hit by 
-this attack must make successful saves (see above) to 
-avoid the effect.
-
-Although ferocious in shape, with radiant scales, cobra-
-like hoods, and powerful serpentine bodies, guardian 
-nagas serve as dutiful protectors of places of fundamental 
-power and sanctity. Their scales often bear elaborate 
-patterns similar to those of exotic jungle snakes. A 
-typical guardian naga stretches 14 feet long and weighs 
-approximately 350 pounds.
-While many guardian nagas adhere to the exotic 
-practices of ancient or forgotten faiths, others are merely 
-drawn to sites of innate wonder—towering waterfalls, 
-natural spires, mountaintop temples—minding them 
-out of their own senses of duty and reverence. Often 
-these nagas join a living faith, serving as protectors of 
-sanctuaries or ancient treasures. A pair of nagas might 
-take up residence near a site they deem worthy of 
-protection, hatching a brood and raising their offspring 
-there. When the young grow to adulthood, they have the 
-choice of departing to seek their own homes or staying to 
-protect their elder’s charge. Sometimes, a guardian naga 
-protecting a ruin or temple is but the current protector 
-in a line of sentinels stretching back centuries. Such 
-sentinels often take the same name as their forebears to 
-appear as a single, exceptionally long-lived figure.
-
-A contemplative humanoid face framed by a cobra-like hood 
-adorns the body of this long, brightly colored serpent.
-
-212
-
-212
+Poison (Ex) Bite—injury or spit—contact; save Fort DC 19; frequency 1/round for 6 rounds; effect 1d4 Con damage; cure 2 consecutive saves. The save DC is Constitution-based.  Spells A guardian naga casts spells as a 9th-level sorcerer, and can cast spells from the cleric list as well as those normally available to a sorcerer. Cleric spells are considered arcane spells for a guardian naga.
+Spit (Ex) A guardian naga can spit its venom up to 30 feet as a standard action. This is a ranged touch attack with no range increment. Opponents hit by this attack must make successful saves (see above) to avoid the effect.
 
 Naga, Spirit
 SPIRIT nAgA CR 9
@@ -13160,59 +11585,9 @@ Environment temperate marshes
 Organization solitary or nest (2–4)
 Treasure standard
 SPECIAL ABILITIES
-Charming gaze (Su) As charm person, 30 feet, Will DC 20 
-negates. The save DC is Charisma-based.
-Poison (Ex) Bite—injury; save Fort DC 20; frequency 1/round 
-for 6 rounds; effect 1d4 Con damage; cure 1 save.
-Spells A spirit naga casts spells as a 7th-level sorcerer, 
-and can cast spells from the cleric list as 
-well as those normally available to a 
-sorcerer. Cleric spells are considered 
-arcane spells for a spirit naga.
-Morbid-minded and wretched to look 
-upon, spirit nagas are the witches of the 
-naga race, hateful outcasts long shunned for 
-
-their dark powers and loathsome ways. A typical spirit 
-naga is slender, with the scales of a venomous serpent 
-and a tangle of greasy hair framing their pale faces. Most 
-measure 14 feet long but weigh less than 300 pounds.
-Spirit nagas delight in places of death and desolation. 
-Battle-scarred ruins, untended graveyards, despoiled 
-forests, and tangled swamps all attract these repulsive 
-creatures. Where guardian nagas favor places of innate 
-sanctity, spirit nagas seek out places of fundamental 
-corruption, sites they believe to be imbued with dark 
-magics. The crypts of long-dead tyrants, the death places 
-of great heroes, and the ruins of nefarious keeps all attract 
-these wretched serpents.
-Most spirit nagas believe themselves to be the 
-inheritors of some mysterious dark favor, seeing 
-their innate magical talents as evidence of such. Most 
-commune with vague powers of death and devastation, 
-working profane rights and seeking grotesque auguries 
-from cultic forces. To aid them, spirit nagas often use 
-their enchanting gaze, changing victims into fawning 
-fanatics and would-be sacrifices.
-Spirit nagas occasionally band together in small 
-groups—some seeming to mimic the covens of hags. 
-While a particular plot or 
-foe might bring these deadly 
-serpents together for a short 
-time, spirit nagas are loyal only 
-to themselves, and such alliances 
-always end in deadly betrayal.
-
-Yellowed, venom-dripping fangs fill the human-like mouth of this 
-sinister serpentine monstrosity.
-
-NNaaggaa,, GGuuaarrddiiaann––NNaaggaa,, Spirit
-
-Spirit
-
-213
-
-213
+Charming gaze (Su) As charm person, 30 feet, Will DC 20 negates. The save DC is Charisma-based.
+Poison (Ex) Bite—injury; save Fort DC 20; frequency 1/round for 6 rounds; effect 1d4 Con damage; cure 1 save.
+Spells A spirit naga casts spells as a 7th-level sorcerer, and can cast spells from the cleric list as well as those normally available to a sorcerer. Cleric spells are considered arcane spells for a spirit naga.
 
 Neothelid
 nEOThELID CR 15
@@ -13260,50 +11635,9 @@ Organization solitary, pair, or cult (3–5 plus
 4–12 charmed slaves of various races)
 Treasure standard
 SPECIAL ABILITIES
-Mind Thrust (Su) As a standard action up to 
-three times a day, a neothelid can 
-deliver a massive blast of mental 
-
-energy at any one target within 60 feet, inflicting 15d10 points 
-of damage. A successful DC 25 Will save negates the effect. This 
-effect can only harm creatures with Intelligence scores. This is a 
-mind-affecting effect. The save DC is Charisma-based.
-Psychic Crush (Su) As a standard action up to three times a 
-day, a neothelid can attempt to crush the mind of a single 
-creature within 60 feet. The target must make a DC 25 
-Will save or collapse, becoming unconscious and dying at 
-–1 hit points. If the target succeeds on the save, it takes 
-6d6 points of damage and is sickened for 1 round. This is a 
-mind-affecting effect. The save DC is Charisma-based.
-Trace Teleport (Ex) A neothelid telepathically and reflexively 
-learns the mental coordinates of the destination, of all 
-creatures that teleport within 60 feet of it, gaining an 
-awareness of the location equivalent to “seen casually.” 
-This knowledge fades and is lost after 1 minute. This power 
-does not grant any environmental information about the 
-conditions of the destination.
-Dwelling only in the deepest reaches of the underworld, 
-the immense neothelids once ruled empires in the 
-depths, yet their numbers have been vastly reduced as 
-other races have proven swifter to breed and adapt. Today, 
-the neothelid is a legend, the subject of tales of horror 
-among those few to have experienced the creature’s wrath 
-in person and lived to tell about it.
-Neothelids are served by all manner of strange worm-
-like creatures, minions they use to observe and wage war 
-against their enemies. The neothelids themselves were 
-spawned by even more horrific entities, ageless horrors 
-from strange dimensions beyond the edge of known 
-reality—the neothelids see themselves as the 
-chosen agents of these malevolent forces, working 
-to ready the world for their return.
-
-Its slime-drenched length coiled upon itself in a shuddering 
-mountain, this huge worm’s tentacled head rises like a snake’s.
-
-214
-
-214
+Mind Thrust (Su) As a standard action up to three times a day, a neothelid can deliver a massive blast of mental energy at any one target within 60 feet, inflicting 15d10 points of damage. A successful DC 25 Will save negates the effect. This effect can only harm creatures with Intelligence scores. This is a mind-affecting effect. The save DC is Charisma-based.
+Psychic Crush (Su) As a standard action up to three times a day, a neothelid can attempt to crush the mind of a single creature within 60 feet. The target must make a DC 25 Will save or collapse, becoming unconscious and dying at –1 hit points. If the target succeeds on the save, it takes 6d6 points of damage and is sickened for 1 round. This is a mind-affecting effect. The save DC is Charisma-based.
+Trace Teleport (Ex) A neothelid telepathically and reflexively learns the mental coordinates of the destination, of all creatures that teleport within 60 feet of it, gaining an awareness of the location equivalent to “seen casually.” This knowledge fades and is lost after 1 minute. This power does not grant any environmental information about the conditions of the destination.
 
 Night Hag
 nIghT hAg CR 9
@@ -13341,50 +11675,9 @@ Organization solitary, mounted (1 and 1 nightmare), or coven
 (3 hags of any type)
 Treasure standard
 SPECIAL ABILITIES
-Disease (Su) Demon Fever: Bite—injury; save Fort DC 20; onset 
-immediate; frequency 1/day; effect 1d6 Con damage (target must 
-save a 2nd time or 1 point of the damage is drain instead); cure 2 
-consecutive saves. The save DC is Constitution-based.
-Dream haunting (Su) A night hag can visit the dreams of chaotic 
-or evil targets by using a special periapt known as a 
-heartstone to become ethereal, then hovering over 
-the creature. Once it does so, it rides on the victim’s 
-back until dawn. The sleeper suffers tormenting 
-dreams and takes 1 point of Constitution drain 
-upon awakening. Only another ethereal 
-being can stop these nocturnal intrusions 
-by confronting and defeating the night hag.
-
-heartstone (Su) All night hags carry a heartstone—a special 
-gemstone worth at least 1,800 gp that is worn as a periapt. 
-A heartstone’s magic is fueled by the hag’s spirit and 
-proximity—once separated from its owner (or upon the hag’s 
-death), a heartstone retains its magic for only 24 hours before 
-becoming a nonmagical gem again. The heartstone instantly 
-cures any disease contracted by the holder. In addition, a 
-heartstone provides a +2 resistance bonus on all saving 
-throws (this bonus is included in the statistics block above). A 
-night hag that loses this charm can no longer use etherealness 
-or soul bind until it finds a replacement gemstone.
-Terrifying murderesses and greedy soul brokers, night 
-hags prey upon mortals while they’re most vulnerable. 
-Preferring to kill their prey slowly, haunting their dreams 
-night after night, these hags trap the tormented souls of 
-their victims within dark gems so they might be sold in 
-the infernal markets of the outer planes. Night hags vary 
-widely in appearance, standing between 5-1/2 and 7 feet 
-tall, and weighing from 150 to 300 pounds.
-
-Grisly fetishes and the rags of once fine clothes hang off the corpse-
-thin frame of this horrifying, sharp-fanged crone.
-
-NNeeoothelid–Night Hag
-
-thelid–Night Hag
-
-215
-
-215
+Disease (Su) Demon Fever: Bite—injury; save Fort DC 20; onset immediate; frequency 1/day; effect 1d6 Con damage (target must save a 2nd time or 1 point of the damage is drain instead); cure 2 consecutive saves. The save DC is Constitution-based.
+Dream haunting (Su) A night hag can visit the dreams of chaotic or evil targets by using a special periapt known as a heartstone to become ethereal, then hovering over the creature. Once it does so, it rides on the victim’s back until dawn. The sleeper suffers tormenting dreams and takes 1 point of Constitution drain upon awakening. Only another ethereal being can stop these nocturnal intrusions by confronting and defeating the night hag.
+heartstone (Su) All night hags carry a heartstone—a special gemstone worth at least 1,800 gp that is worn as a periapt.  A heartstone’s magic is fueled by the hag’s spirit and proximity—once separated from its owner (or upon the hag’s death), a heartstone retains its magic for only 24 hours before becoming a nonmagical gem again. The heartstone instantly cures any disease contracted by the holder. In addition, a heartstone provides a +2 resistance bonus on all saving throws (this bonus is included in the statistics block above). A night hag that loses this charm can no longer use etherealness or soul bind until it finds a replacement gemstone.
 
 Nightmare Nightmare, Cauchemar
 nIghTMARE CR 5
@@ -13414,26 +11707,7 @@ Environment any (Abaddon)
 Organization solitary
 Treasure none
 SPECIAL ABILITIES
-Smoke (Su) In battle, a nightmare 
-exhales smoke that chokes and 
-blinds foes, filling a 15-foot cone 
-each round as a free action. 
-Anyone in the cone must succeed 
-on a DC 16 Fortitude save or become sickened 
-until 1d6 minutes after leaving the area. This 
-smoke acts as obscuring mist for the purposes of 
-concealment. The smoke persists for 1 round. 
-The save DC is Constitution-based. 
-Nightmares are f laming harbingers 
-of death. They allow only the most 
-evil of creatures to ride them, and 
-are never mere mounts, but rather 
-willing partners in destruction.
-The cauchemar is a more dangerous 
-variant of the nightmare, particularly 
-valued for its ability to enter the Ethereal 
-Plane with its rider in addition to being able to use 
-plane shift to invade other realities.
+Smoke (Su) In battle, a nightmare exhales smoke that chokes and blinds foes, filling a 15-foot cone each round as a free action.  Anyone in the cone must succeed on a DC 16 Fortitude save or become sickened until 1d6 minutes after leaving the area. This smoke acts as obscuring mist for the purposes of concealment. The smoke persists for 1 round.  The save DC is Constitution-based. 
 
 CAUChEMAR CR 11
 XP 12,800
@@ -13520,73 +11794,12 @@ Environment temperate forest
 Organization solitary
 Treasure standard (dagger, other treasure)
 SPECIAL ABILITIES
-Blinding Beauty (Su) This ability affects all humanoids within 
-30 feet of a nymph. Those who look directly at a nymph 
-must succeed on a DC 21 Fortitude save or be blinded 
-
-permanently. A nymph can suppress or resume this ability 
-as a free action. The save DC is Charisma-based.
-Inspiration (Su) A nymph can choose an intelligent creature 
-to inspire and serve as a muse by giving that creature 
-some token of her affection (typically a lock of her hair). 
-As long as the nymph retains her favor for this creature 
-and as long as the creature carries the nymph’s token, 
-the creature gains a +4 insight bonus on all Will saving 
-throws, Craft checks, and Perform checks. A bard who 
-has a nymph for a muse in this way can use his 
-bardic performance for an additional number 
-of rounds per day equal to his nymph muse’s 
-Charisma modifier. The nymph retains a 
-link to her token and its carrier as if she 
-had cast a status spell on the carrier. The 
-nymph can end this effect at any time 
-as a free action. A single nymph may 
-only inspire one creature at a 
-time in this manner.
-Spells A nymph casts spells as 
-a 7th-level druid, but cannot 
-swap out prepared spells to cast 
-summon spells.
-Stunning glance (Su) As a 
-standard action, a nymph can 
-stun a creature within 30 feet with 
-a look. The target must succeed 
-on a DC 21 Fortitude save or be 
-stunned for 2d4 rounds. The save 
-DC is Charisma-based.
-Unearthly grace (Su) A nymph 
-adds her Charisma modifier as 
-a racial bonus on all her saving 
-throws, and as a deflection bonus to 
-her Armor Class.
-Wild Empathy (Su) This works like 
-the druid’s wild empathy class 
-feature, except the nymph has a +6 
-racial bonus on the check. The nymph’s 
-effective druid level is equal to her HD for 
-determining her total modifer to the check. 
-Many have lost their lives in vain search of the 
-beauty of the nymph, and many more to the madness 
-and obsession their grace has upon minds and bodies 
-unprepared for their companionship. Yet the nymph 
-herself is not a cruel creature—a guardian of nature’s 
-purest places and most beautiful realms, she treats those 
-who respect her and her abode with kindness, and may 
-even favor someone who takes her fancy with magical 
-gifts. Yet those who would seek to abuse or harm her or 
-her home quickly find that behind her beauty is a fierce 
-protector more than capable of defending her charge.
-
-A delicate figure rises from the water, her long ears tapering to 
-points above her head, her beauty painful in its perfection.
-
-NNiigghtmare–Nymph
-
-htmare–Nymph
-
-217
-
-217
+Blinding Beauty (Su) This ability affects all humanoids within 30 feet of a nymph. Those who look directly at a nymph must succeed on a DC 21 Fortitude save or be blinded permanently. A nymph can suppress or resume this ability as a free action. The save DC is Charisma-based.
+Inspiration (Su) A nymph can choose an intelligent creature to inspire and serve as a muse by giving that creature some token of her affection (typically a lock of her hair).  As long as the nymph retains her favor for this creature and as long as the creature carries the nymph’s token, the creature gains a +4 insight bonus on all Will saving throws, Craft checks, and Perform checks. A bard who has a nymph for a muse in this way can use his bardic performance for an additional number of rounds per day equal to his nymph muse’s Charisma modifier. The nymph retains a link to her token and its carrier as if she had cast a status spell on the carrier. The nymph can end this effect at any time as a free action. A single nymph may only inspire one creature at a time in this manner.
+Spells A nymph casts spells as a 7th-level druid, but cannot swap out prepared spells to cast summon spells.
+Stunning glance (Su) As a standard action, a nymph can stun a creature within 30 feet with a look. The target must succeed on a DC 21 Fortitude save or be stunned for 2d4 rounds. The save DC is Charisma-based.
+Unearthly grace (Su) A nymph adds her Charisma modifier as a racial bonus on all her saving throws, and as a deflection bonus to her Armor Class.
+Wild Empathy (Su) This works like the druid’s wild empathy class feature, except the nymph has a +6 racial bonus on the check. The nymph’s effective druid level is equal to her HD for determining her total modifer to the check. 
 
 Ochre Jelly
 OChRE jELLy CR 5
