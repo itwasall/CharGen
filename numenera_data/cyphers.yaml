@@ -31,7 +31,7 @@ Metal Melding Helm:
   Wearable: Head-covering helm studded with   strange devices
   Effect: Once activated, the wearer can exert force on metal objects within short range for up to one hour. The force exerted is approximately equal to the strength of a fit, capable, adult human. The wearer can use it to slowly move or push off from metal objects, and so on. This force lacks the fine control to wield a weapon or move quickly, so in most situations, it's not a means of attack.
 Detonation (Horde Suppressor):
-  Level 1d6 + 1
+  Level: 1d6 + 1
   Wearable: Wristband projector (long range)
   Usable: Handheld projector (long range)
   Effect: Explodes to release a burst of neurotoxic mist affecting all creatures within long range, hindering all attacks for about an hour. If effectively targeted during a conflict against a ranked horde or community, the affected horde or community inflicts 1 point of damage less than normal during that community action.
@@ -286,17 +286,17 @@ Detonation:
    - 51–75 Fire
    - 76–00 Shrapnel
 Detonation (Desiccating):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Bursts in an immediate radius, draining moisture from everything within it. Living creatures take damage equal to the cypher level. Water in the area is vaporized.
 Detonation (Flash):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Bursts in an immediate radius, blinding all within it for one minute (ten minutes if the cypher is level 4 or higher).
 Detonation (Gravity):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Bursts in an immediate radius, inflicting damage equal to the cypher level by increasing gravity tremendously for one second. All in the area are crushed to the ground for one round and cannot take physical actions.
@@ -319,12 +319,12 @@ Density Nodule:
   Usable: Crystal nodule affixed to a melee weapon
   Effect: For the next 28 hours, each time the weapon the nodule is attached to strikes a solid creature or object, the weapon suddenly increases dramatically in weight, causing the blow to inflict an additional 2 points of damage (3 points if the cypher is level 4 or higher).
 Detonation (Sonic):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Explodes with terrifying sound, deafening all in an immediate radius for ten minutes per cypher level.
 Detonation (Spawn):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: "Bursts in an immediate radius, blinding all within it for one minute and inflicting damage equal to the cypher level. The burst spawns 1d6 additional detonations; on the next round, each additional detonation flies to a random spot within short range and explodes in an immediate radius. Roll for the type of damage dealt by all detonations:"
@@ -336,12 +336,12 @@ Detonation (Spawn):
    - 51–75 Fire
    - 76–00 Shrapnel
 Detonation (Web):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device (thrown, short range) or handheld projector (long range)
   Effect: Explodes in an immediate radius and creates sticky strands of goo that last 1 hour. PCs caught in the area must use a Might-based action to get out, with the difficulty determined by the cypher level. NPCs break free if their level is higher than the cypher level.
 Detonation (Massive):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (very long range)
   Usable: Handheld projector (very long range)
   Effect: "Explodes in a short-range radius, inflicting damage equal to the cypher level. Roll for the type of damage:"
@@ -353,17 +353,17 @@ Detonation (Massive):
    - 51–75 Fire
    - 76–00 Shrapnel
 Detonation (Matter Disruption):
-  Level 1d6 + 4
+  Level: 1d6 + 4
   Wearable: Wristband projector (long range)
   Usable: Explosive device or ceramic sphere (thrown, short range) or handheld projector (long range)
   Effect: Explodes in an immediate radius, releasing nanites that rearrange matter in random ways. Inflicts damage equal to the cypher level.
 Detonation (Pressure):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Wearable: Wristband projector (long range)
   Usable: Explosive device (thrown, short range) or handheld projector (long range)
   Effect: Explodes in an immediate radius, inflicting impact damage equal to the cypher level. Also moves unattended objects out of the area if they weigh less than 20 pounds (9 kg) per cypher level.
 Detonation (Singularity):
-  Level 10
+  Level: 10
   Usable: Explosive device or ceramic sphere   (thrown, short range) or handheld projector (long range)
   Effect: Explodes and creates a momentary singularity that tears at the fabric of the universe. Inflicts 20 points of damage to all within short range, drawing them (or their remains) together to immediate range (if possible). Player characters in the radius move one step down the damage track if they fail a Might defense roll.
 Force Screen Projector:
@@ -596,7 +596,7 @@ Poison (Explosive):
    - 61–80 The victim comes within long range of the detonator.
    - 81–00 The victim is no longer within long range of the detonator.
 Poison (Mind-Controlling):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Internal: Pill, ingestible or injectable liquid
   Wearable: Lipstick, false fingertip, ring with needle
   Usable: Injector
@@ -1005,7 +1005,7 @@ Follower Seed:
   Usable: Oblong metallic seed roughly 1 inch (2.5 cm) in diameter
   Effect: When the seed is placed in drit and activated, a level 2 humanoid automaton grows from that spot. The automaton provides the effects of a follower for the user for up to ten hours. Different seeds grow different kinds of followers, including those presented on the Follower Seed Table. Some of these followers provide services rather than a modification to a PC's tasks, as indicated on the table.
 Horde Horn (Confusion):
-  Level 1d6 + 2
+  Level: 1d6 + 2
   Usable: Device with hornlike speaker
   Effect: The cypher creates an audible effect a very long distance across centered on a location within 1 mile (1.5 km) that the user can see. Creatures in the area whose level is up to 3 less than the cypher's level become confused and disperse. The effects last for up to 28 hours. If used during a conflict between ranked communities or hordes, the affected horde disbands, or the affected community's fighting force does not take the field. The effect ends early if battle is still joined by an enemy force.
 Horde Horn (Enervation):

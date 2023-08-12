@@ -1,4 +1,22 @@
 import random
+import yaml
+
+cyphers = yaml.safe_load(open('.\\numenera_data\\cyphers.yaml', 'rt', encoding='utf-8'))
+
+def roll(dicestring):
+    if isinstance(dicestring, int):
+        return dicestring
+    if "+" in dicestring:
+        dicestring, mods = dicestring.split('+')
+    else: 
+        mods = 0
+    throws, sides = [int(_) for _ in dicestring.split('d')]
+    return sum([int(mods), sum([random.randint(1, sides) for _ in range(throws)])])
+
+for key in cyphers.keys():
+    cyphers[key]['Level'] = roll(cyphers[key]['Level'])
+    print(key, cyphers[key]['Level'])
+    
 
 class AbstractBaseClass:
     def __init__(self, name, **kwargs):
@@ -51,13 +69,32 @@ MIGHT = _Stat("Might")
 SPEED = _Stat("Speed")
 INTELLECT = _Stat("Intellect")
 
-def GenStats(x,y,z):
-    MIGHT += x
-    SPEED += y
-    INTELLECT += z
+class Character:
+    def __init__(self, name):
+        self.name = name
+        self.char_type = None
+        self.char_desc = None
+        self.char_focus = None
+        self.stats = {
+            'Might': MIGHT,
+            'Speed': SPEED,
+            'Intellect': INTELLECT
+        }
+        self.edge = {
+            'Might': 0,
+            'Speed': 0,
+            'Intellect': 0
+        }
+        self.skills = {}
+        self.numenera = {}
+
+
+def genCharacter():
+    pass
+
 
 # Character Types
-GLAIVE = _CharType("Glaive", GenStats(11, 10, 7))
+GLAIVE = _CharType("Glaive", stats=(11, 10, 7))
 NANO = _CharType("Nano")
 JACK = _CharType("Jack")
 ARKUS = _CharType("Arkus")
