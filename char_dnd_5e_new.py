@@ -303,8 +303,11 @@ def genSubClass(subclass):
 
 
 
-def genClass(ability_score_rolls):
-    char_class = random.choice(CLASSES)
+def genClass(ability_score_rolls, force_class = None):
+    if force_class is not None and force_class in [i.name for i in CLASSES]:
+        char_class = [_ for _ in CLASSES if _.name == force_class][0]
+    else:
+        char_class = random.choice(CLASSES)
     # char_class = Core.CLERIC
     CHARACTER._class = char_class
     top_rolls = ability_score_rolls[0:2]
@@ -501,15 +504,7 @@ def genBackground():
                 attributes_generated.append('_getattr')
                 attributes_generated.append('name')
 
-
-
-    
-
-
-        
-
-def genCharacter():
-
+def genCharacter(force_class=None):
     ability_score_rolls = []
     for _ in range(6):
         rolls = diceRoll("4d6", summed=False)
@@ -520,7 +515,10 @@ def genCharacter():
     ability_score_rolls = sortReverse(ability_score_rolls)
 
     genRace()
-    genClass(ability_score_rolls)
+    if force_class is not None:
+        genClass(ability_score_rolls, force_class)
+    else:
+        genClass(ability_score_rolls)
     genBackground()
 
     # char_race = random.choice(RACES)
@@ -539,6 +537,7 @@ def genCharacter():
     CHARACTER.getStats()
     CHARACTER.getEquipment()
     CHARACTER.getSpells()
-    return None
+    return CHARACTER
 
-genCharacter()
+if __name__ == "__main__":
+    a = genCharacter(force_class='Barbarian')
