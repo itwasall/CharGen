@@ -1,4 +1,4 @@
-import csv
+import csv, random
 
 csvfile = csv.DictReader(open('dndmonster.csv', 'tr'))
 
@@ -54,12 +54,7 @@ for k, d in solo_monster_limit_four.items():
     solo_monster_limit_five[k] = d+1
     solo_monster_limit_six[k] = d+2
 
-import click
-
-@click.command()
-@click.argument('party_size', default = 4)
-@click.argument('level', default = 1)
-def get_solo_monster_cr(party_size, level):
+def get_solo_monster_cr(party_size=4, level=1):
     if party_size == 4:
         x = solo_monster_limit_four[level]
         print(f'Recommended challenge rating for party of {party_size} at level {level}: CR{x}')
@@ -73,6 +68,4 @@ def get_solo_monster_cr(party_size, level):
     print(challenge_rating[str(x)])
 
 if __name__ == "__main__":
-    x = get_solo_monster_cr()
-    print(x.__class__)
-    print(challenge_rating[str(x)])
+    get_solo_monster_cr(level=random.randint(1,20))

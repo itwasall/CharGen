@@ -364,11 +364,6 @@ class Lifestyle:
         return self.nuyen
 
 
-
-    
-
-
-
 """
     ATTRIBUTES
 """
@@ -958,7 +953,34 @@ I'm like 100 lines into electronics alone, probably a few hundred if you include
 I say this because the sensor section can go fuck itself. For now. I'll figure out something in the future, probably
     a shitty band-aid solution because I really do not want to reengineer how I've been storing data up to this point.
 Fuck that.
+
+Edit from months later: Just gonna bodge the sensor functions as their own dict, with the sensor function as the key and it's range as the value.
+    Then gonna add a custom arg to randomly pull one of those sensor functions from whatever kind of sensor/sensor housing gets rolled
 """
+SENSOR_FUNCTIONS = {
+    "Atmosphere Sensor": 0, "Camera": 0, "Cyberware Scanner": 15, "Directional Microphone": 0, "Geiger Counter": 0, 'Laser Microphone': 100, 'Laser Range Finder': 1000, 'MAD Scanner': 5,
+    'Motion Sensor': 25, 'Oilfactory Sensor': 0, 'Omni-directional Microphone': 0, 'Radio Signal Scanner': 20, 'Ultrasound': 50
+}
+SENSOR_HOUSINGS = { # 'Sensor Package': Max Sensor Rating
+    'RFID': 2,
+    'Audio Device': 2,
+    'Visual Device': 2,
+    'Headware': 2,
+    'Handheld Device': 3,
+    'Small Drone': 3,
+    'Wall-mounted Device': 4,
+    'Medium Drone': 4,
+    'Large Drone': 5,
+    'Cyberlimb': 5,
+    'Motorcycle': 6,
+    'Vehicle': 7,
+    'Building': 8,
+    'Airport': 8
+}
+HANDHELD_HOUSING = Electronics("Handheld Housing", cost=["Capacity", "*", 100], page_ref=445, rating=[1, "to", 3], avail="-", capacity=[1, "to", 3], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 3], sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
+WALL_MOUNTED_HOUSING = Electronics("Wall-Mounted Housing", cost=["Capacity", "*", 250], page_ref=445, rating=[1, "to", 4], avail="-", capacity=[1, "to", 6], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 4], sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
+SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=445, rating=[2, "to", 8], avail="-", capacity=6, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
+SINGLE_SENSOR = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail="-", capacity=1, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
 # =============== SECURITY DEVICES====
 KEY_COMBINATION_LOCK = Electronics("Key_Combination_Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
 MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating="-", avail="Rating", subtype="Security Device")
@@ -1091,3 +1113,5 @@ print(STREETSAMURAI.what_is())
 print(DEFINANCE_EX_SHOCKER.what_is())
 print(DEFINANCE_EX_SHOCKER.damage)
 print(SENSOR_RFID.category)
+print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
+print(SINGLE_SENSOR.sensor_function)
