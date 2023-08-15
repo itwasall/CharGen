@@ -1,6 +1,5 @@
 import chargen
 import random
-from yaml import safe_load
 
 """
     GOALS
@@ -20,9 +19,6 @@ Lets set out some design goals and then have nowhere to formally put them.
 def dice(dice_string):
     sides, throws = dice_string.split("d")
     return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
-
-
-gear = safe_load(open('./shadowrun_5e_data/gear.yaml', 'rt'))
 
 class Attribute:
     def __init__(self, name, value: int = 0):
