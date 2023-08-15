@@ -11,13 +11,14 @@ def expand(d):
         else:
             ret[k] = v
     return ret
-def dice(throws):
-    y = throws.split("d")
-    total = 0
-    for i in range(int(y[0])):
-        x = random.randint(1,int(y[1]))
-        total += x
-    return total
+
+def dice(dicestring):
+    if "+" in dicestring:
+        dicestring, mods = dicestring.split('+')
+    else:
+        mods = 0
+    throws, sides = [int(_) for _ in dicestring.split('d')]
+    return sum([int(mods), sum([random.randint(1, sides) for _ in range(throws)])])
 
 encounter_artic_1_4 = expand({
              1: "1 Giant Owl",
