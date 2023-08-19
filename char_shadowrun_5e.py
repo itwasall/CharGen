@@ -21,28 +21,29 @@ def dice(dice_string):
     return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
 
 class Attribute:
+    items = []
     def __init__(self, name, value: int = 0):
+        Attribute.items.append(self)
         self.name = name
         self.value = value
-        self.attribute_limit = 0
+        self.limit = 0
 
     def __add___(self, amount: int):
         self.value += amount
         return Attribute(self.name, self.value)
 
-    def set_attribute_limit(self, value: int):
-        self.attribute_limit = value
+    def set_limit(self, value: int):
+        self.limit = value
         return
 
-    def set_attribute_value(self, value: int):
+    def set_value(self, value: int):
         self.value = value
         return
 
     def __repr__(self):
-        return f"{self.name}: [{self.value}/{self.attribute_limit}]"
+        return f"{self.name}: [{self.value}/{self.limit}]"
 
-    def what_is(self):
-        return f"{self.name} is an Attribute"
+
 
 class Attributes:
     def __init__(self):
@@ -66,67 +67,70 @@ class Attributes:
         for value in data.keys():
             match value:
                 case ["Body", "BODY"]:
-                    self.Body.set_attribute_value(data[value][0])
-                    self.Body.set_attribute_limit(data[value][1])
+                    self.Body.set_value(data[value][0])
+                    self.Body.set_limit(data[value][1])
                 case ["Agility", "AGI"]:
-                    self.Agility.set_attribute_value(data[value][0])
-                    self.Agility.set_attribute_limit(data[value][1])
+                    self.Agility.set_value(data[value][0])
+                    self.Agility.set_limit(data[value][1])
                 case ["Reaction", "REA"]:
-                    self.Reaction.set_attribute_value(data[value][0])
-                    self.Reaction.set_attribute_limit(data[value][1])
+                    self.Reaction.set_value(data[value][0])
+                    self.Reaction.set_limit(data[value][1])
                 case ["Strength", "STR"]:
-                    self.Strength.set_attribute_value(data[value][0])
-                    self.Strength.set_attribute_limit(data[value][1])
+                    self.Strength.set_value(data[value][0])
+                    self.Strength.set_limit(data[value][1])
                 case ["Willpower", "WIL"]:
-                    self.Willpower.set_attribute_value(data[value][0])
-                    self.Willpower.set_attribute_limit(data[value][1])
+                    self.Willpower.set_value(data[value][0])
+                    self.Willpower.set_limit(data[value][1])
                 case ["Logic", "LOG"]:
-                    self.Logic.set_attribute_value(data[value][0])
-                    self.Logic.set_attribute_limit(data[value][1])
+                    self.Logic.set_value(data[value][0])
+                    self.Logic.set_limit(data[value][1])
                 case ["Intuition", "INT"]:
-                    self.Intuition.set_attribute_value(data[value][0])
-                    self.Intuition.set_attribute_limit(data[value][1])
+                    self.Intuition.set_value(data[value][0])
+                    self.Intuition.set_limit(data[value][1])
                 case ["Charisma", "CHA"]:
-                    self.Charisma.set_attribute_value(data[value][0])
-                    self.Charisma.set_attribute_limit(data[value][1])
+                    self.Charisma.set_value(data[value][0])
+                    self.Charisma.set_limit(data[value][1])
                 case ["Edge", "EDG"]:
-                    self.Edge.set_attribute_value(data[value][0])
-                    self.Edge.set_attribute_limit(data[value][1])
+                    self.Edge.set_value(data[value][0])
+                    self.Edge.set_limit(data[value][1])
                 case ["Essence", "ESS"]:
-                    self.Essence.set_attribute_value(data[value][0])
+                    self.Essence.set_value(data[value][0])
                     raise ValueError("Essence does not have a limit")
                 case _:
                     pass
 
 
 class Metatype:
+    items = []
     def __init__(self, name: str):
+        Metatype.items.append(self)
         self.name = name
         self.racial_attributes = Attributes()
 
     def __repr__(self):
         return self.name
 
-    def what_is(self):
-        return f"{self.name} is a Metatype"
 
 
 class Type:
+    items = []
     def __init__(self, name: str):
+        Type.items.append(self)
         self.name = name
 
     def __repr__(self):
         return self.name
 
-    def what_is(self):
-        return f"{self.name} is a Character Type"
 
-class DamageType(Type):
+class DamageType():
+    items = []
     def __init__(self, name: str):
-        super().__init__(name)
+        DamageType.items.append(self)
+        self.name = name
+
+    def __repr__(self):
+        return self.name
     
-    def what_is(self):
-        return f"{self.name} is a Damage Type"
 
 
 
@@ -179,11 +183,11 @@ class Qualitiy:
                     return False
         pass
 
-    def what_is(self):
-        return f"{self.name} is a Quality"
 
 class Skill:
+    items = []
     def __init__(self, name: str, attribute: Attribute, skill_type: str, rating: int = 0, category = None):
+        Skill.items.append(self)
         self.name = name
         self.attribute = attribute.name
         self.skill_type = skill_type
@@ -197,39 +201,39 @@ class Skill:
     def __repr__(self):
         return (self.name, self.value)
 
-    def what_is(self):
-        return f"{self.name} is a Skill of '{self.skill_type}' type"
 
 class Skill_Group:
+    items = []
     def __init__(self, name: str, skills: list):
+        Skill_Group.items.append(self)
         self.name = name
         self.skills = skills
 
     def __repr__(self):
         return self.skills
 
-    def what_is(self):
-        return f"{self.name} is a Skill Group comprising {', '.join([skill for skill in self.skills])}"
 
 """
 """
 
 class Gear:
+    items = []
     def __init__(self, name, cost, page_ref):
+        Gear.items.append(self)
         self.name = name
         self.cost = cost
         self.page_ref = page_ref
         self.category = None
         self.subtype = None
-    
-    def what_is(self):
-        return f"[{self.category}/{self.subtype}] - {self.name} is a piece of Gear"
 
     def __repr__(self):
         return self.name
 
+
 class Melee_Weapon(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        Melee_Weapon.items.append(self)
         super().__init__(name, cost, page_ref)
         self.avail = avail
         self.category = "Melee Weapon"
@@ -238,7 +242,9 @@ class Melee_Weapon(Gear):
             self.__setattr__(k, d)
 
 class Projectile_Weapon(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        Projectile_Weapon.items.append(self)
         super().__init__(name, cost, page_ref)
         self.avail = avail
         self.category = "Projectile Weapon"
@@ -247,7 +253,9 @@ class Projectile_Weapon(Gear):
             self.__setattr__(k, d)
 
 class Firearm(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
+        Firearm.items.append(self)
         super().__init__(name, cost, page_ref)
         self.avail = avail
         self.category = "Firearm"
@@ -256,7 +264,9 @@ class Firearm(Gear):
             self.__setattr__(k, d)
 
 class FirearmAcc(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, mount, avail, **kwargs):
+        FirearmAcc.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Firearm Accessory"
         self.mount = mount
@@ -265,7 +275,9 @@ class FirearmAcc(Gear):
             self.__setattr__(k, d)
 
 class Ammo(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, avail, **kwargs):
+        Ammo.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Ammunition"
         self.avail = avail
@@ -273,21 +285,27 @@ class Ammo(Gear):
             self.__setattr__(k, d)
 
 class Clothing(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, **kwargs):
+        Clothing.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Clothing"
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
 class Armor(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, **kwargs):
+        Armor.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Armor"
         for k, d in kwargs.items():
             self.__setattr__(k, d)
 
 class ArmorModification(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, avail, capacity, **kwargs):
+        ArmorModification.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Armor"
         self.subtype = "Modification"
@@ -297,7 +315,9 @@ class ArmorModification(Gear):
             self.__setattr__(k, d)
 
 class Electronics(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, rating, avail, subtype, **kwargs):
+        Electronics.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = "Electronics"
         self.rating = rating
@@ -309,7 +329,7 @@ class Electronics(Gear):
 """
     The Item Class. Why now?
 
-So while the previous inheritants of the "Gear" class could all technically classify as "Items", I'm making a distinction
+heritants of the "Gear" class could all technically classify as "Items", I'm making a distinction
     from the above and generic items by common-sense TTRPG logic, as oxymoronic as that sounds.
 
 If it equips to you, it ain't an item.
@@ -321,7 +341,9 @@ Also I made the Ammo class before I got around to doing this class so fuck you, 
 """
 
 class Item(Gear):
+    items = []
     def __init__(self, name, cost, page_ref, rating=0, category="Item", subtype=None, **kwargs):
+        Item.items.append(self)
         super().__init__(name, cost, page_ref)
         self.category = category
         self.subtype = subtype
@@ -331,7 +353,9 @@ class Item(Gear):
 
 
 class GearAvailability:
+    items = []
     def __init__(self, name):
+        GearAvailability.items.append(self)
         self.name = name
     
     def __repr__(self):
@@ -345,7 +369,9 @@ class GearAvailability:
         money
 """
 class Lifestyle:
+    items = []
     def __init__(self, name, dice_string, base_amount, cost):
+        Lifestyle.items.append(self)
         self.name = name
         self.dice_string = dice_string
         self.base_amount = base_amount 
@@ -1090,17 +1116,90 @@ PRIORITY_TABLE = {
     }
 }
 
-character = {
-    'Name': "",
-    'Metatype': Metatype
-}
+class Character: 
+    def __init__(self):
+        self.personal_data= {
+            'Name': None,
+            'Concept': None,
+            'Metatype': None,
+            'Ethnicity': None,
+            'Age': None,
+            'Sex': None,
+            'Height': None,
+            'Weight': None,
+            'Streed Cred': None,
+            'Notoriety': None,
+            'Public Awareness': None,
+            'Karma': None,
+            'Total Karma': None,
+            'Misc': None
+        }
+        self.attributes= {
+            'Body': None,
+            'Agility': None,
+            'Reaction': None,
+            'Strength': None,
+            'Willpower': None,
+            'Logic': None,
+            'Intuition': None,
+            'Charisma': None,
+            'Edge': None,
+            'Edge_Points': None,
+            'Essence': None,
+            'Magic_Resonance': None,
+            'Initiative': None,
+            'Matrix_Initiative': None,
+            'Astral_Initiative': None,
+            'Composure': None,
+            'Judge_Intentions': None,
+            'Memory': None,
+            'Lift_Carry': None,
+            'Movement': None,
+            'Physical_Limit': None,
+            'Mental_Limit': None,
+            'Social_Limit': None,
+        }
+        self.skills= {}
+        self.IDs_lifestyle_currency={
+            'Primary_Lifestyle': None,
+            'Nuyen': None,
+            'Licences': None,
+            'Other': None,
+        }
+        self.core_combat_info= {
+            'Physical_Armor': None,
+            'Primary_Ranged_Weapon': None,
+            'Primary_Melee_Weapon': None,
+        }
+        self.condition_monitor= {
+            'Physical Damage Track': None,
+            'Stun Damage Track': None,
+            'Overflow': None
+        }
+        self.qualities= {}
+        self.contacts= {}
+        self.inventory= {
+            'Ranged Weapons': None,
+            'Melee Weapons': None,
+            'Armor': None,
+            'Cyberdeck': None,
+            'Augmentations': None,
+            'Vehicle': None,
+            'Spells': None,
+            'Preparation Rituals': None,
+            'Complex Forms': None,
+            'Adept Powers (Other Abilities)': None,
+            'Gear': {}
+        }
 
 def generate_character():
     # PHASE 1: CONCEPT
-
+    character = Character()
+    character.personal_data['Concept'] = random.choice(Type.items)
+    print(character.personal_data['Concept'])
     # PHASE 2: PR
     pass
-
+"""
 print(STRENGTH.what_is())
 print(BIOTECHNOLOGY.what_is())
 print(THROWING.what_is())
@@ -1111,3 +1210,6 @@ print(DEFINANCE_EX_SHOCKER.damage)
 print(SENSOR_RFID.category)
 print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
+"""
+
+generate_character()
