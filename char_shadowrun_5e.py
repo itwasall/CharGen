@@ -227,8 +227,9 @@ class Gear:
         self.subtype = None
 
     def __repr__(self):
-        return self.name
-
+        if self.subtype is not None:
+            return f'[{self.category}/{self.subtype}] {self.name} (p.{self.page_ref})'
+        return f'[{self.category}] {self.name} (p. {self.page_ref})'
 
 class Melee_Weapon(Gear):
     items = []
@@ -781,7 +782,7 @@ QUICK_DRAW_HOLSTER = FirearmAcc("Quick_Draw_Holster", cost=175, page_ref=432, mo
 SHOCK_PAD = FirearmAcc("Shock_Pad", cost=50, page_ref=432, mount="", avail=2)
 SILENCER_SUPPRESSOR = FirearmAcc("Silencer_Suppressor", cost=500, page_ref=432, mount="", avail=[9, FORBIDDEN])
 SMART_FIRING_PLATFORM = FirearmAcc("Smart_Firing_Platform", cost=2_500, page_ref=432, mount="", avail=[12, FORBIDDEN])
-SMARTGUN_SYSTEM_INTERNAL = FirearmAcc("Smartgun_System_Internal", cost=[2 * "WeaponCost"], page_ref=432, mount="", avail=[2, RESTRICTED])
+SMARTGUN_SYSTEM_INTERNAL = FirearmAcc("Smartgun_System_Internal", cost=["WeaponCost" * 2], page_ref=432, mount="", avail=[2, RESTRICTED])
 SMARTGUN_SYSTEM_EXTERNAL = FirearmAcc("Smartgun_System_External", cost=200, page_ref=432, mount="", avail=[4, RESTRICTED])
 SPARE_CLIP = FirearmAcc("Spare_Clip", cost=5, page_ref=432, mount="", avail=4)
 SPEED_LOADER = FirearmAcc("Speed_Loader", cost=25, page_ref=432, mount="", avail=2)
@@ -807,7 +808,7 @@ FLASH_BANG = Ammo("Flash Bang", cost=100, page_ref=434, avail=[6, RESTRICTED], s
 FLASH_PAK = Ammo("Flash Pak", cost=125, page_ref=434, avail=4, subtype="Grenade")
 FRAGMENTATION = Ammo("Fragmentation", cost=100, page_ref=434, avail=[11, FORBIDDEN], subtype="Grenade")
 HIGH_EXPLOSIVE = Ammo("High Explosive", cost=100, page_ref=434, avail=[11, FORBIDDEN], subtype="Grenade")
-GAS = Ammo("Gas", cost=[40, "Chemical Cost"], page_ref=434, avail=[[2, "Chemical Availability"], RESTRICTED], subtype="Grenade")
+GAS = Ammo("Gas", cost=["Chemical Cost", "+", 40], page_ref=434, avail=[[2, "Chemical Availability"], RESTRICTED], subtype="Grenade")
 SMOKE = Ammo("Smoke", cost=40, page_ref=434, avail=[4, RESTRICTED], subtype="Grenade")
 THERMAL_SMOKE = Ammo("Thermal Smoke", cost=60, page_ref=434, avail=[6, RESTRICTED], subtype="Grenade")
 # =============== MISSILES ==============
@@ -1192,6 +1193,29 @@ class Character:
             'Gear': {}
         }
 
+def attrAsDict(_class):
+    return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
+
+def get_item_cost(item: Gear):
+    if isinstance(item.cost, int):
+        return item.cost
+    item_attrs = attrAsDict(item)
+    item_cost = item.cost
+    if 'rating' in item_attrs.keys():
+        rating = random.choice(range(item.rating[0], item.rating[2]))
+        print(f'{item.name} rating is {rating}')
+    match item.cost[0]:
+        case 'Rating':
+            item_cost[0] = rating
+        case 'Capacity':
+            item_cost[0] = item.capacity
+    match item.cost[1]:
+        case "*":
+            return item_cost[0] * item_cost[2]
+        case "+":
+            return item_cost[0] + item_cost[2]
+    return item_cost
+
 def generate_character():
     # PHASE 1: CONCEPT
     character = Character()
@@ -1212,4 +1236,8 @@ print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
 
-generate_character()
+# generate_character()
+# print(random.choice(Gear.items))
+for i in Gear.items:
+    print(i.name)
+    get_item_cost(i)
