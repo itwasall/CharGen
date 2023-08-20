@@ -1225,20 +1225,8 @@ PRIORITY_TABLE_FLIPPED = {
 class Character: 
     def __init__(self):
         self.personal_data= {
-            'Name': None,
-            'Concept': None,
-            'Metatype': None,
-            'Ethnicity': None,
-            'Age': None,
-            'Sex': None,
-            'Height': None,
-            'Weight': None,
-            'Streed Cred': None,
-            'Notoriety': None,
-            'Public Awareness': None,
-            'Karma': None,
-            'Total Karma': None,
-            'Misc': None
+            'Name': None, 'Concept': None, 'Metatype': None, 'Ethnicity': None, 'Age': None, 'Sex': None, 'Height': None,
+            'Weight': None, 'Streed Cred': None, 'Notoriety': None, 'Public Awareness': None, 'Karma': None, 'Total Karma': None, 'Misc': None
         }
         self.attributes= {
             'Body': None,
@@ -1252,51 +1240,31 @@ class Character:
             'Edge': None,
             'Edge_Points': None,
             'Essence': None,
-            'Magic_Resonance': None,
-            'Initiative': None,
-            'Matrix_Initiative': None,
-            'Astral_Initiative': None,
-            'Composure': None,
-            'Judge_Intentions': None,
-            'Memory': None,
-            'Lift_Carry': None,
-            'Movement': None,
-            'Physical_Limit': None,
-            'Mental_Limit': None,
-            'Social_Limit': None,
+            'Magic_Resonance': None, 'Initiative': None, 'Matrix_Initiative': None, 'Astral_Initiative': None, 'Composure': None, 'Judge_Intentions': None, 'Memory': None,
+            'Lift_Carry': None, 'Movement': None, 'Physical_Limit': None, 'Mental_Limit': None, 'Social_Limit': None,
         }
         self.skills= {}
-        self.IDs_lifestyle_currency={
-            'Primary_Lifestyle': None,
-            'Nuyen': None,
-            'Licences': None,
-            'Other': None,
-        }
-        self.core_combat_info= {
-            'Physical_Armor': None,
-            'Primary_Ranged_Weapon': None,
-            'Primary_Melee_Weapon': None,
-        }
-        self.condition_monitor= {
-            'Physical Damage Track': None,
-            'Stun Damage Track': None,
-            'Overflow': None
-        }
+        self.IDs_lifestyle_currency={ 'Primary_Lifestyle': None, 'Nuyen': None, 'Licences': None, 'Other': None, }
+        self.core_combat_info= { 'Physical_Armor': None, 'Primary_Ranged_Weapon': None, 'Primary_Melee_Weapon': None, }
+        self.condition_monitor= { 'Physical Damage Track': None, 'Stun Damage Track': None, 'Overflow': None }
         self.qualities= {}
         self.contacts= {}
-        self.inventory= {
-            'Ranged Weapons': None,
-            'Melee Weapons': None,
-            'Armor': None,
-            'Cyberdeck': None,
-            'Augmentations': None,
-            'Vehicle': None,
-            'Spells': None,
-            'Preparation Rituals': None,
-            'Complex Forms': None,
-            'Adept Powers (Other Abilities)': None,
-            'Gear': {}
+        self.inventory= { 'Ranged Weapons': None, 'Melee Weapons': None, 'Armor': None, 'Cyberdeck': None, 'Augmentations': None, 'Vehicle': None,
+            'Spells': None, 'Preparation Rituals': None, 'Complex Forms': None, 'Adept Powers (Other Abilities)': None, 'Gear': {}
         }
+
+    def starting_attributes(self):
+        m = self.personal_data['metatype'].attributes
+        self.attributes['Body'] = m.Body
+        self.attributes['Agility'] = m.Agility
+        self.attributes['Reaction'] = m.Reaction
+        self.attributes['Strength'] = m.Strength
+        self.attributes['Willpower'] = m.Willpower
+        self.attributes['Logic'] = m.Logic
+        self.attributes['Intuition'] = m.Intuition
+        self.attributes['Charisma'] = m.Charisma
+        self.attributes['Edge'] = m.Edge
+
 
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
@@ -1378,7 +1346,15 @@ def generate_character():
     # PHASE 1: CONCEPT
     character = Character()
     priority_table = get_priorities(character)
-    print(priority_table)
+    metatype = random.choice(priority_table['Metatype'])
+    character.personal_data['Metatype'] = metatype[0]
+    character.attributes['Edge_Points'] = metatype[1]
+    character.starting_attributes()
+    print(character.personal_data['Metatype'])
+    for i in range(priority_table['Attributes']):
+
+
+
     # PHASE 2: PR
     pass
 """
@@ -1394,10 +1370,3 @@ print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
 
-# generate_character()
-# print(Quality.items)
-print(HUMAN.attributes)
-print(ELF.attributes)
-print(DWARF.attributes)
-print(ORK.attributes)
-print(TROLL.attributes)
