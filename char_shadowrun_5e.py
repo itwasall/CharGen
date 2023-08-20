@@ -146,36 +146,33 @@ class ConditionMonitor:
         return ConditionMonitor(self.overflow, self.damagetrack_physical, self.damagetrack_stun)
 
 
-class Qualitiy:
-    def __init__(name: str, polarity: int, cost, self):
+class Quality:
+    items = []
+    def __init__(self, name: str, cost, **kwargs):
+        Quality.items.append(self)
         self.name = name
-        # Positive qualities have a polarity of 1, thus making their cost positive.
-        # Negative qualities have a polarity of -1, thus making their cost negative (or in essence, adding points)
-        self.polarity = polarity
-        self.quantity = 1 # The number of times this quality can be taken. Some qualities can be taken multiple times naturally
+        self.negative = False
         self.cost = self.calc_cost(cost)
-        if type(self.cost) == bool:
-            raise TypeError(f"Cost calculation errored the fuck out. How do you explain this? {self.cost}")
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
     def calc_cost(cost, self):
         if type(cost) == int:
             return cost
+        if type(cost) == tuple:
+            return [i for i in cost]
         if type(cost) == list:
-            if len(cost) != 3:
-                return False
             match cost[1]:
                 case "or":
                     return [cost[0], cost[2]]
-                case "each":
-                    self.quantity = cost[2]
-                    return cost[0]
                 case "to":
                     return [i for i in range(cost[0], cost[2])]
-                case 6: # Catches 'Dependant(s) Quality
-                    return cost
                 case _:
                     return False
         pass
+
+    def __repr__(self):
+        return self.name
 
 
 class Skill:
@@ -607,6 +604,71 @@ DECKER = Type('Decker')
 TECHNOMANCER = Type('Technomancer')
 RIGGER = Type('Rigger')
 STREETSAMURAI = Type('Street Samurai')
+
+"""
+    QUALITIES
+"""
+# POSITIVE QUALITIES
+AMBIDEXTROUS = Quality('Ambidextrous', cost=4, page_ref=71)
+ANALYTICAL_MIND = Quality('Analytical Mind', cost=5, page_ref=72)
+APTITUDE = Quality('Aptitude', cost=14, page_ref=72)
+ASTRAL_CHAMELON = Quality('Astral Chamelon', cost=10, page_ref=72)
+BILINGUAL = Quality('Bilingual', cost=5, page_ref=72)
+BLANDESS = Quality('Blandess', cost=8, page_ref=72)
+CATLIKE = Quality('Catlike', cost=7, page_ref=72)
+CODESLINGER = Quality('Codeslinger', cost=10, page_ref=72)
+DOUBLE_JOINTED = Quality('Double Jointed', cost=6, page_ref=72)
+EXCEPTIONAL_ATTRIBUTE = Quality('Exceptional Attribute', cost=14, page_ref=72)
+FIRST_IMPRESSION = Quality('First Impression', cost=11, page_ref=74)
+FOCUSED_CONCERNTRATION = Quality('Focused Concerntration', cost=4, page_ref=74, quantity=6)
+GEARHEAD = Quality('Gearhead', cost=11, page_ref=74)
+GUTS = Quality('Guts', cost=10, page_ref=74)
+HIGH_PAIN_TOLERANCE = Quality('High Pain Tolerance', cost=7, page_ref=74, quantity=3)
+HOME_GROUND = Quality('Home Ground', cost=10, page_ref=74)
+HUMAN_LOOKING = Quality('Human Looking', cost=6, page_ref=75)
+INDOMITABLE = Quality('Indomitable', cost=8, page_ref=75, quantity=3)
+JURYRIGGER = Quality('Juryrigger', cost=10, page_ref=75)
+LUCKY = Quality('Lucky', cost=12, page_ref=76)
+MAGICAL_RESISTANCE = Quality('Magical Resistance', cost=6, page_ref=76, quantity=4)
+MENTOR_SPIRIT = Quality('Mentor Spirit', cost=5, page_ref=76)
+NATURAL_ATHLETE = Quality('Natural Athlete', cost=7, page_ref=76)
+NATURAL_HARDENING = Quality('Natural Hardening', cost=10, page_ref=76)
+NATURAL_IMMUNITY = Quality('Natural Immunity', cost=[4, "or", 10], page_ref=76)
+PHOTOGRAPHIC_MEMORY = Quality('Photographic Memory', cost=6, page_ref=76)
+QUICK_HEALER = Quality('Quick Healer', cost=3, page_ref=77)
+RESISTANCE_TO_PATHOGENS_TOXINS = Quality('Resistance to Pathogens/Toxins', cost=[4, "or", 8], page_ref=78)
+SPIRIT_AFFINITY = Quality('Spirit Affinity', cost=7, page_ref=78)
+TOUGHNESS = Quality('Toughness', cost=9, page_ref=78)
+WILL_TO_LIVE = Quality('Will to Live', cost=3, page_ref=78, quantity=4)
+# NEGATIVE QUALITIES
+ADDICTION = Quality('Addiction', cost=[4, "to", 25], page_ref=77, negative=True)
+ALLERGY = Quality('Allergy', cost=[5, "to", 25], page_ref=78, negative=True)
+ASTRAL_BEACON = Quality('Astral Beacon', cost=10, page_ref=78, negative=True)
+BAD_LUCK = Quality('Bad Luck', cost=12, page_ref=78, negative=True)
+BAD_REP = Quality('Bad Rep', cost=7, page_ref=79, negative=True)
+CODE_OF_HONOR = Quality('Code of Honor', cost=15, page_ref=79, negative=True)
+CODEBLOCK = Quality('Codeblock', cost=10, page_ref=80, negative=True)
+COMBAT_PARALYSIS = Quality('Combat Paralysis', cost=12, page_ref=80, negative=True)
+DEPENDANTS = Quality('Dependants', cost=(3, 6, 9), page_ref=80, negative=True)
+DISTINCTIVE_STYLE = Quality('Distinctive Style', cost=5, page_ref=80, negative=True)
+ELF_POSER = Quality('Elf Poser', cost=6, page_ref=81, negative=True)
+GREMLINS = Quality('Gremlins', cost=4, page_ref=81, negative=True, quantity=4)
+INCOMPETENT = Quality('Incompetent', cost=5, page_ref=81, negative=True)
+INSOMNIA = Quality('Insomnia', cost=[10, "or", 15], page_ref=81, negative=True)
+LOSS_OF_CONFIDENCE = Quality('Loss of Confidence', cost=10, page_ref=82, negative=True)
+LOW_PAIN_TOLERANCE = Quality('Low Pain Tolerance', cost=9, page_ref=82, negative=True)
+ORK_POSER = Quality('Ork Poser', cost=6, page_ref=82, negative=True)
+PREJUDICED = Quality('Prejudiced', cost=[3, "to", 10], page_ref=82, negative=True)
+SCORCHED = Quality('Scorched', cost=10, page_ref=83, negative=True)
+SENSITIVE_SYSTEM = Quality('Sensitive System', cost=12, page_ref=83, negative=True)
+SIMSENSE_VERTIGO = Quality('Simsense Vertigo', cost=5, page_ref=83, negative=True)
+SINNER_LAYERED = Quality('SINner (Layered)', cost=[5, "to", 25], page_ref=84, negative=True)
+SOCIAL_STRESS = Quality('Social Stress', cost=8, page_ref=85, negative=True)
+SPIRIT_BANE = Quality('Spirit Bane', cost=7, page_ref=85, negative=True)
+UNCOUTH = Quality('Uncouth', cost=14, page_ref=85, negative=True)
+UNEDUCATED = Quality('Uneducated', cost=8, page_ref=87, negative=True)
+UNSTEADY_HANDS = Quality('Unsteady Hands', cost=7, page_ref=87, negative=True)
+WEAK_IMMUNE_SYSTEM = Quality('Weak Immune System', cost=10, page_ref=87, negative=True)
 
 """
     DAMAGE TYPES
@@ -1333,4 +1395,5 @@ print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
 
-generate_character()
+# generate_character()
+print(Quality.items)
