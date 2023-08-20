@@ -1222,50 +1222,90 @@ PRIORITY_TABLE_FLIPPED = {
     }
 }
 
+"""
 class Character: 
     def __init__(self):
-        self.personal_data= {
-            'Name': None, 'Concept': None, 'Metatype': None, 'Ethnicity': None, 'Age': None, 'Sex': None, 'Height': None,
-            'Weight': None, 'Streed Cred': None, 'Notoriety': None, 'Public Awareness': None, 'Karma': None, 'Total Karma': None, 'Misc': None
-        }
-        self.attributes= {
-            'Body': None,
-            'Agility': None,
-            'Reaction': None,
-            'Strength': None,
-            'Willpower': None,
-            'Logic': None,
-            'Intuition': None,
-            'Charisma': None,
-            'Edge': None,
-            'Edge_Points': None,
-            'Essence': None,
-            'Magic_Resonance': None, 'Initiative': None, 'Matrix_Initiative': None, 'Astral_Initiative': None, 'Composure': None, 'Judge_Intentions': None, 'Memory': None,
-            'Lift_Carry': None, 'Movement': None, 'Physical_Limit': None, 'Mental_Limit': None, 'Social_Limit': None,
-        }
+        self.personal_data= { 'Name': None, 'Concept': None, 'Metatype': None, 'Ethnicity': None, 'Age': None, 'Sex': None, 'Height': None, 'Weight': None, 'Streed Cred': None, 'Notoriety': None, 'Public Awareness': None, 'Karma': None, 'Total Karma': None, 'Misc': None }
+        self.attributes= { 'Body': None, 'Agility': None, 'Reaction': None, 'Strength': None, 'Willpower': None, 'Logic': None, 'Intuition': None, 'Charisma': None, 'Edge': None, 'Edge_Points': None, 'Essence': None, 'Magic_Resonance': None, 'Initiative': None, 'Matrix_Initiative': None, 'Astral_Initiative': None, 'Composure': None, 'Judge_Intentions': None, 'Memory': None, 'Lift_Carry': None, 'Movement': None, 'Physical_Limit': None, 'Mental_Limit': None, 'Social_Limit': None, }
         self.skills= {}
         self.IDs_lifestyle_currency={ 'Primary_Lifestyle': None, 'Nuyen': None, 'Licences': None, 'Other': None, }
         self.core_combat_info= { 'Physical_Armor': None, 'Primary_Ranged_Weapon': None, 'Primary_Melee_Weapon': None, }
         self.condition_monitor= { 'Physical Damage Track': None, 'Stun Damage Track': None, 'Overflow': None }
         self.qualities= {}
         self.contacts= {}
-        self.inventory= { 'Ranged Weapons': None, 'Melee Weapons': None, 'Armor': None, 'Cyberdeck': None, 'Augmentations': None, 'Vehicle': None,
-            'Spells': None, 'Preparation Rituals': None, 'Complex Forms': None, 'Adept Powers (Other Abilities)': None, 'Gear': {}
-        }
+        self.inventory= { 'Ranged Weapons': None, 'Melee Weapons': None, 'Armor': None, 'Cyberdeck': None, 'Augmentations': None, 'Vehicle': None, 'Spells': None, 'Preparation Rituals': None, 'Complex Forms': None, 'Adept Powers (Other Abilities)': None, 'Gear': {} }
+    def starting_attributes(self): m = self.personal_data['metatype'].attributes self.attributes['Body'] = m.Body self.attributes['Agility'] = m.Agility self.attributes['Reaction'] = m.Reaction self.attributes['Strength'] = m.Strength self.attributes['Willpower'] = m.Willpower self.attributes['Logic'] = m.Logic self.attributes['Intuition'] = m.Intuition self.attributes['Charisma'] = m.Charisma self.attributes['Edge'] = m.Edge
+"""
+class Character:
+    def __init__(self):
+        # Personal Data
+        self.Name = None
+        self.Concept = None
+        self.Metatype = None
+        self.Ethnicity = None
+        self.Age = None
+        self.Sex = None
+        self.Height = None
+        self.Weight = None
+        self.Street_cred = None
+        self.Notoriety = None
+        self.Public_awareness = None
+        self.Karma = None
+        self.Total_karma = None
+        self.Misc = None
+        # Attributes
+        self.Body = None
+        self.Agility = None 
+        self.Reaction = None 
+        self.Strength = None 
+        self.Willpower = None 
+        self.Logic = None 
+        self.Intuition = None 
+        self.Charisma = None
+        self.Magic_resonance = None 
+        self.Initiative = None 
+        self.Matrix_initiative = None 
+        self.Astral_initiative = None 
+        self.Composure = None 
+        self.Judge_intentions = None 
+        self.Memory = None
+        self.Lift_carry = None 
+        self.Movement = None 
+        self.Physical_limit = None 
+        self.Mental_limit = None 
+        self.Social_limit = None
+        # Skills
+        self.Skills = None
+        # IDs/Lifestyle/Currency
+        self.Primary_lifestyle = None
+        self.Nuyen = None
+        self.Licences = None
+        self.Other = None
+        # Core Combat Info
+        self.Physical_armor = None 
+        self.Primary_ranged_weapon = None
+        self.Primary_melee_weapon = None
+        self.Physical_dmg_track = None
+        self.Stun_dmg_track = None
+        self.Overflow = None
+        # Qualities
+        self.Qualities = None
+        # Contacts
+        self.Contacts = None
+        # Gear
+        self.Ranged_weapons = None
+        self.Melee_weapons = None
+        self.Armor = None
+        self.Cyberdeck = None
+        self.Augmentations = None
+        self.Vehicle = None
+        self.Spells = None
+        self.Preparations_rituals = None
+        self.Complex_forms = None
+        self.Adept_powers = None
+        self.Gear = None
 
-    def starting_attributes(self):
-        m = self.personal_data['metatype'].attributes
-        self.attributes['Body'] = m.Body
-        self.attributes['Agility'] = m.Agility
-        self.attributes['Reaction'] = m.Reaction
-        self.attributes['Strength'] = m.Strength
-        self.attributes['Willpower'] = m.Willpower
-        self.attributes['Logic'] = m.Logic
-        self.attributes['Intuition'] = m.Intuition
-        self.attributes['Charisma'] = m.Charisma
-        self.attributes['Edge'] = m.Edge
-
-
+# returns all not dunder and non 'items' attributes for a class in {attr_name: attr_value} format
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
 
@@ -1281,24 +1321,24 @@ def get_rating(item: Gear):
     else:
         raise ValueError(f'{item.name} has bad rating data')
 
-def item_requirement_handler(item: Gear, rand=True):
-    if isinstance(item.requires, list):
-        match item.requires[0]:
-            case "Subtype":
-                print(item.requires[1])
-                print([i for i in Gear.items if i.subtype == item.requires[1]])
-                return random.choice([i for i in Gear.items if i.subtype == item.requires[1]])
-            case "Category":
-                if item.requires[1] == item.category:
-                    return random.choice([i for i in Gear.items if i.category == item.requires[1] and i.subtype != item.requires[1]])
-                return random.choice([i for i in Gear.items if i.category== item.requires[1]])
-    elif isinstance(item.requires, Gear):
-        return item.requires
-    elif isinstance(item.requires, tuple):
-        return random.choice(item.requires)
-
-
 def get_item_cost(item: Gear):
+    # When an item's cost is dependant on another items rating or capacity
+    def item_requirement_handler(item: Gear, rand=True):
+        if isinstance(item.requires, list):
+            match item.requires[0]:
+                case "Subtype":
+                    print(item.requires[1])
+                    print([i for i in Gear.items if i.subtype == item.requires[1]])
+                    return random.choice([i for i in Gear.items if i.subtype == item.requires[1]])
+                case "Category":
+                    if item.requires[1] == item.category:
+                        return random.choice([i for i in Gear.items if i.category == item.requires[1] and i.subtype != item.requires[1]])
+                    return random.choice([i for i in Gear.items if i.category== item.requires[1]])
+        elif isinstance(item.requires, Gear):
+            return item.requires
+        elif isinstance(item.requires, tuple):
+            return random.choice(item.requires)
+
     req_item_flag = False
     if isinstance(item.cost, int):
         return item.cost
@@ -1347,11 +1387,23 @@ def generate_character():
     character = Character()
     priority_table = get_priorities(character)
     metatype = random.choice(priority_table['Metatype'])
-    character.personal_data['Metatype'] = metatype[0]
-    character.attributes['Edge_Points'] = metatype[1]
-    character.starting_attributes()
-    print(character.personal_data['Metatype'])
-    for i in range(priority_table['Attributes']):
+    character.Metatype = metatype[0]
+    for attribute in metatype[0].attributes:
+        match attribute.name:
+            case 'BODY':
+                character.Body = metatype.attributes['BODY']
+            case 'AGILITY':
+                character.Body = metatype.attributes['AGILITY']
+            case 'STRENGTH':
+                character.Body = metatype.attributes['STRENGTH']
+            case 'WILLPOWER':
+                character.Body = metatype.attributes['WILLPOWER']
+            case 'LOGIC':
+                character.Body = metatype.attributes['LOGIC']
+            case 'INTUITION':
+                character.Body = metatype.attributes['INTUITION']
+            case 'CHARISMA':
+                character.Body = metatype.attributes['CHARISMA']
 
 
 
@@ -1369,4 +1421,4 @@ print(SENSOR_RFID.category)
 print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
-
+generate_character()
