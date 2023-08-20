@@ -56,53 +56,42 @@ class Attributes:
         self.Essence = Attribute("Essence")
 
         self.AttributeList = self.rebuild_attribute_list()
+        self.set_starting_limit_values()
 
     def rebuild_attribute_list(self):
         return [self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower, self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence]
 
-    def set_starting_limit_values(self, data: dict):
-        for value in data.keys():
-            match value:
-                case ["Body", "BODY"]:
-                    self.Body.set_value(data[value][0])
-                    self.Body.set_limit(data[value][1])
-                case ["Agility", "AGI"]:
-                    self.Agility.set_value(data[value][0])
-                    self.Agility.set_limit(data[value][1])
-                case ["Reaction", "REA"]:
-                    self.Reaction.set_value(data[value][0])
-                    self.Reaction.set_limit(data[value][1])
-                case ["Strength", "STR"]:
-                    self.Strength.set_value(data[value][0])
-                    self.Strength.set_limit(data[value][1])
-                case ["Willpower", "WIL"]:
-                    self.Willpower.set_value(data[value][0])
-                    self.Willpower.set_limit(data[value][1])
-                case ["Logic", "LOG"]:
-                    self.Logic.set_value(data[value][0])
-                    self.Logic.set_limit(data[value][1])
-                case ["Intuition", "INT"]:
-                    self.Intuition.set_value(data[value][0])
-                    self.Intuition.set_limit(data[value][1])
-                case ["Charisma", "CHA"]:
-                    self.Charisma.set_value(data[value][0])
-                    self.Charisma.set_limit(data[value][1])
-                case ["Edge", "EDG"]:
-                    self.Edge.set_value(data[value][0])
-                    self.Edge.set_limit(data[value][1])
-                case ["Essence", "ESS"]:
-                    self.Essence.set_value(data[value][0])
-                    raise ValueError("Essence does not have a limit")
-                case _:
-                    pass
+    def set_starting_limit_values(self):
+        for attribute in self.AttributeList:
+            if attribute.name != "Essence":
+                attribute.value = 1
+                attribute.limit = 6
+            else:
+                attribute.value = 6
+
+    def update_attributes(self, data: dict):
+        for attribute in self.AttributeList:
+            attribute_name = attribute.name.upper()
+            if attribute_name in data.keys():
+                attribute.value = data[attribute_name][0]
+                attribute.limit = data[attribute_name][1]
+
+    def __repr__(self):
+        return str([i.__repr__() for i in self.AttributeList])
+            
 
 
 class Metatype:
     items = []
-    def __init__(self, name: str):
+    def __init__(self, name: str, **kwargs):
         Metatype.items.append(self)
         self.name = name
-        self.racial_attributes = Attributes()
+        self.attributes = Attributes()
+        for k, d in kwargs.items():
+            self.__setattr__(k ,d)
+        if 'stat_changes' in [i for i in dir(self)]:
+            self.attributes.update_attributes(self.stat_changes)
+
 
     def __repr__(self):
         return self.name
@@ -584,16 +573,26 @@ TASKING = Skill_Group("Tasking", [COMPILING, DECOMPILING, REGISTERING])
 """
     METATYPES
 """
-HUMAN = Metatype("Human")
-HUMAN.racial_attributes.set_starting_limit_values({'BODY': [1,6], 'AGI': [1, 6], 'REA': [1, 6], 'STR': [1, 6], 'WIL': [1, 6], 'LOG': [1, 6], 'INT': [1, 6], 'CHA': [1, 6], 'EDG': [2, 7], 'ESS': [6]})
-ELF = Metatype("Elf")
-ELF.racial_attributes.set_starting_limit_values({'BODY': [1,6], 'AGI': [2, 7], 'REA': [1, 6], 'STR': [1, 6], 'WIL': [1, 6], 'LOG': [1, 6], 'INT': [1, 6], 'CHA': [3, 8], 'EDG': [1, 6], 'ESS': [6]})
-DWARF = Metatype("Dwarf")
-DWARF.racial_attributes.set_starting_limit_values({'BODY': [3,8], 'AGI': [1, 6], 'REA': [1, 5], 'STR': [3, 8], 'WIL': [2, 7], 'LOG': [1, 6], 'INT': [1, 6], 'CHA': [1, 6], 'EDG': [1, 6], 'ESS': [6]})
-ORK = Metatype("Ork")
-ORK.racial_attributes.set_starting_limit_values({'BODY': [1,6], 'AGI': [1, 6], 'REA': [1, 6], 'STR': [1, 6], 'WIL': [1, 6], 'LOG': [1, 6], 'INT': [1, 6], 'CHA': [1, 6], 'EDG': [1, 6], 'ESS': [6]})
-TROLL = Metatype("Troll")
-TROLL.racial_attributes.set_starting_limit_values({'BODY': [1,6], 'AGI': [1, 6], 'REA': [1, 6], 'STR': [1, 6], 'WIL': [1, 6], 'LOG': [1, 6], 'INT': [1, 6], 'CHA': [1, 6], 'EDG': [1, 6], 'ESS': [6]})
+HUMAN = Metatype(
+        "Human",
+        stat_changes={'EDGE': [2, 7]},
+        racial_bonus=None)
+ELF = Metatype(
+        "Elf",
+        stat_changes={'AGILITY': [2,7], 'CHARISMA': [3,8]},
+        racial_bonus=['Low Light Vision'])
+DWARF = Metatype(
+        "Dwarf", 
+        stat_changes={'BODY': [3, 8], 'REACTION': [1, 5], 'STRENGTH': [3, 8], 'WILLPOWER': [2, 7]}, 
+        racial_bonus=['Thermographic Vision', 'Pathogen/Toxin Resistance', '20% increased Lifestyle cost'])
+ORK = Metatype(
+        "Ork",
+        stat_changes={'BODY': [4, 9], 'STRENGTH': [3, 8], 'LOGIC': [1, 5], 'CHARISMA': [1, 5]},
+        racial_bonus=['Low Light Vision'])
+TROLL = Metatype(
+        "Troll",
+        stat_changes={'BODY': [5, 10], 'AGILITY': [1, 5], 'STRENGTH': [5, 10], 'LOGIC': [1, 5], 'INTUITION': [1, 5], 'CHARISMA': [1, 4]},
+        racial_bonus=['Thermographic Vision', '+1 Reach', '+1 dermal Armor', '100% increased Lifestyle cost'])
 
 """
     CHARACTER TYPES
@@ -1396,4 +1395,9 @@ print(SINGLE_SENSOR.sensor_function)
 """
 
 # generate_character()
-print(Quality.items)
+# print(Quality.items)
+print(HUMAN.attributes)
+print(ELF.attributes)
+print(DWARF.attributes)
+print(ORK.attributes)
+print(TROLL.attributes)
