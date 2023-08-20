@@ -1305,6 +1305,19 @@ class Character:
         self.Adept_powers = None
         self.Gear = None
 
+    def print_stats(self):
+        print(self.Body)
+        print(self.Agility)
+        print(self.Reaction)
+        print(self.Strength)
+        print(self.Logic)
+        print(self.Willpower)
+        print(self.Intuition)
+        print(self.Charisma)
+        print(self.Edge)
+        print(self.Essence)
+
+
 # returns all not dunder and non 'items' attributes for a class in {attr_name: attr_value} format
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
@@ -1387,23 +1400,65 @@ def generate_character():
     character = Character()
     priority_table = get_priorities(character)
     metatype = random.choice(priority_table['Metatype'])
-    character.Metatype = metatype[0]
-    for attribute in metatype[0].attributes:
+    edge_shit = metatype[1]
+    metatype = metatype[0]
+    metatype.attributes.set_starting_limit_values()
+    character.Metatype = metatype
+    for attribute in metatype.attributes.AttributeList:
         match attribute.name:
-            case 'BODY':
-                character.Body = metatype.attributes['BODY']
-            case 'AGILITY':
-                character.Body = metatype.attributes['AGILITY']
-            case 'STRENGTH':
-                character.Body = metatype.attributes['STRENGTH']
-            case 'WILLPOWER':
-                character.Body = metatype.attributes['WILLPOWER']
-            case 'LOGIC':
-                character.Body = metatype.attributes['LOGIC']
-            case 'INTUITION':
-                character.Body = metatype.attributes['INTUITION']
-            case 'CHARISMA':
-                character.Body = metatype.attributes['CHARISMA']
+            case 'Body':
+                character.Body = metatype.attributes.Body
+            case 'Agility':
+                character.Agility = metatype.attributes.Agility
+            case 'Reaction':
+                character.Reaction = metatype.attributes.Reaction
+            case 'Strength':
+                character.Strength = metatype.attributes.Strength
+            case 'Willpower':
+                character.Willpower = metatype.attributes.Willpower
+            case 'Logic':
+                character.Logic = metatype.attributes.Logic
+            case 'Intuition':
+                character.Intuition = metatype.attributes.Intuition
+            case 'Charisma':
+                character.Charisma = metatype.attributes.Charisma
+            case 'Edge':
+                character.Edge = metatype.attributes.Edge
+            case 'Essence':
+                character.Essence = metatype.attributes.Essence
+    character.print_stats()
+    print(f"======\nRolling with {priority_table['Attributes']} points")
+    # Attribute Points
+    rollable_stats = [
+            character.Body,
+            character.Agility,
+            character.Reaction,
+            character.Strength,
+            character.Willpower,
+            character.Logic,
+            character.Intuition,
+            character.Charisma,
+            character.Edge
+            ]
+    attr_roll_iterations = 0
+    while priority_table['Attributes'] > 0:
+        attr_roll_iterations += 1
+        stat_roll = random.choice(rollable_stats)
+        if stat_roll.value + 1 <= stat_roll.limit:
+            stat_roll.value += 1
+            priority_table['Attributes'] -= 1
+        if attr_roll_iterations > 100:
+            print("========")
+            print("========")
+            character.print_stats()
+            raise ValueError("Too many rolls!")
+    print("===========")
+    character.print_stats()
+    dominant_stats = [attribute for attribute in rollable_stats if attribute.value >= 4]
+    if len(dominant_stats) < 1:
+        raise ValueError("No dominant stats!")
+    print(dominant_stats)
+
 
 
 
@@ -1421,4 +1476,5 @@ print(SENSOR_RFID.category)
 print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
-generate_character()
+for i in range(9):
+    generate_character()
