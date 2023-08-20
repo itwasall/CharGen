@@ -97,11 +97,13 @@ class Metatype:
         return self.name
 
 
-class Type:
+class Archetype:
     items = []
-    def __init__(self, name: str):
-        Type.items.append(self)
+    def __init__(self, name: str, **kwargs):
+        Archetype.items.append(self)
         self.name = name
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
     def __repr__(self):
         return self.name
@@ -597,12 +599,22 @@ TROLL = Metatype(
 """
     CHARACTER TYPES
 """
-FACE = Type('Face')
-SPELLCASTER = Type('Spellcaster')
-DECKER = Type('Decker')
-TECHNOMANCER = Type('Technomancer')
-RIGGER = Type('Rigger')
-STREETSAMURAI = Type('Street Samurai')
+STREET_SAMURAI = Archetype('Street Samurai', pref_attrs=['Body', 'Agility' 'Reaction', 'Strength'])
+COVERT_OPS_SPECIALIST = Archetype('Covert Ops Specialist', pref_attrs=['Body', 'Agility', 'Strength', 'Intuition'])
+OCCULT_INVESTIGATOR = Archetype('Occult Investigator', pref_attrs=['Willpower', 'Intuition'], magic=True)
+STREET_SHAMAN = Archetype('Street Shaman', pref_attrs=['Strength', 'Charisma'], magic=True)
+COMBAT_MAGE = Archetype('Combat Mage', pref_attrs=['Body', 'Logic'], magic=True)
+BRAWLING_ADEPT = Archetype('Brawling Adept', pref_attrs=['Body', 'Agility', 'Reaction', 'Strength'], magic=True)
+WEAPONS_SPECIALIST = Archetype('Weapons Specialist', pref_attrs=['Agility'])
+FACE = Archetype('Face', pref_attrs=['Charisma'])
+TANK = Archetype('Tank', pref_attrs=['Body', 'Strength'])
+DECKER = Archetype('Decker', pref_attrs=['Willpower', 'Logic'])
+TECHNOMANCER = Archetype('Technomancer', pref_attrs=['Willpower', 'Logic', 'Intuition'], resonance=True)
+GUNSLINGER_ADEPT = Archetype('Gunslinger Adept', pref_attrs=['Agility', 'Reaction'], magic=True)
+DRONE_RIGGER = Archetype('Drone Rigger', pref_attrs=['Reaction', 'Logic'])
+SMUGGLER = Archetype('Smuggler', pref_attrs=['Body', 'Reaction', 'Intuition'])
+SPRAWL_GANGSTER = Archetype('Sprawl Gangster', pref_attrs=['Body', 'Strength'])
+BOUNTY_HUNTER = Archetype('Bounty Hunter', pref_attrs=['Body', 'Strength'])
 
 """
     QUALITIES
@@ -1222,20 +1234,7 @@ PRIORITY_TABLE_FLIPPED = {
     }
 }
 
-"""
-class Character: 
-    def __init__(self):
-        self.personal_data= { 'Name': None, 'Concept': None, 'Metatype': None, 'Ethnicity': None, 'Age': None, 'Sex': None, 'Height': None, 'Weight': None, 'Streed Cred': None, 'Notoriety': None, 'Public Awareness': None, 'Karma': None, 'Total Karma': None, 'Misc': None }
-        self.attributes= { 'Body': None, 'Agility': None, 'Reaction': None, 'Strength': None, 'Willpower': None, 'Logic': None, 'Intuition': None, 'Charisma': None, 'Edge': None, 'Edge_Points': None, 'Essence': None, 'Magic_Resonance': None, 'Initiative': None, 'Matrix_Initiative': None, 'Astral_Initiative': None, 'Composure': None, 'Judge_Intentions': None, 'Memory': None, 'Lift_Carry': None, 'Movement': None, 'Physical_Limit': None, 'Mental_Limit': None, 'Social_Limit': None, }
-        self.skills= {}
-        self.IDs_lifestyle_currency={ 'Primary_Lifestyle': None, 'Nuyen': None, 'Licences': None, 'Other': None, }
-        self.core_combat_info= { 'Physical_Armor': None, 'Primary_Ranged_Weapon': None, 'Primary_Melee_Weapon': None, }
-        self.condition_monitor= { 'Physical Damage Track': None, 'Stun Damage Track': None, 'Overflow': None }
-        self.qualities= {}
-        self.contacts= {}
-        self.inventory= { 'Ranged Weapons': None, 'Melee Weapons': None, 'Armor': None, 'Cyberdeck': None, 'Augmentations': None, 'Vehicle': None, 'Spells': None, 'Preparation Rituals': None, 'Complex Forms': None, 'Adept Powers (Other Abilities)': None, 'Gear': {} }
-    def starting_attributes(self): m = self.personal_data['metatype'].attributes self.attributes['Body'] = m.Body self.attributes['Agility'] = m.Agility self.attributes['Reaction'] = m.Reaction self.attributes['Strength'] = m.Strength self.attributes['Willpower'] = m.Willpower self.attributes['Logic'] = m.Logic self.attributes['Intuition'] = m.Intuition self.attributes['Charisma'] = m.Charisma self.attributes['Edge'] = m.Edge
-"""
+
 class Character:
     def __init__(self):
         # Personal Data
