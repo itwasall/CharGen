@@ -15,32 +15,12 @@ character = {
     "name": "",
     "role": "",
     "character_points": 0,
-    "stats": {
-        "Intelligence": 0,
-        "Reflexes": [0, 0],
-        "Technical Ability": 0,
-        "Cool": 0,
-        "Attractiveness": 0,
-        "Luck": 0,
-        "Movement Allowance": 0,
-        "Body Type": 0,
-        "Empathy": [0, 0],
-    },
-    "movement_stats":{
-        "Run": 0,
-        "Leap": 0
-    },
+    "stats": { "Intelligence": 0, "Reflexes": [0, 0], "Technical Ability": 0, "Cool": 0, "Attractiveness": 0, "Luck": 0, "Movement Allowance": 0, "Body Type": 0, "Empathy": [0, 0], },
+    "movement_stats":{ "Run": 0, "Leap": 0 },
     "humanity": 0,
     "save": 0,
     "body_type_modifier": ["", 0],
-    "armor": {
-        "head": 0,
-        "torso": 0,
-        "right_arm": 0,
-        "left_arm": 0,
-        "right_leg": 0,
-        "left_leg": 0
-    },
+    "armor": { "head": 0, "torso": 0, "right_arm": 0, "left_arm": 0, "right_leg": 0, "left_leg": 0 },
     "skills": {
         "Special_Abilities": {
             "Authority": 0,
@@ -54,113 +34,27 @@ character = {
             "Resources": 0,
             "Streetdeal": 0
         },
-        "ATTR": {
-            "Personal_Grooming": 0,
-            "Wardrobe_and_Style": 0
-        },
-        "BODY": {
-            "Endurance": 0,
-            "Strength_Feat": 0,
-            "Swimming": 0
-        },
-        "COOL_WILL": {
-            "Interrogation": 0,
-            "Intimidate": 0,
-            "Oratory": 0,
-            "Resist_TortureDrugs": 0,
-            "Streetwise": 0
-        },
-        "EMPATHY": {
-            "Human_Perception": 0,
-            "Interview": 0,
-            "Leadership": 0,
-            "Seduction": 0,
-            "Social": 0,
-            "Persuasion_and_FastTalk": 0,
-            "Perform": 0
-        },
+        "ATTR": { "Personal_Grooming": 0, "Wardrobe_and_Style": 0 },
+        "BODY": { "Endurance": 0, "Strength_Feat": 0, "Swimming": 0 },
+        "COOL_WILL": { "Interrogation": 0, "Intimidate": 0, "Oratory": 0, "Resist_TortureDrugs": 0, "Streetwise": 0 },
+        "EMPATHY": { "Human_Perception": 0, "Interview": 0, "Leadership": 0, "Seduction": 0, "Social": 0, "Persuasion_and_FastTalk": 0, "Perform": 0 },
         "INT": {
-            "Accounting": 0,
-            "Anthropology": 0,
-            "Awareness_Notice": 0,
-            "Biology": 0,
-            "Botany": 0,
-            "Chemistry": 0,
-            "Composition": 0,
-            "Diagnose_Illness": 0,
-            "Education_and_Gen_Knowledge": 0,
-            "Expert": ["", 0],
-            "Gamble": 0,
-            "Geology": 0,
-            "Hide_Evade": 0,
-            "History": 0,
-            "Language1": ["", 0],
-            "Language2": ["", 0],
-            "Language3": ["", 0],
-            "Library_Search": 0,
-            "Mathematics": 0,
-            "Physics": 0,
-            "Programming": 0,
-            "Shadow_Track": 0,
-            "Stock_Market": 0,
-            "System_Knowledge": 0,
-            "Teaching": 0,
-            "Wilderness_Survival": 0,
-            "Zoology": 0
+            "Accounting": 0, "Anthropology": 0, "Awareness_Notice": 0, "Biology": 0, "Botany": 0, "Chemistry": 0, "Composition": 0, "Diagnose_Illness": 0,
+            "Education_and_Gen_Knowledge": 0, "Expert": ["", 0], "Gamble": 0, "Geology": 0, "Hide_Evade": 0, "History": 0, "Language1": ["", 0], "Language2": ["", 0],
+            "Language3": ["", 0], "Library_Search": 0, "Mathematics": 0, "Physics": 0, "Programming": 0, "Shadow_Track": 0, "Stock_Market": 0, "System_Knowledge": 0,
+            "Teaching": 0, "Wilderness_Survival": 0, "Zoology": 0
         },
         "REF": {
-            "Archery": 0,
-            "Athletics": 0,
-            "Brawling": 0,
-            "Dance": 0,
-            "Dodge_and_Escape": 0,
-            "Driving": 0,
-            "Fencing": 0,
-            "Handgun": 0,
-            "Heavy_Weapons": 0,
-            "Martial_Art1": ["", 0],
-            "Martial_Art2": ["", 0],
-            "Martial_Art3": ["", 0],
-            "Melee": 0,
-            "Motorcycle": 0,
-            "Operate_Hvy_Machinary": 0,
-            "Pilot_Gyro": 0,
-            "Pilot_FixedWing": 0,
-            "Pilot_Dirigible": 0,
-            "Pilot_VectThrustVechicle": 0,
-            "Rifle": 0,
-            "Stealth": 0,
-            "Submachinegun": 0
+            "Archery": 0, "Athletics": 0, "Brawling": 0, "Dance": 0, "Dodge_and_Escape": 0, "Driving": 0, "Fencing": 0, "Handgun": 0, "Heavy_Weapons": 0, "Martial_Art1": ["", 0],
+            "Martial_Art2": ["", 0], "Martial_Art3": ["", 0], "Melee": 0, "Motorcycle": 0, "Operate_Hvy_Machinary": 0, "Pilot_Gyro": 0, "Pilot_FixedWing": 0, "Pilot_Dirigible": 0,
+            "Pilot_VectThrustVechicle": 0, "Rifle": 0, "Stealth": 0, "Submachinegun": 0
         },
         "TECH": {
-            "AeroTech": 0,
-            "AVTech": 0,
-            "BasicTech": 0,
-            "Cryotank_Operation": 0,
-            "Cyberdeck_Design": 0,
-            "CyberTech": 0,
-            "Demolitions": 0,
-            "Disguise": 0,
-            "Electronics": 0,
-            "Electronic_Security": 0,
-            "First_Aid": 0,
-            "Forgery": 0,
-            "Gyro_Tech": 0,
-            "Paint_or_Draw": 0,
-            "Photo_and_Film": 0,
-            "Pharmacuticals": 0,
-            "Pick_Lock": 0,
-            "Pick_Pocket": 0,
-            "Play_Instrument": 0,
-            "Weaponsmith": 0,
-        },
+            "AeroTech": 0, "AVTech": 0, "BasicTech": 0, "Cryotank_Operation": 0, "Cyberdeck_Design": 0, "CyberTech": 0, "Demolitions": 0, "Disguise": 0, "Electronics": 0,
+            "Electronic_Security": 0, "First_Aid": 0, "Forgery": 0, "Gyro_Tech": 0, "Paint_or_Draw": 0, "Photo_and_Film": 0, "Pharmacuticals": 0, "Pick_Lock": 0, "Pick_Pocket": 0,
+            "Play_Instrument": 0, "Weaponsmith": 0, },
         "OTHER": {
-            "Other1": ["", 0],
-            "Other2": ["", 0],
-            "Other3": ["", 0],
-            "Other4": ["", 0],
-            "Other5": ["", 0],
-            "Other6": ["", 0],
+            "Other1": ["", 0], "Other2": ["", 0], "Other3": ["", 0], "Other4": ["", 0], "Other5": ["", 0], "Other6": ["", 0],
         }
     },
     "cybernetics": {
@@ -171,42 +65,19 @@ character = {
         "euro": 0
     },
     "lifepath": {
-        "style": {
-            "clothes": "",
-            "hair": "",
-            "affectations": "",
-            "ethnicity": "",
-            "language": ""
-        },
+        "style": { "clothes": "", "hair": "", "affectations": "", "ethnicity": "", "language": "" },
         "family_background": "",
-        "siblings": {
-            "male": 0,
-            "female": 0
-        },
-        "motivations": {
-            "traits": "",
-            "valued_person": "",
-            "feel_about_people": "",
-            "valued_possession": ""
-        },
-        "life_events": {
-            "year": "",
-        }
+        "siblings": { "male": 0, "female": 0 },
+        "motivations": { "traits": "", "valued_person": "", "feel_about_people": "", "valued_possession": "" },
+        "life_events": { "year": "", }
     },
     "gear": {
         "gear_type": {"cost": 0, "weight": 0}
     },
     "weapons": {
         "weapon_name": {
-            "weapon_type": "",
-            "weapon_accuray": "",
-            "conceilability": "",
-            "availability": "",
-            "damage": "",
-            "magazine_size": 0,
-            "rate_of_fire": 0,
-            "reliability": ""
-        }
+            "weapon_type": "", "weapon_accuray": "", "conceilability": "", "availability": "", "damage": "",
+            "magazine_size": 0, "rate_of_fire": 0, "reliability": "" }
     }
 }
 
@@ -248,6 +119,7 @@ def gen_stats(stat_gen_type):
         raise Exception
     return total_stats
 
+
 def gen_family_background():
     """Generates family background based on options in Corebook"""
     family_ranking_list = data_origins_and_style['family_ranking']
@@ -277,6 +149,7 @@ def gen_family_background():
     family_background['Childhood Environment'] = choice(childhood_environment_list)
     return family_background
 
+
 def gen_motivations():
     """Generates character motivations based on options in Corebook"""
     personality_traits_list = data_motivations['personality_traits']
@@ -295,60 +168,71 @@ def gen_motivations():
 
     return motivations
 
+
 def gen_life_events():
+    def gen_life_events_bpbw():
+        global LIFE_EVENT_ILLNESS, LIFE_EVENT_ACCIDENT_DISFIGUREMENT
+
+        coinflip = choice(['Heads', 'Tails'])
+        life_event = {}
+        event_roll = roll("1d10")
+        if coinflip == 'Heads':
+            # Disaster strikes!
+            match event_roll:
+                case 1:
+                    financial_loss_or_debt_roll = roll("100d10")
+                    return f'Financial loss or debt: You have lost {financial_loss_or_debt_roll} eurodollars. If you can\'t pay this now, you have a debt to pay, in cash - or blood'
+                case 2:
+                    imprisonment_roll = roll("1d10")
+                    imprisonment_type = choice(['in prison', 'held hostage'])
+                    return f'Imprisonment: You have been {imprisonment_type} for {imprisonment_roll} months this year'
+                case 3:
+                    LIFE_EVENT_ILLNESS += 1
+                    return f'Illness or Addiction: You have contracted either an illness or drug habit in this time.'
+                case 4:
+                    betrayal = choices(['You are being blackmailed', 'A secret was exposed', 'You were betrayed by a close friend in romance', 'You were betrayed by a close friend in your career path'], [3, 4, 2, 1])[0]
+                    life_event['Betrayal'] = f"You've been betrayed! {betrayal}."
+                    return f'Betrayal: You\'ve been betrayed! {betrayal}'
+                case 5:
+                    accident = choices(['You were terribly disfigured', f'You were hospitalised for {roll("1d10")} months this year', f'You have lost {roll("1d10")} months of memory this year', 'You constantly relive nightmares of the accident each night and wake up screaming'], [4, 2, 2, 2])
+                    if accident == 'You were terribly disfigured':
+                        LIFE_EVENT_ACCIDENT_DISFIGUREMENT -= 5
+                    return f'Accident: You\'ve had an accident. {accident}'
+                case 6:
+                    who_got_killed = choice(['Friend', 'Lover', 'Relative'])
+                    killed = choices(['They died accidentally', 'They were murdered by unknown parties', 'They were murdered and you know who did it. You just need the proof'], [5, 3, 2])[0]
+                    return f'{who_got_killed} died: You lost a {who_got_killed} that meant a lot to you. {killed}.'
+                case 7:
+                    false_accusation = choices(['the accusation is theft', "it's cowardice", "it's murder", "it's rape", "it's lying or betrayal"], [3, 2, 3, 1, 1])
+                case _:
+                    pass
+        return life_event
+
+
+    def gen_life_events_fae():
+        pass
+
+
+    def gen_life_events_ri():
+        pass
+
+    def yearly_event(adult_year, life_events):
+        match event_roll := roll("1d10"):
+            case 1:
+                life_events[f'Age {adult_year + 16}'] = gen_life_events_bpbw()
+            case 4|5|6:
+                life_events[f'Age {adult_year + 16}'] = gen_life_events_fae()
+            case 7|8:
+                life_events[f'Age {adult_year + 16}'] = gen_life_events_ri()
+            case _:
+                life_events[f'Age {adult_year + 16}'] = 'Nothing happened that year'
     age = roll("2d6") + 16
     life_events = {}
     for adult_year in range(age-16):
-        event_roll = roll("1d10")
-        if event_roll <= 3:
-            life_events[f'Age {adult_year + 16}'] = gen_life_events_bpbw()
-        elif event_roll <= 6:
-            life_events[f'Age {adult_year + 16}'] = gen_life_events_fae()
-        elif event_roll <= 8:
-            life_events[f'Age {adult_year + 16}'] = gen_life_events_ri()
-        else:
-            life_events[f'Age {adult_year + 16}'] = 'Nothing happened that year'
+        yearly_event(adult_year, life_events)
+    return life_events
 
-
-def gen_life_events_bpbw():
-    global LIFE_EVENT_ILLNESS, LIFE_EVENT_ACCIDENT_DISFIGUREMENT
-
-    coinflip = choice(['Heads', 'Tails'])
-    life_event = {}
-    if coinflip == 'Heads':
-        # Disaster strikes!
-        event_roll = roll("1d10")
-        if event_roll == 1:
-            financial_loss_or_debt_roll = roll("100d10")
-            life_event['Financial loss or Debt'] = f"You have lost {financial_loss_or_debt_roll} eurodollars. If you can't pay this now, you have a debt to pay, in cash - or blood"
-        elif event_roll == 2:
-            imprisonment_roll = roll("1d10")
-            imprisonment_type = choice('in prison', 'held hostage')
-            life_event['Imprisonment'] = f"You have been {imprisonment_type} for {imprisonment_roll} months this year"
-        elif event_roll == 3:
-            life_event['Illness or Addiction'] = "You have contracted either an illness or drug habit in this time."
-            LIFE_EVENT_ILLNESS += 1
-        elif event_roll == 4:
-            betrayal = choices(['You are being blackmailed', 'A secret was exposed', 'You were betrayed by a close friend in romance', 'You were betrayed by a close friend in your career path'], [3, 4, 2, 1])
-            life_event['Betrayal'] = f"You've been betrayed! {betrayal}."
-        elif event_roll == 5:
-            accident = choices(['You were terribly disfigured', f'You were hospitalised for {roll("1d10")} months this year', f'You have lost {roll("1d10")} months of memory this year', 'You constantly relive nightmares of the accident each night and wake up screaming'], [4, 2, 2, 2])
-            if accident == 'You were terribly disfigured':
-                LIFE_EVENT_ACCIDENT_DISFIGUREMENT -= 5
-            life_event['Accident'] = f"You've had an accident. {accident}"
-        elif event_roll == 6:
-            who_got_killed = choice('Friend', 'Lover', 'Relative')
-            killed = choices(['They died accidentally', 'They were murdered by unknown parties', 'They were murdered and you know who did it. You just need the proof'], [5, 3, 2])
-            life_event[f'{who_got_killed} died'] = f"You lost a {who_got_killed} that meant a lot to you. {killed}."
-        elif event_roll == 7:
-            false_accusation = choices(['the accusation is theft', "it's cowardice", "it's murder", "it's rape", "it's lying or betrayal"], [3, 2, 3, 1, 1])
-
-def gen_life_events_fae():
-    pass
-
-def gen_life_events_ri():
-    pass
-
+print(gen_life_events())
 
 
 
@@ -357,6 +241,7 @@ def calc_movement_stats(movement_allowance):
     run = movement_allowance * 3
     leap = floor(movement_allowance/4)
     return run, leap
+
 
 def calc_body_type_modifier(body_type):
     """Calculates BTM value from [arg]body_type input var"""
