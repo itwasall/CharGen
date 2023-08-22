@@ -19,88 +19,6 @@ def dice(dice_string):
     sides, throws = dice_string.split("d")
     return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
 
-class Character:
-    def __init__(self):
-        # Personal Data
-        self.Name = None
-        self.Concept = None
-        self.Metatype = None
-        self.Ethnicity = None
-        self.Age = None
-        self.Sex = None
-        self.Height = None
-        self.Weight = None
-        self.Street_cred = None
-        self.Notoriety = None
-        self.Public_awareness = None
-        self.Karma = None
-        self.Total_karma = None
-        self.Misc = None
-        # Attributes
-        self.Body = None
-        self.Agility = None 
-        self.Reaction = None 
-        self.Strength = None 
-        self.Willpower = None 
-        self.Logic = None 
-        self.Intuition = None 
-        self.Charisma = None
-        self.Magic_resonance = None 
-        self.Initiative = None 
-        self.Matrix_initiative = None 
-        self.Astral_initiative = None 
-        self.Composure = None 
-        self.Judge_intentions = None 
-        self.Memory = None
-        self.Lift_carry = None 
-        self.Movement = None 
-        self.Physical_limit = None 
-        self.Mental_limit = None 
-        self.Social_limit = None
-        # Skills
-        self.Skills = None
-        # IDs/Lifestyle/Currency
-        self.Primary_lifestyle = None
-        self.Nuyen = None
-        self.Licences = None
-        self.Other = None
-        # Core Combat Info
-        self.Physical_armor = None 
-        self.Primary_ranged_weapon = None
-        self.Primary_melee_weapon = None
-        self.Physical_dmg_track = None
-        self.Stun_dmg_track = None
-        self.Overflow = None
-        # Qualities
-        self.Qualities = None
-        # Contacts
-        self.Contacts = None
-        # Gear
-        self.Ranged_weapons = None
-        self.Melee_weapons = None
-        self.Armor = None
-        self.Cyberdeck = None
-        self.Augmentations = None
-        self.Vehicle = None
-        self.Spells = None
-        self.Preparations_rituals = None
-        self.Complex_forms = None
-        self.Adept_powers = None
-        self.Gear = None
-
-    def print_stats(self):
-        print(self.Body)
-        print(self.Agility)
-        print(self.Reaction)
-        print(self.Strength)
-        print(self.Logic)
-        print(self.Willpower)
-        print(self.Intuition)
-        print(self.Charisma)
-        print(self.Edge)
-        print(self.Essence)
-
-
 # returns all not dunder and non 'items' attributes for a class in {attr_name: attr_value} format
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
@@ -168,7 +86,7 @@ def get_item_cost(item: Core.Gear):
             return item_cost[0] + item_cost[2]
     return item_cost
 
-def get_priorities(character: Character):
+def get_priorities(character: Core.Character):
     table_choices = ['A', 'B', 'C', 'D', 'E']
     table_categories = ['Metatype', 'Attributes', 'MagicResonance', 'Skills', 'Resources']
     selected_items = {'Metatype': None, 'Attributes': None, 'MagicResonance': None, 'Skills': None, 'Resources': None}
@@ -180,7 +98,7 @@ def get_priorities(character: Character):
 
 def generate_character():
     # PHASE 1: CONCEPT
-    character = Character()
+    character = Core.Character()
     priority_table = get_priorities(character)
     metatype = random.choice(priority_table['Metatype'])
     attribute_points = priority_table['Attributes']
@@ -215,7 +133,7 @@ def generate_character():
     roll_stats(character, attribute_points)
     # Attribute Points
 
-def roll_stats(ch: Character, attr: int):
+def roll_stats(ch: Core.Character, attr: int):
     rollable_stats = [
             ch.Body, ch.Agility, ch.Reaction, ch.Strength, ch.Willpower,
             ch.Logic, ch.Intuition, ch.Charisma, ch.Edge
@@ -231,15 +149,16 @@ def roll_stats(ch: Character, attr: int):
         raise ValueError("No dominant stats!")
     print(dominant_stats)
 
-def karma_qualities(ch: Character):
+def karma_qualities(ch: Core.Character):
     pass
     
 
-def skills_gen(ch: Character, skills: list):
+def skills_gen(ch: Core.Character, skills: list):
     skill_points = skills[0]
     skill_group_points = skills[1]
     ch.Skills = {'Single': {}, 'Group': {}}
     while skill_points > 0:
+        pass
         
 
 

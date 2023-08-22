@@ -1,8 +1,10 @@
+import random
 class Attribute:
+
     def __init__(self, name, value: int = 0):
         self.name = name
         self.value = value
-        self.limit = 0
+        self.limit = 6
 
     def __repr__(self):
         return f"{self.name}: [{self.value}/{self.limit}]"
@@ -32,12 +34,155 @@ class Attributes:
     def __repr__(self):
         return str([i.__repr__() for i in self.List])
 
+class Character:
+    def __init__(self):
+        # Personal Data
+        self.Name = None
+        self.Concept = None
+        self.Metatype = None
+        self.Ethnicity = None
+        self.Age = None
+        self.Sex = None
+        self.Height = None
+        self.Weight = None
+        self.Street_cred = None
+        self.Notoriety = None
+        self.Public_awareness = None
+        self.Karma = None
+        self.Total_karma = None
+        self.Misc = None
+        # Attributes
+        self.Body = None
+        self.Agility = None 
+        self.Reaction = None 
+        self.Strength = None 
+        self.Willpower = None 
+        self.Logic = None 
+        self.Intuition = None 
+        self.Charisma = None
+        self.Essence = None
+        self.Edge = None
+        self.Magic = None
+        self.Resonance = None 
+        self.Initiative = None 
+        self.Matrix_initiative = None 
+        self.Astral_initiative = None 
+        self.Composure = None 
+        self.Judge_intentions = None 
+        self.Memory = None
+        self.Lift_carry = None 
+        self.Movement = None 
+        self.Physical_limit = None 
+        self.Mental_limit = None 
+        self.Social_limit = None
+        self.CoreAttributes = [
+                self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower,
+                self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence, 
+                self.Magic, self.Resonance
+        ]
+        # Skills
+        self.Skills = None
+        # IDs/Lifestyle/Currency
+        self.Primary_lifestyle = None
+        self.Nuyen = None
+        self.Licences = None
+        self.Other = None
+        # Core Combat Info
+        self.Physical_armor = None 
+        self.Primary_ranged_weapon = None
+        self.Primary_melee_weapon = None
+        self.Physical_dmg_track = None
+        self.Stun_dmg_track = None
+        self.Overflow = None
+        # Qualities
+        self.Qualities = None
+        # Contacts
+        self.Contacts = None
+        # Gear
+        self.Ranged_weapons = None
+        self.Melee_weapons = None
+        self.Armor = None
+        self.Cyberdeck = None
+        self.Augmentations = None
+        self.Vehicle = None
+        self.Spells = None
+        self.Preparations_rituals = None
+        self.Complex_forms = None
+        self.Adept_powers = None
+        self.Gear = None
+
+    def print_stats(self):
+        print(f'{self.Body}\n{self.Agility}\n{self.Reaction}\n{self.Strength}')
+        print(f'{self.Logic}\n{self.Willpower}\n{self.Intuition}\n{self.Charisma}')
+        print(f'{self.Edge}\n{self.Essence}')
+
+    def highest_core_attr(self):
+        non_zero_attrs = []
+        for attr in self.CoreAttributes:
+            if attr is None:
+                pass
+            if type(attr) == Attribute:
+                non_zero_attrs.append(attr)
+        highest_attr = None
+        for attr in non_zero_attrs:
+            if highest_attr is None or attr.value > highest_attr.value:
+                highest_attr = attr
+        return highest_attr
+
+    def debug_gen_attrs(self):
+        def roll_attr(attr):
+            attr.value = random.randint(1, attr.limit)
+        limitation = random.randint(1,3)
+        self.Body = Attribute("Body")
+        self.Agility = Attribute("Agility")
+        self.Reaction = Attribute("Reaction")
+        self.Strength = Attribute("Strength")
+        self.Willpower = Attribute("Willpower")
+        self.Logic = Attribute("Logic")
+        self.Intuition = Attribute("Intuition")
+        self.Charisma = Attribute("Charisma")
+        self.Edge = Attribute("Edge")
+        self.Essence = Attribute("Essence")
+        self.Magic = Attribute("Magic")
+        self.Resonance = Attribute("Resonance")
+        self.CoreAttributes = [
+                self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower,
+                self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence, 
+                self.Magic, self.Resonance
+        ]
+        match limitation:
+            case 1:
+                self.CoreAttributes.pop(self.CoreAttributes.index(self.Magic))
+                self.CoreAttributes.pop(self.CoreAttributes.index(self.Resonance))
+                for attr in self.CoreAttributes:
+                    roll_attr(attr)
+                self.CoreAttributes.append(self.Magic)
+                self.CoreAttributes.append(self.Resonance)
+            case 2:
+                self.CoreAttributes.pop(self.CoreAttributes.index(self.Magic))
+                for attr in self.CoreAttributes:
+                    roll_attr(attr)
+                self.CoreAttributes.append(self.Magic)
+            case 3:
+                self.CoreAttributes.pop(self.CoreAttributes.index(self.Resonance))
+                for attr in self.CoreAttributes:
+                    roll_attr(attr)
+                self.CoreAttributes.append(self.Resonance)
+
+
+
+
+
+
 
 class AbstractBaseClass:
     def __init__(self, name, **kwargs):
         self.name = name
         for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+    def __repr__(self):
+        return self.name
 
 
 class Metatype(AbstractBaseClass):
@@ -80,16 +225,35 @@ class Skill(AbstractBaseClass):
     items = []
     def __init__(self, name, attribute, skill_type, rating: int = 0, **kwargs):
         super().__init__(name, **kwargs)
+        Skill.items.append(self)
         self.attribute = attribute
         self.skill_type = skill_type
         self.rating = rating
+        self.group = False
+
+    def __repr__(self):
+        return f"{self.name}: {self.rating} (Group: {self.group})"
 
 
 class SkillGroup(AbstractBaseClass):
     items =[]
     def __init__(self, name, skills, **kwargs):
         super().__init__(name, **kwargs)
+        SkillGroup.items.append(self)
         self.skills = skills
+        self.idx = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        try:
+            result = self.skills[self.idx]
+        except IndexError:
+            raise StopIteration
+        self.idx += 1
+        return result
+
 
 
 class Gear(AbstractBaseClass):
@@ -250,7 +414,7 @@ ESCAPE_ARTIST = Skill("Escape_artist", AGILITY, "Active", spec=['Cuffs (Restrain
 EXOTIC_MELEE_WEAPON = Skill("Exotic_melee_weapon", AGILITY, "Active", specs=None)
 EXOTIC_RANGED_WEAPON = Skill("Exotic_ranged_weapon", AGILITY, "Active", specs=None)
 GUNNERY = Skill("Gunnery", AGILITY, "Active", spec=['Artillery', 'Ballistic', 'Energy', 'Guided Missile', 'Rocket'])
-GYMNASTICS = Skill("Gymnastics", AGILITY, "Active" spec=['Balance', 'Climbing', 'Dance', 'Leaping', 'Parkour', 'Rolling'])
+GYMNASTICS = Skill("Gymnastics", AGILITY, "Active", spec=['Balance', 'Climbing', 'Dance', 'Leaping', 'Parkour', 'Rolling'])
 HEAVY_WEAPONS = Skill("Heavy_weapons", AGILITY, "Active", spec=['Assault Cannons', 'Grenade Launchers', 'Guided Missiles', 'Machine Guns', 'Rocket Launchers'])
 LOCKSMITH = Skill("Locksmith", AGILITY, "Active", spec=['Combination', 'Keypad', 'Maglock', 'Tumbler', 'Voice Recognition'])
 LONGARMS = Skill("Longarms", AGILITY, "Active", spec=['Extended-Range Shots', 'Long-Range Shots', 'Shotguns', 'Sniper Rifles'])
@@ -326,7 +490,7 @@ COUNTERSPELLING = Skill("Counterspelling", MAGIC, "Active", spec=['Spell Type'])
 DISENCHANTING = Skill("Disenchanting", MAGIC, "Active", spec=['Alchemical Preparations', 'Power', 'Foci'])
 RITUAL_SPELLCASTING = Skill("Ritual Spellcasting", MAGIC, "Active", spec=['Keyword', 'Anchored', 'Spell'])
 SPELLCASTING = Skill("Spellcasting", MAGIC, "Active", spec=['Spell Type'])
-SUMMONING = Skill("Summoning", MAGIC, "Active", spec=['Spirit of Air', 'Spirit of Earth', 'Spirith of Beasts', 'Spirit of Fire', 'Spirits of Main', 'Spirits Water])
+SUMMONING = Skill("Summoning", MAGIC, "Active", spec=['Spirit of Air', 'Spirit of Earth', 'Spirith of Beasts', 'Spirit of Fire', 'Spirits of Main', 'Spirits Water'])
 # =============== RESONANCE ==============
 COMPILING = Skill("Compiling", RESONANCE, "Active", spec=['Sprite Type'])
 DECOMPILING = Skill("Decompiling", RESONANCE, "Active", spec=['Sprite Type'])
@@ -398,9 +562,9 @@ LAKOTA = Skill("Lakota", INTUITION, "Language", category="Tongue")
 DAKOTA = Skill("Dakota", INTUITION, "Language", category="Tongue")
 DINE = Skill("Dine", INTUITION, "Language", category="Tongue")
 
-ACTIVE_SKILLS = [_ for _ in Skill.items if Skill.type == "Active"]
-KNOWLEDGE_SKILLS = [_ for _ in Skill.items if Skill.type == "Knowledge"]
-LANGUAGE_SKILLS = [_ for _ in Skill.items if Skill.type == "Language"]
+# ACTIVE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Active"]
+# KNOWLEDGE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Knowledge"]
+# LANGUAGE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Language"]
 
 """
     SKILL GROUPS
@@ -422,6 +586,10 @@ STEALTH = SkillGroup("Stealth", [DISGUISE, PALMING, SNEAKING])
 TASKING = SkillGroup("Tasking", [COMPILING, DECOMPILING, REGISTERING])
 
 SKILL_GROUPS = SkillGroup.items
+MAGIC_SKILLS = [ASTRAL_COMBAT, ARCANA, BANISHING, BINDING, SUMMONING, ALCHEMY, ARTIFICING, DISENCHANTING, COUNTERSPELLING, RITUAL_SPELLCASTING, SPELLCASTING]
+MAGIC_SKILL_GROUPS = [CONJURING, ENCHANTING, SORCERY]
+RESONANCE_SKILLS = [COMPILING, DECOMPILING, REGISTERING]
+VEHICLE_SKILLS = [GUNNERY, PILOT_AEROSPACE, PILOT_AIRCRAFT, PILOT_GROUND_CRAFT, PILOT_EXOTIC_VEHICLE_SPECIFIC, PILOT_WALKER, PILOT_WATERCRAFT]
 
 """
     METATYPES
