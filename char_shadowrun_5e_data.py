@@ -5,9 +5,23 @@ class Attribute:
         self.name = name
         self.value = value
         self.limit = 6
+        if name == "Essence":
+            self.limit = None
+        self.type = self.get_type(name)
 
     def __repr__(self):
         return f"{self.name}: [{self.value}/{self.limit}]"
+
+    def get_type(self, name):
+        match name:
+            case "Body" | "Agility" | "Reaction" | "Strength":
+                return "Physical"
+            case "Logic" | "Intuition" | "Charisma":
+                return "Mental"
+            case "Edge" | "Essence" | "Magic" | "Resonance":
+                return "Special"
+            case _:
+                return ValueError("Attribute cannot get type due to bad name")
 
 class Attributes:
     def __init__(self):
@@ -131,6 +145,8 @@ class Character:
 
     def debug_gen_attrs(self):
         def roll_attr(attr):
+            if attr.name == "Essence":
+                return
             attr.value = random.randint(1, attr.limit)
         limitation = random.randint(1,3)
         self.Body = Attribute("Body")

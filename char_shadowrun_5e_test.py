@@ -9,7 +9,10 @@ r = Core.Character()
 r.Resonance = 4
 
 def get_skills(ch: Core.Character, add_back, add_back_plus):
-    print("get_skills called")
+    print("===========")
+    print("===========")
+    print("===========")
+    print("===========")
     table = Core.PRIORITY_TABLE_FLIPPED
 
     skill_points = table['Skills']['A']
@@ -20,6 +23,7 @@ def get_skills(ch: Core.Character, add_back, add_back_plus):
 
     book_skills = [_ for _ in Core.Skill.items if _.skill_type == "Active"]
     book_sg = [_ for _ in Core.SkillGroup.items]
+    book_sg_2 = [_ for _ in Core.SkillGroup.items]
     if ch.Magic is None:
         print("magic is none")
         book_skills = [s for s in book_skills if s not in Core.MAGIC_SKILLS]
@@ -32,17 +36,14 @@ def get_skills(ch: Core.Character, add_back, add_back_plus):
 
     print(skill_points[1])
     while skill_points[1] > 0:
-        print(skill_points[1])
         chosen_sg = random.choice(book_sg)
         if add_back:
             book_sg.append(chosen_sg)
-            print("add back initiated")
             if add_back_plus:
-                print("add back plus initiated")
-                for skill_list in book_sg:
-                    for sk in skill_list:
+                for skill_list in book_sg_2:
+                    for sk in skill_list.skills:
                         if skills[skills.index(sk)].rating > 0:
-                            print(f"appending {chosen_sg} due to {skills[skills.index(sk)]} being greater than 0")
+                            # print(f"appending {chosen_sg} due to {skills[skills.index(sk)]} being greater than 0")
                             book_sg.append(chosen_sg)
         for skill in chosen_sg.skills:
             skills[skills.index(skill)].group = chosen_sg.name
@@ -51,11 +52,17 @@ def get_skills(ch: Core.Character, add_back, add_back_plus):
 
     book_skills = [s for s in book_skills if skills[skills.index(s)].group == False]
 
+    print(skill_points[0])
     for i in range(skill_points[0]):
         chosen_skill = random.choice(book_skills)
         
         if add_back:
             book_skills.append(chosen_skill)
+            if add_back_plus:
+                for skill_list in book_sg_2:
+                    for sk in skill_list.skills:
+                            # print(f"appending {chosen_sg} due to {skills[skills.index(sk)]} being greater than 0")
+                            book_skills.append(chosen_skill)
         skills[skills.index(chosen_skill)].rating += 1
 
     for s in skills:
