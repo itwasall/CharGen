@@ -1,0 +1,134 @@
+
+
+
+being group point spend
+
+skill Computer added to character skills
+skill Computer assigned group Electronics
+skill Computer has +1 rating to 1
+skill Software added to character skills
+skill Software assigned group Electronics
+skill Software has +1 rating to 1
+skill Hardware added to character skills
+skill Hardware assigned group Electronics
+skill Hardware has +1 rating to 1
+
+
+being individual point spend
+
+Pilot Aircraft not in character_skills, creating
+skill Pilot Aircraft has +1 rating to 1
+SHOULD BE FALSE: False
+Street Knowledge not in character_skills, creating
+skill Street Knowledge has +1 rating to 1
+SHOULD BE FALSE: False
+Instruction not in character_skills, creating
+skill Instruction has +1 rating to 1
+SHOULD BE FALSE: False
+Exotic_ranged_weapon not in character_skills, creating
+skill Exotic_ranged_weapon has +1 rating to 1
+SHOULD BE FALSE: False
+Survival not in character_skills, creating
+skill Survival has +1 rating to 1
+SHOULD BE FALSE: False
+Computer being ignored because it's group is Electronics
+Diving not in character_skills, creating
+skill Diving has +1 rating to 1
+SHOULD BE FALSE: False
+Etiquette not in character_skills, creating
+skill Etiquette has +1 rating to 1
+SHOULD BE FALSE: False
+Spellcasting not in character_skills, creating
+skill Spellcasting has +1 rating to 1
+SHOULD BE FALSE: False
+Industrial_Mechanic not in character_skills, creating
+skill Industrial_Mechanic has +1 rating to 1
+SHOULD BE FALSE: False
+Computer being ignored because it's group is Electronics
+Disguise not in character_skills, creating
+skill Disguise has +1 rating to 1
+SHOULD BE FALSE: False
+skill Industrial_Mechanic has +1 rating to 2
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 2
+SHOULD BE FALSE: False
+Gunnery not in character_skills, creating
+skill Gunnery has +1 rating to 1
+SHOULD BE FALSE: False
+skill Diving has +1 rating to 2
+SHOULD BE FALSE: False
+Escape_artist not in character_skills, creating
+skill Escape_artist has +1 rating to 1
+SHOULD BE FALSE: False
+Cybertechnology not in character_skills, creating
+skill Cybertechnology has +1 rating to 1
+SHOULD BE FALSE: False
+Arcana not in character_skills, creating
+skill Arcana has +1 rating to 1
+SHOULD BE FALSE: False
+skill Diving has +1 rating to 3
+SHOULD BE FALSE: False
+skill Diving has +1 rating to 4
+SHOULD BE FALSE: False
+skill Cybertechnology has +1 rating to 2
+SHOULD BE FALSE: False
+skill Diving has +1 rating to 5
+SHOULD BE FALSE: False
+Astral Combat not in character_skills, creating
+skill Astral Combat has +1 rating to 1
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 3
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 4
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 5
+SHOULD BE FALSE: False
+skill Exotic_ranged_weapon has +1 rating to 2
+SHOULD BE FALSE: False
+skill Industrial_Mechanic has +1 rating to 3
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 6
+SHOULD BE FALSE: False
+skill Exotic_ranged_weapon has +1 rating to 3
+SHOULD BE FALSE: False
+Exotic_melee_weapon not in character_skills, creating
+skill Exotic_melee_weapon has +1 rating to 1
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 7
+SHOULD BE FALSE: False
+Animal_Handling not in character_skills, creating
+skill Animal_Handling has +1 rating to 1
+SHOULD BE FALSE: False
+skill Astral Combat has +1 rating to 2
+SHOULD BE FALSE: False
+skill Escape_artist has +1 rating to 2
+SHOULD BE FALSE: False
+skill Cybertechnology has +1 rating to 3
+SHOULD BE FALSE: False
+skill Survival has +1 rating to 2
+SHOULD BE FALSE: False
+Cybercombat not in character_skills, creating
+skill Cybercombat has +1 rating to 1
+SHOULD BE FALSE: False
+Professional_Knowledge not in character_skills, creating
+skill Professional_Knowledge has +1 rating to 1
+SHOULD BE FALSE: False
+skill Spellcasting has +1 rating to 2
+SHOULD BE FALSE: False
+Summoning not in character_skills, creating
+skill Summoning has +1 rating to 1
+SHOULD BE FALSE: False
+skill Etiquette has +1 rating to 8
+SHOULD BE FALSE: False
+skill Cybercombat has +1 rating to 2
+SHOULD BE FALSE: False
+skill Diving has +1 rating to 6
+SHOULD BE FALSE: False
+Medicine not in character_skills, creating
+skill Medicine has +1 rating to 1
+SHOULD BE FALSE: False
+Pilot Aerospace not in character_skills, creating
+skill Pilot Aerospace has +1 rating to 1
+SHOULD BE FALSE: False
+skill Cybertechnology has +1 rating to 4
+SHOULD BE FALSE: False

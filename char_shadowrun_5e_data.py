@@ -95,7 +95,11 @@ class Character:
                 self.Magic, self.Resonance
         ]
         # Skills
-        self.Skills = None
+        self.Skills = {
+                'Active': None,
+                'Knowledge': None,
+                'Language': None
+                }
         # IDs/Lifestyle/Currency
         self.Primary_lifestyle = None
         self.Nuyen = None
@@ -239,12 +243,12 @@ class Quality(AbstractBaseClass):
 
 class Skill(AbstractBaseClass):
     items = []
-    def __init__(self, name, attribute, skill_type, rating: int = 0, **kwargs):
+    def __init__(self, name, attribute, skill_type, **kwargs):
         super().__init__(name, **kwargs)
         Skill.items.append(self)
         self.attribute = attribute
         self.skill_type = skill_type
-        self.rating = rating
+        self.rating = 0
         self.group = False
 
     def __repr__(self):
@@ -519,7 +523,7 @@ These are more fluff than the more mechanics-based 'Active' skills
 """
 # =============== ACADEMIC ===============
 BIOLOGY = Skill("Biology", LOGIC, "Knowledge", category="Academic")
-MEDICINE = Skill("Medicine", LOGIC, "Knowledge", category="Academic")
+MEDICINE_K = Skill("Medicine", LOGIC, "Knowledge", category="Academic")
 MAGIC_THEORY = Skill("Magic_Theory",LOGIC, "Knowledge", category="Academic")
 POLITICS = Skill("Politics", LOGIC, "Knowledge", category="Academic")
 PHILOSOPHY = Skill("Philosophy", LOGIC, "Knowledge", category="Academic")
@@ -1225,4 +1229,52 @@ PRIORITY_TABLE_FLIPPED = {
         'E': 6_000
     }
 }
+
+def refresh_priority_table():
+    PRIORITY_TABLE_FLIPPED['Metatype'] = {
+        'A': [(HUMAN, 9), (ELF, 8), (DWARF, 7), (ORK, 7), (TROLL, 5)],
+        'B': [(HUMAN, 7), (ELF, 6), (DWARF, 4), (ORK, 4), (TROLL, 0)],
+        'C': [(HUMAN, 5), (ELF, 3), (DWARF, 1), (ORK, 0)],
+        'D': [(HUMAN, 3), (ELF, 0)],
+        'E': [(HUMAN, 1)]
+    }
+    PRIORITY_TABLE_FLIPPED['Attributes'] = { 'A': 24, 'B': 20, 'C': 16, 'D': 14, 'E': 12 }
+    PRIORITY_TABLE_FLIPPED['MagicResonance'] = {
+        'A': {
+            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
+            'Technomancer': { 'Resonance': 6, 'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2 }, 'Complex Forms': 5 } 
+        },
+        'B': {
+            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
+            'Technomancer': { 'Resonance': 4, 'Skills': {'Type': 'Resonance', 'Rating': 4, 'Quantity': 2}, 'Complex Forms': 2 },
+            'Adept': { 'Magic': 6, 'Skills': {'Type': 'Active', 'Rating': 4, 'Quantity': 1}},
+            'Aspected Magician': { 'Magic': 5, 'Skills': {'Type': 'Magic Group', 'Rating': 4, 'Quantity': 1}}
+        },
+        'C': {
+            'Magician or Mystic Adept': { 'Magic': 3, 'Spells': 5},
+            'Technomancer': { 'Resonance': 3, 'Complex Forms': 1},
+            'Adept': { 'Magic': 4, 'Skills': {'Type': 'Active', 'Rating': 2, 'Quantity': 1}},
+            'Aspected Magician': { 'Magic': 3, 'Skills': {'Type': 'Magic Group', 'Rating': 2, 'Quantity': 1}}
+        },
+        'D': {
+            'Adept': {'Magic': 2},
+            'Aspected Magician': {'Magic': 2}
+        },
+        'E': None
+    }
+    PRIORITY_TABLE_FLIPPED['Skills'] = {
+        'A': [46, 10],
+        'B': [36, 5],
+        'C': [28, 2],
+        'D': [22, 0],
+        'E': [18, 0]
+    }
+    PRIORITY_TABLE_FLIPPED['Resources'] = {
+        'A': 450_000,
+        'B': 275_000,
+        'C': 140_000,
+        'D': 50_000,
+        'E': 6_000
+    }
+
 
