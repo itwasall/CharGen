@@ -274,8 +274,8 @@ def equiping(dnd_class, equip):
     martial_melee_weapons = equip['martial_melee_weapons']
     martial_ranged_weapons = equip['martial_ranged_weapons']
     musical_instruments = equip['musical_instruments']
-    simple_weapons = [melee for melee in simple_melee_weapons] + [ranged for ranged in simple_ranged_weapons]
-    martial_weapons = [melee for melee in martial_melee_weapons] + [ranged for ranged in martial_ranged_weapons]
+    simple_weapons = simple_melee_weapons + simple_ranged_weapons
+    martial_weapons = martial_melee_weapons + martial_ranged_weapons
     equipment = []
     tests = ['equipment1', 'equipment2', 'equipment3', 'equipment4']
     item_check_list = {
