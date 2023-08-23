@@ -4,7 +4,7 @@ from statistics import mean
 
 c = Core.Character()
 m = Core.Character()
-m.Magic = 4
+m.Magic = 5
 r = Core.Character()
 r.Resonance = 4
 
