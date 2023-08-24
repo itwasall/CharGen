@@ -116,7 +116,7 @@ def get_highest_attr(ch: Core.Character):
         return [highest_attrs[0], second_attrs[0]]
 
 
-    def current_highest():
+    """def current_highest():
         x = []
         highest = max(non_special_values)
         if len(value_to_attr[highest]) == 1:
@@ -140,6 +140,7 @@ def get_highest_attr(ch: Core.Character):
         value_to_attr[v] = [a.name for a in non_special_attrs if a.value == v]
 
     return_list.append(current_highest())
+    """
 
 
 def roll_stats(ch: Core.Character, attr: int):
@@ -160,9 +161,98 @@ def roll_stats(ch: Core.Character, attr: int):
 
 def karma_qualities(ch: Core.Character):
     pass
-    
 
-def get_skills(c: Core.Character, skill_points_table, skill_cap = 50, attr_influence = None, **kwargs):
+def add_spell(ch: Core.Character):
+    pass
+
+def resolve_magic_resonance_skills(ch: Core.Character, tbl):
+    print("*._.*._.*")
+    print("INIT RESOLVE MAGIC RESONANCE SKILLS")
+    print("*._.*._.*")
+    skills = {}
+    match tbl['Type']:
+        case 'Magic':
+            for _ in tbl['Quantity']:
+                while True:
+                    chosen = random.choice(Core.MAGIC_SKILLS)
+                    if chosen not in skills.keys():
+                        break
+                skills[chosen.name] = chosen
+                skills[chosen.name].rating = tbl['Rating']
+        case 'Resonance':
+            for _ in tbl['Quantity']:
+                while True:
+                    chosen = random.choice(Core.RESONANCE_SKILLS)
+                    if chosen not in skills.keys():
+                        break
+                skills[chosen.name] = chosen
+                skills[chosen.name].rating = tbl['Rating']
+        case 'Magic Group':
+            groups_chosen = []
+            for _ in tbl['Quantity']:
+                while True:
+                    chosen = random.choice(Core.MAGIC_SKILL_GROUPS)
+                    if chosen not in groups_chosen:
+                        break
+                groups_chosen.append(chosen)
+            for skill in group in groups_chosen:
+                pass
+
+
+                
+    return skills
+
+def add_complex_form(ch: Core.Character):
+    pass
+
+    
+def resolve_magic_resonance(ch: Core.Character, tbl):
+    # tbl = priority_table['MagicResonance']
+    if tbl is None:
+        return
+    _type = random.choice(list(tbl.keys()))
+    ch.MagicResoUser = str(_type)
+    print(f'Uh oh! Looks like you\'re a {_type}')
+    print([key for key in list(tbl[_type].keys())])
+    for key in list(tbl[_type].keys()):
+        if key == "Magic":
+            print("resolve magires Magic")
+            ch.Magic = tbl[_type][key]
+        elif key == "Resonance":
+            print("resolve magires Resonance")
+            ch.Resonance = tbl[_type][key]
+        elif key == "Spells":
+            print("resolve magires Spells")
+            for i in range(tbl[_type][key]):
+                add_spell(ch)
+        elif key == "Skills":
+            print("resolve magires Skills")
+            print(f"You get {tbl[_type][Skills][Quantity]} different skills  at rating {tbl[_type][Skills][Rating]}")
+            resolve_magic_resonance_skills(ch, tbl[_type][key])
+
+    match [key for key in list(tbl[_type].keys())]:
+        case "Magic":
+            print("resolve magires Magic")
+            ch.Magic = tbl[_type][key]
+        case "Resonance":
+            print("resolve magires Resonance")
+            ch.Resonance = tbl[_type][key]
+        case "Spells":
+            print("resolve magires Spells")
+            for i in range(tbl[_type][key]):
+                add_spell(ch)
+        case "Skills":
+            print("resolve magires Skills")
+            print(f"You get {tbl[_type][Skills][Quantity]} different skills  at rating {tbl[_type][Skills][Rating]}")
+            resolve_magic_resonance_skills(ch, tbl[_type][key])
+        case "Complex Forms":
+            for i in range(tbl[_type][key]):
+                add_complex_form(ch.Character)
+
+
+
+
+def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, **kwargs):
     """
     def init_shit():
         for s in Core.Skill.items:
@@ -173,22 +263,29 @@ def get_skills(c: Core.Character, skill_points_table, skill_cap = 50, attr_influ
     
     init_shit()
     """
+    character_skills = {}
+    skill_points_table = tbl['Skills']
+    if ch.MagicResoUser != None:
+        if 'Skills' in tbl['MagicResonance'].keys():
+            character_skills = resolve_magic_resonance_skills(c, tbl['MagicResonance']['Skills'])
+        else:
+            pass
+
     skill_points, group_points = skill_points_table
 
-    character_skills = {}
 
     list_of_skills = [skill for skill in Core.Skill.items if skill.skill_type == "Active"]
     list_of_groups = [group for group in Core.SkillGroup.items]
 
     # Non-magic users can't select magic skills/groups
     # Non-resonance users can't select resonance skills/group
-    if c.Magic is None:
+    if ch.Magic is None:
         for _ in Core.MAGIC_SKILLS:
             list_of_skills.pop(list_of_skills.index(_))
         for _ in Core.MAGIC_SKILL_GROUPS:
             list_of_groups.pop(list_of_groups.index(_))
 
-    if c.Resonance is None:
+    if ch.Resonance is None:
         for _ in Core.RESONANCE_SKILLS:
             list_of_skills.pop(list_of_skills.index(_))
         list_of_groups.pop(list_of_groups.index(Core.TASKING))
@@ -299,10 +396,17 @@ def format_skills(character_skills):
     print("===")
 
     for attr in output_by_attr.keys():
-
-        print("")
         print(f'---> {attr}')
         print(", ".join([skill for skill in output_by_attr[attr]]))
+        print("")
+
+    print("===")
+    print("    Magic:")
+    print(", ".join([skill for skill in character_skills.keys() if skill in [i.name for i in Core.MAGIC_SKILLS]]))
+    print("===")
+    print("    Resonance:")
+    print(", ".join([skill for skill in character_skills.keys() if skill in Core.MAGIC_SKILLS]))
+
 
 def generate_character():
     # PHASE 1: CONCEPT
@@ -310,6 +414,7 @@ def generate_character():
     priority_table = get_priorities(character)
     metatype = random.choice(priority_table['Metatype'])
     attribute_points = priority_table['Attributes']
+    # Initialising Stuff
     edge_shit = metatype[1]
     metatype = metatype[0]
     metatype.attributes.init_stat_block()
@@ -336,13 +441,18 @@ def generate_character():
                 character.Edge = metatype.attributes.Edge
             case 'Essence':
                 character.Essence = metatype.attributes.Essence
-    # character.print_stats()
     character.redo_attr()
+    # STEP 1: ATTRIBUTES
     print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
     print(f"====\nHighest attrs: {highest_attrs}")
-    character.Skills = get_skills(character, priority_table['Skills'], attr_influence=highest_attrs, skill_cap=20)
+    # STEP 3: MAGIC/RESONANCE
+    magic_reso = priority_table['MagicResonance']
+    resolve_magic_resonance(character, magic_reso)
+    # STEP 4: QUALITIES
+    # STEP 5: SKILLS
+    character.Skills = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
     format_skills(character.Skills)
     # Attribute Points
 

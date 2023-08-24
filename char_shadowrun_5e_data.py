@@ -127,6 +127,8 @@ class Character:
         self.Complex_forms = None
         self.Adept_powers = None
         self.Gear = None
+        # Other
+        self.MagicResoUser = None
 
     def print_stats(self):
         print(f'{self.Body}\n{self.Agility}\n{self.Reaction}\n{self.Strength}')
@@ -1201,17 +1203,20 @@ PRIORITY_TABLE_FLIPPED = {
     'Attributes': { 'A': 24, 'B': 20, 'C': 16, 'D': 14, 'E': 12 },
     'MagicResonance': {
         'A': {
-            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
+            'Magician' : { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
+            'Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
             'Technomancer': { 'Resonance': 6, 'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2 }, 'Complex Forms': 5 } 
         },
         'B': {
-            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
+            'Magician': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
+            'Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
             'Technomancer': { 'Resonance': 4, 'Skills': {'Type': 'Resonance', 'Rating': 4, 'Quantity': 2}, 'Complex Forms': 2 },
             'Adept': { 'Magic': 6, 'Skills': {'Type': 'Active', 'Rating': 4, 'Quantity': 1}},
             'Aspected Magician': { 'Magic': 5, 'Skills': {'Type': 'Magic Group', 'Rating': 4, 'Quantity': 1}}
         },
         'C': {
-            'Magician or Mystic Adept': { 'Magic': 3, 'Spells': 5},
+            'Magician':{ 'Magic': 3, 'Spells': 5},
+            'Mystic Adept': { 'Magic': 3, 'Spells': 5},
             'Technomancer': { 'Resonance': 3, 'Complex Forms': 1},
             'Adept': { 'Magic': 4, 'Skills': {'Type': 'Active', 'Rating': 2, 'Quantity': 1}},
             'Aspected Magician': { 'Magic': 3, 'Skills': {'Type': 'Magic Group', 'Rating': 2, 'Quantity': 1}}
@@ -1249,17 +1254,42 @@ def refresh_priority_table():
     PRIORITY_TABLE_FLIPPED['Attributes'] = { 'A': 24, 'B': 20, 'C': 16, 'D': 14, 'E': 12 }
     PRIORITY_TABLE_FLIPPED['MagicResonance'] = {
         'A': {
-            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 }, 'Spells': 10 },
-            'Technomancer': { 'Resonance': 6, 'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2 }, 'Complex Forms': 5 } 
+            'Magician': {
+                'Magic': 6,
+                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 },
+                'Spells': 10 },
+            'Mystic Adept': {
+                'Magic': 6,
+                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 },
+                'Spells': 10 },
+            'Technomancer': {
+                'Resonance': 6,
+                'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2 },
+                'Complex Forms': 5 } 
         },
         'B': {
-            'Magician or Mystic Adept': { 'Magic': 6, 'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2}, 'Spells': 7 },
-            'Technomancer': { 'Resonance': 4, 'Skills': {'Type': 'Resonance', 'Rating': 4, 'Quantity': 2}, 'Complex Forms': 2 },
-            'Adept': { 'Magic': 6, 'Skills': {'Type': 'Active', 'Rating': 4, 'Quantity': 1}},
-            'Aspected Magician': { 'Magic': 5, 'Skills': {'Type': 'Magic Group', 'Rating': 4, 'Quantity': 1}}
+            'Magician': {
+                'Magic': 6,
+                'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2},
+                'Spells': 7 },
+            'Mystic Adept': {
+                'Magic': 6,
+                'Skills': {'Type': 'Magic', 'Rating': 4, 'Quantity': 2},
+                'Spells': 7 },
+            'Technomancer': {
+                'Resonance': 4,
+                'Skills': {'Type': 'Resonance', 'Rating': 4, 'Quantity': 2},
+                'Complex Forms': 2 },
+            'Adept': {
+                'Magic': 6,
+                'Skills': {'Type': 'Active', 'Rating': 4, 'Quantity': 1}},
+            'Aspected Magician': {
+                'Magic': 5,
+                'Skills': {'Type': 'Magic Group', 'Rating': 4, 'Quantity': 1}}
         },
         'C': {
-            'Magician or Mystic Adept': { 'Magic': 3, 'Spells': 5},
+            'Magician': { 'Magic': 3, 'Spells': 5},
+            'Mystic Adept': { 'Magic': 3, 'Spells': 5},
             'Technomancer': { 'Resonance': 3, 'Complex Forms': 1},
             'Adept': { 'Magic': 4, 'Skills': {'Type': 'Active', 'Rating': 2, 'Quantity': 1}},
             'Aspected Magician': { 'Magic': 3, 'Skills': {'Type': 'Magic Group', 'Rating': 2, 'Quantity': 1}}
