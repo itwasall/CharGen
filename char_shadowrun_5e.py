@@ -109,7 +109,7 @@ def get_highest_attr(ch: Core.Character):
         else:
             while len(value_to_attr[highest]) >= 1:
                 choice = value_to_attr[highest]
-                return_list.append(choice[0])
+                x.append(choice[0])
                 value_to_attr[highest].remove(choice[0])
                 if len(return_list) == 2:
                     return return_list
