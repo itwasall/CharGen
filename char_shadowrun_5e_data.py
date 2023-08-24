@@ -147,12 +147,20 @@ class Character:
                 highest_attr = attr
         return highest_attr
 
-    def debug_gen_attrs(self):
+    def debug_gen_attrs(self, magic=False, techo=False):
         def roll_attr(attr):
             if attr.name == "Essence":
                 return
             attr.value = random.randint(1, attr.limit)
-        limitation = random.randint(1,3)
+        if magic and techo:
+            limitation = 1
+        elif techo:
+            limitation = 2
+        elif magic:
+            limitation = 3
+        else:
+            limitation = random.randint(1,3)
+
         self.Body = Attribute("Body")
         self.Agility = Attribute("Agility")
         self.Reaction = Attribute("Reaction")
@@ -170,24 +178,16 @@ class Character:
                 self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence, 
                 self.Magic, self.Resonance
         ]
+        for attr in self.CoreAttributes:
+            roll_attr(attr)
         match limitation:
             case 1:
-                self.CoreAttributes.pop(self.CoreAttributes.index(self.Magic))
-                self.CoreAttributes.pop(self.CoreAttributes.index(self.Resonance))
-                for attr in self.CoreAttributes:
-                    roll_attr(attr)
-                self.CoreAttributes.append(self.Magic)
-                self.CoreAttributes.append(self.Resonance)
+                self.Magic = None
+                self.Resonance = None
             case 2:
-                self.CoreAttributes.pop(self.CoreAttributes.index(self.Magic))
-                for attr in self.CoreAttributes:
-                    roll_attr(attr)
-                self.CoreAttributes.append(self.Magic)
+                self.Magic=None
             case 3:
-                self.CoreAttributes.pop(self.CoreAttributes.index(self.Resonance))
-                for attr in self.CoreAttributes:
-                    roll_attr(attr)
-                self.CoreAttributes.append(self.Resonance)
+                self.Resonance=None
 
 
 
@@ -262,6 +262,9 @@ class SkillGroup(AbstractBaseClass):
         SkillGroup.items.append(self)
         self.skills = skills
         self.idx = 0
+    
+    def __repr__(self):
+        return [skill.name for skill in self.skills]
 
     def __iter__(self):
         return self
@@ -605,7 +608,7 @@ SORCERY = SkillGroup("Sorcery", [COUNTERSPELLING, RITUAL_SPELLCASTING, SPELLCAST
 STEALTH = SkillGroup("Stealth", [DISGUISE, PALMING, SNEAKING])
 TASKING = SkillGroup("Tasking", [COMPILING, DECOMPILING, REGISTERING])
 
-SKILL_GROUPS = SkillGroup.items
+SKILL_GROUPS = [group for group in SkillGroup.items]
 MAGIC_SKILLS = [ASTRAL_COMBAT, ARCANA, BANISHING, BINDING, SUMMONING, ALCHEMY, ARTIFICING, DISENCHANTING, COUNTERSPELLING, RITUAL_SPELLCASTING, SPELLCASTING]
 MAGIC_SKILL_GROUPS = [CONJURING, ENCHANTING, SORCERY]
 RESONANCE_SKILLS = [COMPILING, DECOMPILING, REGISTERING]
