@@ -89,11 +89,10 @@ class Character:
         self.Physical_limit = None 
         self.Mental_limit = None 
         self.Social_limit = None
-        self.CoreAttributes = [
-                self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower,
-                self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence, 
-                self.Magic, self.Resonance
-        ]
+        self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
+        self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
+        self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
+        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
         # Skills
         self.Skills = {
                 'Active': None,
@@ -133,6 +132,12 @@ class Character:
         print(f'{self.Body}\n{self.Agility}\n{self.Reaction}\n{self.Strength}')
         print(f'{self.Logic}\n{self.Willpower}\n{self.Intuition}\n{self.Charisma}')
         print(f'{self.Edge}\n{self.Essence}')
+
+    def redo_attr(self):
+        self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
+        self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
+        self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
+        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
 
     def highest_core_attr(self):
         non_zero_attrs = []
@@ -265,7 +270,7 @@ class SkillGroup(AbstractBaseClass):
     
     def __repr__(self):
         return [skill.name for skill in self.skills]
-
+"""
     def __iter__(self):
         return self
 
@@ -276,7 +281,7 @@ class SkillGroup(AbstractBaseClass):
             raise StopIteration
         self.idx += 1
         return result
-
+"""
 
 
 class Gear(AbstractBaseClass):

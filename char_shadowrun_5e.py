@@ -1,6 +1,7 @@
 import chargen
 import random
 import char_shadowrun_5e_data as Core
+from collections import OrderedDict
 """
     GOALS
 
@@ -96,6 +97,195 @@ def get_priorities(character: Core.Character):
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[category][priority_chosen]
     return selected_items
 
+
+def get_highest_attr(ch: Core.Character):
+
+    def current_highest():
+        x = []
+        highest = max(non_special_values)
+        if len(value_to_attr[highest]) == 1:
+            x = value_to_attr[highest]
+            return x
+        else:
+            while len(value_to_attr[highest]) >= 1:
+                choice = value_to_attr[highest]
+                return_list.append(choice[0])
+                value_to_attr[highest].remove(choice[0])
+                if len(return_list) == 2:
+                    return return_list
+
+    return_list = []
+                            
+    non_special_attrs = ch.PhysicalAttributes + ch.MentalAttributes
+    non_special_values = [attr.value for attr in non_special_attrs]
+    # Making dict of {4: 'Intuition'}
+    value_to_attr = {}
+    for v in non_special_values:
+        value_to_attr[v] = [a.name for a in non_special_attrs if a.value == v]
+
+    return_list.append(current_highest())
+
+
+def roll_stats(ch: Core.Character, attr: int):
+    rollable_stats = [
+            ch.Body, ch.Agility, ch.Reaction, ch.Strength, ch.Willpower,
+            ch.Logic, ch.Intuition, ch.Charisma, ch.Edge
+            ]
+    while attr > 0:
+        stat_roll = random.choice(rollable_stats)
+        if stat_roll.value + 1 <= stat_roll.limit:
+            stat_roll.value += 1
+            attr -= 1
+    ch.print_stats()
+    dominant_stats = [attribute for attribute in rollable_stats if attribute.value >= 4]
+    if len(dominant_stats) < 1:
+        raise ValueError("No dominant stats!")
+    print(dominant_stats)
+
+def karma_qualities(ch: Core.Character):
+    pass
+    
+
+def get_skills(c: Core.Character, skill_points_table, skill_cap = 50, attr_influence = None, **kwargs):
+    """
+    def init_shit():
+        for s in Core.Skill.items:
+            if hasattr(s, 'group'):
+                s.group = False
+            s.rating = 0
+        Core.refresh_priority_table()
+    
+    init_shit()
+    """
+    skill_points, group_points = skill_points_table
+
+    character_skills = {}
+
+    list_of_skills = [skill for skill in Core.Skill.items if skill.skill_type == "Active"]
+    list_of_groups = [group for group in Core.SkillGroup.items]
+
+    # Non-magic users can't select magic skills/groups
+    # Non-resonance users can't select resonance skills/group
+    if c.Magic is None:
+        for _ in Core.MAGIC_SKILLS:
+            list_of_skills.pop(list_of_skills.index(_))
+        for _ in Core.MAGIC_SKILL_GROUPS:
+            list_of_groups.pop(list_of_groups.index(_))
+
+    if c.Resonance is None:
+        for _ in Core.RESONANCE_SKILLS:
+            list_of_skills.pop(list_of_skills.index(_))
+        list_of_groups.pop(list_of_groups.index(Core.TASKING))
+
+    weight_skills = [1 for _ in list_of_skills]
+    weight_groups = [1 for _ in list_of_groups]
+
+    # Adjusting weights based on highest physical and mental attributes
+    if attr_influence is not None:
+        for attr in attr_influence:
+            skills_of_same_attribute = [s for s in list_of_skills if s.attribute == attr[0]]
+            for i in skills_of_same_attribute:
+                weight_skills[list_of_skills.index(i)] += 3
+            for group in list_of_groups:
+                if group.skills[0].attribute == attr.name:
+                    weight_groups[list_of_groups.index(group)] += 3
+
+
+
+    # Group Skill Points spend
+    # for _ in range(group_points):
+    while group_points > 0:
+        ROLL_GROUP = random.choices(list_of_groups, weight_groups)[0]
+        for skill in ROLL_GROUP.skills:
+            # print(f"Roll group {ROLL_GROUP.name} processing {skill.name}")
+            if skill.name not in character_skills.keys():
+                character_skills[skill.name] = skill
+                character_skills[skill.name].group = ROLL_GROUP.name
+                character_skills[skill.name].rating += 1
+            else:
+                character_skills[skill.name].rating += 1
+        # Adjusting weights based on groups already selected
+        weight_groups[list_of_groups.index(ROLL_GROUP)] += random.randint(1, 2)
+        same_attribute_list = [s for s in list_of_skills if s.attribute == skill.attribute and s.name != skill.name]
+        for same_attr in same_attribute_list:
+            weight_skills[list_of_skills.index(same_attr)] += random.randint(1, 3)
+                
+        group_points -= 1
+            
+    # Individual Skill Points spend
+    # for _ in range(skill_points):
+    while skill_points > 0:
+        ROLL_SKILL = random.choices(list_of_skills, weight_skills)[0]
+        non_grouped_skills_count = len([i for i in character_skills.keys() if character_skills[i].group == False])
+        if ROLL_SKILL.name in character_skills.keys() and character_skills[ROLL_SKILL.name].group != False:
+            pass
+        elif ROLL_SKILL.name not in character_skills.keys() and non_grouped_skills_count >= skill_cap:
+            pass
+        else:
+            if ROLL_SKILL.name not in character_skills.keys():
+                character_skills[ROLL_SKILL.name] = ROLL_SKILL
+            elif character_skills[ROLL_SKILL.name].rating >= 12:
+                continue
+            character_skills[ROLL_SKILL.name].rating += 1
+            # Adjusting weights based on skills already selected
+            match weight_skills[list_of_skills.index(ROLL_SKILL)]:
+                case 1,2,3:
+                    weight_skills[list_of_skills.index(ROLL_SKILL)] += random.randint(1,5)
+                case _:
+                    weight_skills[list_of_skills.index(ROLL_SKILL)] += random.randint(1,2)
+            same_attribute_list = [skill for skill in list_of_skills if skill.attribute == ROLL_SKILL.attribute and skill.name != ROLL_SKILL.name]
+            for same_attr in same_attribute_list:
+                weight_skills[list_of_skills.index(same_attr)] += random.randint(1, 3)
+            else:
+                pass
+            skill_points -= 1
+    
+    return character_skills
+
+def format_skills(character_skills):
+    # Getting debug output_by_group. Sorts skills by group first, then by ranking
+    output_by_group = {'Non-Grouped': {}}
+    output_by_attr = {}
+    print("====")
+    print("ACTIVE SKILLS")
+    print("    by Group/Rating:")
+    print("---")
+    for k, d in character_skills.items():
+        if d.attribute.name not in output_by_attr.keys():
+            output_by_attr[d.attribute.name] = [d.name]
+        else:
+            output_by_attr[d.attribute.name].append(d.name)
+        if d.group != False:
+            if d.group not in output_by_group.keys():
+                output_by_group[d.group] = {}
+                if d.rating not in output_by_group[d.group].keys():
+                    output_by_group[d.group][d.rating] = [d.name]
+                else:
+                    output_by_group[d.group][d.rating].append(d.name)
+            else:
+                if d.rating not in output_by_group[d.group].keys():
+                    output_by_group[d.group][d.rating] = [d.name]
+                else:
+                    output_by_group[d.group][d.rating].append(d.name)
+        else:
+            if d.rating not in output_by_group['Non-Grouped'].keys():
+                output_by_group['Non-Grouped'][d.rating] = [d.name]
+            else:
+                output_by_group['Non-Grouped'][d.rating].append(d.name)
+
+    for group in output_by_group.keys():
+        output_by_group[group] = OrderedDict(sorted(output_by_group[group].items(), key=lambda t: t[0]))
+        print(group)
+        for rating in output_by_group[group].keys():
+            print(rating, output_by_group[group][rating])
+    print("---")
+    print("    by Attribute:")
+    print("---")
+
+    for attr in output_by_attr.keys():
+        print(f'    {attr}')
+        print(", ".join([skill for skill in output_by_attr[attr]]))
+
 def generate_character():
     # PHASE 1: CONCEPT
     character = Core.Character()
@@ -128,39 +318,15 @@ def generate_character():
                 character.Edge = metatype.attributes.Edge
             case 'Essence':
                 character.Essence = metatype.attributes.Essence
-    character.print_stats()
+    # character.print_stats()
+    character.redo_attr()
     print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
+    highest_attrs = get_highest_attr(character)
+    print(f"====\n{highest_attrs}")
+    character.Skills = get_skills(character, priority_table['Skills'], attr_influence=highest_attrs, skill_cap=20)
+    format_skills(character.Skills)
     # Attribute Points
-
-def roll_stats(ch: Core.Character, attr: int):
-    rollable_stats = [
-            ch.Body, ch.Agility, ch.Reaction, ch.Strength, ch.Willpower,
-            ch.Logic, ch.Intuition, ch.Charisma, ch.Edge
-            ]
-    while attr > 0:
-        stat_roll = random.choice(rollable_stats)
-        if stat_roll.value + 1 <= stat_roll.limit:
-            stat_roll.value += 1
-            attr -= 1
-    ch.print_stats()
-    dominant_stats = [attribute for attribute in rollable_stats if attribute.value >= 4]
-    if len(dominant_stats) < 1:
-        raise ValueError("No dominant stats!")
-    print(dominant_stats)
-
-def karma_qualities(ch: Core.Character):
-    pass
-    
-
-def skills_gen(ch: Core.Character, skills: list):
-    skill_points = skills[0]
-    skill_group_points = skills[1]
-    ch.Skills = {'Single': {}, 'Group': {}}
-    while skill_points > 0:
-        pass
-        
-
 
 
     # PHASE 2: PR

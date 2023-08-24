@@ -10,160 +10,154 @@
 
 being group point spend
 
-skill Alchemy has +1 rating to 1
-skill Artificing has +1 rating to 1
-skill Disenchanting has +1 rating to 1
-skill Gymnastics has +1 rating to 1
-skill Running has +1 rating to 1
-skill Swimming has +1 rating to 1
-skill Cybercombat has +1 rating to 1
-skill Electronic_Warfare has +1 rating to 1
-skill Hacking has +1 rating to 1
-skill Etiquette has +1 rating to 1
-skill Leadership has +1 rating to 1
-skill Negotiation has +1 rating to 1
 skill Con has +1 rating to 1
 skill Impersonation has +1 rating to 1
 skill Performance has +1 rating to 1
+skill Computer has +1 rating to 1
+skill Software has +1 rating to 1
+skill Hardware has +1 rating to 1
+skill Con has +1 rating to 2
+skill Impersonation has +1 rating to 2
+skill Performance has +1 rating to 2
+skill Con has +1 rating to 3
+skill Impersonation has +1 rating to 3
+skill Performance has +1 rating to 3
+skill Blades has +1 rating to 1
+skill Clubs has +1 rating to 1
+skill Unarmed_combat has +1 rating to 1
+skill Navigation has +1 rating to 1
+skill Survival has +1 rating to 1
+skill Tracking has +1 rating to 1
+skill Navigation has +1 rating to 2
+skill Survival has +1 rating to 2
+skill Tracking has +1 rating to 2
+skill Blades has +1 rating to 2
+skill Clubs has +1 rating to 2
+skill Unarmed_combat has +1 rating to 2
+skill Blades has +1 rating to 3
+skill Clubs has +1 rating to 3
+skill Unarmed_combat has +1 rating to 3
+skill Navigation has +1 rating to 3
+skill Survival has +1 rating to 3
+skill Tracking has +1 rating to 3
 
 
 being individual point spend
 
-Interests Knowledge not in character_skills, creating
-skill Interests Knowledge has +1 rating to 1
+Armorer not in character_skills, creating
+skill Armorer has +1 rating to 1
 SHOULD BE FALSE: False
-Counterspelling not in character_skills, creating
-skill Counterspelling has +1 rating to 1
+Medicine not in character_skills, creating
+skill Medicine has +1 rating to 1
 SHOULD BE FALSE: False
-Swimming being ignored because it's group is Athletics
-Perception not in character_skills, creating
-skill Perception has +1 rating to 1
+Clubs being ignored because it's group is Close_Combat
+Aeronautics_Mechanic not in character_skills, creating
+skill Aeronautics_Mechanic has +1 rating to 1
 SHOULD BE FALSE: False
-Computer not in character_skills, creating
-skill Computer has +1 rating to 1
+Banishing not in character_skills, creating
+skill Banishing has +1 rating to 1
+SHOULD BE FALSE: False
+Pilot Aircraft not in character_skills, creating
+skill Pilot Aircraft has +1 rating to 1
 SHOULD BE FALSE: False
 Artisan not in character_skills, creating
 skill Artisan has +1 rating to 1
 SHOULD BE FALSE: False
-Pilot Exotic Vehicle Specific not in character_skills, creating
-skill Pilot Exotic Vehicle Specific has +1 rating to 1
-SHOULD BE FALSE: False
-Longarms not in character_skills, creating
-skill Longarms has +1 rating to 1
-SHOULD BE FALSE: False
-Survival not in character_skills, creating
-skill Survival has +1 rating to 1
-SHOULD BE FALSE: False
-Street Knowledge not in character_skills, creating
-skill Street Knowledge has +1 rating to 1
-SHOULD BE FALSE: False
-Pilot Watercraft not in character_skills, creating
-skill Pilot Watercraft has +1 rating to 1
-SHOULD BE FALSE: False
-Chemistry not in character_skills, creating
-skill Chemistry has +1 rating to 1
-SHOULD BE FALSE: False
-First_Aid not in character_skills, creating
-skill First_Aid has +1 rating to 1
-SHOULD BE FALSE: False
-Alchemy being ignored because it's group is Enchanting
-Astral Combat not in character_skills, creating
-skill Astral Combat has +1 rating to 1
-SHOULD BE FALSE: False
-Aeronautics_Mechanic not in character_skills, creating
-skill Aeronautics_Mechanic has +1 rating to 1
-SHOULD BE FALSE: False
-Spellcasting not in character_skills, creating
-skill Spellcasting has +1 rating to 1
-SHOULD BE FALSE: False
-Archery not in character_skills, creating
-skill Archery has +1 rating to 1
-SHOULD BE FALSE: False
+Tracking being ignored because it's group is Outdoors
 Nautical_Mechanic not in character_skills, creating
 skill Nautical_Mechanic has +1 rating to 1
 SHOULD BE FALSE: False
-Language not in character_skills, creating
-skill Language has +1 rating to 1
+Performance being ignored because it's group is Acting
+skill Armorer has +1 rating to 2
 SHOULD BE FALSE: False
-Alchemy being ignored because it's group is Enchanting
-Pistols not in character_skills, creating
-skill Pistols has +1 rating to 1
+Software being ignored because it's group is Electronics
+skill Pilot Aircraft has +1 rating to 2
 SHOULD BE FALSE: False
 Impersonation being ignored because it's group is Acting
-skill Perception has +1 rating to 2
-SHOULD BE FALSE: False
-Industrial_Mechanic not in character_skills, creating
-skill Industrial_Mechanic has +1 rating to 1
-SHOULD BE FALSE: False
-Running being ignored because it's group is Athletics
-Free_fall not in character_skills, creating
-skill Free_fall has +1 rating to 1
-SHOULD BE FALSE: False
-Pilot Aerospace not in character_skills, creating
-skill Pilot Aerospace has +1 rating to 1
-SHOULD BE FALSE: False
-Blades not in character_skills, creating
-skill Blades has +1 rating to 1
-SHOULD BE FALSE: False
-skill Survival has +1 rating to 2
-SHOULD BE FALSE: False
-skill Pilot Watercraft has +1 rating to 2
-SHOULD BE FALSE: False
-Tracking not in character_skills, creating
-skill Tracking has +1 rating to 1
-SHOULD BE FALSE: False
-Cybertechnology not in character_skills, creating
-skill Cybertechnology has +1 rating to 1
-SHOULD BE FALSE: False
-Arcana not in character_skills, creating
-skill Arcana has +1 rating to 1
-SHOULD BE FALSE: False
-Demolitions not in character_skills, creating
-skill Demolitions has +1 rating to 1
-SHOULD BE FALSE: False
-Biotechnology not in character_skills, creating
-skill Biotechnology has +1 rating to 1
-SHOULD BE FALSE: False
-Negotiation being ignored because it's group is Influence
-skill Pilot Aerospace has +1 rating to 2
-SHOULD BE FALSE: False
-skill Interests Knowledge has +1 rating to 2
-SHOULD BE FALSE: False
 skill Artisan has +1 rating to 2
 SHOULD BE FALSE: False
-skill Pilot Exotic Vehicle Specific has +1 rating to 2
+Blades being ignored because it's group is Close_Combat
+skill Medicine has +1 rating to 2
 SHOULD BE FALSE: False
-Performance being ignored because it's group is Acting
-Banishing not in character_skills, creating
-skill Banishing has +1 rating to 1
+skill Banishing has +1 rating to 2
 SHOULD BE FALSE: False
-Swimming being ignored because it's group is Athletics
-Negotiation being ignored because it's group is Influence
-Automatics not in character_skills, creating
-skill Automatics has +1 rating to 1
+skill Banishing has +1 rating to 3
 SHOULD BE FALSE: False
-Palming not in character_skills, creating
-skill Palming has +1 rating to 1
+Survival being ignored because it's group is Outdoors
+skill Banishing has +1 rating to 4
 SHOULD BE FALSE: False
-Artificing being ignored because it's group is Enchanting
-Ritual Spellcasting not in character_skills, creating
-skill Ritual Spellcasting has +1 rating to 1
+skill Banishing has +1 rating to 5
 SHOULD BE FALSE: False
-Hardware not in character_skills, creating
-skill Hardware has +1 rating to 1
+skill Artisan has +1 rating to 3
 SHOULD BE FALSE: False
-skill Ritual Spellcasting has +1 rating to 2
+skill Aeronautics_Mechanic has +1 rating to 2
 SHOULD BE FALSE: False
-skill Computer has +1 rating to 2
+skill Artisan has +1 rating to 4
 SHOULD BE FALSE: False
-skill Pistols has +1 rating to 2
+skill Banishing has +1 rating to 6
 SHOULD BE FALSE: False
-Armorer not in character_skills, creating
-skill Armorer has +1 rating to 1
+skill Banishing has +1 rating to 7
 SHOULD BE FALSE: False
-Navigation not in character_skills, creating
-skill Navigation has +1 rating to 1
+skill Armorer has +1 rating to 3
 SHOULD BE FALSE: False
-Instruction not in character_skills, creating
-skill Instruction has +1 rating to 1
+skill Banishing has +1 rating to 8
+SHOULD BE FALSE: False
+skill Nautical_Mechanic has +1 rating to 2
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 5
+SHOULD BE FALSE: False
+skill Banishing has +1 rating to 9
+SHOULD BE FALSE: False
+skill Banishing has +1 rating to 10
+SHOULD BE FALSE: False
+skill Banishing has +1 rating to 11
+SHOULD BE FALSE: False
+skill Banishing has +1 rating to 12
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 6
+SHOULD BE FALSE: False
+Tracking being ignored because it's group is Outdoors
+Survival being ignored because it's group is Outdoors
+Navigation being ignored because it's group is Outdoors
+Banishing's rating (12) is too high!
+skill Aeronautics_Mechanic has +1 rating to 3
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 7
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 8
+SHOULD BE FALSE: False
+Software being ignored because it's group is Electronics
+skill Armorer has +1 rating to 4
+SHOULD BE FALSE: False
+skill Armorer has +1 rating to 5
+SHOULD BE FALSE: False
+Banishing's rating (12) is too high!
+Banishing's rating (12) is too high!
+skill Armorer has +1 rating to 6
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 9
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 10
+SHOULD BE FALSE: False
+skill Armorer has +1 rating to 7
+SHOULD BE FALSE: False
+skill Artisan has +1 rating to 11
+SHOULD BE FALSE: False
+Banishing's rating (12) is too high!
+skill Artisan has +1 rating to 12
+SHOULD BE FALSE: False
+skill Pilot Aircraft has +1 rating to 3
+SHOULD BE FALSE: False
+skill Nautical_Mechanic has +1 rating to 3
+SHOULD BE FALSE: False
+Banishing's rating (12) is too high!
+skill Armorer has +1 rating to 8
+SHOULD BE FALSE: False
+skill Aeronautics_Mechanic has +1 rating to 4
+SHOULD BE FALSE: False
+skill Armorer has +1 rating to 9
+SHOULD BE FALSE: False
+Artisan's rating (12) is too high!
+Navigation being ignored because it's group is Outdoors
+skill Aeronautics_Mechanic has +1 rating to 5
 SHOULD BE FALSE: False
