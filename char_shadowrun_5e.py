@@ -99,6 +99,22 @@ def get_priorities(character: Core.Character):
 
 
 def get_highest_attr(ch: Core.Character):
+    non_special_attrs = ch.PhysicalAttributes + ch.MentalAttributes
+    highest = 0
+    highest_attrs = []
+    second_highest = 0
+    second_attrs = []
+    for idx, i in enumerate(non_special_attrs):
+        if non_special_attrs[idx].value > highest:
+            second_highest = highest
+            highest = non_special_attrs[idx].value
+    highest_attrs = [attr for attr in non_special_attrs if attr.value == highest]
+    if len(highest_attrs) > 1:
+        return highest_attrs
+    else:
+        second_attrs = [attr for attr in non_special_attrs if attr.value == second_highest]
+        return [highest_attrs[0], second_attrs[0]]
+
 
     def current_highest():
         x = []
@@ -183,9 +199,9 @@ def get_skills(c: Core.Character, skill_points_table, skill_cap = 50, attr_influ
     # Adjusting weights based on highest physical and mental attributes
     if attr_influence is not None:
         for attr in attr_influence:
-            skills_of_same_attribute = [s for s in list_of_skills if s.attribute == attr[0]]
+            skills_of_same_attribute = [s for s in list_of_skills if s.attribute == attr.name]
             for i in skills_of_same_attribute:
-                weight_skills[list_of_skills.index(i)] += 3
+                weight_skills[list_of_skills.index(i)] += 30
             for group in list_of_groups:
                 if group.skills[0].attribute == attr.name:
                     weight_groups[list_of_groups.index(group)] += 3
@@ -275,15 +291,17 @@ def format_skills(character_skills):
 
     for group in output_by_group.keys():
         output_by_group[group] = OrderedDict(sorted(output_by_group[group].items(), key=lambda t: t[0]))
-        print(group)
+        print("---\n -->", group)
         for rating in output_by_group[group].keys():
             print(rating, output_by_group[group][rating])
-    print("---")
+    print("===")
     print("    by Attribute:")
-    print("---")
+    print("===")
 
     for attr in output_by_attr.keys():
-        print(f'    {attr}')
+
+        print("")
+        print(f'---> {attr}')
         print(", ".join([skill for skill in output_by_attr[attr]]))
 
 def generate_character():
@@ -323,7 +341,7 @@ def generate_character():
     print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
-    print(f"====\n{highest_attrs}")
+    print(f"====\nHighest attrs: {highest_attrs}")
     character.Skills = get_skills(character, priority_table['Skills'], attr_influence=highest_attrs, skill_cap=20)
     format_skills(character.Skills)
     # Attribute Points
