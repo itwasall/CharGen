@@ -197,11 +197,6 @@ class Character:
                 self.Resonance=None
 
 
-
-
-
-
-
 class AbstractBaseClass:
     def __init__(self, name, **kwargs):
         self.name = name
@@ -416,6 +411,12 @@ class Lifestyle(AbstractBaseClass):
         super().__init__(name, **kwargs)
 
 
+class ComplexForm(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        ComplexForm.items.append(self)
+
 """
     ATTRIBUTES
 """
@@ -592,9 +593,9 @@ LAKOTA = Skill("Lakota", INTUITION, "Language", category="Tongue")
 DAKOTA = Skill("Dakota", INTUITION, "Language", category="Tongue")
 DINE = Skill("Dine", INTUITION, "Language", category="Tongue")
 
-# ACTIVE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Active"]
-# KNOWLEDGE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Knowledge"]
-# LANGUAGE_SKILLS = [_ for _ in Skill.items if Skill.skill_type == "Language"]
+ACTIVE_SKILLS = [_ for _ in Skill.items if _.skill_type == "Active"]
+KNOWLEDGE_SKILLS = [_ for _ in Skill.items if _.skill_type == "Knowledge"]
+LANGUAGE_SKILLS = [_ for _ in Skill.items if _.skill_type == "Language"]
 
 """
     SKILL GROUPS
@@ -1181,6 +1182,41 @@ LOW_LIFESTYLE = Lifestyle("Low_Lifestyle", dicestring="3d6", base_amount=60, cos
 MIDDLE_LIFESTYLE = Lifestyle("Middle_Lifestyle", dicestring="4d6", base_amount=100, cost=5000)
 HIGH_LIFESTYLE = Lifestyle("High_Lifestyle", dicestring="5d6", base_amount=500, cost=10_000)
 LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", dicestring="6d6", base_amount=1000, cost=100_000)
+
+"""
+    COMPLEX FORMS
+
+    duration:
+        Perm -> Permanent
+        Sustain -> Sustained
+        Imm -> Immediate
+
+    fading_value:
+        level + fading_value
+
+"""
+CLEANER = ComplexForm("Cleaner", target='Persona', duration='Perm', fading_value=1)
+DIFFUSE_OF_ATTACK = ComplexForm("Diffuse_of_attack", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_SLEAZE = ComplexForm("Diffuse_of_sleaze", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_DATA_PROCESSING = ComplexForm("Diffuse_of_data_processing", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_FIREWALL = ComplexForm("Diffuse_of_firewall", target='Device', duration='Sustain', fading_value=1)
+EDITOR = ComplexForm("Editor", target='File', duration='Perm', fading_value=2)
+INFUSION_OF_ATTACK = ComplexForm("Infusion_of_attack", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_SLEAZE = ComplexForm("Infusion_of_sleaze", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_DATA_PROCESSING = ComplexForm("Infusion_of_data_processing", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_FIREWALL = ComplexForm("Infusion_of_firewall", target='Device', duration='Sustain', fading_value=1)
+STATIC_VEIL = ComplexForm("Static_veil", target='Persona', duration='Sustain', fading_value=-1)
+PULSE_STORM = ComplexForm("Pulse_storm", target='Persona', duration='Imm', fading_value=0)
+PUPPETEER = ComplexForm("Puppeteer", target='Device', duration='Imm', fading_value=4)
+RESONANCE_CHANNEL = ComplexForm("Resonance_channel", target='Device', duration='Sustain', fading_value=-1)
+RESONANCE_SPIKE = ComplexForm("Resonance_spike", target='Device', duration='Imme', fading_value=0)
+RESONANCE_VEIL = ComplexForm("Resonance_veil", target='Device', duration='Sustain', fading_value=-1)
+STATIC_BOMB = ComplexForm("Static_bomb", target='Self', duration='Imme', fading_value=2)
+STITCHES = ComplexForm("Stitches", target='Sprite', duration='Perm', fading_value=-2)
+TRANSCENDENT_GRID = ComplexForm("Transcendent_grid", target='Self', duration='Imme', fading_value=-3)
+TATTLETALE = ComplexForm("Tattletale", target='Persona', duration='Perm', fading_value=-2)
+
+
 
 """
     PRIORITY TABLE

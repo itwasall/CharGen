@@ -113,6 +113,10 @@ def get_highest_attr(ch: Core.Character):
         return highest_attrs
     else:
         second_attrs = [attr for attr in non_special_attrs if attr.value == second_highest]
+        second_highest = highest
+        while len(second_attrs) == 0:
+            second_attrs = [attr for attr in non_special_attrs if attr.value == second_highest]
+            second_highest -= 1
         return [highest_attrs[0], second_attrs[0]]
 
 
@@ -155,8 +159,8 @@ def roll_stats(ch: Core.Character, attr: int):
             attr -= 1
     ch.print_stats()
     dominant_stats = [attribute for attribute in rollable_stats if attribute.value >= 4]
-    if len(dominant_stats) < 1:
-        raise ValueError("No dominant stats!")
+    # if len(dominant_stats) < 1:
+    #    raise ValueError("No dominant stats!")
     print(dominant_stats)
 
 def karma_qualities(ch: Core.Character):
@@ -192,15 +196,25 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl):
                     if chosen not in groups_chosen:
                         break
                 groups_chosen.append(chosen)
-            for skill in group in groups_chosen:
-                pass
-
-
-                
+            for group in groups_chosen:
+                for skill in group.skills:
+                    skills[skill.name] = skill
+                    skills[skill.name].rating = tbl['Rating']
+                    skills[skill.name].group = group.name
+        case 'Active':
+            for _ in range(tbl['Quantity']):
+                while True:
+                    chosen = random.choice(Core.ACTIVE_SKILLS)
+                    if chosen not in skills.keys():
+                        break
+                skills[chosen.name] = chosen
+                skills[chosen.name].rating = tbl['Rating']
     return skills
 
 def add_complex_form(ch: Core.Character):
-    pass
+    if type(ch.Complex_forms) != list:
+        ch.Complex_forms = []
+    ch.Complex_forms.append(random.choice(Core.ComplexForm.items))
 
     
 def resolve_magic_resonance(ch: Core.Character, tbl):
@@ -209,44 +223,26 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
         return
     _type = random.choice(list(tbl.keys()))
     ch.MagicResoUser = str(_type)
-    print(f'Uh oh! Looks like you\'re a {_type}')
-    print([key for key in list(tbl[_type].keys())])
+    print(f'//////\nUh oh! Looks like you\'re a {_type}')
     for key in list(tbl[_type].keys()):
         if key == "Magic":
-            print("resolve magires Magic")
-            ch.Magic = tbl[_type][key]
+            ch.Magic = Core.Attribute("Magic")
+            ch.Magic.value = tbl[_type][key]
+            print(ch.Magic)
         elif key == "Resonance":
-            print("resolve magires Resonance")
-            ch.Resonance = tbl[_type][key]
+            ch.Resonance = Core.Attribute("Resonance")
+            ch.Resonance.value = tbl[_type][key]
+            print(ch.Resonance)
         elif key == "Spells":
-            print("resolve magires Spells")
             for i in range(tbl[_type][key]):
                 add_spell(ch)
-        elif key == "Skills":
-            print("resolve magires Skills")
-            print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
-            resolve_magic_resonance_skills(ch, tbl[_type][key])
-
-    match [key for key in list(tbl[_type].keys())]:
-        case "Magic":
-            print("resolve magires Magic")
-            ch.Magic = tbl[_type][key]
-        case "Resonance":
-            print("resolve magires Resonance")
-            ch.Resonance = tbl[_type][key]
-        case "Spells":
-            print("resolve magires Spells")
+        # elif key == "Skills":
+        #    print("resolve magi/res Skills")
+        #    print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
+        #    resolve_magic_resonance_skills(ch, tbl[_type][key])
+        elif key == "Complex Forms":
             for i in range(tbl[_type][key]):
-                add_spell(ch)
-        case "Skills":
-            print("resolve magires Skills")
-            print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
-            resolve_magic_resonance_skills(ch, tbl[_type][key])
-        case "Complex Forms":
-            for i in range(tbl[_type][key]):
-                add_complex_form(ch.Character)
-
-
+                add_complex_form(ch)
 
 
 def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, **kwargs):
@@ -262,14 +258,14 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
     """
     character_skills = {}
     skill_points_table = tbl['Skills']
-    if ch.MagicResoUser != None:
-        if 'Skills' in tbl['MagicResonance'].keys():
-            character_skills = resolve_magic_resonance_skills(c, tbl['MagicResonance']['Skills'])
+    if ch.MagicResoUser is not None:
+        if 'Skills' in tbl['MagicResonance'][ch.MagicResoUser].keys():
+            magic_reso_skills = resolve_magic_resonance_skills(ch, tbl['MagicResonance'][ch.MagicResoUser]['Skills'])
+            print(f"Magic/Resonance Skills:\n {magic_reso_skills}")
+            for k, d in magic_reso_skills.items():
+                character_skills[k] = d
         else:
             pass
-    print("^.,^.,^.,^")
-    print(character_skills)
-    print("^.,^.,^.,^")
 
     skill_points, group_points = skill_points_table
 
@@ -398,7 +394,6 @@ def format_skills(character_skills):
     for attr in output_by_attr.keys():
         print(f'---> {attr}')
         print(", ".join([skill for skill in output_by_attr[attr]]))
-        print("")
 
     print("===")
     print("    Magic:")
@@ -446,7 +441,6 @@ def generate_character():
     print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
-    print(f"====\nHighest attrs: {highest_attrs}")
     # STEP 3: MAGIC/RESONANCE
     magic_reso = priority_table['MagicResonance']
     resolve_magic_resonance(character, magic_reso)
