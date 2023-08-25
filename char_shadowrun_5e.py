@@ -166,13 +166,10 @@ def add_spell(ch: Core.Character):
     pass
 
 def resolve_magic_resonance_skills(ch: Core.Character, tbl):
-    print("*._.*._.*")
-    print("INIT RESOLVE MAGIC RESONANCE SKILLS")
-    print("*._.*._.*")
     skills = {}
     match tbl['Type']:
         case 'Magic':
-            for _ in tbl['Quantity']:
+            for _ in range(tbl['Quantity']):
                 while True:
                     chosen = random.choice(Core.MAGIC_SKILLS)
                     if chosen not in skills.keys():
@@ -180,7 +177,7 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl):
                 skills[chosen.name] = chosen
                 skills[chosen.name].rating = tbl['Rating']
         case 'Resonance':
-            for _ in tbl['Quantity']:
+            for _ in range(tbl['Quantity']):
                 while True:
                     chosen = random.choice(Core.RESONANCE_SKILLS)
                     if chosen not in skills.keys():
@@ -189,7 +186,7 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl):
                 skills[chosen.name].rating = tbl['Rating']
         case 'Magic Group':
             groups_chosen = []
-            for _ in tbl['Quantity']:
+            for _ in range(tbl['Quantity']):
                 while True:
                     chosen = random.choice(Core.MAGIC_SKILL_GROUPS)
                     if chosen not in groups_chosen:
@@ -227,7 +224,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
                 add_spell(ch)
         elif key == "Skills":
             print("resolve magires Skills")
-            print(f"You get {tbl[_type][Skills][Quantity]} different skills  at rating {tbl[_type][Skills][Rating]}")
+            print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
             resolve_magic_resonance_skills(ch, tbl[_type][key])
 
     match [key for key in list(tbl[_type].keys())]:
@@ -243,7 +240,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
                 add_spell(ch)
         case "Skills":
             print("resolve magires Skills")
-            print(f"You get {tbl[_type][Skills][Quantity]} different skills  at rating {tbl[_type][Skills][Rating]}")
+            print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
             resolve_magic_resonance_skills(ch, tbl[_type][key])
         case "Complex Forms":
             for i in range(tbl[_type][key]):
@@ -270,6 +267,9 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
             character_skills = resolve_magic_resonance_skills(c, tbl['MagicResonance']['Skills'])
         else:
             pass
+    print("^.,^.,^.,^")
+    print(character_skills)
+    print("^.,^.,^.,^")
 
     skill_points, group_points = skill_points_table
 
