@@ -124,13 +124,15 @@ def get_highest_attr(ch: Core.Character):
         print(f'    {attr}')
         print(" ".join([skill for skill in output_by_attr[attr]]))
 
+def get_knowledge_language_skills(ch: Core.Character):
+    kl_skill_points = 2*(ch.Intuition.value + ch.Logic.value)
+    print(f"character gets {kl_skill_points} knowledge/skill points")
+    native_language = random.choice([l for l in Core.Skill.items if l.skill_type == "Language" and l.category == "Tongue"])
+    native_language.rating = "N"
+    print(native_language)
 
-for i in range(100):
-    a = Core.Character()
-    a.debug_gen_attrs()
-    print(a.Body)
-    get_highest_attr(a)
-    f = open('shadowrun_5e_test_out', 'wt')
-    for _ in log:
-        f.write(f"\n{_}")
-    f.close()
+
+a = Core.Character()
+a.debug_gen_attrs()
+print(a.Body)
+get_knowledge_language_skills(a)

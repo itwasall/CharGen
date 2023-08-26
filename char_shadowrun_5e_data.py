@@ -254,7 +254,10 @@ class Skill(AbstractBaseClass):
         self.group = False
 
     def __repr__(self):
-        return f"{self.name}: {self.rating} (Group: {self.group})"
+        if self.group:
+            return f"{self.name}: {self.rating} (Group: {self.group})"
+        else:
+            return f"{self.name}: {self.rating}"
 
 
 class SkillGroup(AbstractBaseClass):
