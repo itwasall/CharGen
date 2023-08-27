@@ -140,6 +140,7 @@ def get_highest_attr(ch: Core.Character):
 def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, **kwargs):
 
     character_skills = {}
+    character_specialisations = {}
     skill_points_table = tbl['Skills']
     if ch.MagicResoUser is not None:
         if 'Skills' in tbl['MagicResonance'][ch.MagicResoUser].keys():
@@ -205,6 +206,12 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
     # Individual Skill Points spend
     # for _ in range(skill_points):
     while skill_points > 0:
+        skills_for_spec = [d for k, d in character_skills.items() if d.rating > 4 and d.group == False]
+        if len(skills_for_spec) > 1 and random.randint(1,100) > 80:
+            ROLL_SPEC = random.choice(skills_for_spec)
+            ROLL_SPECIALISATION = random.choice(ROLL_SPEC.spec)
+            character_specialisations[ROLL_SPEC.name] = ROLL_SPECIALISATION
+            skill_points -=  1
         ROLL_SKILL = random.choices(list_of_skills, weight_skills)[0]
         non_grouped_skills_count = len([i for i in character_skills.keys() if character_skills[i].group == False])
         if ROLL_SKILL.name in character_skills.keys() and character_skills[ROLL_SKILL.name].group != False:
@@ -230,7 +237,7 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
                 pass
             skill_points -= 1
     
-    return character_skills
+    return character_skills, character_specialisations
 
 
 def resolve_magic_resonance_skills(ch: Core.Character, tbl):
@@ -418,8 +425,9 @@ def generate_character():
     resolve_magic_resonance(character, magic_reso)
     # STEP 4: QUALITIES
     # STEP 5: SKILLS
-    character.Skills = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
-    format_skills(character.Skills)
+    character.Skills['Active'], character.Specialisations = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
+    format_skills(character.Skills['Active'])
+    print(character.Specialisations)
     # Attribute Points
 
 

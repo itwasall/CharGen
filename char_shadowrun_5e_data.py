@@ -99,6 +99,7 @@ class Character:
                 'Knowledge': None,
                 'Language': None
                 }
+        self.Specialisations = {}
         # IDs/Lifestyle/Currency
         self.Primary_lifestyle = None
         self.Nuyen = None
