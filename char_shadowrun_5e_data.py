@@ -257,6 +257,8 @@ class Skill(AbstractBaseClass):
 
     def __repr__(self):
         if isinstance(self.spec, str):
+            if self.group:
+                raise ValueError
             return f"{self.name}: {self.rating} (Specialisation: {self.spec})"
         if self.group:
             return f"{self.name}: {self.rating} (Group: {self.group})"
@@ -1205,9 +1207,9 @@ LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", dicestring="6d6", base_amount=1
 """
     COMPLEX FORMS
 
-    duration:False
+    duration:
         Perm -> Permanent
-        Sustain -> S'P'ustained
+        Sustain -> Sustained
         Imm -> Immediate
 
     fading_value:
@@ -1238,44 +1240,71 @@ TATTLETALE = ComplexForm("Tattletale", target='Persona', duration='Perm', fading
 """
     SPELLS
 """
-# Combat Spells
-ACID_STREAM = Spell("Acid Stream", direct=False, elemental=True, type='Physical', range='LOS', damage='Physical', duration='Instantaneous', drain=-6, category='Combat')
-TOXIC_WAVE = Spell('Toxic_wave', direct=False, elemental=True, type='P', range='LOS (Area)', damage='Physical', duration='I', drain=-1, category='Combat')
-PUNCH = Spell('Punch', direct=False, elemental=False, type='P', range='T', damage='S', duration='I', drain=-6, category='Combat')
-CLOUT = Spell('Clout', direct=False, elemental=False, type='P', range='LOS', damage='S', duration='I', drain=-3, category='Combat')
-BLAST = Spell('Blast', direct=False, elemental=False, type='P', range='LOS (Area)', damage='S', duration='I', drain=0, category='Combat')
-DEATH_TOUCH = Spell('Death_touch', direct=True, elemental=False, type='M', range='T', damage='P', duration='I', drain=-6, category='Combat')
-MANABOLT = Spell('Manabolt', direct=True, elemental=False, type='M', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
-MANABALL = Spell('Manaball', direct=True, elemental=False, type='M', range='LOS (Area)', damage='P', duration='I', drain=0, category='Combat')
-FLAMETHROWER = Spell('Flamethrower', direct=False, elemental=True, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
-FIREBALL = Spell('Fireball', direct=False, elemental=True, type='P', range='Los (Area)', damage='P', duration='I', drain=-1, category='Combat')
-LIGHTNING_BOLT = Spell('Lightning_bolt', direct=False, elemental=True, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
-BALL_LIGHTNING = Spell('Ball_lightning', direct=False, elemental=True, type='P', range='LOS (Area)', damage='P', duration='I', drain=-1, category='Combat')
-SHATTER = Spell('Shatter', direct=True, elemental=False, type='P', range='T', damage='P', duration='I', drain=-6, category='Combat')
-POWERBOLT = Spell('Powerbolt', direct=True, elemental=False, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
-POWERBALL = Spell('Powerball', direct=True, elemental=False, type='P', range='LOS (Area)', damage='P', duration='I', drain=0, category='Combat')
-KNOCKOUT = Spell('Knockout', direct=True, elemental=False, type='M', range='T', damage='S', duration='I', drain=-6, category='Combat')
-STUNBOLT = Spell('Stunbolt', direct=True, elemental=False, type='M', range='LOS', damage='S', duration='I', drain=-3, category='Combat')
-STUNBALL = Spell('Stunball', direct=True, elemental=False, type='M', range='LOS (Area)', damage='S', duration='I', drain=0, category='Combat')
-# Detection Spells
-ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='P', range='T', duration='S', drain=-3, category='Detection')
-ANALYZE_MAGIC = Spell('Analyze_magic', active=True, detect_type='Directional', type='P', range='T', duration='S', drain=-3, category='Detection')
-ANALYZE_TRUTH = Spell('Analyze_truth', active=True, detect_type='Directional', type='M', range='T', duration='S', drain=-2, category='Detection')
-CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type='M', range='T', duration='S', drain=-3, category='Detection')
-CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type='M', range='T', duration='S', drain=-3, category='Detection')
-COMBAT_SENSE = Spell('Combat_sense', active=True, detect_type='Psychic', type='M', range='T', duration='S', drain=0, category='Detection')
-DETECT_ENEMIES = Spell('Detect_enemies', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
-DETECT_ENEMIES_EXTENDED = Spell('Detect_enemies_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
-DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-3, category='Detection')
-DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-3, category='Detection')
-DETECT_LIFE_EXTENDED = Spell('Detect_life_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=-1, category='Detection')
-DETECT_LIFE_FORM = Spell('Detect_life_form', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
-DETECT_LIFE_FORM_EXTENDED = Spell('Detect_life_form_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
-DETECT_MAGIC = Spell('Detect_magic', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
-DETECT_MAGIC_EXTENDED = Spell('Detect_magic_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
-DETECT_OBJECT = Spell('Detect_object', active=True, detect_type='Area', type='P', range='T', duration='S', drain=-2, category='Detection')
-MIND_LINK = Spell('Mind_link', active=True, detect_type='Psychic', type='M', range='T', duration='S', drain=-1, category='Detection')
-MIND_PROBE = Spell('Mind_probe', active=True, detect_type='Directional', type='M', range='T', duration='S', drain=0, category='Detection')
+# COMBAT SPELLS
+ACID_STREAM = Spell("Acid Stream", direct=False, elemental=True, type='Physical', range='Line of Sight', damage='Physical', duration='Instantaneous', drain=-6, category='Combat')
+TOXIC_WAVE = Spell('Toxic_wave', direct=False, elemental=True, type='Physical', range='Line of Sight (Area)', damage='Physical', duration='Instantaneous', drain=-1, category='Combat')
+PUNCH = Spell('Punch', direct=False, elemental=False, type='Physical', range='Touch', damage='Stun', duration='Instantaneous', drain=-6, category='Combat')
+CLOUT = Spell('Clout', direct=False, elemental=False, type='Physical', range='Line of Sight', damage='Stun', duration='Instantaneous', drain=-3, category='Combat')
+BLAST = Spell('Blast', direct=False, elemental=False, type='Physical', range='Line of Sight (Area)', damage='Stun', duration='Instantaneous', drain=0, category='Combat')
+DEATH_TOUCH = Spell('Death_touch', direct=True, elemental=False, type='Mana', range='Touch', damage='Physical', duration='Instantaneous', drain=-6, category='Combat')
+MANABOLT = Spell('Manabolt', direct=True, elemental=False, type='Mana', range='Line of Sight', damage='Physical', duration='Instantaneous', drain=-3, category='Combat')
+MANABALL = Spell('Manaball', direct=True, elemental=False, type='Mana', range='Line of Sight (Area)', damage='Physical', duration='Instantaneous', drain=0, category='Combat')
+FLAMETHROWER = Spell('Flamethrower', direct=False, elemental=True, type='Physical', range='Line of Sight', damage='Physical', duration='Instantaneous', drain=-3, category='Combat')
+FIREBALL = Spell('Fireball', direct=False, elemental=True, type='Physical', range='Los (Area)', damage='Physical', duration='Instantaneous', drain=-1, category='Combat')
+LIGHTNING_BOLT = Spell('Lightning_bolt', direct=False, elemental=True, type='Physical', range='Line of Sight', damage='Physical', duration='Instantaneous', drain=-3, category='Combat')
+BALL_LIGHTNING = Spell('Ball_lightning', direct=False, elemental=True, type='Physical', range='Line of Sight (Area)', damage='Physical', duration='Instantaneous', drain=-1, category='Combat')
+SHATTER = Spell('Shatter', direct=True, elemental=False, type='Physical', range='Touch', damage='Physical', duration='Instantaneous', drain=-6, category='Combat')
+POWERBOLT = Spell('Powerbolt', direct=True, elemental=False, type='Physical', range='Line of Sight', damage='Physical', duration='Instantaneous', drain=-3, category='Combat')
+POWERBALL = Spell('Powerball', direct=True, elemental=False, type='Physical', range='Line of Sight (Area)', damage='Physical', duration='Instantaneous', drain=0, category='Combat')
+KNOCKOUT = Spell('Knockout', direct=True, elemental=False, type='Mana', range='Touch', damage='Stun', duration='Instantaneous', drain=-6, category='Combat')
+STUNBOLT = Spell('Stunbolt', direct=True, elemental=False, type='Mana', range='Line of Sight', damage='Stun', duration='Instantaneous', drain=-3, category='Combat')
+STUNBALL = Spell('Stunball', direct=True, elemental=False, type='Mana', range='Line of Sight (Area)', damage='Stun', duration='Instantaneous', drain=0, category='Combat')
+# DETECTION SPELLS
+ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustain', drain=-3, category='Detection')
+ANALYZE_MAGIC = Spell('Analyze_magic', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustain', drain=-3, category='Detection')
+ANALYZE_TRUTH = Spell('Analyze_truth', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+COMBAT_SENSE = Spell('Combat_sense', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_ENEMIES = Spell('Detect_enemies', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_ENEMIES_EXTENDED = Spell('Detect_enemies_extended', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+DETECT_LIFE_EXTENDED = Spell('Detect_life_extended', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=-1, category='Detection')
+DETECT_LIFE_FORM = Spell('Detect_life_form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_LIFE_FORM_EXTENDED = Spell('Detect_life_form_extended', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_MAGIC = Spell('Detect_magic', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_MAGIC_EXTENDED = Spell('Detect_magic_extended', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_OBJECT = Spell('Detect_object', active=True, detect_type='Area', type='Physical', range='Touch', duration='Sustain', drain=-2, category='Detection')
+MIND_LINK = Spell('Mind_link', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustain', drain=-1, category='Detection')
+MIND_PROBE = Spell('Mind_probe', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+# HEALTH SPELLS
+ANTIDOTE = Spell('Antidote', essence=False, type='Mana', range='Touch', duration='Perm', drain=-3, category='Health')
+CURE_DISEASE = Spell('Cure_disease', essence=True, type='Mana', range='Touch', duration='Perm', drain=-4, category='Health')
+DECREASE_BODY = Spell('Decrease_body', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_AGILITY = Spell('Decrease_agility', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_REACTION = Spell('Decrease_reaction', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_STRENGTH = Spell('Decrease_strength', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_WILLPOWER = Spell('Decrease_willpower', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_LOGIC = Spell('Decrease_logic', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_INTUITION = Spell('Decrease_intuition', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_CHARISMA = Spell('Decrease_charisma', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DETOX = Spell('Detox', essence=False, type='Physical', range='Touch', duration='Perm', drain=-6, category='Health')
+HEAL = Spell('Heal', essence=False, type='Physical', range='Touch', duration='Perm', drain=-4, category='Health')
+INCREASE_BODY = Spell('Increase_body', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_AGILITY = Spell('Increase_agility', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_REACTION = Spell('Increase_reaction', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_STRENGTH = Spell('Increase_strength', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_WILLPOWER = Spell('Increase_willpower', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_LOGIC = Spell('Increase_logic', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_INTUITION = Spell('Increase_intuition', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_CHARISMA = Spell('Increase_charisma', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_REFLEXES = Spell('Increase_reflexes', essence=True, type='Physical', range='Touch', duration='Sustain', drain=0, category='Health')
+OXYGENATE = Spell('Oxygenate', essence=False, type='Physical', range='Touch', duration='Sustain', drain=-5, category='Health')
+PROPHYLAXIS = Spell('Prophylaxis', essence=False, type='Mana', range='Touch', duration='Sustain', drain=-4, category='Health')
+RESIST_PAIN = Spell('Resist_pain', essence=False, type='Mana', range='Touch', duration='Perm', drain=-4, category='Health')
+STABALISE = Spell('Stabalise', essence=False, type='Mana', range='Touch', duration='Perm', drain=-4, category='Health')
+
 
 """
     PRIORITY TABLE

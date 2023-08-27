@@ -245,7 +245,7 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
                 pass
             skill_points -= 1
     
-    return character_skills, character_specialisations
+    return character_skills
 
 
 def resolve_magic_resonance_skills(ch: Core.Character, tbl):
@@ -433,12 +433,14 @@ def generate_character():
     resolve_magic_resonance(character, magic_reso)
     # STEP 4: QUALITIES
     # STEP 5: SKILLS
-    character.Skills['Active'], character.Specialisations = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
+    character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
     # format_skills(character.Skills['Active'])
     for k, d in character.Skills.items():
-        for i, j in character.Skills[k].items():
-            print(i, j)
-    print(character.Specialisations)
+        if d is None:
+            pass
+        else:
+            for i, j in character.Skills[k].items():
+                print(j)
     # Attribute Points
 
 
