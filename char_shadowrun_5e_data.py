@@ -1205,9 +1205,9 @@ LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", dicestring="6d6", base_amount=1
 """
     COMPLEX FORMS
 
-    duration:
+    duration:False
         Perm -> Permanent
-        Sustain -> Sustained
+        Sustain -> S'P'ustained
         Imm -> Immediate
 
     fading_value:
@@ -1259,23 +1259,23 @@ STUNBOLT = Spell('Stunbolt', direct=True, elemental=False, type='M', range='LOS'
 STUNBALL = Spell('Stunball', direct=True, elemental=False, type='M', range='LOS (Area)', damage='S', duration='I', drain=0, category='Combat')
 # Detection Spells
 ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='P', range='T', duration='S', drain=-3, category='Detection')
-ANALYZE_MAGIC = Spell('Analyze_magic', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
-ANALYZE_TRUTH = Spell('Analyze_truth', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
-CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
-CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
-COMBAT_SENSE = Spell('Combat_sense', active=True, detect_type='Psychic', type=, range=, duration=, drain=, category='Detection')
-DETECT_ENEMIES = Spell('Detect_enemies', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_ENEMIES_EXTENDED = Spell('Detect_enemies_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_LIFE_EXTENDED = Spell('Detect_life_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_LIFE_FORM = Spell('Detect_life_form', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_LIFE_FORM_EXTENDED = Spell('Detect_life_form_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_MAGIC = Spell('Detect_magic', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_MAGIC_EXTENDED = Spell('Detect_magic_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
-DETECT_OBJECT = Spell('Detect_object', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
-MIND_LINK = Spell('Mind_link', active=True, detect_type='Psychic', type=, range=, duration=, drain=, category='Detection')
-MIND_PROBE = Spell('Mind_probe', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
+ANALYZE_MAGIC = Spell('Analyze_magic', active=True, detect_type='Directional', type='P', range='T', duration='S', drain=-3, category='Detection')
+ANALYZE_TRUTH = Spell('Analyze_truth', active=True, detect_type='Directional', type='M', range='T', duration='S', drain=-2, category='Detection')
+CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type='M', range='T', duration='S', drain=-3, category='Detection')
+CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type='M', range='T', duration='S', drain=-3, category='Detection')
+COMBAT_SENSE = Spell('Combat_sense', active=True, detect_type='Psychic', type='M', range='T', duration='S', drain=0, category='Detection')
+DETECT_ENEMIES = Spell('Detect_enemies', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
+DETECT_ENEMIES_EXTENDED = Spell('Detect_enemies_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
+DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-3, category='Detection')
+DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-3, category='Detection')
+DETECT_LIFE_EXTENDED = Spell('Detect_life_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=-1, category='Detection')
+DETECT_LIFE_FORM = Spell('Detect_life_form', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
+DETECT_LIFE_FORM_EXTENDED = Spell('Detect_life_form_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
+DETECT_MAGIC = Spell('Detect_magic', active=True, detect_type='Area', type='M', range='T', duration='S', drain=-2, category='Detection')
+DETECT_MAGIC_EXTENDED = Spell('Detect_magic_extended', active=True, detect_type='Extended Area', type='M', range='T', duration='S', drain=0, category='Detection')
+DETECT_OBJECT = Spell('Detect_object', active=True, detect_type='Area', type='P', range='T', duration='S', drain=-2, category='Detection')
+MIND_LINK = Spell('Mind_link', active=True, detect_type='Psychic', type='M', range='T', duration='S', drain=-1, category='Detection')
+MIND_PROBE = Spell('Mind_probe', active=True, detect_type='Directional', type='M', range='T', duration='S', drain=0, category='Detection')
 
 """
     PRIORITY TABLE
