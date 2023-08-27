@@ -246,15 +246,18 @@ class Quality(AbstractBaseClass):
 
 class Skill(AbstractBaseClass):
     items = []
-    def __init__(self, name, attribute, skill_type, **kwargs):
+    def __init__(self, name, attribute, skill_type, spec=[], **kwargs):
         super().__init__(name, **kwargs)
         Skill.items.append(self)
         self.attribute = attribute
         self.skill_type = skill_type
         self.rating = 0
         self.group = False
+        self.spec = spec
 
     def __repr__(self):
+        if isinstance(self.spec, str):
+            return f"{self.name}: {self.rating} (Specialisation: {self.spec})"
         if self.group:
             return f"{self.name}: {self.rating} (Group: {self.group})"
         else:
@@ -421,6 +424,13 @@ class ComplexForm(AbstractBaseClass):
         super().__init__(name, **kwargs)
         ComplexForm.items.append(self)
 
+
+class Spell(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Spell.items.append(self)
+
 """
     ATTRIBUTES
 """
@@ -445,22 +455,22 @@ ARCHERY = Skill("Archery", AGILITY, "Active", spec=['Bow', 'Crossbow', 'Non-Stan
 AUTOMATICS = Skill("Automatics", AGILITY, "Active", spec=['Assault Rifles', 'Cyber-Implant', 'Machine Pistols', 'Submachine Guns'])
 BLADES = Skill("Blades", AGILITY, "Active", spec=['Axes', 'Knives', 'Swords', 'Parrying'])
 CLUBS = Skill("Clubs", AGILITY, "Active", spec=['Batons', 'Hammers', 'Saps', 'Staves', 'Parrying'])
-ESCAPE_ARTIST = Skill("Escape_artist", AGILITY, "Active", spec=['Cuffs (Restraint)', 'Ropes (Restraint)', 'Zip Ties (Restraint)', 'Contortionism'])
-EXOTIC_MELEE_WEAPON = Skill("Exotic_melee_weapon", AGILITY, "Active", specs=None)
-EXOTIC_RANGED_WEAPON = Skill("Exotic_ranged_weapon", AGILITY, "Active", specs=None)
+ESCAPE_ARTIST = Skill("Escape Artist", AGILITY, "Active", spec=['Cuffs (Restraint)', 'Ropes (Restraint)', 'Zip Ties (Restraint)', 'Contortionism'])
+EXOTIC_MELEE_WEAPON = Skill("Exotic Melee Weapon", AGILITY, "Active", specs=None)
+EXOTIC_RANGED_WEAPON = Skill("Exotic Ranged Weapon", AGILITY, "Active", specs=None)
 GUNNERY = Skill("Gunnery", AGILITY, "Active", spec=['Artillery', 'Ballistic', 'Energy', 'Guided Missile', 'Rocket'])
 GYMNASTICS = Skill("Gymnastics", AGILITY, "Active", spec=['Balance', 'Climbing', 'Dance', 'Leaping', 'Parkour', 'Rolling'])
-HEAVY_WEAPONS = Skill("Heavy_weapons", AGILITY, "Active", spec=['Assault Cannons', 'Grenade Launchers', 'Guided Missiles', 'Machine Guns', 'Rocket Launchers'])
+HEAVY_WEAPONS = Skill("Heavy Weapons", AGILITY, "Active", spec=['Assault Cannons', 'Grenade Launchers', 'Guided Missiles', 'Machine Guns', 'Rocket Launchers'])
 LOCKSMITH = Skill("Locksmith", AGILITY, "Active", spec=['Combination', 'Keypad', 'Maglock', 'Tumbler', 'Voice Recognition'])
 LONGARMS = Skill("Longarms", AGILITY, "Active", spec=['Extended-Range Shots', 'Long-Range Shots', 'Shotguns', 'Sniper Rifles'])
 PALMING = Skill("Palming", AGILITY, "Active", spec=['Ledgerdemain', 'Pickpocket', 'Pilfering'])
 PISTOLS = Skill("Pistols", AGILITY, "Active", spec=['Holdouts', 'Revolvers', 'Semi-Automatics', 'Tasers'])
 SNEAKING = Skill("Sneaking", AGILITY, "Active", spec=['Jungle Stealth', 'Urban Stealth', 'Desert Stealth'])
 THROWING_WEAPONS = Skill("Throwing Weapons", AGILITY, "Active", spec=['Aerodynamic', 'Blades', 'Non-Aerodynamic'])
-UNARMED_COMBAT = Skill("Unarmed_combat", AGILITY, "Active", spec=['Blocking', 'Cyber Implants', 'Subduing Combat', 'A Martial Art'])
+UNARMED_COMBAT = Skill("Unarmed Combat", AGILITY, "Active", spec=['Blocking', 'Cyber Implants', 'Subduing Combat', 'A Martial Art'])
 # =============== BODY ===================
 DIVING = Skill("Diving", BODY, "Active", spec=['Liquid Breathing Apparatus', 'Mixed Gas Breathing Apparatus', 'Oxygen Extraction Breathing Apparatus', 'SCUBA', 'Artic Diving', 'Cave Diving', 'Commercial Diving', 'Military Diving', 'Controlled Hyperventillation'])
-FREE_FALL = Skill("Free_fall", BODY, "Active", spec=['BASE Jumping', 'Break-Fall', 'Bungee', 'HALO', 'Low Altitude', 'Parachute', 'Static Line', 'Wingsuit', 'Zipline'])
+FREE_FALL = Skill("Free Fall", BODY, "Active", spec=['BASE Jumping', 'Break-Fall', 'Bungee', 'HALO', 'Low Altitude', 'Parachute', 'Static Line', 'Wingsuit', 'Zipline'])
 # =============== REACTION ===============
 PILOT_AEROSPACE = Skill("Pilot Aerospace", REACTION, "Active", spec=['Deep Space', 'Launch Craft', 'Remote Operation', 'Semiballistic', 'Suborbital'])
 PILOT_AIRCRAFT = Skill("Pilot Aircraft", REACTION, "Active", spec=['Fixed-Wing', 'Lighter-Than-Air', 'Remote Operation', 'Rotary Wing', 'Tilt Wing', 'Vectored Thrust'])
@@ -472,7 +482,7 @@ PILOT_WATERCRAFT = Skill("Pilot Watercraft", REACTION, "Active", spec=['Hydrofoi
 RUNNING = Skill("Running", STRENGTH, "Active", spec=['Distance', 'Sprint', 'Desert Running', 'Urban Running', 'Wilderness Running'])
 SWIMMING = Skill("Swimming", STRENGTH, "Active", spec=['Dash', 'Long Distance'])
 # =============== CHARISMA ===============
-ANIMAL_HANDLING = Skill("Animal_Handling", CHARISMA, "Active", spec=['Herding', 'Riding', 'Training', 'Cat Handling', 'Bird Handling', 'Hell Hound Handling', 'Horse Handling', 'Dolphin Handling'])
+ANIMAL_HANDLING = Skill("Animal Handling", CHARISMA, "Active", spec=['Herding', 'Riding', 'Training', 'Cat Handling', 'Bird Handling', 'Hell Hound Handling', 'Horse Handling', 'Dolphin Handling'])
 CON = Skill("Con", CHARISMA, "Active", spec=['Fast Talking', 'Seduction'])
 ETIQUETTE = Skill("Etiquette", CHARISMA, "Active", spec=['Corporate Etiquette', 'High Society Etiquette', 'Media Etiquette', 'Mercenary Etiquette', 'Street Etiquette'])
 IMPERSONATION = Skill("Impersonation", CHARISMA, "Active", spec=['Dwarf Impersonation', 'Elf Impersonation', 'Human Impersonation', 'Ork Impersonation', 'Troll Impersonation'])
@@ -492,26 +502,26 @@ PERCEPTION = Skill("Perception", INTUITION, "Active", spec=['Hearing', 'Scent', 
 STREET_KNOWLEDGE = Skill("Street Knowledge", INTUITION, "Active")
 TRACKING = Skill("Tracking", INTUITION, "Active", spec=['Desert Tracking', 'Forest Tracking', 'Jungle Tracking', 'Mountain Tracking', 'Polar Tracking', 'Urban Tracking'])
 # =============== LOGIC ==================
-ACADEMIC_KNOWLEDGE = Skill("Academic_Knowledge", LOGIC, "Active")
-AERONAUTICS_MECHANIC = Skill("Aeronautics_Mechanic", LOGIC, "Active", spec=['Aerospace', 'Fixed Wing', 'LTA (Blimp)', 'Rotary Wing', 'Tilt Wing', 'Vectored Thrust'])
+ACADEMIC_KNOWLEDGE = Skill("Academic Knowledge", LOGIC, "Active")
+AERONAUTICS_MECHANIC = Skill("Aeronautics Mechanic", LOGIC, "Active", spec=['Aerospace', 'Fixed Wing', 'LTA (Blimp)', 'Rotary Wing', 'Tilt Wing', 'Vectored Thrust'])
 ARCANA = Skill("Arcana", LOGIC, "Active", spec=['Spell Design', 'Focus Design', 'Spirit Formula'])
 ARMORER = Skill("Armorer", LOGIC, "Active", spec=['Armor', 'Artillery', 'Explosives', 'Firearms', 'Melee Weapons', 'Heavy Weapons', 'Weapon Accessories'])
-AUTOMOTIVE_MECHANIC = Skill("Automotive_Mechanic", LOGIC, "Active", spec=['Walker', 'Hover', 'Tracked', 'Wheeled'])
+AUTOMOTIVE_MECHANIC = Skill("Automotive Mechanic", LOGIC, "Active", spec=['Walker', 'Hover', 'Tracked', 'Wheeled'])
 BIOTECHNOLOGY = Skill("Biotechnology", LOGIC, "Active", spec=['Bioinformatics', 'Bioware', 'Cloning', 'Gene Therapy', 'Vat Maintenance'])
 CHEMISTRY = Skill("Chemistry", LOGIC, "Active", spec=['Analytical', 'Biochemestry', 'Inorganic', 'Organic', 'Physical'])
 COMPUTER = Skill("Computer", LOGIC, "Active", spec=['File Editing', 'Matrix Perception', 'Matrix Search'])
 CYBERCOMBAT = Skill("Cybercombat", LOGIC, "Active", spec=['Devices', 'Grids', 'IC', 'Personas', 'Sprites'])
 CYBERTECHNOLOGY = Skill("Cybertechnology", LOGIC, "Active", spec=['Bodyware', 'Cyberlimbs', 'Headware', 'Repair'])
 DEMOLITIONS = Skill("Demolitions", LOGIC, "Active", spec=['Commercial Explosives', 'Defusing', 'Improvised Explosives', 'Plastic Explosives'])
-ELECTRONIC_WARFARE = Skill("Electronic_Warfare", LOGIC, "Active", spec=['Communications', 'Encryption', 'Jamming', 'Sensor Operations'])
-FIRST_AID = Skill("First_Aid", LOGIC, "Active", spec=['Gunshot Wounds', 'Resuscitation', 'Broken Bones', 'Burns'])
+ELECTRONIC_WARFARE = Skill("Electronic Warfare", LOGIC, "Active", spec=['Communications', 'Encryption', 'Jamming', 'Sensor Operations'])
+FIRST_AID = Skill("First Aid", LOGIC, "Active", spec=['Gunshot Wounds', 'Resuscitation', 'Broken Bones', 'Burns'])
 FORGERY = Skill("Forgery", LOGIC, "Active", spec=['Counterfeiting', 'Credstick Forgery', 'False ID', 'Image Doctoring', 'Paper Forgery'])
 HACKING = Skill("Hacking", LOGIC, "Active", spec=['Devices', 'Files', 'Hosts', 'Personas'])
 HARDWARE = Skill("Hardware", LOGIC, "Active", spec=['Commlinks', 'Cyberdecks', 'Smartguns'])
-INDUSTRIAL_MECHANIC = Skill("Industrial_Mechanic", LOGIC, "Active", spec=['Electrical Power Systems', 'Hydraulics', 'HVAC', 'Industrial Robotics', 'Structural', 'Welding'])
+INDUSTRIAL_MECHANIC = Skill("Industrial Mechanic", LOGIC, "Active", spec=['Electrical Power Systems', 'Hydraulics', 'HVAC', 'Industrial Robotics', 'Structural', 'Welding'])
 MEDICINE = Skill("Medicine", LOGIC, "Active", spec=['Cosmetic Surgery', 'Extended Care', 'Implant Surgery', 'Magical Health', 'Organ Culture', 'Trama Surgery'])
-NAUTICAL_MECHANIC = Skill("Nautical_Mechanic", LOGIC, "Active", spec=['Motorboat', 'Sailboat', 'Ship', 'Submarine'])
-PROFESSIONAL_KNOWLEDGE = Skill("Professional_Knowledge", LOGIC, "Active")
+NAUTICAL_MECHANIC = Skill("Nautical Mechanic", LOGIC, "Active", spec=['Motorboat', 'Sailboat', 'Ship', 'Submarine'])
+PROFESSIONAL_KNOWLEDGE = Skill("Professional Knowledge", LOGIC, "Active")
 SOFTWARE = Skill("Software", LOGIC, "Active", spec=['Data Bombs', 'Editor Complex Form', 'Resonance Spike Complex Form', 'Tattletale Complex Form'])
 # =============== WILLPOWER ==============
 ASTRAL_COMBAT = Skill("Astral Combat", WILLPOWER, "Active", spec=['Specific Focus Type', 'Against Magicians', 'Against Spirits', 'Against Mana Barriers'])
@@ -519,17 +529,17 @@ SURVIVAL = Skill("Survival", WILLPOWER, "Active", spec=['Desert Survival', 'Fore
 # =============== MAGIC ==================
 ALCHEMY = Skill("Alchemy", MAGIC, "Active", spec=['Command Trigger', 'Contact Trigger', 'Time Trigger', 'Combat Spells', 'Detection Spells'])
 ARTIFICING = Skill("Artificing", MAGIC, "Active", spec=['Focus Analysis', 'Spell Crafting', 'Spirit Crafting', 'Power Crafting', 'Weapon Crafting', 'Qi Crafting', 'Metamagic Crafting', 'Qi Force Crafting'])
-BANISHING = Skill("Banishing", MAGIC, "Active", spec=['Spirits of Air', 'Spirits of Earth', 'Spiriths of Beasts', 'Spirits of Fire', 'Spirits of Main', 'Spirits Water'])
-BINDING = Skill("Binding", MAGIC, "Active", spec=['Spiritss of Air', 'Spirits of Earth', 'Spiriths of Beasts', 'Spirits of Fire', 'Spirits of Main', 'Spirits Water'])
-COUNTERSPELLING = Skill("Counterspelling", MAGIC, "Active", spec=['Spell Type'])
+BANISHING = Skill("Banishing", MAGIC, "Active", spec=['Spirits of Air', 'Spirits of Earth', 'Spiriths of Beasts', 'Spirits of Fire', 'Spirits of Man', 'Spirits Water'])
+BINDING = Skill("Binding", MAGIC, "Active", spec=['Spiritss of Air', 'Spirits of Earth', 'Spiriths of Beasts', 'Spirits of Fire', 'Spirits of Man', 'Spirits Water'])
+COUNTERSPELLING = Skill("Counterspelling", MAGIC, "Active", spec=['Combat Spells', 'Detection Spells', 'Health Spells', 'Illusion Spells', 'Manipulation Spells'])
 DISENCHANTING = Skill("Disenchanting", MAGIC, "Active", spec=['Alchemical Preparations', 'Power', 'Foci'])
 RITUAL_SPELLCASTING = Skill("Ritual Spellcasting", MAGIC, "Active", spec=['Keyword', 'Anchored', 'Spell'])
-SPELLCASTING = Skill("Spellcasting", MAGIC, "Active", spec=['Spell Type'])
-SUMMONING = Skill("Summoning", MAGIC, "Active", spec=['Spirit of Air', 'Spirit of Earth', 'Spirith of Beasts', 'Spirit of Fire', 'Spirits of Main', 'Spirits Water'])
+SPELLCASTING = Skill("Spellcasting", MAGIC, "Active", spec=['Combat Spells', 'Detection Spells', 'Health Spells', 'Illusion Spells', 'Manipulation Spells'])
+SUMMONING = Skill("Summoning", MAGIC, "Active", spec=['Spirit of Air', 'Spirit of Earth', 'Spirith of Beasts', 'Spirit of Fire', 'Spirits of Man', 'Spirits Water'])
 # =============== RESONANCE ==============
-COMPILING = Skill("Compiling", RESONANCE, "Active", spec=['Sprite Type'])
-DECOMPILING = Skill("Decompiling", RESONANCE, "Active", spec=['Sprite Type'])
-REGISTERING = Skill("Registering", RESONANCE, "Active", spec=['Sprite Type'])
+COMPILING = Skill("Compiling", RESONANCE, "Active", spec=['Courier Sprite', 'Crack Sprite', 'Data Sprite', 'Fault Sprite', 'Machine Sprite'])
+DECOMPILING = Skill("Decompiling", RESONANCE, "Active", spec=['Couriter Sprite', 'Crack Sprite', 'Data Sprite', 'Fault Sprite', 'Machine Sprite'])
+REGISTERING = Skill("Registering", RESONANCE, "Active", spec=['Couriter Sprite', 'Crack Sprite', 'Data Sprite', 'Fault Sprite', 'Machine Sprite'])
 
 """
     KNOWLEDGE SKILLS
@@ -625,6 +635,11 @@ MAGIC_SKILLS = [ASTRAL_COMBAT, ARCANA, BANISHING, BINDING, SUMMONING, ALCHEMY, A
 MAGIC_SKILL_GROUPS = [CONJURING, ENCHANTING, SORCERY]
 RESONANCE_SKILLS = [COMPILING, DECOMPILING, REGISTERING]
 VEHICLE_SKILLS = [GUNNERY, PILOT_AEROSPACE, PILOT_AIRCRAFT, PILOT_GROUND_CRAFT, PILOT_EXOTIC_VEHICLE_SPECIFIC, PILOT_WALKER, PILOT_WATERCRAFT]
+COMBAT_ACTIVE_SKILLS = [ARCHERY, AUTOMATICS, BLADES, CLUBS, EXOTIC_RANGED_WEAPON, HEAVY_WEAPONS, LONGARMS, PISTOLS, THROWING_WEAPONS, UNARMED_COMBAT]
+PHYSICAL_ACTIVE_SKILLS = [DISGUISE, DIVING, ESCAPE_ARTIST, FREE_FALL, GYMNASTICS, PALMING, PERCEPTION, RUNNING, SNEAKING, SURVIVAL, SWIMMING, TRACKING]
+SOCIAL_SKILLS = [CON, ETIQUETTE, IMPERSONATION, INSTRUCTION, INTIMIDATION, LEADERSHIP, NEGOTIATION, PERFORMANCE]
+TECHNICAL_SKILLS = [AERONAUTICS_MECHANIC, ANIMAL_HANDLING, ARMORER, ARTISAN, AUTOMOTIVE_MECHANIC, BIOTECHNOLOGY, CHEMISTRY, COMPUTER, CYBERCOMBAT, CYBERTECHNOLOGY, DEMOLITIONS, ELECTRONIC_WARFARE, FIRST_AID, FORGERY, HACKING, HARDWARE,
+                    INDUSTRIAL_MECHANIC, LOCKSMITH, MEDICINE, NAUTICAL_MECHANIC, NAVIGATION, SOFTWARE]
 
 """
     METATYPES
@@ -1220,7 +1235,47 @@ STITCHES = ComplexForm("Stitches", target='Sprite', duration='Perm', fading_valu
 TRANSCENDENT_GRID = ComplexForm("Transcendent_grid", target='Self', duration='Imme', fading_value=-3)
 TATTLETALE = ComplexForm("Tattletale", target='Persona', duration='Perm', fading_value=-2)
 
-
+"""
+    SPELLS
+"""
+# Combat Spells
+ACID_STREAM = Spell("Acid Stream", direct=False, elemental=True, type='Physical', range='LOS', damage='Physical', duration='Instantaneous', drain=-6, category='Combat')
+TOXIC_WAVE = Spell('Toxic_wave', direct=False, elemental=True, type='P', range='LOS (Area)', damage='Physical', duration='I', drain=-1, category='Combat')
+PUNCH = Spell('Punch', direct=False, elemental=False, type='P', range='T', damage='S', duration='I', drain=-6, category='Combat')
+CLOUT = Spell('Clout', direct=False, elemental=False, type='P', range='LOS', damage='S', duration='I', drain=-3, category='Combat')
+BLAST = Spell('Blast', direct=False, elemental=False, type='P', range='LOS (Area)', damage='S', duration='I', drain=0, category='Combat')
+DEATH_TOUCH = Spell('Death_touch', direct=True, elemental=False, type='M', range='T', damage='P', duration='I', drain=-6, category='Combat')
+MANABOLT = Spell('Manabolt', direct=True, elemental=False, type='M', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
+MANABALL = Spell('Manaball', direct=True, elemental=False, type='M', range='LOS (Area)', damage='P', duration='I', drain=0, category='Combat')
+FLAMETHROWER = Spell('Flamethrower', direct=False, elemental=True, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
+FIREBALL = Spell('Fireball', direct=False, elemental=True, type='P', range='Los (Area)', damage='P', duration='I', drain=-1, category='Combat')
+LIGHTNING_BOLT = Spell('Lightning_bolt', direct=False, elemental=True, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
+BALL_LIGHTNING = Spell('Ball_lightning', direct=False, elemental=True, type='P', range='LOS (Area)', damage='P', duration='I', drain=-1, category='Combat')
+SHATTER = Spell('Shatter', direct=True, elemental=False, type='P', range='T', damage='P', duration='I', drain=-6, category='Combat')
+POWERBOLT = Spell('Powerbolt', direct=True, elemental=False, type='P', range='LOS', damage='P', duration='I', drain=-3, category='Combat')
+POWERBALL = Spell('Powerball', direct=True, elemental=False, type='P', range='LOS (Area)', damage='P', duration='I', drain=0, category='Combat')
+KNOCKOUT = Spell('Knockout', direct=True, elemental=False, type='M', range='T', damage='S', duration='I', drain=-6, category='Combat')
+STUNBOLT = Spell('Stunbolt', direct=True, elemental=False, type='M', range='LOS', damage='S', duration='I', drain=-3, category='Combat')
+STUNBALL = Spell('Stunball', direct=True, elemental=False, type='M', range='LOS (Area)', damage='S', duration='I', drain=0, category='Combat')
+# Detection Spells
+ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='P', range='T', duration='S', drain=-3, category='Detection')
+ANALYZE_MAGIC = Spell('Analyze_magic', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
+ANALYZE_TRUTH = Spell('Analyze_truth', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
+CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
+CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
+COMBAT_SENSE = Spell('Combat_sense', active=True, detect_type='Psychic', type=, range=, duration=, drain=, category='Detection')
+DETECT_ENEMIES = Spell('Detect_enemies', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_ENEMIES_EXTENDED = Spell('Detect_enemies_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_LIFE_EXTENDED = Spell('Detect_life_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_LIFE_FORM = Spell('Detect_life_form', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_LIFE_FORM_EXTENDED = Spell('Detect_life_form_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_MAGIC = Spell('Detect_magic', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_MAGIC_EXTENDED = Spell('Detect_magic_extended', active=True, detect_type='Extended Area', type=, range=, duration=, drain=, category='Detection')
+DETECT_OBJECT = Spell('Detect_object', active=True, detect_type='Area', type=, range=, duration=, drain=, category='Detection')
+MIND_LINK = Spell('Mind_link', active=True, detect_type='Psychic', type=, range=, duration=, drain=, category='Detection')
+MIND_PROBE = Spell('Mind_probe', active=True, detect_type='Directional', type=, range=, duration=, drain=, category='Detection')
 
 """
     PRIORITY TABLE

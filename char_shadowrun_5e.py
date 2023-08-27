@@ -206,12 +206,20 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
     # Individual Skill Points spend
     # for _ in range(skill_points):
     while skill_points > 0:
+        # Rolling for skill specialisations
         skills_for_spec = [d for k, d in character_skills.items() if d.rating > 4 and d.group == False]
-        if len(skills_for_spec) > 1 and random.randint(1,100) > 80:
+        if len(skills_for_spec) > 1 and random.randint(1,100) > 80: 
             ROLL_SPEC = random.choice(skills_for_spec)
+            while len(ROLL_SPEC.spec) < 1:
+                ROLL_SPEC = random.choice(skills_for_spec)
             ROLL_SPECIALISATION = random.choice(ROLL_SPEC.spec)
-            character_specialisations[ROLL_SPEC.name] = ROLL_SPECIALISATION
-            skill_points -=  1
+            if isinstance(character_skills[ROLL_SPEC.name].spec, list): 
+            # character_specialisations[ROLL_SPEC.name] = ROLL_SPECIALISATION
+                character_skills[ROLL_SPEC.name].spec = ROLL_SPECIALISATION
+                skill_points -=  1
+            else:
+                pass
+        
         ROLL_SKILL = random.choices(list_of_skills, weight_skills)[0]
         non_grouped_skills_count = len([i for i in character_skills.keys() if character_skills[i].group == False])
         if ROLL_SKILL.name in character_skills.keys() and character_skills[ROLL_SKILL.name].group != False:
@@ -426,7 +434,10 @@ def generate_character():
     # STEP 4: QUALITIES
     # STEP 5: SKILLS
     character.Skills['Active'], character.Specialisations = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
-    format_skills(character.Skills['Active'])
+    # format_skills(character.Skills['Active'])
+    for k, d in character.Skills.items():
+        for i, j in character.Skills[k].items():
+            print(i, j)
     print(character.Specialisations)
     # Attribute Points
 
