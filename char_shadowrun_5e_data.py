@@ -1504,6 +1504,82 @@ SMUGGLING_COMPARTMENT = Augmentation("SMUGGLING_COMPARTMENT", cost=7500, essence
 WIRED_REFLEXES_1 = Augmentation("WIRED_REFLEXES_1", cost=39000, essence=2, capacity="-", avail=[8, RESTRICTED], cyberlimbs=False, category='Bodyware')
 WIRED_REFLEXES_2 = Augmentation("WIRED_REFLEXES_2", cost=149000, essence=3, capacity="-", avail=[12, RESTRICTED], cyberlimbs=False, category='Bodyware')
 WIRED_REFLEXES_3 = Augmentation("WIRED_REFLEXES_3", cost=217000, essence=5, capacity="-", avail=[20, RESTRICTED], cyberlimbs=False, category='Bodyware')
+# CYBERLIMBS
+FULL_ARM_OBV = Augmentation("FULL_ARM_OBV", cost=15000, essence=1, capacity=15, avail=4, category='Cyberlimbs Obvious')
+FULL_LEG_OBV = Augmentation("FULL_LEG_OBV", cost=15000, essence=1, capacity=20, avail=4, category='Cyberlimbs Obvious')
+HAND_OBV = Augmentation("HAND_OBV", cost=5000, essence=0.25, capacity=4, avail=2, category='Cyberlimbs Obvious')
+FOOT_OBV = Augmentation("FOOT_OBV", cost=5000, essence=0.25, capacity=4, avail=2, category='Cyberlimbs Obvious')
+LOWER_ARM_OBV = Augmentation("LOWER_ARM_OBV", cost=10000, essence=0.45, capacity=10, avail=4, category='Cyberlimbs Obvious')
+LOWER_LEG_OBV = Augmentation("LOWER_LEG_OBV", cost=10000, essence=0.45, capacity=12, avail=4, category='Cyberlimbs Obvious')
+TORSO_OBV = Augmentation("TORSO_OBV", cost=20000, essence=1.5, capacity=10, avail=12, category='Cyberlimbs Obvious')
+SKULL_OBV = Augmentation("SKULL_OBV", cost=10000, essence=0.75, capacity=4, avail=16, category='Cyberlimbs Obvious')
+FULL_ARM_SYNTH = Augmentation("FULL_ARM_SYNTH", cost=20000, essence=1, capacity=8, avail=4, category='Cyberlimbs Synthetic')
+FULL_LEG_SYNTH = Augmentation("FULL_LEG_SYNTH", cost=20000, essence=1, capacity=10, avail=4, category='Cyberlimbs Synthetic')
+HAND_SYNTH = Augmentation("HAND_SYNTH", cost=6000, essence=0.25, capacity=2, avail=2, category='Cyberlimbs Synthetic')
+FOOT_SYNTH = Augmentation("FOOT_SYNTH", cost=6000, essence=0.25, capacity=2, avail=2, category='Cyberlimbs Synthetic')
+LOWER_ARM_SYNTH = Augmentation("LOWER_ARM_SYNTH", cost=12000, essence=0.45, capacity=5, avail=4, category='Cyberlimbs Synthetic')
+LOWER_LEG_SYNTH = Augmentation("LOWER_LEG_SYNTH", cost=12000, essence=0.45, capacity=6, avail=4, category='Cyberlimbs Synthetic')
+TORSO_SYNTH = Augmentation("TORSO_SYNTH", cost=25000, essence=1.5, capacity=5, avail=12, category='Cyberlimbs Synthetic')
+SKULL_SYNTH = Augmentation("SKULL_SYNTH", cost=15000, essence=0.75, capacity=2, avail=16, category='Cyberlimbs Synthetic')
+# CYBERLIMB ENHANCEMENTS
+CYBERLIMB_EN_AGILITY = Augmentation("CYBERLIMB_EN_AGILITY", cost=["Rating", "*", 6500], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 3, RESTRICTED], category='Cyberlimbs Obvious')
+CYBERLIMB_EN_ARMOR = Augmentation("CYBERLIMB_EN_ARMOR", cost=["Rating", "*", 3000], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 5], category='Cyberlimbs Obvious')
+CYBERLIMB_EN_STRENGTH = Augmentation("CYBERLIMB_EN_STRENGTH", cost=["Rating", "*", 6500], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 3, RESTRICTED], category='Cyberlimbs Obvious')
+# CYBERLIMB ACCESSORIES
+CYBERARM_GYROMOUNT
+CYBERARM_SLIDE
+CYBER_HOLSTER
+HYDRAULIC_JACKS_1_6
+LARGE_SMUGGLING_COMPARMENT
+# CYBER IMPLANT WEAPONS
+CYBER_HOLD_OUT_PISTOL
+CYBER_LIGHT_PISTOL
+CYBER_MACHINE_PISTOL
+CYBER_HEAVY_PISTOL
+CYBER_SUBMACHINE_GUN
+CYBER_SHOTGUN
+CYBER_MICROGRENADE_LAUNCHER
+CYBER_HAND_BLADE
+CYBER_HAND_RAZOR
+CYBER_SPURS
+CYBER_SHOCK_HAND
+# CYBER IMPLANT WEAPONS
+HOLD_OUT_PISTOL_CYBER = Firearm()
+LIGHT_PISTOL_CYBER = Firearm()
+MACHINE_PISTOL_CYBER = Firearm()
+HEAVY_PISTOL_CYBER = Firearm()
+SUBMACHINE_GUN_CYBER = Firearm()
+SHOTGUN_CYBER = Firearm()
+MICROGRENADE_LAUNCHER_CYBER = Firearm()
+HAND_BLADE_CYBER = MeleeWeapon()
+HAND_RAZOR_CYBER = MeleeWeapon()
+SPURS_CYBER = MeleeWeapon()
+SHOCK_HAND_CYBER = MeleeWeapon()
+# BIOWARE
+ADRENALINE_PUMP_1_3
+BONE_DENSITY_AUGMENTATION_1_4
+CATS_EYE
+ENHANCED_ARTICULATION
+MUSCLE_AUGMENTATION_1_4
+MUSCLE_TONER_1_4
+ORTHOSKIN_1_4
+PATHOGENIC_DEFENSE_1_6
+PLATELET_FACTORIES
+SKIN_POCKET
+SUPRATHYROID_GLAND
+SYMBIOTES_1_4
+SYNTHCARDIUM_1_3
+TAILORED_PHEROMONES_1_3
+TOXIN_EXTRACTOR_1_6
+TRACHEAL_FILTER_1_6
+# CULTURED BIOWARE
+CEREBRAL_BOOSTER_1_3
+DAMAGE_COMPENSATORS_1_12
+MNEMONIC_ENCHANCER_1_3
+PAIN_EDITOR
+REFLEX_RECORDER
+SLEEP_REGULATOR
+SYNAPTIC_BOOSTER_1_3
 """
     PRIORITY TABLE
 """
