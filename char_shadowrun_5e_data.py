@@ -243,6 +243,16 @@ class Quality(AbstractBaseClass):
         Quality.items.append(self)
         super().__init__(name, **kwargs)
 
+    def __repr__(self):
+        return_string = ""
+        cost_string = f"Cost: {self.cost}"
+        if hasattr(self, "negative"):
+            cost_string = f"Cost: -{self.cost}"
+        if hasattr(self, "level"):
+            return f"{cost_string} | Level: {self.level}"
+        else:
+            return f"{cost_string}"
+
 
 class Skill(AbstractBaseClass):
     items = []
@@ -725,10 +735,10 @@ SPIRIT_AFFINITY = Quality('Spirit Affinity', cost=7, page_ref=78, opts=['Spirits
 TOUGHNESS = Quality('Toughness', cost=9, page_ref=78)
 WILL_TO_LIVE = Quality('Will to Live', cost=3, page_ref=78, quantity=4)
 # NEGATIVE QUALITIES
-ADDICTION_MILD = Quality('Addition (Mild)', cost=4, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
-ADDICTION_MODERATE = Quality('Addition (Moderate)', cost=9, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
-ADDICTION_SEVERE = Quality('Addition (Severe)', cost=20, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
-ADDICTION_BURNOUT = Quality('Addition (Burnout)', cost=25, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
+ADDICTION_MILD = Quality('Addiction (Mild)', cost=4, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
+ADDICTION_MODERATE = Quality('Addiction (Moderate)', cost=9, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
+ADDICTION_SEVERE = Quality('Addiction (Severe)', cost=20, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
+ADDICTION_BURNOUT = Quality('Addiction (Burnout)', cost=25, page_ref=77, negative=True, opts=['Better than Life Chips', 'Alchemical Preparations', 'Alcohol', 'Street Drugs', 'Foci', 'Augmentations'], group='Addiction')
 ALLERGY_COMMON_MILD = Quality('Common Allergy (Mild)', cost=5, page_ref=78, negative=True, group='Allergy')
 ALLERGY_COMMON_MODERATE = Quality('Common Allergy (Moderate)', cost=10, page_ref=78, negative=True, group='Allergy')
 ALLERGY_COMMON_SEVERE = Quality('Common Allergy (Severe)', cost=15, page_ref=78, negative=True, group='Allergy')
@@ -759,7 +769,7 @@ PREJUDICED_COMMON_BIAS = Quality('Bias Prejudiced (Common)', cost=5, page_ref=82
 PREJUDICED_COMMON_OUTSPOKEN = Quality('Outspoken Prejudcied (Common)', cost=7, page_ref=82, negative=True, group='Prejudiced')
 PREJUDICED_COMMON_RADICAL = Quality('Radical Prejudiced (Common)', cost=10, page_ref=82, negative=True, group='Prejudiced')
 PREJUDICED_SPECIFIC_BIAS = Quality('Bias Prejudiced (Specific)', cost=3, page_ref=82, negative=True, group='Prejudiced')
-PREJUDICED_SPECIFIC_OUTSPOKEN = Quality('Outspoken Prejudcied (Specific)', cost=5, page_ref=82, negative=True, group='Prejudiced')
+PREJUDICED_SPECIFIC_OUTSPOKEN = Quality('Outspoken Prejudiced (Specific)', cost=5, page_ref=82, negative=True, group='Prejudiced')
 PREJUDICED_SPECIFIC_RADICAL = Quality('Radical Prejudiced (Specific)', cost=8, page_ref=82, negative=True, group='Prejudiced')
 SCORCHED = Quality('Scorched', cost=10, page_ref=83, negative=True)
 SENSITIVE_SYSTEM = Quality('Sensitive System', cost=12, page_ref=83, negative=True)
@@ -1341,7 +1351,7 @@ TRID_ENTERTAINMENT = Spell('Trid Entertainment', realistic=True, sense='Multi', 
 INVISIBILITY = Spell('Invisibility', realistic=True, sense='Single', type='Mana', range='Line of Sight', duration='Sustain', drain=-2, category='Illusion')
 IMPROVED_INVISIBILITY = Spell('Improved Invisibility', realistic=True, sense='Single', type='Physical', range='Line of Sight', duration='Sustain', drain=-1, category='Illusion')
 MASK = Spell('Mask', realistic=True, sense='Multi', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Illusion')
-PHYSICAL MASK = Spell('Physical', realistic=True, sense='Multi', type='Physical', range='Touch', duration='Sustain', drain=-1, category='Illusion')
+PHYSICAL_MASK = Spell('Physical', realistic=True, sense='Multi', type='Physical', range='Touch', duration='Sustain', drain=-1, category='Illusion')
 PHANTASM = Spell('Phantasm', realistic=True, sense='Multi', type='Mana', range='Line of Sight (Area)', duration='Sustain', drain=-1, category='Illusion')
 TRID_PHANTASM = Spell('Trid Phantasm', realistic=True, sense='Multi', type='Physical', range='Line of Sight (Area)', duration='Sustain', drain=0, category='Illusion')
 HUSH = Spell('Hush', realistic=True, sense='Single', type='Mana', range='Line of Sight (Area)', duration='Sustain', drain=-2, category='Illusion')
@@ -1367,12 +1377,11 @@ PHYSICAL_BARRIER = Spell('Physical Barrier', damaging=False, targeting='Environm
 POLTERGEIST = Spell('Poltergeist', damaging=False, targeting='Environmental', type='Physical', range='Line of Sight (Area)', duration='Sustain', drain=-2, category='Manipulation')
 SHADOW = Spell('Shadow', damaging=False, targeting='Environmental', type='Physical', range='Line of Sight (Area)', duration='Sustain', drain=-3, category='Manipulation')
 
-COMBAT_SPELLS = [spell for spell in Spell.items if spell.category='Combat']
-DETECTION_SPELLS = [spell for spell in Spell.items if spell.category='Detection']
-HEALTH_SPELLS = [spell for spell in Spell.items if spell.category='Health']
-ILLUSION_SPELLS = [spell for spell in Spell.items if spell.category='Illusion']
-MANIPULATION_SPELLS = [spell for spell in Spell.items if spell.category='Manipulation']
-
+COMBAT_SPELLS = [spell for spell in Spell.items if spell.category=='Combat']
+DETECTION_SPELLS = [spell for spell in Spell.items if spell.category=='Detection']
+HEALTH_SPELLS = [spell for spell in Spell.items if spell.category=='Health']
+ILLUSION_SPELLS = [spell for spell in Spell.items if spell.category=='Illusion']
+MANIPULATION_SPELLS = [spell for spell in Spell.items if spell.category=='Manipulation']
 
 """
     PRIORITY TABLE

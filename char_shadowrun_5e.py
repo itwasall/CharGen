@@ -49,7 +49,7 @@ def get_item_cost(item: Core.Gear):
                     if item.requires[1] == item.category:
                         return random.choice([i for i in Core.Gear.items if i.category == item.requires[1] and i.subtype != item.requires[1]])
                     return random.choice([i for i in Core.Gear.items if i.category== item.requires[1]])
-        elif isinstance(item.requires, Gear):
+        elif isinstance(item.requires, Core.Gear):
             return item.requires
         elif isinstance(item.requires, tuple):
             return random.choice(item.requires)
@@ -86,6 +86,7 @@ def get_item_cost(item: Core.Gear):
         case "+":
             return item_cost[0] + item_cost[2]
     return item_cost
+
 
 def get_priorities(character: Core.Character):
     table_choices = ['A', 'B', 'C', 'D', 'E']
@@ -292,15 +293,116 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl):
 
 
 def karma_qualities(ch: Core.Character):
-    pass
+    ch.Qualities = {}
+    total_karma = 25
+    positive_karma = 0
+    negative_karma = 0
+    NEGATIVE_TOO_HIGH = False
+    POSITIVE_TOO_HIGH = False
+    quality_weights = [1 for _ in Core.Quality.items]
+    inc = 0
+    while total_karma > 0:
+        # There's an infinite loop I can't be bothered to fix right now, this will do
+        inc += 1
+        if inc > 100000:
+            break
+        if total_karma < 10 and random.randint(0,1) == 1:
+            break
+        ROLL_KARMA = random.choices(Core.Quality.items, quality_weights)[0]
+        if ROLL_KARMA.name in ch.Qualities.keys():
+            if hasattr(ROLL_KARMA, "quantity"):
+                # Some qualities can be taken multiple times. The cap is called "quantity" and the 
+                #   current amount of levels taken is "level".
+                if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
+                    if ch.Qualities[ROLL_KARMA.name].level > ROLL_KARMA.quantity:
+                        continue
+                else:
+                    raise ValueError("Quality with quant already selected but has no level value in character dict")
+            else:
+                continue
+        # If a quality in the same group has already been taken, continue (SEE DATA)
+        if hasattr(ROLL_KARMA, "group"):
+            if ROLL_KARMA.group in [d.group for d in ch.Qualities.values() if hasattr(d, "group")]:
+                continue
+        # Negative qualities cannot total more than ABS(25)
+        if hasattr(ROLL_KARMA, "negative"):
+            if negative_karma + ROLL_KARMA.cost > 25:
+                NEGATIVE_TOO_HIGH = True
+                # continue
+        # Positive qualities cannot total more than ABS(25)
+        elif positive_karma + ROLL_KARMA.cost > 25:
+            POSITIVE_TOO_HIGH = True
+            # continue
+        if total_karma - ROLL_KARMA.cost < 0 or (NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
+            continue
+        if hasattr(ROLL_KARMA, "negative"):
+            negative_karma += ROLL_KARMA.cost
+            total_karma += ROLL_KARMA.cost
+        else:
+            positive_karma += ROLL_KARMA.cost
+            total_karma -= ROLL_KARMA.cost
+
+        # Pretty output & roll for quality specific params here
+        ROLL_KARMA = resolve_quality(ROLL_KARMA, ch)
+
+        ch.Qualities[ROLL_KARMA.name] = ROLL_KARMA
+        if hasattr(ROLL_KARMA, "quantity"):
+            if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
+                ch.Qualities[ROLL_KARMA.name].level += 1
+            else:
+                ch.Qualities[ROLL_KARMA.name].level = 1
+            quality_weights[Core.Quality.items.index(ROLL_KARMA)] += 10
+        if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
+            break
+    # print(ch.Qualities)
+
+
+def resolve_quality(q: Core.Quality, ch: Core.Character):
+    # Just a dump for all the quality-specific rolling options
+    if "Allergy" in q.name:
+        if "Common" in q.name:
+            x = {5: 'Mild', 10: 'Moderate', 15: 'Severe', 20: 'Extreme'}
+            common_allergies = ['Peanuts', 'Pollutants', 'Grass']
+            q.name = f"{x[q.cost]} Allergy ({random.choice(common_allergies)})"
+        if "Uncommon" in q.name:
+            x = {10: 'Mild', 15: 'Moderate', 20: 'Severe', 25: 'Extreme'}
+            uncommon_allergies = ['Dogs', 'Grass', 'Seafood', 'Sunlight']
+            q.name = f"{x[q.cost]} Allergy ({random.choice(uncommon_allergies)})"
+    if "Addiction" in q.name:
+        x = {4: 'Mild', 9: 'Moderate', 20: 'Severe', 25: 'Burnout'}
+        q.name = f"{x[q.cost]} Addiction ({random.choice(q.opts)})"
+    if "Resistance to Pathogens or Toxins" in q.name:
+        q.name = f"Resistance to {random.choice(q.opts)}"
+    if "Mentor Spirit" in q.name:
+        q.name = f"Mentor Spirit ({random.choice(q.opts)})"
+    if "(Natural)" in q.name:
+        q.name = f"Natural Immunity (Organic)"
+    if "Prejudiced" in q.name:
+        if "Common" in q.name:
+            x = {5: 'Bias', 7: 'Outspoken', 10: 'Radical'}
+            common_prejudices = ['Human', 'Metahuman', 'Troll', 'Ork', 'Elve', 'Dwarf']
+            q.name = f"Prejudiced - {x[q.cost]} against {random.choice([i for i in common_prejudices if i != ch.Metatype.name])}s"
+        if "Specific" in q.name:
+            x = {3: 'Bias', 5: 'Outspoken', 8: 'Radical'}
+            specific_prejudices = ['The Awakened', 'technomancers', 'shapeshifters', 'aspected magicians']
+            q.name = f"Prejudiced - {x[q.cost]} against {random.choice(specific_prejudices)}"
+    return q
+
 
 def add_spell(ch: Core.Character):
+    ROLL_SPELL = random.choice(Core.Spell.items)
+    while ROLL_SPELL in ch.Spells:
+        ROLL_SPELL = random.choice(Core.Spell.items)
+    ch.Spells.append(ROLL_SPELL)
     pass
 
+
 def add_complex_form(ch: Core.Character):
-    if type(ch.Complex_forms) != list:
-        ch.Complex_forms = []
-    ch.Complex_forms.append(random.choice(Core.ComplexForm.items))
+    ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
+    while ROLL_COMPLEX.name in ch.Complex_forms.keys():
+        ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
+    ch.Complex_forms[ROLL_COMPLEX.name] = ROLL_COMPLEX
+    pass
 
     
 def resolve_magic_resonance(ch: Core.Character, tbl):
@@ -320,6 +422,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
             ch.Resonance.value = tbl[_type][key]
             print(ch.Resonance)
         elif key == "Spells":
+            ch.Spells = []
             for i in range(tbl[_type][key]):
                 add_spell(ch)
         # elif key == "Skills":
@@ -327,8 +430,10 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
         #    print(f"You get {tbl[_type]['Skills']['Quantity']} different skills  at rating {tbl[_type]['Skills']['Rating']}")
         #    resolve_magic_resonance_skills(ch, tbl[_type][key])
         elif key == "Complex Forms":
+            ch.Complex_forms = {}
             for i in range(tbl[_type][key]):
                 add_complex_form(ch)
+
 
 def format_skills(character_skills):
     # Getting debug output_by_group. Sorts skills by group first, then by ranking
@@ -432,6 +537,9 @@ def generate_character():
     magic_reso = priority_table['MagicResonance']
     resolve_magic_resonance(character, magic_reso)
     # STEP 4: QUALITIES
+    karma_qualities(character)
+    print(character.Qualities)
+    print(character.Spells)
     # STEP 5: SKILLS
     character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
     # format_skills(character.Skills['Active'])
@@ -440,7 +548,9 @@ def generate_character():
             pass
         else:
             for i, j in character.Skills[k].items():
-                print(j)
+                # print(j)
+                pass
+                
     # Attribute Points
 
 
