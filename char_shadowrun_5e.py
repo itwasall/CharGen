@@ -505,7 +505,14 @@ def buy_gear(ch: Core.Character, nuyen: int):
 
 
 def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
-    if "Specific" in s.name:
+    match s.name:
+        case "Exotic Melee Weapon":
+            exotic_melee_weapon = random.choice([i for i in Core.MeleeWeapon.items if hasattr(i, "subtype") and i.subtype=="Exotic"])
+            print(exotic_melee_weapon)
+            ch.Skills['Active'][f"{s.name}"].name = exotic_melee_weapon
+            print(ch.Skills['Active'][f"Exotic Melee Weapon"])
+            # ch.Skills['Active'].pop(s.name)
+    return ch
 
 
 
@@ -558,6 +565,8 @@ def generate_character():
     print(character.Spells)
     # STEP 5: SKILLS
     character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
+    if 'Exotic Melee Weapon' in character.Skills['Active']:
+        character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     format_skills(character.Skills['Active'])
     for k, d in character.Skills.items():
         if d is None:

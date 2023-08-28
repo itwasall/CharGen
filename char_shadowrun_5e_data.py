@@ -879,8 +879,9 @@ STUN_BATON = MeleeWeapon("Stun Baton", cost=750, page_ref=421, avail=[6, RESTRIC
 TELESCOPING_STAFF = MeleeWeapon("Telescoping Staff", cost=350, page_ref=421, avail=4, subtype="Club")
 # =============== OTHER =================
 KNUCKS = MeleeWeapon("Knucks", cost=100, page_ref=421, avail=[2, RESTRICTED], subtype="Other")
-MONOFILAMENT_WHIP = MeleeWeapon("Monofilament Whip", cost=10_000, page_ref=421, avail=[12, FORBIDDEN], subtype="Other")
+MONOFILAMENT_WHIP = MeleeWeapon("Monofilament Whip", cost=10_000, page_ref=421, avail=[12, FORBIDDEN], subtype="Exotic")
 SHOCK_GLOVES = MeleeWeapon("Shock Gloves", cost=550, page_ref=421, avail=[6, RESTRICTED], subtype="Other")
+MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="Exotic")
 
 """
     PROJECTILE GEAR
@@ -1066,6 +1067,8 @@ URBAN_EXPLORER_JUMPSUIT_HELMET = Armor("Urban Explorer Jumpsuit Helmet", cost=10
 HELMET = Armor("Helmet", cost=100, page_ref=438, avail=2, armor_rating=2, subtype="Helmet")
 BALLISTIC_SHIELD = Armor("Ballistic Shield", cost=1200, page_ref=438, avail=[12, RESTRICTED], armor_rating=6, subtype="Shield")
 RIOT_SHIELD = Armor("Riot Shield", cost=1500, page_ref=438, avail=[10, RESTRICTED], armor_rating=6, subtype="Shield")
+BALLISTIC_SHIELD_WEA = MeleeWeapon("Ballistic Shield", cost=BALLISTIC_SHIELD.cost, page_ref=BALLISTIC_SHIELD.page_ref, avail=BALLISTIC_SHIELD.avail, subtype="Exotic")
+RIOT_SHIELD = MeleeWeapon("Riot Shield", cost=RIOT_SHIELD.cost, page_ref=RIOT_SHIELD.page_ref, avail=RIOT_SHIELD.avail, subtype="Exotic")
 # =============== ARMOR MODS ============
 CHEMICAL_PROTECTION = ArmorModification("Chemical Protection", cost=["Rating", "*", 250], page_ref=438, avail=6, capacity="Rating", requires=["Category", "Armor"])
 CHEMICAL_SEAL = ArmorModification("Chemical Seal", cost=3000, page_ref=438, avail=[12, RESTRICTED], capacity=6, requires=["Category", "Armor"])
@@ -1233,7 +1236,6 @@ LOCKPICK_SET = Electronics("Lockpick Set", cost=250, page_ref=448, rating="-", a
 MAGLOCK_PASSKEY = Electronics("Maglock Passkey", cost=["Rating", "*", 2000], page_ref=448, rating=[1, "to", 4], avail=[["Rating", "*", 3], FORBIDDEN], subtype="B&E Gear")
 MINIWELDER = Electronics("Miniwelder", cost=250, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
 MINIWELDER_FUEL_CANISTER = Electronics("Miniwelder Fuel Canister", cost=80, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
-MONOFILAMENT_CHAINSAW = Electronics("Monofilament Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="B&E Gear")
 SEQUENCER = Electronics("Sequencer", cost=["Rating", "*", 250], page_ref=448, rating=[1, "to", 6], avail=[["Rating", "*", 3], RESTRICTED], subtype="B&E Gear")
 
 """
@@ -1283,9 +1285,9 @@ DOCWAGON_PLATINUM_PLUS = Item("DOCWAGON_PLATINUM_PLUS", cost=100000, page_ref=45
 """
 # BIKES
 DODGE_SCOOT = Vehicle("Dodge Scoot", cost=3000, page_ref=463, handle=[4, 3], speed=3, accel=1, bod=4, armor=4, pilot=1, sensor=1, seats=1, avail="-", subtype="Bike")
-HARLEY_DAVIDSON_SCORPION = Vehicle("HARLEY_DAVIDSON_SCORPION", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
-YAMAHA_GROWLER = Vehicle("YAMAHA_GROWLER", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
-SUZUKI_MIRAGE = Vehicle("SUZUKI_MIRAGE", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
+# HARLEY_DAVIDSON_SCORPION = Vehicle("HARLEY_DAVIDSON_SCORPION", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
+# YAMAHA_GROWLER = Vehicle("YAMAHA_GROWLER", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
+# SUZUKI_MIRAGE = Vehicle("SUZUKI_MIRAGE", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
         
 """
     LIFESTYLE
@@ -1469,11 +1471,11 @@ CYBEREYES_1 = Augmentation("CYBEREYES_1", cost=4000, rating=1, essence=0.2, capa
 CYBEREYES_2 = Augmentation("CYBEREYES_2", cost=6000, rating=2, essence=0.3, capacity=8, avail=6, cyberlimbs=False, category='Eyeware')
 CYBEREYES_3 = Augmentation("CYBEREYES_3", cost=10000, rating=3, essence=0.4, capacity=12, avail=9, cyberlimbs=False, category='Eyeware')
 CYBEREYES_4 = Augmentation("CYBEREYES_4", cost=14000, rating=4, essence=0.5, capacity=16, avail=12, cyberlimbs=False, category='Eyeware')
-FLARE_COMPENSATION_AUG = Augmentation("FLARE_COMPENSATION_AUG", cost=1000, essence=0.1, capacity=1, avail=4, cyberlimbs=True category='Eyeware')
+FLARE_COMPENSATION_AUG = Augmentation("FLARE_COMPENSATION_AUG", cost=1000, essence=0.1, capacity=1, avail=4, cyberlimbs=True, category='Eyeware')
 IMAGE_LINK_AUG = Augmentation("IMAGE_LINK_AUG", cost=1000, essence=0.1, capacity="-", avail=4, as_standard=True, category='Eyeware')
 LOW_LIGHT_VISION_AUG = Augmentation("LOW_LIGHT_VISION_AUG", cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, category='Eyeware')
-OCULAR_DRONE = Augmentation("OCULAR_DRONE", cost=6000, essence="-", capacity=6, avail=6, cyberlimbs=True category='Eyeware')
-RETINAL_DUPLICATION_1_6 = Augmentation("RETINAL_DUPLICATION_1_6", cost=["Rating", "*", 20_000], rating=[1, "to", 6], essence=0.1, capacity=1, avail=[16, FORBIDDEN], cyberlimbs=True category='Eyeware')
+OCULAR_DRONE = Augmentation("OCULAR_DRONE", cost=6000, essence="-", capacity=6, avail=6, cyberlimbs=True, category='Eyeware')
+RETINAL_DUPLICATION_1_6 = Augmentation("RETINAL_DUPLICATION_1_6", cost=["Rating", "*", 20_000], rating=[1, "to", 6], essence=0.1, capacity=1, avail=[16, FORBIDDEN], cyberlimbs=True, category='Eyeware')
 SMARTLINK_AUG = Augmentation("SMARTLINK_AUG", cost=4000, essence=0.2, capacity=3, avail=[8, RESTRICTED], cyberlimbs=True, category='Eyeware')
 THERMOGRAPHIC_VISION_AUG = Augmentation("THERMOGRAPHIC_VISION_AUG", cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, category='Eyeware')
 VISION_ENHANCEMENT_AUG = Augmentation("VISION_ENHANCEMENT_AUG", cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, category='Eyeware')
@@ -1496,7 +1498,7 @@ BONE_LACING_TITANIUM = Augmentation("BONE_LACING_TITANIUM", cost=30000, essence=
 DERMAL_PLANTING_1_6 = Augmentation("DERMAL_PLANTING_1_6", cost=["Rating", "*", 3000], rating=[1, "to", 6], essence=["Rating", "*", 0.5], capacity="-", avail=["Rating", "*", 4, RESTRICTED], cyberlimbs=False, category='Bodyware')
 FINGERTIP_COMPARTMENT = Augmentation("FINGERTIP_COMPARTMENT", cost=3000, essence=0.1, capacity=1, avail=4, cyberlimbs=True, category='Bodyware')
 GRAPPLE_GUN_AUG = Augmentation("GRAPPLE_GUN_AUG", cost=5000, essence=0.5, capacity=4, avail=8, cyberlimbs=True, category='Bodyware')
-INTERNAL_AIR_TANK_1_3 = Augmentation("INTERNAL_AIR_TANK_1_3", cost=["Rating", "*", 8000] rating=[1, "to", 3], essence=0.25, capacity=3, avail=["Rating"], cyberlimbs=True, category='Bodyware')
+INTERNAL_AIR_TANK_1_3 = Augmentation("INTERNAL_AIR_TANK_1_3", cost=["Rating", "*", 8000], rating=[1, "to", 3], essence=0.25, capacity=3, avail=["Rating"], cyberlimbs=True, category='Bodyware')
 MUSCLE_REPLACEMENT_1_3 = Augmentation("MUSCLE_REPLACEMENT_1_3", cost=["Rating", "*", 25000], rating=[1, "to", 4], essence=["Rating", "*", 1], capacity="-", avail=["Rating", "*", 5, RESTRICTED], cyberlimbs=False, category='Bodyware')
 REACTION_ENHANCERS_1_3 = Augmentation("REACTION_ENHANCERS_1_3", cost=["Rating", "*", 13000], rating=[1, "to", 3], essence=["Rating", "*", 0.3], capacity="-", avail=["Rating", "*", 5, RESTRICTED], cyberlimbs=False, category='Bodyware')
 SKILLWIRES_1_6 = Augmentation("SKILLWIRES_1_6", cost=["Rating", "*", 20000], rating=[1, "to", 6], essence=["Rating", "*", 0.1], capacity="-", avail=["Rating", "*", 4], cyberlimbs=False, category='Bodyware')
@@ -1526,6 +1528,7 @@ CYBERLIMB_EN_AGILITY = Augmentation("CYBERLIMB_EN_AGILITY", cost=["Rating", "*",
 CYBERLIMB_EN_ARMOR = Augmentation("CYBERLIMB_EN_ARMOR", cost=["Rating", "*", 3000], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 5], category='Cyberlimbs Obvious')
 CYBERLIMB_EN_STRENGTH = Augmentation("CYBERLIMB_EN_STRENGTH", cost=["Rating", "*", 6500], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 3, RESTRICTED], category='Cyberlimbs Obvious')
 # CYBERLIMB ACCESSORIES
+"""
 CYBERARM_GYROMOUNT
 CYBERARM_SLIDE
 CYBER_HOLSTER
@@ -1580,6 +1583,7 @@ PAIN_EDITOR
 REFLEX_RECORDER
 SLEEP_REGULATOR
 SYNAPTIC_BOOSTER_1_3
+"""
 """
     PRIORITY TABLE
 """
