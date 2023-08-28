@@ -111,11 +111,11 @@ def roll_stats(ch: Core.Character, attr: int):
         if stat_roll.value + 1 <= stat_roll.limit:
             stat_roll.value += 1
             attr -= 1
-    ch.print_stats()
+    # ch.print_stats()
     dominant_stats = [attribute for attribute in rollable_stats if attribute.value >= 4]
     # if len(dominant_stats) < 1:
     #    raise ValueError("No dominant stats!")
-    print(dominant_stats)
+    # print(dominant_stats)
 
 
 def get_highest_attr(ch: Core.Character):
@@ -414,7 +414,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl):
         return
     _type = random.choice(list(tbl.keys()))
     ch.MagicResoUser = str(_type)
-    print(f'//////\nUh oh! Looks like you\'re a {_type}')
+    print(f'Uh oh! Looks like you\'re a {_type}')
     for key in list(tbl[_type].keys()):
         if key == "Magic":
             ch.Magic = Core.Attribute("Magic")
@@ -446,7 +446,6 @@ def format_skills(character_skills):
         print("====")
         print("ACTIVE SKILLS")
         print("    by Group/Rating:")
-        print("---")
         for k, d in character_skills.items():
             if d.attribute.name not in output_by_attr.keys():
                 output_by_attr[d.attribute.name] = [d.name]
@@ -498,6 +497,18 @@ def format_skills(character_skills):
     format_magic_resonance_skills()
 
 
+def buy_gear(ch: Core.Character, nuyen: int):
+
+    vehicle_skill_ratings = [i.rating for i in ch.Skills['Active'].values() if i in Core.VEHICLE_SKILLS]
+    print(vehicle_skill_ratings)
+    pass
+
+
+def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
+    if "Specific" in s.name:
+
+
+
 def generate_character():
     # PHASE 1: CONCEPT
     character = Core.Character()
@@ -535,7 +546,7 @@ def generate_character():
     character.redo_attr()
     # STEP 1: ATTRIBUTES
     print(character.Metatype.name)
-    print(f"======\nRolling with {priority_table['Attributes']} points")
+    # print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
     # STEP 3: MAGIC/RESONANCE
@@ -547,7 +558,7 @@ def generate_character():
     print(character.Spells)
     # STEP 5: SKILLS
     character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
-    # format_skills(character.Skills['Active'])
+    format_skills(character.Skills['Active'])
     for k, d in character.Skills.items():
         if d is None:
             pass
@@ -557,6 +568,7 @@ def generate_character():
                 pass
     print("character karma is ", character.Karma)
     print(nuyen)
+    buy_gear(character, nuyen)
                 
     # Attribute Points
 

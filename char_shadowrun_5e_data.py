@@ -396,6 +396,7 @@ class Electronics(Gear):
         super().__init__(name, cost, page_ref, **kwargs)
         self.category = "Electronics"
 
+
 """
     The Item Class. Why now?
 
@@ -416,6 +417,26 @@ class Item(Gear):
         Item.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
         self.category = category
+
+
+class Vehicle(AbstractBaseClass):
+    items = []
+    def __init__(self, name, cost, page_ref, handle, speed, accel, bod, armor, pilot, sensor, seats, avail, **kwargs):
+        Vehicle.items.append(self)
+        super().__init__(name, **kwargs)
+        self.cost = cost
+        self.page_ref = page_ref
+        self.handle = handle
+        self.speed = speed
+        self.accel = accel
+        self.bod = bod
+        self.armor = armor
+        self.pilot = pilot
+        self.sensor = sensor
+        self.seats = seats
+        self.avail = avail
+        self.category = "Vehicle"
+
 
 
 class GearAvailability(AbstractBaseClass):
@@ -1226,6 +1247,14 @@ RAPPELLING_GLOVES = Item("Rappelling Gloves", cost=50, page_ref=449, rating="-",
 RESPIRATOR = Item("Respirator", cost=["Rating", "*", 50], page_ref=449, rating=[1, "to", 6], avail="-", category="Survival Gear")
 SURVIVAL_KIT = Item("Survival Kit", cost=200, page_ref=449, rating="-", avail=4, category="Survival Gear")
 
+"""
+    VEHICLES
+"""
+# BIKES
+DODGE_SCOOT = Vehicle("Dodge Scoot", cost=3000, page_ref=463, handle=[4, 3], speed=3, accel=1, bod=4, armor=4, pilot=1, sensor=1, seats=1, avail="-", subtype="Bike")
+HARLEY_DAVIDSON_SCORPION = Vehicle("HARLEY_DAVIDSON_SCORPION", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
+YAMAHA_GROWLER = Vehicle("YAMAHA_GROWLER", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
+SUZUKI_MIRAGE = Vehicle("SUZUKI_MIRAGE", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail="-", subtype="Bike")
         
 """
     LIFESTYLE
