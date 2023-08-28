@@ -96,6 +96,8 @@ def get_priorities(character: Core.Character):
         priority_chosen = random.choice(table_choices)
         table_choices.pop(table_choices.index(priority_chosen))
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[category][priority_chosen]
+    while selected_items['Resources'] == 6000:
+        get_priorities(character)
     return selected_items
 
 
@@ -302,6 +304,7 @@ def karma_qualities(ch: Core.Character):
     quality_weights = [1 for _ in Core.Quality.items]
     inc = 0
     while total_karma > 0:
+        ch.Karma = total_karma
         # There's an infinite loop I can't be bothered to fix right now, this will do
         inc += 1
         if inc > 100000:
@@ -501,6 +504,7 @@ def generate_character():
     priority_table = get_priorities(character)
     metatype = random.choice(priority_table['Metatype'])
     attribute_points = priority_table['Attributes']
+    nuyen = priority_table['Resources']
     # Initialising Stuff
     edge_shit = metatype[1]
     metatype = metatype[0]
@@ -530,6 +534,7 @@ def generate_character():
                 character.Essence = metatype.attributes.Essence
     character.redo_attr()
     # STEP 1: ATTRIBUTES
+    print(character.Metatype.name)
     print(f"======\nRolling with {priority_table['Attributes']} points")
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
@@ -550,6 +555,8 @@ def generate_character():
             for i, j in character.Skills[k].items():
                 # print(j)
                 pass
+    print("character karma is ", character.Karma)
+    print(nuyen)
                 
     # Attribute Points
 

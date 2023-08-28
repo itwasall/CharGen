@@ -834,25 +834,25 @@ RC: Recoil Compensation
     MELEE GEAR
 """
 # =============== BLADES =================
-COMBAT_AXE = MeleeWeapon("Combat_Axe", cost=4000, page_ref=421, avail=[12, RESTRICTED], subtype="Blade")
-COMBAT_KNIFE = MeleeWeapon("Combat_Knife", cost=300, page_ref=421, avail=4, subtype="Blade")
-FOREARM_SNAP_BLADES = MeleeWeapon("Forearm_Snap_Blades", cost=200, page_ref=421, avail=[7, RESTRICTED], subtype="Blade")
+COMBAT_AXE = MeleeWeapon("Combat Axe", cost=4000, page_ref=421, avail=[12, RESTRICTED], subtype="Blade")
+COMBAT_KNIFE = MeleeWeapon("Combat Knife", cost=300, page_ref=421, avail=4, subtype="Blade")
+FOREARM_SNAP_BLADES = MeleeWeapon("Forearm Snap Blades", cost=200, page_ref=421, avail=[7, RESTRICTED], subtype="Blade")
 KATANA = MeleeWeapon("Katana", cost=1000, page_ref=421, avail=[9, RESTRICTED], subtype="Blade")
 KNIFE = MeleeWeapon("Knife", cost=10, page_ref=421, avail="-", subtype="Blade")
-POLE_ARM = MeleeWeapon("Pole_Arm", cost=1000, page_ref=421, avail=[6, RESTRICTED], subtype="Blade")
-SURVIVAL_KNIFE = MeleeWeapon("Survival_Knife", cost=100, page_ref=421, avail="-", subtype="Blade")
+POLE_ARM = MeleeWeapon("Pole Arm", cost=1000, page_ref=421, avail=[6, RESTRICTED], subtype="Blade")
+SURVIVAL_KNIFE = MeleeWeapon("Survival Knife", cost=100, page_ref=421, avail="-", subtype="Blade")
 SWORD = MeleeWeapon("Sword", cost=500, page_ref=421, avail=[5, RESTRICTED], subtype="Blade")
 # =============== CLUBS =================
 CLUB = MeleeWeapon("Club", cost=30, page_ref=421, avail="-", subtype="Club")
-EXTENDABLE_BATON = MeleeWeapon("Extendable_Baton", cost=100, page_ref=421, avail=4, subtype="Club")
+EXTENDABLE_BATON = MeleeWeapon("Extendable Baton", cost=100, page_ref=421, avail=4, subtype="Club")
 SAP = MeleeWeapon("Sap", cost=30, page_ref=421, avail=2, subtype="Club")
 STAFF = MeleeWeapon("Staff", cost=100, page_ref=421, avail=3, subtype="Club")
-STUN_BATON = MeleeWeapon("Stun_Baton", cost=750, page_ref=421, avail=[6, RESTRICTED], subtype="Club")
-TELESCOPING_STAFF = MeleeWeapon("Telescoping_Staff", cost=350, page_ref=421, avail=4, subtype="Club")
+STUN_BATON = MeleeWeapon("Stun Baton", cost=750, page_ref=421, avail=[6, RESTRICTED], subtype="Club")
+TELESCOPING_STAFF = MeleeWeapon("Telescoping Staff", cost=350, page_ref=421, avail=4, subtype="Club")
 # =============== OTHER =================
 KNUCKS = MeleeWeapon("Knucks", cost=100, page_ref=421, avail=[2, RESTRICTED], subtype="Other")
-MONOFILAMENT_WHIP = MeleeWeapon("Monofilament_Whip", cost=10_000, page_ref=421, avail=[12, FORBIDDEN], subtype="Other")
-SHOCK_GLOVES = MeleeWeapon("Shock_Gloves", cost=550, page_ref=421, avail=[6, RESTRICTED], subtype="Other")
+MONOFILAMENT_WHIP = MeleeWeapon("Monofilament Whip", cost=10_000, page_ref=421, avail=[12, FORBIDDEN], subtype="Other")
+SHOCK_GLOVES = MeleeWeapon("Shock Gloves", cost=550, page_ref=421, avail=[6, RESTRICTED], subtype="Other")
 
 """
     PROJECTILE GEAR
@@ -860,13 +860,13 @@ SHOCK_GLOVES = MeleeWeapon("Shock_Gloves", cost=550, page_ref=421, avail=[6, RES
 # =============== BOWS ==================
 BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
 ARROW = ProjectileWeapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows", requires=BOW)
-INJECTION_ARROW = ProjectileWeapon("Injection_Arrow", cost=["Rating", "*", 20], page_ref=421, avail=[["Rating", "+", 2], RESTRICTED], rating=[1, "to", 6], subtype="Bows", requires=BOW)
+INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=[["Rating", "+", 2], RESTRICTED], rating=[1, "to", 6], subtype="Bows", requires=BOW)
 # =============== CROSSBOWS =============
-LIGHT_CROSSBOW = ProjectileWeapon("Light_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
-MEDIUM_CROSSBOW = ProjectileWeapon("Medium_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
-HEAVY_CROSSBOW = ProjectileWeapon("Heavy_Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
-CROSSBOW_BOLT = ProjectileWeapon("Crossbow_Bolt", cost=5, page_ref=421, avail=2, subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
-INJECTION_BOLT = ProjectileWeapon("Injection_Bolt", cost=50, page_ref=421, avail=[8, RESTRICTED], subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
+LIGHT_CROSSBOW = ProjectileWeapon("Light Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+MEDIUM_CROSSBOW = ProjectileWeapon("Medium Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+HEAVY_CROSSBOW = ProjectileWeapon("Heavy Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
+CROSSBOW_BOLT = ProjectileWeapon("Crossbow Bolt", cost=5, page_ref=421, avail=2, subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
+INJECTION_BOLT = ProjectileWeapon("Injection Bolt", cost=50, page_ref=421, avail=[8, RESTRICTED], subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
 # =============== THROWING ==============
 THROWING_KNIFE = ProjectileWeapon("Throwing Knife", cost=25, page_ref=424, avail=4, subtype="Throwing Weapons")
 
@@ -895,7 +895,7 @@ ARES_VIPER_SHOTGUN = Firearm("Ares Viper Shotgun", cost=380, page_ref=426, avail
 BROWNING_ULTRA_POWER = Firearm("Browning Ultra Power", cost=640, page_ref=426, avail=[4, RESTRICTED], subtype="Heavy Pistol")
 COLT_GOVERNMENT_2066 = Firearm("Colt Government 2066", cost=425, page_ref=426, avail=[7, RESTRICTED], subtype="Heavy Pistol")
 REMINGTON_ROOMSWEEPER = Firearm("Remington Roomsweeper", cost=250, page_ref=426, avail=[6, RESTRICTED], subtype="Heavy Pistol")
-REMINGTON_ROOMSWEEPER_FLECHETTES = Firearm("Remington_Roomsweeper_Flechettes", cost=REMINGTON_ROOMSWEEPER.cost, page_ref=426, avail=REMINGTON_ROOMSWEEPER.avail, subtype="Heavy Pistol" , requires=REMINGTON_ROOMSWEEPER)
+REMINGTON_ROOMSWEEPER_FLECHETTES = Firearm("Remington Roomsweeper Flechettes", cost=REMINGTON_ROOMSWEEPER.cost, page_ref=426, avail=REMINGTON_ROOMSWEEPER.avail, subtype="Heavy Pistol" , requires=REMINGTON_ROOMSWEEPER)
 RUGER_SUPER_WARHAWK = Firearm("Ruger Super Warhawk", cost=400, page_ref=427, avail=[4, RESTRICTED], subtype="Heavy Pistol")
 # =============== MACHINE PISTOLS ========
 ARES_CRUSADER_II = Firearm("Ares Crusader II", cost=830, page_ref=427, avail=[9, RESTRICTED], subtype="Machine Pistol")
@@ -946,32 +946,32 @@ PANTHER_XXL = Firearm("Panther XXL", cost=43_000, page_ref=431, avail=[20, FORBI
     FIREARM ACCESSORIES
     arg order: name, cost, page_ref, mount, avail, **kwargs
 """
-AIRBURST_LINK = FirearmAccessory("Airburst_Link", cost=600, page_ref=432, mount="", avail=[6, RESTRICTED], requires=["Category", "Firearm"])
+AIRBURST_LINK = FirearmAccessory("Airburst Link", cost=600, page_ref=432, mount="", avail=[6, RESTRICTED], requires=["Category", "Firearm"])
 BIPOD = FirearmAccessory("Bipod", cost=200, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
-CONCEALABLE_HOLSTER = FirearmAccessory("Concealable_Holster", cost=150, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
-GAS_VENT_SYSTEM = FirearmAccessory("Gas_Vent_System", cost=["Rating", "*", 200], page_ref=432, mount="", avail=[(3, "Rating"), RESTRICTED], requires=["Category", "Firearm"])
-GYRO_MOUNT = FirearmAccessory("Gyro_Mount", cost=1400, page_ref=432, mount="", avail=7, requires=["Category", "Firearm"])
-HIDDEN_ARM_SLIDE = FirearmAccessory("Hidden_Arm_Slide", cost=350, page_ref=432, mount="", avail=[4,RESTRICTED], requires=["Category", "Firearm"])
-IMAGING_SCOPE = FirearmAccessory("Imaging_Scope", cost=300, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
-LASER_SIGHT = FirearmAccessory("Laser_Sight", cost=125, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
+CONCEALABLE_HOLSTER = FirearmAccessory("Concealable Holster", cost=150, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
+GAS_VENT_SYSTEM = FirearmAccessory("Gas Vent System", cost=["Rating", "*", 200], page_ref=432, mount="", avail=[(3, "Rating"), RESTRICTED], requires=["Category", "Firearm"])
+GYRO_MOUNT = FirearmAccessory("Gyro Mount", cost=1400, page_ref=432, mount="", avail=7, requires=["Category", "Firearm"])
+HIDDEN_ARM_SLIDE = FirearmAccessory("Hidden Arm Slide", cost=350, page_ref=432, mount="", avail=[4,RESTRICTED], requires=["Category", "Firearm"])
+IMAGING_SCOPE = FirearmAccessory("Imaging Scope", cost=300, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
+LASER_SIGHT = FirearmAccessory("Laser Sight", cost=125, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
 PERISCOPE = FirearmAccessory("Periscope", cost=70, page_ref=432, mount="", avail=3, requires=["Category", "Firearm"])
-QUICK_DRAW_HOLSTER = FirearmAccessory("Quick_Draw_Holster", cost=175, page_ref=432, mount="", avail=4, requires=["Category", "Firearm"])
-SHOCK_PAD = FirearmAccessory("Shock_Pad", cost=50, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
-SILENCER_SUPPRESSOR = FirearmAccessory("Silencer_Suppressor", cost=500, page_ref=432, mount="", avail=[9, FORBIDDEN], requires=["Category", "Firearm"])
-SMART_FIRING_PLATFORM = FirearmAccessory("Smart_Firing_Platform", cost=2_500, page_ref=432, mount="", avail=[12, FORBIDDEN], requires=["Category", "Firearm"])
-SMARTGUN_SYSTEM_INTERNAL = FirearmAccessory("Smartgun_System_Internal", cost=["WeaponCost", "*", 2], page_ref=432, mount="", avail=[2, RESTRICTED], requires=["Category", "Firearm"])
-SMARTGUN_SYSTEM_EXTERNAL = FirearmAccessory("Smartgun_System_External", cost=200, page_ref=432, mount="", avail=[4, RESTRICTED], requires=["Category", "Firearm"])
-SPARE_CLIP = FirearmAccessory("Spare_Clip", cost=5, page_ref=432, mount="", avail=4, requires=["Category", "Firearm"])
-SPEED_LOADER = FirearmAccessory("Speed_Loader", cost=25, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
+QUICK_DRAW_HOLSTER = FirearmAccessory("Quick Draw Holster", cost=175, page_ref=432, mount="", avail=4, requires=["Category", "Firearm"])
+SHOCK_PAD = FirearmAccessory("Shock Pad", cost=50, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
+SILENCER_SUPPRESSOR = FirearmAccessory("Silencer Suppressor", cost=500, page_ref=432, mount="", avail=[9, FORBIDDEN], requires=["Category", "Firearm"])
+SMART_FIRING_PLATFORM = FirearmAccessory("Smart Firing Platform", cost=2_500, page_ref=432, mount="", avail=[12, FORBIDDEN], requires=["Category", "Firearm"])
+SMARTGUN_SYSTEM_INTERNAL = FirearmAccessory("Smartgun System Internal", cost=["WeaponCost", "*", 2], page_ref=432, mount="", avail=[2, RESTRICTED], requires=["Category", "Firearm"])
+SMARTGUN_SYSTEM_EXTERNAL = FirearmAccessory("Smartgun System External", cost=200, page_ref=432, mount="", avail=[4, RESTRICTED], requires=["Category", "Firearm"])
+SPARE_CLIP = FirearmAccessory("Spare Clip", cost=5, page_ref=432, mount="", avail=4, requires=["Category", "Firearm"])
+SPEED_LOADER = FirearmAccessory("Speed Loader", cost=25, page_ref=432, mount="", avail=2, requires=["Category", "Firearm"])
 TRIPOD = FirearmAccessory("Tripod", cost=500, page_ref=432, mount="", avail=4, requires=["Category", "Firearm"])
 
 """
     INDUSTRIAL CHEMICALS
     No I don't know why this gets its own chapter in the book either
 """
-GLUE_SOLVENT = Item("Glue_Solvent", cost=90, page_ref=448, avail=2, category="Industrial Chemicals")
-GLUE_SPRAYER= Item("Glue_Sprayer", cost=150, page_ref=448, avail=2, category="Industrial Chemicals")
-THERMITE_BURNING_BAR = Item("Thermite_Burning_Bar", cost=500, page_ref=448, avail=[16, RESTRICTED], category="Industrial Chemicals")
+GLUE_SOLVENT = Item("Glue Solvent", cost=90, page_ref=448, avail=2, category="Industrial Chemicals")
+GLUE_SPRAYER= Item("Glue Sprayer", cost=150, page_ref=448, avail=2, category="Industrial Chemicals")
+THERMITE_BURNING_BAR = Item("Thermite Burning Bar", cost=500, page_ref=448, avail=[16, RESTRICTED], category="Industrial Chemicals")
 
 """
     AMMO TYPES
@@ -997,9 +997,9 @@ GAS_GRENADE = Ammo("Gas Grenade", cost=["WeaponCost", "+", 40], page_ref=434, av
 SMOKE_GRENADE = Ammo("Smoke", cost=40, page_ref=434, avail=[4, RESTRICTED], subtype="Grenade")
 THERMAL_SMOKE = Ammo("Thermal Smoke", cost=60, page_ref=434, avail=[6, RESTRICTED], subtype="Grenade")
 # =============== MISSILES ==============
-ANTI_VEHICLE = Ammo("Anti_Vehicle", cost=2800, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
-FRAGMENTATION_MISSLE = Ammo("Fragmentation_Missle", cost=2000, page_ref=435, avail=[12, FORBIDDEN], subtype="Missile")
-HIGH_EXPLOSIVE_MISSLE = Ammo("High_Explosive_Missle", cost=2100, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
+ANTI_VEHICLE = Ammo("Anti Vehicle", cost=2800, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
+FRAGMENTATION_MISSLE = Ammo("Fragmentation Missle", cost=2000, page_ref=435, avail=[12, FORBIDDEN], subtype="Missile")
+HIGH_EXPLOSIVE_MISSLE = Ammo("High Explosive Missle", cost=2100, page_ref=435, avail=[18, FORBIDDEN], subtype="Missile")
 # =============== ROCKETS ==============
 # ANTI_VEHICLE_ROCKET = Ammo("Anti_Vehicle_Rocket", cost=[2800, "+", ("Sensor Rating", 500)], page_ref=435, avail=[18, FORBIDDEN], subtype="Rocket", requires=ANTI_VEHICLE)
 # FRAGMENTATION_ROCKET = Ammo("Fragmentation_Rocket", cost=[2000, "+", ("Sensor Rating", 500)], page_ref=435, avail=[12, FORBIDDEN], subtype="Rocket", requires=FRAGMENTATION_MISSLE)
@@ -1008,9 +1008,9 @@ HIGH_EXPLOSIVE_MISSLE = Ammo("High_Explosive_Missle", cost=2100, page_ref=435, a
 """
     EXPLOSIVES
 """
-COMMERCIAL_EXPLOSIVES = Item("Commercial_Explosives", cost=100, page_ref=436, rating=5, avail=[8, RESTRICTED], category="Explosives")
-FOAM_EXPLOSIVES = Item("Foam_Explosives", cost=["Rating", "*", 100], page_ref=436, rating=[6, "to", 25], avail=[12, FORBIDDEN], category="Explosives")
-PLASTIC_EXPLOSIVES = Item("Plastic_Explosives", cost=["Rating", "*", 100], page_ref=436, rating=[6, "to", 25], avail=[16, FORBIDDEN], category="Explosives")
+COMMERCIAL_EXPLOSIVES = Item("Commercial Explosives", cost=100, page_ref=436, rating=5, avail=[8, RESTRICTED], category="Explosives")
+FOAM_EXPLOSIVES = Item("Foam Explosives", cost=["Rating", "*", 100], page_ref=436, rating=[6, "to", 25], avail=[12, FORBIDDEN], category="Explosives")
+PLASTIC_EXPLOSIVES = Item("Plastic Explosives", cost=["Rating", "*", 100], page_ref=436, rating=[6, "to", 25], avail=[16, FORBIDDEN], category="Explosives")
 DETONATOR_CAP = Item("Detonator Cap", cost=75, page_ref=436, rating="-", avail=[8, RESTRICTED], category="Explosives")
 
 """
@@ -1115,41 +1115,41 @@ GOLD = Electronics("Gold Credstick", cost=100, page_ref=443, rating="-", avail=5
 PLATINUM = Electronics("Platinum Credstick", cost=500, page_ref=443, rating="-", avail=10, max_value=500_000, subtype="Credsticks")
 EBONY = Electronics("Ebony Credstick", cost=1000, page_ref=443, rating="-", avail=20, max_value=1_000_000, subtype="Credsticks")
 # =============== IDENTIFICATION =====
-FAKE_SIN = Electronics("Fake_SIN", cost=["Rating", "*", 2500], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
-FAKE_LICENCE = Electronics("Fake_Licence", cost=["Rating", "*", 200], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
+FAKE_SIN = Electronics("Fake SIN", cost=["Rating", "*", 2500], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
+FAKE_LICENCE = Electronics("Fake Licence", cost=["Rating", "*", 200], page_ref=443, rating=[1, "to", 6], avail=[["Rating", "*", 3], FORBIDDEN], subtype="Identification")
 # =============== TOOLS ==============
-TOOL_KIT = Electronics("Tool_Kit", cost=500, page_ref=443, rating="-", avail="-", subtype="Tools")
-TOOL_SHOP = Electronics("Tool_Shop", cost=5000, page_ref=443, rating="-", avail=8, subtype="Tools")
-TOOL_FACILITY = Electronics("Tool_Facility", cost=50000, page_ref=443, rating="-", avail=12, subtype="Tools")
+TOOL_KIT = Electronics("Tool Kit", cost=500, page_ref=443, rating="-", avail="-", subtype="Tools")
+TOOL_SHOP = Electronics("Tool Shop", cost=5000, page_ref=443, rating="-", avail=8, subtype="Tools")
+TOOL_FACILITY = Electronics("Tool Facility", cost=50000, page_ref=443, rating="-", avail=12, subtype="Tools")
 # ========== OPTICAL / IMAGING DEVICES
 BINOCULARS = Electronics("Binoculars", cost=["Capacity", "*", 50], page_ref=444, rating="-", avail="-", capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
-OPTICAL_BINOCULARS = Electronics("Optical_Binoculars", cost=50, page_ref=444, rating="-", avail="-", subtype="Optical/Imaging Devices")
+OPTICAL_BINOCULARS = Electronics("Optical Binoculars", cost=50, page_ref=444, rating="-", avail="-", subtype="Optical/Imaging Devices")
 CAMERA = Electronics("Camera", cost=["Capacity", "*", 100], page_ref=444, rating="-", avail="-",capacity=[1, "to", 6], subtype="Optical/Imaging Devices")
-MICRO_CAMERA = Electronics("Micro_Camera", cost=100, page_ref=444, rating="-", avail="-", capacity=1, subtype="Optical/Imaging Devices")
-EYE_CONTACTS = Electronics("Eye_Contacts", cost=["Capacity", "*", 200], page_ref=444, rating="-", avail="-", capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
+MICRO_CAMERA = Electronics("Micro Camera", cost=100, page_ref=444, rating="-", avail="-", capacity=1, subtype="Optical/Imaging Devices")
+EYE_CONTACTS = Electronics("Eye Contacts", cost=["Capacity", "*", 200], page_ref=444, rating="-", avail="-", capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
 GLASSES = Electronics("Glasses", cost=["Capacity", "*", 100], page_ref=444, rating="-", avail="-", capacity=[1, "to", 4], subtype="Optical/Imaging Devices")
 GOGGLES = Electronics("Goggles", cost=["Capacity", "*", 50], page_ref=444, rating="-", avail="-", capacity=[1, "to", 6], subtype="Optical/Imaging Devices")
 ENDOSCOPE = Electronics("Endoscope", cost=250, page_ref=444, rating="-", avail=8, subtype="Optical/Imaging Devices")
-MAGE_SIGHT_GOGGLES = Electronics("Mage_Sight_Goggles", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], subtype="Optical/Imaging Devices")
+MAGE_SIGHT_GOGGLES = Electronics("Mage Sight Goggles", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], subtype="Optical/Imaging Devices")
 MONOCLE = Electronics("Monocle", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
 # =============== VISION ENCHANCEMENTS 
-LOW_LIGHT_VISION = Electronics("Low_Light_Vision", cost=500, page_ref=444, rating="-", avail=4, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-FLARE_COMPENSATION = Electronics("Flare_Compensation", cost=250, page_ref=444, rating="-", avail=1, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-IMAGE_LINK = Electronics("Image_Link", cost=25, page_ref=444, rating="-", avail="-", capacity=1, subtype="Vision Enhancement", requires=Electronics)
+LOW_LIGHT_VISION = Electronics("Low-Light Vision", cost=500, page_ref=444, rating="-", avail=4, capacity=1, subtype="Vision Enhancement", requires=Electronics)
+FLARE_COMPENSATION = Electronics("Flare Compensation", cost=250, page_ref=444, rating="-", avail=1, capacity=1, subtype="Vision Enhancement", requires=Electronics)
+IMAGE_LINK = Electronics("Image Link", cost=25, page_ref=444, rating="-", avail="-", capacity=1, subtype="Vision Enhancement", requires=Electronics)
 SMARTLINK = Electronics("Smartlink", cost=2000, page_ref=444, rating="-", avail=[4, RESTRICTED], capacity=1, subtype="Vision Enhancement", requires=Electronics)
-THERMOGRAPHIC_VISION = Electronics("Thermographic_Vision", cost=500, page_ref=444, rating="-", avail=6, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-VISION_ENHANCEMENT = Electronics("Vision_Enhancement", cost=["Rating", "*", 500], page_ref=444, rating="-", avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Vision Enhancement", requires=Electronics)
-VISION_MAGNIFICATION = Electronics("Vision_Magnification", cost=250, page_ref=444, rating="-", avail=2, capacity=1, subtype="Vision Enhancement", requires=Electronics)
+THERMOGRAPHIC_VISION = Electronics("Thermographic Vision", cost=500, page_ref=444, rating="-", avail=6, capacity=1, subtype="Vision Enhancement", requires=Electronics)
+VISION_ENHANCEMENT = Electronics("Vision Enhancement", cost=["Rating", "*", 500], page_ref=444, rating="-", avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Vision Enhancement", requires=Electronics)
+VISION_MAGNIFICATION = Electronics("Vision Magnification", cost=250, page_ref=444, rating="-", avail=2, capacity=1, subtype="Vision Enhancement", requires=Electronics)
 # =============== AUDIO DEVICES=======
-DIRECTIONAL_MIC = Electronics("Directional_Mic", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail=4, capacity=[1, "to", 6], subtype="Audio Device")
-EAR_BUDS = Electronics("Ear_Buds", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 3], subtype="Audio Device")
+DIRECTIONAL_MIC = Electronics("Directional Mic", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail=4, capacity=[1, "to", 6], subtype="Audio Device")
+EAR_BUDS = Electronics("Ear Buds", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 3], subtype="Audio Device")
 HEADPHONES = Electronics("Headphones", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 6], subtype="Audio Device")
-LASER_MIC = Electronics("Laser_Mic", cost=["Capacity", "*", 100], page_ref=445, rating="-", avail=[6, RESTRICTED], capacity=[1, "to", 6], subtype="Audio Device")
-OMNI_DIRECTIONAL_MIC = Electronics("Omni_Directional_Mic", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 6], subtype="Audio Device")
+LASER_MIC = Electronics("Laser Mic", cost=["Capacity", "*", 100], page_ref=445, rating="-", avail=[6, RESTRICTED], capacity=[1, "to", 6], subtype="Audio Device")
+OMNI_DIRECTIONAL_MIC = Electronics("Omni-Directional Mic", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 6], subtype="Audio Device")
 # =============== AUDIO ENHANCEMENTS==
-AUDIO_ENHANCEMENT = Electronics("Audio_Enhancement", cost=["Rating", "*", 500], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Audio Enhancement")
-SELECT_SOUND_FILTER = Electronics("Select_Sound_Filter", cost=["Rating", "*", 250], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 3], 0], capacity="Rating", subtype="Audio Enhancement")
-SPACIAL_REGONISER = Electronics("Spacial_Regoniser", cost=1000, page_ref=445, rating="-", avail=4, capacity=2, subtype="Audio Enhancement")
+AUDIO_ENHANCEMENT = Electronics("Audio Enhancement", cost=["Rating", "*", 500], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 2], 0], capacity="Rating", subtype="Audio Enhancement")
+SELECT_SOUND_FILTER = Electronics("Select Sound Filter", cost=["Rating", "*", 250], page_ref=445, rating=[1, "to", 3], avail=[["Rating", "*", 3], 0], capacity="Rating", subtype="Audio Enhancement")
+SPACIAL_REGONISER = Electronics("Spacial Regoniser", cost=1000, page_ref=445, rating="-", avail=4, capacity=2, subtype="Audio Enhancement")
 # =============== SENSORS ============
 """
 I'm like 100 lines into electronics alone, probably a few hundred if you include everything in this data dump section.
@@ -1187,55 +1187,55 @@ WALL_MOUNTED_HOUSING = Electronics("Wall-Mounted Housing", cost=["Capacity", "*"
 SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=445, rating=[2, "to", 8], avail="-", capacity=6, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
 SINGLE_SENSOR = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail="-", capacity=1, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
 # =============== SECURITY DEVICES====
-KEY_COMBINATION_LOCK = Electronics("Key_Combination_Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
+KEY_COMBINATION_LOCK = Electronics("Key Combination Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
 MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
-KEYPAD_CARD_READER = Electronics("Keypad_Card_Reader", cost=50, page_ref=447, rating="-", avail="-", subtype="Security Device")
-ANTI_TAMPER_CIRCUITS = Electronics("Anti_Tamper_Circuits", cost=["Rating", "*", 250], page_ref=447, rating=[1, "to", 4], avail="Rating", subtype="Security Device")
+KEYPAD_CARD_READER = Electronics("Keypad Card Reader", cost=50, page_ref=447, rating="-", avail="-", subtype="Security Device")
+ANTI_TAMPER_CIRCUITS = Electronics("Anti Tamper Circuits", cost=["Rating", "*", 250], page_ref=447, rating=[1, "to", 4], avail="Rating", subtype="Security Device")
 # ============== RESTRAINT ===========
-METAL_RESTRAINT = Electronics("Metal_Restraint", cost=20, page_ref=447, rating="-", avail="-", subtype="Restraint")
-PLATEEL_RESTRAINT = Electronics("Plateel_Restraint", cost=50, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
-PLASTIC_RESTRAINT_PER_10 = Electronics("Plastic_Restraint_Per_10", cost=5, page_ref=447, rating="-", avail="-", subtype="Restraint")
-CONTAINMENT_MANACLES = Electronics("Containment_Manacles", cost=250, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
+METAL_RESTRAINT = Electronics("Metal Restraint", cost=20, page_ref=447, rating="-", avail="-", subtype="Restraint")
+PLATEEL_RESTRAINT = Electronics("Plateel Restraint", cost=50, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
+PLASTIC_RESTRAINT_PER_10 = Electronics("Plastic Restraint (Per 10)", cost=5, page_ref=447, rating="-", avail="-", subtype="Restraint")
+CONTAINMENT_MANACLES = Electronics("Containment Manacles", cost=250, page_ref=447, rating="-", avail=[6, RESTRICTED], subtype="Restraint")
 # ============== BREAKING AND ENTERING
 AUTOPICKER = Electronics("Autopicker", cost=["Rating", "*", 500], page_ref=448, rating=[1, "to", 6], avail=[8, RESTRICTED], subtype="B&E Gear")
-CELLUAR_GLOVE_MOLDER = Electronics("Celluar_Glove_Molder", cost=["Rating", "*", 500], page_ref=448, rating=[1, "to", 4], avail=[12, FORBIDDEN], subtype="B&E Gear")
-CHISEL_CROWBAR = Electronics("Chisel_Crowbar", cost=20, page_ref=448, rating="-", avail="-", subtype="B&E Gear")
-KEYCARD_COPIER = Electronics("Keycard_Copier", cost=["Rating", "*", 600], page_ref=448, rating=[1, "to", 6], avail=[8, FORBIDDEN], subtype="B&E Gear")
-LOCKPICK_SET = Electronics("Lockpick_Set", cost=250, page_ref=448, rating="-", avail=[4, RESTRICTED], subtype="B&E Gear")
-MAGLOCK_PASSKEY = Electronics("Maglock_Passkey", cost=["Rating", "*", 2000], page_ref=448, rating=[1, "to", 4], avail=[["Rating", "*", 3], FORBIDDEN], subtype="B&E Gear")
+CELLUAR_GLOVE_MOLDER = Electronics("Celluar Glove Molder", cost=["Rating", "*", 500], page_ref=448, rating=[1, "to", 4], avail=[12, FORBIDDEN], subtype="B&E Gear")
+CHISEL_CROWBAR = Electronics("Chisel Crowbar", cost=20, page_ref=448, rating="-", avail="-", subtype="B&E Gear")
+KEYCARD_COPIER = Electronics("Keycard Copier", cost=["Rating", "*", 600], page_ref=448, rating=[1, "to", 6], avail=[8, FORBIDDEN], subtype="B&E Gear")
+LOCKPICK_SET = Electronics("Lockpick Set", cost=250, page_ref=448, rating="-", avail=[4, RESTRICTED], subtype="B&E Gear")
+MAGLOCK_PASSKEY = Electronics("Maglock Passkey", cost=["Rating", "*", 2000], page_ref=448, rating=[1, "to", 4], avail=[["Rating", "*", 3], FORBIDDEN], subtype="B&E Gear")
 MINIWELDER = Electronics("Miniwelder", cost=250, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
-MINIWELDER_FUEL_CANISTER = Electronics("Miniwelder_Fuel_Canister", cost=80, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
-MONOFILAMENT_CHAINSAW = Electronics("Monofilament_Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="B&E Gear")
+MINIWELDER_FUEL_CANISTER = Electronics("Miniwelder Fuel Canister", cost=80, page_ref=448, rating="-", avail=2, subtype="B&E Gear")
+MONOFILAMENT_CHAINSAW = Electronics("Monofilament Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="B&E Gear")
 SEQUENCER = Electronics("Sequencer", cost=["Rating", "*", 250], page_ref=448, rating=[1, "to", 6], avail=[["Rating", "*", 3], RESTRICTED], subtype="B&E Gear")
 
 """
     SURVIVAL GEAR
 """
 CHEMSUIT = Item("Chemsuit", cost=["Rating", "*", 150], page_ref=449, rating=[1, "to", 6], avail=[["Rating", "*", 2],0], category="Survival Gear")
-CLIMBING_GEAR = Item("Climbing_Gear", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
-DIVING_GEAR = Item("Diving_Gear", cost=2000, page_ref=449, rating="-", avail=6, category="Survival Gear")
+CLIMBING_GEAR = Item("Climbing Gear", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
+DIVING_GEAR = Item("Diving Gear", cost=2000, page_ref=449, rating="-", avail=6, category="Survival Gear")
 FLASHLIGHT = Item("Flashlight", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
-GAS_MASK = Item("Gas_Mask", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
-GECKO_TAPE_GLOVES = Item("Gecko_Tape_Gloves", cost=250, page_ref=449, rating="-", avail=12, category="Survival Gear")
-HAZMAT_SUIT = Item("Hazmat_Suit", cost=3000, page_ref=449, rating="-", avail=8, category="Survival Gear")
-LIGHT_STICK = Item("Light_Stick", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
-MAGNESIUM_TORCH = Item("Magnesium_Torch", cost=5, page_ref=449, rating="-", avail="-", category="Survival Gear")
-MICRO_FLARE_LAUNCHER = Item("Micro_Flare_Launcher", cost=175, page_ref=449, rating="-", avail="-", category="Survival Gear")
-MICRO_FLARES = Item("Micro_Flares", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
-RAPPELLING_GLOVES = Item("Rappelling_Gloves", cost=50, page_ref=449, rating="-", avail="-", category="Survival Gear")
+GAS_MASK = Item("Gas Mask", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
+GECKO_TAPE_GLOVES = Item("Gecko Tape Gloves", cost=250, page_ref=449, rating="-", avail=12, category="Survival Gear")
+HAZMAT_SUIT = Item("Hazmat Suit", cost=3000, page_ref=449, rating="-", avail=8, category="Survival Gear")
+LIGHT_STICK = Item("Light Stick", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MAGNESIUM_TORCH = Item("Magnesium Torch", cost=5, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MICRO_FLARE_LAUNCHER = Item("Micro Flare Launcher", cost=175, page_ref=449, rating="-", avail="-", category="Survival Gear")
+MICRO_FLARES = Item("Micro Flares", cost=25, page_ref=449, rating="-", avail="-", category="Survival Gear")
+RAPPELLING_GLOVES = Item("Rappelling Gloves", cost=50, page_ref=449, rating="-", avail="-", category="Survival Gear")
 RESPIRATOR = Item("Respirator", cost=["Rating", "*", 50], page_ref=449, rating=[1, "to", 6], avail="-", category="Survival Gear")
-SURVIVAL_KIT = Item("Survival_Kit", cost=200, page_ref=449, rating="-", avail=4, category="Survival Gear")
+SURVIVAL_KIT = Item("Survival Kit", cost=200, page_ref=449, rating="-", avail=4, category="Survival Gear")
 
         
 """
     LIFESTYLE
 """
-STREET_LIFESTYLE = Lifestyle("Street_Lifestyle", dicestring="1d6", base_amount=20, cost=0)
-SQUATTER_LIFESTYLE = Lifestyle("Squatter_Lifestyle", dicestring="2d6", base_amount=40, cost=500)
-LOW_LIFESTYLE = Lifestyle("Low_Lifestyle", dicestring="3d6", base_amount=60, cost=2000)
-MIDDLE_LIFESTYLE = Lifestyle("Middle_Lifestyle", dicestring="4d6", base_amount=100, cost=5000)
-HIGH_LIFESTYLE = Lifestyle("High_Lifestyle", dicestring="5d6", base_amount=500, cost=10_000)
-LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", dicestring="6d6", base_amount=1000, cost=100_000)
+STREET_LIFESTYLE = Lifestyle("Street Lifestyle", dicestring="1d6", base_amount=20, cost=0)
+SQUATTER_LIFESTYLE = Lifestyle("Squatter Lifestyle", dicestring="2d6", base_amount=40, cost=500)
+LOW_LIFESTYLE = Lifestyle("Low Lifestyle", dicestring="3d6", base_amount=60, cost=2000)
+MIDDLE_LIFESTYLE = Lifestyle("Middle Lifestyle", dicestring="4d6", base_amount=100, cost=5000)
+HIGH_LIFESTYLE = Lifestyle("High Lifestyle", dicestring="5d6", base_amount=500, cost=10_000)
+LUXURY_LIFESTYLE = Lifestyle("Luxury Lifestyle", dicestring="6d6", base_amount=1000, cost=100_000)
 
 """
     COMPLEX FORMS
@@ -1250,24 +1250,24 @@ LUXURY_LIFESTYLE = Lifestyle("Luxury_Lifestyle", dicestring="6d6", base_amount=1
 
 """
 CLEANER = ComplexForm("Cleaner", target='Persona', duration='Permerm', fading_value=1)
-DIFFUSE_OF_ATTACK = ComplexForm("Diffuse_of_attack", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_SLEAZE = ComplexForm("Diffuse_of_sleaze", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_DATA_PROCESSING = ComplexForm("Diffuse_of_data_processing", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_FIREWALL = ComplexForm("Diffuse_of_firewall", target='Device', duration='Sustainustain', fading_value=1)
+DIFFUSE_OF_ATTACK = ComplexForm("Diffuse of attack", target='Device', duration='Sustainustain', fading_value=1)
+DIFFUSE_OF_SLEAZE = ComplexForm("Diffuse of sleaze", target='Device', duration='Sustainustain', fading_value=1)
+DIFFUSE_OF_DATA_PROCESSING = ComplexForm("Diffuse of data processing", target='Device', duration='Sustainustain', fading_value=1)
+DIFFUSE_OF_FIREWALL = ComplexForm("Diffuse of firewall", target='Device', duration='Sustainustain', fading_value=1)
 EDITOR = ComplexForm("Editor", target='File', duration='Permerm', fading_value=2)
-INFUSION_OF_ATTACK = ComplexForm("Infusion_of_attack", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_SLEAZE = ComplexForm("Infusion_of_sleaze", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_DATA_PROCESSING = ComplexForm("Infusion_of_data_processing", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_FIREWALL = ComplexForm("Infusion_of_firewall", target='Device', duration='Sustainustain', fading_value=1)
-STATIC_VEIL = ComplexForm("Static_veil", target='Persona', duration='Sustainustain', fading_value=-1)
-PULSE_STORM = ComplexForm("Pulse_storm", target='Persona', duration='Imm', fading_value=0)
+INFUSION_OF_ATTACK = ComplexForm("Infusion of attack", target='Device', duration='Sustainustain', fading_value=1)
+INFUSION_OF_SLEAZE = ComplexForm("Infusion of sleaze", target='Device', duration='Sustainustain', fading_value=1)
+INFUSION_OF_DATA_PROCESSING = ComplexForm("Infusion of data processing", target='Device', duration='Sustainustain', fading_value=1)
+INFUSION_OF_FIREWALL = ComplexForm("Infusion of firewall", target='Device', duration='Sustainustain', fading_value=1)
+STATIC_VEIL = ComplexForm("Static veil", target='Persona', duration='Sustainustain', fading_value=-1)
+PULSE_STORM = ComplexForm("Pulse storm", target='Persona', duration='Imm', fading_value=0)
 PUPPETEER = ComplexForm("Puppeteer", target='Device', duration='Imm', fading_value=4)
-RESONANCE_CHANNEL = ComplexForm("Resonance_channel", target='Device', duration='Sustainustain', fading_value=-1)
-RESONANCE_SPIKE = ComplexForm("Resonance_spike", target='Device', duration='Imme', fading_value=0)
-RESONANCE_VEIL = ComplexForm("Resonance_veil", target='Device', duration='Sustainustain', fading_value=-1)
-STATIC_BOMB = ComplexForm("Static_bomb", target='Self', duration='Imme', fading_value=2)
+RESONANCE_CHANNEL = ComplexForm("Resonance channel", target='Device', duration='Sustainustain', fading_value=-1)
+RESONANCE_SPIKE = ComplexForm("Resonance spike", target='Device', duration='Imme', fading_value=0)
+RESONANCE_VEIL = ComplexForm("Resonance veil", target='Device', duration='Sustainustain', fading_value=-1)
+STATIC_BOMB = ComplexForm("Static bomb", target='Self', duration='Imme', fading_value=2)
 STITCHES = ComplexForm("Stitches", target='Sprite', duration='Permerm', fading_value=-2)
-TRANSCENDENT_GRID = ComplexForm("Transcendent_grid", target='Self', duration='Imme', fading_value=-3)
+TRANSCENDENT_GRID = ComplexForm("Transcendent grid", target='Self', duration='Imme', fading_value=-3)
 TATTLETALE = ComplexForm("Tattletale", target='Persona', duration='Permerm', fading_value=-2)
 
 """
@@ -1301,8 +1301,8 @@ CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', ty
 COMBAT_SENSE = Spell('Combat Sense', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
 DETECT_ENEMIES = Spell('Detect Enemies', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
 DETECT_ENEMIES_EXTENDED = Spell('Detect Enemies (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
-DETECT_INDIVIDUAL = Spell('Detect_individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-DETECT_LIFE = Spell('Detect_life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
+DETECT_INDIVIDUAL = Spell('Detect individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
+DETECT_LIFE = Spell('Detect life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
 DETECT_LIFE_EXTENDED = Spell('Detect Life (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=-1, category='Detection')
 DETECT_LIFE_FORM = Spell('Detect Life-form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
 DETECT_LIFE_FORM_EXTENDED = Spell('Detect Life-form (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
