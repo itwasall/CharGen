@@ -464,6 +464,13 @@ class Spell(AbstractBaseClass):
         super().__init__(name, **kwargs)
         Spell.items.append(self)
 
+
+class Augmentation(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Augmentation.items.append(self)
+
 """
     ATTRIBUTES
 """
@@ -1230,8 +1237,9 @@ MONOFILAMENT_CHAINSAW = Electronics("Monofilament Chainsaw", cost=500, page_ref=
 SEQUENCER = Electronics("Sequencer", cost=["Rating", "*", 250], page_ref=448, rating=[1, "to", 6], avail=[["Rating", "*", 3], RESTRICTED], subtype="B&E Gear")
 
 """
-    SURVIVAL GEAR
+   MISC ITEMS 
 """
+# SURVIVAL GEAR
 CHEMSUIT = Item("Chemsuit", cost=["Rating", "*", 150], page_ref=449, rating=[1, "to", 6], avail=[["Rating", "*", 2],0], category="Survival Gear")
 CLIMBING_GEAR = Item("Climbing Gear", cost=200, page_ref=449, rating="-", avail="-", category="Survival Gear")
 DIVING_GEAR = Item("Diving Gear", cost=2000, page_ref=449, rating="-", avail=6, category="Survival Gear")
@@ -1246,6 +1254,25 @@ MICRO_FLARES = Item("Micro Flares", cost=25, page_ref=449, rating="-", avail="-"
 RAPPELLING_GLOVES = Item("Rappelling Gloves", cost=50, page_ref=449, rating="-", avail="-", category="Survival Gear")
 RESPIRATOR = Item("Respirator", cost=["Rating", "*", 50], page_ref=449, rating=[1, "to", 6], avail="-", category="Survival Gear")
 SURVIVAL_KIT = Item("Survival Kit", cost=200, page_ref=449, rating="-", avail=4, category="Survival Gear")
+# GRAPPLE GUN
+GRAPPLE_GUN = Item("Grapple Gun", cost=500, page_ref=450, rating="-", avail=[8, RESTRICTED], category="Grapple Gun")
+CATALYST_STICK = Item("Catalyst Stick", cost=120, page_ref=450, rating="-", avail=[8, FORBIDDEN], category="Grapple Gun")
+MICROWIRE = Item("Microwire (100m)", cost=50, page_ref=450, rating="-", avail=4, category="Grapple Gun")
+MYOMERIC_ROPE = Item("Myomeric Rope (10m)", cost=200, page_ref=450, rating="-", avail=10, category="Grapple Gun")
+STANDARD_ROPE = Item("Standard Rope (100m)", cost=50, page_ref=450, rating="-", avail="-", category="Grapple Gun")
+STEALTH_ROPE = Item("Stealth Rope (100m)", cost=85, page_ref=450, rating="-", avail=[8, FORBIDDEN], category="Grapple Gun")
+# BIOTECH
+BIOMONITOR = Item("BIOMONITOR", cost=300, page_ref=450, rating="-", avail=3, category="Biotech")
+DISPOSABLE_SYRINGE = Item("DISPOSABLE_SYRINGE", cost=10, page_ref=450, rating="-", avail=3, category="Biotech")
+MEDKIT_1_6 = Item("MEDKIT_1_6", cost=["Rating", "*", 250], page_ref=450, rating="-", avail="Rating", category="Biotech")
+MEDKIT_SUPPLIES = Item("MEDKIT_SUPPLIES", cost=300, page_ref=450, rating="-", avail="-", category="Biotech")
+# SLAP PATCHES
+ANTIDOTE_PATCH_1_6 = Item("ANTIDOTE_PATCH_1_6", cost=["Rating", "*", 50], page_ref=451, rating="-", avail="Rating", category="Slap Patches")
+CHEM_PATCH = Item("Chem Patch", cost=200, page_ref=451, rating="-", avail=6, category="Slap Patches")
+STIM_PATCH_1_6 = Item("Stim Patch (Rating 1-6)", cost=["Rating", "*", 25], page_ref=451, rating="-", avail=["Rating", "*", 2], category="Slap Patches")
+TRANQ_PATCH_1_10 = Item("Tranq Patch (Rating 1-6)", cost=["Rating", "*", 50], page_ref=451, rating="-", avail=["Rating", "*", 2], category="Slap Patches")
+TRAUMA_PATCH = Item("Trama Patch", cost=500, page_ref=451, rating="-", avail=6, category="Slap Patches")
+
 
 """
     VEHICLES
@@ -1411,6 +1438,28 @@ DETECTION_SPELLS = [spell for spell in Spell.items if spell.category=='Detection
 HEALTH_SPELLS = [spell for spell in Spell.items if spell.category=='Health']
 ILLUSION_SPELLS = [spell for spell in Spell.items if spell.category=='Illusion']
 MANIPULATION_SPELLS = [spell for spell in Spell.items if spell.category=='Manipulation']
+
+"""
+    AUGMENTATIONS
+"""
+# HEADWARE
+COMMLINK = Augmentation("COMMLINK", cost=["Commlink Cost", "+", 2000], essence=0.2, capacity=2, avail="-", category="Headware")
+CONTROL_RIG_1 = Augmentation("CONTROL_RIG_1", cost=43_000, essence=1, capacity="-", avail=[5, RESTRICTED], category="Headware")
+CONTROL_RIG_2 = Augmentation("CONTROL_RIG_2", cost=97_000, essence=2, capacity="-", avail=[10, RESTRICTED], category="Headware")
+CONTROL_RIG_3 = Augmentation("CONTROL_RIG_3", cost=208_000, essence=3, capacity="-", avail=[15, RESTRICTED], category="Headware")
+CORTEX_BOMB_KINK = Augmentation("CORTEX_BOMB_KINK", cost=10_000, essence=0, capacity=1, avail=[12, FORBIDDEN], category="Headware")
+CORTEX_BOMB_MICROBOMB = Augmentation("CORTEX_BOMB_MICROBOMB", cost=25_000, essence=0, capacity=2, avail=[16, FORBIDDEN], category="Headware")
+CORTEX_BOMB_AREA = Augmentation("CORTEX_BOMB_AREA", cost=40_000, essence=0, capacity=3, avail=[20, FORBIDDEN], category="Headware")
+CYBERDECK = Augmentation("CYBERDECK", cost=["Deck Cost", "+", 5000], essence=0.4, capacity=4, avail=[5, RESTRICTED], category="Headware")
+DATAJACK = Augmentation("DATAJACK", cost=1000, essence=0.1, capacity="-", avail=2, category="Headware")
+DATA_LOCK_1_12 = Augmentation("DATA_LOCK_1_12", cost=["Rating", "*", 1000], essence=0.1, capacity="-", avail=["Rating", "*", 2], category="Headware")
+OLFACTORY_BOOSTER_1_6 = Augmentation("OLFACTORY_BOOSTER_1_6", cost=["Rating", "*", 4000], essence=0.2, capacity="-", avail=["Rating", "*", 3], category="Headware")
+SIMRIG = Augmentation("SIMRIG", cost=4000, essence=0.2, capacity="-", avail=[12, RESTRICTED], category="Headware")
+SKILLJACK_1_6 = Augmentation("SKILLJACK_1_6", cost=["Rating", "*", 20000], essence=["Rating", "*", 0.1], capacity="-", avail=["Rating", "*", 2], category="Headware")
+TASTE_BOOSTER = Augmentation("TASTE_BOOSTER", cost=["Rating", "*", 3000], essence=0.2, capacity="-", avail=["Rating", "*", 3], category="Headware")
+TOOTH_COMPARTMENT = Augmentation("TOOTH_COMPARTMENT", cost=800, essence="-", capacity="-", avail=8, category="Headware")
+ULTRASOUND_SENSOR_1_6 = Augmentation("ULTRASOUND_SENSOR_1_6", cost=["Rating", "*", 12_000], essence=0.25, capacity=2, avail=10, category="Headware")
+VOICE_MODULATOR_1_6 = Augmentation("VOICE_MODULATOR_1_6", cost=["Rating", "*", 5000], essence=0.2, capacity="-", avail=["Rating", "*", 3, FORBIDDEN], category="Headware")
 
 """
     PRIORITY TABLE
