@@ -584,6 +584,34 @@ def generate_character():
 
     # PHASE 2: PR
     pass
+
+def alt_generate_character():
+    character = Core.Character()
+    table_choices = ['A', 'B', 'C', 'D', 'E']
+    table_categories = ['Metatype', 'Attributes', 'MagicResonance', 'Skills', 'Resources']
+    selected_items = {'Metatype': None, 'Attributes': None, 'MagicResonance': None, 'Skills': None, 'Resources': None}
+    character_focus = random.choice(Core.Archetype.items)
+    if character_focus in [archetype for archetype in Core.Archetype.items if 
+            (hasattr(archetype, "magic") and archetype.magic == True) or 
+            (hasattr(archetype, "resonance") and archetype.resonance==True)]:
+        is_awakened = True
+    else:
+        is_awakened = False
+    if is_awakened:
+        awakened_table_value = random.choice(['A', 'B', 'C'])
+        table_choices.pop(table_choices.index(awakened_table_value))
+        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED['MagicResonance'][awakened_table_value]
+    else:
+        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED['MagicResonance']['E']
+        table_choices.pop(table_choices.index('E'))
+    print(character_focus)
+    print(selected_items['MagicResonance'])
+
+
+
+
+
+
 """
 print(STRENGTH.what_is())
 print(BIOTECHNOLOGY.what_is())
@@ -596,4 +624,5 @@ print(SENSOR_RFID.category)
 print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
-generate_character()
+# generate_character()
+alt_generate_character()
