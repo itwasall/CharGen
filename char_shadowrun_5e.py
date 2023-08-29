@@ -24,69 +24,6 @@ def dice(dice_string):
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
 
-def get_rating(item: Core.Gear):
-    if "rating" not in attrAsDict(item).keys():
-        return 1
-    if isinstance(item.rating, int):
-        return item.rating
-    elif isinstance(item.rating, str):
-        return 0
-    elif isinstance(item.rating, list):
-        return random.choice(range(item.rating[0], item.rating[2]))
-    else:
-        raise ValueError(f'{item.name} has bad rating data')
-
-def get_item_cost(item: Core.Gear):
-    # When an item's cost is dependant on another items rating or capacity
-    def item_requirement_handler(item: Core.Gear, rand=True):
-        if isinstance(item.requires, list):
-            match item.requires[0]:
-                case "Subtype":
-                    print(item.requires[1])
-                    print([i for i in Core.Gear.items if i.subtype == item.requires[1]])
-                    return random.choice([i for i in Core.Gear.items if i.subtype == item.requires[1]])
-                case "Category":
-                    if item.requires[1] == item.category:
-                        return random.choice([i for i in Core.Gear.items if i.category == item.requires[1] and i.subtype != item.requires[1]])
-                    return random.choice([i for i in Core.Gear.items if i.category== item.requires[1]])
-        elif isinstance(item.requires, Core.Gear):
-            return item.requires
-        elif isinstance(item.requires, tuple):
-            return random.choice(item.requires)
-
-    req_item_flag = False
-    if isinstance(item.cost, int):
-        return item.cost
-    item_attrs = attrAsDict(item)
-    item_cost = item.cost
-    if 'requires' in item_attrs.keys():
-        req_item = item_requirement_handler(item)
-        req_item_flag = True
-        print(req_item)
-    match item.cost[0]:
-        case 'Rating':
-            if req_item_flag:
-                item_cost[0] = get_rating(req_item)
-            else:
-                item_cost[0] = get_rating(item)
-                print(f'{item.name} rating is {item_cost[0]}')
-        case 'Capacity':
-            item_cost[0] = random.choice(range(item.capacity[0], item.capacity[2]))
-            print(f'{item.name} capacity is {item_cost[0]}')
-        case 'WeaponCost':
-            item_cost[0] = get_item_cost(req_item)
-        case 'Range':
-            return random.randint(item_cost[1], item_cost[2])
-        case _:
-            print(item_cost[0])
-            raise ValueError()
-    match item.cost[1]:
-        case "*":
-            return item_cost[0] * item_cost[2]
-        case "+":
-            return item_cost[0] + item_cost[2]
-    return item_cost
-
 
 def get_priorities(character: Core.Character):
     table_choices = ['A', 'B', 'C', 'D', 'E']
