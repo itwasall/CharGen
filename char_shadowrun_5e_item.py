@@ -107,6 +107,15 @@ def list_handler(l: list, item, arg=-1, **kwargs):
         else:
             raise ValueError("ArmorRating fuckery")
 
+    elif l[0] == "CommlinkCost":
+        if not hasattr(item, "requires"):
+            raise AttributeError(f"{item.name} has a dependant cost vairable but nothing to depend on!")
+        if arg != -1 and isinstance(arg, Core.Electronics):
+            if arg.subtype == "Commlink":
+                r1 = arg.cost
+
+
+
 
     elif l[0] == "Category":
         cond_list = [i for i in Core.Gear.items if hasattr(i, "category") and i.category == l[1]]
@@ -154,7 +163,7 @@ def get_mod(item: Core.Gear, m=None):
             if m is not None:
                 armor_mod = m
             else:
-                armor_mod = random-choice([i for i in Core.ArmorModification.items if hasattr(i, "requires") and i.requires[1] == "Armor"])
+                armor_mod = random.choice([i for i in Core.ArmorModification.items if hasattr(i, "requires") and i.requires[1] == "Armor"])
             item.mods = armor_mod
             if isinstance(armor_mod.cost, list):
                 item.cost = get_item_cost(item) + get_item_cost(armor_mod, item)
@@ -206,8 +215,6 @@ def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_A
     item.grade = grade
     x_i = get_item_cost(item, **kwargs)
     if x_i is None:
-        print(item.cost)
-        print(item.rating)
         raise TypeError()
     item.cost = int(round(get_item_cost(item, **kwargs) * grade_mods[grade]['cost']))
     item.avail = get_item_avail(item, **kwargs) + grade_mods[grade]['avail']
@@ -222,13 +229,13 @@ for i in range(Core.DATA_LOCK_1_12.rating[2]):
     Core.DATA_LOCK_1_12.cost = ["Rating", "*", 1000]
     Core.DATA_LOCK_1_12.avail = ["Rating", "*", 2]
     x = get_augmentation_grade(Core.DATA_LOCK_1_12, rating=i)
-    print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
+    # print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
 
 for i in Core.Augmentation.items:
     x = get_augmentation_grade(i, rating=2)
     if not hasattr(x, "rating"):
         x.rating = "N/A"
-    print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
+    # print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
 
 
 a = build_sensor()

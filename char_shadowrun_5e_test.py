@@ -131,6 +131,9 @@ def get_knowledge_language_skills(ch: Core.Character):
     native_language.rating = "N"
     print(native_language)
 
+def get_spells(ch: Core.Character):
+    
+    pass
 
 a = Core.Character()
 a.debug_gen_attrs()
