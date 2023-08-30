@@ -5,68 +5,81 @@ DEFAULT_MAX_AVAILABILITY = 12
 DEFAULT_MAX_RATING = 6
 DEFAULT_AUG_GRADES = ["standard", "alphaware"]
 
-class Logger():
-    def __init__(self):
-        self.events = []
-
-LOG = Logger()
 
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
 
 
-def get_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING):
-    LOG.events.append(f"{item.name} rating to be calculated")
-    if "rating" not in attrAsDict(item).keys():
-        return 1
-    if isinstance(item.rating, int):
-        LOG.events.append(f"{item.name} rating is int")
+def get_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
+    if "rating" in kwargs:
+        return kwargs['rating']
+    elif "rating" not in attrAsDict(item).keys():
+        return 0
+    elif isinstance(item.rating, int):
         return item.rating
     elif isinstance(item.rating, str):
         return 0
     elif isinstance(item.rating, list):
-        LOG.events.append(f"{item.name} rating is list, gone to list_handler")
         return list_handler(item.rating, item, max_rating)
     else:
         raise ValueError(f'{item.name} has bad rating data')
 
 
-def get_item_cost(item: Core.Gear, arg=-1):
-    LOG.events.append(f"{item.name} cost to be calculated")
-    if not hasattr(item, "cost"):
-        raise AttributeError("Item has not 'cost' attribute")
+def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs):
+    if not hasattr(item, "avail"):
+        return 0
+    if isinstance(item.avail, int):
+        return item.avail
+    elif isinstance(item.avail, str):
+        return 0
+    elif isinstance(item.avail, list):
+        return list_handler(item.avail, item, max_avail, **kwargs)
+    else:
+        raise ValueError
 
+
+def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
+    if not hasattr(item, "cost"):
+        return 0
     if isinstance(item.cost, int):
-        LOG.events.append(f"{item.name} cost is int")
         return item.cost
     elif isinstance(item.cost, list):
         if arg != -1:
-            return list_handler(item.cost, item, arg)
-        return list_handler(item.cost, item, arg=True)
+            return list_handler(item.cost, item, arg, **kwargs)
+        return list_handler(item.cost, item, **kwargs)
 
 
-def list_handler(l: list, item, arg=-1):
+def list_handler(l: list, item, arg=-1, **kwargs):
 
     # if item.name in [ 'Gas Vent System', 'Chemical Protection', 'Fire Resistance', 'Insulation', 'Nonconductivity', 'Thermal Damping' ]:
     #    return 0
     r1 = 1
 
     if isinstance(l[0], int) and l[1] == "to":
-        if arg != -1 and isinstance(arg, int):
-            if arg < l[2]:
-                l[2] == arg
+        if arg != -1 and isinstance(arg, int) and arg < l[2]:
+            l[2] == arg
         else:
             return random.choice(range(l[0], l[2]))
         
     if l[0] == "Rating":
+        # Catches if item doesn't have rating attribute
         if not hasattr(item, "rating"):
             raise AttributeError(f"{item.name} has no 'rating' attribute despite mention in {l}")
-        if arg != -1 and arg <= item.rating[2] and arg >= item.rating[0]:
-            r1 = arg
+        # If item.rating is an integar, pass that on
+        if isinstance(item.rating, int):
+            r1 = item.rating
         elif arg != -1:
-            raise ValueError(f"{arg} is outside the range of {item.rating[0]} - {item.rating[2]}")
+            if arg in [DEFAULT_MAX_AVAILABILITY, DEFAULT_MAX_RATING]:
+                item.rating = get_rating(item, **kwargs)
+                r1 = item.rating
+            else:
+                pass
         else:
-            r1 = get_rating(item)
+            item.rating = get_rating(item, **kwargs)
+            r1 = item.rating
+        if len(l) == 1:
+            return r1
+
 
     elif l[0] == "Capacity":
         if not hasattr(item, "capacity"):
@@ -177,8 +190,9 @@ def build_sensor(arg=-1):
     return sensor
 
 
-def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES):
-    print(item.name)
+def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES, **kwargs):
+    if "rating" in kwargs:
+        item.rating = kwargs['rating']
     grade_mods = {
             'standard': {'cost': 1, 'avail': 0, 'essence': 1},
             'alphaware': {'cost': 1.2, 'avail': 2, 'essence': 0.8},
@@ -190,21 +204,32 @@ def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_A
     if grade is None:
         grade = random.choice(grades)
     item.grade = grade
-
-    print(get_item_cost(item))
-    item.cost = get_item_cost(item) * grade_mods[grade]['cost']
-    # item.avail = item.avail + grade_mods[grade]['avail']
+    x_i = get_item_cost(item, **kwargs)
+    if x_i is None:
+        print(item.cost)
+        print(item.rating)
+        raise TypeError()
+    item.cost = int(round(get_item_cost(item, **kwargs) * grade_mods[grade]['cost']))
+    item.avail = get_item_avail(item, **kwargs) + grade_mods[grade]['avail']
     # item.essence = item.essence * grade_mods[grade]['essence']
 
     return item
 
-for aug in Core.Augmentation.items:
-    x = get_augmentation_grade(aug)
-    print(x.name, x.grade)
-    print("----", x.cost)
+for i in range(Core.DATA_LOCK_1_12.rating[2]):
+    i = i+1
+    Core.DATA_LOCK_1_12.grade = None
+    Core.DATA_LOCK_1_12.rating = [1, "to", 12]
+    Core.DATA_LOCK_1_12.cost = ["Rating", "*", 1000]
+    Core.DATA_LOCK_1_12.avail = ["Rating", "*", 2]
+    x = get_augmentation_grade(Core.DATA_LOCK_1_12, rating=i)
+    print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
 
-
+for i in Core.Augmentation.items:
+    x = get_augmentation_grade(i, rating=2)
+    if not hasattr(x, "rating"):
+        x.rating = "N/A"
+    print(f"{x.name}\n    Grade: {x.grade}\n    Rating: {x.rating}\n    Cost: {x.cost}\n    Avail: {x.avail}")
 
 
 a = build_sensor()
-a.get_info()
+# a.get_info()
