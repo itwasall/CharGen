@@ -39,6 +39,12 @@ def list_handler(l: list, item, arg=-1):
         ]:
         return 0
     r1 = 1
+
+    if isinstance(l[0], int) and l[1] == "to":
+        if arg != -1:
+            pass
+        else:
+            return random.choice(range(l[0], l[2]))
         
     if l[0] == "Rating":
         if not hasattr(item, "rating"):
@@ -143,3 +149,39 @@ def get_mod(item: Core.Gear, m=None):
                 item.cost = item.cost + armor_mod.cost
             item.name = f"{item.name} /w {armor_mod.name}"
 
+def build_sensor(arg=-1):
+    if arg != -1:
+        pass
+    else:
+        sensor_housing = random.choice([Core.HANDHELD_HOUSING, Core.WALL_MOUNTED_HOUSING])
+        if isinstance(sensor_housing.capacity, list):
+            sensor_housing.capacity = list_handler(sensor_housing.capacity, sensor_housing)
+        sensor_type = random.choice([Core.SENSOR_ARRAY, Core.SENSOR_SINGLE])
+        sensor_type.rating = list_handler(sensor_type.rating, sensor_type)
+
+        sensor_functions = []
+        if sensor_type == Core.SENSOR_ARRAY:
+            for i in range(sensor_type.rating):
+                if random.randint(0, i) < sensor_type.rating / 2:
+                    x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+                    while x in sensor_functions:
+                        x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+                    sensor_functions.append(x)
+                else:
+                    pass
+        else:
+            x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+            sensor_functions.append(x)
+
+
+    return Core.Sensor(sensor_type, sensor_housing, sensor_functions)
+
+
+
+#for item in Core.Gear.items:
+#    if hasattr(item, "requires"):
+#        print(item.name, item.requires)
+
+
+a = build_sensor()
+a.get_info()

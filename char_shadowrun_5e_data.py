@@ -397,6 +397,21 @@ class Electronics(Gear):
         self.category = "Electronics"
 
 
+class Sensor(AbstractBaseClass):
+    items = []
+    def __init__(self, sensor_type, housing = None, functions = None, **kwargs):
+        Sensor.items.append(self)
+        self.name = "Sensor"
+        super().__init__(self.name, **kwargs)
+        self.sensor_type = sensor_type 
+        self.housing = housing
+        self.functions = functions
+
+    def get_info(self):
+        # functions_format = ", ".join([f"{i} (Range: {self.functions[self.functions.index(i)]['Range']})" for i in self.functions])
+        print(f"\nSensor Name: {self.name}\n-- Housing: {self.housing}\n-- Type: {self.sensor_type}\n-- Functions: {self.functions}")
+
+
 """
     The Item Class. Why now?
 
@@ -1164,13 +1179,13 @@ ENDOSCOPE = Electronics("Endoscope", cost=250, page_ref=444, rating="-", avail=8
 MAGE_SIGHT_GOGGLES = Electronics("Mage Sight Goggles", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], subtype="Optical/Imaging Devices")
 MONOCLE = Electronics("Monocle", cost=3000, page_ref=444, rating="-", avail=[12, RESTRICTED], capacity=[1, "to", 3], subtype="Optical/Imaging Devices")
 # =============== VISION ENCHANCEMENTS 
-LOW_LIGHT_VISION = Electronics("Low-Light Vision", cost=500, page_ref=444, rating="-", avail=4, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-FLARE_COMPENSATION = Electronics("Flare Compensation", cost=250, page_ref=444, rating="-", avail=1, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-IMAGE_LINK = Electronics("Image Link", cost=25, page_ref=444, rating="-", avail="-", capacity=1, subtype="Vision Enhancement", requires=Electronics)
-SMARTLINK = Electronics("Smartlink", cost=2000, page_ref=444, rating="-", avail=[4, RESTRICTED], capacity=1, subtype="Vision Enhancement", requires=Electronics)
-THERMOGRAPHIC_VISION = Electronics("Thermographic Vision", cost=500, page_ref=444, rating="-", avail=6, capacity=1, subtype="Vision Enhancement", requires=Electronics)
-VISION_ENHANCEMENT = Electronics("Vision Enhancement", cost=["Rating", "*", 500], page_ref=444, rating="-", avail=[["Rating", "*", 2]], capacity="Rating", subtype="Vision Enhancement", requires=Electronics)
-VISION_MAGNIFICATION = Electronics("Vision Magnification", cost=250, page_ref=444, rating="-", avail=2, capacity=1, subtype="Vision Enhancement", requires=Electronics)
+LOW_LIGHT_VISION = Electronics("Low-Light Vision", cost=500, page_ref=444, rating="-", avail=4, capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+FLARE_COMPENSATION = Electronics("Flare Compensation", cost=250, page_ref=444, rating="-", avail=1, capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+IMAGE_LINK = Electronics("Image Link", cost=25, page_ref=444, rating="-", avail="-", capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+SMARTLINK = Electronics("Smartlink", cost=2000, page_ref=444, rating="-", avail=[4, RESTRICTED], capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+THERMOGRAPHIC_VISION = Electronics("Thermographic Vision", cost=500, page_ref=444, rating="-", avail=6, capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+VISION_ENHANCEMENT = Electronics("Vision Enhancement", cost=["Rating", "*", 500], page_ref=444, rating="-", avail=[["Rating", "*", 2]], capacity="Rating", subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
+VISION_MAGNIFICATION = Electronics("Vision Magnification", cost=250, page_ref=444, rating="-", avail=2, capacity=1, subtype="Vision Enhancement", requires=["subtype", "Optical/Imaging Devices"])
 # =============== AUDIO DEVICES=======
 DIRECTIONAL_MIC = Electronics("Directional Mic", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail=4, capacity=[1, "to", 6], subtype="Audio Device")
 EAR_BUDS = Electronics("Ear Buds", cost=["Capacity", "*", 50], page_ref=445, rating="-", avail="-", capacity=[1, "to", 3], subtype="Audio Device")
@@ -1193,6 +1208,7 @@ Fuck that.
 Edit from months later: Just gonna bodge the sensor functions as their own dict, with the sensor function as the key and it's range as the value.
     Then gonna add a custom arg to randomly pull one of those sensor functions from whatever kind of sensor/sensor housing gets rolled
 """
+# Sensor Function: Range (in feet)
 SENSOR_FUNCTIONS = {
     "Atmosphere Sensor": 0, "Camera": 0, "Cyberware Scanner": 15, "Directional Microphone": 0, "Geiger Counter": 0, 'Laser Microphone': 100, 'Laser Range Finder': 1000, 'MAD Scanner': 5,
     'Motion Sensor': 25, 'Oilfactory Sensor': 0, 'Omni-directional Microphone': 0, 'Radio Signal Scanner': 20, 'Ultrasound': 50
@@ -1213,10 +1229,14 @@ SENSOR_HOUSINGS = { # 'Sensor Package': Max Sensor Rating
     'Building': 8,
     'Airport': 8
 }
-HANDHELD_HOUSING = Electronics("Handheld Housing", cost=["Capacity", "*", 100], page_ref=445, rating=[1, "to", 3], avail="-", capacity=[1, "to", 3], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 3], sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
-WALL_MOUNTED_HOUSING = Electronics("Wall-Mounted Housing", cost=["Capacity", "*", 250], page_ref=445, rating=[1, "to", 4], avail="-", capacity=[1, "to", 6], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 4], sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
-SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=445, rating=[2, "to", 8], avail="-", capacity=6, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
-SINGLE_SENSOR = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail="-", capacity=1, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensors")
+# HANDHELD_HOUSING = Electronics("Handheld Housing", cost=["Capacity", "*", 100], page_ref=445, rating=[1, "to", 3], avail="-", capacity=[1, "to", 3], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 3], sensor_function=SENSOR_FUNCTIONS, subtype="Sensor Housing")
+HANDHELD_HOUSING = Electronics("Handheld Housing", cost=["Capacity", "*", 100], page_ref=445, rating=[1, "to", 3], avail="-", capacity=[1, "to", 3], subtype="Sensor Housing")
+# WALL_MOUNTED_HOUSING = Electronics("Wall-Mounted Housing", cost=["Capacity", "*", 250], page_ref=445, rating=[1, "to", 4], avail="-", capacity=[1, "to", 6], housing=[{k:d} for k, d in SENSOR_HOUSINGS.items() if d <= 4], sensor_function=SENSOR_FUNCTIONS, subtype="Sensor Housing")
+WALL_MOUNTED_HOUSING = Electronics("Wall-Mounted Housing", cost=["Capacity", "*", 250], page_ref=445, rating=[1, "to", 4], avail="-", capacity=[1, "to", 6], subtype="Sensor Housing")
+# SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=445, rating=[2, "to", 8], avail="-", capacity=6, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensor Housing")
+SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=445, rating=[2, "to", 8], avail="-", capacity=6, subtype="Sensor Type")
+# SINGLE_SENSOR = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail="-", capacity=1, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensor Housing")
+SENSOR_SINGLE = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail="-", capacity=1, subtype="Sensor Type")
 # =============== SECURITY DEVICES====
 KEY_COMBINATION_LOCK = Electronics("Key Combination Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
 MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
