@@ -143,9 +143,3 @@ def get_mod(item: Core.Gear, m=None):
                 item.cost = item.cost + armor_mod.cost
             item.name = f"{item.name} /w {armor_mod.name}"
 
-
-a = Core.ARMOR_VEST
-print(a.name, ":", a.cost, ". Rating: ", a.armor_rating)
-b = Core.CHEMICAL_SEAL
-get_mod(a, b)
-print(a.name, ":", a.cost, ". Rating: ", a.armor_rating)
