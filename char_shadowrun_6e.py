@@ -31,6 +31,34 @@ class Quality(AbstractBaseClass):
         Quality.items.append(self)
         super().__init__(self, name, **kwargs)
 
+class Skill(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        Skill.items.append(self)
+        self.rank = 1
+        super().__init__(self, name, **kwargs)
+
+
+ASTRAL = Skill('Astral', unskilled=False, specialisations=['Astral Combat', 'Astral Signatures', 'Emotional States', 'Spirit Types'], attribute='Intuition')
+ATHLETICS = Skill('Athletics', unskilled=True, specialisations=['Climbing', 'Flying', 'Gymnastics', 'Sprinting', 'Swimming', 'Throwing'], attribute='Agility')
+BIOTECH = Skill('Biotech', unskilled=False, specialisations=['Biotechnology', 'Cybertechnology', 'First Aid', 'Medicine'], attribute='Logic')
+CLOSE_COMBAT = Skill('Close Combat', unskilled=True, specialisations=['Blades', 'Clubs', 'Unarmed Combat'], attribute='Agility')
+CON = Skill('Con', unskilled=True, specialisations=['Acting', 'Disguise', 'Impersonation', 'Performance'], attribute='Charisma')
+CONJURING = Skill('Conjuring', unskilled=False, specialisations=['Banishing', 'Binding', 'Summoning'], attribute='Magic')
+CRACKING = Skill('Cracking', unskilled=False, specialisations=['Cybercombat', 'Electronic Warefare', 'Hacking'], attribute='Logic')
+ELECTRONICS = Skill('Electronics', unskilled=True, specialisations=['Computer', 'Hardware', 'Software'], attribute='Logic')
+ENCHANTING = Skill('Enchanting', unskilled=False, specialisations=['Alchemy', 'Artificing', 'Disenchanting'], attribute='Magic')
+ENGINEERING = Skill('Engineering', unskilled=True, specialisations=['Aeronautics Mechanic', 'Automotive Mechanic', 'Demolitions', 'Gunnery', 'Industrial Mechanic', 'Lockpicking', 'Nautical Mechanic'], attribute='Logic')
+EXOTIC_WEAPONS = Skill('Exotic Weapons', unskilled=False, specialisations=['N/A'], attribute='Agility')
+FIREARMS = Skill('Firearms', unskilled=True, specialisations=['Automatics', 'Longarms', 'Pistols', 'Rifles', 'Shotguns'], attribute='Agility')
+INFLUENCE = Skill('Influence', unskilled=True, specialisations=['Etiquette', 'Instruction', 'Intimidation', 'Leadership', 'Negotiation'], attribute='Charisma')
+OUTDOORS = Skill('Outdoors', unskilled=True, specialisations=['Navigation', 'Survival', 'Tracking'], attribute='Intuition')
+PERCEPTION = Skill('Perception', unskilled=True, specialisations=['Visual', 'Aural', 'Tactile'], attribute='Intuition')
+PILOTING = Skill('Piloting', unskilled=True, specialisations=['Ground Craft', 'Aircraft', 'Watercraft'], attribute='Reaction')
+SORCERY = Skill('Sorcery', unskilled=False, specialisations=['Counterspelling', 'Ritual Spellcasting', 'Spellcasting'], attribute='Magic')
+STEALTH = Skill('Stealth', unskilled=True, specialisations=['Disguise', 'Palming', 'Sneaking'], attribute='Agility')
+TASKING = Skill('Tasking', unskilled=False, specialisations=['Compiling', 'Decompiling', 'Registering'], attribute='Resonance')
+
 class Attribute():
     def __init__(self, name, value = 1, limit = 6):
         self.name = name
@@ -144,7 +172,78 @@ def pick_qualities(ch: Character):
     return qualities
                 
 
+def generate_metatype(metatypes):
+    answer = ReturnObj()
+    metatype = random.choice(metatypes)
+    match metatype:
+        case "Dwarf":
+            answer.height = 1.2
+            answer.weight = 5.4
+            answer.ears = "Slightly Pointy"
+            answer.racial_qualities = [THERMOGRAPHIC_VISION, TOXIS_RESISTANCE]
+            BODY.limit = 7
+            REACTION.limit = 5
+            STRENGTH.limit = 8
+            WILLPOWER.limit = 7
+            answer.attributes = [BODY, REACTION, STRENGTH, WILLPOWER]
+        case "Elf":
+            answer.height = 1.9
+            answer.weight = 80
+            answer.ears = "Pointy"
+            answer.racial_qualities = [LOW_LIGHT_VISION]
+            AGILITY.limit = 7
+            CHARISMA.limit = 8
+            answer.attributes = [AGILITY, CHARISMA]
+        case "Human":
+            answer.height = 1.75
+            answer.weight = 78
+            answer.ears = "Rounded"
+            answer.racial_qualities = None
+            EDGE.limit = 7
+            answer.attributes = [EDGE]
+        case "Ork":
+            answer.height = 1.9
+            answer.weight = 128
+            answer.ears = "Pointy"
+            BUILT_TOUGH.level = 1
+            answer.racial_qualities = [LOW_LIGHT_VISION, BUILT_TOUGH]
+            BODY.limit = 8
+            STRENGTH.limit = 8
+            CHARISMA.limit = 5
+            answer.attributes = [BODY, STRENGTH, CHARISMA]
+        case "Troll":
+            answer.height = 2.5
+            answer.weight = 300
+            answer.ears = "Slightly pointy, often hidden by horns"
+            BUILT_TOUGH.level = 2
+            answer.racial_qualities = [THERMOGRAPHIC_VISION, BUILT_TOUGH, DERMAL_DEPOSITS]
+            BODY.limit = 9
+            AGILITY.limit = 5
+            STRENGTH.limit = 9
+            CHARISMA.limit = 5
+            answer.attributes = [BODY, AGILITY, STRENGTH, CHARISMA]
+    answer.metatype = metatype
+    return answer
 
+
+def gen_lifestyle():
+    lifestyles = ['Street', 'Squatter', 'Low', 'Middle', 'High', 'Luxary']
+    lifestyle = random.choice(lifestyles)
+    answer = ReturnObj()
+    match lifestyle:
+        case 'Street':
+            answer.monthly_cost = 0
+        case 'Squatter'
+            answer.monthly_cost = 500
+        case 'Low':
+            answer.monthly_cost = 2_000
+        case 'Middle':
+            answer.monthly_cost = 5_000
+        case 'High':
+            answer.monthly_cost = 10_000
+        case 'Luxary':
+            answer.monthly_cost = 100_000
+    return answer
 
 
 def get_priority_table(category=False, priority=False):
@@ -255,7 +354,7 @@ def generate_shaman(ch: Character):
     pass
 def generate_technomancer(ch: Character):
     MAGIC_TYPE = "Technomancer"
-    resonance_power = random.choice(['A', 'B', 'C'])
+    resonance_power = random.choice(['A', 'B'])
     x = get_priority_table('Magic / Resonance', resonance_power)
     ch.attributes['Resonance'] = x.technomancer
 
