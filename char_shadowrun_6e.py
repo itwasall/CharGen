@@ -1,7 +1,16 @@
 import random
+from typing import Dict
 
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
+
+def roll(dicestring: str):
+    if "+" in dicestring:
+        dicestring, mods = "+".split(dicestring)
+    else:
+        mods = 0
+    throws, sides = int("d".split(dicestring))
+    return sum([mods, sum([random.randint(1, s) for _ in range(throws)])])
 
 class AbstractBaseClass():
     def __init__(self, name, **kwargs):
@@ -113,16 +122,29 @@ STEALTH = Skill('Stealth', unskilled=True, specialisations=['Disguise', 'Palming
 TASKING = Skill('Tasking', unskilled=False, specialisations=['Compiling', 'Decompiling', 'Registering'], attribute='Resonance')
 
 class Attribute():
-    def __init__(self, name, value = 1, limit = 6):
+    def __init__(self, name, value = 0, limit = 6, hidden=False):
         self.name = name
         self.value = value
         self.limit = limit
+        if self.value != 0:
+            self.hidden = False
+        else:
+            self.hidden = hidden
     def __repr__(self):
         return f"{self.name}: {self.value}/{self.limit}"
     def __add__(self, x, limit_raise=False):
         if limit_raise:
             return Attribute(self.name, self.value, self.limit + x)
         return Attribute(self.name, self.value + x, self.limit)
+
+class AttributeEdge():
+    def __init__(self, name, value = 0):
+        self.name = name
+        self.value = value
+    def __repr__(self):
+        return f"{self.name}: {self.value}"
+    def __add__(self, x):
+        return AttributeEdge(self.name, self.value + x)
 
 
 BODY = Attribute('Body')
@@ -133,9 +155,19 @@ WILLPOWER = Attribute('Willpower')
 LOGIC = Attribute('Logic')
 INTUITION = Attribute('Intuition')
 CHARISMA = Attribute('Charisma')
-EDGE = Attribute('Edge')
-MAGIC = Attribute('Magic', value = 0)
-RESONANCE = Attribute('Resonance', value = 0)
+EDGE = AttributeEdge('Edge')
+MAGIC = Attribute('Magic', hidden=True)
+RESONANCE = Attribute('Resonance', hidden=True)
+
+
+def ComplexForm(AbstractBaseClass):
+    items = []
+    def __init___(self, name, **kwargs):
+        ComplexForm.items.append(self)
+        super().__init__(name, **kwargs)
+
+
+DIFFUSAL_OF_FIREWAL = ComplexForm('DIFFUSAL_OF_FIREWAL')
 
 
 
@@ -161,6 +193,7 @@ class Character():
         self.skills = {}
         self.metatype = {}
         self.archetype = {}
+        self.gear = {}
 
 
 
@@ -388,6 +421,29 @@ def generate_character(name="Jeff"):
     x.archetype = random.choice(Archetype.items)
     x.qualities = pick_qualities(x)
 
+def get_template_technomancer():
+    tm = Character("Technomancer")
+    tm.Body = tm.Body + 5
+    tm.Agility = tm.Agility + 2
+    tm.Reaction = tm.Reaction + 2 
+    tm.Strength = tm.Strength + 5
+    tm.Willpower = tm.Willpower + 7 
+    tm.Logic = tm.Logic + 5
+    tm.Intuition = tm.Intuition + 6
+    tm.Charisma = tm.Charisma + 5
+    tm.Edge = tm.Edge + 3
+    tm.Resonance = tm.Resonance + 6
+    tm.Essence = tm.Essence + 6
+
+    tm.Initiative = tm.Reaction + tm.Intuition
+
+    tm.ComplexForms = {
+
+
+            }
+
+
+
+
 character = Character("Tony Boyce")
 y = generate_adept(character)
-print("\n".join({k: d for k, d in y.items() if k not in [i for i in attrAsDict(dict).keys()]}))
