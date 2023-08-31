@@ -1,145 +1,272 @@
-from typing import Tuple, List
-import chargen
+import random
 
-class Metatype:
-    def __init__(metatype_name: str, self):
-        self.metatype_name = metatype_name
-
-    def __repr__(self):
-        return self.metatype_name
-
-class Archetype:
-    def __init__(class_name: str, self):
-        self.class_name = class_name
+class AbstractBaseClass():
+    def __init__(self, name, **kwargs):
+        self.name = name
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
     def __repr__(self):
-        return self.class_name
+        return self.name
 
-class ConditionMonitor:
-    def __init__(self, condition_physical: int = 0, condition_stun: int = 0):
-        self.condition_physical = condition_physical
-        self.condition_stun = condition_stun
+class Metatype(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        Metatype.items.append(self)
+        super().__init__(self, name, **kwargs)
 
-    def __add__(amount: int, _type: str, self):
-        if _type.capitalize() == "Physical":
-            self.condition_physical += amount
-        elif _type.capitalize() == "Stun":
-            self.condition_stun += amount
-        else:
-            pass
+class Archetype(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        Archetype.items.append(self)
+        super().__init__(self, name, **kwargs)
 
+class ReturnObj(AbstractBaseClass):
+    def __init__(self, name, **kwargs):
+        super().__init__(self, name, **kwargs)
 
-class Attribute:
-    def __init__(
-            attribute_type: str,
-            attribute_name: str,
-            self,
-            value: int = 0, 
-        ):
-        self.attribute_type = attribute_type
-        self.attribute_name = attribute_name
+class Quality(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        Quality.items.append(self)
+        super().__init__(self, name, **kwargs)
+
+class Attribute():
+    def __init__(self, name, value = 1, limit = 6):
+        self.name = name
         self.value = value
-
-    def __add__(amount: int, self):
-        self.value += amount
-        return Attribute(
-                self.attribute_type, 
-                self.attribute_name, 
-                self.value
-                )
-
+        self.limit = limit
     def __repr__(self):
-        return " ".join([self.attribute_name, "Type:", self.attribute_type, "Value:", self.value])
-
-Body = Attribute("Body", "Physical")
-Agility = Attribute("Agility", "Physical")
-Reaction = Attribute("Reaction", "Physical")
-Strength = Attribute("Strength", "Physical")
-Willpower = Attribute("Willpower", "Mental")
-Logic = Attribute("Logic", "Mental")
-Intuition = Attribute("Intuition", "Mental")
-Charisma = Attribute("Charisma", "Mental")
-Edge = Attribute("Edge", "Special")
-Essence = Attribute("Essence", "Special")
-Magic = Attribute("Magic", "Special")
-
-class Skill:
-    def __init__(
-            self,
-            skill_name: str = None,
-            primary_attribute: Attribute = None,
-            secondary_attribute: Attribute = None,
-            speclizations: List = None,
-            rating: int = 0, dice_pool: int = 0):
-        self.skill_name = skill_name
-        self.primary_attribute = primary_attribute
-        self.seconday_attribute = secondary_attribute
-        self.specializations= specializations=speclizations
-        self.rating = rating
-        self.dice_pool = dice_pool
-
-    def set_rating(amount: int, self):
-        self.rating = amount
-
-    def set_dice_pool(amount: int, self):
-        self.dice_pool = amount
-
-Astral = Skill("Astral", Intuition, Willpower, ["Astral Combat", "  z"])
-Athletics = Skill("Athletics", Agility)
-Biotech = Skill("Biotech")
-CloseCombat = Skill("Close Combat", Agility)
-Con = Skill("Con")
-Conjuring = Skill("Conjuring")
-Cracking = Skill("Cracking")
-Electronics = Skill("Electronics")
-Engineering = Skill("Engineering", Logic)
-ExoticWeapons = Skill("Exotic Weapons")
-Firearms = Skill("Firearms", Agility)
-Influence = Skill("Influence")
-Outdoors = Skill("Outdoors")
-Perception = Skill("Perception", Intuition)
-Piloting = Skill("Piloting")
-Sorcery = Skill("Sorcery", Magic)
-Stealth = Skill("Stealth", Agility)
-Tasking = Skill("Tasking")
+        return f"{self.name}: {self.value}/{self.limit}"
+    def __add__(self, x, limit_raise=False):
+        if limit_raise:
+            return Attribute(self.name, self.value, self.limit + x)
+        return Attribute(self.name, self.value + x, self.limit)
 
 
-def create_attributes():
-    attributes = {
-            'Body': [Body.attribute_type, Body.value],
-            'Agility': [Agility.attribute_type, Agility.value],
-            'Reaction': [Reaction.attribute_type, Reaction.value],
-            'Strength': [Strength.attribute_type, Strength.value],
-            'Willpower': [Willpower.attribute_type, Willpower.value],
-            'Logic': [Logic.attribute_type, Logic.value],
-            'Intuition': [Intuition.attribute_type, Intuition.value],
-            'Charisma': [Charisma.attribute_type, Charisma.value],
-            'Edge': [Edge.attribute_type, Edge.value],
-            'Essence': [Essence.attribute_type, Essence.value],
-            'Magic': [Magic.attribute_type, Magic.value],
-            }
-    return attributes 
+BODY = Attribute('Body')
+AGILITY = Attribute('Agility')
+REACTION = Attribute('Reaction')
+STRENGTH = Attribute('Strength')
+WILLPOWER = Attribute('Willpower')
+LOGIC = Attribute('Logic')
+INTUITION = Attribute('Intuition')
+CHARISMA = Attribute('Charisma')
+EDGE = Attribute('Edge')
+MAGIC = Attribute('Magic', value = 0)
+RESONANCE = Attribute('Resonance', value = 0)
 
-Dwarf = Metatype("Dwarf")
-Elf = Metatype("Elf")
-Human = Metatype("Human")
-Ork = Metatype("Ork")
-Troll = Metatype("Troll")
 
-character = {
-        "Name": "",
-        "Metatype": Metatype,
-        "Archetype": Archetype,
-        "Ethnicity": "",
-        "Age": 0,
-        "Height": "0m",
-        "Weight": "0kg",
-        "Movement": [0, 0, "+0"],
-        "Composure": 0,
-        "Judge Intentions": 0,
-        "Memory": 0,
-        "Lift/Carry": 0,
-        "Defense Rating": 0,
-        "Initiative": "0",
-        "Condition Monitor": ConditionMonitor
+
+class Character():
+    def __init__(self, name):
+        self.name = name
+        self.body = BODY
+        self.agility = AGILITY
+        self.reaction = REACTION
+        self.strength = STRENGTH
+        self.willpower = WILLPOWER
+        self.logic = LOGIC
+        self.intuition = INTUITION
+        self.charisma = CHARISMA
+        self.edge = EDGE
+        self.magic = MAGIC
+        self.resonance = RESONANCE
+        self.attributes = {
+            'Physical': [self.body, self.agility, self.reaction, self.strength],
+            'Mental': [self.willpower, self.logic, self.intuition, self.charisma],
+            'Special': [self.edge, self.magic, self.resonance]
         }
+        self.skills = {}
+        self.metatype = {}
+        self.archetype = {}
+
+
+# ARCHETYPE
+ADEPT = Archetype('Adept')
+FACE = Archetype('Face')
+RIGGER = Archetype('Rigger')
+STREET_SAMURAI = Archetype('Street Samurai')
+STREET_SHAMAN = Archetype('Street Shaman')
+TECHNOMANCER = Archetype('Technomancer')
+WEAPONS_SPECIALIST = Archetype('Weapons Specialist')
+
+# QUALITIES
+# POSITIVE
+AMBIDEXTROUS = Quality('Ambidextrous', cost=4)
+ANALYTICAL_MIND = Quality('Analytical_mind', cost=3)
+APTITUDE = Quality('Aptitude', cost=12)
+ASTRAL_CHAMELEON = Quality('Astral_chameleon', cost=9)
+BLANDNESS = Quality('Blandness', cost=8)
+BUILT_TOUGH = Quality('Built_tough', cost=4, levels=4)
+CAT_LIKE = Quality('Cat_like', cost=12)
+DERMAL_DEPOSITS = Quality('Dermal_deposits', cost=7)
+DOUBLE_JOINTED = Quality('Double_jointed', cost=12)
+FIRST_IMPRESSION = Quality('First_impression', cost=12)
+FOCUSED_CONCERNTRATION = Quality('Focused_concerntration', cost=12, levels=3)
+GEARHEAD = Quality('Gearhead', cost=10)
+GUTS = Quality('Guts', cost=12)
+HARDENING = Quality('Hardening', cost=10)
+HIGH_PAIN_TOLERANCE = Quality('High_pain_tolerance', cost=7)
+HOME_GROUND = Quality('Home_ground', cost=10)
+HUMAN_LOOKING = Quality('Human_looking', cost=8)
+INDOMITABLE = Quality('Indomitable', cost=12)
+JURY_RIGGER = Quality('Jury_rigger', cost=12)
+LONG_REACH = Quality('Long_reach', cost=12)
+LOW_LIGHT_VISION = Quality('Low_light_vision', cost=6)
+MAGIC_RESISTANCE = Quality('Magic_resistance', cost=8)
+MENTOR_SPIRIT = Quality('Mentor_spirit', cost=10)
+PATHOGEN_RESISTANCE = Quality('Pathogen_resistance', cost=12)
+PHOTOGRAPHIC_MEMORY = Quality('Photographic_memory', cost=12)
+QUICK_HEALER = Quality('Quick_healer', cost=8)
+THERMOGRAPHIC_VISION = Quality('Thermographic_vision', cost=8)
+TOUGHNESS = Quality('Toughness', cost=12)
+TOXIS_RESISTANCE = Quality('Toxis_resistance', cost=12)
+WILL_TO_LIVE = Quality('Will_to_live', cost=8, levels=3)
+
+def pick_qualities(ch: Character):
+    karma = 50
+    qualities = {}
+    while True:
+        roll_quality = random.choice(Quality.items)
+        if karma - roll_quality.cost > 0:
+            karma -= roll_quality.cost
+            qualities[roll_quality.name] = roll_quality
+            if hasattr(roll_quality, "level"):
+                for i in range(roll_quality.level):
+                    if karma - roll_quality.cost <= 0:
+                        qualities[roll_quality.name]['level'] = i
+                        break
+                    else:
+                        karma -= roll_quality.cost
+        else:
+            break
+    return qualities
+                
+
+
+
+
+def get_priority_table(category=False, priority=False):
+    answer = ReturnObj()
+    if not category and not priority:
+        pass
+    match category:
+        case "Metatype":
+            match priority:
+                case 'A':
+                    answer.metatypes = ['Dwarf', 'Ork', 'Troll'] 
+                    answer.adjustment_points = 13
+                case 'B':
+                    answer.metatypes = ['Dwarf', 'Elf', 'Ork', 'Troll'] 
+                    answer.adjustment_points = 11
+                case 'C':
+                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.adjustment_points = 9
+                case 'D':
+                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.adjustment_points = 4
+                case 'E':
+                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.adjustment_points = 1
+        case "Attributes":
+            x = {'A': 24, 'B': 16, 'C': 12, 'D': 8, 'E': 2}
+            answer.attributes = x[priority]
+        case "Skills":
+            x = {'A': 32, 'B': 24, 'C': 20, 'D': 16, 'E': 10}
+            answer.skills = x[priority]
+        case "Magic or Resonance":
+            match priority:
+                case 'A':
+                    answer.full = 4
+                    answer.aspected = 5
+                    answer.mystic_adept = 4
+                    answer.adept = 4
+                    answer.technomancer = 4
+                case 'B':
+                    answer.full = 3
+                    answer.aspected = 4
+                    answer.mystic_adept = 3
+                    answer.adept = 3
+                    answer.technomancer = 3
+                    pass
+                case 'C':
+                    answer.full = 2
+                    answer.aspected = 3
+                    answer.mystic_adept = 2
+                    answer.adept = 2
+                    answer.technomancer = 2
+                    pass
+                case 'D':
+                    answer.full = 1
+                    answer.aspected = 2
+                    answer.mystic_adept = 1
+                    answer.adept = 1
+                    answer.technomancer = 2
+                    pass
+                case 'E':
+                    answer.mundane = True
+                    pass
+        case "Resources":
+            match priority:
+                case 'A':
+                    answer.resources = 450_000
+                case 'B':
+                    answer.resources = 275_000 
+                case 'C':
+                    answer.resources = 150_000
+                case 'D':
+                    answer.resources = 50_000
+                case 'E':
+                    answer.resources = 8_000
+    return answer
+
+PRIORITY_PICKS = ['A', 'B', 'C', 'D', 'E']
+
+def generate_adept(ch: Character):
+    MAGIC_TYPE = "Adept"
+    magic_power = random.choice(['A', 'B', 'C'])
+    x = get_priority_table('Magic / Resonance', magic_power)
+    PRIORITY_PICKS.pop(PRIORITY_PICKS.index(magic_power))
+    ch.adept_powers = {}
+    pass
+def generate_combat_mage(ch: Character):
+    MAGIC_TYPE = "Magician / 'Full'"
+    magic_power = random.choice(['A', 'B', 'C'])
+    x = get_priority_table('Magic / Resonance', magic_power)
+    ch.attributes['Magic'] = x.full
+    ch.spells = 2 * ch.attributes['Magic']
+    pass
+def generate_covert_ops(ch: Character):
+    pass
+def generate_decker(ch: Character):
+    pass
+def generate_face(ch: Character):
+    pass
+def generate_rigger(ch: Character):
+    pass
+def generate_samurai(ch: Character):
+    pass
+def generate_shaman(ch: Character):
+    MAGIC_TYPE = "Mystic Adept"
+    magic_power = random.choice(['A', 'B', 'C'])
+    x = get_priority_table('Magic / Resonance', magic_power)
+    ch.spells = {}
+    pass
+def generate_technomancer(ch: Character):
+    MAGIC_TYPE = "Technomancer"
+    resonance_power = random.choice(['A', 'B', 'C'])
+    x = get_priority_table('Magic / Resonance', resonance_power)
+    ch.attributes['Resonance'] = x.technomancer
+
+    ch.complex_forms = {}
+    pass
+def generate_weapon_specs(ch: Character):
+    pass
+
+def generate_character(name="Jeff"):
+    x = Character(name)
+
+    x.archetype = random.choice(Archetype.items)
+    x.qualities = pick_qualities(x)
+
