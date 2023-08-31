@@ -1,5 +1,8 @@
 import random
 
+def attrAsDict(_class):
+    return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
+
 class AbstractBaseClass():
     def __init__(self, name, **kwargs):
         self.name = name
@@ -9,34 +12,84 @@ class AbstractBaseClass():
     def __repr__(self):
         return self.name
 
+class ReturnObj(dict):
+    def __init__(self, name="Return Object", **kwargs):
+        self.name = name
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
+    def set(self, attr, value=None):
+        self.__setattr__(attr, value)
+    def __repr__(self):
+        #return f"{attrAsDict(self)}"
+        return "\n".join([i for i in dir(self) if i not in [j for j in dir(dict)]])
+
+
 class Metatype(AbstractBaseClass):
     items = []
     def __init__(self, name, **kwargs):
         Metatype.items.append(self)
-        super().__init__(self, name, **kwargs)
+        super().__init__(name, **kwargs)
 
 class Archetype(AbstractBaseClass):
     items = []
     def __init__(self, name, **kwargs):
         Archetype.items.append(self)
-        super().__init__(self, name, **kwargs)
+        super().__init__(name, **kwargs)
 
-class ReturnObj(AbstractBaseClass):
-    def __init__(self, name, **kwargs):
-        super().__init__(self, name, **kwargs)
+# ARCHETYPE
+ADEPT = Archetype('Adept', ID=0)
+FACE = Archetype('Face')
+RIGGER = Archetype('Rigger')
+STREET_SAMURAI = Archetype('Street Samurai')
+STREET_SHAMAN = Archetype('Street Shaman')
+TECHNOMANCER = Archetype('Technomancer')
+WEAPONS_SPECIALIST = Archetype('Weapons Specialist')
 
 class Quality(AbstractBaseClass):
     items = []
     def __init__(self, name, **kwargs):
         Quality.items.append(self)
-        super().__init__(self, name, **kwargs)
+        super().__init__(name, **kwargs)
+
+# QUALITIES
+# POSITIVE
+AMBIDEXTROUS = Quality('Ambidextrous', cost=4)
+ANALYTICAL_MIND = Quality('Analytical Mind', cost=3)
+APTITUDE = Quality('Aptitude', cost=12)
+ASTRAL_CHAMELEON = Quality('Astral Chameleon', cost=9)
+BLANDNESS = Quality('Blandness', cost=8)
+BUILT_TOUGH = Quality('Built Tough', cost=4, levels=4)
+CAT_LIKE = Quality('Cat-like', cost=12)
+DERMAL_DEPOSITS = Quality('Dermal Deposits', cost=7)
+DOUBLE_JOINTED = Quality('Double-jointed', cost=12)
+FIRST_IMPRESSION = Quality('First Impression', cost=12)
+FOCUSED_CONCERNTRATION = Quality('Focused Concerntration', cost=12, levels=3)
+GEARHEAD = Quality('Gearhead', cost=10)
+GUTS = Quality('Guts', cost=12)
+HARDENING = Quality('Hardening', cost=10)
+HIGH_PAIN_TOLERANCE = Quality('High Pain Tolerance', cost=7)
+HOME_GROUND = Quality('Home Ground', cost=10)
+HUMAN_LOOKING = Quality('Human-looking', cost=8)
+INDOMITABLE = Quality('Indomitable', cost=12)
+JURY_RIGGER = Quality('Jury Rigger', cost=12)
+LONG_REACH = Quality('Long Reach', cost=12)
+LOW_LIGHT_VISION = Quality('Low-light Vision', cost=6)
+MAGIC_RESISTANCE = Quality('Magic Resistance', cost=8)
+MENTOR_SPIRIT = Quality('Mentor Spirit', cost=10)
+PATHOGEN_RESISTANCE = Quality('Pathogen Resistance', cost=12)
+PHOTOGRAPHIC_MEMORY = Quality('Photographic Memory', cost=12)
+QUICK_HEALER = Quality('Quick Healer', cost=8)
+THERMOGRAPHIC_VISION = Quality('Thermographic Vision', cost=8)
+TOUGHNESS = Quality('Toughness', cost=12)
+TOXIS_RESISTANCE = Quality('Toxis resistance', cost=12)
+WILL_TO_LIVE = Quality('Will to Live', cost=8, levels=3)
 
 class Skill(AbstractBaseClass):
     items = []
     def __init__(self, name, **kwargs):
         Skill.items.append(self)
         self.rank = 1
-        super().__init__(self, name, **kwargs)
+        super().__init__(name, **kwargs)
 
 
 ASTRAL = Skill('Astral', unskilled=False, specialisations=['Astral Combat', 'Astral Signatures', 'Emotional States', 'Spirit Types'], attribute='Intuition')
@@ -110,47 +163,6 @@ class Character():
         self.archetype = {}
 
 
-# ARCHETYPE
-ADEPT = Archetype('Adept')
-FACE = Archetype('Face')
-RIGGER = Archetype('Rigger')
-STREET_SAMURAI = Archetype('Street Samurai')
-STREET_SHAMAN = Archetype('Street Shaman')
-TECHNOMANCER = Archetype('Technomancer')
-WEAPONS_SPECIALIST = Archetype('Weapons Specialist')
-
-# QUALITIES
-# POSITIVE
-AMBIDEXTROUS = Quality('Ambidextrous', cost=4)
-ANALYTICAL_MIND = Quality('Analytical_mind', cost=3)
-APTITUDE = Quality('Aptitude', cost=12)
-ASTRAL_CHAMELEON = Quality('Astral_chameleon', cost=9)
-BLANDNESS = Quality('Blandness', cost=8)
-BUILT_TOUGH = Quality('Built_tough', cost=4, levels=4)
-CAT_LIKE = Quality('Cat_like', cost=12)
-DERMAL_DEPOSITS = Quality('Dermal_deposits', cost=7)
-DOUBLE_JOINTED = Quality('Double_jointed', cost=12)
-FIRST_IMPRESSION = Quality('First_impression', cost=12)
-FOCUSED_CONCERNTRATION = Quality('Focused_concerntration', cost=12, levels=3)
-GEARHEAD = Quality('Gearhead', cost=10)
-GUTS = Quality('Guts', cost=12)
-HARDENING = Quality('Hardening', cost=10)
-HIGH_PAIN_TOLERANCE = Quality('High_pain_tolerance', cost=7)
-HOME_GROUND = Quality('Home_ground', cost=10)
-HUMAN_LOOKING = Quality('Human_looking', cost=8)
-INDOMITABLE = Quality('Indomitable', cost=12)
-JURY_RIGGER = Quality('Jury_rigger', cost=12)
-LONG_REACH = Quality('Long_reach', cost=12)
-LOW_LIGHT_VISION = Quality('Low_light_vision', cost=6)
-MAGIC_RESISTANCE = Quality('Magic_resistance', cost=8)
-MENTOR_SPIRIT = Quality('Mentor_spirit', cost=10)
-PATHOGEN_RESISTANCE = Quality('Pathogen_resistance', cost=12)
-PHOTOGRAPHIC_MEMORY = Quality('Photographic_memory', cost=12)
-QUICK_HEALER = Quality('Quick_healer', cost=8)
-THERMOGRAPHIC_VISION = Quality('Thermographic_vision', cost=8)
-TOUGHNESS = Quality('Toughness', cost=12)
-TOXIS_RESISTANCE = Quality('Toxis_resistance', cost=12)
-WILL_TO_LIVE = Quality('Will_to_live', cost=8, levels=3)
 
 def pick_qualities(ch: Character):
     karma = 50
@@ -172,9 +184,14 @@ def pick_qualities(ch: Character):
     return qualities
                 
 
-def generate_metatype(metatypes):
+def get_metatype(metatypes):
     answer = ReturnObj()
     metatype = random.choice(metatypes)
+    answer.set("height")
+    answer.set("weight")
+    answer.set("ears")
+    answer.set("racial_qualities")
+    answer.set("attributes")
     match metatype:
         case "Dwarf":
             answer.height = 1.2
@@ -233,7 +250,7 @@ def gen_lifestyle():
     match lifestyle:
         case 'Street':
             answer.monthly_cost = 0
-        case 'Squatter'
+        case 'Squatter':
             answer.monthly_cost = 500
         case 'Low':
             answer.monthly_cost = 2_000
@@ -254,19 +271,19 @@ def get_priority_table(category=False, priority=False):
         case "Metatype":
             match priority:
                 case 'A':
-                    answer.metatypes = ['Dwarf', 'Ork', 'Troll'] 
+                    answer.metatype_out = get_metatype(['Dwarf', 'Ork', 'Troll'])
                     answer.adjustment_points = 13
                 case 'B':
-                    answer.metatypes = ['Dwarf', 'Elf', 'Ork', 'Troll'] 
+                    answer.metatype_out = get_metatype(['Dwarf', 'Elf', 'Ork', 'Troll'])
                     answer.adjustment_points = 11
                 case 'C':
-                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.metatype_out = get_metatype(['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'])
                     answer.adjustment_points = 9
                 case 'D':
-                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.metatype_out = get_metatype(['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'])
                     answer.adjustment_points = 4
                 case 'E':
-                    answer.metatypes = ['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'] 
+                    answer.metatype_out = get_metatype(['Dwarf', 'Elf', 'Human', 'Ork', 'Troll'])
                     answer.adjustment_points = 1
         case "Attributes":
             x = {'A': 24, 'B': 16, 'C': 12, 'D': 8, 'E': 2}
@@ -326,9 +343,11 @@ def generate_adept(ch: Character):
     MAGIC_TYPE = "Adept"
     magic_power = random.choice(['A', 'B', 'C'])
     x = get_priority_table('Magic / Resonance', magic_power)
+    print(x)
     PRIORITY_PICKS.pop(PRIORITY_PICKS.index(magic_power))
+    y = get_priority_table('Metatype', random.choice(PRIORITY_PICKS))
     ch.adept_powers = {}
-    pass
+    return attrAsDict(y)
 def generate_combat_mage(ch: Character):
     MAGIC_TYPE = "Magician / 'Full'"
     magic_power = random.choice(['A', 'B', 'C'])
@@ -369,3 +388,6 @@ def generate_character(name="Jeff"):
     x.archetype = random.choice(Archetype.items)
     x.qualities = pick_qualities(x)
 
+character = Character("Tony Boyce")
+y = generate_adept(character)
+print("\n".join({k: d for k, d in y.items() if k not in [i for i in attrAsDict(dict).keys()]}))
