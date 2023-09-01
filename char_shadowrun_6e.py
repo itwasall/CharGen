@@ -92,6 +92,37 @@ THERMOGRAPHIC_VISION = Quality('Thermographic Vision', cost=8)
 TOUGHNESS = Quality('Toughness', cost=12)
 TOXIS_RESISTANCE = Quality('Toxis resistance', cost=12)
 WILL_TO_LIVE = Quality('Will to Live', cost=8, levels=3)
+# NEGATIVE
+ADDICTION = Quality('Addiction', cost=-2, levels=6)
+ALLERGY = Quality('Allergy', cost=-10)
+AR_VERTIGO = Quality('Ar_vertigo', cost=-10)
+ASTRAL_BEACON = Quality('Astral_beacon', cost=-10)
+BAD_LUCK = Quality('Bad_luck', cost=-10)
+BAD_REP = Quality('Bad_rep', cost=-8)
+COMBAT_PARALYSIS = Quality('Combat_paralysis', cost=-8)
+DEPENDANTS = Quality('Dependants', cost=-4, levels=3)
+DISTINCTIVE_STYLE = Quality('Distinctive_style', cost=-6)
+ELF_POSER = Quality('Elf_poser', cost=-6)
+GLASSJAW = Quality('Glassjaw', cost=-4, levels=2)
+GREMLINS = Quality('Gremlins', cost=-6)
+HONORBOUND = Quality('Honorbound', cost=-10)
+IMPAIRED = Quality('Impaired', cost=-8)
+INCOMPETENT = Quality('Incompetent', cost=-10)
+INSOMNIA = Quality('Insomnia', cost=-4)
+LOSS_OF_CONFIDENCE = Quality('Loss_of_confidence', cost=-6)
+LOW_PAIN_TOLERANCE = Quality('Low_pain_tolerance', cost=-10)
+ORK_POSER = Quality('Ork_poser', cost=-6)
+PREJUDICED = Quality('Prejudiced', cost=-8)
+SCORCHED = Quality('Scorched', cost=-6)
+SENSITIVE_SYSTEM = Quality('Sensitive_system', cost=-8)
+SIMSENSE_VERTIGO = Quality('Simsense_vertigo', cost=-6)
+SINNER = Quality('Sinner', cost=-8)
+SOCIAL_STRESS = Quality('Social_stress', cost=-8)
+SPIRT_SPRITE_BANE = Quality('Spirt_sprite_bane', cost=-12)
+UNCOUTH = Quality('Uncouth', cost=-6)
+UNEDUCATED = Quality('Uneducated', cost=-6)
+UNSTEADY_HANDS = Quality('Unsteady_hands', cost=-4)
+WEAK_IMMUNE_SYSTEM = Quality('Weak_immune_system', cost=-8)
 
 class Skill(AbstractBaseClass):
     items = []
@@ -166,9 +197,27 @@ class ComplexForm(AbstractBaseClass):
     def __init___(self, name, **kwargs):
         ComplexForm.items.append(self)
         super().__init__(name, **kwargs)
+    def __repr__(self):
+        if hasattr(self, option):
+            return f"{self.name} ({self.option})"
+        else:
+            return self.name
 
-
-DIFFUSAL_OF_FIREWAL = ComplexForm('DIFFUSAL_OF_FIREWAL')
+CLEANER = ComplexForm("Cleaner")
+DIFFUSION_ATTRIBUTE = ComplexForm("Diffusion Attribute")
+INFUSION_ATTRIBUTE = ComplexForm("Infusion Attribute")
+EMULATE_PROGRAM = ComplexForm("Emulate Program")
+MIRROED_PERSONA = ComplexForm("Mirroed Persona")
+PULSE_STORM = ComplexForm("Pulse Storm")
+PUPPETEER = ComplexForm("Puppeteer")
+RESONANCE_CHANNEL = ComplexForm("Resonance Channel")
+RESONANCE_SPIKE = ComplexForm("Resonance Spike")
+RESONANCE_VEIL = ComplexForm("Resonance Veil")
+STATIC_BOMB = ComplexForm("Static Bomb")
+STATIC_VEIL = ComplexForm("Static Veil")
+STITCHES = ComplexForm("Stitches")
+TRANSCEND_GRID = ComplexForm("Transcend Grid")
+TATTLETALE = ComplexForm("Tattletale")
 
 
 class Spell(AbstractBaseClass):
@@ -264,7 +313,7 @@ SPELLS_COMBAT = [s for s in Spell.items if s.spell_type == 'Manipulation']
 
 
 class Character():
-    def __init__(self, name):
+    def __init__(self, name, **kwargs):
         self.name = name
         self.body = BODY
         self.agility = AGILITY
@@ -287,26 +336,47 @@ class Character():
         self.archetype = {}
         self.gear = {}
         self.spells = []
+        self.qualities = {}
+        for k, d in kwargs.items:
+            self.__setattr__(k, d)
 
 
+def qualities_roll_formula(current_level, max_level):
+    return ((100*(current_level+1))/max_level)
 
-def pick_qualities(ch: Character):
+
+for i in range(6):
+    qualities_roll_formula(i, 6)
+
+
+def pick_qualities(ch: Character, max_qualities=8):
     karma = 50
-    qualities = {}
+    qualities = []
     while True:
-        roll_quality = random.choice(Quality.items)
-        if karma - roll_quality.cost > 0:
-            karma -= roll_quality.cost
-            qualities[roll_quality.name] = roll_quality
-            if hasattr(roll_quality, "level"):
-                for i in range(roll_quality.level):
-                    if karma - roll_quality.cost <= 0:
-                        qualities[roll_quality.name]['level'] = i
-                        break
-                    else:
-                        karma -= roll_quality.cost
-        else:
+        if len(qualities) >= max_qualities:
             break
+        roll_quality = random.choice(Quality.items)
+        if roll_quality.name in qualities:
+            continue
+        if karma - roll_quality.cost < 0:
+            break
+        else:
+            karma -= roll_quality.cost
+            quality_name = roll_quality.name
+            qualities.append(quality_name)
+            if hasattr(roll_quality, "levels"):
+                for i in range(roll_quality.levels):
+                    if (
+                karma - roll_quality.cost >= 0 and 
+                (random.randint(1, 100) > ((100*(i+1))/roll_quality.levels)) or #qualities_roll_formula(i, roll_quality.levels))) or
+                i == 0):
+                        old_quality_name = quality_name
+                        quality_name = f"{roll_quality.name} (Level: {i+1})"
+                        qualities[qualities.index(old_quality_name)] = quality_name
+                        karma -= roll_quality.cost
+                    else:
+                        break
+    qualities.sort()
     return qualities
                 
 
@@ -389,6 +459,7 @@ def gen_lifestyle():
     return answer
 
 
+
 def get_priority_table(category=False, priority=False):
     answer = ReturnObj()
     if not category and not priority:
@@ -413,7 +484,7 @@ def get_priority_table(category=False, priority=False):
                     answer.adjustment_points = 1
         case "Attributes":
             x = {'A': 24, 'B': 16, 'C': 12, 'D': 8, 'E': 2}
-            answer.attributes = x[priority]spells
+            answer.attributes = x[priority]
         case "Skills":
             x = {'A': 32, 'B': 24, 'C': 20, 'D': 16, 'E': 10}
             answer.skills = x[priority]
@@ -461,7 +532,7 @@ def get_priority_table(category=False, priority=False):
                     answer.resources = 50_000
                 case 'E':
                     answer.resources = 8_000
-    return answerspells
+    return answer
 
 PRIORITY_PICKS = ['A', 'B', 'C', 'D', 'E']
 
@@ -476,7 +547,7 @@ def get_spells(ch: Character):
     return spells
 
 def generate_adept(ch: Character):
-    MAGIC_TYPE = "Adept"spells
+    MAGIC_TYPE = "Adept"
     magic_power = random.choice(['A', 'B', 'C'])
     x = get_priority_table('Magic or Resonance', magic_power)
     ch.magic = ch.magic + x.adept
@@ -492,12 +563,15 @@ def generate_combat_mage(ch: Character):
 
     ch.spells = SpellList(get_spells(ch))
     print(ch.spells)
+
+    ch.qualities = pick_qualities(ch)
+    print(ch.qualities)
     pass
 def generate_covert_ops(ch: Character):
     pass
 def generate_decker(ch: Character):
     pass
-def generate_face(ch: Character):spells
+def generate_face(ch: Character):
     pass
 def generate_rigger(ch: Character):
     pass
@@ -536,24 +610,74 @@ def generate_character(name="Jeff"):
 
 def get_template_technomancer():
     tm = Character("Technomancer")
-    tm.Body = tm.Body + 5
-    tm.Agility = tm.Agility + 2
-    tm.Reaction = tm.Reaction + 2 
-    tm.Strength = tm.Strength + 5
-    tm.Willpower = tm.Willpower + 7 
-    tm.Logic = tm.Logic + 5
-    tm.Intuition = tm.Intuition + 6
-    tm.Charisma = tm.Charisma + 5
-    tm.Edge = tm.Edge + 3
-    tm.Resonance = tm.Resonance + 6
-    tm.Essence = tm.Essence + 6
+    tm.body = tm.body + 5
+    tm.agility = tm.agility + 2
+    tm.reaction = tm.reaction + 2 
+    tm.strength = tm.strength + 5
+    tm.willpower = tm.willpower + 7 
+    tm.logic = tm.logic + 5
+    tm.intuition = tm.intuition + 6
+    tm.charisma = tm.charisma + 5
+    tm.edge = tm.edge + 3
+    tm.resonance = tm.resonance + 6
+    tm.essence = tm.essence + 6
 
-    tm.Initiative = tm.Reaction + tm.Intuition
+    tm.initiative = tm.reaction + tm.intuition
 
-    tm.ComplexForms = {}
+    DIFFUSION_ATTRIBUTE.option = 'Firewall'
+    INFUSION_ATTRIBUTE.option = 'Attack'
+    INFUSION_ATTRIBUTE_2 = ComplexForm("Infusion Attribute")
+    INFUSION_ATTRIBUTE_2.option = 'Sleaze'
+
+    tm.complex_forms = [DIFFUSION_ATTRIBUTE, INFUSION_ATTRIBUTE, PULSE_STORM, RESONANCE_SPIKE]
+
+    tm.contacts = {
+            'Bartender': ['C1', 'L3'],
+            'Bounty Hunter': ['C2', 'L5'],
+            'Cab Driver': ['C2', 'L1'],
+            'Corporate Executive': ['C4', 'L4'],
+            'Decker': ['C2', 'L3'],
+            'Squatter': ['C1', 'L2']
+            }
+
+    tm.lifestyle = 'Low'
+
+    tm.languages = ['English']
+
+    tm.skills = {
+            'Con': {
+                'Value': 2,
+                'Specialisations': 'Acting'
+                },
+            'Electronics': {
+                'Value': 4,
+                'Specialisations': 'Computers'
+                },
+            'Firearms': {'Value': 1},
+            'Piloting': {
+                'Value': 2,
+                'Specialisations': 'Ground Craft'
+                },
+            'Stealth': {'Value': 1},
+            'Tasking': {
+                'Value': 6,
+                'Specialisations': 'Compiling'
+                },
+            '_Knowledge' : ['Commlink Design', 'Dragons', 'Host Design', 'Seattle Gangs', 'Tacoma Geography', 'Technomancer Hideouts'],
+            '_Language': ['Engihs']
+            }
+    tm.starting_nuyen = 2050
+    tm.weapons = {
+            'Walther Palm Pistol': {
+                'Type': 'Pistol',
+                'Ammo': 50
+                }
+            }
 
 
 
 
-character = Character("Tony Boyce")
-y = generate_combat_mage(character)
+
+# character = Character("Tony Boyce")
+# y = generate_combat_mage(character)
+get_template_technomancer
