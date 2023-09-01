@@ -101,6 +101,7 @@ class Skill(AbstractBaseClass):
         super().__init__(name, **kwargs)
 
 
+
 ASTRAL = Skill('Astral', unskilled=False, specialisations=['Astral Combat', 'Astral Signatures', 'Emotional States', 'Spirit Types'], attribute='Intuition')
 ATHLETICS = Skill('Athletics', unskilled=True, specialisations=['Climbing', 'Flying', 'Gymnastics', 'Sprinting', 'Swimming', 'Throwing'], attribute='Agility')
 BIOTECH = Skill('Biotech', unskilled=False, specialisations=['Biotechnology', 'Cybertechnology', 'First Aid', 'Medicine'], attribute='Logic')
@@ -122,9 +123,9 @@ STEALTH = Skill('Stealth', unskilled=True, specialisations=['Disguise', 'Palming
 TASKING = Skill('Tasking', unskilled=False, specialisations=['Compiling', 'Decompiling', 'Registering'], attribute='Resonance')
 
 class Attribute():
-    def __init__(self, name, value = 0, limit = 6, hidden=False):
+    def __init__(self, name, value: int = 0, limit = 6, hidden=False):
         self.name = name
-        self.value = value
+        self.value = int(value)
         self.limit = limit
         if self.value != 0:
             self.hidden = False
@@ -132,10 +133,10 @@ class Attribute():
             self.hidden = hidden
     def __repr__(self):
         return f"{self.name}: {self.value}/{self.limit}"
-    def __add__(self, x, limit_raise=False):
+    def __add__(self, x: int, limit_raise=False):
         if limit_raise:
             return Attribute(self.name, self.value, self.limit + x)
-        return Attribute(self.name, self.value + x, self.limit)
+        return Attribute(self.name, self.value +  x, self.limit)
 
 class AttributeEdge():
     def __init__(self, name, value = 0):
@@ -160,7 +161,7 @@ MAGIC = Attribute('Magic', hidden=True)
 RESONANCE = Attribute('Resonance', hidden=True)
 
 
-def ComplexForm(AbstractBaseClass):
+class ComplexForm(AbstractBaseClass):
     items = []
     def __init___(self, name, **kwargs):
         ComplexForm.items.append(self)
@@ -169,6 +170,97 @@ def ComplexForm(AbstractBaseClass):
 
 DIFFUSAL_OF_FIREWAL = ComplexForm('DIFFUSAL_OF_FIREWAL')
 
+
+class Spell(AbstractBaseClass):
+    items = []
+    def __init__(self, name:str, **kwargs):
+        super().__init__(name, **kwargs)
+        Spell.items.append(self)
+    def __repr__(self):
+        return f"[{self.spell_type[0]}] {self.name}"
+
+def SpellList(l: list):
+    return str(sorted(l, key=lambda x: x.spell_type))
+
+ACID_STREAM = Spell('Acid Stream', spell_type='Combat')
+TOXIC_WAVE = Spell('Toxic Wave', spell_type='Combat')
+CLOUT = Spell('Clout', spell_type='Combat')
+BLAST = Spell('Blast', spell_type='Combat')
+FLAMESTRIKE = Spell('Flamestrike', spell_type='Combat')
+FIREBALL = Spell('Fireball', spell_type='Combat')
+ICE_SPEAR = Spell('Ice Spear', spell_type='Combat')
+ICE_STORM = Spell('Ice Storm', spell_type='Combat')
+LIGHTNING_BOLT = Spell('Lightning Bolt', spell_type='Combat')
+LIGHTNING_BALL = Spell('Lightning Ball', spell_type='Combat')
+MANABOLT = Spell('Manabolt', spell_type='Combat')
+MANABALL = Spell('Manaball', spell_type='Combat')
+POWERBOLT = Spell('Powerbolt', spell_type='Combat')
+POWERBALL = Spell('Powerball', spell_type='Combat')
+STUNBOLT = Spell('Stunbolt', spell_type='Combat')
+STUNBALL = Spell('Stunball', spell_type='Combat')
+
+ANALYZE_DEVICE = Spell('Analyze Device', spell_type='Detection')
+ANALYZE_MAGIC = Spell('Analyze Magic', spell_type='Detection')
+ALALYZE_TRUTH = Spell('Analyze Truth', spell_type='Detection')
+CLAIRAUDIENCE = Spell('Clairaudience', spell_type='Detection')
+CLAIRVOYANCE = Spell('Clairvoyance', spell_type='Detection')
+COMBAT_SENSE = Spell('Combat Sense', spell_type='Detection')
+DETECT_ENEMIES = Spell('Detect Enemies', spell_type='Detection')
+DETECT_LIFE = Spell('Detect Life', spell_type='Detection')
+DETECT_MAGIC = Spell('Detect Magic', spell_type='Detection')
+MINDLINK = Spell('Mindlink', spell_type='Detection')
+MIND_PROBE = Spell('Mind Probe', spell_type='Detection')
+
+ANTIDOTE = Spell('Antidote', spell_type='Heal')
+CLEANSING_HEAL = Spell('Cleansing Heal', spell_type='Heal')
+COOLING_HEAL = Spell('Cooling Heal', spell_type='Heal')
+DECREASE_ATTRIBUTE = Spell('Decrease Attribute', spell_type='Heal')
+HEAL = Spell('Heal', spell_type='Heal')
+INCREASE_ATTRIBUTE = Spell('Increase Attribute', spell_type='Heal')
+INCREASE_REFLEXES = Spell('Increase Reflexes', spell_type='Heal')
+RESIST_PAIN = Spell('Resist Pain', spell_type='Heal')
+STABILIZE = Spell('Stabilize', spell_type='Heal')
+WARMING_HEAL = Spell('Warming Heal', spell_type='Heal')
+
+AGONY = Spell('Agony', spell_type='Illusion')
+CONFUSION = Spell('Confusion', spell_type='Illusion')
+CHAOS = Spell('Chaos', spell_type='Illusion')
+HUSH = Spell('Hush', spell_type='Illusion')
+SILENCE = Spell('Silence', spell_type='Illusion')
+INVISIBILITY = Spell('Invisibility', spell_type='Illusion')
+IMPROVED_INVISIBILITY = Spell('Improved invisibility', spell_type='Illusion')
+MASK = Spell('Mask', spell_type='Illusion')
+PHYSICAL_MASK = Spell('Physical Mask', spell_type='Illusion')
+PHANTASM = Spell('Phantasm', spell_type='Illusion')
+TRID_PHANTASM = Spell('Trid Phantasm', spell_type='Illusion')
+SENSOR_SNEAK = Spell('Sensor Sneak', spell_type='Illusion')
+
+ARMOR = Spell('Armor', spell_type='Manipulation')
+CONTROL_ACTIONS = Spell('Control Actions', spell_type='Manipulation')
+CONTROL_THOUGHTS = Spell('Control Thoughts', spell_type='Manipulation')
+DARKNESS = Spell('Darkness', spell_type='Manipulation')
+LIGHT = Spell('Light', spell_type='Manipulation')
+ELEMENTAL_ARMOR = Spell('Elemental Armor', spell_type='Manipulation')
+FLING = Spell('Fling', spell_type='Manipulation')
+FOCUS_BURST = Spell('Focus Burst', spell_type='Manipulation')
+LEVITATE = Spell('Levitate', spell_type='Manipulation')
+MANA_BARRIER = Spell('Mana Barrier', spell_type='Manipulation')
+MYSTIC_ARMOR = Spell('Mystic Armor', spell_type='Manipulation')
+OVERCLOCK = Spell('Overclock', spell_type='Manipulation')
+PHYSICAL_BARRIER = Spell('Physical Barrier', spell_type='Manipulation')
+SHAPE_METAL = Spell('Shape Metal', spell_type='Manipulation')
+SHAPE_PLASTIC = Spell('Shape Plastic', spell_type='Manipulation')
+SHAPE_STONE = Spell('Shape Stone', spell_type='Manipulation')
+SHAPE_WOOD = Spell('Shape Wood', spell_type='Manipulation')
+STRENGTHEN_WALL = Spell('Strengthen Wall', spell_type='Manipulation')
+THUNDER = Spell('Thunder', spell_type='Manipulation')
+VEHICLE_ARMOR = Spell('Vehicle Armor', spell_type='Manipulation')
+
+SPELLS_COMBAT = [s for s in Spell.items if s.spell_type == 'Combat']
+SPELLS_DETECTION = [s for s in Spell.items if s.spell_type == 'Detection']
+SPELLS_HEAL = [s for s in Spell.items if s.spell_type == 'Heal']
+SPELLS_ILLUSION = [s for s in Spell.items if s.spell_type == 'Illusion']
+SPELLS_COMBAT = [s for s in Spell.items if s.spell_type == 'Manipulation']
 
 
 class Character():
@@ -194,6 +286,7 @@ class Character():
         self.metatype = {}
         self.archetype = {}
         self.gear = {}
+        self.spells = []
 
 
 
@@ -320,7 +413,7 @@ def get_priority_table(category=False, priority=False):
                     answer.adjustment_points = 1
         case "Attributes":
             x = {'A': 24, 'B': 16, 'C': 12, 'D': 8, 'E': 2}
-            answer.attributes = x[priority]
+            answer.attributes = x[priority]spells
         case "Skills":
             x = {'A': 32, 'B': 24, 'C': 20, 'D': 16, 'E': 10}
             answer.skills = x[priority]
@@ -368,15 +461,25 @@ def get_priority_table(category=False, priority=False):
                     answer.resources = 50_000
                 case 'E':
                     answer.resources = 8_000
-    return answer
+    return answerspells
 
 PRIORITY_PICKS = ['A', 'B', 'C', 'D', 'E']
 
+def get_spells(ch: Character):
+    spells = []
+    for _ in range(2 * ch.magic):
+        while True:
+            ROLL_SPELL = random.choice(Spell.items)
+            if ROLL_SPELL not in ch.spells:
+                spells.append(ROLL_SPELL)
+                break
+    return spells
+
 def generate_adept(ch: Character):
-    MAGIC_TYPE = "Adept"
+    MAGIC_TYPE = "Adept"spells
     magic_power = random.choice(['A', 'B', 'C'])
-    x = get_priority_table('Magic / Resonance', magic_power)
-    print(x)
+    x = get_priority_table('Magic or Resonance', magic_power)
+    ch.magic = ch.magic + x.adept
     PRIORITY_PICKS.pop(PRIORITY_PICKS.index(magic_power))
     y = get_priority_table('Metatype', random.choice(PRIORITY_PICKS))
     ch.adept_powers = {}
@@ -384,15 +487,17 @@ def generate_adept(ch: Character):
 def generate_combat_mage(ch: Character):
     MAGIC_TYPE = "Magician / 'Full'"
     magic_power = random.choice(['A', 'B', 'C'])
-    x = get_priority_table('Magic / Resonance', magic_power)
-    ch.attributes['Magic'] = x.full
-    ch.spells = 2 * ch.attributes['Magic']
+    x = get_priority_table('Magic or Resonance', magic_power)
+    ch.magic = x.full
+
+    ch.spells = SpellList(get_spells(ch))
+    print(ch.spells)
     pass
 def generate_covert_ops(ch: Character):
     pass
 def generate_decker(ch: Character):
     pass
-def generate_face(ch: Character):
+def generate_face(ch: Character):spells
     pass
 def generate_rigger(ch: Character):
     pass
@@ -401,14 +506,22 @@ def generate_samurai(ch: Character):
 def generate_shaman(ch: Character):
     MAGIC_TYPE = "Mystic Adept"
     magic_power = random.choice(['A', 'B', 'C'])
-    x = get_priority_table('Magic / Resonance', magic_power)
-    ch.spells = {}
+    x = get_priority_table('Magic or Resonance', magic_power)
+    ch.magic = x.mystic
+    ch.spells = []
+    for _ in range(2 * ch.attributes['Magic']):
+        while True:
+            ROLL_SPELL = random.choice(Spell.items)
+            if ROLL_SPELL in ch.spells:
+                continue
+            else:
+                break
     pass
 def generate_technomancer(ch: Character):
     MAGIC_TYPE = "Technomancer"
     resonance_power = random.choice(['A', 'B'])
     x = get_priority_table('Magic / Resonance', resonance_power)
-    ch.attributes['Resonance'] = x.technomancer
+    ch.resonance = x.technomancer
 
     ch.complex_forms = {}
     pass
@@ -437,13 +550,10 @@ def get_template_technomancer():
 
     tm.Initiative = tm.Reaction + tm.Intuition
 
-    tm.ComplexForms = {
-
-
-            }
+    tm.ComplexForms = {}
 
 
 
 
 character = Character("Tony Boyce")
-y = generate_adept(character)
+y = generate_combat_mage(character)
