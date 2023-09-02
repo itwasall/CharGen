@@ -164,19 +164,25 @@ class Attribute():
             self.hidden = hidden
     def __repr__(self):
         return f"{self.name}: {self.value}/{self.limit}"
-    def __add__(self, x: int, limit_raise=False):
+    def __add__(self, x, limit_raise=False):
         if limit_raise:
             return Attribute(self.name, self.value, self.limit + x)
-        return Attribute(self.name, self.value +  x, self.limit)
+        if isinstance(x, int):
+            return Attribute(self.name, self.value +  x, self.limit)
+        elif isinstance(x, Attribute) or isinstance(x, AttributeOther):
+            return self.value + x.value
 
-class AttributeEdge():
+class AttributeOther():
     def __init__(self, name, value = 0):
         self.name = name
         self.value = value
     def __repr__(self):
         return f"{self.name}: {self.value}"
     def __add__(self, x):
-        return AttributeEdge(self.name, self.value + x)
+        if isinstance(x, int):
+            return AttributeOther(self.name, self.value + x)
+        elif isinstance(x, Attribute) or isinstance(x, AttributeOther):
+            return self.value + x.value
 
 
 BODY = Attribute('Body')
@@ -187,37 +193,39 @@ WILLPOWER = Attribute('Willpower')
 LOGIC = Attribute('Logic')
 INTUITION = Attribute('Intuition')
 CHARISMA = Attribute('Charisma')
-EDGE = AttributeEdge('Edge')
+EDGE = AttributeOther('Edge')
+ESSENCE = AttributeOther('Essencce')
 MAGIC = Attribute('Magic', hidden=True)
 RESONANCE = Attribute('Resonance', hidden=True)
 
 
 class ComplexForm(AbstractBaseClass):
     items = []
-    def __init___(self, name, **kwargs):
+    def __init___(self, name, option, **kwargs):
         ComplexForm.items.append(self)
+        self.option = option
         super().__init__(name, **kwargs)
     def __repr__(self):
-        if hasattr(self, option):
-            return f"{self.name} ({self.option})"
-        else:
+        if self.option is None:
             return self.name
+        else:
+            return f"{self.name} ({self.option})"
 
-CLEANER = ComplexForm("Cleaner")
-DIFFUSION_ATTRIBUTE = ComplexForm("Diffusion Attribute")
-INFUSION_ATTRIBUTE = ComplexForm("Infusion Attribute")
-EMULATE_PROGRAM = ComplexForm("Emulate Program")
-MIRROED_PERSONA = ComplexForm("Mirroed Persona")
-PULSE_STORM = ComplexForm("Pulse Storm")
-PUPPETEER = ComplexForm("Puppeteer")
-RESONANCE_CHANNEL = ComplexForm("Resonance Channel")
-RESONANCE_SPIKE = ComplexForm("Resonance Spike")
-RESONANCE_VEIL = ComplexForm("Resonance Veil")
-STATIC_BOMB = ComplexForm("Static Bomb")
-STATIC_VEIL = ComplexForm("Static Veil")
-STITCHES = ComplexForm("Stitches")
-TRANSCEND_GRID = ComplexForm("Transcend Grid")
-TATTLETALE = ComplexForm("Tattletale")
+CLEANER = ComplexForm("Cleaner", option=None)
+DIFFUSION_ATTRIBUTE = ComplexForm("Diffusion Attribute", option=None)
+INFUSION_ATTRIBUTE = ComplexForm("Infusion Attribute", option=None)
+EMULATE_PROGRAM = ComplexForm("Emulate Program", option=None)
+MIRROED_PERSONA = ComplexForm("Mirroed Persona", option=None)
+PULSE_STORM = ComplexForm("Pulse Storm", option=None)
+PUPPETEER = ComplexForm("Puppeteer", option=None)
+RESONANCE_CHANNEL = ComplexForm("Resonance Channel", option=None)
+RESONANCE_SPIKE = ComplexForm("Resonance Spike", option=None)
+RESONANCE_VEIL = ComplexForm("Resonance Veil", option=None)
+STATIC_BOMB = ComplexForm("Static Bomb", option=None)
+STATIC_VEIL = ComplexForm("Static Veil", option=None)
+STITCHES = ComplexForm("Stitches", option=None)
+TRANSCEND_GRID = ComplexForm("Transcend Grid", option=None)
+TATTLETALE = ComplexForm("Tattletale", option=None)
 
 
 class Spell(AbstractBaseClass):
@@ -325,6 +333,7 @@ class Character():
         self.charisma = CHARISMA
         self.edge = EDGE
         self.magic = MAGIC
+        self.essence = ESSENCE
         self.resonance = RESONANCE
         self.attributes = {
             'Physical': [self.body, self.agility, self.reaction, self.strength],
@@ -337,8 +346,29 @@ class Character():
         self.gear = {}
         self.spells = []
         self.qualities = {}
-        for k, d in kwargs.items:
+        self.complex_forms = {}
+        for k, d in kwargs.items():
             self.__setattr__(k, d)
+
+    def show_stats(self):
+        print("=== STATS ===")
+        print("--> PHYSICAL")
+        print(f"    {self.body} | {self.agility} | {self.reaction} | {self.strength}")
+        print("--> Mental")
+        print(f"    {self.willpower} | {self.logic} | {self.intuition} | {self.charisma}")
+        print("--> SPECIAL")
+        if not self.magic.hidden:
+            print(f"    {self.edge} | {self.magic} | {self.essence}") 
+        elif not self.resonance.hidden:
+            print(f"    {self.edge} | {self.resonance} | {self.essence}") 
+        else:
+            print(f"    {self.edge} | {self.essence}") 
+
+    def show(self, attr):
+        if isinstance(attr, dict):
+            print("\n".join([{k:d} for k, d in attr.items]))
+        elif isinstance(attr,list):
+            print(f"{[i for i in attr]}")
 
 
 def qualities_roll_formula(current_level, max_level):
@@ -610,17 +640,17 @@ def generate_character(name="Jeff"):
 
 def get_template_technomancer():
     tm = Character("Technomancer")
-    tm.body = tm.body + 5
-    tm.agility = tm.agility + 2
-    tm.reaction = tm.reaction + 2 
-    tm.strength = tm.strength + 5
-    tm.willpower = tm.willpower + 7 
-    tm.logic = tm.logic + 5
-    tm.intuition = tm.intuition + 6
-    tm.charisma = tm.charisma + 5
-    tm.edge = tm.edge + 3
-    tm.resonance = tm.resonance + 6
-    tm.essence = tm.essence + 6
+    tm.body += 5
+    tm.agility += 2
+    tm.reaction += 2 
+    tm.strength += 5
+    tm.willpower += 7 
+    tm.logic += 5
+    tm.intuition += 6
+    tm.charisma += 5
+    tm.edge += 3
+    tm.resonance += 6
+    tm.essence += 6
 
     tm.initiative = tm.reaction + tm.intuition
 
@@ -629,7 +659,7 @@ def get_template_technomancer():
     INFUSION_ATTRIBUTE_2 = ComplexForm("Infusion Attribute")
     INFUSION_ATTRIBUTE_2.option = 'Sleaze'
 
-    tm.complex_forms = [DIFFUSION_ATTRIBUTE, INFUSION_ATTRIBUTE, PULSE_STORM, RESONANCE_SPIKE]
+    tm.complex_forms = [DIFFUSION_ATTRIBUTE, INFUSION_ATTRIBUTE, INFUSION_ATTRIBUTE_2, PULSE_STORM, RESONANCE_SPIKE]
 
     tm.contacts = {
             'Bartender': ['C1', 'L3'],
@@ -673,6 +703,8 @@ def get_template_technomancer():
                 'Ammo': 50
                 }
             }
+    tm.show_stats()
+    tm.show(tm.complex_forms)
 
 
 
@@ -680,4 +712,4 @@ def get_template_technomancer():
 
 # character = Character("Tony Boyce")
 # y = generate_combat_mage(character)
-get_template_technomancer
+get_template_technomancer()
