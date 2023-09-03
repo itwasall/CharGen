@@ -436,23 +436,15 @@ class Item(Gear):
         self.category = category
 
 
-class Vehicle(AbstractBaseClass):
+class Vehicle(Gear):
     items = []
-    def __init__(self, name, cost, page_ref, handle, speed, accel, bod, armor, pilot, sensor, seats, avail, **kwargs):
+    def __init__(self, name, cost, page_ref, skill_req, category="Vehicle", subtype=None, **kwargs):
         Vehicle.items.append(self)
-        super().__init__(name, **kwargs)
-        self.cost = cost
+        super().__init__(name, cost, page_ref, **kwargs)
+        self.category = category
+        self.subtype = subtype
         self.page_ref = page_ref
-        self.handle = handle
-        self.speed = speed
-        self.accel = accel
-        self.bod = bod
-        self.armor = armor
-        self.pilot = pilot
-        self.sensor = sensor
-        self.seats = seats
-        self.avail = avail
-        self.category = "Vehicle"
+        self.skill_req = skill_req
 
 
 
@@ -487,6 +479,12 @@ class Augmentation(AbstractBaseClass):
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Augmentation.items.append(self)
+
+class AugmentationGrade(AbstractBaseClass):
+    items = []
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        AugmentationGrade.items.append(self)
 
 """
     ATTRIBUTES
@@ -691,7 +689,7 @@ SKILL_GROUPS = [group for group in SkillGroup.items]
 MAGIC_SKILLS = [ASTRAL_COMBAT, ARCANA, BANISHING, BINDING, SUMMONING, ALCHEMY, ARTIFICING, DISENCHANTING, COUNTERSPELLING, RITUAL_SPELLCASTING, SPELLCASTING]
 MAGIC_SKILL_GROUPS = [CONJURING, ENCHANTING, SORCERY]
 RESONANCE_SKILLS = [COMPILING, DECOMPILING, REGISTERING]
-VEHICLE_SKILLS = [GUNNERY, PILOT_AEROSPACE, PILOT_AIRCRAFT, PILOT_GROUND_CRAFT, PILOT_EXOTIC_VEHICLE_SPECIFIC, PILOT_WALKER, PILOT_WATERCRAFT]
+VEHICLE_SKILLS = [PILOT_AEROSPACE, PILOT_AIRCRAFT, PILOT_GROUND_CRAFT, PILOT_WALKER, PILOT_WATERCRAFT]
 COMBAT_ACTIVE_SKILLS = [ARCHERY, AUTOMATICS, BLADES, CLUBS, EXOTIC_RANGED_WEAPON, HEAVY_WEAPONS, LONGARMS, PISTOLS, THROWING_WEAPONS, UNARMED_COMBAT]
 PHYSICAL_ACTIVE_SKILLS = [DISGUISE, DIVING, ESCAPE_ARTIST, FREE_FALL, GYMNASTICS, PALMING, PERCEPTION, RUNNING, SNEAKING, SURVIVAL, SWIMMING, TRACKING]
 SOCIAL_SKILLS = [CON, ETIQUETTE, IMPERSONATION, INSTRUCTION, INTIMIDATION, LEADERSHIP, NEGOTIATION, PERFORMANCE]
@@ -895,10 +893,10 @@ STAFF = MeleeWeapon("Staff", cost=100, page_ref=421, avail=3, subtype="Club")
 STUN_BATON = MeleeWeapon("Stun Baton", cost=750, page_ref=421, avail=6, legality=RESTRICTED, subtype="Club")
 TELESCOPING_STAFF = MeleeWeapon("Telescoping Staff", cost=350, page_ref=421, avail=4, subtype="Club")
 # =============== OTHER =================
-KNUCKS = MeleeWeapon("Knucks", cost=100, page_ref=421, avail=2, legality=RESTRICTED, subtype="Other")
-MONOFILAMENT_WHIP = MeleeWeapon("Monofilament Whip", cost=10_000, page_ref=421, avail=12, legality=FORBIDDEN, subtype="Exotic")
-SHOCK_GLOVES = MeleeWeapon("Shock Gloves", cost=550, page_ref=421, avail=6, legality=RESTRICTED, subtype="Other")
-MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="Exotic")
+KNUCKS = MeleeWeapon("Knucks", cost=100, page_ref=421, avail=2, legality=RESTRICTED, subtype="Other Melee Weapon")
+MONOFILAMENT_WHIP = MeleeWeapon("Monofilament Whip", cost=10_000, page_ref=421, avail=12, legality=FORBIDDEN, subtype="Exotic Melee Weapon")
+SHOCK_GLOVES = MeleeWeapon("Shock Gloves", cost=550, page_ref=421, avail=6, legality=RESTRICTED, subtype="Other Melee Weapon")
+MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=448, rating="-", avail=8, subtype="Exotic Melee Weapon")
 
 """
     PROJECTILE GEAR
@@ -925,8 +923,8 @@ arg order is:
 DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", cost=250, page_ref=424, avail=0, subtype="Taser", damage=[9, STUN, ELECTRICAL], mods=None)
 YAMAHA_PULSAR = Firearm("Yamaha Pulsar", cost=180, page_ref=424, avail=0, subtype="Taser", mods=None)
 # =============== HOLD-OUTS ==============
-FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", cost=1000, page_ref=425, avail=5, legality=RESTRICTED, subtype="Hold-Outs", mods=None)
-STREETLINE_SPECIAL = Firearm("Streetline Special", cost=120, page_ref=425, avail=4, legality=RESTRICTED, subtype="Hold-Outs", mods=None)
+FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", cost=1000, page_ref=425, avail=5, legality=RESTRICTED, subtype="Hold-Out", mods=None)
+STREETLINE_SPECIAL = Firearm("Streetline Special", cost=120, page_ref=425, avail=4, legality=RESTRICTED, subtype="Hold-Out", mods=None)
 WALTHER_PALM_PISTOL = Firearm("Walther Palm Pistol", cost=180, page_ref=425, avail=4, legality=RESTRICTED, subtype="Hold-Out", mods=None)
 # =============== LIGHT PISTOLS ==========
 ARES_LIGHT_FIRE_75 = Firearm("Ares_Light Fire 75", cost=1250, page_ref=425, avail=6, legality=RESTRICTED, subtype="Light Pistol", mods=None)
@@ -1084,8 +1082,8 @@ URBAN_EXPLORER_JUMPSUIT_HELMET = Armor("Urban Explorer Jumpsuit Helmet", cost=10
 HELMET = Armor("Helmet", cost=100, page_ref=438, avail=2, armor_rating=2, subtype="Helmet", mods=None)
 BALLISTIC_SHIELD = Armor("Ballistic Shield", cost=1200, page_ref=438, avail=12, legality=RESTRICTED, armor_rating=6, subtype="Shield", mods=None)
 RIOT_SHIELD = Armor("Riot Shield", cost=1500, page_ref=438, avail=10, legality=RESTRICTED, armor_rating=6, subtype="Shield", mods=None)
-BALLISTIC_SHIELD_WEA = MeleeWeapon("Ballistic Shield", cost=BALLISTIC_SHIELD.cost, page_ref=BALLISTIC_SHIELD.page_ref, avail=BALLISTIC_SHIELD.avail, subtype="Exotic")
-RIOT_SHIELD = MeleeWeapon("Riot Shield", cost=RIOT_SHIELD.cost, page_ref=RIOT_SHIELD.page_ref, avail=RIOT_SHIELD.avail, subtype="Exotic")
+BALLISTIC_SHIELD_WEA = MeleeWeapon("Ballistic Shield", cost=BALLISTIC_SHIELD.cost, page_ref=BALLISTIC_SHIELD.page_ref, avail=BALLISTIC_SHIELD.avail, subtype="Exotic Melee Weapon")
+RIOT_SHIELD = MeleeWeapon("Riot Shield", cost=RIOT_SHIELD.cost, page_ref=RIOT_SHIELD.page_ref, avail=RIOT_SHIELD.avail, subtype="Exotic Melee Weapon")
 # =============== ARMOR MODS ============
 CHEMICAL_PROTECTION = ArmorModification("Chemical Protection", cost=["ArmorRating", "*", 250], page_ref=438, avail=6, capacity="ArmorRating", requires=["Category", "Armor"])
 CHEMICAL_SEAL = ArmorModification("Chemical Seal", cost=3000, page_ref=438, avail=12, legality=RESTRICTED, capacity=6, requires=["Category", "Armor"])
@@ -1331,7 +1329,39 @@ MORGAN_CUTLASS = Vehicle('Morgan Cutlass', cost=96000, avail=14, legality=RESTRI
 PROTEUS_LAMPREY = Vehicle('Proteus Lamprey', cost=14000, avail="-", page_ref=464, subtype="Submarine", skill_req=PILOT_WATERCRAFT)
 VULKAN_ELECTRONAUT = Vehicle('Vulkan Electronaut', cost=108_000, avail=10, page_ref=464, subtype="Submarine", skill_req=PILOT_WATERCRAFT)
 # FIXED-WING AIRCRAFT
+ARTEMIS_INDUSTRIES_NIGHTWING = Vehicle('Artemis Industries Nightwing', cost=20000, avail=8, page_ref=464, subtype='Fixed-Wing', skill_req=PILOT_AIRCRAFT)
+CESSNA_C750 = Vehicle('Cessna C750', cost=146_000, avail=8, page_ref=464, subtype='Fixed-Wing', skill_req=PILOT_AIRCRAFT)
+RF_FOKKER_TUNDRA_9 = Vehicle('Renaut-Fiat Fokker Tundra 9', cost=300_000, avail=12, page_ref=464, subtype='Fixed-Wing', skill_req=PILOT_AIRCRAFT)
+# ROTORCRAFT
+ARES_DRAGON = Vehicle('Ares Dragon', cost=355_000, avail=12, page_ref=464, subtype='Rotocraft', skill_req=PILOT_AIRCRAFT)
+NISSAN_HOUND = Vehicle('Nissan Hound', cost=425_000, avail=13, legality=RESTRICTED, page_ref=464, subtype='Rotocraft', skill_req=PILOT_AIRCRAFT)
+NORTHRUP_WASP = Vehicle('Northrup Wasp', cost=86_000, avail=12, legality=RESTRICTED, page_ref=465, subtype='Rotocraft', skill_req=PILOT_AIRCRAFT)
+# VTOL
+ARES_VENTURE = Vehicle('Ares Venture', cost=400_000, avail=12, legality=FORBIDDEN, page_ref=465, subtype='VTOL', skill_req=PILOT_AIRCRAFT)
+GMC_BANSHEE = Vehicle('GMC Banshee', cost=2_500_000, avail=24, legality=FORBIDDEN, page_ref=465, subtype='VTOL', skill_req=PILOT_AIRCRAFT)
+FEDERATED_BOEING_COMMUTER = Vehicle('Federated Boeing Commuter', cost=350_000, avail=10, page_ref=465, subtype='VTOL', skill_req=PILOT_AIRCRAFT)
+# MICRODRONES 
+SHIAWASE_KANMUSHI = Vehicle('Shiawase Kanmushi', cost=1000, avail=8, page_ref=465, subtype='Microdrone', skill_req=PILOT_WALKER)
+SIKORSKY_BELL_MICROSKIMMER = Vehicle('Sikorsky-Bell Microskimmer', cost=1000, avail=6, page_ref=465, subtype='Microdrone', skill_req=PILOT_GROUND_CRAFT)
+# MINIDRONES 
+HORIZON_FLYING_EYE = Vehicle('Horizon Flying Eye', cost=2000, avail=8, page_ref=465, subtype='Minidrone', skill_req=PILOT_AIRCRAFT)
+MCT_FLY_SPY = Vehicle('MCT Fly Spy', cost=2000, avail=8, page_ref=466, subtype='Minidrone', skill_req=PILOT_AIRCRAFT)
+# SMALL DRONES 
+AZTECHNOLOGY_CRAWLER = Vehicle('Aztechnology Crawler', cost=4000, avail=4, page_ref=466, subtype='Small Drone', skill_req=PILOT_WALKER)
+LOCKHEED_OPTIC_X2 = Vehicle('Lockheed Optic-X2', cost=21000, avail=10, page_ref=466, subtype='Small Drone', skill_req=PILOT_AIRCRAFT)
+# MEDIUM DRONES 
+ARES_DUELIST = Vehicle('Ares Duelist', cost=4500, avail=5, legality=RESTRICTED, page_ref=466, subtype='Medium Drone', skill_req=PILOT_WALKER)
+GM_NISSAN_DOBERMAN = Vehicle('GM-Nissan Doberman', cost=5000, avail=4, legality=RESTRICTED, page_ref=466, subtype='Medium Drone', skill_req=PILOT_GROUND_CRAFT)
+MCT_NISSAN_ROTO_DRONE = Vehicle('MCT-Nissan Roto-Drone', cost=5000, avail=6, page_ref=466, subtype='Medium Drone', skill_req=PILOT_AIRCRAFT)
+# LARGE DRONES 
+CYBERSPACE_DESIGNS_DALMATION = Vehicle('Cyberspace Designs Dalmation', cost=10000, avail=6, legality=RESTRICTED, page_ref=466, subtype='Large Drone', skill_req=PILOT_AIRCRAFT)
+STEEL_LYNX_COMBAT_DRONE = Vehicle('Steel Lynx Combat Drone', cost=25000, avail=10, legality=RESTRICTED, page_ref=466, subtype='Large Drone', skill_req=PILOT_GROUND_CRAFT)
 
+
+ROAD_VEHICLES = [i for i in Vehicle.items if i.subtype in ['Bike', 'Car', 'Truck']]
+AIR_VEHICLES = [i for i in Vehicle.items if i.subtype in ['Fixed-Wing', 'Rotocraft', 'VTOL']]
+WATER_VEHICLES = [i for i in Vehicle.items if i.subtype in ['Boat', 'Submarine']]
+DRONE_VEHICLES = [i for i in Vehicle.items if i.subtype in ['Microdrone', 'Minidrone', 'Small Drone', 'Medium Drone', 'Large Drone']]
         
 """
     LIFESTYLE
@@ -1626,6 +1656,17 @@ PAIN_EDITOR = Augmentation("PAIN_EDITOR", page_ref=461, cost=48000, essence=0.3,
 REFLEX_RECORDER = Augmentation("REFLEX_RECORDER", page_ref=461, cost=14000, essence=0.1, avail=10, subtype="Cultured Bioware", )
 SLEEP_REGULATOR = Augmentation("SLEEP_REGULATOR", page_ref=461, cost=12000, essence=0.1, avail=6, subtype="Cultured Bioware", )
 SYNAPTIC_BOOSTER_1_3 = Augmentation("SYNAPTIC_BOOSTER_1_3", page_ref=461, cost=["Rating", "*", 95000], rating=[1, "to", 3], essence=["Rating", "*", 0.5], avail=["Rating", "*", 6], legality=RESTRICTED, subtype="Cultured Bioware", )
+
+"""
+    AUGMENTATION GRADES
+"""
+AUG_GRADE_STANDARD = AugmentationGrade('Standard', cost=1, avail=0, essence=1, default=True)
+AUG_GRADE_ALPHAWARE = AugmentationGrade('Alphaware', cost=1.2, avail=2, essence=0.8, default=True)
+AUG_GRADE_BETAWARE = AugmentationGrade('Betaware', cost=1.5, avail=4, essence=0.7)
+AUG_GRADE_DELTAWARE = AugmentationGrade('Deltaware', cost=2.5, avail=8, essence=0.5)
+AUG_GRADE_USED = AugmentationGrade('Used', cost=0.75, avail=-4, essence=1.25)
+
+AUG_GRADES = [i for i in AugmentationGrade.items]
 """
     PRIORITY TABLE
 """

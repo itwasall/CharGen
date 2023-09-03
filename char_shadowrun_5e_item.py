@@ -218,23 +218,15 @@ def build_sensor(arg=-1):
 def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES, **kwargs):
     if "rating" in kwargs:
         item.rating = kwargs['rating']
-    grade_mods = {
-            'standard': {'cost': 1, 'avail': 0, 'essence': 1},
-            'alphaware': {'cost': 1.2, 'avail': 2, 'essence': 0.8},
-            'betaware': {'cost': 1.5, 'avail': 4, 'essence': 0.7},
-            'deltaware': {'cost': 2.5, 'avail': 8, 'essence': 0.5},
-            'used': {'cost': 0.75, 'avail': -4, 'essence': 1.25},
-            }
-
     if grade is None:
-        grade = random.choice(grades)
+        grade = random.choice([g for g in Core.AUG_GRADES if hasattr(g, "default")])
     item.grade = grade
     x_i = get_item_cost(item, **kwargs)
     if x_i is None:
         raise TypeError()
-    item.cost = int(round(get_item_cost(item, **kwargs) * grade_mods[grade]['cost']))
-    item.avail = get_item_avail(item, **kwargs) + grade_mods[grade]['avail']
-    item.essence = get_item_essence(item, **kwargs) * grade_mods[grade]['essence']
+    item.cost = int(round(get_item_cost(item, **kwargs) * grade.cost))
+    item.avail = get_item_avail(item, **kwargs) + grade.avail
+    item.essence = get_item_essence(item, **kwargs) * grade.essence
     return item
 
 def get_augmentation(**kwargs):
@@ -260,4 +252,48 @@ def get_augmentation(**kwargs):
         aug_wares = ["Head", "Eyes", "Ears", "Body"]
         body_part = random.choice(aug_wares)
 
-get_augmentation()
+def get_vehicle(**kwargs):
+    if "skill_req" in kwargs:
+        match kwargs['skill_req']:
+            case "Pilot Ground Craft":
+                valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_GROUND_CRAFT]
+            case "Pilot Aircraft":
+                valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_AIRCRAFT]
+            case "Pilot Walker":
+                valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_WALKER]
+            case "Pilot Watercraft":
+                valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_WATERCRAFT]
+            case _:
+                print("invalid 'skill_req' arg, choosing all vehicles")
+                valid_vehicles = [i for i in Core.Vehicle.items]
+    else:
+        valid_vehicles = [i for i in Core.Vehicle.items]
+
+    if "veh_type" in kwargs:
+        match kwargs['veh_type']:
+            case "road":
+                veh_types = list(dict.fromkeys([i.subtype for i in Core.ROAD_VEHICLES]))
+            case "water":
+                veh_types = list(dict.fromkeys([i.subtype for i in Core.WATER_VEHICLES]))
+            case "air":
+                veh_types = list(dict.fromkeys([i.subtype for i in Core.AIR_VEHICLES]))
+            case "drone":
+                veh_types = list(dict.fromkeys([i.subtype for i in Core.DRONE_VEHICLES]))
+            case _:
+                print("invalid 'veh_type' arg, choosing all vehicles")
+                veh_types = list(dict.fromkeys([i.subtype for i in Core.Vehicle.items]))
+    else:
+        veh_types = list(dict.fromkeys([i.subtype for i in Core.Vehicle.items]))
+
+    if "any" in kwargs:
+        vehicle = random.choice(valid_vehicles)
+    else:
+        vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
+    return vehicle
+
+print(f"Random vehicle: {get_vehicle(any=True)}")
+print(f"Groundcraft vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True)}")
+print(f"Groundcraft road vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True, veh_type='road')}")
+print(f"Aircraft vehicle: {get_vehicle(skill_req=Core.PILOT_AIRCRAFT.name, any=True)}")
+print(f"Walker vehicle: {get_vehicle(skill_req=Core.PILOT_WALKER.name, any=True)}")
+print(f"Watercraft vehicle: {get_vehicle(skill_req=Core.PILOT_WATERCRAFT.name, any=True)}")
