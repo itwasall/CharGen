@@ -1306,10 +1306,32 @@ DOCWAGON_PLATINUM_PLUS = Item("DOCWAGON_PLATINUM_PLUS", cost=100000, page_ref=45
     VEHICLES
 """
 # BIKES
-DODGE_SCOOT = Vehicle("Dodge Scoot", cost=3000, page_ref=463, handle=[4, 3], speed=3, accel=1, bod=4, armor=4, pilot=1, sensor=1, seats=1, avail=0, subtype="Bike")
-# HARLEY_DAVIDSON_SCORPION = Vehicle("HARLEY_DAVIDSON_SCORPION", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail=0, subtype="Bike")
-# YAMAHA_GROWLER = Vehicle("YAMAHA_GROWLER", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail=0, subtype="Bike")
-# SUZUKI_MIRAGE = Vehicle("SUZUKI_MIRAGE", cost=, page_ref=, handle=[], speed=, accel=, bod=, armor=, pilot=, sensor=, seats=, avail=0, subtype="Bike")
+DODGE_SCOUT = Vehicle('Dodge Scout', cost=3000, avail="-", page_ref=462, subtype="Bike", skill_req=PILOT_GROUND_CRAFT)
+HARLEY_DAVIDSON_SCORPION = Vehicle('Harley-Davidson Scorpion', cost=12000, avail="-", page_ref=462, subtype="Bike", skill_req=PILOT_GROUND_CRAFT)
+YAMAHA_GROWLER = Vehicle('Yamaha Growler', cost=5000, avail="-", page_ref=462, subtype="Bike", skill_req=PILOT_GROUND_CRAFT)
+SUZUKI_MIRAGE = Vehicle('Suzuki Mirage', cost=8500, avail="-", page_ref=462, subtype="Bike", skill_req=PILOT_GROUND_CRAFT)
+# CARS
+CN_JACKRABBIT = Vehicle('Chrysler-Nissan Jackrabbit', cost=10000, avail="-", page_ref=462, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+HONDA_SPIRIT = Vehicle('Honda Spirit', cost=12000, avail="-", page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+HYUNDAI_SHIN_HYUNG = Vehicle('Hyundai Shin-Hyung', cost=28500, avail="-", page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+EUROCAR_WESTWIND_3000 = Vehicle('Eurocar Westwind 3000', cost=110_000, avail=13, page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+FORD_AMERICAR = Vehicle('Ford Americar', cost=16000, avail="-", page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+SK_BENTLY_CONCORDAT = Vehicle('Saeder-Krupp-Bently Concordat', cost=65000, avail=10, page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+MITSUBISHI_NIGHTSKY = Vehicle('Mitsubishi Nightsky', cost=320_000, avail=16, page_ref=463, subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+# TRUCKS / VANS
+TOYOTA_GOPHER = Vehicle('Toyota Gopher', cost=25000, avail="-", page_ref=463, subtype="Truck", skill_req=PILOT_GROUND_CRAFT)
+GMC_BULLDOG = Vehicle('GMC Bulldog Step-Van', cost=35000, avail="-", page_ref=463, subtype="Truck", skill_req=PILOT_GROUND_CRAFT)
+ROVER_MODEL_2072 = Vehicle('Rover Model 2072', cost=68000, avail=10, page_ref=464, subtype="Truck", skill_req=PILOT_GROUND_CRAFT)
+ARES_ROADMASTER = Vehicle('Ares Roadmaster', cost=52000, avail=8, page_ref=464, subtype="Truck", skill_req=PILOT_GROUND_CRAFT)
+# BOATS
+SAMUVANI_CRISCRAFT_OTTER = Vehicle('Samuvani Criscraft Otter', cost=21000, avail="-", page_ref=464, subtype="Boat", skill_req=PILOT_WATERCRAFT)
+YONGKANG_GALA_TRINITY = Vehicle('Yongkang Gala Trinity', cost=37000, avail=7, page_ref=464, subtype="Boat", skill_req=PILOT_WATERCRAFT)
+MORGAN_CUTLASS = Vehicle('Morgan Cutlass', cost=96000, avail=14, legality=RESTRICTED, page_ref=464, subtype="Boat", skill_req=PILOT_WATERCRAFT)
+# SUBMARINES
+PROTEUS_LAMPREY = Vehicle('Proteus Lamprey', cost=14000, avail="-", page_ref=464, subtype="Submarine", skill_req=PILOT_WATERCRAFT)
+VULKAN_ELECTRONAUT = Vehicle('Vulkan Electronaut', cost=108_000, avail=10, page_ref=464, subtype="Submarine", skill_req=PILOT_WATERCRAFT)
+# FIXED-WING AIRCRAFT
+
         
 """
     LIFESTYLE
