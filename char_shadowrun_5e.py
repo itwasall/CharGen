@@ -33,8 +33,8 @@ def get_priorities(character: Core.Character):
         priority_chosen = random.choice(table_choices)
         table_choices.pop(table_choices.index(priority_chosen))
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[category][priority_chosen]
-    while selected_items['Resources'] == 6000:
-        get_priorities(character)
+    # while selected_items['Resources'] == 6000:
+    #    get_priorities(character)
     return selected_items
 
 
@@ -91,44 +91,76 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
         else:
             pass
 
+
+    list_of_skills_raw = [skill for skill in Core.Skill.items if skill.skill_type == "Active"]
+    list_of_groups_raw = [group for group in Core.SkillGroup.items]
+    weight_skills = [1 for _ in list_of_skills_raw]
+    weight_groups = [1 for _ in list_of_groups_raw]
+
+    list_of_skills = {}
+    list_of_groups = {}
+    for idx, i in enumerate(list_of_skills_raw):
+        list_of_skills[i] = weight_skills[idx]
+    for idx, i in enumerate(list_of_groups_raw):
+        list_of_groups[i] = weight_groups[idx]
+
+
+
+    if "builds" in kwargs:
+        if kwargs['builds']['IS_DECKER']:
+            for _ in range(2):
+                decker_skill = random.choice(Core.DECKER_SKILLS)
+                character_skills[decker_skill.name] = decker_skill
+                character_skills[decker_skill.name].rating += 1
+                list_of_skills[decker_skill] += 3
+            pass
+        if kwargs['builds']['IS_RIGGER']:
+            for _ in range(2):
+                rigger_skill = random.choice(Core.RIGGER_SKILLS)
+                character_skills[rigger_skill.name] = rigger_skill 
+                character_skills[rigger_skill.name].rating += 1
+                list_of_skills[rigger_skill] += 3
+            pass
+        if kwargs['builds']['IS_FACE']:
+            for _ in range(2):
+                face_skill = random.choice(Core.FACE_SKILLS)
+                character_skills[face_skill.name] = face_skill 
+                character_skills[face_skill.name].rating += 1
+                list_of_skills[face_skill] += 3
+            pass
+
     skill_points, group_points = skill_points_table
 
-
-    list_of_skills = [skill for skill in Core.Skill.items if skill.skill_type == "Active"]
-    list_of_groups = [group for group in Core.SkillGroup.items]
 
     # Non-magic users can't select magic skills/groups
     # Non-resonance users can't select resonance skills/group
     if ch.Magic is None:
-        for _ in Core.MAGIC_SKILLS:
-            list_of_skills.pop(list_of_skills.index(_))
-        for _ in Core.MAGIC_SKILL_GROUPS:
-            list_of_groups.pop(list_of_groups.index(_))
+        for sk in Core.MAGIC_SKILLS:
+            list_of_skills[sk] = 0
+        for sk in Core.MAGIC_SKILL_GROUPS:
+            list_of_groups[sk] = 0
 
     if ch.Resonance is None:
-        for _ in Core.RESONANCE_SKILLS:
-            list_of_skills.pop(list_of_skills.index(_))
-        list_of_groups.pop(list_of_groups.index(Core.TASKING))
+        for sk in Core.RESONANCE_SKILLS:
+            list_of_skills[sk] = 0
+        list_of_groups[Core.TASKING] = 0
 
-    weight_skills = [1 for _ in list_of_skills]
-    weight_groups = [1 for _ in list_of_groups]
 
     # Adjusting weights based on highest physical and mental attributes
     if attr_influence is not None:
         for attr in attr_influence:
-            skills_of_same_attribute = [s for s in list_of_skills if s.attribute.name == attr.name]
+            skills_of_same_attribute = [s for s in list_of_skills.keys() if s.attribute.name == attr.name]
             for i in skills_of_same_attribute:
-                weight_skills[list_of_skills.index(i)] += 3
+                list_of_skills[i] += 3
             for group in list_of_groups:
                 if group.skills[0].attribute == attr.name:
-                    weight_groups[list_of_groups.index(group)] += 3
+                    list_of_groups[group] += 3
 
     # Group Skill Points spend
     # for _ in range(group_points):
     while group_points > 0:
-        ROLL_GROUP = random.choices(list_of_groups, weight_groups)[0]
+        ROLL_GROUP = random.choices(list(list_of_groups.keys()), list(list_of_groups.values()))[0]
         for skill in ROLL_GROUP.skills:
-            # print(f"Roll group {ROLL_GROUP.name} processing {skill.name}")
             if skill.name not in character_skills.keys():
                 character_skills[skill.name] = skill
                 character_skills[skill.name].group = ROLL_GROUP.name
@@ -136,15 +168,14 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
             else:
                 character_skills[skill.name].rating += 1
         # Adjusting weights based on groups already selected
-        weight_groups[list_of_groups.index(ROLL_GROUP)] += random.randint(1, 2)
-        same_attribute_list = [s for s in list_of_skills if s.attribute == skill.attribute and s.name != skill.name]
+        list_of_groups[ROLL_GROUP] += random.randint(1, 2)
+        same_attribute_list = [s for s in list_of_skills.keys() if s.attribute == skill.attribute and s.name != skill.name]
         for same_attr in same_attribute_list:
-            weight_skills[list_of_skills.index(same_attr)] += random.randint(1, 3)
+            list_of_skills[same_attr] += random.randint(1, 3)
                 
         group_points -= 1
             
     # Individual Skill Points spend
-    # for _ in range(skill_points):
     while skill_points > 0:
         # Rolling for skill specialisations
         skills_for_spec = [d for k, d in character_skills.items() if d.rating > 4 and d.group == False]
@@ -154,13 +185,12 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
                 ROLL_SPEC = random.choice(skills_for_spec)
             ROLL_SPECIALISATION = random.choice(ROLL_SPEC.spec)
             if isinstance(character_skills[ROLL_SPEC.name].spec, list): 
-            # character_specialisations[ROLL_SPEC.name] = ROLL_SPECIALISATION
                 character_skills[ROLL_SPEC.name].spec = ROLL_SPECIALISATION
                 skill_points -=  1
             else:
                 pass
         
-        ROLL_SKILL = random.choices(list_of_skills, weight_skills)[0]
+        ROLL_SKILL = random.choices(list(list_of_skills.keys()), list(list_of_skills.values()))[0]
         non_grouped_skills_count = len([i for i in character_skills.keys() if character_skills[i].group == False])
         if ROLL_SKILL.name in character_skills.keys() and character_skills[ROLL_SKILL.name].group != False:
             pass
@@ -173,14 +203,14 @@ def get_skills(ch: Core.Character, tbl, skill_cap = 50, attr_influence = None, *
                 continue
             character_skills[ROLL_SKILL.name].rating += 1
             # Adjusting weights based on skills already selected
-            match weight_skills[list_of_skills.index(ROLL_SKILL)]:
+            match list_of_skills[ROLL_SKILL]:
                 case 1,2,3:
-                    weight_skills[list_of_skills.index(ROLL_SKILL)] += random.randint(1,5)
+                    list_of_skills[ROLL_SKILL] += random.randint(1, 5)
                 case _:
-                    weight_skills[list_of_skills.index(ROLL_SKILL)] += random.randint(1,2)
+                    list_of_skills[ROLL_SKILL] += random.randint(1,2)
             same_attribute_list = [skill for skill in list_of_skills if skill.attribute == ROLL_SKILL.attribute and skill.name != ROLL_SKILL.name]
             for same_attr in same_attribute_list:
-                weight_skills[list_of_skills.index(same_attr)] += random.randint(1, 3)
+                list_of_skills[same_attr] += random.randint(1, 3)
             else:
                 pass
             skill_points -= 1
@@ -384,10 +414,6 @@ def format_skills(character_skills):
         print("ACTIVE SKILLS")
         print("    by Group/Rating:")
         for k, d in character_skills.items():
-            if d.attribute.name not in output_by_attr.keys():
-                output_by_attr[d.attribute.name] = [d.name]
-            else:
-                output_by_attr[d.attribute.name].append(d.name)
             if d.group != False:
                 if d.group not in output_by_group.keys():
                     output_by_group[d.group] = {}
@@ -413,11 +439,19 @@ def format_skills(character_skills):
                 print(rating, output_by_group[group][rating])
 
     def format_skills_attribute():
+        character_skill_attributes = list(dict.fromkeys([character_skills[skill].attribute.name for skill in character_skills.keys()]))
+        output_by_attr = {attr: [s for s in character_skills.keys() if character_skills[s].attribute.name == attr] for attr in character_skill_attributes}
         print("===")
         print("    by Attribute:")
         print("===")
+        sorted(output_by_attr)
 
         for attr in output_by_attr.keys():
+            # for idx, skill in enumerate(output_by_attr[attr]):
+                # if isinstance(skill, Core.MeleeWeapon):
+                    # output_by_attr[attr][skill] = output_by_attr[attr][skill].name
+            # if Core.MeleeWeapon in [skill for skill in output_by_attr[attr]]:
+            #    output_by_attr[attr][idx] = output_by_attr[attr][idx].name 
             print(f'---> {attr}')
             print(", ".join([skill for skill in output_by_attr[attr]]))
 
@@ -444,7 +478,7 @@ def buy_gear(ch: Core.Character, nuyen: int):
 def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
     match s.name:
         case "Exotic Melee Weapon":
-            exotic_melee_weapon = random.choice([i for i in Core.MeleeWeapon.items if hasattr(i, "subtype") and i.subtype=="Exotic"])
+            exotic_melee_weapon = random.choice([i for i in Core.MeleeWeapon.items if hasattr(i, "subtype") and i.subtype=="Exotic Melee Weapon"])
             print(exotic_melee_weapon)
             ch.Skills['Active'][f"{s.name}"].name = exotic_melee_weapon
             print(ch.Skills['Active'][f"Exotic Melee Weapon"])
@@ -496,12 +530,29 @@ def generate_character():
     # STEP 3: MAGIC/RESONANCE
     magic_reso = priority_table['MagicResonance']
     resolve_magic_resonance(character, magic_reso)
+    # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
+    IS_DECKER = False
+    IS_RIGGER = False
+    IS_FACE = False
+    alt_builds = ['Decker', 'Rigger', 'Face', None]
+    if priority_table['MagicResonance'] is None:
+        build = random.choices(alt_builds, [1, 1, 1, 5])
+        if build == 'Decker':
+            IS_DECKER = True
+            print(f'Character is decker')
+        elif build == 'Rigger':
+            IS_RIGGER = True
+            print('Character is rigger')
+        elif build == 'Face':
+            IS_FACE = True
+            print('Character is face')
+    skill_builds = {'IS_DECKER': IS_DECKER, 'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
     # STEP 4: QUALITIES
     karma_qualities(character)
     print(character.Qualities)
     print(character.Spells)
     # STEP 5: SKILLS
-    character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20)
+    character.Skills['Active'] = get_skills(character, priority_table, attr_influence=highest_attrs, skill_cap=20, builds=skill_builds)
     if 'Exotic Melee Weapon' in character.Skills['Active']:
         character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     format_skills(character.Skills['Active'])
@@ -562,4 +613,4 @@ print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
 print(SINGLE_SENSOR.sensor_function)
 """
 # generate_character()
-alt_generate_character()
+generate_character()
