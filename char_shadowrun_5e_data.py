@@ -486,6 +486,18 @@ class AugmentationGrade(AbstractBaseClass):
         super().__init__(name, **kwargs)
         AugmentationGrade.items.append(self)
 
+class KarmaLogger():
+    def __init__(self):
+        self.logs = []
+        self.index = 0
+
+    def __repr__(self):
+        return "\n".join(self.logs)
+
+    def append(self, item):
+        self.index += 1
+        self.logs.append(f'[{self.index}] {item}')
+
 """
     ATTRIBUTES
 """

@@ -261,11 +261,12 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl):
     return skills
 
 
-def karma_qualities(ch: Core.Character):
+def karma_qualities(ch: Core.Character, k: Core.KarmaLogger):
     ch.Qualities = {}
     total_karma = 25
     positive_karma = 0
     negative_karma = 0
+    k.append(f'Beginning karma logging.\n   {total_karma} is Karma total') 
     NEGATIVE_TOO_HIGH = False
     POSITIVE_TOO_HIGH = False
     quality_weights = [1 for _ in Core.Quality.items]
@@ -298,19 +299,23 @@ def karma_qualities(ch: Core.Character):
         if hasattr(ROLL_KARMA, "negative"):
             if negative_karma + ROLL_KARMA.cost > 25:
                 NEGATIVE_TOO_HIGH = True
+                continue
                 # continue
         # Positive qualities cannot total more than ABS(25)
         elif positive_karma + ROLL_KARMA.cost > 25:
             POSITIVE_TOO_HIGH = True
+            continue
             # continue
         if total_karma - ROLL_KARMA.cost < 0 or (NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
             continue
         if hasattr(ROLL_KARMA, "negative"):
             negative_karma += ROLL_KARMA.cost
             total_karma += ROLL_KARMA.cost
+            k.append(f'(NEG) {ROLL_KARMA.name} has been bought. Costing {ROLL_KARMA.cost}.\n   {total_karma} is Karma total.\n   Negative Karma is at {negative_karma}')
         else:
             positive_karma += ROLL_KARMA.cost
             total_karma -= ROLL_KARMA.cost
+            k.append(f'(POS) {ROLL_KARMA.name} has been bought. Costing {ROLL_KARMA.cost}.\n   {total_karma} is Karma total\n   Positive Karma is at {positive_karma}')
 
         # Pretty output & roll for quality specific params here
         ROLL_KARMA = resolve_quality(ROLL_KARMA, ch)
@@ -440,7 +445,19 @@ def format_skills(character_skills):
 
     def format_skills_attribute():
         character_skill_attributes = list(dict.fromkeys([character_skills[skill].attribute.name for skill in character_skills.keys()]))
-        output_by_attr = {attr: [s for s in character_skills.keys() if character_skills[s].attribute.name == attr] for attr in character_skill_attributes}
+        output_by_attr = {
+                'Body': None, 'Agility': None, 'Strength': None, 'Reaction': None,
+                'Logic': None, 'Willpower': None, 'Intuition': None, 'Charisma': None,
+                'Magic': None, 'Resonance': None
+        }
+        for key in list(output_by_attr.keys()):
+            attribute_skills = [s for s in character_skills.keys() if character_skills[s].attribute.name == key]
+            if len(attribute_skills) == 0:
+                output_by_attr.pop(key)
+            else:
+                output_by_attr[key] = attribute_skills
+
+        # output_by_attr = {attr: [s for s in character_skills.keys() if character_skills[s].attribute.name == attr] for attr in character_skill_attributes}
         print("===")
         print("    by Attribute:")
         print("===")
@@ -452,20 +469,12 @@ def format_skills(character_skills):
                     # output_by_attr[attr][skill] = output_by_attr[attr][skill].name
             # if Core.MeleeWeapon in [skill for skill in output_by_attr[attr]]:
             #    output_by_attr[attr][idx] = output_by_attr[attr][idx].name 
+            # else:
             print(f'---> {attr}')
-            print(", ".join([skill for skill in output_by_attr[attr]]))
-
-    def format_magic_resonance_skills():
-        print("===")
-        print("    Magic:")
-        print(", ".join([skill for skill in character_skills.keys() if skill in [i.name for i in Core.MAGIC_SKILLS]]))
-        print("===")
-        print("    Resonance:")
-        print(", ".join([skill for skill in character_skills.keys() if skill in [i.name for i in Core.RESONANCE_SKILLS]]))
+            print(", ".join([f'{skill} ({character_skills[skill].rating})' for skill in output_by_attr[attr]]))
 
     format_skills_group_rating()
     format_skills_attribute()
-    format_magic_resonance_skills()
 
 
 def buy_gear(ch: Core.Character, nuyen: int):
@@ -479,15 +488,14 @@ def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
     match s.name:
         case "Exotic Melee Weapon":
             exotic_melee_weapon = random.choice([i for i in Core.MeleeWeapon.items if hasattr(i, "subtype") and i.subtype=="Exotic Melee Weapon"])
-            print(exotic_melee_weapon)
             ch.Skills['Active'][f"{s.name}"].name = exotic_melee_weapon
-            print(ch.Skills['Active'][f"Exotic Melee Weapon"])
             # ch.Skills['Active'].pop(s.name)
     return ch
 
 
 
 def generate_character():
+    karma_log = Core.KarmaLogger()
     # PHASE 1: CONCEPT
     character = Core.Character()
     priority_table = get_priorities(character)
@@ -548,7 +556,7 @@ def generate_character():
             print('Character is face')
     skill_builds = {'IS_DECKER': IS_DECKER, 'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
     # STEP 4: QUALITIES
-    karma_qualities(character)
+    karma_qualities(character, karma_log)
     print(character.Qualities)
     print(character.Spells)
     # STEP 5: SKILLS
@@ -566,6 +574,8 @@ def generate_character():
     print("character karma is ", character.Karma)
     print(nuyen)
     buy_gear(character, nuyen)
+    print('Karma logs:')
+    print(karma_log)
                 
     # Attribute Points
 
@@ -595,22 +605,4 @@ def alt_generate_character():
     print(character_focus)
     print(selected_items['MagicResonance'])
 
-
-
-
-
-
-"""
-print(STRENGTH.what_is())
-print(BIOTECHNOLOGY.what_is())
-print(THROWING.what_is())
-print(ELF.what_is())
-print(STREETSAMURAI.what_is())
-print(DEFINANCE_EX_SHOCKER.what_is())
-print(DEFINANCE_EX_SHOCKER.damage)
-print(SENSOR_RFID.category)
-print([f"{i}" for i in dir(SINGLE_SENSOR) if not i.startswith("__")])
-print(SINGLE_SENSOR.sensor_function)
-"""
-# generate_character()
 generate_character()
