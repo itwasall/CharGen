@@ -10,7 +10,7 @@ def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
 
 
-def get_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
+def get_item_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
     if "rating" in kwargs:
         return kwargs['rating']
     elif "rating" not in attrAsDict(item).keys():
@@ -77,18 +77,25 @@ def list_handler(l: list, item, arg=-1, **kwargs):
     if l[0] == "Rating":
         # Catches if item doesn't have rating attribute
         if not hasattr(item, "rating"):
-            raise AttributeError(f"{item.name} has no 'rating' attribute despite mention in {l}")
+            if hasattr(item, "requires") and item.requires[0] == 'Category':
+                random_requirement = random.choice([i for i in Core.Gear.items if i.category == item.requires[1]])
+                r1 = get_item_rating(random_requirement, **kwargs)
+            elif hasattr(item, "requires") and item.requires[0] == 'Subtype':
+                random_requirement = random.choice([i for i in Core.Gear.items if i.subtype == item.requires[1]])
+                r1 = get_item_rating(random_requirement, **kwargs)
+            else:
+                raise AttributeError(f"{item.name} has no 'rating' attribute despite mention in {l}")
         # If item.rating is an integar, pass that on
-        if isinstance(item.rating, int):
+        elif isinstance(item.rating, int):
             r1 = item.rating
         elif arg != -1:
             if arg in [DEFAULT_MAX_AVAILABILITY, DEFAULT_MAX_RATING]:
-                item.rating = get_rating(item, **kwargs)
+                item.rating = get_item_rating(item, **kwargs)
                 r1 = item.rating
             else:
                 pass
         else:
-            item.rating = get_rating(item, **kwargs)
+            item.rating = get_item_rating(item, **kwargs)
             r1 = item.rating
         if len(l) == 1:
             return r1
@@ -109,6 +116,11 @@ def list_handler(l: list, item, arg=-1, **kwargs):
             raise AttributeError(f"{item.name} has a dependant cost variable but nothing to depend on!")
         if arg != -1 and isinstance(arg, Core.Firearm):
             r1 = get_item_cost(arg)
+        elif "random" in kwargs:
+            if hasattr(item, "requires") and item.requires[0] == 'Category':
+                r1 = get_item_cost([i for i in Core.Gear.items if i.category == item.requires[1]])
+            elif hasattr(item, "requires") and item.requires[0] == 'Subtype':
+                r1 = get_item_cost([i for i in Core.Gear.items if i.subtype == item.requires[1]])
         else:
             raise ValueError("WeaponCost fuckery")
 
@@ -291,9 +303,23 @@ def get_vehicle(**kwargs):
         vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
     return vehicle
 
-print(f"Random vehicle: {get_vehicle(any=True)}")
-print(f"Groundcraft vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True)}")
-print(f"Groundcraft road vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True, veh_type='road')}")
-print(f"Aircraft vehicle: {get_vehicle(skill_req=Core.PILOT_AIRCRAFT.name, any=True)}")
-print(f"Walker vehicle: {get_vehicle(skill_req=Core.PILOT_WALKER.name, any=True)}")
-print(f"Watercraft vehicle: {get_vehicle(skill_req=Core.PILOT_WATERCRAFT.name, any=True)}")
+if __name__ == "__main__":
+    def test_vehs():
+        print(f"Random vehicle: {get_vehicle(any=True)}")
+        print(f"Groundcraft vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True)}")
+        print(f"Groundcraft road vehicle: {get_vehicle(skill_req='Pilot Ground Craft', any=True, veh_type='road')}")
+        print(f"Aircraft vehicle: {get_vehicle(skill_req=Core.PILOT_AIRCRAFT.name, any=True)}")
+        print(f"Walker vehicle: {get_vehicle(skill_req=Core.PILOT_WALKER.name, any=True)}")
+        print(f"Watercraft vehicle: {get_vehicle(skill_req=Core.PILOT_WATERCRAFT.name, any=True)}")
+
+    def run_through_gear(**kwargs):
+        for idx, gear in enumerate(Core.Gear.items):
+            print(f'[{idx}/{len(Core.Gear.items)}] {gear}')
+            print('Cost:', get_item_cost(gear, **kwargs))
+            print('Availabilty:', get_item_avail(gear, **kwargs))
+            print('Rating:', get_item_rating(gear, **kwargs))
+
+    run_through_gear(random=True)
+    # test_vehs()
+    
+
