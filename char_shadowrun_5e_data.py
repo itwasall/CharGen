@@ -197,6 +197,47 @@ class Character:
             case 3:
                 self.Resonance=None
 
+class Contact:
+    def __init__(self, skill_pool, k_skill_pool, uses, meetups):
+        self.name = name
+        self.attributes = {'Body': 0, 'Agility': 0, 'Reaction': 0, 'Strength': 0,
+                           'Logic': 0, 'Willpower': 0, 'Intuition': 0, 'Charisma': 0}
+        # Rolling for attribute values
+        values = [random.randint(2,5) for _ in range(8)]
+        #    Then ensures only one attribute value can be a 5. Chooses randomly
+        while values.count(5) > 1:
+            values[random.choice([values.index(i) for i in values if i == 5])] -= 1
+            
+        for idx, attr in enumerate(self.attributes):
+            self.attributes[attr] = values[idx]
+
+        self.special_attrs = {'Edge': random.randint(2,3), 'Essence': 6}
+        self.skills = self.get_skills(skill_pool)
+        self.knowledge_skills = self.get_skills(k_skill_pool)
+
+        self.uses = uses
+        self.meetups = meetups
+
+    def get_skills(self, potential_skills):
+        skill_dict = {}
+        no_of_skills = random.randint(4,9)
+        if no_of_skills > len(poential_skills):
+            for skill in potential_skills:
+                skill_dict[skill] = random.randint(3, 6)
+        for _ in range(no_of_skills):
+            while True:
+                skill = random.choice(potential_skills)
+                if skill in skill_dict.keys():
+                    continue
+                else:
+                    skill_dict[skill] = random.randint(3, 6)
+                    break
+        return skill_dict
+
+    def __repr__(self):
+
+
+
 
 class AbstractBaseClass:
     def __init__(self, name, **kwargs):
