@@ -320,7 +320,7 @@ class SkillGroup(AbstractBaseClass):
 
 class Contact(AbstractBaseClass):
     items = []
-    def __init__(self, name, metatype, limits, age, sex, attr_values, skills, **kwargs):
+    def __init__(self, name, metatype, connection, limits, age, sex, attr_values, skills, **kwargs):
         Contact.items.append(self)
         self.metatype = metatype
         self.age = self.roll_age(age)
@@ -328,6 +328,7 @@ class Contact(AbstractBaseClass):
         self.attributes = Attributes(attr_values)
         self.skills = self.resolve_skills(skills)
         self.limits = {'Physical': limits[0], 'Mental': limits[1], 'Social': limits[2]}
+        self.connection_rating = connection
         super().__init__(name, **kwargs)
 
     def resolve_skills(self, skills):
@@ -986,7 +987,7 @@ arg order is:
     name, cost, page_ref, avail, subtype, kwargs
 """
 # =============== TASERS =================
-DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", cost=250, page_ref=424, avail=0, subtype="Taser", damage=[9, STUN, ELECTRICAL], mods=None)
+DEFINANCE_EX_SHOCKER = Firearm("Definance EX Shocker", cost=250, page_ref=424, avail=0, subtype="Taser", damage=[9, DMG_STUN, DMG_ELECTRICAL], mods=None)
 YAMAHA_PULSAR = Firearm("Yamaha Pulsar", cost=180, page_ref=424, avail=0, subtype="Taser", mods=None)
 # =============== HOLD-OUTS ==============
 FINCHETTI_TIFFANI_NEEDLER = Firearm("Finchetti Tiffani Needler", cost=1000, page_ref=425, avail=5, legality=RESTRICTED, subtype="Hold-Out", mods=None)
@@ -1737,52 +1738,62 @@ AUG_GRADES = [i for i in AugmentationGrade.items]
 """
     CONTACTS
 """
-ARMS_DEALER = Contact('Arms Dealer', attr_values=[3, 3, 5, 3, 4, 3, 3, 4, 6, 2], skills={ARMORER: 4, COMPUTER: 3, ETIQUETTE: [4, 'Corporate'], FIREARMS: 4, GUNNERY: 3, INSTRUCTION: 2, NEGOTIATION: 5, PERCEPTION: 4}, knowledge_skills = {'Chemistry': 4, 'Firearms': 4, 'Mercenary Groups': 4}, metatype=HUMAN, sex='Male', age='Middle Aged', condition_mod = [10, 10], limits = [5, 5, 5], page_ref='182 RF')
-BARTENDER = Contact('Bartender', attr_values=[3, 4, 3, 3, 4, 3, 4, 5, 6, 1], skills={AUTOMATICS: 1, CLUBS: 3, ETIQUETTE: [4, 'Street Gangs'], INTIMIDATION: 2, NEGOTIATION: 3}, knowledge_skills={'Alcohol': 4, 'Media Stars': 4, 'Sports': 4, 'Street Rumors': 2}, metatype=ELF, sex='Male', age='Middle-Aged', condition_mod=[10, 10], limits=[4, 5, 7], page_ref='182 RF',)
-BOOKIE = Contact('Bookie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-BORDER_PATROL_AGENT = Contact('Border_patrol_agent', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-BOUNTY_HUNTER_CONT = Contact('Bounty_hunter_cont', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CHOP_SHOP_MECHANIC = Contact('Chop_shop_mechanic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CHURCH_PASTOR = Contact('Church_pastor', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CITY_OFFICAL = Contact('City_offical', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CLUB_KID = Contact('Club_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-COMPANY_SUIT = Contact('Company_suit', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CON_FANATIC = Contact('Con_fanatic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CORPORATE_ADMINISTRATOR = Contact('Corporate_administrator', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CORPORATE_WAGESLAVE = Contact('Corporate_wageslave', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-COYOTE = Contact('Coyote', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-CYBERNETIC_TECHNICIAN = Contact('Cybernetic_technician', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-GOVERNMENT_OFFICIAL = Contact('Government_official', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-GANG_BOSS = Contact('Gang_boss', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-ID_MANUFACTURER = Contact('Id_manufacturer', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-INFORMANT = Contact('Informant', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-INTERNATIONAL_COURIER = Contact('International_courier', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-LONE_STAR_DETECTIVE = Contact('Lone_star_detective', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-KNIGHT_ERRANT_DISPATCHER = Contact('Knight_errant_dispatcher', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-MAFIA_CONSIGLIERE = Contact('Mafia_consigliere', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-MEDIA_MOGUL = Contact('Media_mogul', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-METAHUMAN_RIGHTS_ACTIVIST = Contact('Metahuman_rights_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-NEWS_REPORTER = Contact('News_reporter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-PARAZOOLOGIST = Contact('Parazoologist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-PAWN_BROKER = Contact('Pawn_broker', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-PHARMACY_TECH = Contact('Pharmacy_tech', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-POPULAR_MEFEED_PERSONALITY = Contact('Popular_mefeed_personality', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-RECICLADORE = Contact('Recicladore', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-RENT_A_COP = Contact('Rent_a_cop', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-ROCKSTAR = Contact('Rockstar', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-SAFEHOUSE_MASTER = Contact('Safehouse_master', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-SCRIPT_KIDDIE = Contact('Script_kiddie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-SPRAWL_GANGER = Contact('Sprawl_ganger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-SQUATTER = Contact('Squatter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-STORE_OWNER = Contact('Store_owner', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-STREET_DOC = Contact('Street_doc', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-STREET_KID = Contact('Street_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-TALISMONGER = Contact('Talismonger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-TAXI_DRIVER = Contact('Taxi_driver', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-TERRAFIRST_ACTIVIST = Contact('Terrafirst_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-TRID_PIRATE = Contact('Trid_pirate', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-USED_CAR_SALESMAN = Contact('Used_car_salesman', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
-
+"""
+ARMS_DEALER = Contact('Arms Dealer', attr_values=[3, 3, 5, 3, 4, 3, 3, 4, 6, 2], skills={ARMORER: 4, COMPUTER: 3, ETIQUETTE: [4, 'Corporate'], FIREARMS: 4, GUNNERY: 3, INSTRUCTION: 2, NEGOTIATION: 5, PERCEPTION: 4}, knowledge_skills = {'Chemistry': 4, 'Firearms': 4, 'Mercenary Groups': 4}, metatype=HUMAN, sex='Male', age='Middle Aged', condition_mon = [10, 10], limits = [5, 5, 5], page_ref='182 RF', connection=4, type='Swag', payment='Barter (Hobby/Vice items)', hobbies_vices='Weapons (Military)', personal_life='Divorced')
+BARTENDER = Contact('Bartender', attr_values=[3, 4, 3, 3, 4, 3, 4, 5, 6, 1], skills={AUTOMATICS: 1, CLUBS: 3, ETIQUETTE: [4, 'Street Gangs'], INTIMIDATION: 2, NEGOTIATION: 3}, knowledge_skills={'Alcohol': 4, 'Media Stars': 4, 'Sports': 4, 'Street Rumors': 2}, metatype=ELF, sex='Male', age='Middle-Aged', condition_mon=[10, 10], limits=[4, 5, 7], page_ref='182 RF', connection=1, payment='Cash (Credstick)', hobbies_vice='Entertainment (trid show "Odd Coven")', personal_life='None of your damn business')
+BODYGUARD = Contact('Bodyguard', attr_values=[4, 3, 4, 4, 3, 3, 3, 2, 6, 2], skills={ETIQUETTE: [2: 'Corporate'], LEADERSHIP: 2, PERCEPTION: 3, PISTOLS: 4, RUNNING: 2, UNARMED_COMBAT: 4}, knowledge_skills=None, metatype=HUMAN, sex='Female', age='Young', condition_mon=[10, 10], limits=[6,4,5], page_ref='182 RF', connection=2, type='Support', payment='Cash (Credstick)', hobbies_vice='Social Habit (cigarettes)', personal_life='In a relationship'),
+BOOKIE = Contact('Bookie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+BORDER_PATROL_AGENT = Contact('Border_patrol_agent', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+BOUNTY_HUNTER_CONT = Contact('Bounty_hunter_cont', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CHOP_SHOP_MECHANIC = Contact('Chop_shop_mechanic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CHURCH_PASTOR = Contact('Church_pastor', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CITY_OFFICAL = Contact('City_offical', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CLUB_KID = Contact('Club_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+COMPANY_SUIT = Contact('Company_suit', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CON_FANATIC = Contact('Con_fanatic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CORPORATE_ADMINISTRATOR = Contact('Corporate_administrator', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CORPORATE_WAGESLAVE = Contact('Corporate_wageslave', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+COYOTE = Contact('Coyote', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+CYBERNETIC_TECHNICIAN = Contact('Cybernetic_technician', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+GOVERNMENT_OFFICIAL = Contact('Government_official', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+GANG_BOSS = Contact('Gang_boss', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+ID_MANUFACTURER = Contact('Id_manufacturer', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+INFORMANT = Contact('Informant', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+INTERNATIONAL_COURIER = Contact('International_courier', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+LONE_STAR_DETECTIVE = Contact('Lone_star_detective', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+KNIGHT_ERRANT_DISPATCHER = Contact('Knight_errant_dispatcher', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+MAFIA_CONSIGLIERE = Contact('Mafia_consigliere', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+MEDIA_MOGUL = Contact('Media_mogul', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+METAHUMAN_RIGHTS_ACTIVIST = Contact('Metahuman_rights_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+NEWS_REPORTER = Contact('News_reporter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+PARAZOOLOGIST = Contact('Parazoologist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+PAWN_BROKER = Contact('Pawn_broker', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+PHARMACY_TECH = Contact('Pharmacy_tech', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+POPULAR_MEFEED_PERSONALITY = Contact('Popular_mefeed_personality', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+RECICLADORE = Contact('Recicladore', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+RENT_A_COP = Contact('Rent_a_cop', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+ROCKSTAR = Contact('Rockstar', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+SAFEHOUSE_MASTER = Contact('Safehouse_master', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+SCRIPT_KIDDIE = Contact('Script_kiddie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+SPRAWL_GANGER = Contact('Sprawl_ganger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+SQUATTER = Contact('Squatter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+STORE_OWNER = Contact('Store_owner', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+STREET_DOC = Contact('Street_doc', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+STREET_KID = Contact('Street_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+TALISMONGER = Contact('Talismonger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+TAXI_DRIVER = Contact('Taxi_driver', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+TERRAFIRST_ACTIVIST = Contact('Terrafirst_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+TRID_PIRATE = Contact('Trid_pirate', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+USED_CAR_SALESMAN = Contact('Used_car_salesman', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mon=None, limits=None, page_ref=None, connection=,)
+"""
+CONTACTS = [
+    'Arms Dealer', 'Bartender', 'Bodyguard', 'Bookie', 'Border Patrol Agent', 'Bounty Hunter', 'Chop Shop Mechanic', 'Church Pastor', 'City Official', 'Club Kid', 
+    'Company Suit', 'Con Fanatic', 'Corporate Administrator', 'Corporate Wageslave', 'Coyote', 'Cybernetic Technician', 'Government Official', 'Gang Boss', 'ID Manufacturer',
+    'Informant', 'International Courier', 'Lone Star Detective', 'Knight Errant Dispatcher', 'Mafia Consigliere', 'Media Mogul', 'Metahuman Rights Activitst',
+    'News Reporter', 'Parazoologist', 'Pawn Broker', 'Pharmacy Tech', 'Popular Mefeed Personality', 'Recicladore', 'Rent-a-Cop', 'Rockstar', 'Safehouse Master',
+    'Script Kiddie', 'Sprawl Ganger', 'Squatter', 'Store Owner', 'Street Doc', 'Street Kid', 'Talismonger', 'Taxi Driver', 'Terrafirst! Activitst', 'Trid Pirate',
+    'Used Car Salesman'
+]
 
 """
     PRIORITY TABLE
