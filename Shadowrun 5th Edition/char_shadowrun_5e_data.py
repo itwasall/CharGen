@@ -24,7 +24,7 @@ class Attribute:
                 return ValueError("Attribute cannot get type due to bad name")
 
 class Attributes:
-    def __init__(self):
+    def __init__(self, input_values = None):
         self.Body = Attribute('Body')
         self.Agility = Attribute('Agility')
         self.Reaction = Attribute('Reaction')
@@ -35,15 +35,32 @@ class Attributes:
         self.Willpower = Attribute('Willpower')
         self.Edge = Attribute('Edge')
         self.Essence = Attribute('Essence')
-        self.List = [self.Body, self.Agility, self.Reaction, self.Strength, self.Charisma, self.Intuition, self.Logic, self.Willpower, self.Edge, self.Essence]
+        self.Magic = Attribute('Magic')
+        self.Resonance = Attribute('Resonance')
+        self.List = [self.Body, self.Agility, self.Reaction, self.Strength, self.Charisma, self.Intuition, self.Logic, self.Willpower, self.Essence, self.Edge, self.Magic, self.Resonance]
+        self.init_stat_block(input_values)
 
-    def init_stat_block(self):
+    def init_stat_block(self, input_values = None):
+        if isinstance(input_values, list):
+            for idx, attribute in enumerate(self.List):
+                try:
+                    attribute.value = input_values[idx]
+                except IndexError:
+                    attribute.value = 0
+
+        elif isinstance(input_values, dict):
+            for key in input_values.keys():
+                for attribute in self.List:
+                    if key == attribute.name:
+                        attribute.value = input_values[key]
         for attribute in self.List:
-            if attribute.name != "Essence":
+            if attribute.name not in  ["Essence", 'Magic', 'Resonance']:
                 attribute.value = 1
                 attribute.limit = 6
-            else:
+            elif attribute.name == 'Essence':
                 attribute.value = 6
+            else:
+                attribute.value = 0
 
     def __repr__(self):
         return str([i.__repr__() for i in self.List])
@@ -220,10 +237,16 @@ class Contact:
             11: 'Extremely well-connected worldwide, with significant social influence; mid-level executive position in a major national government or AAA megacorporation',
             12: 'Global power-player with extensive social influence; holds a key executive position in a major national government or AAA megacorporation'
             }
-    def __init__(self, name):
+    items = []
+    def __init__(self, name, skills = {}, attr_values = None, **kwargs):
+        Contact.items.append(self)
         self.name = name
         self.connection = 1
         self.loyalty = 1
+        self.skills = skills
+        self.attributes = Attributes(attr_values)
+        for k, d in kwargs.items():
+            self.__setattr__(k, d)
 
 def gen_quick_contact():
     gender = random.choice(['male', 'female'])
@@ -236,7 +259,7 @@ def gen_quick_contact():
         metatype = 'Human'
     types_of_payment = ['Cash (Hard Currency)', 'Service (Drek Jobs)', 'Cash (Corp Scrip)', 'Barter (Items needed for the profession)', 'Service (Shadowrunner Job)', 'Cash (Credstick)', 'Cash (Credstick)', 'Barter (Easy-to-sell Items)', 'Service (Free-labor Jobs)', 'Barter (Hobby/Vice Items)', 'Cash (ECC or other Foreign Electronic Currency)']
     accepted_payment = [random.choice(types_of_payment) for _ in range(2)]
-
+    personal_life = random.choice(['Single', 'In Relationship', 'Familial Relationship', 'Divorced', 'Widowed', 'None of your damn business'])
 
 
 class AbstractBaseClass:
@@ -1723,6 +1746,14 @@ AUG_GRADE_DELTAWARE = AugmentationGrade('Deltaware', cost=2.5, avail=8, essence=
 AUG_GRADE_USED = AugmentationGrade('Used', cost=0.75, avail=-4, essence=1.25)
 
 AUG_GRADES = [i for i in AugmentationGrade.items]
+
+"""
+    CONTACTS
+"""
+ARMS_DEALER = Contact('Arms Dealer', attr_values=[3, 3, 5, 3, 4, 3, 3, 4, 6, 2], skills={
+    ARMORER: 4, COMPUTER: 3, ETIQUETTE: 4, FIREARM: 4, GUNNERY: 3, INSTRUCTION: 2, NEGOTIATION: 5, PERCEPTION: 4
+    }, knowledge_skills = {}, metatype='Human', sex='Male', age='Middle Aged')
+
 """
     PRIORITY TABLE
 """
