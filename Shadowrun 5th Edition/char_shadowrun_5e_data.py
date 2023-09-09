@@ -40,7 +40,7 @@ class Attributes:
         self.List = [self.Body, self.Agility, self.Reaction, self.Strength, self.Charisma, self.Intuition, self.Logic, self.Willpower, self.Essence, self.Edge, self.Magic, self.Resonance]
         self.init_stat_block(input_values)
 
-    def init_stat_block(self, input_values = None):
+    def init_stat_block(self, input_values):
         if isinstance(input_values, list):
             for idx, attribute in enumerate(self.List):
                 try:
@@ -53,14 +53,15 @@ class Attributes:
                 for attribute in self.List:
                     if key == attribute.name:
                         attribute.value = input_values[key]
-        for attribute in self.List:
-            if attribute.name not in  ["Essence", 'Magic', 'Resonance']:
-                attribute.value = 1
-                attribute.limit = 6
-            elif attribute.name == 'Essence':
-                attribute.value = 6
-            else:
-                attribute.value = 0
+        else:
+            for attribute in self.List:
+                if attribute.name not in  ["Essence", 'Magic', 'Resonance']:
+                    attribute.value = 1
+                    attribute.limit = 6
+                elif attribute.name == 'Essence':
+                    attribute.value = 6
+                else:
+                    attribute.value = 0
 
     def __repr__(self):
         return str([i.__repr__() for i in self.List])
@@ -214,52 +215,6 @@ class Character:
             case 3:
                 self.Resonance=None
 
-class Contact:
-    LOYALTY_RATINGS = {
-            1: 'Just Biz. The relationship is purely mercenary, based solely on economics The people involved may not even like each other, and they won’t offer any sort of preferential treatment',
-            2: 'Regular. The relationship is still all business, but the parties treat each other with a modicum of mutual respect',
-            3: 'Acquaintance. The people in the relationship are friendly, but calling them actual friends might be stretching it The contact is willing to be inconvenienced in small ways for the character but won’t take a fall for him',
-            4: 'Buddy. There’s actual friendship here, or at least solid mutual respect The contact will go out of his way for the character if needed',
-            5: 'Got Your Back. The parties know and trust each other, and have for some time The contact will back the character even in risky situations',
-            6: 'Friend for Life. The contact and character will go to the wall for each other, if that’s what it takes'
-            }
-    CONNECTION_RATINGS = {
-            1: 'Virtually no social influence; useful only for their Knowledge skills',
-            2: 'Has one or two friends with some Knowledge skills, or some minor social influence',
-            3: 'Has a few friends, but not a lot of social influence',
-            4: 'Knows several people in a neighborhood; a borough mayor or a gang leader',
-            5: 'Knows several people and has a moderate degree of social influence; a city councilman or a low-level executive it a small-to-medium corporation',
-            6: 'Known and connected across his state; a city/sprawl mayor or governor, notable fixer, or a mid-level executive in a medium-sized corporation',
-            7: 'Knows a lot of people over a large area, and has considerable social influence; often holds a leadership position in a national corporation',
-            8: 'Well-connected across a multi-state region; an executive in a state government or a national corporation',
-            9: 'Well-connected on his own continent, with considerable social influence; a mid-level executive in a small national government or AA megacorporation',
-            10: 'Well-connected worldwide, with significant social influence; a senior executive in a small national government or a AA megacorporation',
-            11: 'Extremely well-connected worldwide, with significant social influence; mid-level executive position in a major national government or AAA megacorporation',
-            12: 'Global power-player with extensive social influence; holds a key executive position in a major national government or AAA megacorporation'
-            }
-    items = []
-    def __init__(self, name, skills = {}, attr_values = None, **kwargs):
-        Contact.items.append(self)
-        self.name = name
-        self.connection = 1
-        self.loyalty = 1
-        self.skills = skills
-        self.attributes = Attributes(attr_values)
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
-
-def gen_quick_contact():
-    gender = random.choice(['male', 'female'])
-    age_range = random.choice([[18, 34], [35, 55], [55, 100]])
-    age = random.randint(age_range[0], age_range[1])
-    is_metatype = random.choices(['Human', 'Non-Human'], [4, 2])[0]
-    if is_metatype == 'Non-Human':
-        metatype = random.choice(['Dwarf', 'Elf', 'Orc', 'Troll'])
-    else:
-        metatype = 'Human'
-    types_of_payment = ['Cash (Hard Currency)', 'Service (Drek Jobs)', 'Cash (Corp Scrip)', 'Barter (Items needed for the profession)', 'Service (Shadowrunner Job)', 'Cash (Credstick)', 'Cash (Credstick)', 'Barter (Easy-to-sell Items)', 'Service (Free-labor Jobs)', 'Barter (Hobby/Vice Items)', 'Cash (ECC or other Foreign Electronic Currency)']
-    accepted_payment = [random.choice(types_of_payment) for _ in range(2)]
-    personal_life = random.choice(['Single', 'In Relationship', 'Familial Relationship', 'Divorced', 'Widowed', 'None of your damn business'])
 
 
 class AbstractBaseClass:
@@ -362,6 +317,38 @@ class SkillGroup(AbstractBaseClass):
         self.idx += 1
         return result
 """
+
+class Contact(AbstractBaseClass):
+    items = []
+    def __init__(self, name, metatype, limits, age, sex, attr_values, skills, **kwargs):
+        Contact.items.append(self)
+        self.metatype = metatype
+        self.age = self.roll_age(age)
+        self.sex = sex
+        self.attributes = Attributes(attr_values)
+        self.skills = self.resolve_skills(skills)
+        self.limits = {'Physical': limits[0], 'Mental': limits[1], 'Social': limits[2]}
+        super().__init__(name, **kwargs)
+
+    def resolve_skills(self, skills):
+        for key in skills:
+            if isinstance(skills[key], int):
+                self.skills[key.name] = skills[key].rating
+            else:
+                self.skills[key.name] = (skills[key][0], f'{skills[key][1]} (+2)')
+
+    def roll_age(age):
+        age_ranges = {
+            'Young': [18, 34],
+            'Middle-Aged': [35, 55],
+            'Old': [55, 120]
+        }
+        if age not in age_ranges:
+            if isinstance(age, int):
+                return age
+            else:
+                age = random.choice(list(age_ranges.keys()))
+        return random.randint(age_ranges[age][0], age_ranges[age][1])
 
 
 class Gear(AbstractBaseClass):
@@ -910,10 +897,10 @@ WEAK_IMMUNE_SYSTEM = Quality('Weak Immune System', cost=10, page_ref=87, negativ
 """
     DAMAGE TYPES
 """
-PHYSICAL = DamageType("Physical")
-STUN = DamageType("Stun")
-ELECTRICAL = DamageType("Electrical")
-FLECH = DamageType("Flechette")
+DMG_PHYSICAL = DamageType("Physical")
+DMG_STUN = DamageType("Stun")
+DMG_ELECTRICAL = DamageType("Electrical")
+DMG_FLECH = DamageType("Flechette")
 """
     GEAR AVAILABILITY
 """
@@ -1750,9 +1737,52 @@ AUG_GRADES = [i for i in AugmentationGrade.items]
 """
     CONTACTS
 """
-ARMS_DEALER = Contact('Arms Dealer', attr_values=[3, 3, 5, 3, 4, 3, 3, 4, 6, 2], skills={
-    ARMORER: 4, COMPUTER: 3, ETIQUETTE: 4, FIREARM: 4, GUNNERY: 3, INSTRUCTION: 2, NEGOTIATION: 5, PERCEPTION: 4
-    }, knowledge_skills = {}, metatype='Human', sex='Male', age='Middle Aged')
+ARMS_DEALER = Contact('Arms Dealer', attr_values=[3, 3, 5, 3, 4, 3, 3, 4, 6, 2], skills={ARMORER: 4, COMPUTER: 3, ETIQUETTE: [4, 'Corporate'], FIREARMS: 4, GUNNERY: 3, INSTRUCTION: 2, NEGOTIATION: 5, PERCEPTION: 4}, knowledge_skills = {'Chemistry': 4, 'Firearms': 4, 'Mercenary Groups': 4}, metatype=HUMAN, sex='Male', age='Middle Aged', condition_mod = [10, 10], limits = [5, 5, 5], page_ref='182 RF')
+BARTENDER = Contact('Bartender', attr_values=[3, 4, 3, 3, 4, 3, 4, 5, 6, 1], skills={AUTOMATICS: 1, CLUBS: 3, ETIQUETTE: [4, 'Street Gangs'], INTIMIDATION: 2, NEGOTIATION: 3}, knowledge_skills={'Alcohol': 4, 'Media Stars': 4, 'Sports': 4, 'Street Rumors': 2}, metatype=ELF, sex='Male', age='Middle-Aged', condition_mod=[10, 10], limits=[4, 5, 7], page_ref='182 RF',)
+BOOKIE = Contact('Bookie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+BORDER_PATROL_AGENT = Contact('Border_patrol_agent', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+BOUNTY_HUNTER_CONT = Contact('Bounty_hunter_cont', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CHOP_SHOP_MECHANIC = Contact('Chop_shop_mechanic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CHURCH_PASTOR = Contact('Church_pastor', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CITY_OFFICAL = Contact('City_offical', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CLUB_KID = Contact('Club_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+COMPANY_SUIT = Contact('Company_suit', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CON_FANATIC = Contact('Con_fanatic', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CORPORATE_ADMINISTRATOR = Contact('Corporate_administrator', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CORPORATE_WAGESLAVE = Contact('Corporate_wageslave', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+COYOTE = Contact('Coyote', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+CYBERNETIC_TECHNICIAN = Contact('Cybernetic_technician', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+GOVERNMENT_OFFICIAL = Contact('Government_official', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+GANG_BOSS = Contact('Gang_boss', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+ID_MANUFACTURER = Contact('Id_manufacturer', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+INFORMANT = Contact('Informant', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+INTERNATIONAL_COURIER = Contact('International_courier', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+LONE_STAR_DETECTIVE = Contact('Lone_star_detective', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+KNIGHT_ERRANT_DISPATCHER = Contact('Knight_errant_dispatcher', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+MAFIA_CONSIGLIERE = Contact('Mafia_consigliere', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+MEDIA_MOGUL = Contact('Media_mogul', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+METAHUMAN_RIGHTS_ACTIVIST = Contact('Metahuman_rights_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+NEWS_REPORTER = Contact('News_reporter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+PARAZOOLOGIST = Contact('Parazoologist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+PAWN_BROKER = Contact('Pawn_broker', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+PHARMACY_TECH = Contact('Pharmacy_tech', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+POPULAR_MEFEED_PERSONALITY = Contact('Popular_mefeed_personality', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+RECICLADORE = Contact('Recicladore', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+RENT_A_COP = Contact('Rent_a_cop', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+ROCKSTAR = Contact('Rockstar', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+SAFEHOUSE_MASTER = Contact('Safehouse_master', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+SCRIPT_KIDDIE = Contact('Script_kiddie', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+SPRAWL_GANGER = Contact('Sprawl_ganger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+SQUATTER = Contact('Squatter', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+STORE_OWNER = Contact('Store_owner', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+STREET_DOC = Contact('Street_doc', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+STREET_KID = Contact('Street_kid', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+TALISMONGER = Contact('Talismonger', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+TAXI_DRIVER = Contact('Taxi_driver', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+TERRAFIRST_ACTIVIST = Contact('Terrafirst_activist', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+TRID_PIRATE = Contact('Trid_pirate', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+USED_CAR_SALESMAN = Contact('Used_car_salesman', attr_values=None, skills=None, knowledge_skills=None, metatype=None, sex=None, age=None, condition_mod=None, limits=None, page_ref=None)
+
 
 """
     PRIORITY TABLE
@@ -1886,3 +1916,16 @@ def refresh_priority_table():
         'D': 50_000,
         'E': 6_000
     }
+
+def gen_quick_contact():
+    gender = random.choice(['male', 'female'])
+    age_range = random.choice([[18, 34], [35, 55], [55, 100]])
+    age = random.randint(age_range[0], age_range[1])
+    is_metatype = random.choices(['Human', 'Non-Human'], [4, 2])[0]
+    if is_metatype == 'Non-Human':
+        metatype = random.choice(['Dwarf', 'Elf', 'Orc', 'Troll'])
+    else:
+        metatype = 'Human'
+    types_of_payment = ['Cash (Hard Currency)', 'Service (Drek Jobs)', 'Cash (Corp Scrip)', 'Barter (Items needed for the profession)', 'Service (Shadowrunner Job)', 'Cash (Credstick)', 'Cash (Credstick)', 'Barter (Easy-to-sell Items)', 'Service (Free-labor Jobs)', 'Barter (Hobby/Vice Items)', 'Cash (ECC or other Foreign Electronic Currency)']
+    accepted_payment = [random.choice(types_of_payment) for _ in range(2)]
+    personal_life = random.choice(['Single', 'In Relationship', 'Familial Relationship', 'Divorced', 'Widowed', 'None of your damn business'])
