@@ -1,6 +1,5 @@
 import random
-# import char_shadowrun_5e_data as Core
-import ./char.shadowrun.5e.data as Core
+import char_shadowrun_5e_data as Core
 
 DEFAULT_MAX_AVAILABILITY = 12
 DEFAULT_MAX_RATING = 6

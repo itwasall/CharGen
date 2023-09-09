@@ -364,6 +364,10 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
     return q
 
 
+def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
+
+
+
 def add_spell(ch: Core.Character):
     ROLL_SPELL = random.choice(Core.Spell.items)
     while ROLL_SPELL in ch.Spells:

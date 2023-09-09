@@ -198,44 +198,44 @@ class Character:
                 self.Resonance=None
 
 class Contact:
-    def __init__(self, skill_pool, k_skill_pool, uses, meetups):
+    LOYALTY_RATINGS = {
+            1: 'Just Biz. The relationship is purely mercenary, based solely on economics The people involved may not even like each other, and they won’t offer any sort of preferential treatment',
+            2: 'Regular. The relationship is still all business, but the parties treat each other with a modicum of mutual respect',
+            3: 'Acquaintance. The people in the relationship are friendly, but calling them actual friends might be stretching it The contact is willing to be inconvenienced in small ways for the character but won’t take a fall for him',
+            4: 'Buddy. There’s actual friendship here, or at least solid mutual respect The contact will go out of his way for the character if needed',
+            5: 'Got Your Back. The parties know and trust each other, and have for some time The contact will back the character even in risky situations',
+            6: 'Friend for Life. The contact and character will go to the wall for each other, if that’s what it takes'
+            }
+    CONNECTION_RATINGS = {
+            1: 'Virtually no social influence; useful only for their Knowledge skills',
+            2: 'Has one or two friends with some Knowledge skills, or some minor social influence',
+            3: 'Has a few friends, but not a lot of social influence',
+            4: 'Knows several people in a neighborhood; a borough mayor or a gang leader',
+            5: 'Knows several people and has a moderate degree of social influence; a city councilman or a low-level executive it a small-to-medium corporation',
+            6: 'Known and connected across his state; a city/sprawl mayor or governor, notable fixer, or a mid-level executive in a medium-sized corporation',
+            7: 'Knows a lot of people over a large area, and has considerable social influence; often holds a leadership position in a national corporation',
+            8: 'Well-connected across a multi-state region; an executive in a state government or a national corporation',
+            9: 'Well-connected on his own continent, with considerable social influence; a mid-level executive in a small national government or AA megacorporation',
+            10: 'Well-connected worldwide, with significant social influence; a senior executive in a small national government or a AA megacorporation',
+            11: 'Extremely well-connected worldwide, with significant social influence; mid-level executive position in a major national government or AAA megacorporation',
+            12: 'Global power-player with extensive social influence; holds a key executive position in a major national government or AAA megacorporation'
+            }
+    def __init__(self, name):
         self.name = name
-        self.attributes = {'Body': 0, 'Agility': 0, 'Reaction': 0, 'Strength': 0,
-                           'Logic': 0, 'Willpower': 0, 'Intuition': 0, 'Charisma': 0}
-        # Rolling for attribute values
-        values = [random.randint(2,5) for _ in range(8)]
-        #    Then ensures only one attribute value can be a 5. Chooses randomly
-        while values.count(5) > 1:
-            values[random.choice([values.index(i) for i in values if i == 5])] -= 1
-            
-        for idx, attr in enumerate(self.attributes):
-            self.attributes[attr] = values[idx]
+        self.connection = 1
+        self.loyalty = 1
 
-        self.special_attrs = {'Edge': random.randint(2,3), 'Essence': 6}
-        self.skills = self.get_skills(skill_pool)
-        self.knowledge_skills = self.get_skills(k_skill_pool)
-
-        self.uses = uses
-        self.meetups = meetups
-
-    def get_skills(self, potential_skills):
-        skill_dict = {}
-        no_of_skills = random.randint(4,9)
-        if no_of_skills > len(poential_skills):
-            for skill in potential_skills:
-                skill_dict[skill] = random.randint(3, 6)
-        for _ in range(no_of_skills):
-            while True:
-                skill = random.choice(potential_skills)
-                if skill in skill_dict.keys():
-                    continue
-                else:
-                    skill_dict[skill] = random.randint(3, 6)
-                    break
-        return skill_dict
-
-    def __repr__(self):
-        return self.name
+def gen_quick_contact():
+    gender = random.choice(['male', 'female'])
+    age_range = random.choice([[18, 34], [35, 55], [55, 100]])
+    age = random.randint(age_range[0], age_range[1])
+    is_metatype = random.choices(['Human', 'Non-Human'], [4, 2])[0]
+    if is_metatype == 'Non-Human':
+        metatype = random.choice(['Dwarf', 'Elf', 'Orc', 'Troll'])
+    else:
+        metatype = 'Human'
+    types_of_payment = ['Cash (Hard Currency)', 'Service (Drek Jobs)', 'Cash (Corp Scrip)', 'Barter (Items needed for the profession)', 'Service (Shadowrunner Job)', 'Cash (Credstick)', 'Cash (Credstick)', 'Barter (Easy-to-sell Items)', 'Service (Free-labor Jobs)', 'Barter (Hobby/Vice Items)', 'Cash (ECC or other Foreign Electronic Currency)']
+    accepted_payment = [random.choice(types_of_payment) for _ in range(2)]
 
 
 
