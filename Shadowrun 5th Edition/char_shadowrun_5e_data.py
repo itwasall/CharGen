@@ -1780,6 +1780,149 @@ USED_CAR_SALESMAN = Contact('USED CAR SALESMAN', metatype='Human', sex='Male', a
 CONTACTS = [i for i in Contact.items]
 
 """
+    KARMA COSTS
+"""
+KARMA_ATTRIBUTE_COSTS = {
+        1: {
+            2: 10,
+            3: 25,
+            4: 45,
+            5: 70,
+            6: 100,
+            7: 135
+            },
+        2: {
+            3: 15,
+            4: 35,
+            5: 60,
+            6: 90,
+            7: 125,
+            8: 165
+            },
+        3: {
+            4: 20,
+            5: 45,
+            6: 75,
+            7: 110,
+            8: 150, 
+            9: 195
+            },
+        4: {
+            5: 25, 
+            6: 55, 
+            7: 90, 
+            8: 130, 
+            9: 175, 
+            10: 225
+            },
+        5: {
+            6: 30, 
+            7: 65, 
+            8: 105, 
+            9: 150, 
+            10: 200, 
+            11: 225
+            },
+        6: {
+            7: 35, 
+            8: 75, 
+            9: 120, 
+            10: 170, 
+            11: 225
+            },
+        7: {
+            8: 40, 
+            9: 85, 
+            10: 135, 
+            11: 190
+            },
+        8: {
+            9: 45,
+            10: 95, 
+            11: 150
+            },
+        9: {
+            10: 50, 
+            11: 105
+            },
+        10: {11: 55}
+        }
+KARMA_SKILL_COSTS = {
+        'Active': {
+            1: 2, 
+            2: 6, 
+            3: 12, 
+            4: 20, 
+            5: 30, 
+            6: 42, 
+            7: 56, 
+            8: 72, 
+            9: 90, 
+            10: 110, 
+            11: 132, 
+            12: 156, 
+            13: 182
+            },
+        'Active Group': {
+            1: 5, 
+            2: 15, 
+            3: 30, 
+            4: 50, 
+            5: 75, 
+            6: 105, 
+            7: 140, 
+            8: 180, 
+            9: 225, 
+            10: 275, 
+            11: 330, 
+            12: 390, 
+            13: 455
+            },
+        'Knowledge': {
+            1: 1, 
+            2: 3, 
+            3: 6, 
+            4: 10, 
+            5: 15, 
+            6: 21, 
+            7: 28, 
+            8: 36, 
+            9: 45, 
+            10: 55, 
+            11: 66, 
+            12: 78, 
+            13: 91
+            },
+        'Language': {
+            1: 1,
+            2: 3, 
+            3: 6,
+            4: 10, 
+            5: 15, 
+            6: 21, 
+            7: 28, 
+            8: 36, 
+            9: 45, 
+            10: 55, 
+            11: 66, 
+            12: 78, 
+            13: 91
+            }
+        }
+KARMA_CHARACTER_IMPROVEMENTS = {
+        'New Specialisation': 7,
+        'New Knowledge Skill': 1,
+        'New Language Skill': 1,
+        'New Positive Quality': ['Karma', '*', 2],
+        'Remove Negative Quality': ['Bonus Karma', '*', 2],
+        'Complex Form': 4,
+        'Initiate Level': 10 + ['Grade', '*', 3],
+        'New Spell': 5,
+        'Contact': ["Loyalty", "*", 1],
+        'Registering Sprites': ["Task", "*", 1],
+        }
+
+"""
     PRIORITY TABLE
 """
 PRIORITY_TABLE = { 

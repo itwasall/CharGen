@@ -365,6 +365,15 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
 
 
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
+    karma_budget = ch.Karma
+    karma_menu = {
+            'Bound Spirits': 1,
+            'Complex Forms': 4,
+            'Spells': 5,
+            'Bond Foci': 'Variable',
+            'Contacts': '2 minimum. 1 per loyalty rating',
+            'Registering Sprites': 1
+            }
     pass
 
 
@@ -509,7 +518,7 @@ def generate_character():
     # Initialising Stuff
     edge_shit = metatype[1]
     metatype = metatype[0]
-    metatype.attributes.init_stat_block()
+    # metatype.attributes.init_stat_block()
     character.Metatype = metatype
     for attribute in metatype.attributes.List:
         match attribute.name:
