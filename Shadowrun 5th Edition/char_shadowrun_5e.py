@@ -365,7 +365,7 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
 
 
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
-
+    pass
 
 
 def add_spell(ch: Core.Character):
