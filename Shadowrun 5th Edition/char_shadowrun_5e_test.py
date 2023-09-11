@@ -84,6 +84,7 @@ def get_skills(c: Core.Character, add_back = False, add_back_plus = False, skill
                     else:
                         pass
             skill_points -= 1
+    return character_skills
     
 def get_highest_attr(ch: Core.Character):
     log.append("Starting Sequence\n")
@@ -124,6 +125,75 @@ def get_highest_attr(ch: Core.Character):
         print(f'    {attr}')
         print(" ".join([skill for skill in output_by_attr[attr]]))
 
+def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
+    karma_budget = ch.Karma
+    karma_options = [
+            'Raise Attribute',
+            'Raise Skill',
+            'Raise Skill Group',
+            'New Contact',
+            'New Skill',
+            'New Skill Specialisation',
+            'New Spell',
+            'New Complex Form',
+            'New Sprite'
+            ]
+    while karma_budget > 7:
+        item = random.choice(karma_options)
+        match item:
+            case 'Raise Attribute':
+                try:
+                    raised_attr = random.choice([i for i in ch.CoreAttributes if i.value > 0 and i.value != i.limit])
+                    raised_attr.value += 1
+                    karma_budget -= 1
+                    k.append(f'(EX) {raised_attr.name} has been increased to {raised_attr.value}. Costing 1.\n   {karma_budget} is Karma total.')
+                    print(f'(EX) {raised_attr.name} has been increased to {raised_attr.value}. Costing 1.\n   {karma_budget} is Karma total.')
+                except IndexError:
+                    continue
+                pass
+            case 'Raise Skill':
+                try:
+                    skill_to_raise = random.choice([i for i in ch.Skills if ch.Skills[i].rating < 6])
+                    karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][ch.Skills[skill_to_raise].rating + 1]
+                    if karma_cost_skill_raise > karma_budget:
+                        continue
+                    else:
+                        ch.Skills[skill_to_raise].rating += 1
+                        karma_budget -= karma_cost_skill_raise
+                        k.append(f'(EX) {ch.Skills[skill_to_raise].name} has been increased to {ch.Skills[skill_to_raise].rating}. Costing {karma_cost_skill_raise}.\n   {karma_budget} is Karma total.')
+                        print(f'(EX) {ch.Skills[skill_to_raise].name} has been increased to {ch.Skills[skill_to_raise].rating}. Costing {karma_cost_skill_raise}.\n   {karma_budget} is Karma total.')
+                except IndexError:
+                    continue
+                pass
+            case 'Raise Skill Group':
+                try:
+                    skill_group_to_raise = random.choice(list(set([ch.Skills[s].group for s in ch.Skills if ch.Skills[s].group != False])))
+                    skills_in_skill_group = [s for s in ch.Skills if ch.Skills[s].group == skill_group_to_raise]
+                    karma_cost_skill_group_raise = Core.KARMA_SKILL_COSTS['Active Group'][ch.Skills[skills_in_skill_group[0]].rating+1]
+                    if karma_cost_skill_group_raise > karma_budget:
+                        continue
+                    else:
+                        for skill in skills_in_skill_group:
+                            ch.Skills[skill].rating += 1
+                        karma_budget -= karma_cost_skill_group_raise
+                        k.append(f'(EX) {skill_group_to_raise} skills have been increased to {ch.Skills[skills_in_skill_group[0]].rating}. Costing {karma_cost_skill_group_raise}.\n   {karma_budget} is Karma total.')
+                        print(f'(EX) {skill_group_to_raise} skill group {[i for i in ch.Skills if ch.Skills[i].group == skill_group_to_raise]} have been increased to {ch.Skills[skills_in_skill_group[0]].rating}. Costing {karma_cost_skill_group_raise}.\n   {karma_budget} is Karma total.')
+                except IndexError:
+                    continue
+                pass
+            case 'New Contact':
+                pass
+            case 'New Skill':
+                pass
+            case 'New Skill Specialisation':
+                pass
+            case 'New Spell':
+                pass
+            case 'New Complex Form':
+                pass
+            case 'New Sprite':
+                pass
+
 def get_knowledge_language_skills(ch: Core.Character):
     kl_skill_points = 2*(ch.Intuition.value + ch.Logic.value)
     print(f"character gets {kl_skill_points} knowledge/skill points")
@@ -134,8 +204,11 @@ def get_knowledge_language_skills(ch: Core.Character):
 def get_spells(ch: Core.Character):
     
     pass
-
+k = Core.KarmaLogger()
 a = Core.Character()
 a.debug_gen_attrs()
-print(a.Body)
-get_knowledge_language_skills(a)
+a.Skills = get_skills(a)
+print(a.Skills)
+a.Karma = 50
+leftover_karma(a, k)
+print()

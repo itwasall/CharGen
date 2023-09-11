@@ -110,7 +110,7 @@ class Character:
         self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
         self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
         self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
-      k  self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
+        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
         # Skills
         self.Skills = {
                 'Active': None,
@@ -1916,7 +1916,7 @@ KARMA_CHARACTER_IMPROVEMENTS = {
         'New Positive Quality': ['Karma', '*', 2],
         'Remove Negative Quality': ['Bonus Karma', '*', 2],
         'Complex Form': 4,
-        'Initiate Level': 10 + ['Grade', '*', 3],
+        'Initiate Level': "10 + ['Grade', '*', 3]",
         'New Spell': 5,
         'Contact': ["Loyalty", "*", 1],
         'Registering Sprites': ["Task", "*", 1],
