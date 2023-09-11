@@ -382,38 +382,42 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
         match item:
             case 'Raise Attribute':
                 try:
-                    raised_attr = random.choice([i for i in ch.CoreAttributes if i.value > 0 and i.value != i.limit])
+                    raised_attr = random.choice([i for i in ch.CoreAttributes if hasattr(i, 'value') and i.value > 0 and i.value != i.limit])
                     raised_attr.value += 1
                     karma_budget -= 1
                     k.append(f'(EX) {raised_attr.name} has been increased to {raised_attr.value}. Costing 1.\n   {karma_budget} is Karma total.')
+                    print(f'(EX) {raised_attr.name} has been increased to {raised_attr.value}. Costing 1.\n   {karma_budget} is Karma total.')
                 except IndexError:
                     continue
                 pass
             case 'Raise Skill':
                 try:
-                    skill_to_raise = random.choice([i for i in ch.skills if i.rating < 6])
-                    karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][skill_to_raise.rating + 1]
+                    print([type(ch.Skills['Active'][i]) for i in ch.Skills])
+                    skill_to_raise = random.choice([i for i in ch.Skills['Active'] if ch.Skills['Active'][i].rating < 6])
+                    karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][ch.Skills[skill_to_raise].rating + 1]
                     if karma_cost_skill_raise > karma_budget:
                         continue
                     else:
-                        skill_to_raise.rating += 1
+                        ch.Skills[skill_to_raise].rating += 1
                         karma_budget -= karma_cost_skill_raise
-                        k.append(f'(EX) {skill_to_raise.name} has been increased to {skill_to_raise.rating}. Costing {karma_cost_skill_raise}.\n   {karma_budget} is Karma total.')
+                        k.append(f'(EX) {ch.Skills[skill_to_raise].name} has been increased to {ch.Skills["Active"][skill_to_raise].rating}. Costing {karma_cost_skill_raise}.\n   {karma_budget} is Karma total.')
+                        print(f'(EX) {ch.Skills[skill_to_raise].name} has been increased to {ch.Skills["Active"][skill_to_raise].rating}. Costing {karma_cost_skill_raise}.\n   {karma_budget} is Karma total.')
                 except IndexError:
                     continue
                 pass
             case 'Raise Skill Group':
                 try:
-                    skill_group_to_raise = random.choice(list(set([s.group for s in ch.Skills['Active'] if s.group != False])))
-                    skills_in_skill_group = [s for s in ch.Skills['Active'] if s.group == skill_group_to_raise]
-                    karma_cost_skill_group_raise = Core.KARMA_SKILL_COSTS['Active Group'][skills_in_skill_group[0].rating+1]
+                    skill_group_to_raise = random.choice(list(set([ch.Skills['Active'][s].group for s in ch.Skills['Active'] if hasattr(ch.Skills[s], 'group') and ch.Skills[s].group != False])))
+                    skills_in_skill_group = [s for s in ch.Skills if ch.Skills['Active'][s].group == skill_group_to_raise]
+                    karma_cost_skill_group_raise = Core.KARMA_SKILL_COSTS['Active Group'][ch.Skills['Active'][skills_in_skill_group[0]].rating+1]
                     if karma_cost_skill_group_raise > karma_budget:
                         continue
                     else:
                         for skill in skills_in_skill_group:
-                            skill.rating += 1
+                            ch.Skills[skill].rating += 1
                         karma_budget -= karma_cost_skill_group_raise
-                        k.append(f'(EX) {skill_group_to_raise.name} skills have been increased to {skills_in_skill_group[0].rating}. Costing {karma_cost_skill_group_raise}.\n   {karma_budget} is Karma total.')
+                        k.append(f'(EX) {skill_group_to_raise} skills have been increased to {ch.Skills["Active"][skills_in_skill_group[0]].rating}. Costing {karma_cost_skill_group_raise}.\n   {karma_budget} is Karma total.')
+                        print(f'(EX) {skill_group_to_raise} skill group {[i for i in ch.Skills if ch.Skills[i].group == skill_group_to_raise]} have been increased to {ch.Skills[skills_in_skill_group[0]].rating}. Costing {karma_cost_skill_group_raise}.\n   {karma_budget} is Karma total.')
                 except IndexError:
                     continue
                 pass
@@ -429,10 +433,14 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                 pass
             case 'New Sprite':
                 pass
-
-            
-
     pass
+
+def add_contacts(ch: Core.Character, k: Core.KarmaLogger):
+    contact_karma = ch.Charisma.value * 3
+    k.append(f'[CONTACT GENERATION]\nAwarding {contact_karma} karma due to Charisma of {ch.Charisma.value}')
+    while True:
+        CONTACT_ROLL = random.choice(Core.CONTACTS)
+
 
 
 def add_spell(ch: Core.Character):
@@ -635,6 +643,8 @@ def generate_character():
     if 'Exotic Melee Weapon' in character.Skills['Active']:
         character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     format_skills(character.Skills['Active'])
+    add_contacts(character, karma_log)
+    leftover_karma(character, karma_log)
     for k, d in character.Skills.items():
         if d is None:
             pass

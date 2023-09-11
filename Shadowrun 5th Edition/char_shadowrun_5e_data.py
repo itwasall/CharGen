@@ -133,7 +133,7 @@ class Character:
         # Qualities
         self.Qualities = None
         # Contacts
-        self.Contacts = None
+        self.Contacts = {}
         # Gear
         self.Ranged_weapons = None
         self.Melee_weapons = None
@@ -325,6 +325,7 @@ class Contact(AbstractBaseClass):
         self.metatype = metatype
         self.age = self.roll_age(age)
         self.sex = sex
+        self.connection = connection
         self.attributes = Attributes(attr_values)
         self.skills = self.resolve_skills(skills)
         self.limits = {'Physical': limits[0], 'Mental': limits[1], 'Social': limits[2]}
