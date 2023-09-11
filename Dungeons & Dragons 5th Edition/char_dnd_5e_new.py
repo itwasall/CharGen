@@ -1,4 +1,5 @@
 import random
+from cli_ui import info, bold, red, blue, black, reset
 
 import char_dnd_5e_core as Core
 
@@ -531,9 +532,13 @@ def genCharacter(force_class=None):
 #    print(char_race, char_subrace)
     char_class = random.choice(CLASSES)
     # print(f"{CHARACTER.STR}\n{CHARACTER.DEX}\n{CHARACTER.CON}\n{CHARACTER.INT}\n{CHARACTER.WIS}\n{CHARACTER.CHA}")
-    print(CHARACTER.race.name)
-    print(CHARACTER._class.name)
-    print(CHARACTER.background.name)
+    import yaml
+    character_names = yaml.safe_load(open('dnd_5e_data/races.yaml', 'rt'))
+    CHARACTER.name = f'{random.choice(race[random.choice(["male", "female"])])} {random.choice(race["surname"])}'
+    info(bold, f'The {CHARACTER.race.name} {CHARACTER._class.name}', reset, ', ', bold, f'{CHARACTER.background.name} {CHARACTER.name}')
+    # print(CHARACTER.race.name)
+    # print(CHARACTER._class.name)
+    # print(CHARACTER.background.name)
     CHARACTER.getStats()
     CHARACTER.getEquipment()
     CHARACTER.getSpells()

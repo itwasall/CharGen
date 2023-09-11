@@ -366,14 +366,53 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
 
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
     karma_budget = ch.Karma
-    karma_menu = {
-            'Bound Spirits': 1,
-            'Complex Forms': 4,
-            'Spells': 5,
-            'Bond Foci': 'Variable',
-            'Contacts': '2 minimum. 1 per loyalty rating',
-            'Registering Sprites': 1
-            }
+    karma_options = [
+            'Raise Attribute',
+            'Raise Skill',
+            'Raise Skill Group',
+            'New Contact',
+            'New Skill',
+            'New Skill Specialisation',
+            'New Spell',
+            'New Complex Form',
+            'New Sprite'
+            ]
+    while karma_budget > 7:
+        item = random.choice(karma_options)
+        match item:
+            case 'Raise Attribute':
+                try:
+                    raised_attr = random.choice([i for i in ch.CoreAttributes if i.value > 0 and i.value != i.limit])
+                    raised_attr.value += 1
+                    k.append(f'Raised {raised_attr.name} by 1. Cost 1. Karma total at {karma_budget - 1}')
+                    karma_budget -= 1
+                except IndexError:
+                    continue
+                pass
+            case 'Raise Skill':
+                try:
+                    skill_to_raise = random.choice([i for i in ch.skills if i.rating < 6])
+                    skill_to_raise.rating += 1
+                except IndexError:
+                    continue
+                pass
+            case 'Raise Skill Group':
+                pass
+            case 'New Contact':
+                pass
+            case 'New Skill':
+                pass
+            case 'New Skill Specialisation':
+                pass
+            case 'New Spell':
+                pass
+            case 'New Complex Form':
+                pass
+            case 'New Sprite':
+                pass
+
+            
+
     pass
 
 

@@ -110,7 +110,7 @@ class Character:
         self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
         self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
         self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
-        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
+      k  self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
         # Skills
         self.Skills = {
                 'Active': None,
