@@ -1614,15 +1614,6 @@ ULTRASOUND_SENSOR_1_6 = Augmentation("Ultrasound Sensor", page_ref=453, cost=["R
 VOICE_MODULATOR_1_6 = Augmentation("Voice Modulator", page_ref=453, cost=["Rating", "*", 5000], rating=[1, "to", 6], essence=0.2, capacity="-", avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Headware", )
 # EYEWARE
 CYBEREYES_1 = Augmentation("Cybereyes (Rating 1)", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=4, avail=3, cyberlimbs=False, subtype='Eyeware', base=True)
-CYBEREYES_2 = Augmentation("Cybereyes (Rating 2)", page_ref=454, cost=6000, rating=2, essence=0.3, capacity=8, avail=6, cyberlimbs=False, subtype='Eyeware', base=True)
-CYBEREYES_3 = Augmentation("Cybereyes (Rating 3)", page_ref=454, cost=10000, rating=3, essence=0.4, capacity=12, avail=9, cyberlimbs=False, subtype='Eyeware', base=True)
-CYBEREYES_4 = Augmentation("Cybereyes (Rating 4)", page_ref=454, cost=14000, rating=4, essence=0.5, capacity=16, avail=12, cyberlimbs=False, subtype='Eyeware', base=True)
-FLARE_COMPENSATION_AUG = Augmentation("Flare Compensation (Aug)", page_ref=454, cost=1000, essence=0.1, capacity=1, avail=4, cyberlimbs=True, subtype='Eyeware', )
-IMAGE_LINK_AUG = Augmentation("Image Link (Aug)", page_ref=454, cost=1000, essence=0.1, capacity="-", avail=4, as_standard=True, subtype='Eyeware', )
-LOW_LIGHT_VISION_AUG = Augmentation("Low Light Vision (Aug)", page_ref=454, cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
-OCULAR_DRONE = Augmentation("Ocular Drone", page_ref=454, cost=6000, essence="-", capacity=6, avail=6, cyberlimbs=True, subtype='Eyeware', )
-RETINAL_DUPLICATION_1_6 = Augmentation("Retinal Duplication", page_ref=454, cost=["Rating", "*", 20_000], rating=[1, "to", 6], essence=0.1, capacity=1, avail=16, legality=FORBIDDEN, cyberlimbs=True, subtype='Eyeware', )
-SMARTLINK_AUG = Augmentation("Smartlink (Aug)", page_ref=454, cost=4000, essence=0.2, capacity=3, avail=8, legality=RESTRICTED, cyberlimbs=True, subtype='Eyeware', )
 THERMOGRAPHIC_VISION_AUG = Augmentation("Thermographic Vision (Aug)", page_ref=454, cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
 VISION_ENHANCEMENT_AUG = Augmentation("Vision Enhancement (Aug)", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, subtype='Eyeware', )
 VISION_MAGNIFICATION_AUG = Augmentation("Vision Magnification (Aug)", page_ref=454, cost=2000, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
@@ -2080,6 +2071,7 @@ def gen_quick_contact():
 """
 KNOWLEDGE_UCAS = Skill("UCAS", INTUITION, "Knowledge", category="Street")
 KNOWLEDGE_UCAS_CITY = Skill("UCAS City", INTUITION, "Knowledge", category="Street")
+KNOWLEDGE_CAS_CITY = Skill("CAS City", INTUITION, "Knowledge", category="Street")
 KNOWLEDGE_DENVER = Skill("Denver", INTUITION, "Knowledge", category="Street")
 KNOWLEDGE_SEATTLE = Skill("Seattle", INTUITION, "Knowledge", category="Street")
 KNOWLEDGE_CAS = Skill("CAS", INTUITION, "Knowledge", category="Street")
@@ -2109,52 +2101,37 @@ class RegionalNationality(Nationality):
 
 
 NATIONALITY_UCAS = Nationality(
-        'UCAS',
-        prim_lang=ENGLISH,
-        sec_lang=[SPANISH, GERMAN, ITALIAN, FRENCH, MANDARIN, POLISH, YIDDISH],
-        uni_skills=[(COMPUTER, 1), (HISTORY, 1), (KNOWLEDGE_UCAS, 1)]
+    'UCAS', prim_lang=ENGLISH, sec_lang=[SPANISH, GERMAN, ITALIAN, FRENCH, MANDARIN, POLISH, YIDDISH], uni_skills=[(COMPUTER, 1), (HISTORY, 1), (KNOWLEDGE_UCAS, 1)]
 )
 GENERAL_UCAS = RegionalNationality(
-        'General UCAS',
-        nationality=NATIONALITY_UCAS,
-        attribute=[(LOGIC, 1)],
-        skill=[(ETIQUETTE, 1), (KNOWLEDGE_UCAS_CITY, 2), (LANGUAGE, 2)],
-        quality=SINNER_NATIONAL
+    'General UCAS', nationality=NATIONALITY_UCAS, attribute=[(LOGIC, 1)], skill=[(ETIQUETTE, 1), (KNOWLEDGE_UCAS_CITY, 2), (LANGUAGE, 2)], quality=SINNER_NATIONAL
 )
 CANADA_UCAS = RegionalNationality(
-        'Canada',
-        nationality=NATIONALITY_UCAS,
-        attribute=[(BODY, 1)],
-        skill=[(NAVIGATION, 1), (SURVIVAL, 1), (ETIQUETTE, 1)],
-        quality=SINNER_NATIONAL
+    'Canada', nationality=NATIONALITY_UCAS, attribute=[(BODY, 1)], skill=[(NAVIGATION, 1), (SURVIVAL, 1), (ETIQUETTE, 1)], quality=SINNER_NATIONAL
 )
 DENVER_UCAS = RegionalNationality(
-        'Denver (UCAS Sector)',
-        nationality=NATIONALITY_UCAS,
-        attribute=[(INTUITION, 1)],
-        skill=[(KNOWLEDGE_DENVER, 2), (NEGOTIATION, 1), (ETIQUETTE, 1)],
-        quality=SINNER_NATIONAL
+    'Denver (UCAS Sector)', nationality=NATIONALITY_UCAS, attribute=[(INTUITION, 1)], skill=[(KNOWLEDGE_DENVER, 2), (NEGOTIATION, 1), (ETIQUETTE, 1)], quality=SINNER_NATIONAL
 )
 SEATTLE_UCAS = RegionalNationality(
-        'Seattle',
-        nationality=NATIONALITY_UCAS,
-        attribute=[(REACTION, 1)],
-        skill=[(KNOWLEDGE_SEATTLE, 2), (PERCEPTION, 1), (INTIMIDATION, 1)],
-        quality=SINNER_NATIONAL
+    'Seattle', nationality=NATIONALITY_UCAS, attribute=[(REACTION, 1)], skill=[(KNOWLEDGE_SEATTLE, 2), (PERCEPTION, 1), (INTIMIDATION, 1)], quality=SINNER_NATIONAL
 )
 SINLESS_UCAS = RegionalNationality(
-        'SINless (UCAS)',
-        nationality=NATIONALITY_UCAS,
-        attribute=[(AGILITY, 1)],
-        skill=[(KNOWLEDGE_UCAS_CITY, 1)]
+    'SINless (UCAS)', nationality=NATIONALITY_UCAS, attribute=[(AGILITY, 1)], skill=[(KNOWLEDGE_UCAS_CITY, 1)]
 )
+
 
 
 NATIONALITY_CAS = Nationality(
-        'CAS',
-        prim_lang=ENGLISH,
-        sec_lang=[SPANISH, GERMAN, YIDDISH, POLISH],
-        uni_skills=[(ETIQUETTE, 1), (HISTORY, 1), (KNOWLEDGE_CAS, 1)]
+    'CAS', prim_lang=ENGLISH, sec_lang=[SPANISH, GERMAN, YIDDISH, POLISH], uni_skills=[(ETIQUETTE, 1), (HISTORY, 1), (KNOWLEDGE_CAS, 1)]
+)
+GENERAL_CAS = RegionalNationality(
+    'General CAS', nationality=NATIONALITY_CAS, attribute=[(CHARISMA, 1)], skill=[(COMPUTER, 2)], quality=[SINNER_NATIONAL]
+)
+DENVER_CAS = RegionalNationality(
+    'Denver (CAS)', nationality=NATIONALITY_CAS, attribute=[(INTUITION, 1)], skill=[(KNOWLEDGE_DENVER, 2), (NEGOTIATION, 1), (COMPUTER, 1)], quality=SINNER_NATIONAL
+)
+SINLESS_CAS = RegionalNationality(
+    'SINless (CAS)', nationality=NATIONALITY_CAS, attribute=[(BODY, 1)], skill=[(KNOWLEDGE_UCAS_CITY)]
 )
 
 
