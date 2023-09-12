@@ -728,6 +728,8 @@ SPANISH = Skill("Spanish", INTUITION, "Language", category="Tongue")
 LAKOTA = Skill("Lakota", INTUITION, "Language", category="Tongue")
 DAKOTA = Skill("Dakota", INTUITION, "Language", category="Tongue")
 DINE = Skill("Dine", INTUITION, "Language", category="Tongue")
+YIDDISH = Skill("Yiddish", INTUITION, "Language", category="Tongue")
+POLISH = Skill("Polish", INTUITION, "Language", category="Tongue")
 
 ACTIVE_SKILLS = [_ for _ in Skill.items if _.skill_type == "Active"]
 KNOWLEDGE_SKILLS = [_ for _ in Skill.items if _.skill_type == "Knowledge"]
@@ -2068,3 +2070,114 @@ def gen_quick_contact():
     types_of_payment = ['Cash (Hard Currency)', 'Service (Drek Jobs)', 'Cash (Corp Scrip)', 'Barter (Items needed for the profession)', 'Service (Shadowrunner Job)', 'Cash (Credstick)', 'Cash (Credstick)', 'Barter (Easy-to-sell Items)', 'Service (Free-labor Jobs)', 'Barter (Hobby/Vice Items)', 'Cash (ECC or other Foreign Electronic Currency)']
     accepted_payment = [random.choice(types_of_payment) for _ in range(2)]
     personal_life = random.choice(['Single', 'In Relationship', 'Familial Relationship', 'Divorced', 'Widowed', 'None of your damn business'])
+
+
+"""
+    LIFE MODULES
+"""
+"""
+    LIFE MODULES - NATIONALITIES
+"""
+KNOWLEDGE_UCAS = Skill("UCAS", INTUITION, "Knowledge", category="Street")
+KNOWLEDGE_UCAS_CITY = Skill("UCAS City", INTUITION, "Knowledge", category="Street")
+KNOWLEDGE_DENVER = Skill("Denver", INTUITION, "Knowledge", category="Street")
+KNOWLEDGE_SEATTLE = Skill("Seattle", INTUITION, "Knowledge", category="Street")
+KNOWLEDGE_CAS = Skill("CAS", INTUITION, "Knowledge", category="Street")
+
+class Nationality(AbstractBaseClass):
+    items = []
+    def __init__(self, name, prim_lang=None, sec_lang=None, uni_skills=None, **kwargs):
+        Nationality.items.append(self)
+        self.primary_language = prim_lang 
+        self.secondary_language = sec_lang
+        self.universal_skills = uni_skills
+        super().__init__(name, **kwargs)
+
+class RegionalNationality(Nationality):
+    items = []
+    def __init__(self, name, nationality, attribute=None, skill=None, quality=None, **kwargs):
+        RegionalNationality.items.append(self)
+        self.attribute = attribute
+        self.skill = skill
+        self.quality = quality
+        super().__init__(
+                name,
+                nationality.primary_language,
+                nationality.secondary_language,
+                nationality.universal_skills,
+                **kwargs)
+
+
+NATIONALITY_UCAS = Nationality(
+        'UCAS',
+        prim_lang=ENGLISH,
+        sec_lang=[SPANISH, GERMAN, ITALIAN, FRENCH, MANDARIN, POLISH, YIDDISH],
+        uni_skills=[(COMPUTER, 1), (HISTORY, 1), (KNOWLEDGE_UCAS, 1)]
+)
+GENERAL_UCAS = RegionalNationality(
+        'General UCAS',
+        nationality=NATIONALITY_UCAS,
+        attribute=[(LOGIC, 1)],
+        skill=[(ETIQUETTE, 1), (KNOWLEDGE_UCAS_CITY, 2), (LANGUAGE, 2)],
+        quality=SINNER_NATIONAL
+)
+CANADA_UCAS = RegionalNationality(
+        'Canada',
+        nationality=NATIONALITY_UCAS,
+        attribute=[(BODY, 1)],
+        skill=[(NAVIGATION, 1), (SURVIVAL, 1), (ETIQUETTE, 1)],
+        quality=SINNER_NATIONAL
+)
+DENVER_UCAS = RegionalNationality(
+        'Denver (UCAS Sector)',
+        nationality=NATIONALITY_UCAS,
+        attribute=[(INTUITION, 1)],
+        skill=[(KNOWLEDGE_DENVER, 2), (NEGOTIATION, 1), (ETIQUETTE, 1)],
+        quality=SINNER_NATIONAL
+)
+SEATTLE_UCAS = RegionalNationality(
+        'Seattle',
+        nationality=NATIONALITY_UCAS,
+        attribute=[(REACTION, 1)],
+        skill=[(KNOWLEDGE_SEATTLE, 2), (PERCEPTION, 1), (INTIMIDATION, 1)],
+        quality=SINNER_NATIONAL
+)
+SINLESS_UCAS = RegionalNationality(
+        'SINless (UCAS)',
+        nationality=NATIONALITY_UCAS,
+        attribute=[(AGILITY, 1)],
+        skill=[(KNOWLEDGE_UCAS_CITY, 1)]
+)
+
+
+NATIONALITY_CAS = Nationality(
+        'CAS',
+        prim_lang=ENGLISH,
+        sec_lang=[SPANISH, GERMAN, YIDDISH, POLISH],
+        uni_skills=[(ETIQUETTE, 1), (HISTORY, 1), (KNOWLEDGE_CAS, 1)]
+)
+
+
+
+
+CAS_NATIONALITY = {
+        'Primary Language': ENGLISH,
+        'Seconday Language': [SPANISH, GERMAN, YIDDISH, POLISH],
+        'Universal Skills': [(ETIQUETTE, 1), (HISTORY, 1), (KNOWLEDGE_CAS, 1)],
+        'Regions': {
+            'General CAS': {
+                'Attribute': [(CHARISMA, 1)],
+                'Skill': [(COMPUTER, 2)],
+                'Quality': [SINNER_NATIONAL]
+                },
+            'Denver':{
+                'Attribute': [(INTUITION, 1)],
+                'Skill': [(KNOWLEDGE_DENVER, 2), (NEGOTIATION, 1), (COMPUTER, 1)],
+                'Quality': [SINNER_NATIONAL]
+                },
+            'SINless': {
+                'Attribute': [(BODY, 1)],
+                'Skill': [(KNOWLEDGE_UCAS_CITY, 1)]
+                }
+            }
+        }
