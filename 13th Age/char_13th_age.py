@@ -1,24 +1,16 @@
-class ABC:
+from dataclasses import dataclass
+
+class ABC():
     def __init__(self, name, **kwargs):
         self.name = name
         for k, d in kwargs.items():
             self.__setattr__(k, d)
-
     def __repr__(self):
         return self.name
 
-    # def __add__(self):
-    #     return None
-
-    # def __iadd__(self, *args):
-    #    return self.__add__(args)
-
-
-class Race(ABC):
-    items = []
-    def __init__(self, name, **kwargs):
-        super().__init__(name)
-        Race.items.append(self)
+@dataclass
+class Race:
+    name: str
 
 class _Class(ABC):
     items = []
@@ -32,29 +24,19 @@ class DamageType(ABC):
         super().__init__(name)
         DamageType.items.append(self)
 
+@dataclass
 class AbilityScore(ABC):
-    def __init__(self, name, value = 0, **kwargs):
-        super().__init__(name)
-        self.value = value
-        self.mod = self.get_mod()
-
-    def __add__(self, amt):
-        self.value += amt
-        self.mod = self.get_mod()
-        return AbilityScore(self.name, self.value)
-
-    def __iadd__(self, amt):
-        return self.__add__(amt)
-
-    
+    name: str
+    value: int
+    mod: int = 0
     def get_mod(self):
-        return (self.value//2) - 5
-
-    def __repr__(self):
-        return self.__format__()
-    
-    def __format__(self):
-        return f"{self.name}: {self.value} ({self.mod})"
+        return (self.value // 2) - 5
+    def __add__(self, x):
+        print(self.name)
+        print(self.value)
+        print(x)
+        print(self.value + x)
+        return AbilityScore(name=self.name, value=self.value + x, mod=self.mod)
 
 class Character(ABC):
     def __init__(self, name="Jeff", race=None, _class=None, **kwargs):
@@ -77,12 +59,12 @@ class Character(ABC):
     def calc_hit_points(self):
         return (self.CON.mod + 7) * 3
 
-STR = AbilityScore("Strength")
-DEX = AbilityScore("Dexterity")
-CON = AbilityScore("Constitution")
-INT = AbilityScore("Intelligence")
-WIS = AbilityScore("Wisdom")
-CHA = AbilityScore("Charisma")
+STR = AbilityScore("Strength", 1)
+DEX = AbilityScore("Dexterity", 1)
+CON = AbilityScore("Constitution", 1)
+INT = AbilityScore("Intelligence", 1)
+WIS = AbilityScore("Wisdom", 1)
+CHA = AbilityScore("Charisma", 1)
 ABILITY_SCORES = [STR, DEX, CON, INT, WIS, CHA]
 
 HUMAN = Race("Human")
@@ -94,7 +76,6 @@ HIGH_ELF = Race("High_Elf")
 HALF_ELF = Race("Half_Elf")
 HALF_ORC = Race("Half_Orc")
 HALFLING = Race("Halfling")
-RACES = Race.items
 
 """
     _Class Style Guide
@@ -129,8 +110,9 @@ DAMAGE_TYPES = DamageType.items
 
 jeff = Character(name="Jeff", _class=BARBARIAN)
 
-print(jeff.hit_points)
+print(jeff.CON)
 CON += 7
+print(jeff.CON)
 jeff2 = Character(name="Jeff", _class=BARBARIAN)
 print(jeff2.hit_points)
 # print(BARBARIAN.hit_points)
