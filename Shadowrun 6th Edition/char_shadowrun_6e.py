@@ -1,7 +1,16 @@
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 
+@dataclass
+class Items:
+    items: list = field(default_factory=list)
+    def append(self, x):
+        self.items.append(x)
+
+ATTRIBUTES = Items()
+SKILLS = Items()
+METATYPES = Items()
 
 @dataclass(repr=False)
 class Attribute:
@@ -47,7 +56,18 @@ EDGE = Attribute('Edge', 0, 'Special')
 ESSENCE = Attribute('Essence', 0, 'Special')
 MAGIC = Attribute('Magic', 0, 'Special')
 RESONANCE = Attribute('Resonance', 0, 'Special')
-
+ATTRIBUTES.append(BODY)
+ATTRIBUTES.append(AGILITY)
+ATTRIBUTES.append(REACTION)
+ATTRIBUTES.append(STRENGTH)
+ATTRIBUTES.append(LOGIC)
+ATTRIBUTES.append(WILLPOWER)
+ATTRIBUTES.append(INTUITION)
+ATTRIBUTES.append(CHARISMA)
+ATTRIBUTES.append(EDGE)
+ATTRIBUTES.append(ESSENCE)
+ATTRIBUTES.append(MAGIC)
+ATTRIBUTES.append(RESONANCE)
 
 HUMAN = Metatype('Human', [(EDGE, 7)])
 DWARF = Metatype('Dwarf', [(BODY, 7), (REACTION, 5), (STRENGTH, 8), (WILLPOWER, 7)], ['Toxin Resistance', 'Thermographic Vision'])
@@ -65,3 +85,5 @@ print(DWARF)
 
 print(ASTRAL)
 print(CON)
+
+print(ATTRIBUTES)
