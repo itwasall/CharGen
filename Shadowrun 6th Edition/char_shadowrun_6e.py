@@ -1,25 +1,7 @@
 import random
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 import weakref
 from collections import defaultdict
-
-class Items:
-    __refs__ = defaultdict(list)
-    def __init__(self):
-        self.__refs__[self.__class__].append(weakref)
-
-    @classmethod
-    def get_instances(cls):
-        for inst_ref in cls.__refs__[cls]:
-            inst = inst_ref()
-            if inst is not None:
-                yield inst
-
-
-ATTRIBUTES = Items()
-SKILLS = Items()
-METATYPES = Items()
-
 
 @dataclass(repr=False)
 class Attribute:
@@ -39,6 +21,14 @@ class Attribute:
         return f'\'{self.name}\''
     def __post_init__(self):
         Attribute.__refs__.append(self)
+
+@dataclass(repr=False)
+class MatrixAttribute(Attribute):
+    name: str
+    value: int
+    category: str = "Matrix"
+    limit: int = 6
+
     
 
 @dataclass
@@ -51,6 +41,89 @@ class Skill:
     secondary_attr: Attribute = None
     def __post_init__(self):
         Skill.__refs__.append(self)
+
+@dataclass
+class Ammunition:
+    __refs__ = []
+    name:str
+    def __post_init__(self):
+        Ammunition.__refs__.append(self)
+
+
+@dataclass
+class MatrixAttrs:
+    attack: MatrixAttribute
+    sleeze: MatrixAttribute
+    data_proecssing: MatrixAttribute
+    firewall: MatrixAttribute
+
+
+@dataclass 
+class FiringMode:
+    name: str
+    abbr: str
+
+SINGLE_SHOT = SS = FiringMode('SINGLE_SHOT', 'SS')
+SEMI_AUTOMATIC = SA = FiringMode('SEMI_AUTOMATIC', 'SA')
+BURST_FIRE = BF = FiringMode('BURST_FIRE', 'BF')
+FULLY_AUTOMATIC = FA = FiringMode('FULLY_AUTOMATIC', 'FA')
+
+@dataclass
+class VehicleStats:
+    hand_on_road: int
+    hand_off_road: int
+    accel: int
+    speed_interval: int
+    top_speed: int
+    body: int
+    armor: int
+    pilot: int
+    sensor: int
+    seat: int
+
+@dataclass(repr=False)
+class AttackRating:
+    Close: int = None
+    Near: int = None
+    Medium: int = None
+    Far: int = None
+    Extreme: int = None
+    def __repr__(self):
+        attrs = asdict(self)
+        return "(" + ", ".join([f'{k}: {d}' for k, d in attrs.items() if attrs[k] is not None]) + ")"
+
+@dataclass(kw_only=True, repr=False)
+class Gear:
+    __refs__ = []
+    name: str
+    avail: str
+    cost: int
+    category: str
+    legality: str = 'Legal'
+    active_program_slots: int = 0
+    ammo: Ammunition = None
+    ar: AttackRating = None
+    ma: MatrixAttrs = None
+    blast: int = 0
+    damage_value: int = 0
+    defence_rating: int = 0
+    device_rating: int = 0
+    essence: float = 0.0
+    fm: FiringMode = None
+    mount: str = None
+    rating: int = 0
+    vs: VehicleStats = None
+    def __post_init__(self):
+        Gear.__refs__.append(self)
+    def __repr__(self):
+        attrs = asdict(self)
+        (trimmed_attrs = [a for a in attrs if attrs[a] if attrs[a] is not None or attrs[a] != 0]
+        return ", ".join(list())
+            
+
+COMBAT_AXE = Gear(name='Combat Axe', damage_value=5, ar=AttackRating(9), avail=4, cost=500, category='Blade')
+SURVIVAL_KNIFE = Gear(name='Survival Knife', damage_value=3, ar=AttackRating(8, 2), avail=2, cost=220, category='Blade')
+print(f"\n\n{COMBAT_AXE}\n\n{SURVIVAL_KNIFE}\n\n")
 
 @dataclass
 class Metatype:
@@ -86,6 +159,10 @@ EDGE = Attribute('Edge', 0, 'Special')
 ESSENCE = Attribute('Essence', 0, 'Special')
 MAGIC = Attribute('Magic', 0, 'Special')
 RESONANCE = Attribute('Resonance', 0, 'Special')
+MATRIX_ATTACK = MatrixAttribute('Attack', 0)
+MATRIX_SLEAZE = MatrixAttribute('Sleaze', 0)
+MATRIX_DATA_PROCESSING = MatrixAttribute('Data Processing', 0)
+MATRIX_FIREWALL = MatrixAttribute('Firewall', 0)
 
 HUMAN = Metatype('Human', [(EDGE, 7)])
 DWARF = Metatype('Dwarf', [(BODY, 7), (REACTION, 5), (STRENGTH, 8), (WILLPOWER, 7)], ['Toxin Resistance', 'Thermographic Vision'])
@@ -143,6 +220,12 @@ WILL_TO_LIVE_1 = Quality('Will to Live 1', True, 4, ['Will to Live 2', 'Will to 
 WILL_TO_LIVE_2 = Quality('Will to Live 2', True, 4, ['Will to Live 1', 'Will to Live 3'])
 WILL_TO_LIVE_3 = Quality('Will to Live 3', True, 4, ['Will to Live 1', 'Will to Live 2'])
 
+AMMO_BELT = Ammunition('Belt')
+AMMO_CLIP = Ammunition('Clip')
+AMMO_CYLINDER = Ammunition('Cylinder')
+AMMO_MAGAZINE = Ammunition('Magazine')
+AMMO_MISSILE = Ammunition('Missile')
+AMMO_MUZZLE = Ammunition('Muzzle')
+
 print(Attribute.__refs__)
-print(Quality.__refs__)
 
