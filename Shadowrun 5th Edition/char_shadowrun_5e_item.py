@@ -15,10 +15,8 @@ def get_item_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
         return kwargs['rating']
     elif "rating" not in attrAsDict(item).keys():
         return 0
-    elif isinstance(item.rating, int):
+    elif isinstance(item.rating, int) or isinstance(item.rating, str):
         return item.rating
-    elif isinstance(item.rating, str):
-        return 0
     elif isinstance(item.rating, list):
         return list_handler(item.rating, item, max_rating)
     else:
@@ -63,9 +61,6 @@ def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
 
 
 def list_handler(l: list, item, arg=-1, **kwargs):
-
-    # if item.name in [ 'Gas Vent System', 'Chemical Protection', 'Fire Resistance', 'Insulation', 'Nonconductivity', 'Thermal Damping' ]:
-    #    return 0
     r1 = 1
 
     if isinstance(l[0], int) and l[1] == "to":
@@ -78,11 +73,11 @@ def list_handler(l: list, item, arg=-1, **kwargs):
         # Catches if item doesn't have rating attribute
         if not hasattr(item, "rating"):
             if hasattr(item, "requires") and item.requires[0] == 'Category':
-                random_requirement = random.choice([i for i in Core.Gear.items if i.category == item.requires[1]])
-                r1 = get_item_rating(random_requirement, **kwargs)
+                rand_req = random.choice([i for i in Core.Gear.items if i.category == item.requires[1]])
+                r1 = get_item_rating(rand_req, **kwargs)
             elif hasattr(item, "requires") and item.requires[0] == 'Subtype':
-                random_requirement = random.choice([i for i in Core.Gear.items if i.subtype == item.requires[1]])
-                r1 = get_item_rating(random_requirement, **kwargs)
+                random_req = random.choice([i for i in Core.Gear.items if i.subtype == item.requires[1]])
+                r1 = get_item_rating(random_req, **kwargs)
             else:
                 raise AttributeError(f"{item.name} has no 'rating' attribute despite mention in {l}")
         # If item.rating is an integar, pass that on
@@ -130,7 +125,8 @@ def list_handler(l: list, item, arg=-1, **kwargs):
         if arg != -1 and isinstance(arg, Core.Armor):
             r1 = arg.armor_rating
         else:
-            raise ValueError("ArmorRating fuckery")
+            return "TODO: FIX ARMORRATING COST"
+            # raise ValueError("ArmorRating fuckery")
 
     elif l[0] == "CommlinkCost":
         if not hasattr(item, "requires"):
@@ -317,7 +313,7 @@ if __name__ == "__main__":
             print(f'[{idx}/{len(Core.Gear.items)}] {gear}')
             print('Cost:', get_item_cost(gear, **kwargs))
             print('Availabilty:', get_item_avail(gear, **kwargs))
-            print('Rating:', get_item_rating(gear, **kwargs))
+            # print('Rating:', get_item_rating(gear, **kwargs))
 
     run_through_gear(random=True)
     # test_vehs()

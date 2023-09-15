@@ -10,6 +10,61 @@ r = Core.Character()
 r.Resonance = 4
 log = []
 
+def roll_stats(ch: Core.Character, attr: int) -> None:
+    rollable_stats = [
+            ch.Body, ch.Agility, ch.Reaction, ch.Strength, ch.Willpower,
+            ch.Logic, ch.Intuition, ch.Charisma, ch.Edge
+            ]
+    while attr > 0:
+        stat_roll = random.choice(rollable_stats)
+        if stat_roll.value + 1 <= stat_roll.limit:
+            stat_roll.value += 1
+            attr -= 1
+    return ch
+
+c.Metatype = Core.HUMAN 
+for attribute in Core.HUMAN.attributes.List:
+    match attribute.name:
+        case 'Body':
+            c.Body = Core.HUMAN.attributes.Body
+        case 'Agility':
+            c.Agility = Core.HUMAN.attributes.Agility
+        case 'Reaction':
+            c.Reaction = Core.HUMAN.attributes.Reaction
+        case 'Strength':
+            c.Strength = Core.HUMAN.attributes.Strength
+        case 'Willpower':
+            c.Willpower = Core.HUMAN.attributes.Willpower
+        case 'Logic':
+            c.Logic = Core.HUMAN.attributes.Logic
+        case 'Intuition':
+            c.Intuition = Core.HUMAN.attributes.Intuition
+        case 'Charisma':
+            c.Charisma = Core.HUMAN.attributes.Charisma
+        case 'Edge':
+            c.Edge = Core.HUMAN.attributes.Edge
+        case 'Essence':
+            c.Essence = Core.HUMAN.attributes.Essence
+c.redo_attr()
+c = roll_stats(c, 24)
+print(c.CoreAttributes)
+
+def get_highest_attr(ch: Core.Character):
+    non_special_attrs = ch.PhysicalAttributes + ch.MentalAttributes
+    attr_values = list(set(sorted([i.value for i in non_special_attrs])))
+    highest = []
+    for v in attr_values[::-1]:
+        for attr in non_special_attrs:
+            if attr.value == v:
+                highest.append(attr)
+                break
+        if len(highest) > 1:
+            break
+    print(highest)
+
+
+get_highest_attr(c)
+
 def init_shit():
     for s in Core.Skill.items:
         if hasattr(s, 'group'):
@@ -201,14 +256,3 @@ def get_knowledge_language_skills(ch: Core.Character):
     native_language.rating = "N"
     print(native_language)
 
-def get_spells(ch: Core.Character):
-    
-    pass
-k = Core.KarmaLogger()
-a = Core.Character()
-a.debug_gen_attrs()
-a.Skills = get_skills(a)
-print(a.Skills)
-a.Karma = 50
-leftover_karma(a, k)
-print()
