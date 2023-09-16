@@ -3,6 +3,86 @@ import char_shadowrun_5e_data as Core
 from collections import OrderedDict
 
 
+def generate_character():
+    karma_log = Core.KarmaLogger()
+    # PHASE 1: CONCEPT
+    character = Core.Character()
+    priority_table = get_priorities(character)
+    metatype = random.choice(priority_table['Metatype'])
+    attribute_points = priority_table['Attributes']
+    nuyen = priority_table['Resources']
+    # Initialising Stuff
+    edge_shit = metatype[1]
+    metatype = metatype[0]
+    # metatype.attributes.init_stat_block()
+    character.Metatype = metatype
+    for attribute in metatype.attributes.List:
+        match attribute.name:
+            case 'Body':
+                character.Body = metatype.attributes.Body
+            case 'Agility':
+                character.Agility = metatype.attributes.Agility
+            case 'Reaction':
+                character.Reaction = metatype.attributes.Reaction
+            case 'Strength':
+                character.Strength = metatype.attributes.Strength
+            case 'Willpower':
+                character.Willpower = metatype.attributes.Willpower
+            case 'Logic':
+                character.Logic = metatype.attributes.Logic
+            case 'Intuition':
+                character.Intuition = metatype.attributes.Intuition
+            case 'Charisma':
+                character.Charisma = metatype.attributes.Charisma
+            case 'Edge':
+                character.Edge = metatype.attributes.Edge
+            case 'Essence':
+                character.Essence = metatype.attributes.Essence
+    # STEP 1: ATTRIBUTES
+    character.redo_attr()
+    # print(f"======\nRolling with {priority_table['Attributes']} points")
+    roll_stats(character, attribute_points)
+    highest_attrs = get_highest_attr(character)
+    # STEP 3: MAGIC/RESONANCE
+    magic_reso = priority_table['MagicResonance']
+    resolve_magic_resonance(character, magic_reso)
+    character.redo_attr()
+    # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
+    IS_DECKER = False
+    IS_RIGGER = False
+    IS_FACE = False
+    alt_builds = ['Decker', 'Rigger', 'Face', None]
+    if priority_table['MagicResonance'] is None:
+        build = random.choices(alt_builds, [1, 1, 1, 5])
+        if build == 'Decker':
+            IS_DECKER = True
+            print('Character is decker')
+        elif build == 'Rigger':
+            IS_RIGGER = True
+            print('Character is rigger')
+        elif build == 'Face':
+            IS_FACE = True
+            print('Character is face')
+    skill_builds = {'IS_DECKER': IS_DECKER,
+                    'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
+    # STEP 4: QUALITIES
+    get_qualities(character, karma_log)
+    # STEP 5: SKILLS
+    get_skills(character, priority_table, attr_influence=highest_attrs,
+               skill_cap=20, builds=skill_builds)
+    if 'Exotic Melee Weapon' in character.Skills:
+        character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
+    add_contacts(character, karma_log)
+    leftover_karma(character, karma_log)
+    buy_gear(character, nuyen)
+    print_shit(character, nuyen, karma_log)
+
+    # Attribute Points
+
+    # PHASE 2: PR
+    pass
+
+
 def get_priorities(character: Core.Character) -> dict:
     """
         Chooses priorities from priority table.
@@ -80,25 +160,15 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
 def get_skills(
         ch: Core.Character,
         tbl,
-        skill_cap=50, attr_influence=None, **kwargs) -> dict:
+        skill_cap=50,
+        attr_influence=None,
+        **kwargs) -> dict:
     """
         Generates skills for character.
-        Does not select resonance or magic skills if the character does not
-        have the correct attribute
-        Skills from the highest two attributes are given priority over other
-            skills
-        If skill groups can be chosen, once they have been randomly chosen the
-            individual skills that make up that skill group cannot be raised
-            individually
-        As skills are individually chosen, skills that are from the same skill
-            group or skills that use the same primary attribute are more likely
-            to be chosen.
-        e.g. If the 'Pistols' skill is individually chosen, then the likelyhood
-            of 'Pistols', 'Automatics' and 'Longarms' increase
 
         Returns a dict of {skill_name: Core.Skill}
     """
-    character_skills = {}
+    ch.Skills = {}
     # character_specialisations = {}
     skill_points_table = tbl['Skills']
     if ch.MagicResoUser is not None:
@@ -106,7 +176,7 @@ def get_skills(
             magic_reso_skills = resolve_magic_resonance_skills(
                 ch, tbl['MagicResonance'][ch.MagicResoUser]['Skills'])
             for k, d in magic_reso_skills.items():
-                character_skills[k] = d
+                ch.Skills[k] = d
         else:
             pass
     skills = [skill for skill in Core.Skill.items if
@@ -126,22 +196,22 @@ def get_skills(
         if kwargs['builds']['IS_DECKER']:
             for _ in range(2):
                 decker_skill = random.choice(Core.DECKER_SKILLS)
-                character_skills[decker_skill.name] = decker_skill
-                character_skills[decker_skill.name].rating += 1
+                ch.Skills[decker_skill.name] = decker_skill
+                ch.Skills[decker_skill.name].rating += 1
                 skill_list[decker_skill] += 3
             pass
         if kwargs['builds']['IS_RIGGER']:
             for _ in range(2):
                 rigger_skill = random.choice(Core.RIGGER_SKILLS)
-                character_skills[rigger_skill.name] = rigger_skill
-                character_skills[rigger_skill.name].rating += 1
+                ch.Skills[rigger_skill.name] = rigger_skill
+                ch.Skills[rigger_skill.name].rating += 1
                 skill_list[rigger_skill] += 3
             pass
         if kwargs['builds']['IS_FACE']:
             for _ in range(2):
                 face_skill = random.choice(Core.FACE_SKILLS)
-                character_skills[face_skill.name] = face_skill
-                character_skills[face_skill.name].rating += 1
+                ch.Skills[face_skill.name] = face_skill
+                ch.Skills[face_skill.name].rating += 1
                 skill_list[face_skill] += 3
             pass
 
@@ -149,6 +219,25 @@ def get_skills(
 
     # Non-magic users can't select magic skills/groups
     # Non-resonance users can't select resonance skills/group
+    skill_list, group_list = skills_remove_magic_resonance(
+        ch, skill_list, group_list)
+    # Adjusting weights based on highest physical and mental attributes
+    skill_list, group_list = skills_attribute_influence(
+        ch, attr_influence, skill_list, group_list)
+    # Group Skill Points spend
+    skill_list, group_list = skills_roll_group(
+        ch, group_points, group_list, skill_list)
+
+    # Individual Skill Points spend
+    skill_list = skills_roll_individual(
+        ch, skill_points, skill_list, skill_cap)
+
+
+def skills_remove_magic_resonance(ch: Core.Character, skill_list, group_list):
+    """
+        If a character is not magically or resonancly inclined, remove those
+            skills from the pool of potential skill picks
+    """
     if ch.Magic is None:
         for sk in Core.MAGIC_SKILLS:
             skill_list[sk] = 0
@@ -159,8 +248,16 @@ def get_skills(
         for sk in Core.RESONANCE_SKILLS:
             skill_list[sk] = 0
         group_list[Core.TASKING] = 0
+    return skill_list, group_list
 
-    # Adjusting weights based on highest physical and mental attributes
+
+def skills_attribute_influence(ch: Core.Character, attr_influence, skill_list,
+                               group_list):
+    """
+        Adjusts the probabilities of skills being randomly selected based
+            on the two highest stats (randomly chosen from ties) of the
+            character
+    """
     if attr_influence is not None:
         for attr in attr_influence:
             skills_attr_influcence = [
@@ -170,18 +267,26 @@ def get_skills(
             for group in group_list:
                 if group.skills[0].attribute == attr.name:
                     group_list[group] += 3
+    return skill_list, group_list
 
-    # Group Skill Points spend
+
+def skills_roll_group(ch: Core.Character, group_points, group_list,
+                      skill_list):
+    """
+        If called for by skill point priority, rolls skills based on group.
+
+        Skills rolled this way cannot be rolled for individually later on
+    """
     while group_points > 0:
         ROLL_GROUP = random.choices(
             list(group_list.keys()), list(group_list.values()))[0]
         for skill in ROLL_GROUP.skills:
-            if skill.name not in character_skills.keys():
-                character_skills[skill.name] = skill
-                character_skills[skill.name].group = ROLL_GROUP.name
-                character_skills[skill.name].rating += 1
+            if skill.name not in ch.Skills.keys():
+                ch.Skills[skill.name] = skill
+                ch.Skills[skill.name].group = ROLL_GROUP.name
+                ch.Skills[skill.name].rating += 1
             else:
-                character_skills[skill.name].rating += 1
+                ch.Skills[skill.name].rating += 1
         # Adjusting weights based on groups already selected
         group_list[ROLL_GROUP] += random.randint(1, 2)
         skills_of_same_attr = [s for s in skill_list.keys(
@@ -189,19 +294,22 @@ def get_skills(
         for skill in skills_of_same_attr:
             skill_list[skill] += random.randint(1, 3)
         group_points -= 1
+    return skill_list, group_list
 
-    # Individual Skill Points spend
+
+def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
+                           skill_cap):
     while skill_points > 0:
         # Rolling for skill specialisations
-        specialisations = [d for k, d in character_skills.items(
+        specialisations = [d for k, d in ch.Skills.items(
         ) if d.rating > 4 and d.group is False]
         if len(specialisations) > 1 and random.randint(1, 100) > 80:
             ROLL_SPEC = random.choice(specialisations)
             while len(ROLL_SPEC.spec) < 1:
                 ROLL_SPEC = random.choice(specialisations)
             ROLL_SPECIALISATION = random.choice(ROLL_SPEC.spec)
-            if isinstance(character_skills[ROLL_SPEC.name].spec, list):
-                character_skills[ROLL_SPEC.name].spec = ROLL_SPECIALISATION
+            if isinstance(ch.Skills[ROLL_SPEC.name].spec, list):
+                ch.Skills[ROLL_SPEC.name].spec = ROLL_SPECIALISATION
                 skill_points -= 1
             else:
                 pass
@@ -209,23 +317,23 @@ def get_skills(
         ROLL_SKILL = random.choices(
             list(skill_list.keys()), list(skill_list.values()))[0]
         non_grouped_skills_count = len(
-            [i for i in character_skills.keys() if
-             character_skills[i].group is False])
+            [i for i in ch.Skills.keys() if
+             ch.Skills[i].group is False])
         # If skill is in group, ignore
         #   In this context, skills are only assigned to their group if the
         #   skill group has been previously chosen.
-        if ROLL_SKILL.name in character_skills.keys() and character_skills[
-                ROLL_SKILL.name].group is not False:
+        if ROLL_SKILL.name in ch.Skills.keys() \
+                and ROLL_SKILL.group is not False:
             pass
-        elif ROLL_SKILL.name not in character_skills.keys() and \
+        elif ROLL_SKILL.name not in ch.Skills.keys() and \
                 non_grouped_skills_count >= skill_cap:
             pass
         else:
-            if ROLL_SKILL.name not in character_skills.keys():
-                character_skills[ROLL_SKILL.name] = ROLL_SKILL
-            elif character_skills[ROLL_SKILL.name].rating >= 12:
+            if ROLL_SKILL.name not in ch.Skills.keys():
+                ch.Skills[ROLL_SKILL.name] = ROLL_SKILL
+            elif ch.Skills[ROLL_SKILL.name].rating >= 12:
                 continue
-            character_skills[ROLL_SKILL.name].rating += 1
+            ch.Skills[ROLL_SKILL.name].rating += 1
             # Adjusting weights based on skills already selected
             match skill_list[ROLL_SKILL]:
                 case 1, 2, 3:
@@ -240,8 +348,7 @@ def get_skills(
             else:
                 pass
             skill_points -= 1
-
-    return character_skills
+    return skill_list
 
 
 def resolve_magic_resonance_skills(ch: Core.Character, tbl) -> dict:
@@ -308,30 +415,17 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
     NEGATIVE_TOO_HIGH, POSITIVE_TOO_HIGH = False, False
     quality_weights = [1 for _ in Core.Quality.items]
     inc = 0
-    while total_karma > 0:
+    while total_karma > 0 and inc < 100:
+        inc += 1
+        print('t', total_karma)
+        print('i', inc)
         ch.Karma = total_karma
         # There's an infinite loop I can't be bothered to fix right now, this
         # will do
-        inc += 1
-        if inc > 100000:
-            break
-        if total_karma < 10 and random.randint(0, 1) == 1:
+        if (total_karma < 10 and random.randint(0, 1) == 1) or \
+                total_karma <= 0:
             break
         ROLL_KARMA = random.choices(Core.Quality.items, quality_weights)[0]
-        if ROLL_KARMA.name in ch.Qualities.keys():
-            if hasattr(ROLL_KARMA, "quantity"):
-                # Some qualities can be taken multiple times. The cap is called
-                #  "quantity" and the current amount of levels taken is "level"
-                if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
-                    if ch.Qualities[
-                            ROLL_KARMA.name].level > ROLL_KARMA.quantity:
-                        continue
-                else:
-                    raise ValueError(
-                        "Quality with quant already selected but has no level \
-                                value in character dict")
-            else:
-                continue
         # If a quality in the same group has already been taken, continue
         # (SEE DATA)
         if hasattr(ROLL_KARMA, "group"):
@@ -478,19 +572,19 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
             case 'Raise Skill':
                 try:
                     skill_to_raise = random.choice(
-                        [i for i in ch.Skills['Active'] if
-                         ch.Skills['Active'][i].rating < 6])
+                        [i for i in ch.Skills if
+                         ch.Skills[i].rating < 6])
                     karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][
-                        ch.Skills['Active'][skill_to_raise].rating + 1]
+                        ch.Skills[skill_to_raise].rating + 1]
                     # print(Core.KARMA_SKILL_COSTS['Active'][ch.Skills[
                     # 'Active'][skill_to_raise].rating + 1])
                     if karma_cost_skill_raise > karma_budget:
                         continue
                     else:
-                        ch.Skills['Active'][skill_to_raise].rating += 1
+                        ch.Skills[skill_to_raise].rating += 1
                         karma_budget -= karma_cost_skill_raise
-                        s1 = ch.Skills['Active'][skill_to_raise].name
-                        s2 = ch.Skills['Active'][skill_to_raise].rating
+                        s1 = ch.Skills[skill_to_raise].name
+                        s2 = ch.Skills[skill_to_raise].rating
                         k.append(
                             f'(EX) {s1} has been increased to {s2}.' +
                             f'Costing {karma_cost_skill_raise}.' +
@@ -501,24 +595,24 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
             case 'Raise Skill Group':
                 try:
                     skill_group_to_raise = random.choice(list(set([ch.Skills[
-                        'Active'][s].group for s in ch.Skills['Active'] if
-                        hasattr(ch.Skills['Active'][s], 'group') and
-                        ch.Skills['Active'][s].group is not False])))
+                        s].group for s in ch.Skills if
+                        hasattr(ch.Skills[s], 'group') and
+                        ch.Skills[s].group is not False])))
                     skills_in_skill_group = [
-                        s for s in ch.Skills['Active'] if ch.Skills[
-                            'Active'][s].group == skill_group_to_raise]
+                        s for s in ch.Skills if ch.Skills[
+                            s].group == skill_group_to_raise]
                     karma_cost_skill_group_raise = Core.KARMA_SKILL_COSTS[
-                        'Active Group'][ch.Skills['Active'][
+                        'Active Group'][ch.Skills[
                             skills_in_skill_group[0]].rating+1]
                     if karma_cost_skill_group_raise > karma_budget:
                         continue
                     else:
                         for skill in skills_in_skill_group:
-                            ch.Skills['Active'][skill].rating += 1
+                            ch.Skills[skill].rating += 1
                         karma_budget -= karma_cost_skill_group_raise
                         s1 = skill_group_to_raise
                         s2 = ch.Skills[
-                            "Active"][skills_in_skill_group[0]].rating
+                            skills_in_skill_group[0]].rating
                         k.append(
                             f'(EX) {s1} skills have been increased to {s2}.' +
                             f'Costing {karma_cost_skill_group_raise}.' +
@@ -530,18 +624,18 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                 pass
             case 'New Skill':
                 unskilled = [s for s in Core.ACTIVE_SKILLS if
-                             s.name not in list(ch.Skills['Active'].keys())]
+                             s.name not in list(ch.Skills.keys())]
                 new_skill = random.choice(unskilled)
-                ch.Skills['Active'][new_skill.name] = new_skill
-                ch.Skills['Active'][new_skill.name].rating += 1
+                ch.Skills[new_skill.name] = new_skill
+                ch.Skills[new_skill.name].rating += 1
                 karma_budget -= 1
                 k.append(
                     f'(EX) {new_skill.name} has been acquired as new skill.' +
                     f'Costing 1\n   {karma_budget} is Karma Total')
                 pass
             case 'New Skill Specialisation':
-                specialisations = [ch.Skills['Active']
-                                   [i].spec for i in ch.Skills['Active']]
+                specialisations = [ch.Skills
+                                   [i].spec for i in ch.Skills]
                 print('SKILLS FOR SPEC\n', specialisations)
 
                 pass
@@ -718,7 +812,7 @@ def format_skills(character_skills) -> None:
 
 def buy_gear(ch: Core.Character, nuyen: int):
     vehicle_skill_ratings = [
-        i.rating for i in ch.Skills['Active'].values() if
+        i.rating for i in ch.Skills.values() if
         i in Core.VEHICLE_SKILLS]
     print(vehicle_skill_ratings)
     pass
@@ -735,108 +829,9 @@ def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
             exotic_melee_weapon = random.choice([
                 i for i in Core.MeleeWeapon.items if
                 hasattr(i, "subtype") and i.subtype == "Exotic Melee Weapon"])
-            ch.Skills['Active'][f"{s.name}"].name = exotic_melee_weapon
+            ch.Skills[f"{s.name}"].name = exotic_melee_weapon
             # ch.Skills['Active'].pop(s.name)
     return ch
-
-
-def generate_character():
-    karma_log = Core.KarmaLogger()
-    # PHASE 1: CONCEPT
-    character = Core.Character()
-    priority_table = get_priorities(character)
-    metatype = random.choice(priority_table['Metatype'])
-    attribute_points = priority_table['Attributes']
-    nuyen = priority_table['Resources']
-    # Initialising Stuff
-    edge_shit = metatype[1]
-    metatype = metatype[0]
-    # metatype.attributes.init_stat_block()
-    character.Metatype = metatype
-    for attribute in metatype.attributes.List:
-        match attribute.name:
-            case 'Body':
-                character.Body = metatype.attributes.Body
-            case 'Agility':
-                character.Agility = metatype.attributes.Agility
-            case 'Reaction':
-                character.Reaction = metatype.attributes.Reaction
-            case 'Strength':
-                character.Strength = metatype.attributes.Strength
-            case 'Willpower':
-                character.Willpower = metatype.attributes.Willpower
-            case 'Logic':
-                character.Logic = metatype.attributes.Logic
-            case 'Intuition':
-                character.Intuition = metatype.attributes.Intuition
-            case 'Charisma':
-                character.Charisma = metatype.attributes.Charisma
-            case 'Edge':
-                character.Edge = metatype.attributes.Edge
-            case 'Essence':
-                character.Essence = metatype.attributes.Essence
-    # STEP 1: ATTRIBUTES
-    character.redo_attr()
-    print(character.Metatype.name)
-    # print(f"======\nRolling with {priority_table['Attributes']} points")
-    roll_stats(character, attribute_points)
-    highest_attrs = get_highest_attr(character)
-    # STEP 3: MAGIC/RESONANCE
-    magic_reso = priority_table['MagicResonance']
-    resolve_magic_resonance(character, magic_reso)
-    character.redo_attr()
-    print(character.CoreAttributes)
-    # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
-    IS_DECKER = False
-    IS_RIGGER = False
-    IS_FACE = False
-    alt_builds = ['Decker', 'Rigger', 'Face', None]
-    if priority_table['MagicResonance'] is None:
-        build = random.choices(alt_builds, [1, 1, 1, 5])
-        if build == 'Decker':
-            IS_DECKER = True
-            print('Character is decker')
-        elif build == 'Rigger':
-            IS_RIGGER = True
-            print('Character is rigger')
-        elif build == 'Face':
-            IS_FACE = True
-            print('Character is face')
-    skill_builds = {'IS_DECKER': IS_DECKER,
-                    'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
-    # STEP 4: QUALITIES
-    get_qualities(character, karma_log)
-    print(character.Qualities)
-    print(character.Spells)
-    # STEP 5: SKILLS
-    character.Skills['Active'] = get_skills(
-        character,
-        priority_table,
-        attr_influence=highest_attrs,
-        skill_cap=20,
-        builds=skill_builds)
-    if 'Exotic Melee Weapon' in character.Skills['Active']:
-        character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
-    format_skills(character.Skills['Active'])
-    add_contacts(character, karma_log)
-    leftover_karma(character, karma_log)
-    for k, d in character.Skills.items():
-        if d is None:
-            pass
-        else:
-            for i, j in character.Skills[k].items():
-                # print(j)
-                pass
-    print("character karma is ", character.Karma)
-    print(nuyen)
-    buy_gear(character, nuyen)
-    print('Karma logs:')
-    print(karma_log)
-
-    # Attribute Points
-
-    # PHASE 2: PR
-    pass
 
 
 def alt_generate_character():
@@ -871,6 +866,18 @@ def alt_generate_character():
         table_choices.pop(table_choices.index('E'))
     print(character_focus)
     print(selected_items['MagicResonance'])
+
+
+def print_shit(ch: Core.Character, nuyen, karma_log):
+    print(ch.Metatype.name)
+    print(ch.CoreAttributes)
+    print(ch.Qualities)
+    print(ch.Spells)
+    print("character karma is ", ch.Karma)
+    print(nuyen)
+    print('Karma logs:')
+    print(karma_log)
+    format_skills(ch.Skills)
 
 
 generate_character()

@@ -1,4 +1,6 @@
 import random
+
+
 class Attribute:
 
     def __init__(self, name, value: int = 0):
@@ -23,8 +25,9 @@ class Attribute:
             case _:
                 return ValueError("Attribute cannot get type due to bad name")
 
+
 class Attributes:
-    def __init__(self, input_values = None):
+    def __init__(self, input_values=None):
         self.Body = Attribute('Body')
         self.Agility = Attribute('Agility')
         self.Reaction = Attribute('Reaction')
@@ -55,7 +58,7 @@ class Attributes:
                         attribute.value = input_values[key]
         else:
             for attribute in self.List:
-                if attribute.name not in  ["Essence", 'Magic', 'Resonance']:
+                if attribute.name not in ["Essence", 'Magic', 'Resonance']:
                     attribute.value = 1
                     attribute.limit = 6
                 elif attribute.name == 'Essence':
@@ -85,38 +88,38 @@ class Character:
         self.Misc = None
         # Attributes
         self.Body = None
-        self.Agility = None 
-        self.Reaction = None 
-        self.Strength = None 
-        self.Willpower = None 
-        self.Logic = None 
-        self.Intuition = None 
+        self.Agility = None
+        self.Reaction = None
+        self.Strength = None
+        self.Willpower = None
+        self.Logic = None
+        self.Intuition = None
         self.Charisma = None
         self.Essence = None
         self.Edge = None
         self.Magic = None
-        self.Resonance = None 
-        self.Initiative = None 
-        self.Matrix_initiative = None 
-        self.Astral_initiative = None 
-        self.Composure = None 
-        self.Judge_intentions = None 
+        self.Resonance = None
+        self.Initiative = None
+        self.Matrix_initiative = None
+        self.Astral_initiative = None
+        self.Composure = None
+        self.Judge_intentions = None
         self.Memory = None
-        self.Lift_carry = None 
-        self.Movement = None 
-        self.Physical_limit = None 
-        self.Mental_limit = None 
+        self.Lift_carry = None
+        self.Movement = None
+        self.Physical_limit = None
+        self.Mental_limit = None
         self.Social_limit = None
-        self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
-        self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
-        self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
-        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
+        self.PhysicalAttributes = [self.Body, self.Agility,
+                                   self.Reaction, self.Strength]
+        self.MentalAttributes = [self.Willpower, self.Logic,
+                                 self.Intuition, self.Charisma]
+        self.SpecialAttributes = [self.Edge, self.Essence,
+                                  self.Magic, self.Resonance]
+        self.CoreAttributes = self.PhysicalAttributes + \
+            self.MentalAttributes + self.SpecialAttributes
         # Skills
-        self.Skills = {
-                'Active': None,
-                'Knowledge': None,
-                'Language': None
-                }
+        self.Skills = {}
         self.Specialisations = {}
         # IDs/Lifestyle/Currency
         self.Primary_lifestyle = None
@@ -124,7 +127,7 @@ class Character:
         self.Licences = None
         self.Other = None
         # Core Combat Info
-        self.Physical_armor = None 
+        self.Physical_armor = None
         self.Primary_ranged_weapon = None
         self.Primary_melee_weapon = None
         self.Physical_dmg_track = None
@@ -151,21 +154,26 @@ class Character:
 
     def print_stats(self):
         print(f'{self.Body}\n{self.Agility}\n{self.Reaction}\n{self.Strength}')
-        print(f'{self.Logic}\n{self.Willpower}\n{self.Intuition}\n{self.Charisma}')
+        print(f'{self.Logic}\n{self.Willpower}\n' +
+              f'{self.Intuition}\n{self.Charisma}')
         print(f'{self.Edge}\n{self.Essence}')
 
     def redo_attr(self):
-        self.PhysicalAttributes = [self.Body, self.Agility, self.Reaction, self.Strength]
-        self.MentalAttributes = [self.Willpower, self.Logic, self.Intuition, self.Charisma]
-        self.SpecialAttributes = [self.Edge, self.Essence, self.Magic, self.Resonance]
-        self.CoreAttributes = self.PhysicalAttributes + self.MentalAttributes + self.SpecialAttributes
+        self.PhysicalAttributes = [self.Body, self.Agility,
+                                   self.Reaction, self.Strength]
+        self.MentalAttributes = [self.Willpower, self.Logic,
+                                 self.Intuition, self.Charisma]
+        self.SpecialAttributes = [self.Edge, self.Essence,
+                                  self.Magic, self.Resonance]
+        self.CoreAttributes = self.PhysicalAttributes + \
+            self.MentalAttributes + self.SpecialAttributes
 
     def highest_core_attr(self):
         non_zero_attrs = []
         for attr in self.CoreAttributes:
             if attr is None:
                 pass
-            if type(attr) == Attribute:
+            if type(attr) is Attribute:
                 non_zero_attrs.append(attr)
         highest_attr = None
         for attr in non_zero_attrs:
@@ -185,7 +193,7 @@ class Character:
         elif magic:
             limitation = 3
         else:
-            limitation = random.randint(1,3)
+            limitation = random.randint(1, 3)
 
         self.Body = Attribute("Body")
         self.Agility = Attribute("Agility")
@@ -200,9 +208,9 @@ class Character:
         self.Magic = Attribute("Magic")
         self.Resonance = Attribute("Resonance")
         self.CoreAttributes = [
-                self.Body, self.Agility, self.Reaction, self.Strength, self.Willpower,
-                self.Logic, self.Intuition, self.Charisma, self.Edge, self.Essence, 
-                self.Magic, self.Resonance
+                self.Body, self.Agility, self.Reaction, self.Strength,
+                self.Willpower, self.Logic, self.Intuition, self.Charisma,
+                self.Edge, self.Essence, self.Magic, self.Resonance
         ]
         for attr in self.CoreAttributes:
             roll_attr(attr)
@@ -211,10 +219,9 @@ class Character:
                 self.Magic = None
                 self.Resonance = None
             case 2:
-                self.Magic=None
+                self.Magic = None
             case 3:
-                self.Resonance=None
-
+                self.Resonance = None
 
 
 class AbstractBaseClass:
@@ -229,6 +236,7 @@ class AbstractBaseClass:
 
 class Metatype(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         Metatype.items.append(self)
         self.attributes = Attributes()
@@ -237,6 +245,7 @@ class Metatype(AbstractBaseClass):
 
 class Archetype(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         Archetype.items.append(self)
         super().__init__(name, **kwargs)
@@ -244,6 +253,7 @@ class Archetype(AbstractBaseClass):
 
 class DamageType(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
 
@@ -258,6 +268,7 @@ class ConditionMonitor(AbstractBaseClass):
 
 class Quality(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         Quality.items.append(self)
         super().__init__(name, **kwargs)
@@ -275,6 +286,7 @@ class Quality(AbstractBaseClass):
 
 class Skill(AbstractBaseClass):
     items = []
+
     def __init__(self, name, attribute, skill_type, spec=[], **kwargs):
         super().__init__(name, **kwargs)
         Skill.items.append(self)
@@ -296,15 +308,18 @@ class Skill(AbstractBaseClass):
 
 
 class SkillGroup(AbstractBaseClass):
-    items =[]
+    items = []
+
     def __init__(self, name, skills, **kwargs):
         super().__init__(name, **kwargs)
         SkillGroup.items.append(self)
         self.skills = skills
         self.idx = 0
-    
+
     def __repr__(self):
         return [skill.name for skill in self.skills]
+
+
 """
     def __iter__(self):
         return self
@@ -318,9 +333,12 @@ class SkillGroup(AbstractBaseClass):
         return result
 """
 
+
 class Contact(AbstractBaseClass):
     items = []
-    def __init__(self, name, metatype, connection, limits, age, sex, attr_values, skills, **kwargs):
+
+    def __init__(self, name, metatype, connection, limits, age, sex,
+                 attr_values, skills, **kwargs):
         Contact.items.append(self)
         self.metatype = metatype
         self.age = self.roll_age(age)
@@ -328,7 +346,8 @@ class Contact(AbstractBaseClass):
         self.connection = connection
         self.attributes = Attributes(attr_values)
         self.skills = self.resolve_skills(skills)
-        self.limits = {'Physical': limits[0], 'Mental': limits[1], 'Social': limits[2]}
+        self.limits = {'Physical': limits[0], 'Mental': limits[1],
+                       'Social': limits[2]}
         self.connection_rating = connection
         super().__init__(name, **kwargs)
 
@@ -338,7 +357,8 @@ class Contact(AbstractBaseClass):
             if isinstance(skills[key], int):
                 the_skills[key.name] = skills[key]
             else:
-                the_skills[key.name] = (skills[key][0], f'{skills[key][1]} (+2)')
+                the_skills[key.name] = (skills[key][0],
+                                        f'{skills[key][1]} (+2)')
         return the_skills
 
     def roll_age(self, age):
@@ -357,6 +377,7 @@ class Contact(AbstractBaseClass):
 
 class Gear(AbstractBaseClass):
     items = []
+
     def __init__(self, name, cost, page_ref, **kwargs):
         Gear.items.append(self)
         super().__init__(name, **kwargs)
@@ -367,13 +388,14 @@ class Gear(AbstractBaseClass):
 
     def __repr__(self):
         if self.subtype is not None:
-            return f'[{self.category}/{self.subtype}] {self.name} (p.{self.page_ref})'
+            return f'[{self.category}/{self.subtype}] {self.name}' + \
+                    f'(p.{self.page_ref})'
         return f'[{self.category}] {self.name} (p. {self.page_ref})'
-
 
 
 class MeleeWeapon(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
         MeleeWeapon.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -384,6 +406,7 @@ class MeleeWeapon(Gear):
 
 class ProjectileWeapon(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
         ProjectileWeapon.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -394,6 +417,7 @@ class ProjectileWeapon(Gear):
 
 class Firearm(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, avail, subtype, **kwargs):
         Firearm.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -404,6 +428,7 @@ class Firearm(Gear):
 
 class FirearmAccessory(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, avail, **kwargs):
         FirearmAccessory.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -413,6 +438,7 @@ class FirearmAccessory(Gear):
 
 class Ammo(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, avail, **kwargs):
         Ammo.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -422,6 +448,7 @@ class Ammo(Gear):
 
 class Clothing(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, **kwargs):
         Clothing.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -430,6 +457,7 @@ class Clothing(Gear):
 
 class Armor(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, **kwargs):
         Armor.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -438,6 +466,7 @@ class Armor(Gear):
 
 class ArmorModification(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, **kwargs):
         ArmorModification.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -446,6 +475,7 @@ class ArmorModification(Gear):
 
 class Electronics(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, **kwargs):
         Electronics.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -454,7 +484,8 @@ class Electronics(Gear):
 
 class Sensor(AbstractBaseClass):
     items = []
-    def __init__(self, sensor_type, housing = None, functions = None, **kwargs):
+
+    def __init__(self, sensor_type, housing=None, functions=None, **kwargs):
         Sensor.items.append(self)
         self.name = "Sensor"
         super().__init__(self.name, **kwargs)
@@ -465,26 +496,33 @@ class Sensor(AbstractBaseClass):
         self.cost = 0
 
     def get_info(self):
-        # functions_format = ", ".join([f"{i} (Range: {self.functions[self.functions.index(i)]['Range']})" for i in self.functions])
-        print(f"\nSensor Name: {self.name}\n-- Housing: {self.housing}\n-- Type: {self.sensor_type}\n-- Functions: {self.functions}")
+        print(f"\nSensor Name: {self.name}\n-- Housing: {self.housing}\n" +
+              f"-- Type: {self.sensor_type}\n-- Functions: {self.functions}")
 
 
 """
     The Item Class. Why now?
 
-heritants of the "Gear" class could all technically classify as "Items", I'm making a distinction
-    from the above and generic items by common-sense TTRPG logic, as oxymoronic as that sounds.
+heritants of the "Gear" class could all technically classify as "Items", I'm
+    making a distinction from the above and generic items by common-sense
+    TTRPG logic, as oxymoronic as that sounds.
 
 If it equips to you, it ain't an item.
-If it gets thrust into your storage medium of choice to be used at a later date, it's an item.
+If it gets thrust into your storage medium of choice to be used at a later
+    date, it's an item.
 
-Even things like explosvies, who serve the same purpose as weaponary (do the hurty damage), count as items as I'm arbitrarily
-    making the call that you wouldn't equip explosives in the same way you would armor or a sword or a gun.
-Also I made the Ammo class before I got around to doing this class so fuck you, it stays as is.
+Even things like explosvies, who serve the same purpose as weaponary
+    (do the hurty damage), count as items as I'm arbitrarily making the call
+    that you wouldn't equip explosives in the same way you would armor or
+    a sword or a gun.
+Also I made the Ammo class before I got around to doing this class so fuck 
+    you, it stays as is.
 """
+
 
 class Item(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, category="Item", **kwargs):
         Item.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -493,6 +531,7 @@ class Item(Gear):
 
 class Vehicle(Gear):
     items = []
+
     def __init__(self, name, cost, page_ref, skill_req, category="Vehicle", subtype=None, **kwargs):
         Vehicle.items.append(self)
         super().__init__(name, cost, page_ref, **kwargs)
@@ -502,7 +541,6 @@ class Vehicle(Gear):
         self.skill_req = skill_req
 
 
-
 class GearAvailability(AbstractBaseClass):
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
@@ -510,6 +548,7 @@ class GearAvailability(AbstractBaseClass):
 
 class Lifestyle(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         Lifestyle.items.append(self)
         super().__init__(name, **kwargs)
@@ -517,6 +556,7 @@ class Lifestyle(AbstractBaseClass):
 
 class ComplexForm(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         ComplexForm.items.append(self)
@@ -524,6 +564,7 @@ class ComplexForm(AbstractBaseClass):
 
 class Spell(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Spell.items.append(self)
@@ -531,15 +572,19 @@ class Spell(AbstractBaseClass):
 
 class Augmentation(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Augmentation.items.append(self)
 
+
 class AugmentationGrade(AbstractBaseClass):
     items = []
+
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         AugmentationGrade.items.append(self)
+
 
 class KarmaLogger():
     def __init__(self):
@@ -552,6 +597,7 @@ class KarmaLogger():
     def append(self, item):
         self.index += 1
         self.logs.append(f'[{self.index}] {item}')
+
 
 """
     ATTRIBUTES
