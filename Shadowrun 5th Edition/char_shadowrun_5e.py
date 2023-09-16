@@ -528,7 +528,6 @@ def skills_magic_resonance(ch: Core.Character, tbl) -> dict:
 def get_language_knowledge_skills(ch: Core.Character) -> None:
     knowledge_points = (ch.Logic.value + ch.Intuition.value) * 2
     # Roll native language
-    dialects = [i for i in Core.LANGUAGE_SKILLS if i.category == 'Dialect']
     language = [i for i in Core.LANGUAGE_SKILLS if i.category == 'Tongue']
     knowl_skills = [i for i in Core.Skill.items if i.skill_type == 'Knowledge']
 
@@ -546,12 +545,11 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         ch.Languages[language_roll] = ch.Skills['Language'].rating
         knowledge_points -= ch.Skills['Language'].rating
 
-    extra_language_roll = random.randint(0,1)
+    extra_language_roll = random.randint(0, 1)
     if extra_language_roll:
         language_roll = random.choice(language)
         ch.Languages[language_roll] = random.randint(1, 4)
         knowledge_points -= ch.Languages[language_roll]
-        language_roll_potential = False
 
     while knowledge_points > 1:
         knowl_skill_roll = random.choice(knowl_skills)
@@ -561,8 +559,6 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         ch.KnowlegeSkills[knowl_skill_roll] = knowl_skill_amt
         knowl_skills.pop(knowl_skills.index(knowl_skill_roll))
         knowledge_points -= knowl_skill_amt
-
-
 
 
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
@@ -717,7 +713,8 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
         contact_cost += loyalty_cost
         karma -= contact_cost
         k.append(f'[CON]\nAdding {CONTACT_ROLL.name} as contact.' +
-                 f'Conn: {CONTACT_ROLL.connection} | Loyalty: {loyalty_cost} | ' +
+                 f'Conn: {CONTACT_ROLL.connection} | ' +
+                 f'Loyalty: {loyalty_cost} | ' +
                  f'Total: {CONTACT_ROLL.connection + loyalty_cost}' +
                  f'\n   {karma} is remaining bonus karma')
 

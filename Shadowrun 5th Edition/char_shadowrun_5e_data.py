@@ -299,7 +299,7 @@ class Skill(AbstractBaseClass):
         self.spec = spec
 
     def __repr__(self):
-        if self.skill_type is 'Knowledge':
+        if self.skill_type == 'Knowledge':
             return f"{self.name}"
         if isinstance(self.spec, str):
             if self.group:
@@ -765,7 +765,7 @@ MILSPEC = Skill("Milspec", INTUITION, "Language", category="Dialect")
 CORP = Skill("Corp", INTUITION, "Language", category="Dialect")
 ORBIBAL = Skill("Orbibal", INTUITION, "Language", category="Dialect")
 SPERENTHIEL = Skill("Sperenthiel", INTUITION, "Language", category="Tongue")
-OR_ZET = Skill("Or'Zet", INTUITION, "Language", category="Tongue") 
+OR_ZET = Skill("Or'Zet", INTUITION, "Language", category="Tongue")
 ENGLISH = Skill("English", INTUITION, "Language", category="Tongue")
 JAPANESE = Skill("Japanese", INTUITION, "Language", category="Tongue")
 MANDARIN = Skill("Mandarin", INTUITION, "Language", category="Tongue")
@@ -2040,15 +2040,15 @@ def refresh_priority_table():
         'A': {
             'Magician': {
                 'Magic': 6,
-                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 },
+                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2},
                 'Spells': 10 },
             'Mystic Adept': {
                 'Magic': 6,
-                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2 },
+                'Skills': {'Type': 'Magic', 'Rating': 5, 'Quantity': 2},
                 'Spells': 10 },
             'Technomancer': {
                 'Resonance': 6,
-                'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2 },
+                'Skills': {'Type': 'Resonance', 'Rating': 5, 'Quantity': 2},
                 'Complex Forms': 5 } 
         },
         'B': {
