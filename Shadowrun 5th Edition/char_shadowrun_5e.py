@@ -158,6 +158,129 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
     return highest
 
 
+def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
+    """
+        Randomly chooses qualities for character.
+        Karma starts off at 25 points. Positive qualities cost karma whilst
+            negative qualities grant karma.
+        However the total sum of positive qualities cannot exceed 25, and
+            the total sum of negative qualities cannot exceed -25
+    """
+    ch.Qualities = {}
+    total_karma = 25
+    positive_karma, negative_karma = 0, 0
+    k.append(f'Beginning karma logging.\n   {total_karma} is Karma total')
+    NEGATIVE_TOO_HIGH, POSITIVE_TOO_HIGH = False, False
+    quality_weights = [1 for _ in Core.Quality.items]
+    inc = 0
+    while total_karma > 0 and inc < 100:
+        inc += 1
+        ch.Karma = total_karma
+        # There's an infinite loop I can't be bothered to fix right now, this
+        # will do
+        if (total_karma < 10 and random.randint(0, 1) == 1) or \
+                total_karma <= 0:
+            break
+        ROLL_KARMA = random.choices(Core.Quality.items, quality_weights)[0]
+        # If a quality in the same group has already been taken, continue
+        # (SEE DATA)
+        if hasattr(ROLL_KARMA, "group"):
+            if ROLL_KARMA.group in [d.group for d in ch.Qualities.values() if
+                                    hasattr(d, "group")]:
+                continue
+        # Negative qualities cannot total more than ABS(25)
+        if hasattr(ROLL_KARMA, "negative"):
+            if negative_karma + ROLL_KARMA.cost > 25:
+                NEGATIVE_TOO_HIGH = True
+                continue
+                # continue
+        # Positive qualities cannot total more than ABS(25)
+        elif positive_karma + ROLL_KARMA.cost > 25:
+            POSITIVE_TOO_HIGH = True
+            continue
+            # continue
+        if total_karma - ROLL_KARMA.cost < 0 or (
+                NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (
+                POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
+            continue
+        if hasattr(ROLL_KARMA, "negative"):
+            negative_karma += ROLL_KARMA.cost
+            total_karma += ROLL_KARMA.cost
+            k.append(f'(NEG) {ROLL_KARMA.name} has been bought.' +
+                     f'Costing {ROLL_KARMA.cost}.' +
+                     f'\n   {total_karma} is Karma total.' +
+                     f'\nNegative Karma is at {negative_karma}')
+        else:
+            positive_karma += ROLL_KARMA.cost
+            total_karma -= ROLL_KARMA.cost
+            k.append(f'(POS) {ROLL_KARMA.name} has been bought.' +
+                     f'Costing {ROLL_KARMA.cost}.' +
+                     f'\n   {total_karma} is Karma total.' +
+                     f'\nPositive Karma is at {positive_karma}')
+
+        # Pretty output & roll for quality specific params here
+        ROLL_KARMA = resolve_quality(ROLL_KARMA, ch)
+
+        ch.Qualities[ROLL_KARMA.name] = ROLL_KARMA
+        if hasattr(ROLL_KARMA, "quantity"):
+            if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
+                ch.Qualities[ROLL_KARMA.name].level += 1
+            else:
+                ch.Qualities[ROLL_KARMA.name].level = 1
+            quality_weights[Core.Quality.items.index(ROLL_KARMA)] += 10
+        if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
+            break
+    # print(ch.Qualities)
+
+
+def resolve_quality(q: Core.Quality, ch: Core.Character):
+    """
+        For qualities that have multiple levels or are a generic title meant
+            for something more specific, then those levels/specificities are
+            dealt with here
+
+        Returns Core.Quality
+    """
+    # Just a dump for all the quality-specific rolling options
+    if "Allergy" in q.name:
+        if "Common" in q.name:
+            x = {5: 'Mild', 10: 'Moderate', 15: 'Severe', 20: 'Extreme'}
+            common_allergies = ['Peanuts', 'Pollutants', 'Grass']
+            q.name = f"{x[q.cost]} Allergy ({random.choice(common_allergies)})"
+        if "Uncommon" in q.name:
+            x = {10: 'Mild', 15: 'Moderate', 20: 'Severe', 25: 'Extreme'}
+            uncom_allergies = ['Dogs', 'Grass', 'Seafood', 'Sunlight']
+            q.name = f"{x[q.cost]} Allergy ({random.choice(uncom_allergies)})"
+    if "Addiction" in q.name:
+        x = {4: 'Mild', 9: 'Moderate', 20: 'Severe', 25: 'Burnout'}
+        q.name = f"{x[q.cost]} Addiction ({random.choice(q.opts)})"
+    if "Resistance to Pathogens or Toxins" in q.name:
+        q.name = f"Resistance to {random.choice(q.opts)}"
+    if "Mentor Spirit" in q.name:
+        q.name = f"Mentor Spirit ({random.choice(q.opts)})"
+    if "(Natural)" in q.name:
+        q.name = "Natural Immunity (Organic)"
+    if "Prejudiced" in q.name:
+        if "Common" in q.name:
+            x = {5: 'Bias', 7: 'Outspoken', 10: 'Radical'}
+            common_prejudices = ['Human', 'Metahuman',
+                                 'Troll', 'Ork', 'Elve', 'Dwarf']
+            chosen_prejudice = random.choice([
+                i for i in common_prejudices if i != ch.Metatype.name
+            ])
+            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
+        if "Specific" in q.name:
+            x = {3: 'Bias', 5: 'Outspoken', 8: 'Radical'}
+            specific_prejudices = [
+                'The Awakened',
+                'technomancers',
+                'shapeshifters',
+                'aspected magicians']
+            chosen_prejudice = random.choice(specific_prejudices)
+            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
+    return q
+
+
 def get_skills(
         ch: Core.Character,
         tbl,
@@ -440,127 +563,6 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         knowledge_points -= knowl_skill_amt
 
 
-def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
-    """
-        Randomly chooses qualities for character.
-        Karma starts off at 25 points. Positive qualities cost karma whilst
-            negative qualities grant karma.
-        However the total sum of positive qualities cannot exceed 25, and
-            the total sum of negative qualities cannot exceed -25
-    """
-    ch.Qualities = {}
-    total_karma = 25
-    positive_karma, negative_karma = 0, 0
-    k.append(f'Beginning karma logging.\n   {total_karma} is Karma total')
-    NEGATIVE_TOO_HIGH, POSITIVE_TOO_HIGH = False, False
-    quality_weights = [1 for _ in Core.Quality.items]
-    inc = 0
-    while total_karma > 0 and inc < 100:
-        inc += 1
-        ch.Karma = total_karma
-        # There's an infinite loop I can't be bothered to fix right now, this
-        # will do
-        if (total_karma < 10 and random.randint(0, 1) == 1) or \
-                total_karma <= 0:
-            break
-        ROLL_KARMA = random.choices(Core.Quality.items, quality_weights)[0]
-        # If a quality in the same group has already been taken, continue
-        # (SEE DATA)
-        if hasattr(ROLL_KARMA, "group"):
-            if ROLL_KARMA.group in [d.group for d in ch.Qualities.values() if
-                                    hasattr(d, "group")]:
-                continue
-        # Negative qualities cannot total more than ABS(25)
-        if hasattr(ROLL_KARMA, "negative"):
-            if negative_karma + ROLL_KARMA.cost > 25:
-                NEGATIVE_TOO_HIGH = True
-                continue
-                # continue
-        # Positive qualities cannot total more than ABS(25)
-        elif positive_karma + ROLL_KARMA.cost > 25:
-            POSITIVE_TOO_HIGH = True
-            continue
-            # continue
-        if total_karma - ROLL_KARMA.cost < 0 or (
-                NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (
-                POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
-            continue
-        if hasattr(ROLL_KARMA, "negative"):
-            negative_karma += ROLL_KARMA.cost
-            total_karma += ROLL_KARMA.cost
-            k.append(f'(NEG) {ROLL_KARMA.name} has been bought.' +
-                     f'Costing {ROLL_KARMA.cost}.' +
-                     f'\n   {total_karma} is Karma total.' +
-                     f'\nNegative Karma is at {negative_karma}')
-        else:
-            positive_karma += ROLL_KARMA.cost
-            total_karma -= ROLL_KARMA.cost
-            k.append(f'(POS) {ROLL_KARMA.name} has been bought.' +
-                     f'Costing {ROLL_KARMA.cost}.' +
-                     f'\n   {total_karma} is Karma total.' +
-                     f'\nPositive Karma is at {positive_karma}')
-
-        # Pretty output & roll for quality specific params here
-        ROLL_KARMA = resolve_quality(ROLL_KARMA, ch)
-
-        ch.Qualities[ROLL_KARMA.name] = ROLL_KARMA
-        if hasattr(ROLL_KARMA, "quantity"):
-            if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
-                ch.Qualities[ROLL_KARMA.name].level += 1
-            else:
-                ch.Qualities[ROLL_KARMA.name].level = 1
-            quality_weights[Core.Quality.items.index(ROLL_KARMA)] += 10
-        if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
-            break
-    # print(ch.Qualities)
-
-
-def resolve_quality(q: Core.Quality, ch: Core.Character):
-    """
-        For qualities that have multiple levels or are a generic title meant
-            for something more specific, then those levels/specificities are
-            dealt with here
-
-        Returns Core.Quality
-    """
-    # Just a dump for all the quality-specific rolling options
-    if "Allergy" in q.name:
-        if "Common" in q.name:
-            x = {5: 'Mild', 10: 'Moderate', 15: 'Severe', 20: 'Extreme'}
-            common_allergies = ['Peanuts', 'Pollutants', 'Grass']
-            q.name = f"{x[q.cost]} Allergy ({random.choice(common_allergies)})"
-        if "Uncommon" in q.name:
-            x = {10: 'Mild', 15: 'Moderate', 20: 'Severe', 25: 'Extreme'}
-            uncom_allergies = ['Dogs', 'Grass', 'Seafood', 'Sunlight']
-            q.name = f"{x[q.cost]} Allergy ({random.choice(uncom_allergies)})"
-    if "Addiction" in q.name:
-        x = {4: 'Mild', 9: 'Moderate', 20: 'Severe', 25: 'Burnout'}
-        q.name = f"{x[q.cost]} Addiction ({random.choice(q.opts)})"
-    if "Resistance to Pathogens or Toxins" in q.name:
-        q.name = f"Resistance to {random.choice(q.opts)}"
-    if "Mentor Spirit" in q.name:
-        q.name = f"Mentor Spirit ({random.choice(q.opts)})"
-    if "(Natural)" in q.name:
-        q.name = "Natural Immunity (Organic)"
-    if "Prejudiced" in q.name:
-        if "Common" in q.name:
-            x = {5: 'Bias', 7: 'Outspoken', 10: 'Radical'}
-            common_prejudices = ['Human', 'Metahuman',
-                                 'Troll', 'Ork', 'Elve', 'Dwarf']
-            chosen_prejudice = random.choice([
-                i for i in common_prejudices if i != ch.Metatype.name
-            ])
-            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
-        if "Specific" in q.name:
-            x = {3: 'Bias', 5: 'Outspoken', 8: 'Radical'}
-            specific_prejudices = [
-                'The Awakened',
-                'technomancers',
-                'shapeshifters',
-                'aspected magicians']
-            chosen_prejudice = random.choice(specific_prejudices)
-            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
-    return q
 
 
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
