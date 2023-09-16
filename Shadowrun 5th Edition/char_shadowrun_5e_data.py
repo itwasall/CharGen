@@ -120,6 +120,8 @@ class Character:
             self.MentalAttributes + self.SpecialAttributes
         # Skills
         self.Skills = {}
+        self.KnowlegeSkills = {}
+        self.Languages = {}
         self.Specialisations = {}
         # IDs/Lifestyle/Currency
         self.Primary_lifestyle = None
@@ -297,6 +299,8 @@ class Skill(AbstractBaseClass):
         self.spec = spec
 
     def __repr__(self):
+        if self.skill_type is 'Knowledge':
+            return f"{self.name}"
         if isinstance(self.spec, str):
             if self.group:
                 raise ValueError

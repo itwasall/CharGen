@@ -3,7 +3,7 @@ import char_shadowrun_5e_data as Core
 from collections import OrderedDict
 
 
-def generate_character():
+def generate_character() -> None:
     karma_log = Core.KarmaLogger()
     # PHASE 1: CONCEPT
     character = Core.Character()
@@ -70,6 +70,7 @@ def generate_character():
     # STEP 5: SKILLS
     get_skills(character, priority_table, attr_influence=highest_attrs,
                skill_cap=20, builds=skill_builds)
+    get_language_knowledge_skills(character)
     if 'Exotic Melee Weapon' in character.Skills:
         character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     add_contacts(character, karma_log)
@@ -162,7 +163,7 @@ def get_skills(
         tbl,
         skill_cap=50,
         attr_influence=None,
-        **kwargs) -> dict:
+        **kwargs) -> None:
     """
         Generates skills for character.
 
@@ -173,7 +174,7 @@ def get_skills(
     skill_points_table = tbl['Skills']
     if ch.MagicResoUser is not None:
         if 'Skills' in tbl['MagicResonance'][ch.MagicResoUser].keys():
-            magic_reso_skills = resolve_magic_resonance_skills(
+            magic_reso_skills = skills_magic_resonance(
                 ch, tbl['MagicResonance'][ch.MagicResoUser]['Skills'])
             for k, d in magic_reso_skills.items():
                 ch.Skills[k] = d
@@ -233,7 +234,8 @@ def get_skills(
         ch, skill_points, skill_list, skill_cap)
 
 
-def skills_remove_magic_resonance(ch: Core.Character, skill_list, group_list):
+def skills_remove_magic_resonance(ch: Core.Character,
+                                  skill_list, group_list) -> (dict, dict):
     """
         If a character is not magically or resonancly inclined, remove those
             skills from the pool of potential skill picks
@@ -252,7 +254,7 @@ def skills_remove_magic_resonance(ch: Core.Character, skill_list, group_list):
 
 
 def skills_attribute_influence(ch: Core.Character, attr_influence, skill_list,
-                               group_list):
+                               group_list) -> (dict, dict):
     """
         Adjusts the probabilities of skills being randomly selected based
             on the two highest stats (randomly chosen from ties) of the
@@ -271,7 +273,7 @@ def skills_attribute_influence(ch: Core.Character, attr_influence, skill_list,
 
 
 def skills_roll_group(ch: Core.Character, group_points, group_list,
-                      skill_list):
+                      skill_list) -> (dict, dict):
     """
         If called for by skill point priority, rolls skills based on group.
 
@@ -298,7 +300,7 @@ def skills_roll_group(ch: Core.Character, group_points, group_list,
 
 
 def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
-                           skill_cap):
+                           skill_cap) -> dict:
     while skill_points > 0:
         # Rolling for skill specialisations
         specialisations = [d for k, d in ch.Skills.items(
@@ -351,7 +353,7 @@ def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
     return skill_list
 
 
-def resolve_magic_resonance_skills(ch: Core.Character, tbl) -> dict:
+def skills_magic_resonance(ch: Core.Character, tbl) -> dict:
     """
         If a character weilds magic or is a technomancer, the relevant skills
             to those archetypes are rolled for here
@@ -400,6 +402,44 @@ def resolve_magic_resonance_skills(ch: Core.Character, tbl) -> dict:
     return skills
 
 
+def get_language_knowledge_skills(ch: Core.Character) -> None:
+    knowledge_points = (ch.Logic.value + ch.Intuition.value) * 2
+    # Roll native language
+    dialects = [i for i in Core.LANGUAGE_SKILLS if i.category == 'Dialect']
+    language = [i for i in Core.LANGUAGE_SKILLS if i.category == 'Tongue']
+    knowl_skills = [i for i in Core.Skill.items if i.skill_type == 'Knowledge']
+
+    native_roll = random.choice(language)
+    ch.Languages[native_roll] = "N"
+    language.pop(language.index(native_roll))
+
+    if 'Bilingual' in ch.Qualities.keys():
+        bilingual_roll = random.choice(language)
+        ch.Languages[bilingual_roll] = "N"
+        language.pop(language.index(bilingual_roll))
+
+    if 'Language' in ch.Skills.keys():
+        language_roll = random.choice(language)
+        ch.Languages[language_roll] = ch.Skills['Language'].rating
+        knowledge_points -= ch.Skills['Language'].rating
+
+    extra_language_roll = random.randint(0,1)
+    if extra_language_roll:
+        language_roll = random.choice(language)
+        ch.Languages[language_roll] = random.randint(1, 4)
+        knowledge_points -= ch.Languages[language_roll]
+        language_roll_potential = False
+
+    while knowledge_points > 1:
+        knowl_skill_roll = random.choice(knowl_skills)
+        knowl_skill_amt = random.randint(1, 4)
+        while knowledge_points - knowl_skill_amt < 0:
+            knowl_skill_amt = random.randint(1, 4)
+        ch.KnowlegeSkills[knowl_skill_roll] = knowl_skill_amt
+        knowl_skills.pop(knowl_skills.index(knowl_skill_roll))
+        knowledge_points -= knowl_skill_amt
+
+
 def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
     """
         Randomly chooses qualities for character.
@@ -417,8 +457,6 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
     inc = 0
     while total_karma > 0 and inc < 100:
         inc += 1
-        print('t', total_karma)
-        print('i', inc)
         ch.Karma = total_karma
         # There's an infinite loop I can't be bothered to fix right now, this
         # will do
@@ -645,10 +683,9 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                 pass
             case 'New Sprite':
                 pass
-    pass
 
 
-def add_contacts(ch: Core.Character, k: Core.KarmaLogger):
+def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
     """
         Chooses contacts for character.
         The karma points used for this is separate from the karma points
@@ -678,8 +715,8 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger):
         contact_cost += loyalty_cost
         karma -= contact_cost
         k.append(f'[CON]\nAdding {CONTACT_ROLL.name} as contact.' +
-                 f'Conn: {CONTACT_ROLL.connection} | Loyalty: {loyalty_cost}' +
-                 f'| Total: {CONTACT_ROLL.connection + loyalty_cost}' +
+                 f'Conn: {CONTACT_ROLL.connection} | Loyalty: {loyalty_cost} | ' +
+                 f'Total: {CONTACT_ROLL.connection + loyalty_cost}' +
                  f'\n   {karma} is remaining bonus karma')
 
 
@@ -725,7 +762,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
         #    print("resolve magi/res Skills")
         #    print(f"You get {tbl[_type]['Skills']['Quantity']} different
         #            skills at rating {tbl[_type]['Skills']['Rating']}")
-        #    resolve_magic_resonance_skills(ch, tbl[_type][key])
+        #    skills_magic_resonance(ch, tbl[_type][key])
         elif key == "Complex Forms":
             ch.Complex_forms = {}
             for i in range(tbl[_type][key]):
