@@ -181,53 +181,53 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
         if (total_karma < 10 and random.randint(0, 1) == 1) or \
                 total_karma <= 0:
             break
-        ROLL_KARMA = random.choices(Core.Quality.items, quality_weights)[0]
+        ROLL_QUALITY = random.choices(Core.Quality.items, quality_weights)[0]
         # If a quality in the same group has already been taken, continue
         # (SEE DATA)
-        if hasattr(ROLL_KARMA, "group"):
-            if ROLL_KARMA.group in [d.group for d in ch.Qualities.values() if
+        if hasattr(ROLL_QUALITY, "group"):
+            if ROLL_QUALITY.group in [d.group for d in ch.Qualities.values() if
                                     hasattr(d, "group")]:
                 continue
         # Negative qualities cannot total more than ABS(25)
-        if hasattr(ROLL_KARMA, "negative"):
-            if negative_karma + ROLL_KARMA.cost > 25:
+        if hasattr(ROLL_QUALITY, "negative"):
+            if negative_karma + ROLL_QUALITY.cost > 25:
                 NEGATIVE_TOO_HIGH = True
                 continue
                 # continue
         # Positive qualities cannot total more than ABS(25)
-        elif positive_karma + ROLL_KARMA.cost > 25:
+        elif positive_karma + ROLL_QUALITY.cost > 25:
             POSITIVE_TOO_HIGH = True
             continue
             # continue
-        if total_karma - ROLL_KARMA.cost < 0 or (
+        if total_karma - ROLL_QUALITY.cost < 0 or (
                 NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (
                 POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
             continue
-        if hasattr(ROLL_KARMA, "negative"):
-            negative_karma += ROLL_KARMA.cost
-            total_karma += ROLL_KARMA.cost
-            k.append(f'(NEG) {ROLL_KARMA.name} has been bought.' +
-                     f'Costing {ROLL_KARMA.cost}.' +
+        if hasattr(ROLL_QUALITY, "negative"):
+            negative_karma += ROLL_QUALITY.cost
+            total_karma += ROLL_QUALITY.cost
+            k.append(f'(NEG) {ROLL_QUALITY.name} has been bought.' +
+                     f'Costing {ROLL_QUALITY.cost}.' +
                      f'\n   {total_karma} is Karma total.' +
                      f'\nNegative Karma is at {negative_karma}')
         else:
-            positive_karma += ROLL_KARMA.cost
-            total_karma -= ROLL_KARMA.cost
-            k.append(f'(POS) {ROLL_KARMA.name} has been bought.' +
-                     f'Costing {ROLL_KARMA.cost}.' +
+            positive_karma += ROLL_QUALITY.cost
+            total_karma -= ROLL_QUALITY.cost
+            k.append(f'(POS) {ROLL_QUALITY.name} has been bought.' +
+                     f'Costing {ROLL_QUALITY.cost}.' +
                      f'\n   {total_karma} is Karma total.' +
                      f'\nPositive Karma is at {positive_karma}')
 
         # Pretty output & roll for quality specific params here
-        ROLL_KARMA = resolve_quality(ROLL_KARMA, ch)
+        ROLL_QUALITY = resolve_quality(ROLL_QUALITY, ch)
 
-        ch.Qualities[ROLL_KARMA.name] = ROLL_KARMA
-        if hasattr(ROLL_KARMA, "quantity"):
-            if hasattr(ch.Qualities[ROLL_KARMA.name], "level"):
-                ch.Qualities[ROLL_KARMA.name].level += 1
+        ch.Qualities[ROLL_QUALITY.name] = ROLL_QUALITY
+        if hasattr(ROLL_QUALITY, "quantity"):
+            if hasattr(ch.Qualities[ROLL_QUALITY.name], "level"):
+                ch.Qualities[ROLL_QUALITY.name].level += 1
             else:
-                ch.Qualities[ROLL_KARMA.name].level = 1
-            quality_weights[Core.Quality.items.index(ROLL_KARMA)] += 10
+                ch.Qualities[ROLL_QUALITY.name].level = 1
+            quality_weights[Core.Quality.items.index(ROLL_QUALITY)] += 10
         if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
             break
     # print(ch.Qualities)
