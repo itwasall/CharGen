@@ -5,6 +5,10 @@ DEFAULT_MAX_AVAILABILITY = 12
 DEFAULT_MAX_RATING = 6
 DEFAULT_AUG_GRADES = ["standard", "alphaware"]
 
+RATING_ALREADY_ROLLED = False
+AVAIL_ALREADY_ROLLED = False
+COST_ALREADY_ROLLED = False
+
 
 def attrAsDict(_class):
     return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
@@ -299,6 +303,16 @@ def get_vehicle(**kwargs):
         vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
     return vehicle
 
+
+def get_item(item: Core.Gear):
+    if hasattr(item, "cost"):
+        item.cost = get_item_cost(item)
+    if hasattr(item, "rating"):
+        item.rating = get_item_rating(item)
+    if hasattr(item, "avail"):
+        item.avail = get_item_avail(item)
+    return item
+
 if __name__ == "__main__":
     def test_vehs():
         print(f"Random vehicle: {get_vehicle(any=True)}")
@@ -315,7 +329,5 @@ if __name__ == "__main__":
             print('Availabilty:', get_item_avail(gear, **kwargs))
             # print('Rating:', get_item_rating(gear, **kwargs))
 
-    run_through_gear(random=True)
-    # test_vehs()
     
 

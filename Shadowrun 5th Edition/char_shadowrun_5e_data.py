@@ -153,6 +153,9 @@ class Character:
         self.Gear = None
         # Other
         self.MagicResoUser = None
+        self.IS_DECKER = False
+        self.IS_RIGGER = False
+        self.IS_FACE = False
 
     def print_stats(self):
         print(f'{self.Body}\n{self.Agility}\n{self.Reaction}\n{self.Strength}')
@@ -1283,6 +1286,7 @@ GOLD = Electronics("Gold Credstick", cost=100, page_ref=443, rating="-", avail=5
 PLATINUM = Electronics("Platinum Credstick", cost=500, page_ref=443, rating="-", avail=10, max_value=500_000, subtype="Credsticks")
 EBONY = Electronics("Ebony Credstick", cost=1000, page_ref=443, rating="-", avail=20, max_value=1_000_000, subtype="Credsticks")
 # =============== IDENTIFICATION =====
+REAL_SIN = Electronics("REAL SIN", cost=0, page_ref=367, rating=[1, "to", 4], avail=0, subtype="Identification")
 FAKE_SIN = Electronics("Fake SIN", cost=["Rating", "*", 2500], page_ref=443, rating=[1, "to", 6], avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Identification")
 FAKE_LICENCE = Electronics("Fake Licence", cost=["Rating", "*", 200], page_ref=443, rating=[1, "to", 6], avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Identification")
 # =============== TOOLS ==============
@@ -1494,6 +1498,8 @@ LOW_LIFESTYLE = Lifestyle("Low Lifestyle", dicestring="3d6", base_amount=60, cos
 MIDDLE_LIFESTYLE = Lifestyle("Middle Lifestyle", dicestring="4d6", base_amount=100, cost=5000)
 HIGH_LIFESTYLE = Lifestyle("High Lifestyle", dicestring="5d6", base_amount=500, cost=10_000)
 LUXURY_LIFESTYLE = Lifestyle("Luxury Lifestyle", dicestring="6d6", base_amount=1000, cost=100_000)
+
+LIFESTYLES = [i for i in Lifestyle.items]
 
 """
     COMPLEX FORMS

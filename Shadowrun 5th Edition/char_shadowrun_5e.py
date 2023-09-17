@@ -1,5 +1,6 @@
 import random
 import char_shadowrun_5e_data as Core
+import char_shadowrun_5e_gear as Gear
 from collections import OrderedDict
 
 
@@ -55,13 +56,13 @@ def generate_character() -> None:
     if priority_table['MagicResonance'] is None:
         build = random.choices(alt_builds, [1, 1, 1, 5])
         if build == 'Decker':
-            IS_DECKER = True
+            ch.IS_DECKER = True
             print('Character is decker')
         elif build == 'Rigger':
-            IS_RIGGER = True
+            ch.IS_RIGGER = True
             print('Character is rigger')
         elif build == 'Face':
-            IS_FACE = True
+            ch.IS_FACE = True
             print('Character is face')
     skill_builds = {'IS_DECKER': IS_DECKER,
                     'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
@@ -74,8 +75,8 @@ def generate_character() -> None:
     if 'Exotic Melee Weapon' in character.Skills:
         character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     add_contacts(character, karma_log)
+    get_gear(character, nuyen)
     leftover_karma(character, karma_log)
-    buy_gear(character, nuyen)
     print_shit(character, nuyen, karma_log)
 
     # Attribute Points
@@ -561,6 +562,10 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         knowledge_points -= knowl_skill_amt
 
 
+def get_gear(ch: Core.Character, nuyen: int):
+    ch = Gear.get_gear(ch, nuyen)
+
+
 def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
     """
         If there is any leftover karma points after spending on qualities,
@@ -737,16 +742,22 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
 
 def add_spell(ch: Core.Character) -> None:
     ROLL_SPELL = random.choice(Core.Spell.items)
-    while ROLL_SPELL in ch.Spells:
+    while ch.Spells is not None and ROLL_SPELL.name in [sp.name for sp in ch.Spells]:
         ROLL_SPELL = random.choice(Core.Spell.items)
-    ch.Spells.append(ROLL_SPELL)
+    if ch.Spells is None:
+        ch.Spells = [ROLL_SPELL]
+    else:
+        ch.Spells.append(ROLL_SPELL)
 
 
 def add_complex_form(ch: Core.Character) -> None:
     ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    while ROLL_COMPLEX.name in ch.ComplexForms.keys():
+    while ch.ComplexForms is not None and ROLL_COMPLEX.name in [cf.name for cf in ch.ComplexForms]:
         ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    ch.ComplexForms[ROLL_COMPLEX.name] = ROLL_COMPLEX
+    if ch.ComplexForms is None:
+        ch.ComplexForms = [ROLL_COMPLEX]
+    else:
+        ch.ComplexForms.append(ROLL_COMPLEX)
 
 
 def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
@@ -779,7 +790,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
         #            skills at rating {tbl[_type]['Skills']['Rating']}")
         #    skills_magic_resonance(ch, tbl[_type][key])
         elif key == "Complex Forms":
-            ch.ComplexForms = {}
+            ch.ComplexForms = []
             for i in range(tbl[_type][key]):
                 add_complex_form(ch)
 
@@ -930,6 +941,7 @@ def print_shit(ch: Core.Character, nuyen, karma_log):
     print('Karma logs:')
     print(karma_log)
     format_skills(ch.Skills)
+    print("Gear: ", ch.Gear)
 
 
 char = generate_character()
