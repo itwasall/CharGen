@@ -80,11 +80,11 @@ class Character:
         self.Sex = None
         self.Height = None
         self.Weight = None
-        self.Street_cred = None
+        self.StreetCred = None
         self.Notoriety = None
-        self.Public_awareness = None
+        self.PublicAwareness = None
         self.Karma = None
-        self.Total_karma = None
+        self.TotalKarma = None
         self.Misc = None
         # Attributes
         self.Body = None
@@ -100,56 +100,56 @@ class Character:
         self.Magic = None
         self.Resonance = None
         self.Initiative = None
-        self.Matrix_initiative = None
-        self.Astral_initiative = None
+        self.InitiativeMatrix = None
+        self.InitiativeAstral = None
         self.Composure = None
-        self.Judge_intentions = None
+        self.JudgeIntentions = None
         self.Memory = None
-        self.Lift_carry = None
+        self.LiftCarry = None
         self.Movement = None
-        self.Physical_limit = None
-        self.Mental_limit = None
-        self.Social_limit = None
-        self.PhysicalAttributes = [self.Body, self.Agility,
+        self.LimitPhysical = None
+        self.LimitMental = None
+        self.LimitSocial = None
+        self.AttributesPhysical = [self.Body, self.Agility,
                                    self.Reaction, self.Strength]
-        self.MentalAttributes = [self.Willpower, self.Logic,
+        self.AttributesMental = [self.Willpower, self.Logic,
                                  self.Intuition, self.Charisma]
-        self.SpecialAttributes = [self.Edge, self.Essence,
+        self.AttributesSpecial = [self.Edge, self.Essence,
                                   self.Magic, self.Resonance]
-        self.CoreAttributes = self.PhysicalAttributes + \
-            self.MentalAttributes + self.SpecialAttributes
+        self.AttributesCore = self.AttributesPhysical + \
+            self.AttributesMental + self.AttributesSpecial
         # Skills
         self.Skills = {}
-        self.KnowlegeSkills = {}
-        self.Languages = {}
-        self.Specialisations = {}
+        self.SkillsKnowledge = {}
+        self.SkillsLanguages = {}
+        self.SkillsSpecialisations = {}
         # IDs/Lifestyle/Currency
-        self.Primary_lifestyle = None
+        self.PrimaryLifestyle = None
         self.Nuyen = None
         self.Licences = None
         self.Other = None
         # Core Combat Info
-        self.Physical_armor = None
-        self.Primary_ranged_weapon = None
-        self.Primary_melee_weapon = None
-        self.Physical_dmg_track = None
-        self.Stun_dmg_track = None
+        self.PhysicalArmor = None
+        self.WeaponPrimaryRanged = None
+        self.WeaponPrimaryMelee = None
+        self.DmgTrackPhysical = None
+        self.DmgTrackStun = None
         self.Overflow = None
         # Qualities
         self.Qualities = None
         # Contacts
         self.Contacts = {}
         # Gear
-        self.Ranged_weapons = None
-        self.Melee_weapons = None
+        self.WeaponsRanged = None
+        self.WeaponsMelee = None
         self.Armor = None
         self.Cyberdeck = None
         self.Augmentations = None
         self.Vehicle = None
         self.Spells = None
-        self.Preparations_rituals = None
-        self.Complex_forms = None
-        self.Adept_powers = None
+        self.PreparationRituals = None
+        self.ComplexForms = None
+        self.AdeptPowers = None
         self.Gear = None
         # Other
         self.MagicResoUser = None
@@ -161,14 +161,14 @@ class Character:
         print(f'{self.Edge}\n{self.Essence}')
 
     def redo_attr(self):
-        self.PhysicalAttributes = [self.Body, self.Agility,
+        self.AttributesPhysical = [self.Body, self.Agility,
                                    self.Reaction, self.Strength]
-        self.MentalAttributes = [self.Willpower, self.Logic,
+        self.AttributesMental = [self.Willpower, self.Logic,
                                  self.Intuition, self.Charisma]
-        self.SpecialAttributes = [self.Edge, self.Essence,
+        self.AttributesSpecial = [self.Edge, self.Essence,
                                   self.Magic, self.Resonance]
-        self.CoreAttributes = self.PhysicalAttributes + \
-            self.MentalAttributes + self.SpecialAttributes
+        self.AttributesCore = self.AttributesPhysical + \
+            self.AttributesMental + self.AttributesSpecial
 
     def highest_core_attr(self):
         non_zero_attrs = []

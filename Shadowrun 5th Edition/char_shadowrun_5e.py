@@ -81,7 +81,7 @@ def generate_character() -> None:
     # Attribute Points
 
     # PHASE 2: PR
-    pass
+    return character
 
 
 def get_priorities(character: Core.Character) -> dict:
@@ -140,7 +140,7 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
         This is to influence the skill choices later on in character
         generation.
     """
-    non_special_attrs = ch.PhysicalAttributes + ch.MentalAttributes
+    non_special_attrs = ch.AttributesPhysical + ch.AttributesMental
     # List is shuffled to avoid predictable results
     #   e.g. if unshuffled and Body is in a three way tie for highest stat,
     #       Body will *always* be picked
@@ -532,31 +532,31 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
     knowl_skills = [i for i in Core.Skill.items if i.skill_type == 'Knowledge']
 
     native_roll = random.choice(language)
-    ch.Languages[native_roll] = "N"
+    ch.SkillsLanguages[native_roll] = "N"
     language.pop(language.index(native_roll))
 
     if 'Bilingual' in ch.Qualities.keys():
         bilingual_roll = random.choice(language)
-        ch.Languages[bilingual_roll] = "N"
+        ch.SkillsLanguages[bilingual_roll] = "N"
         language.pop(language.index(bilingual_roll))
 
     if 'Language' in ch.Skills.keys():
         language_roll = random.choice(language)
-        ch.Languages[language_roll] = ch.Skills['Language'].rating
+        ch.SkillsLanguages[language_roll] = ch.Skills['Language'].rating
         knowledge_points -= ch.Skills['Language'].rating
 
     extra_language_roll = random.randint(0, 1)
     if extra_language_roll:
         language_roll = random.choice(language)
-        ch.Languages[language_roll] = random.randint(1, 4)
-        knowledge_points -= ch.Languages[language_roll]
+        ch.SkillsLanguages[language_roll] = random.randint(1, 4)
+        knowledge_points -= ch.SkillsLanguages[language_roll]
 
     while knowledge_points > 1:
         knowl_skill_roll = random.choice(knowl_skills)
         knowl_skill_amt = random.randint(1, 4)
         while knowledge_points - knowl_skill_amt < 0:
             knowl_skill_amt = random.randint(1, 4)
-        ch.KnowlegeSkills[knowl_skill_roll] = knowl_skill_amt
+        ch.SkillsKnowledge[knowl_skill_roll] = knowl_skill_amt
         knowl_skills.pop(knowl_skills.index(knowl_skill_roll))
         knowledge_points -= knowl_skill_amt
 
@@ -586,7 +586,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
             case 'Raise Attribute':
                 try:
                     raised_attr = random.choice([
-                        i for i in ch.CoreAttributes if
+                        i for i in ch.AttributesCore if
                         hasattr(i, 'value') and i.value > 0 and
                         i.value != i.limit])
                     karma_attr_raise = Core.KARMA_ATTRIBUTE_COSTS[
@@ -676,9 +676,25 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
 
                 pass
             case 'New Spell':
-                pass
+                if ch.Magic is not None and karma_budget >= 5:
+                    add_spell(ch)
+                    karma_budget -= 5
+                    new_spell = ch.Spells[len(ch.Spells)-1]
+                    k.append(
+                        f'(EX) {new_spell.name} has been added to spell list. ' +
+                        f'Costing 5.\n   {karma_budget} is Karma Total')
+                else:
+                    pass
             case 'New Complex Form':
-                pass
+                if ch.Resonance is not None and karma_budget >= 4:
+                    add_complex_form(ch)
+                    karma_budget -= 5
+                    new_cf = ch.ComplexForms[len(ch.ComplexForms)-1]
+                    k.append(
+                        f'(EX) {new_cf.name} has been added to spell list. ' +
+                        f'Costing 5.\n   {karma_budget} is Karma Total')
+                else:
+                    pass
             case 'New Sprite':
                 pass
 
@@ -728,9 +744,9 @@ def add_spell(ch: Core.Character) -> None:
 
 def add_complex_form(ch: Core.Character) -> None:
     ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    while ROLL_COMPLEX.name in ch.Complex_forms.keys():
+    while ROLL_COMPLEX.name in ch.ComplexForms.keys():
         ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    ch.Complex_forms[ROLL_COMPLEX.name] = ROLL_COMPLEX
+    ch.ComplexForms[ROLL_COMPLEX.name] = ROLL_COMPLEX
 
 
 def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
@@ -763,7 +779,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
         #            skills at rating {tbl[_type]['Skills']['Rating']}")
         #    skills_magic_resonance(ch, tbl[_type][key])
         elif key == "Complex Forms":
-            ch.Complex_forms = {}
+            ch.ComplexForms = {}
             for i in range(tbl[_type][key]):
                 add_complex_form(ch)
 
@@ -905,10 +921,10 @@ def alt_generate_character():
 
 
 def print_shit(ch: Core.Character, nuyen, karma_log):
-    print(ch.Metatype.name)
-    print(ch.CoreAttributes)
-    print(ch.Qualities)
-    print(ch.Spells)
+    print('Metatype: ', ch.Metatype.name)
+    print('Attributes: ', ch.AttributesCore)
+    print('Qualities: ', ch.Qualities)
+    print('Spells: ', ch.Spells)
     print("character karma is ", ch.Karma)
     print(nuyen)
     print('Karma logs:')
@@ -916,4 +932,4 @@ def print_shit(ch: Core.Character, nuyen, karma_log):
     format_skills(ch.Skills)
 
 
-generate_character()
+char = generate_character()
