@@ -4,7 +4,7 @@ import char_shadowrun_5e_gear as Gear
 from collections import OrderedDict
 
 
-def generate_character() -> None:
+def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
     # PHASE 1: CONCEPT
     character = Core.Character()
@@ -78,10 +78,6 @@ def generate_character() -> None:
     get_gear(character, nuyen)
     leftover_karma(character, karma_log)
     print_shit(character, nuyen, karma_log)
-
-    # Attribute Points
-
-    # PHASE 2: PR
     return character
 
 

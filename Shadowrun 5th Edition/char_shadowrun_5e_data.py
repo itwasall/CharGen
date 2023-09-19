@@ -72,7 +72,7 @@ class Attributes:
 class Character:
     def __init__(self):
         # Personal Data
-        self.Name = None
+        self.Name = "Geoff"
         self.Concept = None
         self.Metatype = None
         self.Ethnicity = None
