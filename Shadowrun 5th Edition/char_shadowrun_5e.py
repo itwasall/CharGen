@@ -151,7 +151,7 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
                 break
         if len(highest) > 1:
             break
-    print("Highest attrs: ", highest)
+    # print("Highest attrs: ", highest)
     return highest
 
 
@@ -427,7 +427,9 @@ def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
         ) if d.rating > 4 and d.group is False]
         if len(specialisations) > 1 and random.randint(1, 100) > 80:
             ROLL_SPEC = random.choice(specialisations)
-            while len(ROLL_SPEC.spec) < 1:
+            inc = 0
+            while len(ROLL_SPEC.spec) < 1 or inc < 100:
+                inc += 1
                 ROLL_SPEC = random.choice(specialisations)
             ROLL_SPECIALISATION = random.choice(ROLL_SPEC.spec)
             if isinstance(ch.Skills[ROLL_SPEC.name].spec, list):
@@ -597,7 +599,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                         continue
                     else:
                         karma_budget -= karma_attr_raise
-                    print(karma_attr_raise)
+                    # print(karma_attr_raise)
                     r = raised_attr.value
                     k.append(
                         f'(EX) {raised_attr.name} has been increased to {r}.' +
@@ -671,11 +673,26 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                     f'Costing 1\n   {karma_budget} is Karma Total')
                 pass
             case 'New Skill Specialisation':
-                specialisations = [ch.Skills
-                                   [i].spec for i in ch.Skills]
-                print('SKILLS FOR SPEC\n', specialisations)
-
-                pass
+                skills_for_spec = [s for s in ch.Skills.keys() if ch.Skills[s].rating > 3 and
+                                   isinstance(ch.Skills[s].spec, list)]
+                if len(skills_for_spec) == 0:
+                    skills_for_spec = [s for s in ch.Skills.keys() if ch.Skills[s].rating > 2 and
+                                   isinstance(ch.Skills[s].spec, list)]
+                if len(skills_for_spec) == 0:
+                    print("Jesus christ your character is unskilled, no", \
+                          "specialisation for you")
+                    continue
+                skill_for_spec = random.choice(skills_for_spec)
+                try:
+                    spec_chosen = random.choice(ch.Skills[skill_for_spec].spec)
+                except IndexError:
+                    continue
+                ch.Skills[skill_for_spec].spec = spec_chosen
+                karma_budget -= 1
+                k.append(
+                    f'EX \'{spec_chosen}\' specialisation chosen for ' +
+                    f'{skill_for_spec}. Costing 1\n   {karma_budget} ' +
+                    f'is Karama Total')
             case 'New Spell':
                 if ch.Magic is not None and karma_budget >= 5:
                     add_spell(ch)
@@ -766,16 +783,16 @@ def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
         return
     _type = random.choice(list(tbl.keys()))
     ch.MagicResoUser = str(_type)
-    print(f'Uh oh! Looks like you\'re a {_type}')
+    # print(f'Uh oh! Looks like you\'re a {_type}')
     for key in list(tbl[_type].keys()):
         if key == "Magic":
             ch.Magic = Core.Attribute("Magic")
             ch.Magic.value = tbl[_type][key]
-            print(ch.Magic)
+            # print(ch.Magic)
         elif key == "Resonance":
             ch.Resonance = Core.Attribute("Resonance")
             ch.Resonance.value = tbl[_type][key]
-            print(ch.Resonance)
+            # print(ch.Resonance)
         elif key == "Spells":
             ch.Spells = []
             for i in range(tbl[_type][key]):
@@ -801,6 +818,19 @@ def format_skills(character_skills) -> None:
     """
     output_by_group = {'Non-Grouped': {}}
 
+    def format_skills_specialisations():
+        spec_skills = [{character_skills[s].name: character_skills[s].spec} for
+                       s in character_skills.keys() if isinstance(
+                           character_skills[s].spec, str)]
+        if len(spec_skills) == 0:
+            return 
+        print("====")
+        print("SPECIALISATIONS")
+        print("====")
+        for i in spec_skills:
+            for k, d in i.items():
+                print(f'{d}   ({k})')
+
     def format_skills_group_rating():
         print("====")
         print("ACTIVE SKILLS")
@@ -809,27 +839,27 @@ def format_skills(character_skills) -> None:
             if d.group is not False:
                 if d.group not in output_by_group.keys():
                     output_by_group[d.group] = {}
-                    if d.rating not in output_by_group[d.group].keys():
-                        output_by_group[d.group][d.rating] = [d.name]
-                    else:
-                        output_by_group[d.group][d.rating].append(d.name)
-                else:
-                    if d.rating not in output_by_group[d.group].keys():
-                        output_by_group[d.group][d.rating] = [d.name]
-                    else:
-                        output_by_group[d.group][d.rating].append(d.name)
             else:
-                if d.rating not in output_by_group['Non-Grouped'].keys():
-                    output_by_group['Non-Grouped'][d.rating] = [d.name]
+                d.group = 'Non-Grouped'
+                
+            if d.rating not in output_by_group[d.group].keys():
+                if isinstance(d.spec, str):
+                    output_by_group[d.group][d.rating] = [f'{d.name} ({d.spec})']
                 else:
-                    output_by_group['Non-Grouped'][d.rating].append(d.name)
+                    output_by_group[d.group][d.rating] = [d.name]
+            else:
+                if isinstance(d.spec, str):
+                    output_by_group[d.group][d.rating].append(f'{d.name} ({d.spec})')
+                else:
+                    output_by_group[d.group][d.rating].append(d.name)
+
 
         for group in output_by_group.keys():
             output_by_group[group] = OrderedDict(
                 sorted(output_by_group[group].items(), key=lambda t: t[0]))
             print("---\n -->", group)
             for rating in output_by_group[group].keys():
-                print(rating, output_by_group[group][rating])
+                print(f'{rating}: ', ", ".join(output_by_group[group][rating]))
 
     def format_skills_attribute():
         output_by_attr = {
@@ -848,25 +878,22 @@ def format_skills(character_skills) -> None:
         # output_by_attr = {attr: [s for s in character_skills.keys() if
         #                   character_skills[s].attribute.name == attr] for
         #                   attr in character_skill_attributes}
-        print("===")
-        print("    by Attribute:")
-        print("===")
+        # print("===")
+        # print("    by Attribute:")
+        # print("===")
         sorted(output_by_attr)
 
         for attr in output_by_attr.keys():
-            # for idx, skill in enumerate(output_by_attr[attr]):
-            # if isinstance(skill, Core.MeleeWeapon):
-            # output_by_attr[attr][skill] = output_by_attr[attr][skill].name
-            # if Core.MeleeWeapon in [skill for skill in output_by_attr[attr]]:
-            #    output_by_attr[attr][idx] = output_by_attr[attr][idx].name
             # else:
-            print(f'---> {attr}')
-            print(", ".join(
-                [f'{skill} ({character_skills[skill].rating})' for
-                 skill in output_by_attr[attr]]))
+            # print(f'---> {attr}')
+            # print(", ".join(
+            #    [f'{skill} ({character_skills[skill].rating})' for
+            #     skill in output_by_attr[attr]]))
+            pass
 
     format_skills_group_rating()
     format_skills_attribute()
+    format_skills_specialisations()
 
 
 def buy_gear(ch: Core.Character, nuyen: int):
@@ -882,14 +909,22 @@ def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
         An edge case for the 'Exotic Melee Weapon' skill where the skill
             requires a specific exotic weapon to be skilled in, and not
             the category as a whole
+
+        TODO:
+            make this code play ball with formatting code.
+                Formatting code should probably be close to finalised before
+                this commitment is made
     """
-    match s.name:
+    """
+     match s.name:
         case "Exotic Melee Weapon":
+            continue
             exotic_melee_weapon = random.choice([
                 i for i in Core.MeleeWeapon.items if
                 hasattr(i, "subtype") and i.subtype == "Exotic Melee Weapon"])
             ch.Skills[f"{s.name}"].name = exotic_melee_weapon
             # ch.Skills['Active'].pop(s.name)
+    """
     return ch
 
 

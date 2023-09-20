@@ -21,3 +21,16 @@ CONNECTION_RATINGS = {
     11: 'Extremely well-connected worldwide, with significant social influence; mid-level executive position in a major national government or AAA megacorporation',
     12: 'Global power-player with extensive social influence; holds a key executive position in a major national government or AAA megacorporation'
     }
+
+
+def format_skills():
+    def format_skills_specialisations():
+        longest_key = 0
+        for i in spec_skills:
+            for k, d in i.items():
+               if len(k) > longest_key:
+                longest_key = len(k)
+        for i in spec_skills:
+            for k, d in i.items():
+                spaces = "".join([" " for _ in range(longest_key - len(k))])
+                print(f'Skill: {k}' + spaces + f' Spec: {d}')
