@@ -421,6 +421,9 @@ def skills_roll_group(ch: Core.Character, group_points, group_list,
 
 def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
                            skill_cap) -> dict:
+    """
+        Rolls for individual skill point allocation.
+    """
     while skill_points > 0:
         # Rolling for skill specialisations
         specialisations = [d for k, d in ch.Skills.items(
@@ -525,6 +528,13 @@ def skills_magic_resonance(ch: Core.Character, tbl) -> dict:
 
 
 def get_language_knowledge_skills(ch: Core.Character) -> None:
+    """
+        Sets default language skill
+
+        Rolls for other language + knowledge skills
+
+        returns void
+    """
     knowledge_points = (ch.Logic.value + ch.Intuition.value) * 2
     # Roll native language
     language = [i for i in Core.LANGUAGE_SKILLS if i.category == 'Tongue']
@@ -558,9 +568,35 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         ch.SkillsKnowledge[knowl_skill_roll] = knowl_skill_amt
         knowl_skills.pop(knowl_skills.index(knowl_skill_roll))
         knowledge_points -= knowl_skill_amt
+    return
 
 
 def get_gear(ch: Core.Character, nuyen: int):
+    """
+        Get's gear
+        Given the expected complexity of this function I (for now) am using 
+            a separate file just for gear generation. Which is funny because I 
+            already have a separate file for item management. So this tiny part 
+            of character creation is the only part to have dedicated files
+
+        TODO:
+        - Chars with one of the SINner qualities will not be given a fake SIN
+        - Chars with piloting skills should have an appropriate vehicle, 
+            maybe one or more depending on which skills are more prominant, and at
+            what ratings
+        - Chars with skills relating to hacking should have a cyberdeck. This will
+            almost certainly require it's own separate generate function
+        - Chars with skills relating to firearms should have more weapons, with a 
+            slight/heavy lean towards weaponary they are skilled in. Slight lean for
+            stuff like heavy weapons (e.g. they probably wont be without a pistol).
+            Heavy lean for stuff like melee weapons (You studied the blade, not the 
+            gun afterall)
+        - Chars with more nuyen are more likely to have bio augs if they are going to
+            have augmentations at all. Poorer characters likely to have cyberwear
+        - Chars of magic tendancies must have some magic items
+        - Chars most likely will have a commlink. Skills + nuyen to influence what kind
+            (e.g. techy/rich folk likely to have a better commlink)
+    """
     ch = Gear.get_gear(ch, nuyen)
 
 
