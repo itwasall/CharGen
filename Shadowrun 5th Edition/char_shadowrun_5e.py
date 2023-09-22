@@ -3,6 +3,8 @@ import char_shadowrun_5e_data as Core
 import char_shadowrun_5e_gear as Gear
 from collections import OrderedDict
 
+KARMA_LOG = False
+
 
 def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
@@ -46,7 +48,9 @@ def generate_character() -> Core.Character:
     highest_attrs = get_highest_attr(character)
     # STEP 3: MAGIC/RESONANCE
     magic_reso = priority_table['MagicResonance']
-    resolve_magic_resonance(character, magic_reso)
+    x = resolve_magic_resonance(character, magic_reso, priority_table)
+    if x == "We'll do it live":
+        return False
     character.redo_attr()
     # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
     IS_DECKER = False
@@ -72,8 +76,11 @@ def generate_character() -> Core.Character:
     get_skills(character, priority_table, attr_influence=highest_attrs,
                skill_cap=20, builds=skill_builds)
     get_language_knowledge_skills(character)
-    if 'Exotic Melee Weapon' in character.Skills:
-        character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
+    """
+        dealing with this later
+    """
+    #if 'Exotic Melee Weapon' in character.Skills:
+    #    character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     add_contacts(character, karma_log)
     get_gear(character, nuyen)
     leftover_karma(character, karma_log)
@@ -95,10 +102,10 @@ def get_priorities(character: Core.Character) -> dict:
         'Resources': None
     }
     for category in selected_items.keys():
-        priority_chosen = random.choice(table_choices)
-        table_choices.pop(table_choices.index(priority_chosen))
+        new_priority = random.choice(table_choices)
+        table_choices.pop(table_choices.index(new_priority))
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[
-            category][priority_chosen]
+            category][new_priority]
     return selected_items
 
 
@@ -153,6 +160,114 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
             break
     # print("Highest attrs: ", highest)
     return highest
+
+
+def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
+    """
+        If a character weilds magic or is a technomancer,
+            give them the relevant stats and abilities here.
+    """
+    if tbl is None:
+        return
+    _type = random.choice(list(tbl.keys()))
+    ch.MagicResoUser = str(_type)
+    print(f'Uh oh! Looks like you\'re a {ch.MagicResoUser}')
+
+    def get_special_attribute(ch, tbl, attr):
+        match attr:
+            case 'Magic':
+                ch.Magic = Core.Attribute("Magic")
+                ch.Magic.value = tbl[ch.MagicResoUser][attr]
+            case 'Resonance':
+                ch.Resonance = Core.Attribute("Resonance")
+                ch.Resonance.value = tbl[ch.MagicResoUser][attr]
+
+    match ch.MagicResoUser:
+        case 'Adept':
+            get_special_attribute(ch, tbl, 'Magic')
+            get_adept_powers(ch)
+        case 'Magician':
+            get_special_attribute(ch, tbl, 'Magic')
+            ch.Spells = []
+            for i in range(tbl[ch.MagicResoUser]['Spells']):
+                add_spell(ch)
+        case 'Aspected Magician':
+            get_special_attribute(ch, tbl, 'Magic')
+        case 'Mystic Adept':
+            get_special_attribute(ch, tbl, 'Magic')
+            try:
+                if priority_table['Skills'][1] != 0:
+                    pass
+            except IndexError:
+                return "We'll do it live" 
+        case 'Technomancer':
+            get_special_attribute(ch, tbl, 'Resonance')
+            ch.ComplexForms = []
+            for i in range(tbl[ch.MagicResoUser]['Complex Forms']):
+                add_complex_form(ch)
+    return "no"
+
+
+
+
+def get_adept_powers(ch: Core.Character, power_points=0) -> None:
+    """
+        Gets adept powers.
+        Depending on the type of character, this will either be called during the
+            magic/resonance part of character generation, or right at the end when spending
+            extra karma.
+        While both Adepts and Mystic Adepts use Adept Powers, only Adepts get their PP
+            for free. Mystic Adepts must purchase their PP using karma much later into
+            character generation.
+    """
+    if ch.MagicResoUser != 'Mystic Adept':
+        power_points = ch.Magic.value
+    max_buys = ch.Magic.value
+    char_powers = []
+    while power_points > 0:
+        new_power = random.choice(Core.AdeptPower.items)
+        if new_power.per_level:
+            if len([i for i in char_powers if i.name == new_power.name]) >= max_buys:
+                continue
+        elif new_power.per_group:
+            if len([i for i in char_powers if i.group == new_power.group]) >= max_buys:
+                continue
+        elif not new_power.per_level and not new_power.per_group:
+            if new_power in char_powers:
+                continue
+        if new_power.cost > power_points:
+            Core.AdeptPower.items.pop(Core.AdeptPower.items.index(new_power))
+            continue
+        char_powers.append(new_power)
+        power_points -= new_power.cost
+    ch.AdeptPowers = char_powers
+    print('Adept powers: \n' + f'   {ch.AdeptPowers}')
+    return
+
+
+def add_spell(ch: Core.Character, category=None) -> None:
+    if category is not None:
+        spell_list = [i for i in Core.Spell.items if i.category == category]
+    else:
+        spell_list = [i for i in Core.Spell.items]
+    ROLL_SPELL = random.choice(spell_list)
+    spell_list.pop(spell_list.index(ROLL_SPELL))
+    if ch.Spells is None:
+        ch.Spells = [ROLL_SPELL]
+    else:
+        ch.Spells.append(ROLL_SPELL)
+    return
+
+
+def add_complex_form(ch: Core.Character) -> None:
+    ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
+    while ch.ComplexForms is not None and ROLL_COMPLEX.name in [cf.name for cf in ch.ComplexForms]:
+        ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
+    if ch.ComplexForms is None:
+        ch.ComplexForms = [ROLL_COMPLEX]
+    else:
+        ch.ComplexForms.append(ROLL_COMPLEX)
+    return
 
 
 def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
@@ -228,9 +343,10 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
         if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
             break
     # print(ch.Qualities)
+    return
 
 
-def resolve_quality(q: Core.Quality, ch: Core.Character):
+def resolve_quality(q: Core.Quality, ch: Core.Character) -> Core.Quality:
     """
         For qualities that have multiple levels or are a generic title meant
             for something more specific, then those levels/specificities are
@@ -262,10 +378,10 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
             x = {5: 'Bias', 7: 'Outspoken', 10: 'Radical'}
             common_prejudices = ['Human', 'Metahuman',
                                  'Troll', 'Ork', 'Elve', 'Dwarf']
-            chosen_prejudice = random.choice([
+            new_prejudice = random.choice([
                 i for i in common_prejudices if i != ch.Metatype.name
             ])
-            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
+            q.name = f"Prejudiced - {x[q.cost]} against {new_prejudice}"
         if "Specific" in q.name:
             x = {3: 'Bias', 5: 'Outspoken', 8: 'Radical'}
             specific_prejudices = [
@@ -273,8 +389,8 @@ def resolve_quality(q: Core.Quality, ch: Core.Character):
                 'technomancers',
                 'shapeshifters',
                 'aspected magicians']
-            chosen_prejudice = random.choice(specific_prejudices)
-            q.name = f"Prejudiced - {x[q.cost]} against {chosen_prejudice}"
+            new_prejudice = random.choice(specific_prejudices)
+            q.name = f"Prejudiced - {x[q.cost]} against {new_prejudice}"
     return q
 
 
@@ -352,6 +468,7 @@ def get_skills(
     # Individual Skill Points spend
     skill_list = skills_roll_individual(
         ch, skill_points, skill_list, skill_cap)
+    return
 
 
 def skills_remove_magic_resonance(ch: Core.Character,
@@ -490,27 +607,27 @@ def skills_magic_resonance(ch: Core.Character, tbl) -> dict:
         case 'Magic':
             for _ in range(tbl['Quantity']):
                 while True:
-                    chosen = random.choice(Core.MAGIC_SKILLS)
-                    if chosen not in skills.keys():
+                    new_skill = random.choice(Core.MAGIC_SKILLS)
+                    if new_skill not in skills.keys():
                         break
-                skills[chosen.name] = chosen
-                skills[chosen.name].rating = tbl['Rating']
+                skills[new_skill.name] = new_skill
+                skills[new_skill.name].rating = tbl['Rating']
         case 'Resonance':
             for _ in range(tbl['Quantity']):
                 while True:
-                    chosen = random.choice(Core.RESONANCE_SKILLS)
-                    if chosen not in skills.keys():
+                    new_skill = random.choice(Core.RESONANCE_SKILLS)
+                    if new_skill not in skills.keys():
                         break
-                skills[chosen.name] = chosen
-                skills[chosen.name].rating = tbl['Rating']
+                skills[new_skill.name] = new_skill
+                skills[new_skill.name].rating = tbl['Rating']
         case 'Magic Group':
             groups_chosen = []
             for _ in range(tbl['Quantity']):
                 while True:
-                    chosen = random.choice(Core.MAGIC_SKILL_GROUPS)
-                    if chosen not in groups_chosen:
+                    new_group = random.choice(Core.MAGIC_SKILL_GROUPS)
+                    if new_group not in groups_chosen:
                         break
-                groups_chosen.append(chosen)
+                groups_chosen.append(new_group)
             for group in groups_chosen:
                 for skill in group.skills:
                     skills[skill.name] = skill
@@ -519,11 +636,11 @@ def skills_magic_resonance(ch: Core.Character, tbl) -> dict:
         case 'Active':
             for _ in range(tbl['Quantity']):
                 while True:
-                    chosen = random.choice(Core.ACTIVE_SKILLS)
-                    if chosen not in skills.keys():
+                    new_skill = random.choice(Core.ACTIVE_SKILLS)
+                    if new_skill not in skills.keys():
                         break
-                skills[chosen.name] = chosen
-                skills[chosen.name].rating = tbl['Rating']
+                skills[new_skill.name] = new_skill
+                skills[new_skill.name].rating = tbl['Rating']
     return skills
 
 
@@ -571,7 +688,7 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
     return
 
 
-def get_gear(ch: Core.Character, nuyen: int):
+def get_gear(ch: Core.Character, nuyen: int) -> None:
     """
         Get's gear
         Given the expected complexity of this function I (for now) am using 
@@ -598,9 +715,10 @@ def get_gear(ch: Core.Character, nuyen: int):
             (e.g. techy/rich folk likely to have a better commlink)
     """
     ch = Gear.get_gear(ch, nuyen)
+    return
 
 
-def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
+def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
     """
         If there is any leftover karma points after spending on qualities,
             spent it here
@@ -615,8 +733,20 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
         'New Skill Specialisation',
         'New Spell',
         'New Complex Form',
-        'New Sprite'
+        'New Sprite',
     ]
+    if ch.MagicResoUser == 'Mystic Adept':
+        magic_value = ch.Magic.value
+        # Ensuring at least some, but not all karma is spent on adept powers.
+        # Your fault for picking Mystic Adept anyway. He says several hundred lines
+        #   into a character generator
+        while karma_budget < ((magic_value * 5) + 10):
+            magic_value -= 1
+        power_points = random.randint(1, ch.Magic.value) 
+        karma_budget -= power_points * 5
+        print(f'{ch.MagicResoUser} has {power_points} to spend on powers\nCosts {power_points*5}')
+        get_adept_powers(ch, power_points)
+
     while karma_budget > 7:
         item = random.choice(karma_options)
         # item = 'New Skill Specialisation'
@@ -715,18 +845,16 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                     skills_for_spec = [s for s in ch.Skills.keys() if ch.Skills[s].rating > 2 and
                                    isinstance(ch.Skills[s].spec, list)]
                 if len(skills_for_spec) == 0:
-                    print("Jesus christ your character is unskilled, no", \
-                          "specialisation for you")
                     continue
                 skill_for_spec = random.choice(skills_for_spec)
                 try:
-                    spec_chosen = random.choice(ch.Skills[skill_for_spec].spec)
+                    new_spec = random.choice(ch.Skills[skill_for_spec].spec)
                 except IndexError:
                     continue
-                ch.Skills[skill_for_spec].spec = spec_chosen
+                ch.Skills[skill_for_spec].spec = new_spec
                 karma_budget -= 1
                 k.append(
-                    f'EX \'{spec_chosen}\' specialisation chosen for ' +
+                    f'EX \'{new_spec}\' specialisation chosen for ' +
                     f'{skill_for_spec}. Costing 1\n   {karma_budget} ' +
                     f'is Karama Total')
             case 'New Spell':
@@ -751,6 +879,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger):
                     pass
             case 'New Sprite':
                 pass
+    return
 
 
 def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
@@ -787,61 +916,7 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
                  f'Loyalty: {loyalty_cost} | ' +
                  f'Total: {CONTACT_ROLL.connection + loyalty_cost}' +
                  f'\n   {karma} is remaining bonus karma')
-
-
-def add_spell(ch: Core.Character) -> None:
-    ROLL_SPELL = random.choice(Core.Spell.items)
-    while ch.Spells is not None and ROLL_SPELL.name in [sp.name for sp in ch.Spells]:
-        ROLL_SPELL = random.choice(Core.Spell.items)
-    if ch.Spells is None:
-        ch.Spells = [ROLL_SPELL]
-    else:
-        ch.Spells.append(ROLL_SPELL)
-
-
-def add_complex_form(ch: Core.Character) -> None:
-    ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    while ch.ComplexForms is not None and ROLL_COMPLEX.name in [cf.name for cf in ch.ComplexForms]:
-        ROLL_COMPLEX = random.choice(Core.ComplexForm.items)
-    if ch.ComplexForms is None:
-        ch.ComplexForms = [ROLL_COMPLEX]
-    else:
-        ch.ComplexForms.append(ROLL_COMPLEX)
-
-
-def resolve_magic_resonance(ch: Core.Character, tbl) -> None:
-    """
-        If a character weilds magic or is a technomancer,
-            give them the relevant stats and abilities here.
-    """
-    # tbl = priority_table['MagicResonance']
-    if tbl is None:
-        return
-    _type = random.choice(list(tbl.keys()))
-    ch.MagicResoUser = str(_type)
-    # print(f'Uh oh! Looks like you\'re a {_type}')
-    for key in list(tbl[_type].keys()):
-        if key == "Magic":
-            ch.Magic = Core.Attribute("Magic")
-            ch.Magic.value = tbl[_type][key]
-            # print(ch.Magic)
-        elif key == "Resonance":
-            ch.Resonance = Core.Attribute("Resonance")
-            ch.Resonance.value = tbl[_type][key]
-            # print(ch.Resonance)
-        elif key == "Spells":
-            ch.Spells = []
-            for i in range(tbl[_type][key]):
-                add_spell(ch)
-        # elif key == "Skills":
-        #    print("resolve magi/res Skills")
-        #    print(f"You get {tbl[_type]['Skills']['Quantity']} different
-        #            skills at rating {tbl[_type]['Skills']['Rating']}")
-        #    skills_magic_resonance(ch, tbl[_type][key])
-        elif key == "Complex Forms":
-            ch.ComplexForms = []
-            for i in range(tbl[_type][key]):
-                add_complex_form(ch)
+    return
 
 
 def format_skills(character_skills) -> None:
@@ -889,13 +964,13 @@ def format_skills(character_skills) -> None:
                 else:
                     output_by_group[d.group][d.rating].append(d.name)
 
-
         for group in output_by_group.keys():
             output_by_group[group] = OrderedDict(
                 sorted(output_by_group[group].items(), key=lambda t: t[0]))
             print("---\n -->", group)
             for rating in output_by_group[group].keys():
                 print(f'{rating}: ', ", ".join(output_by_group[group][rating]))
+
 
     def format_skills_attribute():
         output_by_attr = {
@@ -930,38 +1005,15 @@ def format_skills(character_skills) -> None:
     format_skills_group_rating()
     format_skills_attribute()
     format_skills_specialisations()
+    return
 
 
-def buy_gear(ch: Core.Character, nuyen: int):
+def buy_gear(ch: Core.Character, nuyen: int) -> None:
     vehicle_skill_ratings = [
         i.rating for i in ch.Skills.values() if
         i in Core.VEHICLE_SKILLS]
     print(vehicle_skill_ratings)
-    pass
-
-
-def resolve_specific_skill(ch: Core.Character, s: Core.Skill):
-    """
-        An edge case for the 'Exotic Melee Weapon' skill where the skill
-            requires a specific exotic weapon to be skilled in, and not
-            the category as a whole
-
-        TODO:
-            make this code play ball with formatting code.
-                Formatting code should probably be close to finalised before
-                this commitment is made
-    """
-    """
-     match s.name:
-        case "Exotic Melee Weapon":
-            continue
-            exotic_melee_weapon = random.choice([
-                i for i in Core.MeleeWeapon.items if
-                hasattr(i, "subtype") and i.subtype == "Exotic Melee Weapon"])
-            ch.Skills[f"{s.name}"].name = exotic_melee_weapon
-            # ch.Skills['Active'].pop(s.name)
-    """
-    return ch
+    return
 
 
 def alt_generate_character():
@@ -1006,9 +1058,11 @@ def print_shit(ch: Core.Character, nuyen, karma_log):
     print("character karma is ", ch.Karma)
     print(nuyen)
     print('Karma logs:')
-    print(karma_log)
+    if KARMA_LOG:
+        print(karma_log)
     format_skills(ch.Skills)
     print("Gear: ", ch.Gear)
 
-
-char = generate_character()
+char = False
+while char is False:
+    char = generate_character()

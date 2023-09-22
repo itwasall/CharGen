@@ -1,6 +1,5 @@
 import random
 
-
 class Attribute:
 
     def __init__(self, name, value: int = 0):
@@ -397,7 +396,9 @@ class Gear(AbstractBaseClass):
         if self.subtype is not None:
             return f'[{self.category}/{self.subtype}] {self.name}' + \
                     f'(p.{self.page_ref})'
-        return f'[{self.category}] {self.name} (p. {self.page_ref})'
+        if hasattr(self, 'rating'):
+            return f'({self.category}) {self.name} ({self.rating})'
+        return f'({self.category}) {self.name} (p. {self.page_ref})'
 
 
 class MeleeWeapon(Gear):
@@ -575,6 +576,14 @@ class Spell(AbstractBaseClass):
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
         Spell.items.append(self)
+
+
+class AdeptPower(AbstractBaseClass):
+    items = []
+
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        AdeptPower.items.append(self)
 
 
 class Augmentation(AbstractBaseClass):
@@ -1286,7 +1295,7 @@ GOLD = Electronics("Gold Credstick", cost=100, page_ref=443, rating="-", avail=5
 PLATINUM = Electronics("Platinum Credstick", cost=500, page_ref=443, rating="-", avail=10, max_value=500_000, subtype="Credsticks")
 EBONY = Electronics("Ebony Credstick", cost=1000, page_ref=443, rating="-", avail=20, max_value=1_000_000, subtype="Credsticks")
 # =============== IDENTIFICATION =====
-REAL_SIN = Electronics("REAL SIN", cost=0, page_ref=367, rating=[1, "to", 4], avail=0, subtype="Identification")
+REAL_SIN = Electronics("SIN", cost=0, page_ref=367, rating=[1, "to", 4], avail=0, subtype="Identification")
 FAKE_SIN = Electronics("Fake SIN", cost=["Rating", "*", 2500], page_ref=443, rating=[1, "to", 6], avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Identification")
 FAKE_LICENCE = Electronics("Fake Licence", cost=["Rating", "*", 200], page_ref=443, rating=[1, "to", 6], avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Identification")
 # =============== TOOLS ==============
@@ -1647,6 +1656,123 @@ HEALTH_SPELLS = [spell for spell in Spell.items if spell.category=='Health']
 ILLUSION_SPELLS = [spell for spell in Spell.items if spell.category=='Illusion']
 MANIPULATION_SPELLS = [spell for spell in Spell.items if spell.category=='Manipulation']
 
+"""
+    ADEPT POWERS
+
+    I am very tired whilst making this and feel some clarification on attribute names is necessary
+
+    per_level: bool
+        True: *specific* power can be bought multiple times, up to the character Magic Rating
+        False: *specific* power can only be bought once.
+    per_group: bool
+        True: If power is part of group, other powers in that group may also be bought, up to the characters Magic Rating
+
+    Funny side note: The actual rules for the improved ability power state that you can take a specific improved ability power up to that skill's level * 1.5.
+    This would almost entirely result in *all* an adepts powers being "improved abilities", and that's boring and dumb. See below for the rules that the generator follows
+"""
+ADRENALINE_BOOST = AdeptPower("Adrenaline Boost", cost=0.25, group=None, per_level=True, per_group=False)
+ASTRAL_PERCEPTION = AdeptPower("Astral Perception", cost=1, group=None, per_level=False, per_group=False)
+ATTRIBUTE_BOOST_BODY = AdeptPower("Attribute Boost (Body)", cost=0.25, group='Attribute Boost', per_level=False, per_group=True)
+ATTRIBUTE_BOOST_AGILITY = AdeptPower("Attribute Boost (Agility)", cost=0.25, group='Attribute Boost', per_level=False, per_group=True)
+ATTRIBUTE_BOOST_STRENGTH = AdeptPower("Attribute Boost (Strength)", cost=0.25, group='Attribute Boost', per_level=False, per_group=True)
+ATTRIBUTE_BOOST_REACTION = AdeptPower("Attribute Boost (Reaction)", cost=0.25, group='Attribute Boost', per_level=False, per_group=True)
+COMBAT_SENSE_ADEPT = AdeptPower("Combat Sense", cost=0.5, group=None, per_level=True, per_group=False)
+CRITICAL_STRIKE_UNARMED_COMBAT = AdeptPower("Critical Strike (Unarmed Combat)", cost=0.5, group='Critial Strike', per_level=False, per_group=True)
+CRITICAL_STRIKE_BLADES = AdeptPower("Critical Strike (Blades)", cost=0.5, group='Critial Strike', per_level=False, per_group=True)
+CRITICAL_STRIKE_CLUBS = AdeptPower("Critical Strike (Clubs)", cost=0.5, group='Critial Strike', per_level=False, per_group=True)
+CRITICAL_STRIKE_ASTRAL_COMBAT = AdeptPower("Critical Strike (Astral Combat)", cost=0.5, group='Critial Strike', per_level=False, per_group=True)
+DANGER_SENSE = AdeptPower("Danger Sense", cost=0.25, group=None, per_level=True, per_group=False)
+ENHANCED_PERCEPTION = AdeptPower("Enhanced Perception", cost=0.5, group=None, per_level=True, per_group=False)
+ENHANCED_ACCURACY_ARCHERY = AdeptPower("Enhanced Accuracy (Archery)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_BLADES = AdeptPower("Enhanced Accuracy (Blades)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_CLUBS = AdeptPower("Enhanced Accuracy (Clubs)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_HEAVY_WEAPONS = AdeptPower("Enhanced Accuracy (Heavy Weapons)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_LONGARMS = AdeptPower("Enhanced Accuracy (Longarms)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_PISTOLS = AdeptPower("Enhanced Accuracy (Pistols)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+ENHANCED_ACCURACY_THROWING_WEAPONS = AdeptPower("Enhanced Accuracy (Throwing Weapons)", cost=0.25, group='Enhanced Accuracy', per_level=False, per_group=True)
+IMPROVED_ABILITY_PILOT_AEROSPACE = AdeptPower("Improved Ability (Pilot Aerospace)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PILOT_AIRCRAFT = AdeptPower("Improved Ability (Pilot Aircraft)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PILOT_GROUNDCRAFT = AdeptPower("Improved Ability (Pilot Groundcraft)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PILOT_WALKER = AdeptPower("Improved Ability (Pilot Walker)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PILOT_WATERCRAFT = AdeptPower("Improved Ability (Pilot Watercraft)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ARCHERY = AdeptPower("Improved Ability (Archery)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_BLADES = AdeptPower("Improved Ability (Blades)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_CLUBS = AdeptPower("Improved Ability (Clubs)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_HEAVY_WEAPONS = AdeptPower("Improved Ability (Heavy Weapons)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_LONGARMS = AdeptPower("Improved Ability (Longarms)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PISTOLS = AdeptPower("Improved Ability (Pistols)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_THROWING_WEAPONS = AdeptPower("Improved Ability (Throwing Weapons)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_UNARMED_COMBAT = AdeptPower("Improved Ability (Unarmed Combat)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_AERONAUTICS_MECHANIC = AdeptPower("Improved Ability (Aeronautics Mechanic)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ANIMAL_HANDLING = AdeptPower("Improved Ability (Animal Handling)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ARMORER = AdeptPower("Improved Ability (Armorer)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ARTISAN = AdeptPower("Improved Ability (Artisan)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_AUTOMOTIVE_MECHANIC = AdeptPower("Improved Ability (Automotive Mechanic)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_BIOTECHNOLOGY = AdeptPower("Improved Ability (Biotechnology)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_CHEMISTRY = AdeptPower("Improved Ability (Chemistry)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_COMPUTER = AdeptPower("Improved Ability (Computer)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_CYBERCOMBAT = AdeptPower("Improved Ability (Cybercombat)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_CYBERTECHNOLOGY = AdeptPower("Improved Ability (Cybertechnology)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_DEMOLITIONS = AdeptPower("Improved Ability (Demolitions)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ELECTRONIC_WARFARE = AdeptPower("Improved Ability (Electronic Warfare)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_FIRST_AID = AdeptPower("Improved Ability (First-Aid)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_FORGERY = AdeptPower("Improved Ability (Forgery)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_HACKING = AdeptPower("Improved Ability (Hacking)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_HARDWARE = AdeptPower("Improved Ability (Hardware)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_INDUSTRIAL_MECHANIC = AdeptPower("Improved Ability (Industrial Mechanic)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_MEDICINE = AdeptPower("Improved Ability (Medicine)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_NAUTICAL_MECHANIC = AdeptPower("Improved Ability (Nautical Mechanic)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_NAVIGATION = AdeptPower("Improved Ability (Navigation)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_SOFTWARE = AdeptPower("Improved Ability (Software)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ETIQUETTE = AdeptPower("Improved Ability (Etiquette)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_IMPERSONATION = AdeptPower("Improved Ability (Impersonation)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_INSTRUCTION = AdeptPower("Improved Ability (Instruction)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_INTIMIDATION = AdeptPower("Improved Ability (Intimidation)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_LEADERSHIP = AdeptPower("Improved Ability (Leadership)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_NEGOTIATION = AdeptPower("Improved Ability (Negotiation)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PERFORMANCE = AdeptPower("Improved Ability (Performance)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_DISGUISE = AdeptPower("Improved Ability (Disguise)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_DIVING = AdeptPower("Improved Ability (Diving)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_ESCAPE_ARTIST = AdeptPower("Improved Ability (Escape Artist)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_FREE_FALL = AdeptPower("Improved Ability (Free Fall)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_GYMNASTICS = AdeptPower("Improved Ability (Gymnastics)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PALMING = AdeptPower("Improved Ability (Palming)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_PERCEPTION = AdeptPower("Improved Ability (Perception)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+iMPROVED_ABILITY_RUNNING = AdeptPower("Improved Ability (Running)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_SNEAKING = AdeptPower("Improved Ability (Sneaking)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_SURVIVAL = AdeptPower("Improved Ability (Survival)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_SWIMMING = AdeptPower("Improved Ability (Swimming)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_ABILITY_TRACKING = AdeptPower("Improved Ability (Tracking)", cost=0.5, group='Improved Ability', per_level=False, per_group=True)
+IMPROVED_PHYSICAL_ATTRIBUTE_BODY = AdeptPower("Improved Physical Attribute (Body)", cost=1, group='Improved Physical Attribute', per_level=False, per_group=True)
+IMPROVED_PHYSICAL_ATTRIBUTE_AGILITY = AdeptPower("Improved Physical Attribute (Agility)", cost=1, group='Improved Physical Attribute', per_level=False, per_group=True)
+IMPROVED_PHYSICAL_ATTRIBUTE_STRENGTH = AdeptPower("Improved Physical Attribute (Strength)", cost=1, group='Improved Physical Attribute', per_level=False, per_group=True)
+IMPROVED_PHYSICAL_ATTRIBUTE_REACTION = AdeptPower("Improved Physical Attribute (Reaction)", cost=1, group='Improved Physical Attribute', per_level=False, per_group=True)
+IMPROVED_POTENTIAL_PHYSICAL = AdeptPower("Improved Potential (Physical)", cost=0.5, group='Improved Potential', per_level=False, per_group=True)
+IMPROVED_POTENTIAL_MENTAL = AdeptPower("Improved Potential (Mental)", cost=0.5, group='Improved Potential', per_level=False, per_group=True)
+IMPROVED_POTENTIAL_SOCIAL = AdeptPower("Improved Potential (Social)", cost=0.5, group='Improved Potential', per_level=False, per_group=True)
+IMPROVED_REFLEXES_1 = AdeptPower("Improved Reflexes (Level 1)", cost=1.5, group='Improved Reflexes', per_level=False, per_group=False)
+IMPROVED_REFLEXES_2 = AdeptPower("Improved Reflexes (Level 2)", cost=2.5, group='Improved Reflexes', per_level=True, per_group=False)
+IMPROVED_REFLEXES_3 = AdeptPower("Improved Reflexes (Level 3)", cost=3.5, group='Improved Reflexes', per_level=True, per_group=False)
+IMPROVED_SENSE_LOW_LIGHT_VISION = AdeptPower("Improved Sense (Low Light Vision)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_THERMOGRAPHIC_VISION = AdeptPower("Improved Sense (Thermographic Vision)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_HIGH_FREQUENCY_HEARING = AdeptPower("Improved Sense (High-Frequency Hearing)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_LOW_FREQUENCY_HEARING = AdeptPower("Improved Sense (Low-Frequency Hearing)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_DIRECTION = AdeptPower("Improved Sense (Direction)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_TACTILE = AdeptPower("Improved Sense (Tactile)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_PERFECT_PITCH = AdeptPower("Improved Sense (Perfect Pitch)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+IMPROVED_SENSE_HUMAN_SCALE = AdeptPower("Improved Sense (Human Scale)", cost=0.25, group='Improved Sense', per_level=False, per_group=True)
+KILLING_HANDS = AdeptPower("Killing Hands", cost=0.5, group=None, per_level=False, per_group=False)
+KINESICS = AdeptPower("Kinesics", cost=0.25, group=None, per_level=True, per_group=False)
+LIGHT_BODY = AdeptPower("Light Body", cost=0.25, group=None, per_level=True, per_group=False)
+MISSILE_PARRY = AdeptPower("Missile Parry", cost=0.25, group=None, per_level=True, per_group=False)
+MYSTIC_ARMOR = AdeptPower("Mystic Armor", cost=0.5, group=None, per_level=True, per_group=False)
+NATURAL_IMMUNITY = AdeptPower("Natural Immunity", cost=0.25, group=None, per_level=True, per_group=False)
+PAIN_RESISTANCE = AdeptPower("Pain Resistance", cost=0.5, group=None, per_level=True, per_group=False)
+RAPID_HEALING = AdeptPower("Rapid Healing", cost=0.5, group=None, per_level=True, per_group=False)
+SPELL_RESISTANCE = AdeptPower("Spell Resistance", cost=0.5, group=None, per_level=True, per_group=False)
+TRACELESS_WALK = AdeptPower("Traceless Walk", cost=1, group=None, per_level=False, per_group=False)
+VOICE_CONTROL = AdeptPower("Voice Control", cost=0.5, group=None, per_level=True, per_group=False)
+WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False, per_group=False)
 """
     AUGMENTATIONS
 """
