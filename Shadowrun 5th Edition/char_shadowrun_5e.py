@@ -193,6 +193,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
                 add_spell(ch)
         case 'Aspected Magician':
             get_special_attribute(ch, tbl, 'Magic')
+
         case 'Mystic Adept':
             get_special_attribute(ch, tbl, 'Magic')
             try:
@@ -241,7 +242,6 @@ def get_adept_powers(ch: Core.Character, power_points=0) -> None:
         char_powers.append(new_power)
         power_points -= new_power.cost
     ch.AdeptPowers = char_powers
-    print('Adept powers: \n' + f'   {ch.AdeptPowers}')
     return
 
 
@@ -477,11 +477,27 @@ def skills_remove_magic_resonance(ch: Core.Character,
         If a character is not magically or resonancly inclined, remove those
             skills from the pool of potential skill picks
     """
-    if ch.Magic is None:
+    if ch.Magic is None or ch.MagicResoUser == 'Adept':
         for sk in Core.MAGIC_SKILLS:
             skill_list[sk] = 0
         for sk in Core.MAGIC_SKILL_GROUPS:
             group_list[sk] = 0
+
+    if ch.MagicResoUser == 'Aspected Magician':
+        usable_magic_group = random.choice(Core.MAGIC_SKILL_GROUPS)
+        for magic_skill_group in Core.MAGIC_SKILL_GROUPS:
+            if magic_skill_group != usable_magic_group:
+                for sk in magic_skill_group.skills:
+                    skill_list[sk] = 0
+        # for sk in [magic_skill_group.skills for magic_skill_group in Core.MAGIC_SKILL_GROUPS if 
+        # magic_skill_group != usable_magic_group]:
+        #    skill_list[sk] = 0
+            # pass
+        for magic_skill_group in Core.MAGIC_SKILL_GROUPS:
+            if magic_skill_group != usable_magic_group:
+                group_list[magic_skill_group] = 0
+                pass
+
 
     if ch.Resonance is None:
         for sk in Core.RESONANCE_SKILLS:
@@ -497,6 +513,7 @@ def skills_attribute_influence(ch: Core.Character, attr_influence, skill_list,
             on the two highest stats (randomly chosen from ties) of the
             character
     """
+
     if attr_influence is not None:
         for attr in attr_influence:
             skills_attr_influcence = [
@@ -544,7 +561,7 @@ def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
     while skill_points > 0:
         # Rolling for skill specialisations
         specialisations = [d for k, d in ch.Skills.items(
-        ) if d.rating > 4 and d.group is False]
+        ) if d.rating > 4 and d.group is False and d.spec is not None]
         if len(specialisations) > 1 and random.randint(1, 100) > 80:
             ROLL_SPEC = random.choice(specialisations)
             inc = 0
@@ -713,6 +730,8 @@ def get_gear(ch: Core.Character, nuyen: int) -> None:
         - Chars of magic tendancies must have some magic items
         - Chars most likely will have a commlink. Skills + nuyen to influence what kind
             (e.g. techy/rich folk likely to have a better commlink)
+        - Chars without arcana skill won't get magic formulae, chars with arcana will
+            be likely to possess it
     """
     ch = Gear.get_gear(ch, nuyen)
     return
@@ -858,7 +877,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
                     f'{skill_for_spec}. Costing 1\n   {karma_budget} ' +
                     f'is Karama Total')
             case 'New Spell':
-                if ch.Magic is not None and karma_budget >= 5:
+                if ch.MagicResoUser in ['Magician', 'Aspected Magician'] and karma_budget >= 5:
                     add_spell(ch)
                     karma_budget -= 5
                     new_spell = ch.Spells[len(ch.Spells)-1]
@@ -868,7 +887,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
                 else:
                     pass
             case 'New Complex Form':
-                if ch.Resonance is not None and karma_budget >= 4:
+                if ch.MagicResoUser == 'Technomancer' and karma_budget >= 4:
                     add_complex_form(ch)
                     karma_budget -= 5
                     new_cf = ch.ComplexForms[len(ch.ComplexForms)-1]
@@ -937,7 +956,6 @@ def format_skills(character_skills) -> None:
             return 
         print("====")
         print("SPECIALISATIONS")
-        print("====")
         for i in spec_skills:
             for k, d in i.items():
                 print(f'{d}   ({k})')
@@ -967,7 +985,7 @@ def format_skills(character_skills) -> None:
         for group in output_by_group.keys():
             output_by_group[group] = OrderedDict(
                 sorted(output_by_group[group].items(), key=lambda t: t[0]))
-            print("---\n -->", group)
+            print("-->", group)
             for rating in output_by_group[group].keys():
                 print(f'{rating}: ', ", ".join(output_by_group[group][rating]))
 
@@ -1050,18 +1068,100 @@ def alt_generate_character():
     print(selected_items['MagicResonance'])
 
 
-def print_shit(ch: Core.Character, nuyen, karma_log):
-    print('Metatype: ', ch.Metatype.name)
-    print('Attributes: ', ch.AttributesCore)
-    print('Qualities: ', ch.Qualities)
-    print('Spells: ', ch.Spells)
-    print("character karma is ", ch.Karma)
-    print(nuyen)
-    print('Karma logs:')
-    if KARMA_LOG:
-        print(karma_log)
+def format_qualities(ch: Core.Character) -> None:
+    qual = ch.Qualities
+    good_quals = ", ".join([i for i in qual.keys() if not hasattr(qual[i], 'negative')])
+    bad_quals = ", ".join([i for i in qual.keys() if hasattr(qual[i], 'negative')])
+    print("====")
+    print('QUALITIES:')
+    if len(good_quals) > 0:
+        print('--->  Positive:\n', good_quals)
+    if len(bad_quals) > 0:
+        print('--->  Negative:\n', bad_quals)
+
+
+def format_attributes(ch: Core.Character) -> None:
+    attr = ch.AttributesCore
+    apv = {} # apv == attr_print_values
+    for attr in ch.AttributesPhysical:
+        if attr is None:
+            pass
+        else:
+            spaces = " ".join(["" for i in range(11-len(attr.name))])
+            apv[attr.name] = f"{attr.name}{spaces}{attr.value} "
+    for attr in ch.AttributesMental:
+        if attr is None:
+            pass
+        else:
+            spaces = " ".join(["" for i in range(11-len(attr.name))])
+            apv[attr.name] = f"{attr.name}{spaces}{attr.value} "
+    for attr in ch.AttributesSpecial:
+        if attr is None:
+            pass
+        else:
+            spaces = " ".join(["" for i in range(11-len(attr.name))])
+            apv[attr.name] = f"{attr.name}{spaces}{attr.value} "
+    print("====")
+    print("ATTRIBUTES:")
+    print(" Physical     | Mental       | Special ")
+    print("--------------|--------------|------------")
+    print("", apv['Body'], "|", apv['Willpower'], "|", apv["Edge"])
+    print("", apv['Agility'], "|", apv['Logic'], "|", apv["Essence"])
+    if ch.Magic is not None:
+        print("", apv['Reaction'], "|", apv['Intuition'], "|", apv["Magic"])
+    elif ch.Resonance is not None:
+        print("", apv['Reaction'], "|", apv['Intuition'], "|", apv["Resonance"])
+    else:
+        print("", apv['Reaction'], "|", apv['Intuition'])
+    print("", apv['Strength'], "|", apv['Charisma'], "|")
+
+
+def format_table(list_name, l: list):
+    print(f"===\n{list_name}")
+    l = [i.__repr__() for i in l]
+    longest_item = 0
+    for i in l:
+        if len(i) > longest_item:
+            longest_item = len(i)
+    print("".join(["-" for _ in range(2*longest_item+1)]))
+    spaces = lambda x: " ".join(["" for i in range((longest_item+1)-len(x))])
+    for i in range(len(l)):
+        if i % 2 == 0:
+            try:
+                print("", f"{l[i]}{spaces(l[i])}", "|", f"{l[i+1]}{spaces(l[i+1])}")
+            except IndexError:
+                print("", f"{l[i]}{spaces(l[i])}", "|")
+        else:
+            pass
+        
+
+
+def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
+    print('Metatype  : ', ch.Metatype.name)
+    if attr_format:
+        format_attributes(ch)
+    else:
+        print('Attributes: ')
+        print('  Physical: ', ch.AttributesPhysical)
+        print('    Mental: ', ch.AttributesMental)
+        print('   Special: ', [i for i in ch.AttributesSpecial if i is not None])
+    format_qualities(ch)
+    if ch.MagicResoUser is not None and ch.MagicResoUser != 'Technomancer':
+        print('Awakened:', ch.MagicResoUser)
+    if ch.Spells is not None:
+        format_table("SPELLS", ch.Spells)
+    if ch.AdeptPowers is not None:
+        format_table("ADEPT POWERS", ch.AdeptPowers)
+    if ch.ComplexForms is not None:
+        format_table("COMPLEX FORMS", ch.AdeptPowers)
+        print(0)
+    # print("character karma is ", ch.Karma)
+    # print(nuyen)
+    # print('Karma logs:')
+    # if KARMA_LOG:
+    #    print(karma_log)
     format_skills(ch.Skills)
-    print("Gear: ", ch.Gear)
+    print("===\nGEAR: \n", ch.Gear)
 
 char = False
 while char is False:

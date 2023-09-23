@@ -11,7 +11,7 @@ class Attribute:
         self.type = self.get_type(name)
 
     def __repr__(self):
-        return f"{self.name}: [{self.value}/{self.limit}]"
+        return f"{self.name} {self.value}"
 
     def get_type(self, name):
         match name:
@@ -1577,7 +1577,7 @@ DETECT_ENEMIES_EXTENDED = Spell('Detect Enemies (Extended)', active=True, detect
 DETECT_INDIVIDUAL = Spell('Detect individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
 DETECT_LIFE = Spell('Detect life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
 DETECT_LIFE_EXTENDED = Spell('Detect Life (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=-1, category='Detection')
-DETECT_LIFE_FORM = Spell('Detect Life-form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
+DETECT_LjFE_FORM = Spell('Detect Life-form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
 DETECT_LIFE_FORM_EXTENDED = Spell('Detect Life-form (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
 DETECT_MAGIC = Spell('Detect Magic', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
 DETECT_MAGIC_EXTENDED = Spell('Detect Magic (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
@@ -2212,7 +2212,7 @@ def refresh_priority_table():
         },
         'D': {
             'Adept': {'Magic': 2},
-            'Aspected Magician': {'Magic': 2}
+            'Aspected Magician': {'Magic': 3}
         },
         'E': None
     }
@@ -2298,9 +2298,7 @@ SEATTLE_UCAS = RegionalNationality(
     'Seattle', nationality=NATIONALITY_UCAS, attribute=[(REACTION, 1)], skill=[(KNOWLEDGE_SEATTLE, 2), (PERCEPTION, 1), (INTIMIDATION, 1)], quality=SINNER_NATIONAL
 )
 SINLESS_UCAS = RegionalNationality(
-    'SINless (UCAS)', nationality=NATIONALITY_UCAS, attribute=[(AGILITY, 1)], skill=[(KNOWLEDGE_UCAS_CITY, 1)]
-)
-
+    'SINless (UCAS)', nationality=NATIONALITY_UCAS, attribute=[(AGILITY, 1)], skill=[(KNOWLEDGE_UCAS_CITY, 1)])
 
 
 NATIONALITY_CAS = Nationality(
@@ -2315,8 +2313,6 @@ DENVER_CAS = RegionalNationality(
 SINLESS_CAS = RegionalNationality(
     'SINless (CAS)', nationality=NATIONALITY_CAS, attribute=[(BODY, 1)], skill=[(KNOWLEDGE_UCAS_CITY)]
 )
-
-
 
 
 CAS_NATIONALITY = {
