@@ -1796,6 +1796,9 @@ ULTRASOUND_SENSOR_1_6 = Augmentation("Ultrasound Sensor", page_ref=453, cost=["R
 VOICE_MODULATOR_1_6 = Augmentation("Voice Modulator", page_ref=453, cost=["Rating", "*", 5000], rating=[1, "to", 6], essence=0.2, capacity="-", avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Headware", )
 # EYEWARE
 CYBEREYES_1 = Augmentation("Cybereyes (Rating 1)", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=4, avail=3, cyberlimbs=False, subtype='Eyeware', base=True)
+CYBEREYES_2 = Augmentation("Cybereyes (Rating 2)", page_ref=454, cost=6000, rating=2, essence=0.3, capacity=8, avail=6, cyberlimbs=False, subtype='Eyeware', base=True)
+CYBEREYES_3 = Augmentation("Cybereyes (Rating 3)", page_ref=454, cost=10000, rating=3, essence=0.4, capacity=12, avail=9, cyberlimbs=False, subtype='Eyeware', base=True)
+CYBEREYES_4 = Augmentation("Cybereyes (Rating 4)", page_ref=454, cost=14000, rating=4, essence=0.5, capacity=16, avail=12, cyberlimbs=False, subtype='Eyeware', base=True)
 THERMOGRAPHIC_VISION_AUG = Augmentation("Thermographic Vision (Aug)", page_ref=454, cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
 VISION_ENHANCEMENT_AUG = Augmentation("Vision Enhancement (Aug)", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, subtype='Eyeware', )
 VISION_MAGNIFICATION_AUG = Augmentation("Vision Magnification (Aug)", page_ref=454, cost=2000, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )

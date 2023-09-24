@@ -1153,7 +1153,7 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     if ch.AdeptPowers is not None:
         format_table("ADEPT POWERS", ch.AdeptPowers)
     if ch.ComplexForms is not None:
-        format_table("COMPLEX FORMS", ch.AdeptPowers)
+        format_table("COMPLEX FORMS", ch.ComplexForms)
         print(0)
     # print("character karma is ", ch.Karma)
     # print(nuyen)
