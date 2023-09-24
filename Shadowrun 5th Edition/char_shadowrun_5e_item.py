@@ -1,5 +1,8 @@
 import random
 import char_shadowrun_5e_data as Core
+from decimal import getcontext, Decimal
+
+getcontext().prec = 2
 
 DEFAULT_MAX_AVAILABILITY = 12
 DEFAULT_MAX_RATING = 6
@@ -18,13 +21,15 @@ def get_item_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
     if "rating" in kwargs:
         return kwargs['rating']
     elif "rating" not in attrAsDict(item).keys():
-        return 0
+        return 1
     elif isinstance(item.rating, int) or isinstance(item.rating, str):
         return item.rating
     elif isinstance(item.rating, list):
+        if item.rating[2] > max_rating:
+            item.rating[2] == max_rating
         return list_handler(item.rating, item, max_rating)
     else:
-        raise ValueError(f'{item.name} has bad rating data')
+        raise ValueError(f'{item.name} has bad rating data\n{item.rating}\n{type(item.rating)}')
 
 
 def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs):
@@ -37,7 +42,7 @@ def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs
     elif isinstance(item.avail, list):
         return list_handler(item.avail, item, max_avail, **kwargs)
     else:
-        raise ValueError
+        raise ValueError(f'{item.name} has bad avail data\n{item.avail}\n{type(item.avail)}')
 
 
 def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
@@ -49,20 +54,44 @@ def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
         if arg != -1:
             return list_handler(item.cost, item, arg, **kwargs)
         return list_handler(item.cost, item, **kwargs)
+    else:
+        raise ValueError(f'{item.name} has bad cost data\n{item.cost}\n{type(item.cost)}')
 
 def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
     if not hasattr(item, "essence"):
         return 0
-    if isinstance(item.essence, int) or isinstance(item.essence, float):
+    if isinstance(item.essence, int): 
         return item.essence
+    elif isinstance(item.essence, float):
+        getcontext().prec = 2
+        return Decimal(item.essence) * Decimal(1)
     if isinstance(item.essence, str):
         return 0
     elif isinstance(item.essence, list):
         if arg != -1:
-            return list_handler(item.essence, item, arg, **kwargs)
-        return list_handler(item.essence, item, **kwargs)
+            x = list_handler(item.essence, item, arg, **kwargs)
+        else:
+            x = list_handler(item.essence, item, **kwargs)
+        return Decimal(x) * Decimal(1)
+
+    else:
+        raise ValueError(f'{item.name} has bad essence data\n{item.essence}\n{type(item.essence)}')
 
 
+def get_item_capacity(item: Core.Gear, arg=-1, **kwargs):
+    if not hasattr(item, "capacity"):
+        return 1
+    if isinstance(item.capacity, int) or isinstance(item.capacity, str):
+        if item.capacity == "-":
+            return 1
+        return int(item.capacity)
+    elif isinstance(item.capacity, list):
+        if arg != -1:
+            return list_handler(item.capacity, item, arg, **kwargs)
+        return list_handler(item.capacity, item, **kwargs)
+    else:
+        raise ValueError(f'{item.name} has bad capacity data\n{item.capacity}\n{type(item.capacity)}')
+    
 
 def list_handler(l: list, item, arg=-1, **kwargs):
     r1 = 1
@@ -198,8 +227,29 @@ def get_mod(item: Core.Gear, m=None):
                 item.cost = get_item_cost(item) + get_item_cost(armor_mod, item)
             else:
                 item.cost = item.cost + armor_mod.cost
+    if isinstance(item, Core.Augmentation):
+        if hasattr(item, "mods"):
+            if m is not None:
+                aug_mod = m
+            else:
+                aug_mod = random.choice([i for i in Core.Augmentation.items if not hasattr(i, "base") and i.subtype == item.subtype])
+            while aug_mod.name in [i.name for i in item.mods]:
+                aug_mod = random.choice([i for i in Core.Augmentation.items if not hasattr(i, "base") and i.subtype == item.subtype])
+            aug_mod.rating = get_item_rating(aug_mod)
+            aug_mod.capacity = get_item_capacity(aug_mod)
+            aug_mod.cost = get_item_cost(aug_mod)
+            aug_mod.essence = get_item_essence(aug_mod)
+            if item.capacity >= aug_mod.capacity:
+                item.capacity -= aug_mod.capacity
+                item.mods.append(aug_mod)
+                item.cost += aug_mod.cost
+            else:
+                return item
+                pass
 
-def build_sensor(arg=-1):
+    return item
+
+def get_sensor(arg=-1):
     if arg != -1:
         pass
     else:
@@ -233,36 +283,32 @@ def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_A
     if grade is None:
         grade = random.choice([g for g in Core.AUG_GRADES if hasattr(g, "default")])
     item.grade = grade
-    x_i = get_item_cost(item, **kwargs)
-    if x_i is None:
-        raise TypeError()
-    item.cost = int(round(get_item_cost(item, **kwargs) * grade.cost))
-    item.avail = get_item_avail(item, **kwargs) + grade.avail
-    item.essence = get_item_essence(item, **kwargs) * grade.essence
     return item
 
-def get_augmentation(**kwargs):
-    for i in Core.Augmentation.items:
-        if i.subtype == "Headware":
-            i.location = "Head"
-        elif i.subtype == "Earware":
-            i.location = "Ears"
-        elif i.subtype == "Eyeware":
-            i.location = "Eyes"
-        elif i.subtype == "Bodyware":
-            i.location = "Body"
-    # is_cyberlimb = random.randint(0, 1)
-    is_cyberlimb = True
-    if is_cyberlimb:
-        body_part = random.choice(["Full Arm", "Full Leg", "Lower Arm", "Lower Leg", "Hand", "Foot", "Torso", "Skull"])
-        cyberlimb = random.choice([i for i in Core.Augmentation.items if hasattr(i, 'location') and i.location == body_part])
-        print(cyberlimb)
-        poss_aug = [i for i in Core.Augmentation.items if hasattr(i, "cyberlimbs") and i.cyberlimbs == True]
-        x = get_augmentation_grade(random.choice(poss_aug))
-        print(x.grade)
+def get_augmentation(bioware=False, cyberlimb=False, **kwargs):
+    if bioware:
+        item = random.choice([i for i in Core.Augmentation.items if i.subtype in ['Bioware', 'Cultured Bioware']])
+    elif cyberlimb:
+        item = random.choice([i for i in Core.Augmentation.items if i.subtype == 'Cyberlimbs'])
+        item.rating = 1
     else:
-        aug_wares = ["Head", "Eyes", "Ears", "Body"]
-        body_part = random.choice(aug_wares)
+        cyberware_location = random.choice(['Headware', 'Earware', 'Eyeware', 'Bodyware'])
+        if cyberware_location in ['Bodyware', 'Headware']:
+            item = random.choice([i for i in Core.Augmentation.items if i.subtype == cyberware_location])
+        else:
+            item = random.choice([i for i in Core.Augmentation.items if i.subtype == cyberware_location and hasattr(i, 'base')])
+    item.grade = get_augmentation_grade(item)
+    item.rating = get_item_rating(item)
+    item.cost = get_item_cost(item)
+    item.capacity = get_item_capacity(item)
+    item.essence = get_item_essence(item)
+    mod_attempts = 0
+    if item.subtype not in ['Bodyware', 'Headware']:
+        while item.capacity > 0 and mod_attempts < 4:
+            mod_attempts += 1
+            item = get_mod(item)
+    return item
+
 
 def get_vehicle(**kwargs):
     if "skill_req" in kwargs:
@@ -329,5 +375,10 @@ if __name__ == "__main__":
             print('Availabilty:', get_item_avail(gear, **kwargs))
             # print('Rating:', get_item_rating(gear, **kwargs))
 
+    x = get_augmentation(bioware=True)
+    print(x)
+    if hasattr(x, 'mods'):
+        print(x.mods)
+    print(x.cost)
     
 
