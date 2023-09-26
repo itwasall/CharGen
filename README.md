@@ -18,8 +18,9 @@ Work has stared on at least:
 - Shadow of the Demon Lord
 - Shadowrun 5e
 - Shadowrun 6e
+- Starfinder
 - Tenra Bansho Zero
-- Werewolf the Apocolaypse
+- Werewolf the Apocolaypse (5th Edition)
 
 ## Usage
 If a file works (which most don't, as either I'm incompetent, they're unfinished, or I wrote these on linux and didn't think how the code would work on other operating systems), you should just be able to use
@@ -29,9 +30,10 @@ $ python chargen_dnd_5e.py
 replacing *dnd_5e.py* with the suffix of the generator you want to run (or see fail to run)
 
 ## Working Generators
-- char_dnd_5e_new.py
-- char_mork_borg.py
-- char_ryuutama.py
+- ./Dungeons & Dragons 5th Edition/char_dnd_5e_new.py
+- ./Ryuutama/char_ryuutama.py
+- ./Mork\ Borg/char_mork_borg.py
 
 ## Generators with Significant Progress
-- char_shadowrun_5e.py
+- ./Shadowrun 5th Edition/char_shadowrun_5e.py
+- ./Werewolf: The Apocolaypse 5th Edition/char_werewolf_the_apocolaypse.py
