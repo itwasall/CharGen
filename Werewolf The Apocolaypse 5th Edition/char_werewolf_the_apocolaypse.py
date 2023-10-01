@@ -93,17 +93,54 @@ CRONES_CURSE = Flaw("Crone's Curse", -2, "SupernaturalSituations")
 MOON_THRALL = Flaw("Moon-Thrall", -2, "SupernaturalSituations")
 
 
-class Background():
+class BackgroundAlly():
     items = []
 
-    def __init__(self, name, **kwargs):
-        Background.items.append(self)
+    def __init__(self, name = 'Ally', effectiveness=0, reliability=0, is_stalker=False):
         self.name = name
-        for k, d in kwargs.items():
-            self.__setattr__(k, d)
+        self.effectiveness = effectiveness
+        self.reliability = reliability
+        self.is_stalker = is_stalker
+        BackgroundAlly.items.append(self)
+
+    def __repr__(self):
+        if not self.is_stalker:
+            return f'Ally: [Effectiveness: {self.effectiveness}, Reliability: {self.reliability}]'
+        else:
+            return f'Stalker: [Effectiveness: {self.effectiveness}, Reliability: {self.reliability}]'
 
 
-ALLY = Background("Ally", effectiveness=0, effectiveness_max=4, reliability=0, reliability_max=3, total=0, total_max=6)
+ALLY_TEMPLATE_WEAK = BackgroundAlly('Weak Individual', 2, 1, False)
+ALLY_TEMPLATE_AVERAGE = BackgroundAlly('Average Individual', 3, 2, False)
+ALLY_TEMPLATE_GIFTED = BackgroundAlly('Gifted Individual', 4, 2, False)
+ALLY_TEMPLATE_SUPERLATIVE = BackgroundAlly('Superlative Individual', 5, 3, False)
+
+
+class BackgroundContact:
+    items = []
+
+    def __init__(self, name = 'Contact', useful=0):
+        self.name = name
+        self.useful = useful
+
+    def __repr__(self):
+        return f'Contact: {self.useful}'
+
+CONTACT_TEMPLATE_COMMON = BackgroundContact('Common Knowledge Informant', 1)
+CONTACT_TEMPLATE_UNCOMMON = BackgroundContact('Uncommon/Privileged Knowledge Informant', 2)
+CONTACT_TEMPLATE_CRITICAL = BackgroundContact('Critical/Government Classified Knowledge Informant', 3)
+
+
+def get_background():
+    background_types = ['Ally', 'Contact', 'Fame', 'Loresheet', 'Mask', 'Mentor', 'Resources', 'Spirit Pact', 'Talisman']
+    new_background = random.choice(background_types)
+
+    match new_background:
+        case 'Ally':
+            return random.choice(BackgroundAlly.items)
+        case 'Contact':
+            return random.choice(BackgroundContact.items)
+
 
 
 
