@@ -2,34 +2,83 @@ import char_shadowrun_5e_data as Core
 import char_shadowrun_5e_item as Item
 import random
 
+GEAR_SHOPPING_LIST = []
 
 def get_gear(ch: Core.Character, budget: int) -> Core.Character:
-    gear_shopping_list = []
     essentials_out = get_essentials(ch)
-    gear_shopping_list.append(essentials_out)
+    GEAR_SHOPPING_LIST.append(essentials_out)
     for skill in ch.Skills.keys():
-        new_item = get_gear_skill_dependant(skill)
+        if skill in ['BLADES', 'CLUBS', 'ESCAPE_ARTIST', 'HEAVY_WEAPONS', 'LONGARMS',
+                     'PISTOLS', 'THROWING_WEAPONS', 'PERFORMANCE', 'ARTISAN',
+                     'AERONAUTICS_MECHANIC', 'ARMORER', 'AUTOMOTIVE_MECHANIC', 'CHEMISTRY',
+                     'COMPUTER', 'DEMOLITIONS', 'FIRST_AID', 'FORGERY', 'HACKING', 'HARDWARE',
+                     'INDUSTRIAL_MECHANIC', 'MEDICINE', 'NAUTICAL_MECHANIC', 'SOFTWARE',
+                     ]:
+            new_item = get_gear_skill_dependant(skill, ch.Skills[skill].rating)
+        else:
+            new_item = get_gear_skill_dependant(skill, ch.Skills[skill].rating, rating_roll=False)
         if new_item is None:
             continue
-        gear_shopping_list.append(new_item)
-    ch.Gear = gear_shopping_list
+        if isinstance(new_item, list):
+            for new_item_from_list in new_item:
+                GEAR_SHOPPING_LIST.append(new_item_from_list)
+        else:
+            GEAR_SHOPPING_LIST.append(new_item)
+    ch.Gear = GEAR_SHOPPING_LIST
     return ch
 
 ######################################################################
 
-def get_gear_skill_dependant(skill) -> list[Core.Gear]:
+def roll_new_item(req: list):
+    ammended_requirements  = [i for i in req if avail <= 12]
+
+def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]:
+    """
+        skill: Core.Skill
+        rating: Core.Skill.rating
+        rating_roll: bool -> If a skill's rating should influence whether or not an
+            item is rolled.
+            e.g. Someone mildly skilled at pistols might not own one right now, but
+                someone mildly skilled at piloting aircraft probably does
+    """
+    if rating_roll:
+        match rating:
+            case 1:
+                if random.randint(1, 100) >= 83:
+                    return None
+            case 2:
+                if random.randint(1, 100) >= 66:
+                    return None
+            case 3:
+                if random.randint(1, 100) >= 50:
+                    return None
+            case 4:
+                if random.randint(1, 100) >= 25:
+                    return None
+            case 5:
+                if random.randint(1, 100) >= 10:
+                    return None
+            case _:
+                pass
+    
     match skill:
         case "Automatics":
-            return random.choice([p for p in Core.Firearm.items if
-                                  p.subtype in ['Assault Rifle',
-                                                'Machine Pistol',
-                                                'Submachine Gun']])
+            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+                return Item.get_weapon(skill, no_mod=True)
+            return Item.get_weapon(skill)
         case "Pistols":
-            return random.choice([p for p in Core.Firearm.items if 
-                                  p.subtype in ['Light Pistol', 
-                                                'Heavy Pistol',
-                                                'Machine Pistol',
-                                                'Hold-Out', 'Taser']])
+            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+                return Item.get_weapon(skill, no_mod=True)
+            return Item.get_weapon(skill)
+        case "Heavy Weapons":
+            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+                return Item.get_weapon(skill, no_mod=True)
+            return Item.get_weapon(skill)
+        case "Locksmith": new_item_1 = Item.get_item(None, "Locksmith")
+            new_item_2 = Item.get_item(None, "Locksmith")
+            while new_item_1.name == new_item_2.name:
+                new_item_2 = Item.get_item(None, "Locksmith")
+            return [new_item_1, new_item_2]
         case _:
             return
 

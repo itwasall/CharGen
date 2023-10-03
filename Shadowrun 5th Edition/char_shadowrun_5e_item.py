@@ -215,6 +215,13 @@ def get_mod(item: Core.Gear, m=None):
                 item.cost = get_item_cost(item) + get_item_cost(weapon_mod, item)
             else:
                 item.cost = item.cost + weapon_mod.cost
+            if hasattr(item, "legality") and hasattr(weapon_mod, "legality"):
+                if weapon_mod.legality == Core.FORBIDDEN or item.legality == Core.FORBIDDEN:
+                    item.legality = Core.FORBIDDEN
+                elif weapon_mod.legality == Core.RESTRICTED or item.legaliy == Core.RESTRICTED:
+                    item.legality = Core.RESTRICTED
+            if not hasattr(item, "legality") and hasattr(weapon_mod, "legality"):
+                item.legality = weapon_mod.legality
             item.name = f"{item.name} /w {weapon_mod.name}"
     if isinstance(item, Core.Armor):
         if hasattr(item, "mods"):
@@ -310,6 +317,29 @@ def get_augmentation(bioware=False, cyberlimb=False, **kwargs):
     return item
 
 
+def get_weapon(skill=None, no_mod=False, **kwargs):
+    if skill is None:
+        # Generate random weapon from all weapons
+        pass
+    match skill:
+        case "Automatics":
+            pool = [p for p in Core.Firearm.items if p.subtype in [
+                'Assault Rifle', 'Machine Pistol', 'Submachine Gun'
+                ]]
+        case "Pistols":
+            pool = [p for p in Core.Firearm.items if p.subtype in [
+                'Light Pistol', 'Heavy Pistol', 'Machine Pistol',
+                'Hold-Out', 'Taser']]
+        case "Heavy Weapons":
+            pool = [p for p in Core.Firearm.items if p.subtype in [
+                'Sniper Rifle', 'Shotgun', 'Machine Gun', 'Cannon/Launcher'
+                ]]
+
+    new_weapon = random.choice([i for i in pool if i.avail <= DEFAULT_MAX_AVAILABILITY])
+    if not no_mod and random.randint(1, 100) >= 40:
+        new_weapon = get_mod(new_weapon)
+    return new_weapon
+
 def get_vehicle(**kwargs):
     if "skill_req" in kwargs:
         match kwargs['skill_req']:
@@ -350,7 +380,22 @@ def get_vehicle(**kwargs):
     return vehicle
 
 
-def get_item(item: Core.Gear):
+def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
+    match item_pool_id:
+        case "Locksmith":
+            item_pool = [Core.AUTOPICKER, Core.CELLUAR_GLOVE_MOLDER, Core.CHISEL_CROWBAR,
+                         Core.KEYCARD_COPIER, Core.LOCKPICK_SET, Core.MAGLOCK_PASSKEY,
+                         Core.MINIWELDER, Core.SEQUENCER]
+            return item_pool
+
+
+def get_item(item: Core.Gear=None, item_pool_id=None):
+    item_pool = get_item_pool(item_pool_id)
+    if not item_pool is None:
+        item = random.choice(item_pool)
+    if item is None:
+        return AttributeError("Both args cannot be None.\n" / 
+                              f"They are currently {item} and {item_pool}")
     if hasattr(item, "cost"):
         item.cost = get_item_cost(item)
     if hasattr(item, "rating"):

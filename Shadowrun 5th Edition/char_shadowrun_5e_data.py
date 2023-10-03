@@ -549,7 +549,7 @@ class Vehicle(Gear):
         self.skill_req = skill_req
 
 
-class GearAvailability(AbstractBaseClass):
+class GearLegality(AbstractBaseClass):
     def __init__(self, name, **kwargs):
         super().__init__(name, **kwargs)
 
@@ -977,9 +977,9 @@ DMG_FLECH = DamageType("Flechette")
 """
     GEAR AVAILABILITY
 """
-LEGAL = GearAvailability("Legal")
-RESTRICTED = GearAvailability("Restricted")
-FORBIDDEN = GearAvailability("Forbidden")
+LEGAL = GearLegality("Legal")
+RESTRICTED = GearLegality("Restricted")
+FORBIDDEN = GearLegality("Forbidden")
 """
     GEAR
 
