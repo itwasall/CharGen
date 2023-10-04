@@ -284,6 +284,34 @@ def get_sensor(arg=-1):
     return sensor
 
 
+def get_cyberdeck(item: Core.Electronics = None):
+    if item is None or (hasattr(item, "category") and item.subtype != "Cyberdeck"):
+        item = random.choice([i for i in Core.Electronics.items if hasattr(i, "category") and i.subtype == "Cyberdeck"])
+    program_count = int(item.programs)
+    item.programs = []
+    for idx in range(program_count):
+        if idx == 0:
+            new_program = random.choice([i for i in Core.Software.items if i.category == 'Common'])
+            item.programs.append(new_program)
+            continue
+        else:
+            while True:
+                new_program = random.choice([i for i in Core.Software.items])
+                if new_program not in item.programs:
+                    item.programs.append(new_program)
+                    break
+    item.Attack = Core.Attribute("Attack", item.attribute_array[0], matrix=True)
+    item.sleaze = Core.Attribute("Sleaze", item.attribute_array[1], matrix=True)
+    item.data_processing = Core.Attribute("Data Processing", item.attribute_array[2], matrix=True)
+    item.firewall = Core.Attribute("Firewall", item.attribute_array[3], matrix=True)
+    print(item)
+    print(item.programs)
+    return item
+
+
+
+
+
 def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES, **kwargs):
     if "rating" in kwargs:
         item.rating = kwargs['rating']
@@ -402,10 +430,6 @@ def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
         case "Hardware":
             item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
                          i.subtype in ["Commlink", "Cyberdeck", "Accessories", "RFID Tags"]]
-            return item_pool
-        case "Software":
-            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
-                         i.subtype == "Software"]
             return item_pool
 
 def get_item(item: Core.Gear=None, item_pool_id=None):

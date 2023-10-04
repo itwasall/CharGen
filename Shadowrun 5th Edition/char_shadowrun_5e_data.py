@@ -2,13 +2,14 @@ import random
 
 class Attribute:
 
-    def __init__(self, name, value: int = 0):
+    def __init__(self, name, value: int = 0, matrix=False):
         self.name = name
         self.value = value
         self.limit = 6
         if name == "Essence":
             self.limit = None
         self.type = self.get_type(name)
+        self.matrix_attribute = matrix
 
     def __repr__(self):
         return f"{self.name} {self.value}"
@@ -490,6 +491,16 @@ class Electronics(Gear):
         self.category = "Electronics"
 
 
+class Cyberdeck(Electronics):
+    items = []
+
+    def __init__(self, name, cost, page_ref, attributes, **kwargs)
+        Cyberdeck.items.append(self)
+        super().__init__(name, cost, page_ref, attributes, **kwargs)
+        self.category = "Cyberdeck"
+
+
+
 class Sensor(AbstractBaseClass):
     items = []
 
@@ -620,6 +631,18 @@ class KarmaLogger():
         self.logs.append(f'[{self.index}] {item}')
 
 
+class Software():
+    items = []
+
+    def __init__(self, name, category):
+        self.name = name
+        self.category = category
+        Software.items.append(self)
+
+    def __repr__(self):
+        return f'[Software/{self.category}] {self.name}'
+
+
 """
     ATTRIBUTES
 """
@@ -636,6 +659,10 @@ ESSENCE = Attribute("Essence")
 MAGIC = Attribute("Magic")
 RESONANCE = Attribute("Resonance")
 
+ATTACK = Attribute("Attack", matrix=True)
+SLEAZE = Attribute("Sleaze", matrix=True)
+DATA_PROCESSING = Attribute("Data Processing", matrix=True)
+FIREWALL = Attribute('Firewall', matrix=True)
 """
     ACTIVE SKILLS
 """
@@ -1246,15 +1273,43 @@ FAIRLIGHT_CALIBAN = Electronics("Fairlight Caliban", cost=8000, page_ref=439, ra
 SIM_MODULE = Electronics("Sim Module", cost=100, page_ref=439, rating="-", avail=0, subtype="Commlink_", requires=["Subtype", "Commlink"])
 SIM_MODULE_HOT_SIM = Electronics("Sim Module Hot Sim", cost=250, page_ref=439, rating="-", avail=0, subtype="Commlink", requires=SIM_MODULE)
 # =============== CYBERDECKS ===========
-ERIKA_MCD_1 = Electronics("Erika MCD-1", cost=49_500, page_ref=439, rating=1, avail=3, legality=RESTRICTED, attribute_array=[4,3,2,1], programs=1, subtype="Cyberdeck")
-MICRODECK_SUMMIT = Electronics("Microdeck Summit", cost=58_000, page_ref=439, rating=1, avail=3, legality=RESTRICTED, attribute_array=[4,3,3,1], programs=1, subtype="Cyberdeck")
-MIROTRONICA_AZTECA_200 = Electronics("Mirotronica Azteca 200", cost=110_250, page_ref=439, rating=2, avail=6, legality=RESTRICTED, attribute_array=[5,4,3,2], programs=2, subtype="Cyberdeck")
-HERMES_CHARIOT = Electronics("Hermes Chariot", cost=123_000, page_ref=439, rating=2, avail=6, legality=RESTRICTED, attribute_array=[5,4,4,2], programs=2, subtype="Cyberdeck")
-NOVATECH_NAVIGATOR = Electronics("Novatech Navigator", cost=205_750, page_ref=439, rating=3, avail=9, legality=RESTRICTED, attribute_array=[6,5,4,3], programs=3, subtype="Cyberdeck")
-RENRAKU_TSURUGI = Electronics("Renraku Tsurugi", cost=214_125, page_ref=439, rating=3, avail=9, legality=RESTRICTED, attribute_array=[6,5,5,3], programs=3, subtype="Cyberdeck")
-SONY_CIY_720 = Electronics("Sony CIY-720", cost=345_000, page_ref=439, rating=4, avail=12, legality=RESTRICTED, attribute_array=[7,6,5,4], programs=4, subtype="Cyberdeck")
-SHIAWASE_CYBER_5 = Electronics("Shiawase Cyber-5", cost=549_375, page_ref=439, rating=5, avail=15, legality=RESTRICTED, attribute_array=[8,7,6,5], programs=5, subtype="Cyberdeck")
-FAIRLIGHT_EXCALIBUR = Electronics("Fairlight Excalibur", cost=823_250, page_ref=439, rating=6, avail=18, legality=RESTRICTED, attribute_array=[9,8,7,6], programs=6, subtype="Cyberdeck")
+ERIKA_MCD_1 = Cyberdeck("Erika MCD-1", cost=49_500, page_ref=439, rating=1, avail=3, legality=RESTRICTED, attribute_array=[4,3,2,1], programs=1, subtype="Cyberdeck")
+MICRODECK_SUMMIT = Cyberdeck("Microdeck Summit", cost=58_000, page_ref=439, rating=1, avail=3, legality=RESTRICTED, attribute_array=[4,3,3,1], programs=1, subtype="Cyberdeck")
+MIROTRONICA_AZTECA_200 = Cyberdeck("Mirotronica Azteca 200", cost=110_250, page_ref=439, rating=2, avail=6, legality=RESTRICTED, attribute_array=[5,4,3,2], programs=2, subtype="Cyberdeck")
+HERMES_CHARIOT = Cyberdeck("Hermes Chariot", cost=123_000, page_ref=439, rating=2, avail=6, legality=RESTRICTED, attribute_array=[5,4,4,2], programs=2, subtype="Cyberdeck")
+NOVATECH_NAVIGATOR = Cyberdeck("Novatech Navigator", cost=205_750, page_ref=439, rating=3, avail=9, legality=RESTRICTED, attribute_array=[6,5,4,3], programs=3, subtype="Cyberdeck")
+RENRAKU_TSURUGI = Cyberdeck("Renraku Tsurugi", cost=214_125, page_ref=439, rating=3, avail=9, legality=RESTRICTED, attribute_array=[6,5,5,3], programs=3, subtype="Cyberdeck")
+SONY_CIY_720 = Cyberdeck("Sony CIY-720", cost=345_000, page_ref=439, rating=4, avail=12, legality=RESTRICTED, attribute_array=[7,6,5,4], programs=4, subtype="Cyberdeck")
+SHIAWASE_CYBER_5 = Cyberdeck("Shiawase Cyber-5", cost=549_375, page_ref=439, rating=5, avail=15, legality=RESTRICTED, attribute_array=[8,7,6,5], programs=5, subtype="Cyberdeck")
+FAIRLIGHT_EXCALIBUR = Cyberdeck("Fairlight Excalibur", cost=823_250, page_ref=439, rating=6, avail=18, legality=RESTRICTED, attribute_array=[9,8,7,6], programs=6, subtype="Cyberdeck")
+# ========== CYBERDECK PROGRAMS =======
+# ---- Common Programs ----
+PROGRAM_BROWSE = Software("Browse", category='Common')
+PROGRAM_EDIT = Software("Edit", category='Common')
+PROGRAM_ENCRYPTION = Software("Encryption", category='Common')
+PROGRAM_SIGNAL_SCRUB = Software("Signal Scrub", category='Common')
+PROGRAM_TOOLBOX = Software("Toolbox", category='Common')
+PROGRAM_VIRTUAL_MACHINE = Software("Virtual Machine", category='Common')
+# ---- Hacking Programs ----
+PROGRAM_ARMOR = Software("Armor", category='Hacking')
+PROGRAM_BABY_MONITOR = Software("Baby_monitor", category='Hacking')
+PROGRAM_BIOFEEDBACK = Software("Biofeedback", category='Hacking')
+PROGRAM_BIOFEEDBACK_FILTER = Software("Biofeedback_filter", category='Hacking')
+PROGRAM_BLACKOUT = Software("Blackout", category='Hacking')
+PROGRAM_DECRYPTION = Software("Decryption", category='Hacking')
+PROGRAM_DEFUSE = Software("Defuse", category='Hacking')
+PROGRAM_DEMOLITION = Software("Demolition", category='Hacking')
+PROGRAM_EXPLOIT = Software("Exploit", category='Hacking')
+PROGRAM_FORK = Software("Fork", category='Hacking')
+PROGRAM_GUARD = Software("Guard", category='Hacking')
+PROGRAM_HAMMER = Software("Hammer", category='Hacking')
+PROGRAM_LOCKDOWN = Software("Lockdown", category='Hacking')
+PROGRAM_MUGGER = Software("Mugger", category='Hacking')
+PROGRAM_SHELL = Software("Shell", category='Hacking')
+PROGRAM_SNEAK = Software("Sneak", category='Hacking')
+PROGRAM_STEALTH = Software("Stealth", category='Hacking')
+PROGRAM_TRACK = Software("Track", category='Hacking')
+PROGRAM_WRAPPER = Software("Wrapper", category='Hacking')
 # =============== ACCESSORIES =========
 AR_GLOVES = Electronics("AR Gloves", cost=150, page_ref=440, rating=3, avail=0, subtype="Accessories")
 BIOMETRIC_READER = Electronics("Biometric Reader", cost=200, page_ref=440, rating=3, avail=4, subtype="Accessories")

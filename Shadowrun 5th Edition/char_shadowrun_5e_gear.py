@@ -9,11 +9,11 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     for i in essentials_out:
         GEAR_SHOPPING_LIST.append(i)
     for skill in ch.Skills.keys():
-        if skill in ['BLADES', 'CLUBS', 'ESCAPE_ARTIST', 'HEAVY_WEAPONS', 'LONGARMS',
-                     'PISTOLS', 'THROWING_WEAPONS', 'PERFORMANCE', 'ARTISAN',
+        if skill in ['BLADES', 'CLUBS', 'HEAVY_WEAPONS', 'LONGARMS',
+                     'PISTOLS', 'THROWING_WEAPONS', 'ARTISAN',
                      'AERONAUTICS_MECHANIC', 'ARMORER', 'AUTOMOTIVE_MECHANIC', 'CHEMISTRY',
                      'COMPUTER', 'DEMOLITIONS', 'FIRST_AID', 'FORGERY', 'HACKING', 'HARDWARE',
-                     'INDUSTRIAL_MECHANIC', 'MEDICINE', 'NAUTICAL_MECHANIC', 'SOFTWARE',
+                     'INDUSTRIAL_MECHANIC', 'MEDICINE', 'NAUTICAL_MECHANIC',
                      ]:
             new_item = get_gear_skill_dependant(skill, ch.Skills[skill].rating)
         else:
@@ -42,25 +42,10 @@ def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]
             e.g. Someone mildly skilled at pistols might not own one right now, but
                 someone mildly skilled at piloting aircraft probably does
     """
+    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 10, 6: 8, 7: 5, 8: 1}
     if rating_roll:
-        match rating:
-            case 1:
-                if random.randint(1, 100) >= 83:
-                    return None
-            case 2:
-                if random.randint(1, 100) >= 66:
-                    return None
-            case 3:
-                if random.randint(1, 100) >= 50:
-                    return None
-            case 4:
-                if random.randint(1, 100) >= 25:
-                    return None
-            case 5:
-                if random.randint(1, 100) >= 10:
-                    return None
-            case _:
-                pass
+        if random.randint(1, 100) >= rating_roll_ratio[rating]:
+            return None
     
     match skill:
         case "Automatics":
@@ -97,7 +82,7 @@ def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]
             return Item.get_weapon(skill)
         case "Pilot Ground Craft" | "Pilot Aircraft" | "Pilot Watercraft" | "Pilot Walker":
             return Item.get_vehicle(skill)
-        case "Hardware" | "Software" | "Locksmith":
+        case "Hardware" | "Locksmith":
             items = []
             for idx in range(rating):
                 if idx is False:
