@@ -15,9 +15,9 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
                      'COMPUTER', 'DEMOLITIONS', 'FIRST_AID', 'FORGERY', 'HACKING', 'HARDWARE',
                      'INDUSTRIAL_MECHANIC', 'MEDICINE', 'NAUTICAL_MECHANIC',
                      ]:
-            new_item = get_gear_skill_dependant(skill, ch.Skills[skill].rating)
+            new_item = get_gear_skill_dependant(ch, skill, ch.Skills[skill].rating)
         else:
-            new_item = get_gear_skill_dependant(skill, ch.Skills[skill].rating, rating_roll=False)
+            new_item = get_gear_skill_dependant(ch, skill, ch.Skills[skill].rating, rating_roll=False)
         if new_item is None:
             continue
         if isinstance(new_item, list):
@@ -33,7 +33,7 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
 def roll_new_item(req: list):
     ammended_requirements  = [i for i in req if avail <= 12]
 
-def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]:
+def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.Gear]:
     """
         skill: Core.Skill
         rating: Core.Skill.rating
@@ -42,22 +42,37 @@ def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]
             e.g. Someone mildly skilled at pistols might not own one right now, but
                 someone mildly skilled at piloting aircraft probably does
     """
-    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 10, 6: 8, 7: 5, 8: 1}
+    # If flag argument is set, then the higher the rating the more likely it is an
+    #   item is rolled.
+    #   Rating 1: 16%, Rating 2: 33%, Rating 3: 50%
+    #   Rating 4: 75%, Rating 5: 85%, Rating 6: 90% 
+    #   Rating 7: 95%, Rating 8: 98% - Not sure how these is legal though
+    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
     if rating_roll:
         if random.randint(1, 100) >= rating_roll_ratio[rating]:
             return None
+
+    # Makes it more likely to have more than one weapon with a modification if skills are
+    #   of higher rating
+    sec_wpn_mod_chance = 40
+    sec_wpn_mod_chance += sum([ch.Skills[skill].rating for skill in ch.Skills if skill in ["Automatics", "Pistols", "Heavy Weapons"]]) * 5
+
     
     match skill:
         case "Automatics":
-            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+            # Roll second weapon without mods if a Firearm has already been rolled with one
+            if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Pistols":
-            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+            if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Heavy Weapons":
-            if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+            if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Archery":

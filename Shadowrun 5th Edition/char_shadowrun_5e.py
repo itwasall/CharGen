@@ -1,6 +1,8 @@
 import random
 import char_shadowrun_5e_data as Core
 import char_shadowrun_5e_gear as Gear
+import multiprocessing
+import time
 from collections import OrderedDict
 
 KARMA_LOG = False
@@ -1165,6 +1167,15 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     for gear in ch.Gear:
         print(gear)
 
-char = False
-while char is False:
-    char = generate_character()
+if __name__ == "__main__":
+    # Kills process if charater generation takes too long
+    # In like 1% of cases the program hangs, this is to temporarily tackle that
+    #   before I find and fix the issue
+    p = multiprocessing.Process(target=generate_character)
+    p.start()
+    p.join(10)
+    if p.is_alive():
+        print("running too long, killing process")
+        p.terminate()
+        p.join()
+
