@@ -375,7 +375,7 @@ def get_weapon(skill=None, no_mod=False, **kwargs):
     new_weapon = random.choice([i for i in pool if i.avail <= DEFAULT_MAX_AVAILABILITY])
     if not no_mod and random.randint(1, 100) >= 40:
         new_weapon = get_mod(new_weapon)
-    return new_weapon
+    return get_item(new_weapon)
 
 def get_vehicle(skill = None, **kwargs):
     if skill is not None:

@@ -470,6 +470,10 @@ def get_skills(
     # Individual Skill Points spend
     skill_list = skills_roll_individual(
         ch, skill_points, skill_list, skill_cap)
+
+    for skill in ch.Skills:
+        if ch.Skills[skill].rating > 6:
+            ch.Skills[skill].rating = 6
     return
 
 
@@ -546,7 +550,7 @@ def skills_roll_group(ch: Core.Character, group_points, group_list,
             else:
                 ch.Skills[skill.name].rating += 1
         # Adjusting weights based on groups already selected
-        group_list[ROLL_GROUP] += random.randint(1, 2)
+        group_list[ROLL_GROUP] += random.randint(1, 4)
         skills_of_same_attr = [s for s in skill_list.keys(
         ) if s.attribute == skill.attribute and s.name != skill.name]
         for skill in skills_of_same_attr:
@@ -594,9 +598,13 @@ def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
         else:
             if ROLL_SKILL.name not in ch.Skills.keys():
                 ch.Skills[ROLL_SKILL.name] = ROLL_SKILL
-            elif ch.Skills[ROLL_SKILL.name].rating >= 12:
+            elif ch.Skills[ROLL_SKILL.name].rating >= 6:
+                if ch.Skills[ROLL_SKILL.name].rating > 6:
+                    skill_points += ch.Skills[ROLL_SKILL.name].rating - 6
+                    ch.Skills[ROLL_SKILL.name].rating = 6
                 continue
-            ch.Skills[ROLL_SKILL.name].rating += 1
+            skill_rating_increase = random.choices([1, 2, 3, 4], [4, 3, 3, 1])[0]
+            ch.Skills[ROLL_SKILL.name].rating += skill_rating_increase
             # Adjusting weights based on skills already selected
             match skill_list[ROLL_SKILL]:
                 case 1, 2, 3:
@@ -610,7 +618,7 @@ def skills_roll_individual(ch: Core.Character, skill_points, skill_list,
                 skill_list[skill] += random.randint(1, 3)
             else:
                 pass
-            skill_points -= 1
+            skill_points -= skill_rating_increase
     return skill_list
 
 
@@ -966,30 +974,36 @@ def format_skills(character_skills) -> None:
         print("====")
         print("ACTIVE SKILLS")
         print("    by Group/Rating:")
+
+        non_grouped_skills = {}
+        groups = {}
         for k, d in character_skills.items():
             if d.group is not False:
-                if d.group not in output_by_group.keys():
-                    output_by_group[d.group] = {}
-            else:
-                d.group = 'Non-Grouped'
-                
-            if d.rating not in output_by_group[d.group].keys():
-                if isinstance(d.spec, str):
-                    output_by_group[d.group][d.rating] = [f'{d.name} ({d.spec})']
+                if d.group not in groups.keys():
+                    groups[d.group] = d.rating
                 else:
-                    output_by_group[d.group][d.rating] = [d.name]
-            else:
-                if isinstance(d.spec, str):
-                    output_by_group[d.group][d.rating].append(f'{d.name} ({d.spec})')
-                else:
-                    output_by_group[d.group][d.rating].append(d.name)
+                    continue
+            d.group = "Non-Grouped"
 
-        for group in output_by_group.keys():
-            output_by_group[group] = OrderedDict(
-                sorted(output_by_group[group].items(), key=lambda t: t[0]))
-            print("-->", group)
-            for rating in output_by_group[group].keys():
-                print(f'{rating}: ', ", ".join(output_by_group[group][rating]))
+            if isinstance(d.spec, str):
+                skill_name_formatted = f'{d.name} ({d.spec})'
+            else:
+                skill_name_formatted = d.name
+
+            if d.rating not in non_grouped_skills.keys():
+                non_grouped_skills[d.rating] = [skill_name_formatted]
+            else:
+                non_grouped_skills[d.rating].append(skill_name_formatted)
+
+        non_grouped_skills = OrderedDict(sorted(non_grouped_skills.items(), key=lambda t: t[0]))
+        print("--> Non-Grouped Skills")
+        for rating in non_grouped_skills.keys():
+            print(f'{rating}: ', ", ".join(non_grouped_skills[rating]))
+
+        for group in groups.keys():
+            print(f"--> {group} Skill Group: {groups[group]}")
+
+
 
 
     def format_skills_attribute():
@@ -1173,7 +1187,7 @@ if __name__ == "__main__":
     #   before I find and fix the issue
     p = multiprocessing.Process(target=generate_character)
     p.start()
-    p.join(10)
+    p.join(5)
     if p.is_alive():
         print("running too long, killing process")
         p.terminate()
