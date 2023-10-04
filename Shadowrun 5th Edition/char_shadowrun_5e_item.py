@@ -300,16 +300,11 @@ def get_cyberdeck(item: Core.Electronics = None):
                 if new_program not in item.programs:
                     item.programs.append(new_program)
                     break
-    item.Attack = Core.Attribute("Attack", item.attribute_array[0], matrix=True)
-    item.sleaze = Core.Attribute("Sleaze", item.attribute_array[1], matrix=True)
-    item.data_processing = Core.Attribute("Data Processing", item.attribute_array[2], matrix=True)
-    item.firewall = Core.Attribute("Firewall", item.attribute_array[3], matrix=True)
-    print(item)
-    print(item.programs)
+    item.attack = Core.Attribute("Attack", item.attributes[0], matrix=True)
+    item.sleaze = Core.Attribute("Sleaze", item.attributes[1], matrix=True)
+    item.data_processing = Core.Attribute("Data Processing", item.attributes[2], matrix=True)
+    item.firewall = Core.Attribute("Firewall", item.attributes[3], matrix=True)
     return item
-
-
-
 
 
 def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES, **kwargs):
@@ -319,6 +314,7 @@ def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_A
         grade = random.choice([g for g in Core.AUG_GRADES if hasattr(g, "default")])
     item.grade = grade
     return item
+
 
 def get_augmentation(bioware=False, cyberlimb=False, **kwargs):
     if bioware:
@@ -447,6 +443,24 @@ def get_item(item: Core.Gear=None, item_pool_id=None):
         item.avail = get_item_avail(item)
     return item
 
+
+def item_format(item: Core.Gear=None, compact=False):
+    if item.__class__ == Core.Cyberdeck:
+        software = item.programs
+        name = item.name
+        attributes   = f' {item.attack} | {item.data_processing.value} {item.data_processing.name}'
+        attributes_2 = f' {item.sleaze} | {item.firewall.value} {item.firewall.name}'
+        if not compact:
+            print("--- Cyberdeck ---")
+            print(name)
+            print("--> Attributes    ")
+            print(attributes)
+            print(attributes_2)
+            print("--> Software")
+            print(", ".join([i.name for i in software]))
+        else:
+            print(f"> Cyberdeck: {item.name} A: {item.attack.value}, S: {item.sleaze.value}, DP: {item.data_processing.value}, F: {item.firewall.value}")
+
 if __name__ == "__main__":
     def test_vehs():
         print(f"Random vehicle: {get_vehicle(any=True)}")
@@ -463,10 +477,11 @@ if __name__ == "__main__":
             print('Availabilty:', get_item_avail(gear, **kwargs))
             # print('Rating:', get_item_rating(gear, **kwargs))
 
-    x = get_augmentation(bioware=True)
-    print(x)
-    if hasattr(x, 'mods'):
-        print(x.mods)
-    print(x.cost)
+    x = get_augmentation(bioware=False)
+    y = get_cyberdeck()
+    print("=== FULL FORMAT ===\n")
+    item_format(y)
+    print("\n=== COMPACT FORMAT ===\n")
+    item_format(y, compact=True)
     
 

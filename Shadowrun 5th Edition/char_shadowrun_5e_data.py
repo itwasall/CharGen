@@ -496,6 +496,7 @@ class Cyberdeck(Electronics):
 
     def __init__(self, name, cost, page_ref, attributes, **kwargs):
         Cyberdeck.items.append(self)
+        self.attributes = attributes
         super().__init__(name, cost, page_ref, **kwargs)
         self.category = "Cyberdeck"
 
