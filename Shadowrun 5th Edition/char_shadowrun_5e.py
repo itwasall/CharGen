@@ -1161,7 +1161,9 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     # if KARMA_LOG:
     #    print(karma_log)
     format_skills(ch.Skills)
-    print("===\nGEAR: \n", ch.Gear)
+    print("===\nGEAR: \n")
+    for gear in ch.Gear:
+        print(gear)
 
 char = False
 while char is False:

@@ -334,15 +334,28 @@ def get_weapon(skill=None, no_mod=False, **kwargs):
             pool = [p for p in Core.Firearm.items if p.subtype in [
                 'Sniper Rifle', 'Shotgun', 'Machine Gun', 'Cannon/Launcher'
                 ]]
-
+        case "Archery":
+            pool = [p for p in Core.ProjectileWeapon.items if p.subtype in ["Bows", "Crossbow"]]
+            no_mod = True
+        case "Blades":
+            pool = [p for p in Core.MeleeWeapon.items if p.subtype == "Blade"]
+            no_mod = True
+        case "Clubs":
+            pool = [p for p in Core.MeleeWeapon.items if p.subtype == "Club"]
+            no_mod = True
+        case "Throwing Weapons":
+            pool = [p for p in Core.ProjectileWeapon.items if p.subtype == "Throwing Weapons"]
+            no_mod = True
+    for pool_item in pool:
+        pool_item.avail = get_item_avail(pool_item)
     new_weapon = random.choice([i for i in pool if i.avail <= DEFAULT_MAX_AVAILABILITY])
     if not no_mod and random.randint(1, 100) >= 40:
         new_weapon = get_mod(new_weapon)
     return new_weapon
 
-def get_vehicle(**kwargs):
-    if "skill_req" in kwargs:
-        match kwargs['skill_req']:
+def get_vehicle(skill = None, **kwargs):
+    if skill is not None:
+        match skill:
             case "Pilot Ground Craft":
                 valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_GROUND_CRAFT]
             case "Pilot Aircraft":
@@ -371,7 +384,7 @@ def get_vehicle(**kwargs):
                 print("invalid 'veh_type' arg, choosing all vehicles")
                 veh_types = list(dict.fromkeys([i.subtype for i in Core.Vehicle.items]))
     else:
-        veh_types = list(dict.fromkeys([i.subtype for i in Core.Vehicle.items]))
+        return random.choice([i for i in valid_vehicles])
 
     if "any" in kwargs:
         vehicle = random.choice(valid_vehicles)
@@ -383,18 +396,24 @@ def get_vehicle(**kwargs):
 def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
     match item_pool_id:
         case "Locksmith":
-            item_pool = [Core.AUTOPICKER, Core.CELLUAR_GLOVE_MOLDER, Core.CHISEL_CROWBAR,
-                         Core.KEYCARD_COPIER, Core.LOCKPICK_SET, Core.MAGLOCK_PASSKEY,
-                         Core.MINIWELDER, Core.SEQUENCER]
+            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
+                         i.subtype == "B&E Gear"]
             return item_pool
-
+        case "Hardware":
+            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
+                         i.subtype in ["Commlink", "Cyberdeck", "Accessories", "RFID Tags"]]
+            return item_pool
+        case "Software":
+            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
+                         i.subtype == "Software"]
+            return item_pool
 
 def get_item(item: Core.Gear=None, item_pool_id=None):
     item_pool = get_item_pool(item_pool_id)
     if not item_pool is None:
         item = random.choice(item_pool)
     if item is None:
-        return AttributeError("Both args cannot be None.\n" / 
+        return AttributeError("Both args cannot be None.\n",
                               f"They are currently {item} and {item_pool}")
     if hasattr(item, "cost"):
         item.cost = get_item_cost(item)

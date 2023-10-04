@@ -6,7 +6,8 @@ GEAR_SHOPPING_LIST = []
 
 def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     essentials_out = get_essentials(ch)
-    GEAR_SHOPPING_LIST.append(essentials_out)
+    for i in essentials_out:
+        GEAR_SHOPPING_LIST.append(i)
     for skill in ch.Skills.keys():
         if skill in ['BLADES', 'CLUBS', 'ESCAPE_ARTIST', 'HEAVY_WEAPONS', 'LONGARMS',
                      'PISTOLS', 'THROWING_WEAPONS', 'PERFORMANCE', 'ARTISAN',
@@ -74,16 +75,40 @@ def get_gear_skill_dependant(skill, rating, rating_roll=True) -> list[Core.Gear]
             if Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
-        case "Locksmith": new_item_1 = Item.get_item(None, "Locksmith")
-            new_item_2 = Item.get_item(None, "Locksmith")
-            while new_item_1.name == new_item_2.name:
-                new_item_2 = Item.get_item(None, "Locksmith")
-            return [new_item_1, new_item_2]
+        case "Archery":
+            if Core.ProjectileWeapon in [i.__class__ for i in GEAR_SHOPPING_LIST]:
+                return
+            projectile_weapon = Item.get_weapon(skill)
+            try:
+                projectile_ammo = random.choice([i for i in Core.ProjectileWeapon.items if 
+                                                 i.subtype == "Ammo" and projectile_weapon.name in i.requires])
+            except IndexError:
+                return projectile_weapon
+            return [projectile_weapon, projectile_ammo]
+        case "Blades":
+            if Core.MeleeWeapon in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+                return
+            return Item.get_weapon(skill)
+        case "Clubs":
+            if Core.MeleeWeapon in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+                return
+            return Item.get_weapon(skill)
+        case "Throwing Weapons":
+            return Item.get_weapon(skill)
+        case "Pilot Ground Craft" | "Pilot Aircraft" | "Pilot Watercraft" | "Pilot Walker":
+            return Item.get_vehicle(skill)
+        case "Hardware" | "Software" | "Locksmith":
+            items = []
+            for idx in range(rating):
+                if idx is False:
+                    items.append(Item.get_item(None, skill))
+                elif random.randint(1,10) >= 5:
+                    items.append(Item.get_item(None, skill))
+                else:
+                    continue
+            return items 
         case _:
             return
-
-
-
 
 
 def get_essentials(ch: Core.Character) -> list[Core.Gear]:

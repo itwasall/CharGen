@@ -390,7 +390,7 @@ class Gear(AbstractBaseClass):
         self.cost = cost
         self.page_ref = page_ref
         self.category = None
-        self.subtype = None
+        # self.subtype = None
 
     def __repr__(self):
         if self.subtype is not None:
@@ -1042,14 +1042,14 @@ MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=
 """
 # =============== BOWS ==================
 BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
-ARROW = ProjectileWeapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows", requires=BOW)
-INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Bows", requires=BOW)
+ARROW = ProjectileWeapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
+INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
 # =============== CROSSBOWS =============
 LIGHT_CROSSBOW = ProjectileWeapon("Light Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
 MEDIUM_CROSSBOW = ProjectileWeapon("Medium Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
 HEAVY_CROSSBOW = ProjectileWeapon("Heavy Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
-CROSSBOW_BOLT = ProjectileWeapon("Crossbow Bolt", cost=5, page_ref=421, avail=2, subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
-INJECTION_BOLT = ProjectileWeapon("Injection Bolt", cost=50, page_ref=421, avail=8, legality=RESTRICTED, subtype="Crossbow", requires=(LIGHT_CROSSBOW, MEDIUM_CROSSBOW, HEAVY_CROSSBOW))
+CROSSBOW_BOLT = ProjectileWeapon("Crossbow Bolt", cost=5, page_ref=421, avail=2, subtype="Ammo", requires=["Light Crossbow", "Medium Crossbow", "Heavy Crossbow"])
+INJECTION_BOLT = ProjectileWeapon("Injection Bolt", cost=50, page_ref=421, avail=8, legality=RESTRICTED, subtype="Crossbow", requires=["Light Crossbow", "Medium Crossbow", "Heavy Crossbow"])
 # =============== THROWING ==============
 THROWING_KNIFE = ProjectileWeapon("Throwing Knife", cost=25, page_ref=424, avail=4, subtype="Throwing Weapons")
 
@@ -1281,8 +1281,8 @@ MICRO_TRANSRECEIVER = Electronics("Micro Transreceiver", cost=100, page_ref=441,
 TAG_ERASER = Electronics("Tag Eraser", cost=450, page_ref=441, rating="-", avail=6, legality=RESTRICTED, subtype="Communications")
 WHITE_NOISE_GENERATOR = Electronics("White Noise Generator", cost=["Rating", "*", 50], page_ref=441, rating=[1, "to", 6], avail="Rating", subtype="Communications")
 # =============== SOFTWARE ===========
-AGENT_1_3 = Electronics("Agent (Rating 1-3)", cost=["Rating", "*", 1_000], page_ref=442, rating=[1, "to", 3], avail=["Rating", "*", 3], subtype="Software")
-AGENT_4_6 = Electronics("Agent (Rating 4-6)", cost=["Rating", "*", 2_000], page_ref=442, rating=[4, "to", 6], avail=["Rating", "*", 3], subtype="Software")
+AGENT_1_3 = Electronics("Agent", cost=["Rating", "*", 1_000], page_ref=442, rating=[1, "to", 3], avail=["Rating", "*", 3], subtype="Software")
+AGENT_4_6 = Electronics("Agent", cost=["Rating", "*", 2_000], page_ref=442, rating=[4, "to", 6], avail=["Rating", "*", 3], subtype="Software")
 CYBERPROGRAM_COMMON = Electronics("Cyberprogram Common", cost=80, page_ref=442, rating="-", avail=0, subtype="Software")
 CYBERPROGRAM_HACKING = Electronics("Cyberprogram Hacking", cost=250, page_ref=442, rating="-", avail=6, legality=RESTRICTED, subtype="Software")
 DATASOFT = Electronics("Datasoft", cost=120, page_ref=442, rating="-", avail=0, subtype="Software")

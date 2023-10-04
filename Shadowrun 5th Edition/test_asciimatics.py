@@ -1,7 +1,5 @@
 from random import randint
 from asciimatics.screen import Screen
-import char_shadowrun_5e as Shadowrun
-
 def demo(screen):
     while True:
         screen.print_at('Hello World!',
@@ -33,8 +31,8 @@ def demo2(screen):
             ]
     screen.play([Scene(effects, 500)])
 
-from asciimatics.widgets import Frame, ListBox, Layout, Divider, Text \
-        Button, TextBox, Widget
+from asciimatics.widgets import Frame, ListBox, Layout, Divider, Text
+from asciimatics.widgets import Button, TextBox, Widget
 from asciimatics.exceptions import ResizeScreenError, NextScene, StopApplication
 import sys
 
@@ -51,8 +49,8 @@ class CharacterView(Frame):
 
         layout = Layout([100], fill_frame=True)
         self.add_layout(layout)
-        layout.add_widget(Text("Name": model.Name))
-        layout.add_widget(Text("Metatype": model.Name))
+        layout.add_widget(Text("Name", model.Name))
+        layout.add_widget(Text("Metatype", model.Name))
         layout.add_widget(TextBox(
             Widget.FILL_FRAME, "Notes:", "notes", as_string=True, line_wrap=True))
         layout2 = ([[1, 1, 1, 1]])
@@ -68,5 +66,6 @@ class CharacterView(Frame):
     def _ok(self):
         self.save()
         self._model.update_currr
+
 
 
