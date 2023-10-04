@@ -2417,176 +2417,173 @@ CAS_NATIONALITY = {
     VEHICLES 
 """
 # BIKES
-DAIHATSU_CATERPILLAR_HORSEMAN = Vehicle('Daihatsu_caterpillar_horseman', cost=12000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-ARES_SEGWAY_TERRIER = Vehicle('Ares_segway_terrier', cost=4500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-HORIZON_DOBLE_REVOLUTION = Vehicle('Horizon_doble_revolution', cost=8000, avail=4, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-EVO_FALCON_EX = Vehicle('Evo_falcon_ex', cost=10000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-ENTERTAINMENT_SYSTEMS_CYCLOPS = Vehicle('Entertainment_systems_cyclops', cost=6500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-ECHO_MOTORS_ZIP = Vehicle('Echo_motors_zip', cost=3500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-YAMAHA_KABURAYA = Vehicle('Yamaha_kaburaya', cost=17000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-BUELL_SPARTAN = Vehicle('Buell_spartan', cost=11500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-HARLEY_DAVIDSON_NIGHTMARE = Vehicle('Harley_davidson_nightmare', cost=22000, avail="n", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-YAMAHA_NODACHI = Vehicle('Yamaha_nodachi', cost=28000, avail=12, legality=RESTRICTED, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
-THUNDERCLOUD_MUSTANG = Vehicle('Thundercloud_mustang', cost=11000, avail=3, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+DAIHATSU_CATERPILLAR_HORSEMAN = Vehicle('Daihatsu_caterpillar_horseman', cost=12000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ARES_SEGWAY_TERRIER = Vehicle('Ares_segway_terrier', cost=4500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+HORIZON_DOBLE_REVOLUTION = Vehicle('Horizon_doble_revolution', cost=8000, avail=4, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+EVO_FALCON_EX = Vehicle('Evo_falcon_ex', cost=10000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ENTERTAINMENT_SYSTEMS_CYCLOPS = Vehicle('Entertainment_systems_cyclops', cost=6500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ECHO_MOTORS_ZIP = Vehicle('Echo_motors_zip', cost=3500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+YAMAHA_KABURAYA = Vehicle('Yamaha_kaburaya', cost=17000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+BUELL_SPARTAN = Vehicle('Buell_spartan', cost=11500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+HARLEY_DAVIDSON_NIGHTMARE = Vehicle('Harley_davidson_nightmare', cost=22000, avail="n", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+YAMAHA_NODACHI = Vehicle('Yamaha_nodachi', cost=28000, avail=12, legality=RESTRICTED, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+THUNDERCLOUD_MUSTANG = Vehicle('Thundercloud_mustang', cost=11000, avail=3, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # CARS
-GMC_442_CHAMELEON = Vehicle("Gmc_442_chameleon", cost, avail="-", page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-MERCURY_COMET = Vehicle("Mercury_comet", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-HYUNDAI_EQUUS = Vehicle("Hyundai_equus", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-RENAUT_FIAT_FUNONE = Vehicle("Renaut_fiat_funone", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-SAAB_GLADIUS_998_TI = Vehicle("Saab_gladius_998_ti", cost=, avail=14, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-CHEVROLET_LONGBOARD = Vehicle("Chevrolet_longboard", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-ECHO_MOTORS_METAWAY = Vehicle("Echo_motors_metaway", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-THUNDERCLOUD_MORGAN = Vehicle("Thundercloud_morgan", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-ROLLS_ROYCE_PHAETON = Vehicle("Rolls_royce_phaeton", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-GMC_PHEONIX = Vehicle("Gmc_pheonix", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-TATA_HOTSPUR = Vehicle("Tata_hotspur", cost=, avail=0, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
-DODGE_XENON = Vehicle("Dodge_xenon", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+GMC_442_CHAMELEON = Vehicle("Gmc_442_chameleon", cost=, avail="-", page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+MERCURY_COMET = Vehicle("Mercury_comet", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+HYUNDAI_EQUUS = Vehicle("Hyundai_equus", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+RENAUT_FIAT_FUNONE = Vehicle("Renaut_fiat_funone", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+SAAB_GLADIUS_998_TI = Vehicle("Saab_gladius_998_ti", cost=, avail=14, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+CHEVROLET_LONGBOARD = Vehicle("Chevrolet_longboard", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ECHO_MOTORS_METAWAY = Vehicle("Echo_motors_metaway", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+THUNDERCLOUD_MORGAN = Vehicle("Thundercloud_morgan", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ROLLS_ROYCE_PHAETON = Vehicle("Rolls_royce_phaeton", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_PHEONIX = Vehicle("Gmc_pheonix", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+TATA_HOTSPUR = Vehicle("Tata_hotspur", cost=, avail=0, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_XENON = Vehicle("Dodge_xenon", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # TRUCKS
-GMC_ARMADILLO = Vehicle("gmc_armadillo", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-FORD_PERCHERON = Vehicle("ford_percheron", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-JEEP_TRAILBLAZER = Vehicle("jeep_trailblazer", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-TOYOTA_TALON = Vehicle("toyota_talon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-NISSAN_HAULER = Vehicle("nissan_hauler", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-EUROCAR_NORTHSTAR = Vehicle("eurocar_northstar", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks"@)
-GMC_ESCALADE = Vehicle("gmc_escalade", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-FORD_ECONOVAN = Vehicle("ford_econovan", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_ARMADILLO = Vehicle("gmc_armadillo", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+FORD_PERCHERON = Vehicle("ford_percheron", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+JEEP_TRAILBLAZER = Vehicle("jeep_trailblazer", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+TOYOTA_TALON = Vehicle("toyota_talon", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+NISSAN_HAULER = Vehicle("nissan_hauler", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+EUROCAR_NORTHSTAR = Vehicle("eurocar_northstar", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_ESCALADE = Vehicle("gmc_escalade", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+FORD_ECONOVAN = Vehicle("ford_econovan", cost=, avail=, page_ref="R5.0, 186", subtype="Truck", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # VANS
-DODGE_CARAVANER = Vehicle("dodge_caravaner", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-GMC_UNIVERSE = Vehicle("gmc_universe", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-ARES_CHUCK_WAGON = Vehicle("ares_chuck_wagon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-AIRSTREAM_TRAVELER_LINE_MOTORHOME = Vehicle("airstream_traveler_line_motorhome", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-MACK_HELLHOUND = Vehicle("mack_hellhound", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_CARAVANER = Vehicle("dodge_caravaner", cost=, avail=, page_ref="R5.0, 186", subtype="Van", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_UNIVERSE = Vehicle("gmc_universe", cost=, avail=, page_ref="R5.0, 186", subtype="Van", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+ARES_CHUCK_WAGON = Vehicle("ares_chuck_wagon", cost=, avail=, page_ref="R5.0, 186", subtype="Van", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+AIRSTREAM_TRAVELER_LINE_MOTORHOME = Vehicle("airstream_traveler_line_motorhome", cost=, avail=, page_ref="R5.0, 186", subtype="Van", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+MACK_HELLHOUND = Vehicle("mack_hellhound", cost=, avail=, page_ref="R5.0, 186", subtype="Van", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # MUNICIPAL / CONSTRUCTION
-OMNI_MOTORS_OMNIBUS = Vehicle("omni_motors_omnibus", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-GMC_COMMERCIAL_G_SERIES = Vehicle("gmc_commercial_g_series", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-GMC_COMMERCIAL_D_COMPACT = Vehicle("gmc_commercial_d_compact", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-GMC_COMMERCIAL_D_SERIES = Vehicle("gmc_commercial_d_series", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-GMC_COMMERCIAL_DD = Vehicle("gmc_commercial_dd", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-SAEDER_KRUPP_CONSTRUCTORS = Vehicle("saeder_krupp_constructors", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-MONSTRANS = Vehicle("monstrans", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-UNIVERSAL_HOVERCRAFT_MINNESOTA = Vehicle("universal_hovercraft_minnesota", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-VODYANOV_ASSAULT_HOVERCRAFT = Vehicle("vodyanov_assault_hovercraft", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+OMNI_MOTORS_OMNIBUS = Vehicle("omni_motors_omnibus", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_COMMERCIAL_G_SERIES = Vehicle("gmc_commercial_g_series", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_COMMERCIAL_D_COMPACT = Vehicle("gmc_commercial_d_compact", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_COMMERCIAL_D_SERIES = Vehicle("gmc_commercial_d_series", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+GMC_COMMERCIAL_DD = Vehicle("gmc_commercial_dd", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+SAEDER_KRUPP_CONSTRUCTORS = Vehicle("saeder_krupp_constructors", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+MONSTRANS = Vehicle("monstrans", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+UNIVERSAL_HOVERCRAFT_MINNESOTA , rulebook="Rigger 5.0"= Vehicle("universal_hovercraft_minnesota", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+VODYANOV_ASSAULT_HOVERCRAFT , rulebook="Rigger 5.0"= Vehicle("vodyanov_assault_hovercraft", cost=, avail=, page_ref="R5.0, 186", subtype="Municipal/Construction", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # CORPSEC / POLICE / MILITARY
-BMW_BLITZKRIEG = Vehicle("bmw_blitzkrieg", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-DODGE_CHARGER = Vehicle("dodge_charger", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-BMW_I8_INTERCEPTOR = Vehicle("bmw_i8_interceptor", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-DODGE_GOLIATH = Vehicle("dodge_goliath", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-BMW_TEUFELKATZE = Vehicle("bmw_teufelkatze", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-DODGE_STALLION = Vehicle("dodge_stallion", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-BMW_LUXUS = Vehicle("bmw_luxus", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-DODGE_GENERAL = Vehicle("dodge_general", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-BMW_STURMWAGON = Vehicle("bmw_sturmwagon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-DODGE_RHINO = Vehicle("dodge_rhino", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-RUHMETALL_WOLF_II = Vehicle("ruhmetall_wolf_ii", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BMW_BLITZKRIEG = Vehicle("bmw_blitzkrieg", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_CHARGER = Vehicle("dodge_charger", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+BMW_I8_INTERCEPTOR = Vehicle("bmw_i8_interceptor", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_GOLIATH = Vehicle("dodge_goliath", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+BMW_TEUFELKATZE = Vehicle("bmw_teufelkatze", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_STALLION = Vehicle("dodge_stallion", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+BMW_LUXUS = Vehicle("bmw_luxus", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_GENERAL = Vehicle("dodge_general", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+BMW_STURMWAGON = Vehicle("bmw_sturmwagon", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+DODGE_RHINO = Vehicle("dodge_rhino", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
+RUHMETALL_WOLF_II = Vehicle("ruhmetall_wolf_ii", cost=, avail=, page_ref="R5.0, 186", subtype="Corpsec/Police/Military", skill_req=PILOT_GROUND_CRAFT, rulebook="Rigger 5.0")
 # POWERBOATS
-EVO_WATERKING = Vehicle("evo_waterking", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-SEA_RAY_COTTONMOUTH = Vehicle("sea_ray_cottonmouth", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-KAWASAKI_STRINGRAY = Vehicle("kawasaki_stringray", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-KAWASAKI_MANTARAY = Vehicle("kawasaki_mantaray", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-AZTECHNOLOGY_NIGHTRUNNER = Vehicle("aztechnology_nightrunner", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-ZODIAC_SCORPIO = Vehicle("zodiac_scorpio", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-MITSUBISHI_WATERBUG = Vehicle("mitsubishi_waterbug", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-EVO_WATER_STRIDER = Vehicle("evo_water_strider", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+EVO_WATERKING = Vehicle("evo_waterking", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+SEA_RAY_COTTONMOUTH = Vehicle("sea_ray_cottonmouth", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+KAWASAKI_STRINGRAY = Vehicle("kawasaki_stringray", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+KAWASAKI_MANTARAY = Vehicle("kawasaki_mantaray", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+AZTECHNOLOGY_NIGHTRUNNER = Vehicle("aztechnology_nightrunner", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+ZODIAC_SCORPIO = Vehicle("zodiac_scorpio", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+MITSUBISHI_WATERBUG = Vehicle("mitsubishi_waterbug", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+EVO_WATER_STRIDER = Vehicle("evo_water_strider", cost=, avail=, page_ref="R5.0, 186", subtype="Powerboat", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
 # SAILCRAFT
-CORSAIR_ELYSIUM = Vehicle("corsair_elysium", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-CORSAIR_PANTHER = Vehicle("corsair_panther", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-CORSAIR_TRIDENT = Vehicle("corsair_trident", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-BLOHM_VOSS_CLASSIC_III = Vehicle("blohm_voss_classic_iii", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-LURSSEN_MOBIUS = Vehicle("lurssen_mobius", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
-SUN_TRACKER_LAKE_KING
-EVO_AQUAVIDA_1
-EVO_AQUAVIDA_2
-ULTRAMARINE_KINGFISHER
-AMERICAN_AIRBOAT_AIRRANGER
-AMERICAN_AIRBOAT_AIRRANGER_HEAVY
-GMC_RIVERINE_SECURITY
-GMC_RIVERINE_POLICE
-GMC_RIVERINE_MILITARY
+, rulebook="Rigger 5.0"CORSAIR_ELYSIUM = Vehicle("corsair_elysium", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+CORSAIR_PANTHER = Vehicle("corsair_panther", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+CORSAIR_TRIDENT = Vehicle("corsair_trident", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+BLOHM_VOSS_CLASSIC_III = Vehicle("blohm_voss_classic_iii", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+LURSSEN_MOBIUS = Vehicle("lurssen_mobius", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+SUN_TRACKER_LAKE_KING = Vehicle("Sun_tracker_lake_king", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+EVO_AQUAVIDA_1 = Vehicle("Evo_aquavida_1", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+EVO_AQUAVIDA_2 = Vehicle("Evo_aquavida_2", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+ULTRAMARINE_KINGFISHER = Vehicle("Ultramarine_kingfisher", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+AMERICAN_AIRBOAT_AIRRANGER = Vehicle("American_airboat_airranger", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+AMERICAN_AIRBOAT_AIRRANGER_HEAVY = Vehicle("American_airboat_airranger_heavy", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+GMC_RIVERINE_SECURITY = Vehicle("Gmc_riverine_security", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+GMC_RIVERINE_POLICE = Vehicle("Gmc_riverine_police", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
+GMC_RIVERINE_MILITARY = Vehicle("Gmc_riverine_military", cost=, avail=, page_ref="R5.0, 186", subtype="Sailcraft", skill_req=PILOT_WATERCRAFT, rulebook="Rigger 5.0")
 # ROTOCRAFT
-HUGHES_STALLION_WK_4
-AZTECHNOLOGY_AGULAR_GX_2
-AZTECHNOLOGY_AGULAR_GX_3AT
-S_K_AEROSPACE_SKA_008
-DASSAULT_SEA_SPRITE
+, rulebook="Rigger 5.0"HUGHES_STALLION_WK_4 = Vehicle("Hughes_stallion_wk_4", cost=, avail=, page_ref="R5.0, 186", subtype="Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+AZTECHNOLOGY_AGULAR_GX_2 = Vehicle("Aztechnology_agular_gx_2", cost=, avail=, page_ref="R5.0, 186", subtype="Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+AZTECHNOLOGY_AGULAR_GX_3AT = Vehicle("Aztechnology_agular_gx_3at", cost=, avail=, page_ref="R5.0, 186", subtype="Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+S_K_AEROSPACE_SKA_008 = Vehicle("S_k_aerospace_ska_008", cost=, avail=, page_ref="R5.0, 186", subtype="Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+DASSAULT_SEA_SPRITE = Vehicle("Dassault_sea_sprite", cost=, avail=, page_ref="R5.0, 186", subtype="Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
 # FIXED WING
-FEDERATED_BOEING_PBY_70
+FEDERATED_BOEING_PBY_70 = Vehicle("Federated_boeing_pby_70", cost=, avail=, page_ref="R5.0, 186", subtype="Fixed Wing", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
 # HEAVY ROTOCRAFT
-AIRBUS_LIFT_TICKET_ALS_699
+, rulebook="Rigger 5.0"AIRBUS_LIFT_TICKET_ALS_699 = Vehicle("Airbus_lift_ticket_als_699", cost=, avail=, page_ref="R5.0, 186", subtype="Heavy Rotocraft", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
 # VTOL
-GMC_GRYPHON
-EVO_KRIME_KRIME_WING
+GMC_GRYPHON = Vehicle("Gmc_gryphon", cost=, avail=, page_ref="R5.0, 186", subtype="VTOL", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+EVO_KRIME_KRIME_WING = Vehicle("Evo_krime_krime_wing", cost=, avail=, page_ref="R5.0, 186", subtype="VTOL", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
 # LTA VEHICLE
-LUFTSHIFFBAU_PERSONAL_ZEPPELIN_LZP_2070
-RENEGADE_WORKS_MOTHERSHIP_LAVH
+LUFTSHIFFBAU_PERSONAL_ZEPPELIN_LZP_2070 = Vehicle("Luftshiffbau_personal_zeppelin_lzp_2070", cost=, avail=, page_ref="R5.0, 186", subtype="LTA", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+RENEGADE_WORKS_MOTHERSHIP_LAVH = Vehicle("Renegade_works_mothership_lavh", cost=, avail=, page_ref="R5.0, 186", subtype="LTA", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
 # MICRODRONES
-HORIZON_NOIZTQUITO
-SONY_GOLDFISH
+HORIZON_NOIZTQUITO = Vehicle("Horizon_noiztquito", cost=, avail=, page_ref="R5.0, 186", subtype="Microdrone", skill_req=, rulebook="Rigger 5.0")
+SONY_GOLDFISH = Vehicle("Sony_goldfish", cost=, avail=, page_ref="R5.0, 186", subtype="Microdrone", skill_req=, rulebook="Rigger 5.0")
 # MINI DRONES
-AERSODESIGN_SYSTEMS_CONDOR_LOSD_23
-AZTECHNOLOGY_HEDGEHOG
-CYBERSPACE_DESIGNS_DRAGONFLY
-FESTO_PIDGEON_2_0
-HORIZON_CU_3
-RENRAKU_GERBIL
-RENRAKU_SCUTTLER_REMOTE_CYBERHAND
+AERSODESIGN_SYSTEMS_CONDOR_LOSD_23 = Vehicle("Aersodesign_systems_condor_losd_23", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+AZTECHNOLOGY_HEDGEHOG = Vehicle("Aztechnology_hedgehog", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+CYBERSPACE_DESIGNS_DRAGONFLY = Vehicle("Cyberspace_designs_dragonfly", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+FESTO_PIDGEON_2_0 = Vehicle("Festo_pidgeon_2_0", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+HORIZON_CU_3 = Vehicle("Horizon_cu_3", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_GERBIL = Vehicle("Renraku_gerbil", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_SCUTTLER_REMOTE_CYBERHAND = Vehicle("Renraku_scuttler_remote_cyberhand", cost=, avail=, page_ref="R5.0, 186", subtype="Mini Drone", skill_req=, rulebook="Rigger 5.0")
 # SMALL DRONES
-ARES_ARMS_SENTRY_V
-CITRON_BROUILLARD_SMOKE_GENERATOR
-CYBERSPACE_DESIGNS_WOLFHOUND
-EVO_PROLETARIAN
-FERRET_PRD_1X_WHEELED_PERIMETER_DRONE
-FESTO_SEWER_SNAKE
-HORIZON_MINI_ZEP
-KNIGHT_ERRANT_PS_PERSUIT_DRONE
-LONG_STAR_CASTLE_GUARD
-MITSUHAMA_GUN_TURRET
-MITSUHAMA_SEVEN_WHEELIE
-MITSUHAMA_SEVEN_TREADS
-MITSUHAMA_SEVEN_DIRTY
-MITSUHAMA_SEVEN_QUAD
-MITSUHAMA_SEVEN_SWIM
-MITSUHAMA_SEVEN_HOVER
-MITSUHAMA_SEVEN_SOAR
-NEONET_PRAIRIE_DOG
-PRATT_WHITENEY_SUNDOWNER
-PROTEUS_AG_KRAKE
-SAAB_THYSSEN_BLOODHOUND
-RENRAKU_DOVE
-RENRAKU_JARDINERO
-RENRAKU_JOB_A_MAT
-RENRAKU_PELICAN
-TELESTRAIN_INDUSTRIES_SHAMUS
+ARES_ARMS_SENTRY_V = Vehicle("Ares_arms_sentry_v", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+CITRON_BROUILLARD_SMOKE_GENERATOR = Vehicle("Citron_brouillard_smoke_generator", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+CYBERSPACE_DESIGNS_WOLFHOUND = Vehicle("Cyberspace_designs_wolfhound", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+EVO_PROLETARIAN = Vehicle("Evo_proletarian", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+FERRET_PRD_1X_WHEELED_PERIMETER_DRONE = Vehicle("Ferret_prd_1x_wheeled_perimeter_drone", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+FESTO_SEWER_SNAKE = Vehicle("Festo_sewer_snake", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+HORIZON_MINI_ZEP = Vehicle("Horizon_mini_zep", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+KNIGHT_ERRANT_PS_PERSUIT_DRONE = Vehicle("Knight_errant_ps_persuit_drone", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+LONG_STAR_CASTLE_GUARD = Vehicle("Long_star_castle_guard", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_GUN_TURRET = Vehicle("Mitsuhama_gun_turret", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_WHEELIE = Vehicle("Mitsuhama_seven_wheelie", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_TREADS = Vehicle("Mitsuhama_seven_treads", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_DIRTY = Vehicle("Mitsuhama_seven_dirty", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_QUAD = Vehicle("Mitsuhama_seven_quad", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_SWIM = Vehicle("Mitsuhama_seven_swim", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_HOVER = Vehicle("Mitsuhama_seven_hover", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_SEVEN_SOAR = Vehicle("Mitsuhama_seven_soar", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+NEONET_PRAIRIE_DOG = Vehicle("Neonet_prairie_dog", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+PRATT_WHITENEY_SUNDOWNER = Vehicle("Pratt_whiteney_sundowner", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+PROTEUS_AG_KRAKE = Vehicle("Proteus_ag_krake", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+SAAB_THYSSEN_BLOODHOUND = Vehicle("Saab_thyssen_bloodhound", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_DOVE = Vehicle("Renraku_dove", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_JARDINERO = Vehicle("Renraku_jardinero", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_JOB_A_MAT = Vehicle("Renraku_job_a_mat", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_PELICAN = Vehicle("Renraku_pelican", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
+TELESTRAIN_INDUSTRIES_SHAMUS = Vehicle("Telestrain_industries_shamus", cost=, avail=, page_ref="R5.0, 186", subtype="Small Drone", skill_req=, rulebook="Rigger 5.0")
 # MEDIUM DRONES
-ARES_CHEETAH
-EVO_KROKODIL
-FEDERATED_BOEING_KULL
-MCT_TUNNELER
-RENRAKU_LEBD_2
-TRANSYS_STEED
+ARES_CHEETAH = Vehicle("Ares_cheetah", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
+EVO_KROKODIL = Vehicle("Evo_krokodil", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
+FEDERATED_BOEING_KULL = Vehicle("Federated_boeing_kull", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
+MCT_TUNNELER = Vehicle("Mct_tunneler", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
+RENRAKU_LEBD_2 = Vehicle("Renraku_lebd_2", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
+TRANSYS_STEED = Vehicle("Transys_steed", cost=, avail=, page_ref="R5.0, 186", subtype="Medium Drone", skill_req=, rulebook="Rigger 5.0")
 # LARGE DRONES
-AEROQUIP_DUSTOFF
-ARES_MATILDA
-ARES_MULE
-ARES_PALADIN
-CRASHCART_MEDICART
-GTS_TOWER
-SAEDER_KRUPP_MK_7D_NEPTUNE
-MITSUHAMA_MALAKIM
+AEROQUIP_DUSTOFF = Vehicle("Aeroquip_dustoff", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+ARES_MATILDA = Vehicle("Ares_matilda", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+ARES_MULE = Vehicle("Ares_mule", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+ARES_PALADIN = Vehicle("Ares_paladin", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+CRASHCART_MEDICART = Vehicle("Crashcart_medicart", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+GTS_TOWER = Vehicle("Gts_tower", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+SAEDER_KRUPP_MK_7D_NEPTUNE = Vehicle("Saeder_krupp_mk_7d_neptune", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_MALAKIM = Vehicle("Mitsuhama_malakim", cost=, avail=, page_ref="R5.0, 186", subtype="Large Drone", skill_req=, rulebook="Rigger 5.0")
 # HUGE DRONES
-ARES_KN_YO_DEIMOS
-ARES_KN_YO_ERIS
-ARES_KN_YO_PHOBOS
-MESAMETRIC_KODIAK
-NEONET_AVENGING_ANGEL
+ARES_KN_YO_DEIMOS = Vehicle("Ares_kn_yo_deimos", cost=, avail=, page_ref="R5.0, 186", subtype="Huge Drone", skill_req=, rulebook="Rigger 5.0")
+ARES_KN_YO_ERIS = Vehicle("Ares_kn_yo_eris", cost=, avail=, page_ref="R5.0, 186", subtype="Huge Drone", skill_req=, rulebook="Rigger 5.0")
+ARES_KN_YO_PHOBOS = Vehicle("Ares_kn_yo_phobos", cost=, avail=, page_ref="R5.0, 186", subtype="Huge Drone", skill_req=, rulebook="Rigger 5.0")
+MESAMETRIC_KODIAK = Vehicle("Mesametric_kodiak", cost=, avail=, page_ref="R5.0, 186", subtype="Huge Drone", skill_req=, rulebook="Rigger 5.0")
+NEONET_AVENGING_ANGEL = Vehicle("Neonet_avenging_angel", cost=, avail=, page_ref="R5.0, 186", subtype="Huge Drone", skill_req=, rulebook="Rigger 5.0")
 # ANTHROPOMORPHIC DRONES
-AZTECHNOLOGY_CRIADO_JAUN
-HORIZON_LITTLE_BUDDY
-MITSUHAMA_KENCHIKU_KIKAI
-NEONET_JUGGERNAUGHT
-SAEDER_KRUPP_DIREKTIONSSEKRETAR
-SHAIWASE_I_DOLL
+AZTECHNOLOGY_CRIADO_JAUN = Vehicle("Aztechnology_criado_jaun", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
+HORIZON_LITTLE_BUDDY = Vehicle("Horizon_little_buddy", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
+MITSUHAMA_KENCHIKU_KIKAI = Vehicle("Mitsuhama_kenchiku_kikai", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
+NEONET_JUGGERNAUGHT = Vehicle("Neonet_juggernaught", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
+SAEDER_KRUPP_DIREKTIONSSEKRETAR = Vehicle("Saeder_krupp_direktionssekretar", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
+SHAIWASE_I_DOLL = Vehicle("Shaiwase_i_doll", cost=, avail=, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=, rulebook="Rigger 5.0")
 # DRONE MISSILE
-ARES_GARUDA
-
-
-
+# ARES_GARUDA
