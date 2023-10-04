@@ -2417,81 +2417,82 @@ CAS_NATIONALITY = {
     VEHICLES 
 """
 # BIKES
-DAIHATSU_CATERPILLAR_HORSEMAN
-ARES_SEGWAY_TERRIER
-HORIZON_DOBLE_REVOLUTION
-EVO_FALCON_EX
-ENTERTAINMENT_SYSTEMS_CYCLOPS
-ECHO_MOTORS_ZIP
-YAMAHA_KABURAYA
-BUELL_SPARTAN
-HARLEY_DAVIDSON_NIGHTMARE
-YAMAHA_NODACHI
-THUNDERCLOUD_MUSTANG
+DAIHATSU_CATERPILLAR_HORSEMAN = Vehicle('Daihatsu_caterpillar_horseman', cost=12000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+ARES_SEGWAY_TERRIER = Vehicle('Ares_segway_terrier', cost=4500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+HORIZON_DOBLE_REVOLUTION = Vehicle('Horizon_doble_revolution', cost=8000, avail=4, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+EVO_FALCON_EX = Vehicle('Evo_falcon_ex', cost=10000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+ENTERTAINMENT_SYSTEMS_CYCLOPS = Vehicle('Entertainment_systems_cyclops', cost=6500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+ECHO_MOTORS_ZIP = Vehicle('Echo_motors_zip', cost=3500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+YAMAHA_KABURAYA = Vehicle('Yamaha_kaburaya', cost=17000, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+BUELL_SPARTAN = Vehicle('Buell_spartan', cost=11500, avail="-", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+HARLEY_DAVIDSON_NIGHTMARE = Vehicle('Harley_davidson_nightmare', cost=22000, avail="n", page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+YAMAHA_NODACHI = Vehicle('Yamaha_nodachi', cost=28000, avail=12, legality=RESTRICTED, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
+THUNDERCLOUD_MUSTANG = Vehicle('Thundercloud_mustang', cost=11000, avail=3, page_ref="R5.0, 185", subtype="Bike", skill_req=PILOT_GROUND_CRAFT, rulebook="R5.0")
 # CARS
-RENAUT_FIAT_FUNONE
-DODGE_XENON
-ECHO_MOTORS_METAWAY
-GMC_442_CHAMELEON
-MERCURY_COMET
-SAAB_GLADIUS_998_TI
-GMC_PHEONIX
-HYUNDAI_EQUUS
-CHEVROLET_LONGBOARD
-ROLLS_ROYCE_PHAETON
-THUNDERCLOUD_MORGAN
-TATA_HOTSPUR
-GMC_ARMADILLO
-FORD_PERCHERON
-JEEP_TRAILBLAZER
-TOYOTA_TALON
-NISSAN_HAULER
-EUROCAR_NORTHSTAR
-GMC_ESCALADE
-FORD_ECONOVAN
-DODGE_CARAVANER
-GMC_UNIVERSE
-ARES_CHUCK_WAGON
-# TRUCKS / VANS
-AIRSTREAM_TRAVELER_LINE_MOTORHOME
-MACK_HELLHOUND
+GMC_442_CHAMELEON = Vehicle("Gmc_442_chameleon", cost, avail="-", page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+MERCURY_COMET = Vehicle("Mercury_comet", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+HYUNDAI_EQUUS = Vehicle("Hyundai_equus", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+RENAUT_FIAT_FUNONE = Vehicle("Renaut_fiat_funone", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+SAAB_GLADIUS_998_TI = Vehicle("Saab_gladius_998_ti", cost=, avail=14, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+CHEVROLET_LONGBOARD = Vehicle("Chevrolet_longboard", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+ECHO_MOTORS_METAWAY = Vehicle("Echo_motors_metaway", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+THUNDERCLOUD_MORGAN = Vehicle("Thundercloud_morgan", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+ROLLS_ROYCE_PHAETON = Vehicle("Rolls_royce_phaeton", cost=, avail='', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+GMC_PHEONIX = Vehicle("Gmc_pheonix", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+TATA_HOTSPUR = Vehicle("Tata_hotspur", cost=, avail=0, page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+DODGE_XENON = Vehicle("Dodge_xenon", cost=, avail='-', page_ref="R5.0, 185", subtype="Car", skill_req=PILOT_GROUND_CRAFT)
+# TRUCKS
+GMC_ARMADILLO = Vehicle("gmc_armadillo", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+FORD_PERCHERON = Vehicle("ford_percheron", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+JEEP_TRAILBLAZER = Vehicle("jeep_trailblazer", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+TOYOTA_TALON = Vehicle("toyota_talon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+NISSAN_HAULER = Vehicle("nissan_hauler", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+EUROCAR_NORTHSTAR = Vehicle("eurocar_northstar", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks"@)
+GMC_ESCALADE = Vehicle("gmc_escalade", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+FORD_ECONOVAN = Vehicle("ford_econovan", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+# VANS
+DODGE_CARAVANER = Vehicle("dodge_caravaner", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_UNIVERSE = Vehicle("gmc_universe", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+ARES_CHUCK_WAGON = Vehicle("ares_chuck_wagon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+AIRSTREAM_TRAVELER_LINE_MOTORHOME = Vehicle("airstream_traveler_line_motorhome", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+MACK_HELLHOUND = Vehicle("mack_hellhound", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
 # MUNICIPAL / CONSTRUCTION
-OMNI_MOTORS_OMNIBUS
-GMC_COMMERCIAL_G_SERIES
-GMC_COMMERCIAL_D_COMPACT
-GMC_COMMERCIAL_D_SERIES
-GMC_COMMERCIAL_DD
-SAEDER_KRUPP_CONSTRUCTORS
-MONSTRANS
-UNIVERSAL_HOVERCRAFT_MINNESOTA
-VODYANOV_ASSAULT_HOVERCRAFT
+OMNI_MOTORS_OMNIBUS = Vehicle("omni_motors_omnibus", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_COMMERCIAL_G_SERIES = Vehicle("gmc_commercial_g_series", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_COMMERCIAL_D_COMPACT = Vehicle("gmc_commercial_d_compact", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_COMMERCIAL_D_SERIES = Vehicle("gmc_commercial_d_series", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+GMC_COMMERCIAL_DD = Vehicle("gmc_commercial_dd", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+SAEDER_KRUPP_CONSTRUCTORS = Vehicle("saeder_krupp_constructors", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+MONSTRANS = Vehicle("monstrans", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+UNIVERSAL_HOVERCRAFT_MINNESOTA = Vehicle("universal_hovercraft_minnesota", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+VODYANOV_ASSAULT_HOVERCRAFT = Vehicle("vodyanov_assault_hovercraft", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
 # CORPSEC / POLICE / MILITARY
-BMW_BLITZKRIEG
-DODGE_CHARGER
-BMW_I8_INTERCEPTOR
-DODGE_GOLIATH
-BMW_TEUFELKATZE
-DODGE_STALLION
-BMW_LUXUS
-DODGE_GENERAL
-BMW_STURMWAGON
-DODGE_RHINO
-RUHMETALL_WOLF_II
+BMW_BLITZKRIEG = Vehicle("bmw_blitzkrieg", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_CHARGER = Vehicle("dodge_charger", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BMW_I8_INTERCEPTOR = Vehicle("bmw_i8_interceptor", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_GOLIATH = Vehicle("dodge_goliath", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BMW_TEUFELKATZE = Vehicle("bmw_teufelkatze", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_STALLION = Vehicle("dodge_stallion", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BMW_LUXUS = Vehicle("bmw_luxus", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_GENERAL = Vehicle("dodge_general", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BMW_STURMWAGON = Vehicle("bmw_sturmwagon", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+DODGE_RHINO = Vehicle("dodge_rhino", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+RUHMETALL_WOLF_II = Vehicle("ruhmetall_wolf_ii", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
 # POWERBOATS
-EVO_WATERKING
-SEA_RAY_COTTONMOUTH
-KAWASAKI_STRINGRAY
-KAWASAKI_MANTARAY
-AZTECH_NIGHTRUNNER
-ZODIAC_SCORPIO
-MITSUBISHI_WATERBUG
-EVO_WATER_STRIDER
+EVO_WATERKING = Vehicle("evo_waterking", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+SEA_RAY_COTTONMOUTH = Vehicle("sea_ray_cottonmouth", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+KAWASAKI_STRINGRAY = Vehicle("kawasaki_stringray", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+KAWASAKI_MANTARAY = Vehicle("kawasaki_mantaray", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+AZTECHNOLOGY_NIGHTRUNNER = Vehicle("aztechnology_nightrunner", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+ZODIAC_SCORPIO = Vehicle("zodiac_scorpio", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+MITSUBISHI_WATERBUG = Vehicle("mitsubishi_waterbug", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+EVO_WATER_STRIDER = Vehicle("evo_water_strider", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
 # SAILCRAFT
-CORSAIR_ELYSIUM
-CORSAIR_PANTHER
-CORSAIR_TRIDENT
-BLOHM_VOSS_CLASSIC_III
-LURSSEN_MOBIUS
+CORSAIR_ELYSIUM = Vehicle("corsair_elysium", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+CORSAIR_PANTHER = Vehicle("corsair_panther", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+CORSAIR_TRIDENT = Vehicle("corsair_trident", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+BLOHM_VOSS_CLASSIC_III = Vehicle("blohm_voss_classic_iii", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
+LURSSEN_MOBIUS = Vehicle("lurssen_mobius", cost=, avail=, page_ref="R5.0, 186", subtype="Trucks", skill_req=PILOT_GROUND_CRAFT)
 SUN_TRACKER_LAKE_KING
 EVO_AQUAVIDA_1
 EVO_AQUAVIDA_2
@@ -2529,6 +2530,63 @@ HORIZON_CU_3
 RENRAKU_GERBIL
 RENRAKU_SCUTTLER_REMOTE_CYBERHAND
 # SMALL DRONES
+ARES_ARMS_SENTRY_V
+CITRON_BROUILLARD_SMOKE_GENERATOR
+CYBERSPACE_DESIGNS_WOLFHOUND
+EVO_PROLETARIAN
+FERRET_PRD_1X_WHEELED_PERIMETER_DRONE
+FESTO_SEWER_SNAKE
+HORIZON_MINI_ZEP
+KNIGHT_ERRANT_PS_PERSUIT_DRONE
+LONG_STAR_CASTLE_GUARD
+MITSUHAMA_GUN_TURRET
+MITSUHAMA_SEVEN_WHEELIE
+MITSUHAMA_SEVEN_TREADS
+MITSUHAMA_SEVEN_DIRTY
+MITSUHAMA_SEVEN_QUAD
+MITSUHAMA_SEVEN_SWIM
+MITSUHAMA_SEVEN_HOVER
+MITSUHAMA_SEVEN_SOAR
+NEONET_PRAIRIE_DOG
+PRATT_WHITENEY_SUNDOWNER
+PROTEUS_AG_KRAKE
+SAAB_THYSSEN_BLOODHOUND
+RENRAKU_DOVE
+RENRAKU_JARDINERO
+RENRAKU_JOB_A_MAT
+RENRAKU_PELICAN
+TELESTRAIN_INDUSTRIES_SHAMUS
+# MEDIUM DRONES
+ARES_CHEETAH
+EVO_KROKODIL
+FEDERATED_BOEING_KULL
+MCT_TUNNELER
+RENRAKU_LEBD_2
+TRANSYS_STEED
+# LARGE DRONES
+AEROQUIP_DUSTOFF
+ARES_MATILDA
+ARES_MULE
+ARES_PALADIN
+CRASHCART_MEDICART
+GTS_TOWER
+SAEDER_KRUPP_MK_7D_NEPTUNE
+MITSUHAMA_MALAKIM
+# HUGE DRONES
+ARES_KN_YO_DEIMOS
+ARES_KN_YO_ERIS
+ARES_KN_YO_PHOBOS
+MESAMETRIC_KODIAK
+NEONET_AVENGING_ANGEL
+# ANTHROPOMORPHIC DRONES
+AZTECHNOLOGY_CRIADO_JAUN
+HORIZON_LITTLE_BUDDY
+MITSUHAMA_KENCHIKU_KIKAI
+NEONET_JUGGERNAUGHT
+SAEDER_KRUPP_DIREKTIONSSEKRETAR
+SHAIWASE_I_DOLL
+# DRONE MISSILE
+ARES_GARUDA
 
 
 
