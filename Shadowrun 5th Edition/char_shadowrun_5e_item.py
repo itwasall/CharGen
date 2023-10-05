@@ -448,6 +448,9 @@ def get_item(item: Core.Gear=None, item_pool_id=None):
     item_pool = get_item_pool(item_pool_id)
     if not item_pool is None:
         item = random.choice(item_pool)
+        if item.__class__ == Core.Cyberdeck:
+            item = get_cyberdeck(item)
+
     if item is None:
         return AttributeError("Both args cannot be None.\n",
                               f"They are currently {item} and {item_pool}")
@@ -475,7 +478,30 @@ def item_format(item: Core.Gear=None, compact=False):
             print("--> Software")
             print(", ".join([i.name for i in software]))
         else:
-            print(f"> Cyberdeck: {item.name} A: {item.attack.value}, S: {item.sleaze.value}, DP: {item.data_processing.value}, F: {item.firewall.value}")
+            print(f"[Cyberdeck] {item.name} -> A:{item.attack.value}, S:{item.sleaze.value}, DP:{item.data_processing.value}, F:{item.firewall.value}")
+
+    elif item.__class__ in [Core.Firearm, Core.MeleeWeapon, Core.ProjectileWeapon]:
+        if item.__class__ == Core.Firearm:
+            wpn_type = "Firearm"
+        elif item.__class__ == Core.MeleeWeapon:
+            wpn_type = "Melee"
+        elif item.__class__ == Core.ProjectileWeapon:
+            wpn_type = "Projectile"
+        print(f"[Weapon/{wpn_type}] {item.name} (p.{item.page_ref})")
+
+
+    elif item.__class__ == Core.Electronics:
+        if "license" in item.name:
+            print(f'{item.name} - {item.rating}')
+        elif hasattr(item, "subtype") and item.subtype == "Identification":
+            print(f'[Elec/ID] {item.name} {item.page_ref}')
+        else:
+            print(f'[Elec/{item.subtype}] {item.name} {item.page_ref}')
+
+
+    else:
+        print(item)
+
 
 if __name__ == "__main__":
     def test_vehs():

@@ -1,6 +1,7 @@
 import random
 import char_shadowrun_5e_data as Core
 import char_shadowrun_5e_gear as Gear
+import char_shadowrun_5e_item as Item
 import multiprocessing
 import time
 from collections import OrderedDict
@@ -1181,8 +1182,9 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     #    print(karma_log)
     format_skills(ch.Skills)
     print("===\nGEAR: \n")
-    for gear in ch.Gear:
-        print(gear)
+    # sorted(ch.Gear)
+    for item in ch.Gear:
+        Item.item_format(item, compact=True)
 
 if __name__ == "__main__":
     # Kills process if charater generation takes too long

@@ -101,6 +101,7 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
             items = []
             for idx in range(rating):
                 if idx is False:
+                    new_item = Item.get_item(None, skill)
                     items.append(Item.get_item(None, skill))
                 elif random.randint(1,10) >= 5:
                     items.append(Item.get_item(None, skill))
@@ -138,38 +139,40 @@ def get_lifestyle(ch: Core.Character) -> None:
         ch.PrimaryLifestyle = random.choice(lifestyles)
 
 
-def make_fake_licence(item) -> Core.Electronics:
-    if hasattr(item, "category"):
-        licence_type = item.category
-    elif hasattr(item, "subtype"):
-        licence_type = item.subtype
+def make_fake_license(item) -> Core.Electronics:
+    if hasattr(item, "subtype"):
+        license_type = item.subtype
+    elif hasattr(item, "category"):
+        license_type = item.category
     else:
-        licence_type = item.name
+        license_type = item.name
     if hasattr(item, "rating"):
         print(item.name, item.rating)
         if item.rating >= 5:
-            licence_rating_max = 6
+            license_rating_max = 6
         else:
-            licence_rating_max = item.rating + 1
+            license_rating_max = item.rating + 1
         if item.rating <= 2:
-            licence_rating_min = 2
+            license_rating_min = 2
         else:
-            licence_rating_min = item.rating - 1
+            license_rating_min = item.rating - 1
     else:
-        licence_rating_max, licence_rating_min = 6, 1
-    licence_rating = random.randint(licence_rating_min, licence_rating_max)
-    return Core.Electronics(f"Fake Licence ({licence_type})", cost=(licence_rating * 200), page_ref=443, rating=licence_rating, avail=[licence_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
+        license_rating_max, license_rating_min = 6, 1
+    license_rating = random.randint(license_rating_min, license_rating_max)
+    return Core.Electronics(f"Fake License ({license_type})", cost=(license_rating * 200), page_ref=443, rating=license_rating, avail=[license_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
 
 
 
 def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
-    added_licences = []
+    added_licenses = []
     for gear in gear_list:
         if hasattr(gear, "legality") and gear.legality == Core.RESTRICTED:
-            new_licence = make_fake_licence(gear)
-            if new_licence.name in [l.name for l in added_licences]:
+            new_license = make_fake_license(gear)
+            if new_license.name in [l.name for l in added_licenses]:
                 continue
-    return added_licences
+            else:
+                added_licenses.append(new_license)
+    return added_licenses
             
 
     
