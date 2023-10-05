@@ -55,6 +55,7 @@ def generate_character() -> Core.Character:
     get_language_knowledge_skills(character)
     if character.MagicResoUser == "Adept":
         get_adept_powers(character, character.Magic.value)
+
     """
         dealing with this later
     """
