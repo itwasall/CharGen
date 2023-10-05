@@ -25,6 +25,9 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
                 GEAR_SHOPPING_LIST.append(new_item_from_list)
         else:
             GEAR_SHOPPING_LIST.append(new_item)
+    if ch.MagicResoUser is not None:
+        GEAR_SHOPPING_LIST.append(random.choice(
+            [i for i in Core.MagicItem.items if i.subtype == 'Foci']))
     ch.Gear = GEAR_SHOPPING_LIST
     return ch
 
@@ -139,35 +142,11 @@ def get_lifestyle(ch: Core.Character) -> None:
         ch.PrimaryLifestyle = random.choice(lifestyles)
 
 
-def make_fake_license(item) -> Core.Electronics:
-    if hasattr(item, "subtype"):
-        license_type = item.subtype
-    elif hasattr(item, "category"):
-        license_type = item.category
-    else:
-        license_type = item.name
-    if hasattr(item, "rating"):
-        print(item.name, item.rating)
-        if item.rating >= 5:
-            license_rating_max = 6
-        else:
-            license_rating_max = item.rating + 1
-        if item.rating <= 2:
-            license_rating_min = 2
-        else:
-            license_rating_min = item.rating - 1
-    else:
-        license_rating_max, license_rating_min = 6, 1
-    license_rating = random.randint(license_rating_min, license_rating_max)
-    return Core.Electronics(f"Fake License ({license_type})", cost=(license_rating * 200), page_ref=443, rating=license_rating, avail=[license_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
-
-
-
 def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
     added_licenses = []
     for gear in gear_list:
         if hasattr(gear, "legality") and gear.legality == Core.RESTRICTED:
-            new_license = make_fake_license(gear)
+            new_license = Item.get_fake_license(gear)
             if new_license.name in [l.name for l in added_licenses]:
                 continue
             else:

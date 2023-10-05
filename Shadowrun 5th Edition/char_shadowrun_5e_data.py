@@ -598,6 +598,14 @@ class AdeptPower(AbstractBaseClass):
         AdeptPower.items.append(self)
 
 
+class MagicItem(Gear):
+    items = []
+
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        MagicItem.items.append(self)
+
+
 class Augmentation(AbstractBaseClass):
     items = []
 
@@ -1071,12 +1079,12 @@ MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=
 # =============== BOWS ==================
 BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
 ARROW = ProjectileWeapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
-INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
+INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Arrow", requires=["Bow"])
 # =============== CROSSBOWS =============
 LIGHT_CROSSBOW = ProjectileWeapon("Light Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
 MEDIUM_CROSSBOW = ProjectileWeapon("Medium Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
 HEAVY_CROSSBOW = ProjectileWeapon("Heavy Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
-CROSSBOW_BOLT = ProjectileWeapon("Crossbow Bolt", cost=5, page_ref=421, avail=2, subtype="Ammo", requires=["Light Crossbow", "Medium Crossbow", "Heavy Crossbow"])
+CROSSBOW_BOLT = ProjectileWeapon("Crossbow Bolt", cost=5, page_ref=421, avail=2, subtype="Bolt", requires=["Light Crossbow", "Medium Crossbow", "Heavy Crossbow"])
 INJECTION_BOLT = ProjectileWeapon("Injection Bolt", cost=50, page_ref=421, avail=8, legality=RESTRICTED, subtype="Crossbow", requires=["Light Crossbow", "Medium Crossbow", "Heavy Crossbow"])
 # =============== THROWING ==============
 THROWING_KNIFE = ProjectileWeapon("Throwing Knife", cost=25, page_ref=424, avail=4, subtype="Throwing Weapons")
@@ -1834,6 +1842,19 @@ SPELL_RESISTANCE = AdeptPower("Spell Resistance", cost=0.5, group=None, per_leve
 TRACELESS_WALK = AdeptPower("Traceless Walk", cost=1, group=None, per_level=False, per_group=False)
 VOICE_CONTROL = AdeptPower("Voice Control", cost=0.5, group=None, per_level=True, per_group=False)
 WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False, per_group=False)
+
+"""
+    MAGIC ITEMS
+"""
+# FOCI
+ENCHANTING_FOCUS = MagicItem("Enchanting_focus", cost=["Force", "*", 5000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+METAMAGIC_FOCUS = MagicItem("Metamagic_focus", cost=["Force", "*", 9000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+POWER_FOCUS = MagicItem("Power_focus", cost=["Force", "*", 18000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+QI_FOCUS = MagicItem("Qi_focus", cost=["Force", "*", 3000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+SPELL_FOCUS = MagicItem("Spell_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+SPIRIT_FOCUS = MagicItem("Spirit_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
+WEAPON_FOCUS = MagicItem("Weapon_focus", cost=["Force", "*", 7000], avail=["Force", "*", 4], legality=RESTRICTED, page_ref=461, subtype='Foci')
+
 """
     AUGMENTATIONS
 """

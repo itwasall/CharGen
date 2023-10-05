@@ -201,6 +201,17 @@ def list_handler(l: list, item, arg=-1, **kwargs):
             return arg
         else:
             return random.choice(cond_list)
+
+
+    elif l[0] == "Force":
+        if arg == -1 or not isinstance(arg, Core.Character):
+            raise AttributeError("To calculate force, arg must be Core.Character")
+        else:
+            if hasattr(arg, "Magic"):
+                r1 = arg.Magic.value * 2
+            else:
+                raise AttributeError("arg Core.Character has no Magic Attribute so Force cannot be calculated!")
+
         
         
     else:
@@ -432,6 +443,19 @@ def get_vehicle(skill = None, **kwargs):
         vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
     return vehicle
 
+def get_fake_license(item) -> Core.Electronics:
+    if hasattr(item, "subtype"):
+        license_type = item.subtype
+    elif hasattr(item, "category"):
+        license_type = item.category
+    else:
+        license_type = item.name
+    if hasattr(item, "rating"):
+        if not isinstance(item.rating, int):
+            item.rating = get_item_rating(item)
+    license_rating = random.choices([1, 2, 3, 4, 5, 6], [2, 3, 3, 5, 3, 1])[0]
+    return Core.Electronics(f"Fake License ({license_type})", cost=(license_rating * 200), page_ref=443, rating=license_rating, avail=[license_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
+
 
 def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
     match item_pool_id:
@@ -494,9 +518,9 @@ def item_format(item: Core.Gear=None, compact=False):
         if "license" in item.name:
             print(f'{item.name} - {item.rating}')
         elif hasattr(item, "subtype") and item.subtype == "Identification":
-            print(f'[Elec/ID] {item.name} {item.page_ref}')
+            print(f'[Elec/ID] {item.name} (p.{item.page_ref})')
         else:
-            print(f'[Elec/{item.subtype}] {item.name} {item.page_ref}')
+            print(f'[Elec/{item.subtype}] {item.name} (p.{item.page_ref})')
 
 
     else:
