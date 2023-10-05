@@ -53,6 +53,8 @@ def generate_character() -> Core.Character:
     get_skills(character, priority_table, attr_influence=highest_attrs,
                skill_cap=20, builds=skill_builds)
     get_language_knowledge_skills(character)
+    if character.MagicResoUser == "Adept":
+        get_adept_powers(character, character.Magic.value)
     """
         dealing with this later
     """
@@ -235,7 +237,6 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
     match ch.MagicResoUser:
         case 'Adept':
             get_special_attribute(ch, tbl, 'Magic')
-            get_adept_powers(ch)
         case 'Magician':
             get_special_attribute(ch, tbl, 'Magic')
             ch.Spells = []
@@ -298,6 +299,10 @@ def get_adept_powers(ch: Core.Character, power_points=0) -> None:
     char_powers = []
     while power_points > 0:
         new_power = random.choice(Core.AdeptPower.items)
+        if hasattr(new_power, "requires"):
+            if new_power.requires.__class__ == Core.Skill:
+                if not new_power.requires.name in ch.Skills.keys():
+                    continue
         if new_power.per_level:
             if len([i for i in char_powers if i.name == new_power.name]) >= max_buys:
                 continue
