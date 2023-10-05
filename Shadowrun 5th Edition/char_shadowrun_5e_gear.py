@@ -115,13 +115,13 @@ def get_essentials(ch: Core.Character) -> list[Core.Gear]:
     gear_essentials = []
     if Core.SINNER_NATIONAL.name in ch.Qualities or Core.SINNER_CRIMINAL.name in ch.Qualities:
         Core.REAL_SIN.rating = 1
-        gear_essentials.append(Core.REAL_SIN)
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
     elif Core.SINNER_CORPORATE_LIMITED.name in ch.Qualities:
         Core.REAL_SIN.rating = 2
-        gear_essentials.append(Core.REAL_SIN)
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
     elif Core.SINNER_CORPORATE.name in ch.Qualities:
         Core.REAL_SIN.rating = 3
-        gear_essentials.append(Core.REAL_SIN)
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
     else:
         gear_essentials.append(Item.get_item(Core.FAKE_SIN))
     return gear_essentials
@@ -136,3 +136,40 @@ def get_lifestyle(ch: Core.Character) -> None:
                 i for i in Core.Lifestyle.items if i.cost < 
                 ch.PrimaryLifestyle.cost ]
         ch.PrimaryLifestyle = random.choice(lifestyles)
+
+
+def make_fake_licence(item) -> Core.Electronics:
+    if hasattr(item, "category"):
+        licence_type = item.category
+    elif hasattr(item, "subtype"):
+        licence_type = item.subtype
+    else:
+        licence_type = item.name
+    if hasattr(item, "rating"):
+        print(item.name, item.rating)
+        if item.rating >= 5:
+            licence_rating_max = 6
+        else:
+            licence_rating_max = item.rating + 1
+        if item.rating <= 2:
+            licence_rating_min = 2
+        else:
+            licence_rating_min = item.rating - 1
+    else:
+        licence_rating_max, licence_rating_min = 6, 1
+    licence_rating = random.randint(licence_rating_min, licence_rating_max)
+    return Core.Electronics(f"Fake Licence ({licence_type})", cost=(licence_rating * 200), page_ref=443, rating=licence_rating, avail=[licence_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
+
+
+
+def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
+    added_licences = []
+    for gear in gear_list:
+        if hasattr(gear, "legality") and gear.legality == Core.RESTRICTED:
+            new_licence = make_fake_licence(gear)
+            if new_licence.name in [l.name for l in added_licences]:
+                continue
+    return added_licences
+            
+
+    

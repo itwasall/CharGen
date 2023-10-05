@@ -57,6 +57,7 @@ def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
     else:
         raise ValueError(f'{item.name} has bad cost data\n{item.cost}\n{type(item.cost)}')
 
+
 def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
     if not hasattr(item, "essence"):
         return 0
@@ -79,6 +80,9 @@ def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
 
 
 def get_item_capacity(item: Core.Gear, arg=-1, **kwargs):
+    """
+        If item has capacity (e.g. Cybereyes), then calculate it here if it's a variance
+    """
     if not hasattr(item, "capacity"):
         return 1
     if isinstance(item.capacity, int) or isinstance(item.capacity, str):
@@ -91,9 +95,18 @@ def get_item_capacity(item: Core.Gear, arg=-1, **kwargs):
         return list_handler(item.capacity, item, **kwargs)
     else:
         raise ValueError(f'{item.name} has bad capacity data\n{item.capacity}\n{type(item.capacity)}')
-    
+
 
 def list_handler(l: list, item, arg=-1, **kwargs):
+    """
+        list_handler
+
+        Handles parameters for which isinstance(param, list) is True
+
+        ["Rating", "*", 2] -> Roll for rating, multiply by 2, return
+
+
+    """
     r1 = 1
 
     if isinstance(l[0], int) and l[1] == "to":
@@ -101,7 +114,7 @@ def list_handler(l: list, item, arg=-1, **kwargs):
             l[2] == arg
         else:
             return random.choice(range(l[0], l[2]))
-        
+
     if l[0] == "Rating":
         # Catches if item doesn't have rating attribute
         if not hasattr(item, "rating"):
@@ -204,6 +217,7 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
 
 def get_mod(item: Core.Gear, m=None):
+
     if isinstance(item, Core.Firearm):
         if hasattr(item, "mods"):
             if m is not None:
@@ -223,6 +237,7 @@ def get_mod(item: Core.Gear, m=None):
             if not hasattr(item, "legality") and hasattr(weapon_mod, "legality"):
                 item.legality = weapon_mod.legality
             item.name = f"{item.name} /w {weapon_mod.name}"
+
     if isinstance(item, Core.Armor):
         if hasattr(item, "mods"):
             if m is not None:
@@ -234,6 +249,7 @@ def get_mod(item: Core.Gear, m=None):
                 item.cost = get_item_cost(item) + get_item_cost(armor_mod, item)
             else:
                 item.cost = item.cost + armor_mod.cost
+
     if isinstance(item, Core.Augmentation):
         if hasattr(item, "mods"):
             if m is not None:

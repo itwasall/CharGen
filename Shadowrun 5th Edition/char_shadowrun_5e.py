@@ -744,6 +744,9 @@ def get_gear(ch: Core.Character, nuyen: int) -> None:
             be likely to possess it
     """
     ch = Gear.get_gear(ch, nuyen)
+    licences = Gear.check_legality(ch, gear_list=ch.Gear)
+    for i in licences:
+        ch.Gear.append(i)
     return
 
 
