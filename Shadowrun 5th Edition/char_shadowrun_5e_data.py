@@ -2,10 +2,10 @@ import random
 
 class Attribute:
 
-    def __init__(self, name, value: int = 0, matrix=False):
+    def __init__(self, name, value: int = 0,  limit: int = 6, matrix=False):
         self.name = name
         self.value = value
-        self.limit = 6
+        self.limit = limit
         if name == "Essence":
             self.limit = None
         self.type = self.get_type(name)
@@ -876,23 +876,23 @@ FACE_SKILLS = [CON, IMPERSONATION, PERFORMANCE, ETIQUETTE, LEADERSHIP, NEGOTIATI
 """
 HUMAN = Metatype(
         "Human",
-        stat_changes={'EDGE': [2, 7]},
+        stat_changes={'Edge': [2, 7]},
         racial_bonus=None)
 ELF = Metatype(
         "Elf",
-        stat_changes={'AGILITY': [2,7], 'CHARISMA': [3,8]},
+        stat_changes={'Agility': [2,7], 'Charisma': [3,8]},
         racial_bonus=['Low Light Vision'])
 DWARF = Metatype(
         "Dwarf", 
-        stat_changes={'BODY': [3, 8], 'REACTION': [1, 5], 'STRENGTH': [3, 8], 'WILLPOWER': [2, 7]}, 
+        stat_changes={'Body': [3, 8], 'Reaction': [1, 5], 'Strength': [3, 8], 'Willpower': [2, 7]}, 
         racial_bonus=['Thermographic Vision', 'Pathogen/Toxin Resistance', '20% increased Lifestyle cost'])
 ORK = Metatype(
         "Ork",
-        stat_changes={'BODY': [4, 9], 'STRENGTH': [3, 8], 'LOGIC': [1, 5], 'CHARISMA': [1, 5]},
+        stat_changes={'Body': [4, 9], 'Strength': [3, 8], 'Logic': [1, 5], 'Charisma': [1, 5]},
         racial_bonus=['Low Light Vision'])
 TROLL = Metatype(
         "Troll",
-        stat_changes={'BODY': [5, 10], 'AGILITY': [1, 5], 'STRENGTH': [5, 10], 'LOGIC': [1, 5], 'INTUITION': [1, 5], 'CHARISMA': [1, 4]},
+        stat_changes={'Body': [5, 10], 'Agility': [1, 5], 'Strength': [5, 10], 'Logic': [1, 5], 'Intuition': [1, 5], 'Charisma': [1, 4]},
         racial_bonus=['Thermographic Vision', '+1 Reach', '+1 dermal Armor', '100% increased Lifestyle cost'])
 
 """

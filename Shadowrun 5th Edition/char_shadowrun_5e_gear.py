@@ -25,13 +25,18 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
                 GEAR_SHOPPING_LIST.append(new_item_from_list)
         else:
             GEAR_SHOPPING_LIST.append(new_item)
-    if ch.MagicResoUser is not None:
-        GEAR_SHOPPING_LIST.append(random.choice(
-            [i for i in Core.MagicItem.items if i.subtype == 'Foci']))
+    if ch.MagicResoUser is not None or ch.MagicResoUser != "Technomancer":
+        new_items = get_gear_magic_dependant(ch)
+
     ch.Gear = GEAR_SHOPPING_LIST
     return ch
 
 ######################################################################
+
+
+def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
+    if ch.MagicResoUser in ["Magician", "Aspected Magician"]:
+        pass
 
 def roll_new_item(req: list):
     ammended_requirements  = [i for i in req if avail <= 12]

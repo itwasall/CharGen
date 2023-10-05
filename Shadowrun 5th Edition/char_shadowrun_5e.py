@@ -11,49 +11,23 @@ KARMA_LOG = False
 
 def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
-    # PHASE 1: CONCEPT
+    # STEP 1: CONCEPT
     character = Core.Character()
     priority_table = get_priorities(character)
-    metatype = random.choice(priority_table['Metatype'])
     attribute_points = priority_table['Attributes']
     nuyen = priority_table['Resources']
-    # Initialising Stuff
-    edge_shit = metatype[1]
+    magic_reso = priority_table['MagicResonance']
+    metatype = random.choice(priority_table['Metatype'])
+    # STEP 2: METATYPE & ATTRIBUTES
+    special_attribute_points = metatype[1]
     metatype = metatype[0]
-    # metatype.attributes.init_stat_block()
     character.Metatype = metatype
-    for attribute in metatype.attributes.List:
-        match attribute.name:
-            case 'Body':
-                character.Body = metatype.attributes.Body
-            case 'Agility':
-                character.Agility = metatype.attributes.Agility
-            case 'Reaction':
-                character.Reaction = metatype.attributes.Reaction
-            case 'Strength':
-                character.Strength = metatype.attributes.Strength
-            case 'Willpower':
-                character.Willpower = metatype.attributes.Willpower
-            case 'Logic':
-                character.Logic = metatype.attributes.Logic
-            case 'Intuition':
-                character.Intuition = metatype.attributes.Intuition
-            case 'Charisma':
-                character.Charisma = metatype.attributes.Charisma
-            case 'Edge':
-                character.Edge = metatype.attributes.Edge
-            case 'Essence':
-                character.Essence = metatype.attributes.Essence
-    # STEP 1: ATTRIBUTES
-    character.redo_attr()
-    # print(f"======\nRolling with {priority_table['Attributes']} points")
+    generate_attributes(character, character.Metatype)
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
     # STEP 3: MAGIC/RESONANCE
-    magic_reso = priority_table['MagicResonance']
-    x = resolve_magic_resonance(character, magic_reso, priority_table)
-    if x == "We'll do it live":
-        return False
+    resolve_magic_resonance(character, magic_reso, priority_table)
+    roll_special_stats(character, metatype, special_attribute_points)
     character.redo_attr()
     # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
     IS_DECKER = False
@@ -112,6 +86,79 @@ def get_priorities(character: Core.Character) -> dict:
     return selected_items
 
 
+def generate_attributes(ch: Core.Character, metatype: Core.Metatype):
+    """
+        Generates character attributes in line with their
+            metatype's default values
+    """
+    if "Body" in metatype.stat_changes.keys():
+        body_value = metatype.stat_changes['Body'][0]
+        body_limit = metatype.stat_changes['Body'][1]
+    else:
+        body_value = 1
+        body_limit = 6
+    ch.Body = Core.Attribute('Body', body_value, body_limit)
+
+    if "Agility" in metatype.stat_changes.keys():
+        agility_value = metatype.stat_changes['Agility'][0]
+        agility_limit = metatype.stat_changes['Agility'][1]
+    else:
+        agility_value = 1
+        agility_limit = 6
+    ch.Agility = Core.Attribute('Agility', agility_value, agility_limit)
+
+    if "Reaction" in metatype.stat_changes.keys():
+        reaction_value = metatype.stat_changes['Reaction'][0]
+        reaction_limit = metatype.stat_changes['Reaction'][1]
+    else:
+        reaction_value = 1
+        reaction_limit = 6
+    ch.Reaction = Core.Attribute('Reaction', reaction_value, reaction_limit)
+
+    if "Strength" in metatype.stat_changes.keys():
+        strength_value = metatype.stat_changes['Strength'][0]
+        strength_limit = metatype.stat_changes['Strength'][1]
+    else:
+        strength_value = 1
+        strength_limit = 6
+    ch.Strength = Core.Attribute("Strength", strength_value, strength_limit)
+
+    if "Logic" in metatype.stat_changes.keys():
+        logic_value = metatype.stat_changes['Logic'][0]
+        logic_limit = metatype.stat_changes['Logic'][1]
+    else:
+        logic_value = 1
+        logic_limit = 6
+    ch.Logic = Core.Attribute("Logic", logic_value, logic_limit)
+
+    if "Willpower" in metatype.stat_changes.keys():
+        willpower_value = metatype.stat_changes['Willpower'][0]
+        willpower_limit = metatype.stat_changes['Willpower'][1]
+    else:
+        willpower_value = 1
+        willpower_limit = 6
+    ch.Willpower = Core.Attribute("Willpower", willpower_value, willpower_limit)
+
+    if "Intuition" in metatype.stat_changes.keys():
+        intuition_value = metatype.stat_changes['Intuition'][0]
+        intuition_limit = metatype.stat_changes['Intuition'][1]
+    else:
+        intuition_value = 1
+        intuition_limit = 6
+    ch.Intuition = Core.Attribute("Intuition", intuition_value, intuition_limit)
+
+    if "Charisma" in metatype.stat_changes.keys():
+        charisma_value = metatype.stat_changes['Charisma'][0]
+        charisma_limit = metatype.stat_changes['Charisma'][1]
+    else:
+        charisma_value = 1
+        charisma_limit = 6
+    ch.Charisma = Core.Attribute("Charisma", charisma_value, charisma_limit)
+
+    ch.Essence = Core.Attribute("Essence", 6, 6)
+
+
+
 def roll_stats(ch: Core.Character, attr: int) -> None:
     """
         Rolls eligible stats
@@ -122,8 +169,7 @@ def roll_stats(ch: Core.Character, attr: int) -> None:
             Core.Character class
     """
     rollable_stats = [ch.Body, ch.Agility, ch.Reaction, ch.Strength,
-                      ch.Willpower, ch.Logic, ch.Intuition, ch.Charisma,
-                      ch.Edge]
+                      ch.Willpower, ch.Logic, ch.Intuition, ch.Charisma]
     limits_hit = 0
     while attr > 0:
         stat_roll = random.choice(rollable_stats)
@@ -147,7 +193,8 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
         This is to influence the skill choices later on in character
         generation.
     """
-    non_special_attrs = ch.AttributesPhysical + ch.AttributesMental
+    non_special_attrs = [ch.Body, ch.Agility, ch.Reaction, ch.Strength,
+                         ch.Willpower, ch.Logic,ch.Charisma, ch.Intuition]
     # List is shuffled to avoid predictable results
     #   e.g. if unshuffled and Body is in a three way tie for highest stat,
     #       Body will *always* be picked
@@ -212,6 +259,27 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
     return "no"
 
 
+def roll_special_stats(ch: Core.Character, metatype_tbl, points):
+    """
+        Rolls special stats.
+            If a character doesn't use magic or resonance, then
+            all the points are added to Edge
+    """
+    if "Edge" in ch.Metatype.stat_changes.keys():
+        edge_value = ch.Metatype.stat_changes['Edge'][0]
+        edge_limit = ch.Metatype.stat_changes['Edge'][1]
+    else:
+        edge_value = 1
+        edge_limit = 6
+    ch.Edge = Core.Attribute('Edge', edge_value, edge_limit)
+
+    rollable_special_stats = [ch.Magic, ch.Resonance, ch.Edge]
+    while points > 0:
+        stat_roll = random.choice(rollable_special_stats)
+        if stat_roll is not None:
+            points -= 1
+            if stat_roll.limit > stat_roll.value:
+                stat_roll.value += 1
 
 
 def get_adept_powers(ch: Core.Character, power_points=0) -> None:
