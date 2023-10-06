@@ -468,6 +468,13 @@ def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
                          i.subtype in ["Commlink", "Cyberdeck", "Accessories", "RFID Tags"]]
             return item_pool
 
+
+def get_focus_formula(focus_type=None) -> Core.MagicItem:
+    if focus_type is None:
+        raise AttributeError("Cannot have foci formula based on no foci!")
+
+
+
 def get_item(item: Core.Gear=None, item_pool_id=None):
     item_pool = get_item_pool(item_pool_id)
     if not item_pool is None:

@@ -1854,6 +1854,14 @@ QI_FOCUS = MagicItem("Qi_focus", cost=["Force", "*", 3000], avail=["Force", "*",
 SPELL_FOCUS = MagicItem("Spell_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
 SPIRIT_FOCUS = MagicItem("Spirit_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
 WEAPON_FOCUS = MagicItem("Weapon_focus", cost=["Force", "*", 7000], avail=["Force", "*", 4], legality=RESTRICTED, page_ref=461, subtype='Foci')
+# FORMULAE
+FOCUS_FORMULA = MagicItem("Focus Formula", cost=["FocusCost", "*", 0.25], avail="Focus", legality=RESTRICTED, page_ref=326, subtype='Formula')
+spell_combat_formula = magicitem("Spell Formula (Combat)", cost=2000, avail=8, legality=restricted, page_ref=326, subtype='formula')
+SPELL_DETECTION_FORMULA = MagicItem("Spell Formula (Detection)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, subtype='Formula')
+SPELL_HEALTH_FORMULA = MagicItem("Spell Formula (Health)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, subtype='Formula')
+SPELL_ILLUSION_FORMULA = MagicItem("Spell Formula (Illusion)", cost=1000, avail=8, legality=RESTRICTED, page_ref=326, subtype='Formula')
+SPELL_MANIPULATION_FORMULA = MagicItem("Spell Formula (Manipulation)", cost=1500, avail=8, legality=RESTRICTED, page_ref=326, subtype='Formula')
+
 
 """
     AUGMENTATIONS
