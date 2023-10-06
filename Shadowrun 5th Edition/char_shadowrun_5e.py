@@ -13,7 +13,7 @@ def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
     # STEP 1: CONCEPT
     character = Core.Character()
-    priority_table = get_priorities(character)
+    priority_table = get_priorities(character, defaults={'MagicResonance': 'E'})
     attribute_points = priority_table['Attributes']
     nuyen = priority_table['Resources']
     magic_reso = priority_table['MagicResonance']
@@ -68,7 +68,7 @@ def generate_character() -> Core.Character:
     return character
 
 
-def get_priorities(character: Core.Character) -> dict:
+def get_priorities(character: Core.Character, defaults=None) -> dict:
     """
         Chooses priorities from priority table.
         Returns choices as dict
@@ -81,7 +81,16 @@ def get_priorities(character: Core.Character) -> dict:
         'Skills': None,
         'Resources': None
     }
-    for category in selected_items.keys():
+    if defaults is not None:
+        for key in defaults.keys():
+            selected_items[key] = Core.PRIORITY_TABLE_FLIPPED[key][defaults[key]]
+            table_choices.pop(table_choices.index(defaults[key]))
+        categories = [k for k in selected_items.keys() if k not in defaults.keys()]
+    else:
+        categories = [k for k in selected_items.keys()]
+    for category in categories:
+        if selected_items[category] is not None:
+            continue
         new_priority = random.choice(table_choices)
         table_choices.pop(table_choices.index(new_priority))
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[

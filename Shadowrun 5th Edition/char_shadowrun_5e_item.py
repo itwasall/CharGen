@@ -443,16 +443,14 @@ def get_vehicle(skill = None, **kwargs):
         vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
     return vehicle
 
-def get_fake_license(item) -> Core.Electronics:
-    if hasattr(item, "subtype"):
-        license_type = item.subtype
-    elif hasattr(item, "category"):
-        license_type = item.category
-    else:
-        license_type = item.name
-    if hasattr(item, "rating"):
-        if not isinstance(item.rating, int):
-            item.rating = get_item_rating(item)
+def get_fake_license(item=None, license_type=None) -> Core.Electronics:
+    if item is not None:
+        if hasattr(item, "subtype"):
+            license_type = item.subtype
+        elif hasattr(item, "category"):
+            license_type = item.category
+        else:
+            license_type = item.name
     license_rating = random.choices([1, 2, 3, 4, 5, 6], [2, 3, 3, 5, 3, 1])[0]
     return Core.Electronics(f"Fake License ({license_type})", cost=(license_rating * 200), page_ref=443, rating=license_rating, avail=[license_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
 

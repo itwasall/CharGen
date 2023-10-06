@@ -25,8 +25,10 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
                 GEAR_SHOPPING_LIST.append(new_item_from_list)
         else:
             GEAR_SHOPPING_LIST.append(new_item)
-    if ch.MagicResoUser is not None or ch.MagicResoUser != "Technomancer":
+    if ch.MagicResoUser in ["Magician", "Adept", "Mystic Adept", "Aspected Magician"]:
         new_items = get_gear_magic_dependant(ch)
+        for new_item in new_items:
+            GEAR_SHOPPING_LIST.append(new_item)
 
     ch.Gear = GEAR_SHOPPING_LIST
     return ch
@@ -35,8 +37,13 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
 
 
 def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
+    magic_items = []
+    magic_items.append(Item.get_fake_license(license_type="to Practise Magic"))
+
     if ch.MagicResoUser in ["Magician", "Aspected Magician"]:
         pass
+
+    return magic_items
 
 def roll_new_item(req: list):
     ammended_requirements  = [i for i in req if avail <= 12]
@@ -151,7 +158,7 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
     added_licenses = []
     for gear in gear_list:
         if hasattr(gear, "legality") and gear.legality == Core.RESTRICTED:
-            new_license = Item.get_fake_license(gear)
+            new_license = Item.get_fake_license(item=gear)
             if new_license.name in [l.name for l in added_licenses]:
                 continue
             else:
