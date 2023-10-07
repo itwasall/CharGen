@@ -50,7 +50,7 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
         for new_item in new_items:
             GEAR_SHOPPING_LIST.append(new_item)
 
-    ch.Gear = GEAR_SHOPPING_LIST
+    ch.Gear = evaluate_gear_list(GEAR_SHOPPING_LIST)
     return ch
 
 
@@ -67,43 +67,82 @@ def get_essentials(ch: Core.Character) -> list[Core.Gear]:
         gear_essentials.append(Item.get_item(Core.REAL_SIN))
     else:
         gear_essentials.append(Item.get_item(Core.FAKE_SIN))
-    return gear_essentials
+
+    commlink_skills = ['Aeronautics Mechanic', 'Automotive Mechanic', 
+                       'Biotechnology', 'Computer', 'Cybercombat', 
+                       'Cybertechnology', 'Electronic Warfare', 'Hacking', 
+                       'Hardware', 'Industrial Mechanic', 'Nautical  Mechanic', 
+                       'Software']
+    has_commlink = False
+    for skill in commlink_skills:
+        if has_commlink:
+            continue
+        elif skill in ch.Skills.keys():
+            has_commlink = True
+    if not has_commlink and random.randint(1, 100) >= 30:
+            has_commlink = True
+    if has_commlink:
+        new_item = random.choice(
+                [i for i in Core.Electronics.items if not hasattr(
+                    i, "requires") 
+                 and hasattr(i, "subtype") and 
+                 i.subtype == "Commlink"])
+        gear_essentials.append(Item.get_item(new_item))
+
+    for gear in gear_essentials:
+        if hasattr(gear, "subtype") and gear.subtype == "Commlink":
+            if random.randint(1, 100) >= 50:
+                gear_essentials.append(Item.get_item(Core.SIM_MODULE_HOT_SIM))
+            else:
+                gear_essentials.append(Item.get_item(Core.SIM_MODULE))
+        else:
+            continue
         
 
-def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.Gear]:
+    return gear_essentials
+
+        
+
+def get_gear_skill_dependant(ch, skill, rating,
+                             rating_roll=True) -> list[Core.Gear]:
     """
         skill: Core.Skill
         rating: Core.Skill.rating
-        rating_roll: bool -> If a skill's rating should influence whether or not an
-            item is rolled.
-            e.g. Someone mildly skilled at pistols might not own one right now, but
-                someone mildly skilled at piloting aircraft probably does
+        rating_roll: bool -> If a skill's rating should influence whether or 
+            not an item is rolled.
+            e.g. Someone mildly skilled at pistols might not own one right 
+            now, but someone mildly skilled at piloting aircraft probably does
     """
     if rating_roll:
         if not check_rating(rating):
             return
 
-    # Makes it more likely to have more than one weapon with a modification if skills are
-    #   of higher rating
+    # Makes it more likely to have more than one weapon with a modification
+    #   if skills are of higher rating
     sec_wpn_mod_chance = 40
-    sec_wpn_mod_chance += sum([ch.Skills[skill].rating for skill in ch.Skills if skill in ["Automatics", "Pistols", "Heavy Weapons"]]) * 5
-
+    sec_wpn_mod_chance += sum(
+            [ch.Skills[skill].rating for skill in ch.Skills if skill in [
+                "Automatics", "Pistols", "Heavy Weapons"]]) * 5
     
     match skill:
         case "Automatics":
-            # Roll second weapon without mods if a Firearm has already been rolled with one
+            # Roll second weapon without mods if a Firearm has already been 
+            #   rolled with one
             if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
-                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(
+                        1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Pistols":
             if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
-                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(
+                        1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Heavy Weapons":
             if (Core.Firearm in [i.__class__ for i in GEAR_SHOPPING_LIST if 
-                hasattr(i, "mods") and i.mods is not None]) and random.randint(1, 100) <= sec_wpn_mod_chance:
+                hasattr(i, "mods") and i.mods is not None]) and random.randint(
+                        1, 100) <= sec_wpn_mod_chance:
                 return Item.get_weapon(skill, no_mod=True)
             return Item.get_weapon(skill)
         case "Archery":
@@ -111,22 +150,30 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
                 return
             projectile_weapon = Item.get_weapon(skill)
             try:
-                projectile_ammo = random.choice([i for i in Core.ProjectileWeapon.items if 
-                                                 i.subtype == "Ammo" and projectile_weapon.name in i.requires])
+                projectile_ammo = random.choice(
+                        [i for i in Core.ProjectileWeapon.items if 
+                         i.subtype == "Ammo" and projectile_weapon.name
+                         in i.requires])
             except IndexError:
                 return projectile_weapon
             return [projectile_weapon, projectile_ammo]
         case "Blades":
-            if Core.MeleeWeapon in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+            if Core.MeleeWeapon in [
+                    i.__class__ for i in GEAR_SHOPPING_LIST
+                    ] and random.randint(1, 100) >= 50:
                 return
             return Item.get_weapon(skill)
         case "Clubs":
-            if Core.MeleeWeapon in [i.__class__ for i in GEAR_SHOPPING_LIST] and random.randint(1, 100) >= 50:
+            if Core.MeleeWeapon in [
+                    i.__class__ for i in GEAR_SHOPPING_LIST
+                    ] and random.randint(1, 100) >= 50:
                 return
             return Item.get_weapon(skill)
         case "Throwing Weapons":
             return Item.get_weapon(skill)
-        case "Pilot Ground Craft" | "Pilot Aircraft" | "Pilot Watercraft" | "Pilot Walker":
+        case "Pilot Ground Craft" | "Pilot Aircraft":
+            return Item.get_vehicle(skill)
+        case "Pilot Watercraft" | "Pilot Walker":
             return Item.get_vehicle(skill)
         case "Hardware" | "Locksmith":
             items = []
@@ -146,9 +193,12 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
 def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
     magic_items = []
 
-    # If a character doesn't have a legal SIN, give them a fake license to practise magic
-    if len([q for q in ch.Qualities.keys() if q in [i.name for i in SINNER_QUALITIES]]) == 0:
-        magic_items.append(Item.get_fake_license(license_type="to Practise Magic"))
+    # If a character doesn't have a legal SIN, give them a fake license 
+    #   to practise magic
+    if len([q for q in ch.Qualities.keys() if q in [
+        i.name for i in SINNER_QUALITIES]]) == 0:
+        magic_items.append(Item.get_fake_license(
+            license_type="to Practise Magic"))
 
     if ch.MagicResoUser == 'Adept':
         if random.randint(1, 100) > 50:
@@ -184,13 +234,29 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
             new_license = Item.get_fake_license(item=gear)
             if new_license.name in [l.name for l in added_licenses]:
                 continue
-    # If item is a magic item and character alreaady has a fake license for magic, continue
-            elif isinstance(gear, Core.MagicItem) and "Fake License (to Practise Magic)" in [l.name for l in added_licenses] + [g.name for g in gear_list]:
+    # If item is a magic item and character alreaady has a fake license for 
+    #   magic, continue
+            elif isinstance(
+                    gear, Core.MagicItem) and "Fake License ( \
+            to Practise Magic)" in [
+                    l.name for l in added_licenses] + [
+                            g.name for g in gear_list]:
                 continue
 
             else:
                 added_licenses.append(new_license)
     return added_licenses
             
+
+def evaluate_gear_list(gear_list) -> list[Core.Gear]:
+    exceptions = None
+    for gear in gear_list:
+        if gear_list.count(gear) > 1:
+            if exceptions:
+                continue
+            else:
+                gear_list.pop(gear_list.index(gear))
+    return gear_list
+
 
     

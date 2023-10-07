@@ -1279,7 +1279,7 @@ ERIKA_ELITE = Electronics("Erika Elite", cost=2500, page_ref=439, rating=4, avai
 HERMES_IKON = Electronics("Hermes Ikon", cost=3000, page_ref=439, rating=5, avail=10, subtype="Commlink")
 TRANSYS_AVALON = Electronics("Transys Avalon", cost=5000, page_ref=439, rating=6, avail=12, subtype="Commlink")
 FAIRLIGHT_CALIBAN = Electronics("Fairlight Caliban", cost=8000, page_ref=439, rating=7, avail=14, subtype="Commlink")
-SIM_MODULE = Electronics("Sim Module", cost=100, page_ref=439, rating=1, avail=0, subtype="Commlink_", requires=["Subtype", "Commlink"])
+SIM_MODULE = Electronics("Sim Module", cost=100, page_ref=439, rating=1, avail=0, subtype="Commlink_", requires="Commlink")
 SIM_MODULE_HOT_SIM = Electronics("Sim Module Hot Sim", cost=250, page_ref=439, rating=1, avail=0, subtype="Commlink", requires=SIM_MODULE)
 # =============== CYBERDECKS ===========
 ERIKA_MCD_1 = Cyberdeck("Erika MCD-1", cost=49_500, page_ref=439, rating=1, avail=3, legality=RESTRICTED, attributes=[4,3,2,1], programs=1, subtype="Cyberdeck")
