@@ -1266,10 +1266,12 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     # if KARMA_LOG:
     #    print(karma_log)
     format_skills(ch.Skills)
-    print("===\nGEAR: \n")
+    print("===\nGEAR: ")
     # sorted(ch.Gear)
     for item in ch.Gear:
         Item.item_format(item, compact=True)
+    print("===\nNUYEN: ")
+    print(ch.Nuyen)
 
 if __name__ == "__main__":
     # Kills process if charater generation takes too long

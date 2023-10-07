@@ -45,28 +45,18 @@ def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs
         raise ValueError(f'{item.name} has bad avail data\n{item.avail}\n{type(item.avail)}')
 
 
-def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
-    if not hasattr(item, "force"):
-        return
-
-    # An items "Force" value can be within a range of values relative to the characters
-    #   'Magic' attribute value. However some values (typically that equal to the magic
-    #   attribute value) are more common than others so the horrible bit of math here
-    #   is just that.
-    ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
-    range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
-
-    return random.choices(ranges, range_probs)[0]
-
 
 def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
     if not hasattr(item, "cost"):
         return 0
+    print(f'Item cost is {item.cost} for {item.name}')
     if isinstance(item.cost, int):
         return item.cost
     elif isinstance(item.cost, list):
         if arg != -1:
-            return list_handler(item.cost, item, arg, **kwargs)
+            x =  list_handler(item.cost, item, arg, **kwargs)
+            print(x)
+            return x
         return list_handler(item.cost, item, **kwargs)
     else:
         raise ValueError(f'{item.name} has bad cost data\n{item.cost}\n{type(item.cost)}')
@@ -454,6 +444,8 @@ def get_vehicle(skill = None, **kwargs):
     return vehicle
 
 def get_fake_license(item=None, license_type=None) -> Core.Electronics:
+    if item.__class__ == Core.MagicItem:
+        return
     if item is not None:
         if hasattr(item, "subtype"):
             license_type = item.subtype
@@ -520,7 +512,7 @@ def get_magic_item(item_type, ch: Core.Character) -> Core.Gear:
                 new_item.force = new_item.adept_power.cost * 4
             else: pass
 
-    return new_item
+    return get_item(new_item, ch = ch)
 
 
 
@@ -534,8 +526,9 @@ def get_item(item: Core.Gear=None, item_pool_id=None, ch: Core.Character = None)
     if item is None:
         return AttributeError("Both args cannot be None.\n",
                               f"They are currently {item} and {item_pool}")
-    if hasattr(item, "force"):
-        item.force = get_item_force(item, ch)
+    #if hasattr(item, "force"):
+    #    item.force = get_item_force(item, ch)
+    #    print(f'Item {item.name} force is {item.force}')
     if hasattr(item, "cost"):
         item.cost = get_item_cost(item)
     if hasattr(item, "rating"):

@@ -51,6 +51,9 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
             GEAR_SHOPPING_LIST.append(new_item)
 
     ch.Gear = evaluate_gear_list(GEAR_SHOPPING_LIST)
+    cost = [(i.name, i.cost) for i in GEAR_SHOPPING_LIST]
+    ch.Nuyen = cost
+
     return ch
 
 
@@ -232,7 +235,7 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
     for gear in gear_list:
         if hasattr(gear, "legality") and gear.legality == Core.RESTRICTED:
             new_license = Item.get_fake_license(item=gear)
-            if new_license.name in [l.name for l in added_licenses]:
+            if new_license is None or new_license.name in [l.name for l in added_licenses]:
                 continue
     # If item is a magic item and character alreaady has a fake license for 
     #   magic, continue
