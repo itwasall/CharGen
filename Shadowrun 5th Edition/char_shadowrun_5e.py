@@ -1,6 +1,7 @@
 import random
 import char_shadowrun_5e_data as Core
 import char_shadowrun_5e_gear as Gear
+import char_shadowrun_5e_item as Item
 import multiprocessing
 import time
 from collections import OrderedDict
@@ -10,49 +11,25 @@ KARMA_LOG = False
 
 def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
-    # PHASE 1: CONCEPT
+    # STEP 1: CONCEPT
     character = Core.Character()
+    # TEST FOR NON-MAGIC CHARACTERS
+    # priority_table = get_priorities(character, defaults={'MagicResonance': 'E'})
     priority_table = get_priorities(character)
-    metatype = random.choice(priority_table['Metatype'])
     attribute_points = priority_table['Attributes']
     nuyen = priority_table['Resources']
-    # Initialising Stuff
-    edge_shit = metatype[1]
+    magic_reso = priority_table['MagicResonance']
+    metatype = random.choice(priority_table['Metatype'])
+    # STEP 2: METATYPE & ATTRIBUTES
+    special_attribute_points = metatype[1]
     metatype = metatype[0]
-    # metatype.attributes.init_stat_block()
     character.Metatype = metatype
-    for attribute in metatype.attributes.List:
-        match attribute.name:
-            case 'Body':
-                character.Body = metatype.attributes.Body
-            case 'Agility':
-                character.Agility = metatype.attributes.Agility
-            case 'Reaction':
-                character.Reaction = metatype.attributes.Reaction
-            case 'Strength':
-                character.Strength = metatype.attributes.Strength
-            case 'Willpower':
-                character.Willpower = metatype.attributes.Willpower
-            case 'Logic':
-                character.Logic = metatype.attributes.Logic
-            case 'Intuition':
-                character.Intuition = metatype.attributes.Intuition
-            case 'Charisma':
-                character.Charisma = metatype.attributes.Charisma
-            case 'Edge':
-                character.Edge = metatype.attributes.Edge
-            case 'Essence':
-                character.Essence = metatype.attributes.Essence
-    # STEP 1: ATTRIBUTES
-    character.redo_attr()
-    # print(f"======\nRolling with {priority_table['Attributes']} points")
+    generate_attributes(character, character.Metatype)
     roll_stats(character, attribute_points)
     highest_attrs = get_highest_attr(character)
     # STEP 3: MAGIC/RESONANCE
-    magic_reso = priority_table['MagicResonance']
-    x = resolve_magic_resonance(character, magic_reso, priority_table)
-    if x == "We'll do it live":
-        return False
+    resolve_magic_resonance(character, magic_reso, priority_table)
+    roll_special_stats(character, metatype, special_attribute_points)
     character.redo_attr()
     # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
     IS_DECKER = False
@@ -78,6 +55,9 @@ def generate_character() -> Core.Character:
     get_skills(character, priority_table, attr_influence=highest_attrs,
                skill_cap=20, builds=skill_builds)
     get_language_knowledge_skills(character)
+    if character.MagicResoUser == "Adept":
+        get_adept_powers(character, character.Magic.value)
+
     """
         dealing with this later
     """
@@ -90,7 +70,7 @@ def generate_character() -> Core.Character:
     return character
 
 
-def get_priorities(character: Core.Character) -> dict:
+def get_priorities(character: Core.Character, defaults=None) -> dict:
     """
         Chooses priorities from priority table.
         Returns choices as dict
@@ -103,12 +83,94 @@ def get_priorities(character: Core.Character) -> dict:
         'Skills': None,
         'Resources': None
     }
-    for category in selected_items.keys():
+    if defaults is not None:
+        for key in defaults.keys():
+            selected_items[key] = Core.PRIORITY_TABLE_FLIPPED[key][defaults[key]]
+            table_choices.pop(table_choices.index(defaults[key]))
+        categories = [k for k in selected_items.keys() if k not in defaults.keys()]
+    else:
+        categories = [k for k in selected_items.keys()]
+    for category in categories:
+        if selected_items[category] is not None:
+            continue
         new_priority = random.choice(table_choices)
         table_choices.pop(table_choices.index(new_priority))
         selected_items[category] = Core.PRIORITY_TABLE_FLIPPED[
             category][new_priority]
     return selected_items
+
+
+def generate_attributes(ch: Core.Character, metatype: Core.Metatype):
+    """
+        Generates character attributes in line with their
+            metatype's default values
+    """
+    if "Body" in metatype.stat_changes.keys():
+        body_value = metatype.stat_changes['Body'][0]
+        body_limit = metatype.stat_changes['Body'][1]
+    else:
+        body_value = 1
+        body_limit = 6
+    ch.Body = Core.Attribute('Body', body_value, body_limit)
+
+    if "Agility" in metatype.stat_changes.keys():
+        agility_value = metatype.stat_changes['Agility'][0]
+        agility_limit = metatype.stat_changes['Agility'][1]
+    else:
+        agility_value = 1
+        agility_limit = 6
+    ch.Agility = Core.Attribute('Agility', agility_value, agility_limit)
+
+    if "Reaction" in metatype.stat_changes.keys():
+        reaction_value = metatype.stat_changes['Reaction'][0]
+        reaction_limit = metatype.stat_changes['Reaction'][1]
+    else:
+        reaction_value = 1
+        reaction_limit = 6
+    ch.Reaction = Core.Attribute('Reaction', reaction_value, reaction_limit)
+
+    if "Strength" in metatype.stat_changes.keys():
+        strength_value = metatype.stat_changes['Strength'][0]
+        strength_limit = metatype.stat_changes['Strength'][1]
+    else:
+        strength_value = 1
+        strength_limit = 6
+    ch.Strength = Core.Attribute("Strength", strength_value, strength_limit)
+
+    if "Logic" in metatype.stat_changes.keys():
+        logic_value = metatype.stat_changes['Logic'][0]
+        logic_limit = metatype.stat_changes['Logic'][1]
+    else:
+        logic_value = 1
+        logic_limit = 6
+    ch.Logic = Core.Attribute("Logic", logic_value, logic_limit)
+
+    if "Willpower" in metatype.stat_changes.keys():
+        willpower_value = metatype.stat_changes['Willpower'][0]
+        willpower_limit = metatype.stat_changes['Willpower'][1]
+    else:
+        willpower_value = 1
+        willpower_limit = 6
+    ch.Willpower = Core.Attribute("Willpower", willpower_value, willpower_limit)
+
+    if "Intuition" in metatype.stat_changes.keys():
+        intuition_value = metatype.stat_changes['Intuition'][0]
+        intuition_limit = metatype.stat_changes['Intuition'][1]
+    else:
+        intuition_value = 1
+        intuition_limit = 6
+    ch.Intuition = Core.Attribute("Intuition", intuition_value, intuition_limit)
+
+    if "Charisma" in metatype.stat_changes.keys():
+        charisma_value = metatype.stat_changes['Charisma'][0]
+        charisma_limit = metatype.stat_changes['Charisma'][1]
+    else:
+        charisma_value = 1
+        charisma_limit = 6
+    ch.Charisma = Core.Attribute("Charisma", charisma_value, charisma_limit)
+
+    ch.Essence = Core.Attribute("Essence", 6, 6)
+
 
 
 def roll_stats(ch: Core.Character, attr: int) -> None:
@@ -121,8 +183,7 @@ def roll_stats(ch: Core.Character, attr: int) -> None:
             Core.Character class
     """
     rollable_stats = [ch.Body, ch.Agility, ch.Reaction, ch.Strength,
-                      ch.Willpower, ch.Logic, ch.Intuition, ch.Charisma,
-                      ch.Edge]
+                      ch.Willpower, ch.Logic, ch.Intuition, ch.Charisma]
     limits_hit = 0
     while attr > 0:
         stat_roll = random.choice(rollable_stats)
@@ -146,7 +207,8 @@ def get_highest_attr(ch: Core.Character) -> list[Core.Attribute]:
         This is to influence the skill choices later on in character
         generation.
     """
-    non_special_attrs = ch.AttributesPhysical + ch.AttributesMental
+    non_special_attrs = [ch.Body, ch.Agility, ch.Reaction, ch.Strength,
+                         ch.Willpower, ch.Logic,ch.Charisma, ch.Intuition]
     # List is shuffled to avoid predictable results
     #   e.g. if unshuffled and Body is in a three way tie for highest stat,
     #       Body will *always* be picked
@@ -187,7 +249,6 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
     match ch.MagicResoUser:
         case 'Adept':
             get_special_attribute(ch, tbl, 'Magic')
-            get_adept_powers(ch)
         case 'Magician':
             get_special_attribute(ch, tbl, 'Magic')
             ch.Spells = []
@@ -211,6 +272,27 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
     return "no"
 
 
+def roll_special_stats(ch: Core.Character, metatype_tbl, points):
+    """
+        Rolls special stats.
+            If a character doesn't use magic or resonance, then
+            all the points are added to Edge
+    """
+    if "Edge" in ch.Metatype.stat_changes.keys():
+        edge_value = ch.Metatype.stat_changes['Edge'][0]
+        edge_limit = ch.Metatype.stat_changes['Edge'][1]
+    else:
+        edge_value = 1
+        edge_limit = 6
+    ch.Edge = Core.Attribute('Edge', edge_value, edge_limit)
+
+    rollable_special_stats = [ch.Magic, ch.Resonance, ch.Edge]
+    while points > 0:
+        stat_roll = random.choice(rollable_special_stats)
+        if stat_roll is not None:
+            points -= 1
+            if stat_roll.limit > stat_roll.value:
+                stat_roll.value += 1
 
 
 def get_adept_powers(ch: Core.Character, power_points=0) -> None:
@@ -229,6 +311,10 @@ def get_adept_powers(ch: Core.Character, power_points=0) -> None:
     char_powers = []
     while power_points > 0:
         new_power = random.choice(Core.AdeptPower.items)
+        if hasattr(new_power, "requires"):
+            if new_power.requires.__class__ == Core.Skill:
+                if not new_power.requires.name in ch.Skills.keys():
+                    continue
         if new_power.per_level:
             if len([i for i in char_powers if i.name == new_power.name]) >= max_buys:
                 continue
@@ -744,6 +830,9 @@ def get_gear(ch: Core.Character, nuyen: int) -> None:
             be likely to possess it
     """
     ch = Gear.get_gear(ch, nuyen)
+    licences = Gear.check_legality(ch, gear_list=ch.Gear)
+    for i in licences:
+        ch.Gear.append(i)
     return
 
 
@@ -1177,19 +1266,23 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     # if KARMA_LOG:
     #    print(karma_log)
     format_skills(ch.Skills)
-    print("===\nGEAR: \n")
-    for gear in ch.Gear:
-        print(gear)
+    print("===\nGEAR: ")
+    # sorted(ch.Gear)
+    for item in ch.Gear:
+        Item.item_format(item, compact=True)
+    print("===\nNUYEN: ")
+    print(ch.Nuyen)
 
 if __name__ == "__main__":
     # Kills process if charater generation takes too long
     # In like 1% of cases the program hangs, this is to temporarily tackle that
     #   before I find and fix the issue
-    p = multiprocessing.Process(target=generate_character)
-    p.start()
-    p.join(5)
-    if p.is_alive():
-        print("running too long, killing process")
-        p.terminate()
-        p.join()
+    x = generate_character()
+    # p = multiprocessing.Process(target=generate_character)
+    # p.start()
+    # p.join(5)
+    # if p.is_alive():
+    #     print("running too long, killing process")
+    #     p.terminate()
+    #    p.join()
 
