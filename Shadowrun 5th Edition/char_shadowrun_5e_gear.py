@@ -139,10 +139,11 @@ def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
 
     if ch.MagicResoUser == 'Adept':
         if random.randint(1, 100) > 50:
-            magic_items.append(get_magic_item)
+            # magic_items.append(Item.get_magic_item())
+            pass
 
     if 'Alchemy' in ch.Skills.keys():
-        magic_items.append(get_magic_item('Alchemy', ch))
+        magic_items.append(Item.get_magic_item('Alchemy', ch))
 
 
     return magic_items

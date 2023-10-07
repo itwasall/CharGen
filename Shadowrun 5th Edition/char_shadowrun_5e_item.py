@@ -478,20 +478,30 @@ def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
 
 
 def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
-    if not hasattr(item, "force"):
+    if not hasattr(item, "force") or not hasattr(item, "category"):
         return item
 
     # An items "Force" value can be within a range of values relative to the characters
     #   'Magic' attribute value. However some values (typically that equal to the magic
     #   attribute value) are more common than others so the horrible bit of math here
     #   is just that.
-    try:
-        ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
-        range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
-    except AttributeError:
-        return item
-
-    item.force = random.choices(ranges, range_probs)[0]
+    match item.category:
+        case "Spell":
+            try:
+                ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
+                range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
+            except AttributeError:
+                return item
+            item.force = random.choices(ranges, range_probs)[0]
+        case "Foci":
+            upper_bound = max(ch.Skills[item.skill.name], ch.Magic.value)
+            try:
+                ranges = [i for i in range(1, upper_bound + 1)]
+                range_probs = [i+1 if idx < len(ranges) - 1 else i-1 for idx, i in enumerate(ranges)]
+            except AttributeError:
+                return item
+            item.force = random.choices(ranges, range_probs)[0]
+            
     return item
 
 
@@ -499,8 +509,7 @@ def get_magic_item(item_type, ch: Core.Character) -> Core.Gear:
     if item_type == 'Alchemy':
         new_item = Core.ALCHEMICAL_FOCUS
         new_item = get_item_force(new_item, ch)
-
-        
+    return new_item
 
 
 

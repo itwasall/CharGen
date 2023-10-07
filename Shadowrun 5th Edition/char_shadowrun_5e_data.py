@@ -1848,8 +1848,8 @@ WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False,
 """
 # FOCI
 ENCHANTING_FOCUS = MagicItem("Enchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
-ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, category='Foci', subtype='Enchanting Foci')
-DISENCHANTING_FOCUS = MagicItem("Disenchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Enchanting Foci') 
+ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, skill=ALCHEMY, category='Foci', subtype='Enchanting Foci')
+DISENCHANTING_FOCUS = MagicItem("Disenchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, skill=DISENCHANTING, category='Foci', subtype='Enchanting Foci') 
 METAMAGIC_FOCUS = MagicItem("Metamagic Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
 CENTERING_FOCUS = MagicItem("Centering Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
 FLEXIBLE_SIGNATURE_FOCUS = MagicItem("Flexible Signature Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
