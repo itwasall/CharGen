@@ -506,9 +506,20 @@ def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
 
 
 def get_magic_item(item_type, ch: Core.Character) -> Core.Gear:
-    if item_type == 'Alchemy':
-        new_item = Core.ALCHEMICAL_FOCUS
-        new_item = get_item_force(new_item, ch)
+    match item_type:
+        case "Alchemy":
+            new_item = Core.ALCHEMICAL_FOCUS
+            new_item = get_item_force(new_item, ch)
+        case "Disenchanting":
+            new_item = Core.DISENCHANTING_FOCUS
+            new_item = get_item_force(new_item, ch)
+        case "Qi":
+            if ch.MagicResoUser == 'Adept':
+                new_item = Core.QI_FOCUS
+                new_item.adept_power = random.choice(Core.AdeptPower.items)
+                new_item.force = new_item.adept_power.cost * 4
+            else: pass
+
     return new_item
 
 

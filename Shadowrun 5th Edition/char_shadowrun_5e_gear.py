@@ -5,6 +5,25 @@ import random
 GEAR_SHOPPING_LIST = []
 SINNER_QUALITIES = [Core.SINNER_NATIONAL, Core.SINNER_CRIMINAL, Core.SINNER_CORPORATE, Core.SINNER_CORPORATE_LIMITED]
 
+
+def check_rating(rating) -> bool:
+    """
+        Simple boolean check against a rating, designed for skill ratings.
+            Rating 1: 16% 
+            Rating 2: 33% 
+            Rating 3: 50%
+            Rating 4: 75% 
+            Rating 5: 85% 
+            Rating 6: 90% 
+            Rating 7: 95%
+            Rating 8: 98%
+    """
+    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
+    if random.randint(1, 100) >= rating_roll_ratio[rating]: 
+        return False
+    return True
+
+
 def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     essentials_out = get_essentials(ch)
     for i in essentials_out:
@@ -60,15 +79,9 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
             e.g. Someone mildly skilled at pistols might not own one right now, but
                 someone mildly skilled at piloting aircraft probably does
     """
-    # If flag argument is set, then the higher the rating the more likely it is an
-    #   item is rolled.
-    #   Rating 1: 16%, Rating 2: 33%, Rating 3: 50%
-    #   Rating 4: 75%, Rating 5: 85%, Rating 6: 90% 
-    #   Rating 7: 95%, Rating 8: 98% - Not sure how this is legal though
-    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
     if rating_roll:
-        if random.randint(1, 100) >= rating_roll_ratio[rating]:
-            return None
+        if not check_rating(rating):
+            return
 
     # Makes it more likely to have more than one weapon with a modification if skills are
     #   of higher rating
@@ -139,12 +152,14 @@ def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
 
     if ch.MagicResoUser == 'Adept':
         if random.randint(1, 100) > 50:
-            # magic_items.append(Item.get_magic_item())
-            pass
+            magic_items.append(Item.get_magic_item('Qi', ch))
 
     if 'Alchemy' in ch.Skills.keys():
-        magic_items.append(Item.get_magic_item('Alchemy', ch))
-
+        if check_rating(ch.Skills['Alchemy'].rating):
+            magic_items.append(Item.get_magic_item('Alchemy', ch))
+    if 'Disenchanting' in ch.Skills.keys():
+        if check_rating(ch.Skills['Disenchanting'].rating):
+            magic_items.append(Item.get_magic_item('Disenchanting', ch))
 
     return magic_items
 
@@ -169,6 +184,10 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
             new_license = Item.get_fake_license(item=gear)
             if new_license.name in [l.name for l in added_licenses]:
                 continue
+    # If item is a magic item and character alreaady has a fake license for magic, continue
+            elif isinstance(gear, Core.MagicItem) and "Fake License (to Practise Magic)" in [l.name for l in added_licenses] + [g.name for g in gear_list]:
+                continue
+
             else:
                 added_licenses.append(new_license)
     return added_licenses

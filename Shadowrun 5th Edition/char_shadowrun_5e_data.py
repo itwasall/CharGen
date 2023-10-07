@@ -394,7 +394,7 @@ class Gear(AbstractBaseClass):
         # self.subtype = None
 
     def __repr__(self):
-        if self.subtype is not None:
+        if hasattr(self, "subtype"):
             return f'[{self.category}/{self.subtype}] {self.name}' + \
                     f'(p.{self.page_ref})'
         if hasattr(self, 'rating'):
@@ -1847,17 +1847,32 @@ WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False,
     MAGIC ITEMS
 """
 # FOCI
+## ENCHANTING FOCI
 ENCHANTING_FOCUS = MagicItem("Enchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
 ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, skill=ALCHEMY, category='Foci', subtype='Enchanting Foci')
 DISENCHANTING_FOCUS = MagicItem("Disenchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, skill=DISENCHANTING, category='Foci', subtype='Enchanting Foci') 
+## METAMAGIC FOCI
 METAMAGIC_FOCUS = MagicItem("Metamagic Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
 CENTERING_FOCUS = MagicItem("Centering Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
 FLEXIBLE_SIGNATURE_FOCUS = MagicItem("Flexible Signature Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
 MASKING_FOCUS = MagicItem("Masking Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
 SPELL_SHAPING_FOCUS = MagicItem("Spell Shaping Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
+## POWER FOCI
 POWER_FOCUS = MagicItem("Power Foci", cost=["Force", "*", 18000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
-QI_FOCUS = MagicItem("Qi Foci", cost=["Force", "*", 3000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+## QI FOCI
+QI_FOCUS = MagicItem("Qi Foci", cost=["Force", "*", 3000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, adept_power=None, pp_cost=0, category='Foci')
+## SPELL FOCI
 SPELL_FOCUS = MagicItem("Spell Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+COUNTERSPELLING_FOCUS = MagicItem("Counterspelling Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, category='Foci', subtype='Spell Foci')
+RITUAL_SPELLCASTING_FOCUS = MagicItem("Ritual Spellcasting Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, category='Foci', subtype='Spell Foci')
+SPELLCASTING_FOCUS = MagicItem("Spellcasting Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, category='Foci', subtype='Spell Foci')
+SUSTAINING_FOCUS = MagicItem("Sustaining Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, category='Foci', subtype='Spell Foci')
+## SPIRIT FOCI
+SPIRIT_FOCUS = MagicItem("Spirit Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+SUMMONING_FOCUS = MagicItem("Summoning Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, skill=SUMMONING, category='Foci', subtype='Spirit Foci')
+BANISHING_FOCUS = MagicItem("Banishing Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, skill=BANISHING, category='Foci', subtype='Spirit Foci')
+BINDING_FOCUS = MagicItem("Binding Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=320, skill=BINDING, category='Foci', subtype='Spirit Foci')
+## WEAPON FOCI
 WEAPON_FOCUS = MagicItem("Weapon Foci", cost=["Force", "*", 7000], avail=["Force", "*", 4], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
 # FORMULAE
 FOCUS_FORMULA = MagicItem("Focus Formula", cost=["FocusCost", "*", 0.25], avail="Focus", legality=RESTRICTED, page_ref=326, category='Formula')
