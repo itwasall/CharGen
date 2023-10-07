@@ -45,6 +45,20 @@ def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs
         raise ValueError(f'{item.name} has bad avail data\n{item.avail}\n{type(item.avail)}')
 
 
+def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
+    if not hasattr(item, "force"):
+        return
+
+    # An items "Force" value can be within a range of values relative to the characters
+    #   'Magic' attribute value. However some values (typically that equal to the magic
+    #   attribute value) are more common than others so the horrible bit of math here
+    #   is just that.
+    ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
+    range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
+
+    return random.choices(ranges, range_probs)[0]
+
+
 def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
     if not hasattr(item, "cost"):
         return 0
@@ -204,13 +218,9 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
 
     elif l[0] == "Force":
-        if arg == -1 or not isinstance(arg, Core.Character):
-            raise AttributeError("To calculate force, arg must be Core.Character")
-        else:
-            if hasattr(arg, "Magic"):
-                r1 = arg.Magic.value * 2
-            else:
-                raise AttributeError("arg Core.Character has no Magic Attribute so Force cannot be calculated!")
+        if not hasattr(item, "force"):
+            raise AttributeError(f"Item {item} has a 'Force' list handler with no 'Force' attribute")
+        r1 = item.force
 
         
         
@@ -467,13 +477,34 @@ def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
             return item_pool
 
 
-def get_focus_formula(focus_type=None) -> Core.MagicItem:
-    if focus_type is None:
-        raise AttributeError("Cannot have foci formula based on no foci!")
+def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
+    if not hasattr(item, "force"):
+        return item
+
+    # An items "Force" value can be within a range of values relative to the characters
+    #   'Magic' attribute value. However some values (typically that equal to the magic
+    #   attribute value) are more common than others so the horrible bit of math here
+    #   is just that.
+    try:
+        ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
+        range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
+    except AttributeError:
+        return item
+
+    item.force = random.choices(ranges, range_probs)[0]
+    return item
+
+
+def get_magic_item(item_type, ch: Core.Character) -> Core.Gear:
+    if item_type == 'Alchemy':
+        new_item = Core.ALCHEMICAL_FOCUS
+        new_item = get_item_force(new_item, ch)
+
+        
 
 
 
-def get_item(item: Core.Gear=None, item_pool_id=None):
+def get_item(item: Core.Gear=None, item_pool_id=None, ch: Core.Character = None):
     item_pool = get_item_pool(item_pool_id)
     if not item_pool is None:
         item = random.choice(item_pool)
@@ -483,6 +514,8 @@ def get_item(item: Core.Gear=None, item_pool_id=None):
     if item is None:
         return AttributeError("Both args cannot be None.\n",
                               f"They are currently {item} and {item_pool}")
+    if hasattr(item, "force"):
+        item.force = get_item_force(item, ch)
     if hasattr(item, "cost"):
         item.cost = get_item_cost(item)
     if hasattr(item, "rating"):

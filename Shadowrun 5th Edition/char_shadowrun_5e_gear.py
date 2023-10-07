@@ -3,6 +3,7 @@ import char_shadowrun_5e_item as Item
 import random
 
 GEAR_SHOPPING_LIST = []
+SINNER_QUALITIES = [Core.SINNER_NATIONAL, Core.SINNER_CRIMINAL, Core.SINNER_CORPORATE, Core.SINNER_CORPORATE_LIMITED]
 
 def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     essentials_out = get_essentials(ch)
@@ -33,20 +34,22 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     ch.Gear = GEAR_SHOPPING_LIST
     return ch
 
-######################################################################
 
-
-def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
-    magic_items = []
-    magic_items.append(Item.get_fake_license(license_type="to Practise Magic"))
-
-    if ch.MagicResoUser in ["Magician", "Aspected Magician"]:
-        pass
-
-    return magic_items
-
-def roll_new_item(req: list):
-    ammended_requirements  = [i for i in req if avail <= 12]
+def get_essentials(ch: Core.Character) -> list[Core.Gear]:
+    gear_essentials = []
+    if Core.SINNER_NATIONAL.name in ch.Qualities or Core.SINNER_CRIMINAL.name in ch.Qualities:
+        Core.REAL_SIN.rating = 1
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
+    elif Core.SINNER_CORPORATE_LIMITED.name in ch.Qualities:
+        Core.REAL_SIN.rating = 2
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
+    elif Core.SINNER_CORPORATE.name in ch.Qualities:
+        Core.REAL_SIN.rating = 3
+        gear_essentials.append(Item.get_item(Core.REAL_SIN))
+    else:
+        gear_essentials.append(Item.get_item(Core.FAKE_SIN))
+    return gear_essentials
+        
 
 def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.Gear]:
     """
@@ -61,7 +64,7 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
     #   item is rolled.
     #   Rating 1: 16%, Rating 2: 33%, Rating 3: 50%
     #   Rating 4: 75%, Rating 5: 85%, Rating 6: 90% 
-    #   Rating 7: 95%, Rating 8: 98% - Not sure how these is legal though
+    #   Rating 7: 95%, Rating 8: 98% - Not sure how this is legal though
     rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
     if rating_roll:
         if random.randint(1, 100) >= rating_roll_ratio[rating]:
@@ -127,22 +130,26 @@ def get_gear_skill_dependant(ch, skill, rating, rating_roll=True) -> list[Core.G
             return
 
 
-def get_essentials(ch: Core.Character) -> list[Core.Gear]:
-    gear_essentials = []
-    if Core.SINNER_NATIONAL.name in ch.Qualities or Core.SINNER_CRIMINAL.name in ch.Qualities:
-        Core.REAL_SIN.rating = 1
-        gear_essentials.append(Item.get_item(Core.REAL_SIN))
-    elif Core.SINNER_CORPORATE_LIMITED.name in ch.Qualities:
-        Core.REAL_SIN.rating = 2
-        gear_essentials.append(Item.get_item(Core.REAL_SIN))
-    elif Core.SINNER_CORPORATE.name in ch.Qualities:
-        Core.REAL_SIN.rating = 3
-        gear_essentials.append(Item.get_item(Core.REAL_SIN))
-    else:
-        gear_essentials.append(Item.get_item(Core.FAKE_SIN))
-    return gear_essentials
-        
-################################################################################
+def get_gear_magic_dependant(ch: Core.Character) -> list[Core.Gear]:
+    magic_items = []
+
+    # If a character doesn't have a legal SIN, give them a fake license to practise magic
+    if len([q for q in ch.Qualities.keys() if q in [i.name for i in SINNER_QUALITIES]]) == 0:
+        magic_items.append(Item.get_fake_license(license_type="to Practise Magic"))
+
+    if ch.MagicResoUser == 'Adept':
+        if random.randint(1, 100) > 50:
+            magic_items.append(get_magic_item)
+
+    if 'Alchemy' in ch.Skills.keys():
+        magic_items.append(get_magic_item('Alchemy', ch))
+
+
+    return magic_items
+
+def roll_new_item(req: list):
+    ammended_requirements  = [i for i in req if avail <= 12]
+
 
 def get_lifestyle(ch: Core.Character) -> None:
     if ch.PrimaryLifestyle is None:

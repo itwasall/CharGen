@@ -1847,22 +1847,27 @@ WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False,
     MAGIC ITEMS
 """
 # FOCI
-ENCHANTING_FOCUS = MagicItem("Enchanting_focus", cost=["Force", "*", 5000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-METAMAGIC_FOCUS = MagicItem("Metamagic_focus", cost=["Force", "*", 9000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-POWER_FOCUS = MagicItem("Power_focus", cost=["Force", "*", 18000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-QI_FOCUS = MagicItem("Qi_focus", cost=["Force", "*", 3000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-SPELL_FOCUS = MagicItem("Spell_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-SPIRIT_FOCUS = MagicItem("Spirit_focus", cost=["Force", "*", 4000], avail=["Force", "*", 3], legality=RESTRICTED, page_ref=461, subtype='Foci')
-WEAPON_FOCUS = MagicItem("Weapon_focus", cost=["Force", "*", 7000], avail=["Force", "*", 4], legality=RESTRICTED, page_ref=461, subtype='Foci')
+ENCHANTING_FOCUS = MagicItem("Enchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, category='Foci', subtype='Enchanting Foci')
+DISENCHANTING_FOCUS = MagicItem("Disenchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Enchanting Foci') 
+METAMAGIC_FOCUS = MagicItem("Metamagic Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+CENTERING_FOCUS = MagicItem("Centering Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
+FLEXIBLE_SIGNATURE_FOCUS = MagicItem("Flexible Signature Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
+MASKING_FOCUS = MagicItem("Masking Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
+SPELL_SHAPING_FOCUS = MagicItem("Spell Shaping Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, category='Foci', subtype='Metamagic Foci')
+POWER_FOCUS = MagicItem("Power Foci", cost=["Force", "*", 18000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+QI_FOCUS = MagicItem("Qi Foci", cost=["Force", "*", 3000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+SPELL_FOCUS = MagicItem("Spell Foci", cost=["Force", "*", 4000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
+WEAPON_FOCUS = MagicItem("Weapon Foci", cost=["Force", "*", 7000], avail=["Force", "*", 4], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
 # FORMULAE
-FOCUS_FORMULA = MagicItem("Focus Formula", cost=["FocusCost", "*", 0.25], avail="Focus", legality=RESTRICTED, page_ref=326, subtype='Formula')
-SPELL_COMBAT_FORMULA = MagicItem("Spell Formula (Combat)", cost=2000, avail=8, legality=RESTRICTED, page_ref=326, subtype='formula')
-SPELL_DETECTION_FORMULA = MagicItem("Spell Formula (Detection)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, subtype='Formula')
-SPELL_HEALTH_FORMULA = MagicItem("Spell Formula (Health)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, subtype='Formula')
-SPELL_ILLUSION_FORMULA = MagicItem("Spell Formula (Illusion)", cost=1000, avail=8, legality=RESTRICTED, page_ref=326, subtype='Formula')
-SPELL_MANIPULATION_FORMULA = MagicItem("Spell Formula (Manipulation)", cost=1500, avail=8, legality=RESTRICTED, page_ref=326, subtype='Formula')
+FOCUS_FORMULA = MagicItem("Focus Formula", cost=["FocusCost", "*", 0.25], avail="Focus", legality=RESTRICTED, page_ref=326, category='Formula')
+SPELL_COMBAT_FORMULA = MagicItem("Spell Formula (Combat)", cost=2000, avail=8, legality=RESTRICTED, page_ref=326, category='formula')
+SPELL_DETECTION_FORMULA = MagicItem("Spell Formula (Detection)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, category='Formula')
+SPELL_HEALTH_FORMULA = MagicItem("Spell Formula (Health)", cost=500, avail=4, legality=RESTRICTED, page_ref=326, category='Formula')
+SPELL_ILLUSION_FORMULA = MagicItem("Spell Formula (Illusion)", cost=1000, avail=8, legality=RESTRICTED, page_ref=326, category='Formula')
+SPELL_MANIPULATION_FORMULA = MagicItem("Spell Formula (Manipulation)", cost=1500, avail=8, legality=RESTRICTED, page_ref=326, category='Formula')
 # MAGICAL SUPPLIES
-MAGICAL_LODGE_MATERIALS = MagicItem("Magical Lodge Materials", cost=["Force", "*", 500], avail=["Force", "*", 2], page_ref=326, subtype='Magical Supplies')
+MAGICAL_LODGE_MATERIALS = MagicItem("Magical Lodge Materials", cost=["Force", "*", 500], avail=["Force", "*", 2], force=None, page_ref=326, category='Magical Supplies')
 
 
 """

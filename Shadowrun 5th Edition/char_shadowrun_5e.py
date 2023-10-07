@@ -13,7 +13,9 @@ def generate_character() -> Core.Character:
     karma_log = Core.KarmaLogger()
     # STEP 1: CONCEPT
     character = Core.Character()
-    priority_table = get_priorities(character, defaults={'MagicResonance': 'E'})
+    # TEST FOR NON-MAGIC CHARACTERS
+    # priority_table = get_priorities(character, defaults={'MagicResonance': 'E'})
+    priority_table = get_priorities(character)
     attribute_points = priority_table['Attributes']
     nuyen = priority_table['Resources']
     magic_reso = priority_table['MagicResonance']
@@ -1273,11 +1275,12 @@ if __name__ == "__main__":
     # Kills process if charater generation takes too long
     # In like 1% of cases the program hangs, this is to temporarily tackle that
     #   before I find and fix the issue
-    p = multiprocessing.Process(target=generate_character)
-    p.start()
-    p.join(5)
-    if p.is_alive():
-        print("running too long, killing process")
-        p.terminate()
-        p.join()
+    x = generate_character()
+    # p = multiprocessing.Process(target=generate_character)
+    # p.start()
+    # p.join(5)
+    # if p.is_alive():
+    #     print("running too long, killing process")
+    #     p.terminate()
+    #    p.join()
 
