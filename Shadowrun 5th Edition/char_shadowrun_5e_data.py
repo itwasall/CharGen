@@ -394,7 +394,7 @@ class Gear(AbstractBaseClass):
         # self.subtype = None
 
     def __repr__(self):
-        if self.subtype is not None:
+        if hasattr(self, 'subtype') and self.subtype is not None:
             return f'[{self.category}/{self.subtype}] {self.name}' + \
                     f'(p.{self.page_ref})'
         if hasattr(self, 'rating'):
@@ -1240,11 +1240,9 @@ ARMOR_VEST = Armor("Armor Vest", cost=500, page_ref=436, avail=4, armor_rating=9
 CHAMELEON_SUIT = Armor("Chameleon Suit", cost=1700, page_ref=436, avail=10, legality=RESTRICTED, armor_rating=9, mods=None)
 FULL_BODY_ARMOR = Armor("Full Body Armor", cost=2000, page_ref=436, avail=14, legality=RESTRICTED, armor_rating=15, mods=None)
 FULL_HELMET = Armor("Full Helmet", cost=500, page_ref=436, avail=14, legality=RESTRICTED, requires=FULL_BODY_ARMOR, armor_rating=3, mods=None)
-# FULL_BODY_ARMOR_CHEMICAL_SEAL = ArmorModification("Chemical Seal", cost=6000, page_ref=436, avail=[FULL_BODY_ARMOR.avail[0] +6, legality=RESTRICTED, requires=FULL_BODY_ARMOR, armor_rating="-")
-# FULL_BODY_ARMOR_ENVIRONMENTAL_ADAPTATION = ArmorModification("Environmental Adaptation", 1000, page_ref=436, avail=[FULL_BODY_ARMOR.avail[0] +3, legality=RESTRICTED, requires=FULL_BODY_ARMOR, armor_rating="-")
 LINED_COAT = Armor("Lined Coat", cost=900, page_ref=436, avail=4, armor_rating=9, mods=None)
 URBAN_EXPLORER_JUMPSUIT = Armor("Urban Explorer Jumpsuit", cost=650, page_ref=436, avail=8, armor_rating=9, mods=None)
-URBAN_EXPLORER_JUMPSUIT_HELMET = Armor("Urban Explorer Jumpsuit Helmet", cost=100, page_ref=436, avail=URBAN_EXPLORER_JUMPSUIT.avail, requires=URBAN_EXPLORER_JUMPSUIT, armor_rating=2, mods=None)
+URBAN_EXPLORER_JUMPSUIT_HELMET = Armor("Urban Explorer Jumpsuit Helmet", cost=102, page_ref=436, avail=URBAN_EXPLORER_JUMPSUIT.avail, requires=URBAN_EXPLORER_JUMPSUIT, armor_rating=2, mods=None)
 # =============== SUBTYPES ==============
 HELMET = Armor("Helmet", cost=100, page_ref=438, avail=2, armor_rating=2, subtype="Helmet", mods=None)
 BALLISTIC_SHIELD = Armor("Ballistic Shield", cost=1200, page_ref=438, avail=12, legality=RESTRICTED, armor_rating=6, subtype="Shield", mods=None)

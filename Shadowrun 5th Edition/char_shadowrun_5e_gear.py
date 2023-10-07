@@ -8,6 +8,17 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
     essentials_out = get_essentials(ch)
     for i in essentials_out:
         GEAR_SHOPPING_LIST.append(i)
+    armor_roll = random.randint(1, 100)
+    if armor_roll >= 10:
+        if armor_roll % 2 == 0:
+            new_armor = Item.get_armor(clothing=True)
+        else:
+            new_armor = Item.get_armor()
+        if isinstance(new_armor, list):
+            for new_armor_item_from_list in new_armor:
+                GEAR_SHOPPING_LIST.append(new_armor_item_from_list)
+        else:
+            GEAR_SHOPPING_LIST.append(new_armor)
     for skill in ch.Skills.keys():
         if skill in ['BLADES', 'CLUBS', 'HEAVY_WEAPONS', 'LONGARMS',
                      'PISTOLS', 'THROWING_WEAPONS', 'ARTISAN',
