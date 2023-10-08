@@ -62,7 +62,7 @@ def get_gear(ch: Core.Character, budget: int) -> Core.Character:
             GEAR_SHOPPING_LIST.append(new_item)
 
     ch.Gear = evaluate_gear_list(GEAR_SHOPPING_LIST)
-    cost = [(i.name, i.cost) for i in GEAR_SHOPPING_LIST]
+    cost = sum([i.cost for i in GEAR_SHOPPING_LIST])
     ch.Nuyen = cost
 
     return ch
@@ -263,14 +263,16 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
             
 
 def evaluate_gear_list(gear_list) -> list[Core.Gear]:
-    exceptions = None
+    exceptions = False
+    evaluated_gear_list = []
     for gear in gear_list:
-        if gear_list.count(gear) > 1:
-            if exceptions:
+        if gear in evaluated_gear_list:
+            if not exceptions:
                 continue
-            else:
-                gear_list.pop(gear_list.index(gear))
-    return gear_list
+        # if hasattr(gear, "subtype") and gear.subtype == "Commlink_":
+
+        evaluated_gear_list.append(gear)
+    return evaluated_gear_list
 
 
     

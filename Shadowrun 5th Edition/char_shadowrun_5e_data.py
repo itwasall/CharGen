@@ -1078,7 +1078,7 @@ MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=
 """
 # =============== BOWS ==================
 BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
-ARROW = ProjectileWeapon("Arrow", cost=["Rating", "*", 2], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
+ARROW = ProjectileWeapon("Arrow", cost=6, page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
 INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Arrow", requires=["Bow"])
 # =============== CROSSBOWS =============
 LIGHT_CROSSBOW = ProjectileWeapon("Light Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
@@ -1236,7 +1236,7 @@ DETONATOR_CAP = Item("Detonator Cap", cost=75, page_ref=436, rating=1, avail=8, 
     CLOTHING/ARMOR
 """
 # =============== CLOTHING ==============
-CLOTHING = Clothing("Clothing", cost=["Range", 20, 100_000], page_ref=436, avail=0, armor_rating=0)
+CLOTHING = Clothing("Clothing", cost=100, page_ref=436, avail=0, armor_rating=0)
 ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic Modification", cost=500, page_ref=436, avail=2, requires=CLOTHING)
 FEEDBACK_CLOTHING = Clothing("Feedback Clothing", cost=500, page_ref=436, avail=8, requires=CLOTHING)
 SYNTH_LEATHER = Clothing("Synth Leather", cost=200, page_ref=436, avail=0, requires=CLOTHING)
@@ -1848,8 +1848,8 @@ WALL_RUNNING = AdeptPower("Wall Running", cost=0.5, group=None, per_level=False,
 """
 # FOCI
 ## ENCHANTING FOCI
-ENCHANTING_FOCUS = MagicItem("Enchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
-ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, skill=ALCHEMY, category='Foci', subtype='Enchanting Foci')
+ENCHANTING_FOCUS = MagicItem("Enchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category="Foci")
+ALCHEMICAL_FOCUS = MagicItem("Alchemical Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=318, skill=ALCHEMY, category="Foci", subtype='Enchanting Foci')
 DISENCHANTING_FOCUS = MagicItem("Disenchanting Foci", cost=["Force", "*", 5000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=319, skill=DISENCHANTING, category='Foci', subtype='Enchanting Foci') 
 ## METAMAGIC FOCI
 METAMAGIC_FOCUS = MagicItem("Metamagic Foci", cost=["Force", "*", 9000], avail=["Force", "*", 3], force=None, legality=RESTRICTED, page_ref=461, category='Foci')
