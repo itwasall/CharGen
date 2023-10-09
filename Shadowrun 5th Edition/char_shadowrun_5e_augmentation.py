@@ -31,6 +31,7 @@ import random
             NO central core unit to install mods into. If applicable, some bodyware can be installed into cyberlimbs
                 Installing bodyware to cyberlimbs costs Capacity
                 Installing bodyware costs Essence
+
 """
 
 def get_augmentation(aug_type=None):
