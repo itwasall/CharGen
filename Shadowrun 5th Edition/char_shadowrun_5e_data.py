@@ -618,6 +618,16 @@ class Augmentation(AbstractBaseClass):
             return f'{self.name} (E: {self.essence})'
         return f'{self.name} (E:{self.essence} R:{self.rating})'
 
+class AugmentationCore(AbstractBaseClass):
+    items = []
+    
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        AugmentationCore.items.append(self)
+
+    def __repr__(self):
+        return f'{self.name} (E:{self.essence} R:{self.rating})'
+
 
 class AugmentationGrade(AbstractBaseClass):
     items = []
@@ -1592,21 +1602,21 @@ LIFESTYLES = [i for i in Lifestyle.items]
 
 """
 CLEANER = ComplexForm("Cleaner", target='Persona', duration='Permerm', fading_value=1)
-DIFFUSE_OF_ATTACK = ComplexForm("Diffuse of attack", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_SLEAZE = ComplexForm("Diffuse of sleaze", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_DATA_PROCESSING = ComplexForm("Diffuse of data processing", target='Device', duration='Sustainustain', fading_value=1)
-DIFFUSE_OF_FIREWALL = ComplexForm("Diffuse of firewall", target='Device', duration='Sustainustain', fading_value=1)
+DIFFUSE_OF_ATTACK = ComplexForm("Diffuse of attack", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_SLEAZE = ComplexForm("Diffuse of sleaze", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_DATA_PROCESSING = ComplexForm("Diffuse of data processing", target='Device', duration='Sustain', fading_value=1)
+DIFFUSE_OF_FIREWALL = ComplexForm("Diffuse of firewall", target='Device', duration='Sustain', fading_value=1)
 EDITOR = ComplexForm("Editor", target='File', duration='Permerm', fading_value=2)
-INFUSION_OF_ATTACK = ComplexForm("Infusion of attack", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_SLEAZE = ComplexForm("Infusion of sleaze", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_DATA_PROCESSING = ComplexForm("Infusion of data processing", target='Device', duration='Sustainustain', fading_value=1)
-INFUSION_OF_FIREWALL = ComplexForm("Infusion of firewall", target='Device', duration='Sustainustain', fading_value=1)
-STATIC_VEIL = ComplexForm("Static veil", target='Persona', duration='Sustainustain', fading_value=-1)
+INFUSION_OF_ATTACK = ComplexForm("Infusion of attack", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_SLEAZE = ComplexForm("Infusion of sleaze", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_DATA_PROCESSING = ComplexForm("Infusion of data processing", target='Device', duration='Sustain', fading_value=1)
+INFUSION_OF_FIREWALL = ComplexForm("Infusion of firewall", target='Device', duration='Sustain', fading_value=1)
+STATIC_VEIL = ComplexForm("Static veil", target='Persona', duration='Sustain', fading_value=-1)
 PULSE_STORM = ComplexForm("Pulse storm", target='Persona', duration='Imm', fading_value=0)
 PUPPETEER = ComplexForm("Puppeteer", target='Device', duration='Imm', fading_value=4)
-RESONANCE_CHANNEL = ComplexForm("Resonance channel", target='Device', duration='Sustainustain', fading_value=-1)
+RESONANCE_CHANNEL = ComplexForm("Resonance channel", target='Device', duration='Sustain', fading_value=-1)
 RESONANCE_SPIKE = ComplexForm("Resonance spike", target='Device', duration='Imme', fading_value=0)
-RESONANCE_VEIL = ComplexForm("Resonance veil", target='Device', duration='Sustainustain', fading_value=-1)
+RESONANCE_VEIL = ComplexForm("Resonance veil", target='Device', duration='Sustain', fading_value=-1)
 STATIC_BOMB = ComplexForm("Static bomb", target='Self', duration='Imme', fading_value=2)
 STITCHES = ComplexForm("Stitches", target='Sprite', duration='Permerm', fading_value=-2)
 TRANSCENDENT_GRID = ComplexForm("Transcendent grid", target='Self', duration='Imme', fading_value=-3)
@@ -1635,48 +1645,48 @@ KNOCKOUT = Spell('Knockout', direct=True, elemental=False, type='Mana', range='T
 STUNBOLT = Spell('Stunbolt', direct=True, elemental=False, type='Mana', range='Line of Sight', damage='Stun', duration='Instantaneous', drain=-3, category='Combat')
 STUNBALL = Spell('Stunball', direct=True, elemental=False, type='Mana', range='Line of Sight (Area)', damage='Stun', duration='Instantaneous', drain=0, category='Combat')
 # DETECTION SPELLS
-ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-ANALYZE_MAGIC = Spell('Analyze Magic', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-ANALYZE_TRUTH = Spell('Analyze Truth', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
-CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-COMBAT_SENSE = Spell('Combat Sense', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
-DETECT_ENEMIES = Spell('Detect Enemies', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
-DETECT_ENEMIES_EXTENDED = Spell('Detect Enemies (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
-DETECT_INDIVIDUAL = Spell('Detect individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-DETECT_LIFE = Spell('Detect life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-3, category='Detection')
-DETECT_LIFE_EXTENDED = Spell('Detect Life (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=-1, category='Detection')
-DETECT_LjFE_FORM = Spell('Detect Life-form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
-DETECT_LIFE_FORM_EXTENDED = Spell('Detect Life-form (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
-DETECT_MAGIC = Spell('Detect Magic', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
-DETECT_MAGIC_EXTENDED = Spell('Detect Magic (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
-DETECT_OBJECT = Spell('Detect Object', active=True, detect_type='Area', type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Detection')
-MIND_LINK = Spell('Mind Link', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustainustain', drain=-1, category='Detection')
-MIND_PROBE = Spell('Mind Probe', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustainustain', drain=0, category='Detection')
+ANALYZE_DEVICE = Spell('Analyze Device', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustain', drain=-3, category='Detection')
+ANALYZE_MAGIC = Spell('Analyze Magic', active=True, detect_type='Directional', type='Physical', range='Touch', duration='Sustain', drain=-3, category='Detection')
+ANALYZE_TRUTH = Spell('Analyze Truth', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+CLAIRAUDIENCE = Spell('Clairaudience', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+CLAIRVOYANCE = Spell('Clairvoyance', active=False, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+COMBAT_SENSE = Spell('Combat Sense', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_ENEMIES = Spell('Detect Enemies', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_ENEMIES_EXTENDED = Spell('Detect Enemies (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_INDIVIDUAL = Spell('Detect individual', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+DETECT_LIFE = Spell('Detect life', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-3, category='Detection')
+DETECT_LIFE_EXTENDED = Spell('Detect Life (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=-1, category='Detection')
+DETECT_LjFE_FORM = Spell('Detect Life-form', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_LIFE_FORM_EXTENDED = Spell('Detect Life-form (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_MAGIC = Spell('Detect Magic', active=True, detect_type='Area', type='Mana', range='Touch', duration='Sustain', drain=-2, category='Detection')
+DETECT_MAGIC_EXTENDED = Spell('Detect Magic (Extended)', active=True, detect_type='Extended Area', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
+DETECT_OBJECT = Spell('Detect Object', active=True, detect_type='Area', type='Physical', range='Touch', duration='Sustain', drain=-2, category='Detection')
+MIND_LINK = Spell('Mind Link', active=True, detect_type='Psychic', type='Mana', range='Touch', duration='Sustain', drain=-1, category='Detection')
+MIND_PROBE = Spell('Mind Probe', active=True, detect_type='Directional', type='Mana', range='Touch', duration='Sustain', drain=0, category='Detection')
 # HEALTH SPELLS
 ANTIDOTE = Spell('Antidote', essence=False, type='Mana', range='Touch', duration='Permerm', drain=-3, category='Health')
 CURE_DISEASE = Spell('Cure Disease', essence=True, type='Mana', range='Touch', duration='Permerm', drain=-4, category='Health')
-DECREASE_BODY = Spell('Decrease Body', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_AGILITY = Spell('Decrease Agility', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_REACTION = Spell('Decrease Reaction', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_STRENGTH = Spell('Decrease Strength', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_WILLPOWER = Spell('Decrease Willpower', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_LOGIC = Spell('Decrease Logic', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_INTUITION = Spell('Decrease Intuition', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
-DECREASE_CHARISMA = Spell('Decrease Charisma', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-2, category='Health')
+DECREASE_BODY = Spell('Decrease Body', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_AGILITY = Spell('Decrease Agility', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_REACTION = Spell('Decrease Reaction', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_STRENGTH = Spell('Decrease Strength', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_WILLPOWER = Spell('Decrease Willpower', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_LOGIC = Spell('Decrease Logic', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_INTUITION = Spell('Decrease Intuition', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
+DECREASE_CHARISMA = Spell('Decrease Charisma', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-2, category='Health')
 DETOX = Spell('Detox', essence=False, type='Physical', range='Touch', duration='Permerm', drain=-6, category='Health')
 HEAL = Spell('Heal', essence=False, type='Physical', range='Touch', duration='Permerm', drain=-4, category='Health')
-INCREASE_BODY = Spell('Increase Body', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_AGILITY = Spell('Increase Agility', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_REACTION = Spell('Increase Reaction', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_STRENGTH = Spell('Increase Strength', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_WILLPOWER = Spell('Increase Willpower', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_LOGIC = Spell('Increase Logic', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_INTUITION = Spell('Increase Intuition', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_CHARISMA = Spell('Increase Charisma', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=-3, category='Health')
-INCREASE_REFLEXES = Spell('Increase Reflexes', essence=True, type='Physical', range='Touch', duration='Sustainustain', drain=0, category='Health')
-OXYGENATE = Spell('Oxygenate', essence=False, type='Physical', range='Touch', duration='Sustainustain', drain=-5, category='Health')
-PROPHYLAXIS = Spell('Prophylaxis', essence=False, type='Mana', range='Touch', duration='Sustainustain', drain=-4, category='Health')
+INCREASE_BODY = Spell('Increase Body', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_AGILITY = Spell('Increase Agility', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_REACTION = Spell('Increase Reaction', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_STRENGTH = Spell('Increase Strength', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_WILLPOWER = Spell('Increase Willpower', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_LOGIC = Spell('Increase Logic', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_INTUITION = Spell('Increase Intuition', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_CHARISMA = Spell('Increase Charisma', essence=True, type='Physical', range='Touch', duration='Sustain', drain=-3, category='Health')
+INCREASE_REFLEXES = Spell('Increase Reflexes', essence=True, type='Physical', range='Touch', duration='Sustain', drain=0, category='Health')
+OXYGENATE = Spell('Oxygenate', essence=False, type='Physical', range='Touch', duration='Sustain', drain=-5, category='Health')
+PROPHYLAXIS = Spell('Prophylaxis', essence=False, type='Mana', range='Touch', duration='Sustain', drain=-4, category='Health')
 RESIST_PAIN = Spell('Resist Pain', essence=False, type='Mana', range='Touch', duration='Permerm', drain=-4, category='Health')
 STABALISE = Spell('Stabalise', essence=False, type='Mana', range='Touch', duration='Permerm', drain=-4, category='Health')
 # ILLUSION SPELLS
@@ -1888,12 +1898,20 @@ MAGICAL_LODGE_MATERIALS = MagicItem("Magical Lodge Materials", cost=["Force", "*
 """
     AUGMENTATIONS
 """
+CONTROL_RIG_1 = AugmentationCore("Control Rig (Rating 1)", page_ref=453, cost=43_000, rating=1, essence=1, capacity="-", avail=5, legality=RESTRICTED, subtype="Headware", mods=[])
+CONTROL_RIG_2 = AugmentationCore("Control Rig (Rating 2)", page_ref=453, cost=97_000, rating=2, essence=2, capacity="-", avail=10, legality=RESTRICTED, subtype="Headware", mods=[])
+CONTROL_RIG_3 = AugmentationCore("Control Rig (Rating 3)", page_ref=453, cost=208_000, rating=3, essence=3, capacity="-", avail=15, legality=RESTRICTED, subtype="Headware", mods=[])
+CYBEREYES_1 = AugmentationCore("Cybereyes (Rating 1)", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=4, avail=3, subtype='Eyeware', mods=[])
+CYBEREYES_2 = AugmentationCore("Cybereyes (Rating 2)", page_ref=454, cost=6000, rating=2, essence=0.3, capacity=8, avail=6, subtype='Eyeware', mods=[])
+CYBEREYES_3 = AugmentationCore("Cybereyes (Rating 3)", page_ref=454, cost=10000, rating=3, essence=0.4, capacity=12, avail=9, subtype='Eyeware', mods=[])
+CYBEREYES_4 = AugmentationCore("Cybereyes (Rating 4)", page_ref=454, cost=14000, rating=4, essence=0.5, capacity=16, avail=12, subtype='Eyeware', mods=[])
+CYBEREARS_1 = AugmentationCore("Cyberears (Rating 1)", page_ref=454, cost=3000, rating=1, essence=0.2, capacity=4, avail=3, subtype='Earware', mods=[])
+CYBEREARS_2 = AugmentationCore("Cyberears (Rating 2)", page_ref=454, cost=4500, rating=2, essence=0.3, capacity=8, avail=6, subtype='Earware', mods=[])
+CYBEREARS_3 = AugmentationCore("Cyberears (Rating 3)", page_ref=454, cost=7500, rating=3, essence=0.4, capacity=12, avail=9, subtype='Earware', mods=[])
+CYBEREARS_4 = AugmentationCore("Cyberears (Rating 4)", page_ref=454, cost=11000, rating=4, essence=0.5, capacity=16, avail=12, subtype='Earware', mods=[])
 # HEADWARE
 COMMLINK = Augmentation("Commlink (Aug)", page_ref=453, cost=["CommlinkCost", "+", 2000], essence=0.2, capacity=2, avail=0, cyberlimbs=True, subtype="Headware", requires=["Subtype", "Commlink"], )
-CONTROL_RIG_1 = Augmentation("Control Rig (Rating 1)", page_ref=453, cost=43_000, rating=1, essence=1, capacity="-", avail=5, legality=RESTRICTED, subtype="Headware", )
-CONTROL_RIG_2 = Augmentation("Control Rig (Rating 2)", page_ref=453, cost=97_000, rating=2, essence=2, capacity="-", avail=10, legality=RESTRICTED, subtype="Headware", )
-CONTROL_RIG_3 = Augmentation("Control Rig (Rating 3)", page_ref=453, cost=208_000, rating=3, essence=3, capacity="-", avail=15, legality=RESTRICTED, subtype="Headware",)
-CORTEX_BOMB_KINK = Augmentation("Cortex Bomb (Kink)", page_ref=453, cost=10_000, essence=0, capacity=1, avail=12, legality=FORBIDDEN, cyberlimbs=True, subtype="Headware", )
+CORTEX_BOMB_KINK = Augmentation("Cortex Bomb (Kink)", page_ref=453, cost=10_000, essence=0, capacity=1, avail=12, legality=FORBIDDEN, cyberlimbs=True, subtype="Headware")
 CORTEX_BOMB_MICROBOMB = Augmentation("Cortex Bomb (Microbomb)", page_ref=453, cost=25_000, essence=0, capacity=2, avail=16, legality=FORBIDDEN, cyberlimbs=True, subtype="Headware", )
 CORTEX_BOMB_AREA = Augmentation("Cortex Bomb (Area)", page_ref=453, cost=40_000, essence=0, capacity=3, avail=20, legality=FORBIDDEN, cyberlimbs=True, subtype="Headware", )
 CYBERDECK_AUG = Augmentation("Cyberdeck", page_ref=453, cost=["DeckCost", "+", 5000], essence=0.4, capacity=4, avail=5, legality=RESTRICTED, cyberlimbs=True, subtype="Headware", requires=["Subtype", "Cyberdeck"], )
@@ -1907,30 +1925,22 @@ TOOTH_COMPARTMENT = Augmentation("Tooth Compartment", page_ref=453, cost=800, es
 ULTRASOUND_SENSOR_1_6 = Augmentation("Ultrasound Sensor", page_ref=453, cost=["Rating", "*", 12_000], rating=[1, "to", 6], essence=0.25, capacity=2, avail=10, cyberlimbs=True, subtype="Headware", )
 VOICE_MODULATOR_1_6 = Augmentation("Voice Modulator", page_ref=453, cost=["Rating", "*", 5000], rating=[1, "to", 6], essence=0.2, capacity="-", avail=["Rating", "*", 3], legality=FORBIDDEN, subtype="Headware", )
 # EYEWARE
-CYBEREYES_1 = Augmentation("Cybereyes (Rating 1)", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=4, avail=3, cyberlimbs=False, subtype='Eyeware', base=True, mods=[])
-CYBEREYES_2 = Augmentation("Cybereyes (Rating 2)", page_ref=454, cost=6000, rating=2, essence=0.3, capacity=8, avail=6, cyberlimbs=False, subtype='Eyeware', base=True, mods=[])
-CYBEREYES_3 = Augmentation("Cybereyes (Rating 3)", page_ref=454, cost=10000, rating=3, essence=0.4, capacity=12, avail=9, cyberlimbs=False, subtype='Eyeware', base=True, mods=[])
-CYBEREYES_4 = Augmentation("Cybereyes (Rating 4)", page_ref=454, cost=14000, rating=4, essence=0.5, capacity=16, avail=12, cyberlimbs=False, subtype='Eyeware', base=True, mods=[])
 FLARE_COMPENSATION = Augmentation("Flare Compensation", cost=250, page_ref=444, rating=1, avail=1, capacity=1, subtype="Eyeware", essence=0.1)
-IMAGE_LINK = Augmentation("Image Link", page_ref=454, cost=1000, rating=1, essence=0.1, capacity=0, avail=4, cyberlimbs=False, subtype="Eyeware")
-LOW_LIGHT_VISION = Augmentation("Low Light Vision", page_ref=454, cost=1500, rating=1, essence=0.1, capacity=4, avail=4, cyberlimbs=False, subtype="Eyeware")
-OCULAR_DRONE = Augmentation("Ocular Drone", page_ref=454, cost=6000, rating=1, essence=0, capacity=6, avail=4, cyberlimbs=False, subtype="Eyeware")
-RETINAL_DUPLICATION = Augmentation("Retinal Duplication", page_ref=454, cost=["Rating", "*", 20000], rating=[1, 'to', 6], essence=0.1, capacity=1, avail=16, legality=FORBIDDEN, cyberlimbs=False, subtype="Eyeware")
-SMARTLINK = Augmentation("Smartlink", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=3, avail=8, legality=RESTRICTED, cyberlimbs=False, subtype="Eyeware")
-THERMOGRAPHIC_VISION_AUG = Augmentation("Thermographic Vision", page_ref=454, cost=1500, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
-VISION_ENHANCEMENT_AUG = Augmentation("Vision Enhancement", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, subtype='Eyeware', )
-VISION_MAGNIFICATION_AUG = Augmentation("Vision Magnification", page_ref=454, cost=2000, essence=0.1, capacity=2, avail=4, cyberlimbs=True, subtype='Eyeware', )
+IMAGE_LINK = Augmentation("Image Link", page_ref=454, cost=1000, rating=1, essence=0.1, capacity=0, avail=4, subtype="Eyeware")
+LOW_LIGHT_VISION = Augmentation("Low Light Vision", page_ref=454, cost=1500, rating=1, essence=0.1, capacity=4, avail=4, subtype="Eyeware")
+OCULAR_DRONE = Augmentation("Ocular Drone", page_ref=454, cost=6000, rating=1, essence=0, capacity=6, avail=4, subtype="Eyeware")
+RETINAL_DUPLICATION = Augmentation("Retinal Duplication", page_ref=454, cost=["Rating", "*", 20000], rating=[1, 'to', 6], essence=0.1, capacity=1, avail=16, legality=FORBIDDEN, subtype="Eyeware")
+SMARTLINK = Augmentation("Smartlink", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=3, avail=8, legality=RESTRICTED, subtype="Eyeware")
+THERMOGRAPHIC_VISION_AUG = Augmentation("Thermographic Vision", page_ref=454, cost=1500, essence=0.1, capacity=2, avail=4, subtype='Eyeware', )
+VISION_ENHANCEMENT_AUG = Augmentation("Vision Enhancement", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], subtype='Eyeware', )
+VISION_MAGNIFICATION_AUG = Augmentation("Vision Magnification", page_ref=454, cost=2000, essence=0.1, capacity=2, avail=4, subtype='Eyeware', )
 # EARWARE
-CYBEREARS_1 = Augmentation("Cyberears (Rating 1)", page_ref=454, cost=3000, rating=1, essence=0.2, capacity=4, avail=3, cyberlimbs=False, subtype='Earware', location="Ears", base=True, mods=[])
-CYBEREARS_2 = Augmentation("Cyberears (Rating 2)", page_ref=454, cost=4500, rating=2, essence=0.3, capacity=8, avail=6, cyberlimbs=False, subtype='Earware', location="Ears", base=True, mods=[])
-CYBEREARS_3 = Augmentation("Cyberears (Rating 3)", page_ref=454, cost=7500, rating=3, essence=0.4, capacity=12, avail=9, cyberlimbs=False, subtype='Earware', location="Ears", base=True, mods=[])
-CYBEREARS_4 = Augmentation("Cyberears (Rating 4)", page_ref=454, cost=11000, rating=4, essence=0.5, capacity=16, avail=12, cyberlimbs=False, subtype='Earware', location="Ears", base=True, mods=[])
-AUDIO_ENHANCEMENT_AUG_1_3 = Augmentation("Audio Enhancement", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, subtype='Earware', location="Ears")
-BALANCE_AUGMENTER = Augmentation("Balance Augmenter", page_ref=454, cost=8000, essence=0.1, capacity=4, avail=8, cyberlimbs=True, subtype='Earware', location="Ears")
-DAMPER = Augmentation("Damper", page_ref=454, cost=2250, essence=0.1, capacity=1, avail=6, cyberlimbs=True, subtype='Earware', location="Ears")
-SELECT_SOUND_FILTER_AUG_1_6 = Augmentation("Select Sound Filter", page_ref=454, cost=["Rating", "*", 3500], rating=[1, "to", 6], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], cyberlimbs=True, subtype='Earware', location="Ears")
-SOUND_LINK = Augmentation("Sound Link", page_ref=454, cost=1000, essence=0.1, capacity="-", avail=4, cyberlimbs=False, as_standard=True, subtype='Earware', location="Ears")
-SPATIAL_RECOGNIZER = Augmentation("Spatial Recognizer", page_ref=454, cost=4000, essence=0.1, capacity=2, avail=8, cyberlimbs=True, subtype='Earware', location="Ears")
+AUDIO_ENHANCEMENT_AUG_1_3 = Augmentation("Audio Enhancement", page_ref=454, cost=["Rating", "*", 4000], rating=[1, "to", 3], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], subtype='Earware', location="Ears")
+BALANCE_AUGMENTER = Augmentation("Balance Augmenter", page_ref=454, cost=8000, essence=0.1, capacity=4, avail=8, subtype='Earware', location="Ears")
+DAMPER = Augmentation("Damper", page_ref=454, cost=2250, essence=0.1, capacity=1, avail=6, subtype='Earware', location="Ears")
+SELECT_SOUND_FILTER_AUG_1_6 = Augmentation("Select Sound Filter", page_ref=454, cost=["Rating", "*", 3500], rating=[1, "to", 6], essence=0.1, capacity=["Rating"], avail=["Rating", "*", 3], subtype='Earware', location="Ears")
+SOUND_LINK = Augmentation("Sound Link", page_ref=454, cost=1000, essence=0.1, capacity="-", avail=4, as_standard=True, subtype='Earware', location="Ears")
+SPATIAL_RECOGNIZER = Augmentation("Spatial Recognizer", page_ref=454, cost=4000, essence=0.1, capacity=2, avail=8, subtype='Earware', location="Ears")
 # BODYWARE
 BONE_LACING_PLASTIC = Augmentation("Bone Lacing (Plastic)", page_ref=456, cost=8000, essence=0.5, capacity="-", avail=8, legality=RESTRICTED, cyberlimbs=False, subtype='Bodyware', location="Body")
 BONE_LACING_ALUMINUM = Augmentation("Bone Lacing (Aluminum)", page_ref=456, cost=18000, essence=1, capacity="-", avail=12, legality=RESTRICTED, cyberlimbs=False, subtype='Bodyware', location="Body")
@@ -1968,11 +1978,11 @@ CYBERLIMB_EN_AGILITY = Augmentation("Cyberlimb Enhancement - Agility", page_ref=
 CYBERLIMB_EN_ARMOR = Augmentation("Cyberlimb Enchancement - Armor", page_ref=457, cost=["Rating", "*", 3000], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 5], subtype='Cyberlimbs Enhancement')
 CYBERLIMB_EN_STRENGTH = Augmentation("Cyberlimb Enhancement - Strenght", page_ref=457, cost=["Rating", "*", 6500], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 3], legality=RESTRICTED, subtype='Cyberlimbs Enhancement')
 # CYBERLIMB ACCESSORIES
-CYBERARM_GYROMOUNT = Augmentation("Cyberarm Gyromount", page_ref=457, cost=6000, essence="-", capacity=8, avail=12, legality=FORBIDDEN, cymberlimbs=True, subtype='Cyberlimb Accessory', )
-CYBERARM_SLIDE = Augmentation("Cyberarm Slide", page_ref=457, cost=3000, essence="-", capacity=3, avail=12, legality=RESTRICTED, cymberlimbs=True, subtype='Cyberlimb Accessory', )
-CYBER_HOLSTER = Augmentation("Cyber Holster", page_ref=457, cost=2000, essence="-", capacity=5, avail=8, legality=RESTRICTED, cymberlimbs=True, subtype='Cyberlimb Accessory', )
-HYDRAULIC_JACKS_1_6 = Augmentation("Hydraulic Jacks", page_ref=457, cost=["Rating", "*", 2500], rating=[1, "to", 6], essence="-", capacity=["Rating"], avail=9, cymberlimbs=True, subtype='Cyberlimb Accessory', )
-LARGE_SMUGGLING_COMPARMENT = Augmentation("Large Smuggling Comparment", page_ref=457, cost=8000, essence="-", capacity=5, avail=6, cymberlimbs=True, subtype='Cyberlimb Accessory', )
+CYBERARM_GYROMOUNT = Augmentation("Cyberarm Gyromount", page_ref=457, cost=6000, essence="-", capacity=8, avail=12, legality=FORBIDDEN, cymberlimbs=True, subtype='CylimbAcc', )
+CYBERARM_SLIDE = Augmentation("Cyberarm Slide", page_ref=457, cost=3000, essence="-", capacity=3, avail=12, legality=RESTRICTED, cymberlimbs=True, subtype='CylimbAcc', )
+CYBER_HOLSTER = Augmentation("Cyber Holster", page_ref=457, cost=2000, essence="-", capacity=5, avail=8, legality=RESTRICTED, cymberlimbs=True, subtype='CylimbAcc', )
+HYDRAULIC_JACKS_1_6 = Augmentation("Hydraulic Jacks", page_ref=457, cost=["Rating", "*", 2500], rating=[1, "to", 6], essence="-", capacity=["Rating"], avail=9, cymberlimbs=True, subtype='CylimbAcc', )
+LARGE_SMUGGLING_COMPARMENT = Augmentation("Large Smuggling Comparment", page_ref=457, cost=8000, essence="-", capacity=5, avail=6, cymberlimbs=True, subtype='CylimbAcc', )
 # CYBER IMPLANT WEAPONS - AUGMENTATION ENTRY
 CYBER_HOLD_OUT_PISTOL = Augmentation("Hold Out Pistol (Cyber Implant)", page_ref=458, cost=2000, essence=0.1, capacity=2, avail=8, legality=RESTRICTED, cyberlimbs=True, subtype="Cyber Implant Weapons", )
 CYBER_LIGHT_PISTOL = Augmentation("Light Pistol (Cymber Implant)", page_ref=458, cost=3900, essence=0.25, capacity=4, avail=10, legality=RESTRICTED, cyberlimbs=True, subtype="Cyber Implant Weapons", )
@@ -2647,3 +2657,103 @@ SAEDER_KRUPP_DIREKTIONSSEKRETAR = Vehicle("Saeder Krupp Direktionssekretar", cos
 SHAIWASE_I_DOLL = Vehicle("Shaiwase I Doll", cost=20000, avail=4, page_ref="R5.0, 186", subtype="Anthropomorphic Drone", skill_req=None, rulebook="Rigger 5.0")
 # DRONE MISSILE
 ARES_GARUDA = Vehicle("Ares Garuda", cost=8500, avail=20, legality=FORBIDDEN, page_ref="R5.0, 186", subtype="Drone Missile", skill_req=PILOT_AIRCRAFT, rulebook="Rigger 5.0")
+
+
+"""
+    CHROME FLESH RULESBOOK
+"""
+"""
+    COMPLEX FORM
+    I have no idea what a duration of 'E' means and the book isn't fond of giving away of said information easily
+"""
+CORIOLIS = ComplexForm("Coriolis", target='Persona', duration='E', fading_value=3, rulebook='Chrome Flesh')
+
+"""
+    AUGMENTATIONS
+"""
+# HEADWARE
+ATTENTION_COPROCESSOR = Augmentation('Attention Coprocessor', page_ref='CF, 223', cost=3_000, essence=0.2, capacity=1, avail=8, cyberlimbs=True, subtype='Headware')
+CHIPJACK = Augmentation('Chipjack', page_ref='CF, 223', cost=["Rating", "*", 1000], rating=[1, "to", 6], capacity="-", avail=["Rating", "*", 2], subtype="Headware")
+DREAM_LINK = Augmentation("Dream Link", page_ref='CF, 223', cost=1000, essence=0.1, capacity="-", avail=8, subtype="Headware")
+FALSE_FACE = Augmentation("False Face", page_ref='CF, 223', cost=20000, essence=0.5, capacity=8, avail=12, legality=RESTRICTED, cyberlimbs=True, subtype="Headware")
+KNOWLEDGE_HARDWIRES_1_6 = Augmentation("Knowledge_hardwires_1_6", page_ref='CF, 223', cost=["Rating", "*", 2000], rating=[1, "to", 6], essence=["Rating", "*", 0.05], capacity="-", avail=["Rating", "*", 1],  subtype="Headware")
+MATH_SPU = Augmentation("Math_spu", page_ref='CF, 223', cost=2000, essence=0.1, capacity=1, avail=8, cyberlimbs=True, subtype="Headware")
+ORIENTATION_SYSTEM = Augmentation("Orientation_system", page_ref='CF, 223', cost=500, essence=0.2, capacity=1, avail=4, cyberlimbs=True, subtype="Headware")
+RADAR_SENSOR_1_4 = Augmentation("Radar_sensor_1_4", page_ref='CF, 223', cost=["Rating", "*", 4000], rating=[1, "to", 4], essence=["Rating", "*", 0.25], capacity=["Rating", "*", 1], avail=["Rating", "*", 3],  cyberlimbs=True, subtype="Headware")
+SYNTHLINK = Augmentation("Synthlink", page_ref='CF, 223', cost=1000, essence=0.1, capacity=1, avail=4, cyberlimbs=True, subtype="Headware")
+VISUALIZER = Augmentation("Visualizer", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, subtype="Headware")
+VOICE_MASK = Augmentation("Voice_mask", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, legality=FORBIDDEN, subtype="Headware")
+# EYEWARE
+ADDITIONAL_EYE_MOUNT
+EYE_LIGHT_SYSTEM
+EYE_PROTECTORS
+MICROSCOPIC_LENSES
+SPIDER_EYES
+TARGETING_LASER
+TARGETING_LASER_INFRARED
+# EARWARE
+ANTENNAE
+AUDIO_ANALYSER
+EAR_PROTECTORS
+INCRESED_SPECTRUM
+MODULAR_MOUNT
+TRANSLAT_EAR
+# BODYWARE
+ACTIVE_HARDWIRES
+AUTO_INJECTOR_RESUABLE
+AUTO_INJECTOR_EXPANDED_RESERVOIR
+AUTO_INJECTOR_KILLSWITCH
+BALANCE_TAIL
+BIOWASTE_STORAGE
+BREAST_IMPLANT
+BREAST_IMPLANT_2
+CYBERFINS
+CYBER_GENITALIA
+CYBERSAFETY
+FIBEROPTIC_HAIR
+FLEX_HAND
+FOOT_ANCHOR
+GASTRIC_NEUROSTIMULATOR
+INTERNAL_ROUTER
+SMALL_LED_TATTOO
+MEDIUM_LED_TATTOO
+LARGE_LED_TATTOO
+MAGNETIC_SYSTEM
+METATYPE_REDUCTION
+MOVE_BY_WIRE_RATING_1
+MOVE_BY_WIRE_RATING_2
+MOVE_BY_WIRE_RATING_3
+NUTRITION_STORAGE_SYSTEM
+OXSYS_CYBERGILL
+RETRACTABLE_CLIMBING_CLAWS
+SKIN_TONER
+SKIN_TONER_CHARMELEON_PROCESSOR
+SMART_ARTICULATION
+STEAMERS
+TOUCH_LINK
+# CYBERLIMBS
+PRIMATIVE_HAND
+PRIMATIVE_FOOT
+PRIMATIVE_PARTIAL_ARM
+PRIMATIVE_PARTIAL_LEG
+PRIMATIVE_FULL_ARM
+PRIMATIVE_FULL_LEG
+BUILT_IN_MEDKIT
+BUILT_IN_TOOL_KIT
+BULK_MODIFICATION_1_6
+CYBERFINGERS_CYBERLIGHT
+CYBERFINGERS_CYBERLIGHTER
+CYBERFINGERS_GRENADE
+CYBERFINGERS_PISTOL
+CYBERLIMB_OPTIMISATION = Augmentation('Cyberlimb Optimisation', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], subtype='CylimbAcc', category='Optimisation')
+CYBERLIMB_OPTIMISATION_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
+CYBERLIMB_OPTIMISATION_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
+CYBERLIMB_OPTIMISATION_KALENJIN = Augmentation('Kalenjin (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=RUNNING)
+CYBERLIMB_OPTIMISATION_KUROKO = Augmentation('Kuroko (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=DISGUISE)
+CYBERLIMB_OPTIMISATION_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PISTOLS)
+CYBERLIMB_OPTIMISATION_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
+CYBERLIMB_OPTIMISATION_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
+CYBERLIMB_OPTIMISATION_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
+
+
+FULL_ARM_OBV = Augmentation("Cyberlimb - Full Arm (Obvious)", page_ref=457, cost=15000, essence=1, capacity=15, avail=4, subtype='Cyberlimbs', location="Full Arm", base=True, mods=[])
