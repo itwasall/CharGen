@@ -504,6 +504,7 @@ def get_skills(
                 ch.Skills[k] = d
         else:
             pass
+
     skills = [skill for skill in Core.Skill.items if
               skill.skill_type == "Active"]
     groups = [group for group in Core.SkillGroup.items]
@@ -576,6 +577,11 @@ def skills_remove_magic_resonance(ch: Core.Character,
             group_list[sk] = 0
 
     if ch.MagicResoUser == 'Aspected Magician':
+        for skill in ch.Skills.keys():
+            if skill in Core.MAGIC_SKILLS:
+                return skills_remove_aspected_magician(ch, skill_list, group_list, skill)
+            else:
+                continue
         usable_magic_group = random.choice(Core.MAGIC_SKILL_GROUPS)
         for magic_skill_group in Core.MAGIC_SKILL_GROUPS:
             if magic_skill_group != usable_magic_group:
@@ -595,6 +601,18 @@ def skills_remove_magic_resonance(ch: Core.Character,
         for sk in Core.RESONANCE_SKILLS:
             skill_list[sk] = 0
         group_list[Core.TASKING] = 0
+    return skill_list, group_list
+
+
+def skills_remove_aspected_magician(ch: Core.Character, skill_list, group_list, skill) -> (dict, dict):
+    """
+        If priority 'B' or 'C' is chosen for Magic or Resonance, and 'Aspected Magician' is selected,
+            at this point in execution the character will have already rolled their magic skills, but
+            no more can be added, so they'll need to be removed here
+    """
+    for group in Core.MAGIC_SKILL_GROUPS:
+        if skill not in group:
+            group_list[group] = 0
     return skill_list, group_list
 
 
@@ -1285,4 +1303,3 @@ if __name__ == "__main__":
     #     print("running too long, killing process")
     #     p.terminate()
     #    p.join()
-
