@@ -2684,53 +2684,54 @@ SYNTHLINK = Augmentation("Synthlink", page_ref='CF, 223', cost=1000, essence=0.1
 VISUALIZER = Augmentation("Visualizer", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, subtype="Headware")
 VOICE_MASK = Augmentation("Voice_mask", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, legality=FORBIDDEN, subtype="Headware")
 # EYEWARE
-ADDITIONAL_EYE_MOUNT
-EYE_LIGHT_SYSTEM
-EYE_PROTECTORS
-MICROSCOPIC_LENSES
-SPIDER_EYES
-TARGETING_LASER
-TARGETING_LASER_INFRARED
+ADDITIONAL_EYE_MOUNT = Augmentation("Additional_eye_mount", page_ref='CF, 223', cost=1000, essence=0.2, capacity=2 avail=, legality=, subtype='Eyeware')
+EYE_LIGHT_SYSTEM = Augmentation("Eye_light_system", page_ref='CF, 223', cost=500, essence=0.1, capacity=2 avail=, legality=, subtype='Eyeware')
+EYE_PROTECTORS = Augmentation("Eye_protectors", page_ref='CF, 223', cost=100, essence=0.1, capacity=2 avail=, legality=, subtype='Eyeware')
+MICROSCOPIC_LENSES = Augmentation("Microscopic_lenses", page_ref='CF, 223', cost=1000, essence=0.2, capacity=3 avail=, legality=, subtype='Eyeware')
+SPIDER_EYES = AugmentationCore("Spider_eyes", page_ref='CF, 223', cost=2000, essence=0.2, capacity=2, avail=, legality=, subtype='Eyeware')
+TARGETING_LASER = Augmentation("Targeting_laser", page_ref='CF, 223', cost=1000, essence=0.2, capacity=4, avail=, legality=, subtype='Eyeware')
+TARGETING_LASER_INFRARED = Augmentation("Targeting_laser_infrared", page_ref='CF, 223', cost=1250, essence=0.2, capacity=4, avail=, legality=, subtype='Eyeware')
 # EARWARE
-ANTENNAE
-AUDIO_ANALYSER
-EAR_PROTECTORS
-INCRESED_SPECTRUM
-MODULAR_MOUNT
-TRANSLAT_EAR
+ANTENNAE = Augmentation("Antennae", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
+AUDIO_ANALYSER = Augmentation("Audio_analyser", page_ref='CF, 223', cost=1000, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
+EAR_PROTECTORS = Augmentation("Ear_protectors", page_ref='CF, 223', cost=250, essence=0.05, capacity=1, avail=, legality=, subtype='Earware')
+INCRESED_SPECTRUM = Augmentation("Incresed_spectrum", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
+MODULAR_MOUNT = Augmentation("Modular_mount", page_ref='CF, 223', cost=250, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
+TRANSLAT_EAR = Augmentation("Translat_ear", page_ref='CF, 223', cost=["Rating", "*", 2000], essence=0.1, capacity=["Rating", "*", 1], avail=, legality=, subtype='Earware')
 # BODYWARE
-ACTIVE_HARDWIRES
-AUTO_INJECTOR_RESUABLE
-AUTO_INJECTOR_EXPANDED_RESERVOIR
-AUTO_INJECTOR_KILLSWITCH
-BALANCE_TAIL
-BIOWASTE_STORAGE
-BREAST_IMPLANT
-BREAST_IMPLANT_2
-CYBERFINS
-CYBER_GENITALIA
-CYBERSAFETY
-FIBEROPTIC_HAIR
-FLEX_HAND
-FOOT_ANCHOR
-GASTRIC_NEUROSTIMULATOR
-INTERNAL_ROUTER
-SMALL_LED_TATTOO
-MEDIUM_LED_TATTOO
-LARGE_LED_TATTOO
-MAGNETIC_SYSTEM
-METATYPE_REDUCTION
-MOVE_BY_WIRE_RATING_1
-MOVE_BY_WIRE_RATING_2
-MOVE_BY_WIRE_RATING_3
-NUTRITION_STORAGE_SYSTEM
-OXSYS_CYBERGILL
-RETRACTABLE_CLIMBING_CLAWS
-SKIN_TONER
-SKIN_TONER_CHARMELEON_PROCESSOR
-SMART_ARTICULATION
-STEAMERS
-TOUCH_LINK
+ACTIVE_HARDWIRES = Augmentation("Active_hardwires", page_ref='CF, 223', cost=["Rating", "*", 4000], essence=["Rating", "*", 0.05], capacity=, avail=, legality=, subtype='Bodyware')
+AUTO_INJECTOR = Augmentation("Auto_injector", page_ref='CF, 223', cost=["Rating", "*", 1000], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
+AUTO_INJECTOR_RESUABLE = Augmentation("Auto_injector_resuable", page_ref='CF, 223', cost=["Contents", "+", 500], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
+AUTO_INJECTOR_EXPANDED_RESERVOIR = Augmentation("Auto_injector_expanded_reservoir", page_ref='CF, 223', cost=["Contents", "+", 250], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
+AUTO_INJECTOR_KILLSWITCH = Augmentation("Auto_injector_killswitch", page_ref='CF, 223', cost=["Contents", "+", 750], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
+BALANCE_TAIL = Augmentation("Balance_tail", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
+BIOWASTE_STORAGE = Augmentation("Biowaste_storage", page_ref='CF, 223', cost=["Rating", "*", 500], essence=,["Rating", "*", .1] capacity=, avail=, legality=, subtype='Bodyware')
+BREAST_IMPLANT = Augmentation("Breast_implant", page_ref='CF, 223', cost=250, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
+BREAST_IMPLANT_2 = Augmentation("Breast_implant_2", page_ref='CF, 223', cost=1000, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
+CYBERFINS = Augmentation("Cyberfins", page_ref='CF, 223', cost=500, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
+CYBER_GENITALIA = Augmentation("Cyber_genitalia", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
+CYBERSAFETY = Augmentation("Cybersafety", page_ref='CF, 223', cost=100, essence="-", capacity=, avail=, legality=, subtype='Bodyware')
+FIBEROPTIC_HAIR = Augmentation("Fiberoptic_hair", page_ref='CF, 223', cost=100, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
+FLEX_HAND = Augmentation("Flex_hand", page_ref='CF, 223', cost=1500, essence=.15, capacity=, avail=, legality=, subtype='Bodyware')
+FOOT_ANCHOR = Augmentation("Foot_anchor", page_ref='CF, 223', cost=2000, essence=.22, capacity=, avail=, legality=, subtype='Bodyware')
+GASTRIC_NEUROSTIMULATOR = Augmentation("Gastric_neurostimulator", page_ref='CF, 223', cost=2000, essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
+INTERNAL_ROUTER = Augmentation("Internal_router", page_ref='CF, 223', cost=15000, essence=.7, capacity=, avail=, legality=, subtype='Bodyware')
+SMALL_LED_TATTOO = Augmentation("Small_led_tattoo", page_ref='CF, 223', cost=100, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
+MEDIUM_LED_TATTOO = Augmentation("Medium_led_tattoo", page_ref='CF, 223', cost=500, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
+LARGE_LED_TATTOO = Augmentation("Large_led_tattoo", page_ref='CF, 223', cost=1000, essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
+MAGNETIC_SYSTEM = Augmentation("Magnetic_system", page_ref='CF, 223', cost=["Contents", "+", 1000], essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
+METATYPE_REDUCTION = Augmentation("Metatype_reduction", page_ref='CF, 223', cost=6000, essence=.3, capacity=, avail=, legality=, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_1 = Augmentation("Move_by_wire_rating_1", page_ref='CF, 223', cost=40000, essence=3, capacity=, avail=, legality=, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_2 = Augmentation("Move_by_wire_rating_2", page_ref='CF, 223', cost=125_000, essence=4, capacity=, avail=, legality=, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_3 = Augmentation("Move_by_wire_rating_3", page_ref='CF, 223', cost=205_000, essence=5, capacity=, avail=, legality=, subtype='Bodyware')
+NUTRITION_STORAGE_SYSTEM = Augmentation("Nutrition_storage_system", page_ref='CF, 223', cost=["Rating", "*", 500], essence=["Rating", "*", 0.1], capacity=, avail=, legality=, subtype='Bodyware')
+OXSYS_CYBERGILL = Augmentation("Oxsys_cybergill", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
+RETRACTABLE_CLIMBING_CLAWS = Augmentation("Retractable_climbing_claws", page_ref='CF, 223', cost=["Rating", "*", 13000], essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
+SKIN_TONER = Augmentation("Skin_toner", page_ref='CF, 223', cost=2000, essence=.5, capacity=, avail=, legality=, subtype='Bodyware')
+SKIN_TONER_CHARMELEON_PROCESSOR = Augmentation("Skin_toner_charmeleon_processor", page_ref='CF, 223', cost=8000, essence=.3, capacity=, avail=, legality=, subtype='Bodyware')
+SMART_ARTICULATION = Augmentation("Smart_articulation", page_ref='CF, 223', cost=6000, essence=.5, capacity=, avail=, legality=, subtype='Bodyware')
+STEAMERS = Augmentation("Steamers", page_ref='CF, 223', cost=["Contents", "+", 500], essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
+TOUCH_LINK = Augmentation("Touch_link", page_ref='CF, 223', cost=1000, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
 # CYBERLIMBS
 PRIMATIVE_HAND
 PRIMATIVE_FOOT
