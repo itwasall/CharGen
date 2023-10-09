@@ -2745,15 +2745,79 @@ CYBERFINGERS_CYBERLIGHT
 CYBERFINGERS_CYBERLIGHTER
 CYBERFINGERS_GRENADE
 CYBERFINGERS_PISTOL
-CYBERLIMB_OPTIMISATION = Augmentation('Cyberlimb Optimisation', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], subtype='CylimbAcc', category='Optimisation')
-CYBERLIMB_OPTIMISATION_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
-CYBERLIMB_OPTIMISATION_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
-CYBERLIMB_OPTIMISATION_KALENJIN = Augmentation('Kalenjin (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=RUNNING)
-CYBERLIMB_OPTIMISATION_KUROKO = Augmentation('Kuroko (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=DISGUISE)
-CYBERLIMB_OPTIMISATION_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PISTOLS)
-CYBERLIMB_OPTIMISATION_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
-CYBERLIMB_OPTIMISATION_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
-CYBERLIMB_OPTIMISATION_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
+CYBERLIMB_OP = Augmentation('Cyberlimb Optimisation', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], subtype='CylimbAcc', category='Optimisation')
+CYBERLIMB_OP_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
+CYBERLIMB_OP_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
+CYBERLIMB_OP_KALENJIN = Augmentation('Kalenjin (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=RUNNING)
+CYBERLIMB_OP_KUROKO = Augmentation('Kuroko (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=DISGUISE)
+CYBERLIMB_OP_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PISTOLS)
+CYBERLIMB_OP_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
+CYBERLIMB_OP_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
+CYBERLIMB_OP_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
+DIGIGRADE_LEGS
+GRAPPLE_HAND
+IMPROVED_SYNTHSKIN_1_4
+LIMINAL_BODY_CENTAUR
+LIMINAL_BODY_WHEELED
+LIMINAL_BODY_TANK
+MONKEY_FOOT
+MODULAR_CONNECTOR_WRIST
+MODULAR_CONNECTOR_ANKLE
+MODULAR_CONNECTOR_ELBOW
+MODULAR_CONNECTOR_KNEE
+MODULAR_CONNECTOR_SHOULDER
+MODULAR_CONNECTOR_HIP
+MODULAR_LIMB_HAND
+MODULAR_LIMB_FOOT
+MODULAR_LIMB_PARTIAL_ARM
+MODULAR_LIMB_PARTIAL_LEG
+MODULAR_LIMB_FULL_ARM
+MODULAR_LIMB_FULL_LEG
+PARTIAL_CYBERSKULL
+RAPTOR_FOOT
+SKATES
+SKIMMERS
+SNAKE_FINGERS
+TELESCOPIC_LIMBS_1_2
+WATER_JET
+# BIOWARE
+AMPLIFIED_IMMUNE_SYSTEM_1_4
+CHEMICAL_GLAND
+CHEMICAL_GLAND_EXHALATION_SPRAY
+CHEMICAL_GLAND_SPIT
+CHEMICAL_GLAND_WEAPON_RESERVOIR
+CHEMICAL_GLAND_EXPANDED_RESERVOIR
+ELASTIC_JOINTS
+EXPANDED_VOLUME_1_4
+GILLS
+HAND_AND_FOOT_WEBBING
+HEARING_ENHANCEMENT
+JOINT_REPLACEMENT
+NEPHRITIC_SCREEN_1_4
+NICTITARTING_MEMBRANE
+ORTHOSKIN_CHEMICAL_REPULSION
+ORTHOSKIN_DRAGON_HIDE
+ORTHOSKIN_ELECTROSHOCK
+ORTHOSKIN_INSULATION
+ORTHOSKIN_PENGUIN_BLUBBER
+ORTHOSKIN_SEALSKIN
+ORTHOSKIN_SHARKSKIN
+REPLACEMENT_LIMB_FINGER
+REPLACEMENT_LIMB_TOE
+REPLACEMENT_LIMB_HAND
+REPLACEMENT_LIMB_FOOT
+REPLACEMENT_LIMB_PARTIAL_ARM
+REPLACEMENT_LIMB_PARTIAL_LEG
+REPLACEMENT_LIMB_FULL_ARM
+REPLACEMENT_LIMB_FULL_LEG
+SPIDERSILK_GLAND
+SPINAL_RE_ALIGNMENT
+TACTILE_SENSITVITIY
+TAIL
+TAIL_PREHENSILE
+TROLL_EYES
+VOCAL_RANGE_ENHANCER
+VOCAL_RANGE_EXPANDER
 
 
 FULL_ARM_OBV = Augmentation("Cyberlimb - Full Arm (Obvious)", page_ref=457, cost=15000, essence=1, capacity=15, avail=4, subtype='Cyberlimbs', location="Full Arm", base=True, mods=[])
