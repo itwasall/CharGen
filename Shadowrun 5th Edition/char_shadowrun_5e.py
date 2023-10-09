@@ -66,8 +66,8 @@ def generate_character() -> Core.Character:
     add_contacts(character, karma_log)
     get_gear(character, nuyen)
     leftover_karma(character, karma_log)
-    print_shit(character, nuyen, karma_log)
-    return character
+    # print_shit(character, nuyen, karma_log)
+    return character, nuyen, karma_log
 
 
 def get_priorities(character: Core.Character, defaults=None) -> dict:
@@ -1055,7 +1055,49 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
     return
 
 
-def format_skills(character_skills) -> None:
+def buy_gear(ch: Core.Character, nuyen: int) -> None:
+    vehicle_skill_ratings = [
+        i.rating for i in ch.Skills.values() if
+        i in Core.VEHICLE_SKILLS]
+    print(vehicle_skill_ratings)
+    return
+
+
+def alt_generate_character():
+    character = Core.Character()
+    if not character:
+        pass
+    table_choices = ['A', 'B', 'C', 'D', 'E']
+    table_categories = ['Metatype', 'Attributes',
+                        'MagicResonance', 'Skills', 'Resources']
+    if not table_categories:
+        pass
+    selected_items = {'Metatype': None, 'Attributes': None,
+                      'MagicResonance': None, 'Skills': None,
+                      'Resources': None}
+    character_focus = random.choice(Core.Archetype.items)
+    if character_focus in [archetype for archetype in Core.Archetype.items if
+                           (hasattr(archetype, "magic") and
+                            archetype.magic is True) or
+                           (hasattr(archetype, "resonance") and
+                            archetype.resonance is True)]:
+        is_awakened = True
+    else:
+        is_awakened = False
+    if is_awakened:
+        awakened_table_value = random.choice(['A', 'B', 'C'])
+        table_choices.pop(table_choices.index(awakened_table_value))
+        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED[
+            'MagicResonance'][awakened_table_value]
+    else:
+        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED[
+            'MagicResonance']['E']
+        table_choices.pop(table_choices.index('E'))
+    print(character_focus)
+    print(selected_items['MagicResonance'])
+
+
+def format_skills(character_skills, compact=False) -> None:
     """
         Print skills in different ways.
         First way is to group them by their group, then their rank (the latter
@@ -1065,7 +1107,10 @@ def format_skills(character_skills) -> None:
     """
     output_by_group = {'Non-Grouped': {}}
 
-    def format_skills_specialisations():
+    def format_skills_specialisations(compact = False):
+        if compact:
+            print(f"===\nSPECIALISATIONS\n{[{character_skills[s].name: character_skills[s].spec} for s in character_skills.keys() if isinstance( character_skills[s].spec, str)]}")
+            return
         spec_skills = [{character_skills[s].name: character_skills[s].spec} for
                        s in character_skills.keys() if isinstance(
                            character_skills[s].spec, str)]
@@ -1077,10 +1122,9 @@ def format_skills(character_skills) -> None:
             for k, d in i.items():
                 print(f'{d}   ({k})')
 
-    def format_skills_group_rating():
+    def format_skills_group_rating(compact=False):
         print("====")
         print("ACTIVE SKILLS")
-        print("    by Group/Rating:")
 
         non_grouped_skills = {}
         groups = {}
@@ -1127,83 +1171,44 @@ def format_skills(character_skills) -> None:
             else:
                 output_by_attr[key] = attribute_skills
 
-        # output_by_attr = {attr: [s for s in character_skills.keys() if
-        #                   character_skills[s].attribute.name == attr] for
-        #                   attr in character_skill_attributes}
-        # print("===")
-        # print("    by Attribute:")
-        # print("===")
+        output_by_attr = {attr: [s for s in character_skills.keys() if
+                          character_skills[s].attribute.name == attr] for
+                          attr in character_skill_attributes}
+        print("===")
+        print("    by Attribute:")
+        print("===")
         sorted(output_by_attr)
 
         for attr in output_by_attr.keys():
-            # else:
-            # print(f'---> {attr}')
-            # print(", ".join(
-            #    [f'{skill} ({character_skills[skill].rating})' for
-            #     skill in output_by_attr[attr]]))
-            pass
+            print(f'---> {attr}')
+            print(", ".join(
+               [f'{skill} ({character_skills[skill].rating})' for
+                skill in output_by_attr[attr]]))
 
     format_skills_group_rating()
-    format_skills_attribute()
     format_skills_specialisations()
     return
 
 
-def buy_gear(ch: Core.Character, nuyen: int) -> None:
-    vehicle_skill_ratings = [
-        i.rating for i in ch.Skills.values() if
-        i in Core.VEHICLE_SKILLS]
-    print(vehicle_skill_ratings)
-    return
-
-
-def alt_generate_character():
-    character = Core.Character()
-    if not character:
-        pass
-    table_choices = ['A', 'B', 'C', 'D', 'E']
-    table_categories = ['Metatype', 'Attributes',
-                        'MagicResonance', 'Skills', 'Resources']
-    if not table_categories:
-        pass
-    selected_items = {'Metatype': None, 'Attributes': None,
-                      'MagicResonance': None, 'Skills': None,
-                      'Resources': None}
-    character_focus = random.choice(Core.Archetype.items)
-    if character_focus in [archetype for archetype in Core.Archetype.items if
-                           (hasattr(archetype, "magic") and
-                            archetype.magic is True) or
-                           (hasattr(archetype, "resonance") and
-                            archetype.resonance is True)]:
-        is_awakened = True
-    else:
-        is_awakened = False
-    if is_awakened:
-        awakened_table_value = random.choice(['A', 'B', 'C'])
-        table_choices.pop(table_choices.index(awakened_table_value))
-        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED[
-            'MagicResonance'][awakened_table_value]
-    else:
-        selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED[
-            'MagicResonance']['E']
-        table_choices.pop(table_choices.index('E'))
-    print(character_focus)
-    print(selected_items['MagicResonance'])
-
-
-def format_qualities(ch: Core.Character) -> None:
+def format_qualities(ch: Core.Character, compact=False) -> None:
     qual = ch.Qualities
     good_quals = ", ".join([i for i in qual.keys() if not hasattr(qual[i], 'negative')])
     bad_quals = ", ".join([i for i in qual.keys() if hasattr(qual[i], 'negative')])
     print("====")
     print('QUALITIES:')
+    if compact:
+        if len(good_quals) > 0:
+            print('--->  Positive:', [i for i in good_quals])
+        if len(bad_quals) > 0:
+            print('--->  Negative:', [i for i in bad_quals])
+        return
     if len(good_quals) > 0:
         print('--->  Positive:\n', good_quals)
     if len(bad_quals) > 0:
         print('--->  Negative:\n', bad_quals)
 
 
-def format_attributes(ch: Core.Character) -> None:
+def format_attributes(ch: Core.Character, compact=False) -> None:
     attr = ch.AttributesCore
     apv = {} # apv == attr_print_values
     for attr in ch.AttributesPhysical:
@@ -1226,6 +1231,23 @@ def format_attributes(ch: Core.Character) -> None:
             apv[attr.name] = f"{attr.name}{spaces}{attr.value} "
     print("====")
     print("ATTRIBUTES:")
+    if compact:
+        if ch.Magic is not None:
+            print(apv['Body'], apv['Agility'], apv["Reaction"],
+                  apv['Strength'], apv['Willpower'], apv['Logic'],
+                  apv['Intuition'], apv['Charisma'], apv['Edge'],
+                  apv['Essence'], apv['Magic'])
+        elif ch.Resonance is not None:
+            print(apv['Body'], apv['Agility'], apv["Reaction"], 
+                  apv['Strength'], apv['Willpower'], apv['Logic'],
+                  apv['Intuition'], apv['Charisma'], apv['Edge'], 
+                  apv['Essence'], apv['Resonance'])
+        else:
+            print(apv['Body'], apv['Agility'], apv["Reaction"], 
+                  apv['Strength'], apv['Willpower'], apv['Logic'],
+                  apv['Intuition'], apv['Charisma'], apv['Edge'], 
+                  apv['Essence'])
+        return
     print(" Physical     | Mental       | Special ")
     print("--------------|--------------|------------")
     print("", apv['Body'], "|", apv['Willpower'], "|", apv["Edge"])
@@ -1235,12 +1257,15 @@ def format_attributes(ch: Core.Character) -> None:
     elif ch.Resonance is not None:
         print("", apv['Reaction'], "|", apv['Intuition'], "|", apv["Resonance"])
     else:
-        print("", apv['Reaction'], "|", apv['Intuition'])
+        print("", apv['Reaction'], "|", apv['Intuition'], "|")
     print("", apv['Strength'], "|", apv['Charisma'], "|")
 
 
-def format_table(list_name, l: list):
+def format_table(list_name, l: list, compact=False):
     print(f"===\n{list_name}")
+    if compact:
+        print([i for i in l])
+        return
     l = [i.__repr__() for i in l]
     longest_item = 0
     for i in l:
@@ -1256,13 +1281,29 @@ def format_table(list_name, l: list):
                 print("", f"{l[i]}{spaces(l[i])}", "|")
         else:
             pass
+
+
+def format_gear(ch: Core.Character, item_compact=True, compact=False):
+    if compact:
+        print(f"===\nGEAR\n{[i.name for i in ch.Gear]}")
+        return
+    gear_licenses = []
+    print("===\nGEAR")
+    for item in ch.Gear:
+        if "Fake License" in item.name:
+            gear_licenses.append(item)
+        else:
+            Item.item_format(item, compact=item_compact)
+    if len(gear_licenses) > 0:
+        print(f"Fake licenses: {[i.name.split('Fake License (')[1][:-1] for i in gear_licenses if i.name != 'Fake License (None)']}")
+
         
 
 
-def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
+def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True, compact=False):
     print('Metatype  : ', ch.Metatype.name)
     if attr_format:
-        format_attributes(ch)
+        format_attributes(ch, compact)
     else:
         print('Attributes: ')
         print('  Physical: ', ch.AttributesPhysical)
@@ -1272,22 +1313,19 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True):
     if ch.MagicResoUser is not None and ch.MagicResoUser != 'Technomancer':
         print('Awakened:', ch.MagicResoUser)
     if ch.Spells is not None:
-        format_table("SPELLS", ch.Spells)
+        format_table("SPELLS", ch.Spells, compact)
     if ch.AdeptPowers is not None:
-        format_table("ADEPT POWERS", ch.AdeptPowers)
+        format_table("ADEPT POWERS", ch.AdeptPowers, compact)
     if ch.ComplexForms is not None:
-        format_table("COMPLEX FORMS", ch.ComplexForms)
+        format_table("COMPLEX FORMS", ch.ComplexForms, compact)
         print(0)
     # print("character karma is ", ch.Karma)
     # print(nuyen)
     # print('Karma logs:')
     # if KARMA_LOG:
     #    print(karma_log)
-    format_skills(ch.Skills)
-    print("===\nGEAR: ")
-    # sorted(ch.Gear)
-    for item in ch.Gear:
-        Item.item_format(item, compact=True)
+    format_skills(ch.Skills, compact)
+    format_gear(ch, compact=False)
     print("===\nNUYEN: ")
     print(ch.Nuyen)
 
@@ -1295,7 +1333,8 @@ if __name__ == "__main__":
     # Kills process if charater generation takes too long
     # In like 1% of cases the program hangs, this is to temporarily tackle that
     #   before I find and fix the issue
-    x = generate_character()
+    x, nuyen, karma_log = generate_character()
+    print_shit(x, nuyen, karma_log, compact=True)
     # p = multiprocessing.Process(target=generate_character)
     # p.start()
     # p.join(5)
