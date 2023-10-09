@@ -1500,7 +1500,7 @@ STEALTH_ROPE = Item("Stealth Rope (100m)", cost=85, page_ref=450, rating=1, avai
 # BIOTECH
 BIOMONITOR = Item("BIOMONITOR", cost=300, page_ref=450, rating=1, avail=3, category="Biotech")
 DISPOSABLE_SYRINGE = Item("DISPOSABLE_SYRINGE", cost=10, page_ref=450, rating=1, avail=3, category="Biotech")
-MEDKIT_1_6 = Item("MEDKIT_1_6", cost=["Rating", "*", 250], page_ref=450, rating=1, avail="Rating", category="Biotech")
+MEDKIT_1_6 = Item("MEDKIT_2_6", cost=["Rating", "*", 250], page_ref=450, rating=1, avail="Rating", category="Biotech")
 MEDKIT_SUPPLIES = Item("MEDKIT_SUPPLIES", cost=300, page_ref=450, rating=1, avail=0, category="Biotech")
 # SLAP PATCHES
 ANTIDOTE_PATCH_1_6 = Item("ANTIDOTE_PATCH_1_6", cost=["Rating", "*", 50], page_ref=451, rating=1, avail="Rating", category="Slap Patches")
@@ -1817,7 +1817,7 @@ IMPROVED_ABILITY_FREE_FALL = AdeptPower("Improved Ability (Free Fall)", cost=0.5
 IMPROVED_ABILITY_GYMNASTICS = AdeptPower("Improved Ability (Gymnastics)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=GYMNASTICS)
 IMPROVED_ABILITY_PALMING = AdeptPower("Improved Ability (Palming)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=PALMING)
 IMPROVED_ABILITY_PERCEPTION = AdeptPower("Improved Ability (Perception)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=PERCEPTION)
-iMPROVED_ABILITY_RUNNING = AdeptPower("Improved Ability (Running)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=RUNNING)
+IMPROVED_ABILITY_RUNNING = AdeptPower("Improved Ability (Running)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=RUNNING)
 IMPROVED_ABILITY_SNEAKING = AdeptPower("Improved Ability (Sneaking)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=SNEAKING)
 IMPROVED_ABILITY_SURVIVAL = AdeptPower("Improved Ability (Survival)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=SURVIVAL)
 IMPROVED_ABILITY_SWIMMING = AdeptPower("Improved Ability (Swimming)", cost=0.5, group='Improved Ability', per_level=False, per_group=True, requires=SWIMMING)
@@ -1900,7 +1900,7 @@ MAGICAL_LODGE_MATERIALS = MagicItem("Magical Lodge Materials", cost=["Force", "*
 """
 CONTROL_RIG_1 = AugmentationCore("Control Rig (Rating 1)", page_ref=453, cost=43_000, rating=1, essence=1, capacity="-", avail=5, legality=RESTRICTED, subtype="Headware", mods=[])
 CONTROL_RIG_2 = AugmentationCore("Control Rig (Rating 2)", page_ref=453, cost=97_000, rating=2, essence=2, capacity="-", avail=10, legality=RESTRICTED, subtype="Headware", mods=[])
-CONTROL_RIG_3 = AugmentationCore("Control Rig (Rating 3)", page_ref=453, cost=208_000, rating=3, essence=3, capacity="-", avail=15, legality=RESTRICTED, subtype="Headware", mods=[])
+CONTROL_RIG_3 = AugmentationCore("Control Rig (Rating 4)", page_ref=453, cost=208_000, rating=3, essence=3, capacity="-", avail=15, legality=RESTRICTED, subtype="Headware", mods=[])
 CYBEREYES_1 = AugmentationCore("Cybereyes (Rating 1)", page_ref=454, cost=4000, rating=1, essence=0.2, capacity=4, avail=3, subtype='Eyeware', mods=[])
 CYBEREYES_2 = AugmentationCore("Cybereyes (Rating 2)", page_ref=454, cost=6000, rating=2, essence=0.3, capacity=8, avail=6, subtype='Eyeware', mods=[])
 CYBEREYES_3 = AugmentationCore("Cybereyes (Rating 3)", page_ref=454, cost=10000, rating=3, essence=0.4, capacity=12, avail=9, subtype='Eyeware', mods=[])
@@ -1909,6 +1909,23 @@ CYBEREARS_1 = AugmentationCore("Cyberears (Rating 1)", page_ref=454, cost=3000, 
 CYBEREARS_2 = AugmentationCore("Cyberears (Rating 2)", page_ref=454, cost=4500, rating=2, essence=0.3, capacity=8, avail=6, subtype='Earware', mods=[])
 CYBEREARS_3 = AugmentationCore("Cyberears (Rating 3)", page_ref=454, cost=7500, rating=3, essence=0.4, capacity=12, avail=9, subtype='Earware', mods=[])
 CYBEREARS_4 = AugmentationCore("Cyberears (Rating 4)", page_ref=454, cost=11000, rating=4, essence=0.5, capacity=16, avail=12, subtype='Earware', mods=[])
+# CYBERLIMBS
+FULL_ARM_OBV = AugmentationCore("Cyberlimb - Full Arm (Obvious)", page_ref=457, cost=15000, essence=1, capacity=15, avail=4, subtype='Cyberlimbs', location="Full Arm", mods=[])
+FULL_LEG_OBV = AugmentationCore("Cyberlimb - Full Leg (Obvious)", page_ref=457, cost=15000, essence=1, capacity=20, avail=4, subtype='Cyberlimbs', location="Full Leg", mods=[])
+HAND_OBV = AugmentationCore("Cyberlimb - Hand (Obvious)", page_ref=457, cost=5000, essence=0.25, capacity=4, avail=2, subtype='Cyberlimbs', location="Hand", mods=[])
+FOOT_OBV = AugmentationCore("Cyberlimb - Foot (Obvious)", page_ref=457, cost=5000, essence=0.25, capacity=4, avail=2, subtype='Cyberlimbs', location="Foot", mods=[])
+LOWER_ARM_OBV = AugmentationCore("Cyberlimb - Lower Arm (Obvious)", page_ref=457, cost=10000, essence=0.45, capacity=10, avail=4, subtype='Cyberlimbs', location="Lower Arm", mods=[])
+LOWER_LEG_OBV = AugmentationCore("Cyberlimb - Lower Leg (Obvious)", page_ref=457, cost=10000, essence=0.45, capacity=12, avail=4, subtype='Cyberlimbs', location="Lower Leg", mods=[])
+TORSO_OBV = AugmentationCore("Cyberlimb - Torso (Obvious)", page_ref=457, cost=20000, essence=1.5, capacity=10, avail=12, subtype='Cyberlimbs', location="Torso", mods=[])
+SKULL_OBV = AugmentationCore("Cyberlimb - Skull (Obvious)", page_ref=457, cost=10000, essence=0.75, capacity=4, avail=16, subtype='Cyberlimbs', location="Skull", mods=[])
+FULL_ARM_SYNTH = AugmentationCore("Cyberlimb - Full Arm (Synthetic)", page_ref=458, cost=20000, essence=1, capacity=8, avail=4, subtype='Cyberlimbs', location="Full Arm", mods=[])
+FULL_LEG_SYNTH = AugmentationCore("Cyberlimb - Full Leg (Synthetic)", page_ref=457, cost=20000, essence=1, capacity=10, avail=4, subtype='Cyberlimbs', location="Full Leg", mods=[])
+HAND_SYNTH = AugmentationCore("Cyberlimb - Hand (Synthetic)", page_ref=457, cost=6000, essence=0.25, capacity=2, avail=2, subtype='Cyberlimbs', location="Hand", mods=[])
+FOOT_SYNTH = AugmentationCore("Cyberlimb - Foot (Synthetic)", page_ref=457, cost=6000, essence=0.25, capacity=2, avail=2, subtype='Cyberlimbs', location="Foot", mods=[])
+LOWER_ARM_SYNTH = AugmentationCore("Cyberlimb - Lower Arm (Synthetic)", page_ref=457, cost=12000, essence=0.45, capacity=5, avail=4, subtype='Cyberlimbs', location="Lower Arm", mods=[])
+LOWER_LEG_SYNTH = AugmentationCore("Cyberlimb - Lower Leg (Synthetic)", page_ref=457, cost=12000, essence=0.45, capacity=6, avail=4, subtype='Cyberlimbs', location="Lower Leg", mods=[])
+TORSO_SYNTH = AugmentationCore("Cyberlimb - Torso (Synthetic)", page_ref=457, cost=25000, essence=1.5, capacity=5, avail=12, subtype='Cyberlimbs', location="Torso", mods=[])
+SKULL_SYNTH = AugmentationCore("Cyberlimb - Skull (Synthetic)", page_ref=457, cost=15000, essence=0.75, capacity=2, avail=16, subtype='Cyberlimbs', location="Skull", mods=[])
 # HEADWARE
 COMMLINK = Augmentation("Commlink (Aug)", page_ref=453, cost=["CommlinkCost", "+", 2000], essence=0.2, capacity=2, avail=0, cyberlimbs=True, subtype="Headware", requires=["Subtype", "Commlink"], )
 CORTEX_BOMB_KINK = Augmentation("Cortex Bomb (Kink)", page_ref=453, cost=10_000, essence=0, capacity=1, avail=12, legality=FORBIDDEN, cyberlimbs=True, subtype="Headware")
@@ -1956,23 +1973,6 @@ SMUGGLING_COMPARTMENT = Augmentation("Smuggling Compartment", page_ref=456, cost
 WIRED_REFLEXES_1 = Augmentation("Wired Reflexes (Rating 1)", page_ref=456, cost=39000, essence=2, capacity="-", avail=8, legality=RESTRICTED, cyberlimbs=False, subtype='Bodyware', location="Body")
 WIRED_REFLEXES_2 = Augmentation("Wired Reflexes (Rating 2)", page_ref=456, cost=149000, essence=3, capacity="-", avail=12, legality=RESTRICTED, cyberlimbs=False, subtype='Bodyware', location="Body")
 WIRED_REFLEXES_3 = Augmentation("Wired Reflexes (Rating 3)", page_ref=456, cost=217000, essence=5, capacity="-", avail=20, legality=RESTRICTED, cyberlimbs=False, subtype='Bodyware', location="Body")
-# CYBERLIMBS
-FULL_ARM_OBV = Augmentation("Cyberlimb - Full Arm (Obvious)", page_ref=457, cost=15000, essence=1, capacity=15, avail=4, subtype='Cyberlimbs', location="Full Arm", base=True, mods=[])
-FULL_LEG_OBV = Augmentation("Cyberlimb - Full Leg (Obvious)", page_ref=457, cost=15000, essence=1, capacity=20, avail=4, subtype='Cyberlimbs', location="Full Leg", base=True, mods=[])
-HAND_OBV = Augmentation("Cyberlimb - Hand (Obvious)", page_ref=457, cost=5000, essence=0.25, capacity=4, avail=2, subtype='Cyberlimbs', location="Hand", base=True, mods=[])
-FOOT_OBV = Augmentation("Cyberlimb - Foot (Obvious)", page_ref=457, cost=5000, essence=0.25, capacity=4, avail=2, subtype='Cyberlimbs', location="Foot", base=True, mods=[])
-LOWER_ARM_OBV = Augmentation("Cyberlimb - Lower Arm (Obvious)", page_ref=457, cost=10000, essence=0.45, capacity=10, avail=4, subtype='Cyberlimbs', location="Lower Arm", base=True, mods=[])
-LOWER_LEG_OBV = Augmentation("Cyberlimb - Lower Leg (Obvious)", page_ref=457, cost=10000, essence=0.45, capacity=12, avail=4, subtype='Cyberlimbs', location="Lower Leg", base=True, mods=[])
-TORSO_OBV = Augmentation("Cyberlimb - Torso (Obvious)", page_ref=457, cost=20000, essence=1.5, capacity=10, avail=12, subtype='Cyberlimbs', location="Torso", base=True, mods=[])
-SKULL_OBV = Augmentation("Cyberlimb - Skull (Obvious)", page_ref=457, cost=10000, essence=0.75, capacity=4, avail=16, subtype='Cyberlimbs', location="Skull", base=True, mods=[])
-FULL_ARM_SYNTH = Augmentation("Cyberlimb - Full Arm (Synthetic)", page_ref=457, cost=20000, essence=1, capacity=8, avail=4, subtype='Cyberlimbs', location="Full Arm", base=True, mods=[])
-FULL_LEG_SYNTH = Augmentation("Cyberlimb - Full Leg (Synthetic)", page_ref=457, cost=20000, essence=1, capacity=10, avail=4, subtype='Cyberlimbs', location="Full Leg", base=True, mods=[])
-HAND_SYNTH = Augmentation("Cyberlimb - Hand (Synthetic)", page_ref=457, cost=6000, essence=0.25, capacity=2, avail=2, subtype='Cyberlimbs', location="Hand", base=True, mods=[])
-FOOT_SYNTH = Augmentation("Cyberlimb - Foot (Synthetic)", page_ref=457, cost=6000, essence=0.25, capacity=2, avail=2, subtype='Cyberlimbs', location="Foot", base=True, mods=[])
-LOWER_ARM_SYNTH = Augmentation("Cyberlimb - Lower Arm (Synthetic)", page_ref=457, cost=12000, essence=0.45, capacity=5, avail=4, subtype='Cyberlimbs', location="Lower Arm", base=True, mods=[])
-LOWER_LEG_SYNTH = Augmentation("Cyberlimb - Lower Leg (Synthetic)", page_ref=457, cost=12000, essence=0.45, capacity=6, avail=4, subtype='Cyberlimbs', location="Lower Leg", base=True, mods=[])
-TORSO_SYNTH = Augmentation("Cyberlimb - Torso (Synthetic)", page_ref=457, cost=25000, essence=1.5, capacity=5, avail=12, subtype='Cyberlimbs', location="Torso", base=True, mods=[])
-SKULL_SYNTH = Augmentation("Cyberlimb - Skull (Synthetic)", page_ref=457, cost=15000, essence=0.75, capacity=2, avail=16, subtype='Cyberlimbs', location="Skull", base=True, mods=[])
 # CYBERLIMB ENHANCEMENTS
 CYBERLIMB_EN_AGILITY = Augmentation("Cyberlimb Enhancement - Agility", page_ref=457, cost=["Rating", "*", 6500], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 3], legality=RESTRICTED, subtype='Cyberlimbs Enhancement')
 CYBERLIMB_EN_ARMOR = Augmentation("Cyberlimb Enchancement - Armor", page_ref=457, cost=["Rating", "*", 3000], rating=[1, "to", 3], essence="-", capacity=["Rating"], avail=["Rating", "*", 5], subtype='Cyberlimbs Enhancement')
@@ -2684,68 +2684,72 @@ SYNTHLINK = Augmentation("Synthlink", page_ref='CF, 223', cost=1000, essence=0.1
 VISUALIZER = Augmentation("Visualizer", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, subtype="Headware")
 VOICE_MASK = Augmentation("Voice_mask", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, legality=FORBIDDEN, subtype="Headware")
 # EYEWARE
-ADDITIONAL_EYE_MOUNT = Augmentation("Additional_eye_mount", page_ref='CF, 223', cost=1000, essence=0.2, capacity=2 avail=, legality=, subtype='Eyeware')
-EYE_LIGHT_SYSTEM = Augmentation("Eye_light_system", page_ref='CF, 223', cost=500, essence=0.1, capacity=2 avail=, legality=, subtype='Eyeware')
-EYE_PROTECTORS = Augmentation("Eye_protectors", page_ref='CF, 223', cost=100, essence=0.1, capacity=2 avail=, legality=, subtype='Eyeware')
-MICROSCOPIC_LENSES = Augmentation("Microscopic_lenses", page_ref='CF, 223', cost=1000, essence=0.2, capacity=3 avail=, legality=, subtype='Eyeware')
-SPIDER_EYES = AugmentationCore("Spider_eyes", page_ref='CF, 223', cost=2000, essence=0.2, capacity=2, avail=, legality=, subtype='Eyeware')
-TARGETING_LASER = Augmentation("Targeting_laser", page_ref='CF, 223', cost=1000, essence=0.2, capacity=4, avail=, legality=, subtype='Eyeware')
-TARGETING_LASER_INFRARED = Augmentation("Targeting_laser_infrared", page_ref='CF, 223', cost=1250, essence=0.2, capacity=4, avail=, legality=, subtype='Eyeware')
+ADDITIONAL_EYE_MOUNT = Augmentation("Additional_eye_mount", page_ref='CF, 223', cost=1000, essence=0.2, capacity=2, avail=8, subtype='Eyeware')
+EYE_LIGHT_SYSTEM = Augmentation("Eye_light_system", page_ref='CF, 223', cost=500, essence=0.1, capacity=2, avail=2, subtype='Eyeware')
+EYE_PROTECTORS = Augmentation("Eye_protectors", page_ref='CF, 223', cost=100, essence=0.1, capacity=2, avail=0, subtype='Eyeware')
+MICROSCOPIC_LENSES = Augmentation("Microscopic_lenses", page_ref='CF, 223', cost=1000, essence=0.2, capacity=3, avail=4, subtype='Eyeware')
+SPIDER_EYES = AugmentationCore("Spider_eyes", page_ref='CF, 223', cost=2000, essence=0.2, capacity=2, avail=8, subtype='Eyeware')
+TARGETING_LASER = Augmentation("Targeting_laser", page_ref='CF, 223', cost=1000, essence=0.2, capacity=4, avail=4, subtype='Eyeware')
+TARGETING_LASER_INFRARED = Augmentation("Targeting_laser_infrared", page_ref='CF, 223', cost=1250, essence=0.2, capacity=4, avail=6, subtype='Eyeware')
 # EARWARE
-ANTENNAE = Augmentation("Antennae", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
-AUDIO_ANALYSER = Augmentation("Audio_analyser", page_ref='CF, 223', cost=1000, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
-EAR_PROTECTORS = Augmentation("Ear_protectors", page_ref='CF, 223', cost=250, essence=0.05, capacity=1, avail=, legality=, subtype='Earware')
-INCRESED_SPECTRUM = Augmentation("Incresed_spectrum", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
-MODULAR_MOUNT = Augmentation("Modular_mount", page_ref='CF, 223', cost=250, essence=0.1, capacity=1, avail=, legality=, subtype='Earware')
-TRANSLAT_EAR = Augmentation("Translat_ear", page_ref='CF, 223', cost=["Rating", "*", 2000], essence=0.1, capacity=["Rating", "*", 1], avail=, legality=, subtype='Earware')
+ANTENNAE = Augmentation("Antennae", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=2, subtype='Earware')
+AUDIO_ANALYSER = Augmentation("Audio_analyser", page_ref='CF, 223', cost=1000, essence=0.1, capacity=1, avail=4, subtype='Earware')
+EAR_PROTECTORS = Augmentation("Ear_protectors", page_ref='CF, 223', cost=250, essence=0.05, capacity=1, avail="-", subtype='Earware')
+INCRESED_SPECTRUM = Augmentation("Incresed_spectrum", page_ref='CF, 223', cost=500, essence=0.1, capacity=1, avail=6, subtype='Earware')
+MODULAR_MOUNT = Augmentation("Modular_mount", page_ref='CF, 223', cost=250, essence=0.1, capacity=1, avail=4, subtype='Earware')
+TRANSLAT_EAR = Augmentation("Translat_ear", page_ref='CF, 223', cost=["Rating", "*", 2000], essence=0.1, capacity=["Rating", "*", 1], avail=8, subtype='Earware')
 # BODYWARE
-ACTIVE_HARDWIRES = Augmentation("Active_hardwires", page_ref='CF, 223', cost=["Rating", "*", 4000], essence=["Rating", "*", 0.05], capacity=, avail=, legality=, subtype='Bodyware')
-AUTO_INJECTOR = Augmentation("Auto_injector", page_ref='CF, 223', cost=["Rating", "*", 1000], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
-AUTO_INJECTOR_RESUABLE = Augmentation("Auto_injector_resuable", page_ref='CF, 223', cost=["Contents", "+", 500], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
-AUTO_INJECTOR_EXPANDED_RESERVOIR = Augmentation("Auto_injector_expanded_reservoir", page_ref='CF, 223', cost=["Contents", "+", 250], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
-AUTO_INJECTOR_KILLSWITCH = Augmentation("Auto_injector_killswitch", page_ref='CF, 223', cost=["Contents", "+", 750], essence=0.05, capacity=, avail=, legality=, subtype='Bodyware')
-BALANCE_TAIL = Augmentation("Balance_tail", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
-BIOWASTE_STORAGE = Augmentation("Biowaste_storage", page_ref='CF, 223', cost=["Rating", "*", 500], essence=,["Rating", "*", .1] capacity=, avail=, legality=, subtype='Bodyware')
-BREAST_IMPLANT = Augmentation("Breast_implant", page_ref='CF, 223', cost=250, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
-BREAST_IMPLANT_2 = Augmentation("Breast_implant_2", page_ref='CF, 223', cost=1000, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
-CYBERFINS = Augmentation("Cyberfins", page_ref='CF, 223', cost=500, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
-CYBER_GENITALIA = Augmentation("Cyber_genitalia", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
-CYBERSAFETY = Augmentation("Cybersafety", page_ref='CF, 223', cost=100, essence="-", capacity=, avail=, legality=, subtype='Bodyware')
-FIBEROPTIC_HAIR = Augmentation("Fiberoptic_hair", page_ref='CF, 223', cost=100, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
-FLEX_HAND = Augmentation("Flex_hand", page_ref='CF, 223', cost=1500, essence=.15, capacity=, avail=, legality=, subtype='Bodyware')
-FOOT_ANCHOR = Augmentation("Foot_anchor", page_ref='CF, 223', cost=2000, essence=.22, capacity=, avail=, legality=, subtype='Bodyware')
-GASTRIC_NEUROSTIMULATOR = Augmentation("Gastric_neurostimulator", page_ref='CF, 223', cost=2000, essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
-INTERNAL_ROUTER = Augmentation("Internal_router", page_ref='CF, 223', cost=15000, essence=.7, capacity=, avail=, legality=, subtype='Bodyware')
-SMALL_LED_TATTOO = Augmentation("Small_led_tattoo", page_ref='CF, 223', cost=100, essence=.05, capacity=, avail=, legality=, subtype='Bodyware')
-MEDIUM_LED_TATTOO = Augmentation("Medium_led_tattoo", page_ref='CF, 223', cost=500, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
-LARGE_LED_TATTOO = Augmentation("Large_led_tattoo", page_ref='CF, 223', cost=1000, essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
-MAGNETIC_SYSTEM = Augmentation("Magnetic_system", page_ref='CF, 223', cost=["Contents", "+", 1000], essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
-METATYPE_REDUCTION = Augmentation("Metatype_reduction", page_ref='CF, 223', cost=6000, essence=.3, capacity=, avail=, legality=, subtype='Bodyware')
-MOVE_BY_WIRE_RATING_1 = Augmentation("Move_by_wire_rating_1", page_ref='CF, 223', cost=40000, essence=3, capacity=, avail=, legality=, subtype='Bodyware')
-MOVE_BY_WIRE_RATING_2 = Augmentation("Move_by_wire_rating_2", page_ref='CF, 223', cost=125_000, essence=4, capacity=, avail=, legality=, subtype='Bodyware')
-MOVE_BY_WIRE_RATING_3 = Augmentation("Move_by_wire_rating_3", page_ref='CF, 223', cost=205_000, essence=5, capacity=, avail=, legality=, subtype='Bodyware')
-NUTRITION_STORAGE_SYSTEM = Augmentation("Nutrition_storage_system", page_ref='CF, 223', cost=["Rating", "*", 500], essence=["Rating", "*", 0.1], capacity=, avail=, legality=, subtype='Bodyware')
-OXSYS_CYBERGILL = Augmentation("Oxsys_cybergill", page_ref='CF, 223', cost=2000, essence=.25, capacity=, avail=, legality=, subtype='Bodyware')
-RETRACTABLE_CLIMBING_CLAWS = Augmentation("Retractable_climbing_claws", page_ref='CF, 223', cost=["Rating", "*", 13000], essence=.2, capacity=, avail=, legality=, subtype='Bodyware')
-SKIN_TONER = Augmentation("Skin_toner", page_ref='CF, 223', cost=2000, essence=.5, capacity=, avail=, legality=, subtype='Bodyware')
-SKIN_TONER_CHARMELEON_PROCESSOR = Augmentation("Skin_toner_charmeleon_processor", page_ref='CF, 223', cost=8000, essence=.3, capacity=, avail=, legality=, subtype='Bodyware')
-SMART_ARTICULATION = Augmentation("Smart_articulation", page_ref='CF, 223', cost=6000, essence=.5, capacity=, avail=, legality=, subtype='Bodyware')
-STEAMERS = Augmentation("Steamers", page_ref='CF, 223', cost=["Contents", "+", 500], essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
-TOUCH_LINK = Augmentation("Touch_link", page_ref='CF, 223', cost=1000, essence=.1, capacity=, avail=, legality=, subtype='Bodyware')
+ACTIVE_HARDWIRES = Augmentation("Active_hardwires", page_ref='CF, 223', cost=["Rating", "*", 4000], essence=["Rating", "*", 0.05], capacity="-", avail=["Rating", "*", 3], subtype='Bodyware')
+AUTO_INJECTOR = Augmentation("Auto_injector", page_ref='CF, 223', cost=["Rating", "*", 1000], essence=0.05, capacity="-", avail=2, subtype='Bodyware')
+AUTO_INJECTOR_RESUABLE = Augmentation("Auto_injector_resuable", page_ref='CF, 223', cost=["Contents", "+", 500], essence=0.05, capacity="-", avail=2, subtype='Bodyware')
+AUTO_INJECTOR_EXPANDED_RESERVOIR = Augmentation("Auto_injector_expanded_reservoir", page_ref='CF, 223', cost=["Contents", "+", 250], essence=0.05, capacity="-", avail=4, subtype='Bodyware')
+AUTO_INJECTOR_KILLSWITCH = Augmentation("Auto_injector_killswitch", page_ref='CF, 223', cost=["Contents", "+", 750], essence=0.05, capacity="-", avail=8, legality=FORBIDDEN, subtype='Bodyware')
+BALANCE_TAIL = Augmentation("Balance_tail", page_ref='CF, 223', cost=2000, essence=.25, capacity=1, avail=8, subtype='Bodyware')
+BIOWASTE_STORAGE = Augmentation("Biowaste_storage", page_ref='CF, 223', cost=["Rating", "*", 500], essence=["Rating", "*", .1], capacity=["Rating", "*", 1], avail=8, subtype='Bodyware')
+BREAST_IMPLANT = Augmentation("Breast_implant", page_ref='CF, 223', cost=250, essence=.05, capacity=0, avail=2, subtype='Bodyware')
+BREAST_IMPLANT_2 = Augmentation("Breast_implant_2", page_ref='CF, 223', cost=1000, essence=.1, capacity=1, avail=4, subtype='Bodyware')
+CYBERFINS = Augmentation("Cyberfins", page_ref='CF, 223', cost=500, essence=.05, capacity=1, avail=8, subtype='Bodyware')
+CYBER_GENITALIA = Augmentation("Cyber_genitalia", page_ref='CF, 223', cost=2000, essence=.25, capacity=1, avail=6, subtype='Bodyware')
+CYBERSAFETY = Augmentation("Cybersafety", page_ref='CF, 223', cost=100, essence="-", capacity=1, avail=4, subtype='Bodyware')
+FIBEROPTIC_HAIR = Augmentation("Fiberoptic_hair", page_ref='CF, 223', cost=100, essence=.1, capacity=1, avail="-", subtype='Bodyware')
+FLEX_HAND = Augmentation("Flex_hand", page_ref='CF, 223', cost=1500, essence=.15, capacity="-", avail=8, subtype='Bodyware')
+FOOT_ANCHOR = Augmentation("Foot_anchor", page_ref='CF, 223', cost=2000, essence=.22, capacity=3, avail=10, subtype='Bodyware')
+GASTRIC_NEUROSTIMULATOR = Augmentation("Gastric_neurostimulator", page_ref='CF, 223', cost=2000, essence=.2, capacity="-", avail=4, subtype='Bodyware')
+INTERNAL_ROUTER = Augmentation("Internal_router", page_ref='CF, 223', cost=15000, essence=.7, capacity="-", avail=4, subtype='Bodyware')
+SMALL_LED_TATTOO = Augmentation("Small_led_tattoo", page_ref='CF, 223', cost=100, essence=.05, capacity=1, avail="-", subtype='Bodyware')
+MEDIUM_LED_TATTOO = Augmentation("Medium_led_tattoo", page_ref='CF, 223', cost=500, essence=.1, capacity=2, avail=4, subtype='Bodyware')
+LARGE_LED_TATTOO = Augmentation("Large_led_tattoo", page_ref='CF, 223', cost=1000, essence=.2, capacity=4, avail=8, subtype='Bodyware')
+MAGNETIC_SYSTEM = Augmentation("Magnetic_system", page_ref='CF, 223', cost=["Contents", "+", 1000], essence=.25, capacity=2, avail=8, subtype='Bodyware')
+METATYPE_REDUCTION = Augmentation("Metatype_reduction", page_ref='CF, 223', cost=6000, essence=.3, capacity="-", avail=4, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_1 = Augmentation("Move_by_wire_rating_1", page_ref='CF, 223', cost=40000, essence=3, capacity="-", avail=12, legality=FORBIDDEN, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_2 = Augmentation("Move_by_wire_rating_2", page_ref='CF, 223', cost=125_000, essence=4, capacity="-", avail=18, legality=FORBIDDEN, subtype='Bodyware')
+MOVE_BY_WIRE_RATING_3 = Augmentation("Move_by_wire_rating_3", page_ref='CF, 223', cost=205_000, essence=5, capacity="-", avail=24, legality=FORBIDDEN, subtype='Bodyware')
+NUTRITION_STORAGE_SYSTEM = Augmentation("Nutrition_storage_system", page_ref='CF, 223', cost=["Rating", "*", 500], essence=["Rating", "*", 0.1], capacity=["Rating", "*", 1], avail=4, subtype='Bodyware')
+OXSYS_CYBERGILL = Augmentation("Oxsys_cybergill", page_ref='CF, 223', cost=2000, essence=.25, capacity="-", avail=4, subtype='Bodyware')
+RETRACTABLE_CLIMBING_CLAWS = Augmentation("Retractable_climbing_claws", page_ref='CF, 223', cost=["Rating", "*", 13000], essence=.2, capacity=2, avail=8, subtype='Bodyware')
+SKIN_TONER = Augmentation("Skin_toner", page_ref='CF, 223', cost=2000, essence=.5, capacity="-", avail=4, subtype='Bodyware')
+SKIN_TONER_CHARMELEON_PROCESSOR = Augmentation("Skin_toner_charmeleon_processor", page_ref='CF, 223', cost=8000, essence=.3, capacity=2, avail=12, legality=FORBIDDEN, subtype='Bodyware')
+SMART_ARTICULATION = Augmentation("Smart_articulation", page_ref='CF, 223', cost=6000, essence=.5, capacity=1, avail=8, subtype='Bodyware')
+STEAMERS = Augmentation("Steamers", page_ref='CF, 223', cost=["Contents", "+", 500], essence=.1, capacity="-", avail=4, subtype='Bodyware')
+TOUCH_LINK = Augmentation("Touch_link", page_ref='CF, 223', cost=1000, essence=.1, capacity="-", avail=8, subtype='Bodyware')
 # CYBERLIMBS
-PRIMATIVE_HAND
-PRIMATIVE_FOOT
-PRIMATIVE_PARTIAL_ARM
-PRIMATIVE_PARTIAL_LEG
-PRIMATIVE_FULL_ARM
-PRIMATIVE_FULL_LEG
-BUILT_IN_MEDKIT
-BUILT_IN_TOOL_KIT
-BULK_MODIFICATION_1_6
-CYBERFINGERS_CYBERLIGHT
-CYBERFINGERS_CYBERLIGHTER
-CYBERFINGERS_GRENADE
-CYBERFINGERS_PISTOL
+PRIMATIVE_HAND = AugmentationCore("PRIMATIVE_HAND", page_ref="CF, 225", cost=20, subtype='Primative Cyberlimb', location='Hand', mods=None)
+PRIMATIVE_FOOT = AugmentationCore("PRIMATIVE_FOOT", page_ref="CF, 225", cost=20, subtype='Primative Cyberlimb', location='Foot', mods=None)
+PRIMATIVE_PARTIAL_ARM = AugmentationCore("PRIMATIVE_PARTIAL_ARM", page_ref="CF, 225", cost=100, subtype='Primative Cyberlimb', location='Lower Arm', mods=None)
+PRIMATIVE_PARTIAL_LEG = AugmentationCore("PRIMATIVE_PARTIAL_LEG", page_ref="CF, 225", cost=100, subtype='Primative Cyberlimb', location='Lower Leg', mods=None)
+PRIMATIVE_FULL_ARM = AugmentationCore("PRIMATIVE_FULL_ARM", page_ref="CF, 225", cost=250, subtype='Primative Cyberlimb', location='Full Arm', mods=None)
+PRIMATIVE_FULL_LEG = AugmentationCore("PRIMATIVE_FULL_LEG", page_ref="CF, 225", cost=250, subtype='Primative Cyberlimb', location='Full Leg', mods=None)
+BUILT_IN_MEDKIT = Augmentation("Built-in Medkit", page_ref="CF, 225", cost=["Medkit", "+", 1000], essence=.45, capacity=10, avail=8, subtype='CyblimbAcc')
+BUILT_IN_TOOL_KIT = Augmentation("Built-in Toolkit", page_ref="CF, 225", cost=2000, essence=.45, capacity=10, avail=4, subtype='CyblimbAcc')
+BULK_MODIFICATION_HAND_FOOT_SKULL = Augmentation("Bulk Modification (Hand/Foot/Half-Skull)", page_ref="CF, 225", cost=['Rating', '*', 500], rating=1, capacity=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_PARTIAL_ARMLEG_SKULL = Augmentation("Bulk Modification (Lower Arm/Lower Leg/Skull)", page_ref="CF, 225", cost=['Rating', '*', 500], rating=2, avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_ARM_LEG = Augmentation("Bulk Modification (Full Arm/Full Leg)", page_ref="CF, 225", cost=['Rating', '*', 500], rating=4, avail=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_TORSO_LIMINAL = Augmentation("Bulk Modification (Torso/LIMINAL CHASSIS)", page_ref="CF, 225", cost=['Rating', '*', 500], rating=6, avail=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
+CYBERFINGERS = Augmentation("Cyberfingers", page_ref="CF, 223", cost=500, essence=0.05, capacity=1, avail=2, subtype='CylimbAcc')
+CYBERFINGERS_CYBERLIGHT = Augmentation("Cyberfingers_cyberlight", page_ref="CF, 223", cost=550, essence=.05, capacity=1, avail=4, subtype='CylimbAcc')
+CYBERFINGERS_CYBERLIGHTER = Augmentation("Cyberfingers_cyberlighter", page_ref="CF, 223", cost=550, essence=0.05, capacity=1, avail=4, subtype='CylimbAcc')
+CYBERFINGERS_GRENADE = Augmentation("Cyberfingers_grenade", page_ref="CF, 223", cost=["Grenade", "+", 500], essence=.05, capacity=1, avail=["Grenade", "+", 4], subtype='CylimbAcc')
+CYBERFINGERS_PISTOL = Augmentation("Cyberfingers_pistol", page_ref="CF, 223", cost=1000, essence=.05, capacity=1, avail=8, legality=RESTRICTED, subtype='CylimbAcc')
 CYBERLIMB_OP = Augmentation('Cyberlimb Optimisation', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], subtype='CylimbAcc', category='Optimisation')
 CYBERLIMB_OP_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
 CYBERLIMB_OP_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
@@ -2755,32 +2759,32 @@ CYBERLIMB_OP_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimi
 CYBERLIMB_OP_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
 CYBERLIMB_OP_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
 CYBERLIMB_OP_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation)', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
-DIGIGRADE_LEGS
-GRAPPLE_HAND
-IMPROVED_SYNTHSKIN_1_4
-LIMINAL_BODY_CENTAUR
-LIMINAL_BODY_WHEELED
-LIMINAL_BODY_TANK
-MONKEY_FOOT
-MODULAR_CONNECTOR_WRIST
-MODULAR_CONNECTOR_ANKLE
-MODULAR_CONNECTOR_ELBOW
-MODULAR_CONNECTOR_KNEE
-MODULAR_CONNECTOR_SHOULDER
-MODULAR_CONNECTOR_HIP
-MODULAR_LIMB_HAND
-MODULAR_LIMB_FOOT
-MODULAR_LIMB_PARTIAL_ARM
-MODULAR_LIMB_PARTIAL_LEG
-MODULAR_LIMB_FULL_ARM
-MODULAR_LIMB_FULL_LEG
-PARTIAL_CYBERSKULL
-RAPTOR_FOOT
-SKATES
-SKIMMERS
-SNAKE_FINGERS
-TELESCOPIC_LIMBS_1_2
-WATER_JET
+DIGIGRADE_LEGS = Augmentation("Digigrade_legs", page_ref="CF, 223", cost=["Leg", "+", 5000], essence=["Leg", "+", 0.25], capacity=4, avail=["Leg", "+", 4], subtype='CylimbAcc')
+GRAPPLE_HAND = Augmentation("Grapple_hand", page_ref="CF, 223", cost=2000, essence=.45, capacity=10, avail=12, legality=RESTRICTED, subtype='CylimbAcc')
+IMPROVED_SYNTHSKIN_1_4 = Augmentation("Improved_synthskin_1_4", page_ref="CF, 223", cost=["Rating", "*", 5000], essence="-", capacity=["Rating", "*", 2], avail=["Rating", "*", 4], subtype='CylimbAcc')
+LIMINAL_BODY_CENTAUR = Augmentation("Liminal_body_centaur", page_ref="CF, 223", cost=80000, essence=3, capacity=80, avail=12, subtype='CylimbAcc')
+LIMINAL_BODY_WHEELED = Augmentation("Liminal_body_wheeled", page_ref="CF, 223", cost=40000, essence=2.5, capacity=40, avail=8, subtype='CylimbAcc')
+LIMINAL_BODY_TANK = Augmentation("Liminal_body_tank", page_ref="CF, 223", cost=50000, essence=3, capacity=60, avail=12, legality=RESTRICTED, subtype='CylimbAcc')
+MONKEY_FOOT = Augmentation("Monkey_foot", page_ref="CF, 223", cost=6000, essence=.3, capacity=2, avail=8, subtype='CylimbAcc')
+MODULAR_CONNECTOR_WRIST = Augmentation("Modular_connector_wrist", page_ref="CF, 223", cost=2000, essence=.1, capacity=5, avail=4, subtype='CylimbAcc')
+MODULAR_CONNECTOR_ANKLE = Augmentation("Modular_connector_ankle", page_ref="CF, 223", cost=2000, essence=.1, capacity=5, avail=4, subtype='CylimbAcc')
+MODULAR_CONNECTOR_ELBOW = Augmentation("Modular_connector_elbow", page_ref="CF, 223", cost=4000, essence=.2, capacity=10, avail=8, subtype='CylimbAcc')
+MODULAR_CONNECTOR_KNEE = Augmentation("Modular_connector_knee", page_ref="CF, 223", cost=4000, essence=.2, capacity=10, avail=8, subtype='CylimbAcc')
+MODULAR_CONNECTOR_SHOULDER = Augmentation("Modular_connector_shoulder", page_ref="CF, 223", cost=6000, essence=.3, capacity="-", avail=12, subtype='CylimbAcc')
+MODULAR_CONNECTOR_HIP = Augmentation("Modular_connector_hip", page_ref="CF, 223", cost=6000, essence=.3, capacity="-", avail=12, subtype='CylimbAcc')
+MODULAR_LIMB_HAND = Augmentation("Modular_limb_hand", page_ref="CF, 223", cost=1000, essence=.25, capacity=["Limb", "-", 1], avail=["Limb", "+", 2], subtype='CylimbAcc')
+MODULAR_LIMB_FOOT = Augmentation("Modular_limb_foot", page_ref="CF, 223", cost=1000, essence=.25, capacity=["Limb", "-", 1], avail=["Limb", "+", 2], subtype='CylimbAcc')
+MODULAR_LIMB_PARTIAL_ARM = Augmentation("Modular_limb_partial_arm", page_ref="CF, 223", cost=2000, essence=.45, capacity=["Limb", "-", 2], avail=["Limb", "+", 2], subtype='CylimbAcc')
+MODULAR_LIMB_PARTIAL_LEG = Augmentation("Modular_limb_partial_leg", page_ref="CF, 223", cost=2000, essence=.45, capacity=["Limb", "-", 2], avail=["Limb", "+", 2], subtype='CylimbAcc')
+MODULAR_LIMB_FULL_ARM = Augmentation("Modular_limb_full_arm", page_ref="CF, 223", cost=3000, essence=1, capacity=["Limb", "-", 3], avail=["Limb", "+", 2], subtype='CylimbAcc')
+MODULAR_LIMB_FULL_LEG = Augmentation("Modular_limb_full_leg", page_ref="CF, 223", cost=3000, essence=1, capacity=["Limb", "-", 3], avail=["Limb", "+", 2], subtype='CylimbAcc')
+PARTIAL_CYBERSKULL = Augmentation("Partial_cyberskull", page_ref="CF, 223", cost=8000, essence=.4, capacity=4, avail=12, subtype='CylimbAcc')
+RAPTOR_FOOT = Augmentation("Raptor_foot", page_ref="CF, 223", cost=8000, essence=.5, capacity=4, avail=8, legality=RESTRICTED, subtype='CylimbAcc')
+SKATES = Augmentation("Skates", page_ref="CF, 223", cost=250, essence="-", capacity=2, avail=4, subtype='CylimbAcc')
+SKIMMERS = Augmentation("Skimmers", page_ref="CF, 223", cost=2000, essence="-", capacity=4, avail=8, subtype='CylimbAcc')
+SNAKE_FINGERS = Augmentation("Snake_fingers", page_ref="CF, 223", cost=1000, essence="-", capacity=2, avail=6, subtype='CylimbAcc')
+TELESCOPIC_LIMBS_1_2 = Augmentation("Telescopic_limbs_1_2", page_ref="CF, 223", cost=["Rating", "*", 1000], essence="-", capacity=["Rating", "*", 3], avail=["Rating", "*", 4], subtype='CylimbAcc')
+WATER_JET = Augmentation("Water_jet", page_ref="CF, 223", cost=1000, essence="-", capacity=4, avail=8, subtype='CylimbAcc')
 # BIOWARE
 AMPLIFIED_IMMUNE_SYSTEM_1_4
 CHEMICAL_GLAND
@@ -2821,4 +2825,3 @@ VOCAL_RANGE_ENHANCER
 VOCAL_RANGE_EXPANDER
 
 
-FULL_ARM_OBV = Augmentation("Cyberlimb - Full Arm (Obvious)", page_ref=457, cost=15000, essence=1, capacity=15, avail=4, subtype='Cyberlimbs', location="Full Arm", base=True, mods=[])
