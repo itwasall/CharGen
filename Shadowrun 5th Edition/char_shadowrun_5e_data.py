@@ -640,6 +640,14 @@ class AugmentationCore(AbstractBaseClass):
         return f'{self.name}'
 
 
+class Nanoware(AbstractBaseClass):
+    items = []
+
+    def __init__(self, name, **kwargs):
+        super().__init__(name, **kwargs)
+        Nanoware.items.append(self)
+
+
 class AugmentationGrade(AbstractBaseClass):
     items = []
 
@@ -2867,7 +2875,7 @@ CLAWS_RETRACTABLE = Augmentation("Claws_retractable", page_ref='CF, 122', cost=1
 ELECTRICAL_DISCHARGE = Augmentation("Electrical_discharge", page_ref='CF, 122', cost=10000, essence=.3, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
 FANGS = Augmentation("Fangs", page_ref='CF, 122', cost=500, essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
 FANS_RETRACTABLE = Augmentation("Fans_retractable", page_ref='CF, 122', cost=1000, essence=.15, avail=6, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
-HORNS = Augmentation("Horns", page_ref='CF, 122', cost=,500 essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+HORNS = Augmentation("Horns", page_ref='CF, 122', cost=500 essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
 MUZZLE = Augmentation("Muzzle", page_ref='CF, 122', cost=2000, essence=.3, avail=8, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
 SPRAYER = Augmentation("Sprayer", page_ref='CF, 122', cost=4000, essence=.25, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
 STINGER_TINY = Augmentation("Stinger_tiny", page_ref='CF, 122', cost=250, essence=.05, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
@@ -2889,26 +2897,80 @@ GUT_FLORA_LACTOSE_INTOLERANCE = Augmentation("Gut_flora_lactose_intolerance", pa
 MENDOR_ENDOSONT = Augmentation("Mendor_endosont", page_ref='CF, 124', cost=30000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
 SLIMWORM = Augmentation("Slimworm", page_ref='CF, 124', cost=1000, essence=.2, avail=4, subtype='Symbiont', rulebook='Chrome Flesh')
 STALWART_ENDOSONTALWART_ENDOSONT = Augmentation("Stalwart_endosont", page_ref='CF, 124', cost=10000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
-"""
 # HARD NANOWARE SYSTEMS
-ANIT_RAD
-CONTROL_RIG_BOOSTER
-IMPLANT_MEDIC
-NANITE_HUTNERS
-MARKERS
-NANOTATTOOS_HARD
-TAGGANTS
-TRAUMA_CONTROL_SYSTEM
+#   Nanoware are getting their own class here as they technically act like mods for augmentations. Whom themselves can also be mods for cyberlimbs. Why.
+ANIT_RAD = Nanoware("Anit_rad", page_ref='CF, 149', cost=["Rating", "*", 6000], avail=14, legality=FORBIDDEN, rating=[1, 'to', 6], rulebook='Chrome Flesh')
+CONTROL_RIG_BOOSTER = Nanoware("Control_rig_booster", page_ref='CF, 149', cost=["Rating", "*", 6000], avail=12, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+IMPLANT_MEDIC = Nanoware("Implant_medic", page_ref='CF, 149', cost=["Implant Cost", "*", 0.1], avail=12, legality=FORBIDDEN, rating=[1, 'to', 6], rulebook='Chrome Flesh')
+NANITE_HUTNERS = Nanoware("Nanite_hutners", page_ref='CF, 149', cost=["Rating", "*", 5000], avail=16, legality=RESTRICTED, rating=[1, 'to', 6], rulebook='Chrome Flesh')
+MARKERS = Nanoware("Markers", page_ref='CF, 149', cost=["Rating", "*", 2000], avail=12, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NANOTATTOOS_HARD = Nanoware("Nanotattoos_hard", page_ref='CF, 149', cost=["Rating", "*", 1000], avail=12, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+TAGGANTS = Nanoware("Taggants", page_ref='CF, 149', cost=["Rating", "*", 600], avail=12, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+TRAUMA_CONTROL_SYSTEM = Nanoware("Trauma_control_system", page_ref='CF, 149', cost=["Rating", "*", 4000], avail=12, legality=FORBIDDEN, rating=[1, 'to', 6], rulebook='Chrome Flesh')
 # SOFT NANOWARE SYSTEMS
-ANTI_TOX
-CARCERAND_PLUS
-NANOSYMBIOTES
-NANTIDOTES
-NANOTATTOOS_SOFT
-NEURAL_AMPLIFIER_LEARNING_STIMULUS
-NEURAL_AMPLIFIER_LIMBIC
-NEURAL_AMPLIFIER_NEOCORTICAL
-NEURAL_AMPLIFIER_RECALL
-O_CELLS
-OXYRUSH
-"""
+ANTI_TOX = Nanoware("Anti_tox", page_ref='CF, 151', cost=["Rating", "*", 5000], avail=16, legality=FORBIDDEN, rating=[1, 'to', 9], rulebook='Chrome Flesh')
+CARCERAND_PLUS = Nanoware("Carcerand_plus", page_ref='CF, 151', cost=["Rating", "*", 3000], avail=10, legality=FORBIDDEN, rating=[1, 'to', 6], rulebook='Chrome Flesh')
+NANOSYMBIOTES = Nanoware("Nanosymbiotes", page_ref='CF, 151', cost=["Rating", "*", 6000], avail=16, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NANTIDOTES = Nanoware("Nantidotes", page_ref='CF, 151', cost=["Rating", "*", 1500], avail=8, legality=FORBIDDEN, rating=[1, 'to', 6], rulebook='Chrome Flesh')
+NANOTATTOOS_SOFT = Nanoware("Nanotattoos_soft", page_ref='CF, 151', cost=["Rating", "*", 500], avail=12, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NEURAL_AMPLIFIER_LEARNING_STIMULUS = Nanoware("Neural_amplifier_learning_stimulus", page_ref='CF, 151', cost=["Rating", "*", 5000], avail=14, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NEURAL_AMPLIFIER_LIMBIC = Nanoware("Neural_amplifier_limbic", page_ref='CF, 151', cost=["Rating", "*", 7500], avail=16, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NEURAL_AMPLIFIER_NEOCORTICAL = Nanoware("Neural_amplifier_neocortical", page_ref='CF, 151', cost=["Rating", "*", 7500], avail=16, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+NEURAL_AMPLIFIER_RECALL = Nanoware("Neural_amplifier_recall", page_ref='CF, 151', cost=["Rating", "*", 3500], avail=12, legality=FORBIDDEN, rating=[1, 'to', 3], rulebook='Chrome Flesh')
+O_CELLS = Nanoware("O_cells", page_ref='CF, 151', cost=["Rating", "*", 5000], avail=12, legality=FORBIDDEN, rating=[1, 'to', 9], rulebook='Chrome Flesh')
+OXYRUSH = Nanoware("Oxyrush", page_ref='CF, 151', cost=["Rating", "*", 1500], avail=12, legality=FORBIDDEN, rating=[1, 'to', 5], rulebook='Chrome Flesh')
+# NANOCYBERNETICS
+DYNAMIC_HANDPRINTS = Augmentation("Dynamic_handprints", page_ref='CF, 153', cost=["Rating", "*", 21000], essence=0.2, avail=12, legality=FORBIDDEN, subtype='NanoCybernetics', rulebook='Chrome Flesh')
+FLASHBACK_SYSTEM = Augmentation("Flashback_system", page_ref='CF, 153', cost=6000, avail essence=0.3,=8, legality=RESTRICTED, subtype='NanoCybernetics', rulebook='Chrome Flesh')
+NANOHIVE_SOFT = Augmentation("Nanohive_soft", page_ref='CF, 153', cost=["Rating", "*", 12000], essence=["Rating", "*", 0.25], avail=["Rating", "*", 5], legality=RESTRICTED, rating=[1, 'to' 6], subtype='NanoCybernetics', rulebook='Chrome Flesh')
+NANOHIVE_HARD = Augmentation("Nanohive_hard", page_ref='CF, 153', cost=["Rating", "*", 10000], essence=["Rating", "*", 0.2], avail=["Rating", "*", 5], legality=RESTRICTED, rating=[1, 'to' 6], subtype='NanoCybernetics', rulebook='Chrome Flesh')
+RETINAL_ADJUSTERS = Augmentation("Retinal_adjusters", page_ref='CF, 153', cost=["Rating", "*", 19000], essence=0.2, avail=16, legality=FORBIDDEN, rating=[1, 'to' 6], subtype='NanoCybernetics', rulebook='Chrome Flesh')
+SMART_SKIN = Augmentation("Smart_skin", page_ref='CF, 153', cost=["Rating", "*", 5000], essence=["Rating", "*", 0.5], avail=["Rating", "*", 5], legality=FORBIDDEN, rating=[1, 'to' 6], subtype='NanoCybernetics', rulebook='Chrome Flesh')
+VOICE_MIMIC = Augmentation("Voice_mimic", page_ref='CF, 153', cost=["Rating", "*", 20000], essence=0.2, avail=16, legality=FORBIDDEN, rating=[1, 'to' 6], subtype='NanoCybernetics', rulebook='Chrome Flesh')
+# DRUGS
+AEXD = Item("AEXD", page_ref='CF, 189', cost=80, avail=4, addiction_rating=1, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+AISA = Item("AISA", page_ref='CF, 189', cost=25, avail=4, addiction_rating=5, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+ANIMAL_TONGUE = Item("ANIMAL_TONGUE", page_ref='CF, 189', cost=1500, avail=6, legality=RESTRICTED, addiction_rating=3, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+AYAOS_WILL = Item("AYAOS_WILL", page_ref='CF, 189', cost=750, avail=14, legality=FORBIDDEN, addiction_rating=5, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+BETEL = Item("BETEL", page_ref='CF, 189', cost=5 avail=4, addiction_rating=0, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+BETEMETH = Item("BETEMETH", page_ref='CF, 189', cost=30, avail=5, legality=FORBIDDEN, addiction_rating=9, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+CEREPRAX = Item("CEREPRAX", page_ref='CF, 189', cost=800, avail=14, legality=FORBIDDEN, addiction_rating=9, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+CRIMSON_ORCHID = Item("CRIMSON_ORCHID", page_ref='CF, 189', cost=300, avail=6, legality=FORBIDDEN, addiction_rating=9, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+DOPADRINE = Item("DOPADRINE", page_ref='CF, 189', cost=45, avail=8, addiction_rating=3, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+EX = Item("EX", page_ref='CF, 189', cost=20, avail=3, legality=RESTRICTED, addiction_rating=5, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+FORGET_ME_NOT = Item("FORGET_ME_NOT", page_ref='CF, 189', cost=400, avail=10, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+GALAK = Item("GALAK", page_ref='CF, 189', cost=45, avail=4, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+G3 = Item("G3", page_ref='CF, 189', cost=15, avail=2, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+GUTS = Item("GUTS", page_ref='CF, 189', cost=60, avail=8, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+HECATES_BLESSING = Item("HECATES_BLESSING", page_ref='CF, 189', cost=500, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+HURIG = Item("HURIG", page_ref='CF, 189', cost=10, avail=2, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+IMMORTAL_FLOWER = Item("IMMORTAL_FLOWER", page_ref='CF, 189', cost=2500, avail=14, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+K_10 = Item("K_10", page_ref='CF, 189', cost=900, avail=16, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+LAES = Item("LAES", page_ref='CF, 189', cost=750, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+LEAL = Item("LEAL", page_ref='CF, 189', cost=400, avail=10, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+LITTLE_SMOKE = Item("LITTLE_SMOKE", page_ref='CF, 189', cost=1800, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+MEMORY_FOG = Item("MEMORY_FOG", page_ref='CF, 189', cost=100, avail=6, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+NIGHTWATCH = Item("NIGHTWATCH", page_ref='CF, 189', cost=25, avail=3, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+NOPAINT = Item("NOPAINT", page_ref='CF, 189', cost=15, avail=3, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+ONEIRO = Item("ONEIRO", page_ref='CF, 189', cost=1250, avail=6, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+OXYGENATED_FLUROCARBONS = Item("OXYGENATED_FLUROCARBONS", page_ref='CF, 189', cost=2000, avail=12, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+OVERDRIVE = Item("OVERDRIVE", page_ref='CF, 189', cost=800, avail=10, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+PIXIE_DUST = Item("PIXIE_DUST", page_ref='CF, 189', cost=800, avail=8, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+PUSH = Item("PUSH", page_ref='CF, 189', cost=25, avail=4, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+PSYCHCHIPS_ILLEGAL = Item("PSYCHCHIPS_ILLEGAL", page_ref='CF, 189', cost=500, avail=6, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+PSYCHCHIPS_LEGAL = Item("PSYCHCHIPS_LEGAL", page_ref='CF, 189', cost=350, avail=4, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+RED_MESCALINE = Item("RED_MESCALINE", page_ref='CF, 189', cost=50, avail=4, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+RIPPER = Item("RIPPER", page_ref='CF, 189', cost=60, avail=6, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+ROCK_LIZARD_BLOOD = Item("ROCK_LIZARD_BLOOD", page_ref='CF, 189', cost=1700, avail=10, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+SHADE = Item("SHADE", page_ref='CF, 189', cost=1000, avail=6, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+SLAB = Item("SLAB", page_ref='CF, 189', cost=250, avail=8, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+SNUFF = Item("SNUFF", page_ref='CF, 189', cost=10, avail=1, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+SOBER_TIME = Item("SOBER_TIME", page_ref='CF, 189', cost=125, avail=6, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+SOOTHSAYER = Item("SOOTHSAYER", page_ref='CF, 189', cost=150, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+TRANCE = Item("TRANCE", page_ref='CF, 189', cost=1100, avail=10, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+WOAD = Item("WOAD", page_ref='CF, 189', cost=15, avail=3, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+WUDUAKU = Item("WUDUAKU", page_ref='CF, 189', cost=2350, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+ZERO = Item("ZERO", page_ref='CF, 189', cost=150, avail=8, legality=RESTRICTED, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+ZOMBIE_DUST = Item("ZOMBIE_DUST", page_ref='CF, 189', cost=1500, avail=12, legality=FORBIDDEN, addiction_rating=, addiction_threshold=, category='Drugs', subtype=, rulebook='Chrome Flesh')
+
+
