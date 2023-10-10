@@ -164,10 +164,10 @@ def get_gear_skill_dependant(ch, skill, rating,
                 return
             projectile_weapon = Item.get_weapon(skill)
             try:
-                projectile_ammo = random.choice(
+                projectile_ammo = Item.get_item(random.choice(
                         [i for i in Core.ProjectileWeapon.items if 
                          i.subtype == "Ammo" and projectile_weapon.name
-                         in i.requires])
+                         in i.requires]))
             except IndexError:
                 return projectile_weapon
             return [projectile_weapon, projectile_ammo]
@@ -263,14 +263,12 @@ def check_legality(ch: Core.Character, gear_list = GEAR_SHOPPING_LIST) -> None:
             
 
 def evaluate_gear_list(gear_list) -> list[Core.Gear]:
-    exceptions = False
+    # exceptions = False
     evaluated_gear_list = []
     for gear in gear_list:
-        if gear in evaluated_gear_list:
-            if not exceptions:
-                continue
+        if gear.name in [i.name for i in evaluated_gear_list]:
+            continue
         # if hasattr(gear, "subtype") and gear.subtype == "Commlink_":
-
         evaluated_gear_list.append(gear)
     return evaluated_gear_list
 

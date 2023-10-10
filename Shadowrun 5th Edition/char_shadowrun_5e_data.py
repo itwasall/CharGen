@@ -1098,8 +1098,8 @@ MONOFILAMENT_CHAINSAW = MeleeWeapon("Monofilament Chainsaw", cost=500, page_ref=
     PROJECTILE GEAR
 """
 # =============== BOWS ==================
-BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Bows")
-ARROW = ProjectileWeapon("Arrow", cost=6, page_ref=421, avail="Rating", rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
+BOW = ProjectileWeapon("Bow", cost=["Rating", "*", 100], page_ref=421, avail=["Rating", "*", 1], rating=[1, "to", 6], subtype="Bows")
+ARROW = ProjectileWeapon("Arrow", cost=6, page_ref=421, avail=["Rating", "*", 1], rating=[1, "to", 6], subtype="Ammo", requires=["Bow"])
 INJECTION_ARROW = ProjectileWeapon("Injection Arrow", cost=["Rating", "*", 20], page_ref=421, avail=["Rating", "*", 2], legality=RESTRICTED, rating=[1, "to", 6], subtype="Arrow", requires=["Bow"])
 # =============== CROSSBOWS =============
 LIGHT_CROSSBOW = ProjectileWeapon("Light Crossbow", cost=300, page_ref=421, avail=2, subtype="Crossbow")
@@ -1258,7 +1258,7 @@ DETONATOR_CAP = Item("Detonator Cap", cost=75, page_ref=436, rating=1, avail=8, 
 """
 # =============== CLOTHING ==============
 CLOTHING = Clothing("Clothing", cost=100, page_ref=436, avail=0, armor_rating=0)
-ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic Modification", cost=500, page_ref=436, avail=2, requires=CLOTHING)
+ELECTROCHROMATIC_MODIFICATION = Clothing("Electrochromatic Modification", cost=501, page_ref=436, avail=2, requires=CLOTHING)
 FEEDBACK_CLOTHING = Clothing("Feedback Clothing", cost=500, page_ref=436, avail=8, requires=CLOTHING)
 SYNTH_LEATHER = Clothing("Synth Leather", cost=200, page_ref=436, avail=0, requires=CLOTHING)
 # =============== ARMOR =================
@@ -1364,7 +1364,7 @@ JAMMER_AREA = Electronics("Jammer Area", cost=["Rating", "*", 200], page_ref=441
 JAMMER_DIRECTIONAL = Electronics("Jammer Directional", cost=["Rating", "*", 200], page_ref=441, rating=[1, "to", 6], avail=["Rating", "*", 2], legality=RESTRICTED, subtype="Communications")
 MICRO_TRANSRECEIVER = Electronics("Micro Transreceiver", cost=100, page_ref=441, rating=1, avail=2, subtype="Communications")
 TAG_ERASER = Electronics("Tag Eraser", cost=450, page_ref=441, rating=1, avail=6, legality=RESTRICTED, subtype="Communications")
-WHITE_NOISE_GENERATOR = Electronics("White Noise Generator", cost=["Rating", "*", 50], page_ref=441, rating=[1, "to", 6], avail="Rating", subtype="Communications")
+WHITE_NOISE_GENERATOR = Electronics("White Noise Generator", cost=["Rating", "*", 50], page_ref=441, rating=[1, "to", 6], avail=["Rating", "*", 1], subtype="Communications")
 # =============== SOFTWARE ===========
 AGENT_1_3 = Electronics("Agent", cost=["Rating", "*", 1_000], page_ref=442, rating=[1, "to", 3], avail=["Rating", "*", 3], subtype="Software")
 AGENT_4_6 = Electronics("Agent", cost=["Rating", "*", 2_000], page_ref=442, rating=[4, "to", 6], avail=["Rating", "*", 3], subtype="Software")
@@ -1373,7 +1373,7 @@ CYBERPROGRAM_HACKING = Electronics("Cyberprogram Hacking", cost=250, page_ref=44
 DATASOFT = Electronics("Datasoft", cost=120, page_ref=442, rating=1, avail=0, subtype="Software")
 MAPSOFT = Electronics("Mapsoft", cost=100, page_ref=442, rating=1, avail=0, subtype="Software")
 SHOPSOFT = Electronics("Shopsoft", cost=150, page_ref=442, rating=1, avail=0, subtype="Software")
-TUTORSOFT = Electronics("Tutorsoft", cost=["Rating", "*", 400], page_ref=442, rating=[1, "to", 6], avail="Rating", subtype="Software")
+TUTORSOFT = Electronics("Tutorsoft", cost=["Rating", "*", 400], page_ref=442, rating=[1, "to", 6], avail=["Rating", "*", 1], subtype="Software")
 # =============== SKILLSOFTS =========
 ACTIVESOFTS = Electronics("Activesofts", cost=["Rating", "*", 5000], page_ref=442, rating=[1, "to", 6], avail=8, subtype="Skillsofts")
 KNOWSOFTS = Electronics("Knowsofts", cost=["Rating", "*", 2000], page_ref=442, rating=[1, "to", 6], avail=8, subtype="Skillsofts")
@@ -1463,10 +1463,10 @@ SENSOR_ARRAY = Electronics("Sensor Array", cost=["Rating", "*", 1000], page_ref=
 # SINGLE_SENSOR = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail=0, capacity=1, housing=SENSOR_HOUSINGS, sensor_function=SENSOR_FUNCTIONS, subtype="Sensor Housing")
 SENSOR_SINGLE = Electronics("Single Sensor", cost=["Rating", "*", 100], page_ref=445, rating=[2, "to", 8], avail=0, capacity=1, subtype="Sensor Type")
 # =============== SECURITY DEVICES====
-KEY_COMBINATION_LOCK = Electronics("Key Combination Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
-MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating=[1, "to", 6], avail="Rating", subtype="Security Device")
+KEY_COMBINATION_LOCK = Electronics("Key Combination Lock", cost=["Rating", "*", 10], page_ref=447, rating=[1, "to", 6], avail=["Rating", "*", 1], subtype="Security Device")
+MAGLOCK = Electronics("Maglock", cost=["Rating", "*", 100], page_ref=447, rating=[1, "to", 6], avail=["Rating", "*", 1], subtype="Security Device")
 KEYPAD_CARD_READER = Electronics("Keypad Card Reader", cost=50, page_ref=447, rating=1, avail=0, subtype="Security Device")
-ANTI_TAMPER_CIRCUITS = Electronics("Anti Tamper Circuits", cost=["Rating", "*", 250], page_ref=447, rating=[1, "to", 4], avail="Rating", subtype="Security Device")
+ANTI_TAMPER_CIRCUITS = Electronics("Anti Tamper Circuits", cost=["Rating", "*", 250], page_ref=447, rating=[1, "to", 4], avail=["Rating", "*", 1], subtype="Security Device")
 # ============== RESTRAINT ===========
 METAL_RESTRAINT = Electronics("Metal Restraint", cost=20, page_ref=447, rating=1, avail=0, subtype="Restraint")
 PLATEEL_RESTRAINT = Electronics("Plateel Restraint", cost=50, page_ref=447, rating=1, avail=6, legality=RESTRICTED, subtype="Restraint")
@@ -1511,13 +1511,13 @@ STEALTH_ROPE = Item("Stealth Rope (100m)", cost=85, page_ref=450, rating=1, avai
 # BIOTECH
 BIOMONITOR = Item("BIOMONITOR", cost=300, page_ref=450, rating=1, avail=3, category="Biotech")
 DISPOSABLE_SYRINGE = Item("DISPOSABLE_SYRINGE", cost=10, page_ref=450, rating=1, avail=3, category="Biotech")
-MEDKIT_1_6 = Item("MEDKIT_2_6", cost=["Rating", "*", 250], page_ref=450, rating=1, avail="Rating", category="Biotech")
+MEDKIT_1_6 = Item("MEDKIT_2_6", cost=["Rating", "*", 250], page_ref=450, rating=1, avail=["Rating", "*", 1], category="Biotech")
 MEDKIT_SUPPLIES = Item("MEDKIT_SUPPLIES", cost=300, page_ref=450, rating=1, avail=0, category="Biotech")
 # SLAP PATCHES
-ANTIDOTE_PATCH_1_6 = Item("ANTIDOTE_PATCH_1_6", cost=["Rating", "*", 50], page_ref=451, rating=1, avail="Rating", category="Slap Patches")
+ANTIDOTE_PATCH_1_6 = Item("ANTIDOTE_PATCH_1_6", cost=["Rating", "*", 50], page_ref=451, rating=1, avail=["Rating", "*", 1], category="Slap Patches")
 CHEM_PATCH = Item("Chem Patch", cost=200, page_ref=451, rating=1, avail=6, category="Slap Patches")
-STIM_PATCH_1_6 = Item("Stim Patch (Rating 1-6)", cost=["Rating", "*", 25], page_ref=451, rating=1, avail=["Rating", "*", 2], category="Slap Patches")
-TRANQ_PATCH_1_10 = Item("Tranq Patch (Rating 1-6)", cost=["Rating", "*", 50], page_ref=451, rating=1, avail=["Rating", "*", 2], category="Slap Patches")
+STIM_PATCH_1_6 = Item("Stim Patch (Rating 1-6)", cost=["Rating", "*", 25], page_ref=451, rating=[1, "to", 6], avail=["Rating", "*", 3], category="Slap Patches")
+TRANQ_PATCH_1_10 = Item("Tranq Patch (Rating 1-6)", cost=["Rating", "*", 50], page_ref=451, rating=[1, "to", 10], avail=["Rating", "*", 2], category="Slap Patches")
 TRAUMA_PATCH = Item("Trama Patch", cost=500, page_ref=451, rating=1, avail=6, category="Slap Patches")
 # DOCWAGON CONTRACT
 DOCWAGON_BASIC = Item("DOCWAGON_BASIC", cost=5000, page_ref=450, rating=1, avail=0, category="Doc Wagon")

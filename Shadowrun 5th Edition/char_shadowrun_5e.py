@@ -1286,7 +1286,7 @@ def format_table(list_name, l: list, compact=False):
 
 def format_gear(ch: Core.Character, item_compact=True, compact=False):
     if compact:
-        print(f"===\nGEAR\n{[i.name for i in ch.Gear]}")
+        print(f"===\nGEAR\n{[(type(i), i.name) for i in ch.Gear]}")
         return
     gear_licenses = []
     print("===\nGEAR")
