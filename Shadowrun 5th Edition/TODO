@@ -1,3 +1,11 @@
+# INHERITANCE STRUCTURE
+data > item / gear / augmentation / chargen
+item > gear / augmentation
+augmentation > gear
+gear > chargen
+
+
+#
 # CORE
 Gear Costing + Subsequent Resolution of Execption
 Build TUI

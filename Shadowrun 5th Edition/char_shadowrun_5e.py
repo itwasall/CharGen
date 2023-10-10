@@ -9,8 +9,9 @@ from collections import OrderedDict
 KARMA_LOG = False
 
 
-def generate_character() -> Core.Character:
-    karma_log = Core.KarmaLogger()
+def generate_character(karma_logging = True) -> Core.Character:
+    if karma_logging:
+        karma_log = Core.KarmaLogger()
     # STEP 1: CONCEPT
     character = Core.Character()
     # TEST FOR NON-MAGIC CHARACTERS
@@ -235,7 +236,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
         return
     _type = random.choice(list(tbl.keys()))
     ch.MagicResoUser = str(_type)
-    print(f'Uh oh! Looks like you\'re a {ch.MagicResoUser}')
+    # print(f'Uh oh! Looks like you\'re a {ch.MagicResoUser}')
 
     def get_special_attribute(ch, tbl, attr):
         match attr:

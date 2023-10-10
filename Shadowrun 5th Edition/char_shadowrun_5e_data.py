@@ -144,7 +144,14 @@ class Character:
         self.WeaponsMelee = None
         self.Armor = None
         self.Cyberdeck = None
-        self.Augmentations = None
+        self.Augmentations = {
+            'Head': None,       'Ears': None,
+            'Eyes': None,       'Body': None,
+            'Hand': None,       'Foot': None,
+            'Lower Arm': None,  'Lower Leg': None,
+            'Full Arm': None,   'Full Leg': None,
+            'Finger': None,     'Toe': None
+        }
         self.Vehicle = None
         self.Spells = None
         self.PreparationRituals = None
@@ -626,7 +633,11 @@ class AugmentationCore(AbstractBaseClass):
         AugmentationCore.items.append(self)
 
     def __repr__(self):
-        return f'{self.name} (E:{self.essence} R:{self.rating})'
+        if hasattr(self, 'mods') and len(self.mods) > 0:
+            return f'{self.name}: (E: {self.essence}) [{", ".join([i.name for i in self.mods])}]'
+        if hasattr(self, 'rating'):
+            return f'{self.name} (E:{self.essence} R:{self.rating})'
+        return f'{self.name}'
 
 
 class AugmentationGrade(AbstractBaseClass):
@@ -2750,24 +2761,24 @@ PRIMATIVE_FULL_ARM = AugmentationCore("PRIMATIVE_FULL_ARM", page_ref="CF, 225", 
 PRIMATIVE_FULL_LEG = AugmentationCore("PRIMATIVE_FULL_LEG", page_ref="CF, 225", cost=250, subtype='Primative Cyberlimb', location='Full Leg', mods=None, rulebook='Chrome Flesh')
 BUILT_IN_MEDKIT = Augmentation("Built-in Medkit", page_ref="CF, 225", cost=["Medkit", "+", 1000], essence=.45, capacity=10, avail=8, subtype='CyblimbAcc', rulebook='Chrome Flesh')
 BUILT_IN_TOOL_KIT = Augmentation("Built-in Toolkit", page_ref="CF, 225", cost=2000, essence=.45, capacity=10, avail=4, subtype='CyblimbAcc', rulebook='Chrome Flesh')
-BULK_MODIFICATION_HAND_FOOT_SKULL = Augmentation("Bulk Modification (Hand/Foot/Half-Skull, rulebook='Chrome Flesh')", page_ref="CF, 225", cost=['Rating', '*', 500], rating=1, capacity=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
-BULK_MODIFICATION_PARTIAL_ARMLEG_SKULL = Augmentation("Bulk Modification (Lower Arm/Lower Leg/Skull, rulebook='Chrome Flesh')", page_ref="CF, 225", cost=['Rating', '*', 500], rating=2, avail=["Rating", "*", 1], subtype='CylimbAcc')
-BULK_MODIFICATION_ARM_LEG = Augmentation("Bulk Modification (Full Arm/Full Leg, rulebook='Chrome Flesh')", page_ref="CF, 225", cost=['Rating', '*', 500], rating=4, avail=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
-BULK_MODIFICATION_TORSO_LIMINAL = Augmentation("Bulk Modification (Torso/LIMINAL CHASSIS, rulebook='Chrome Flesh')", page_ref="CF, 225", cost=['Rating', '*', 500], rating=6, avail=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_HAND_FOOT_SKULL = Augmentation("Bulk Modification (Hand/Foot/Half-Skull)", rulebook='Chrome Flesh', page_ref="CF, 225", cost=['Rating', '*', 500], rating=1, capacity=["Rating", "*", 1], avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_PARTIAL_ARMLEG_SKULL = Augmentation("Bulk Modification (Lower Arm/Lower Leg/Skull)", rulebook='Chrome Flesh', page_ref="CF, 225", cost=['Rating', '*', 500], rating=2, avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_ARM_LEG = Augmentation("Bulk Modification (Full Arm/Full Leg)", rulebook='Chrome Flesh', page_ref="CF, 225", cost=['Rating', '*', 500], rating=4, avail=["Rating", "*", 1], subtype='CylimbAcc')
+BULK_MODIFICATION_TORSO_LIMINAL = Augmentation("Bulk Modification (Torso/LIMINAL CHASSIS)", rulebook='Chrome Flesh', page_ref="CF, 225", cost=['Rating', '*', 500], rating=6, avail=["Rating", "*", 1], subtype='CylimbAcc')
 CYBERFINGERS = Augmentation("Cyberfingers", page_ref="CF, 223", cost=500, essence=0.05, capacity=1, avail=2, subtype='CylimbAcc', rulebook='Chrome Flesh')
 CYBERFINGERS_CYBERLIGHT = Augmentation("Cyberfingers_cyberlight", page_ref="CF, 223", cost=550, essence=.05, capacity=1, avail=4, subtype='CylimbAcc', rulebook='Chrome Flesh')
 CYBERFINGERS_CYBERLIGHTER = Augmentation("Cyberfingers_cyberlighter", page_ref="CF, 223", cost=550, essence=0.05, capacity=1, avail=4, subtype='CylimbAcc', rulebook='Chrome Flesh')
 CYBERFINGERS_GRENADE = Augmentation("Cyberfingers_grenade", page_ref="CF, 223", cost=["Grenade", "+", 500], essence=.05, capacity=1, avail=["Grenade", "+", 4], subtype='CylimbAcc', rulebook='Chrome Flesh')
 CYBERFINGERS_PISTOL = Augmentation("Cyberfingers_pistol", page_ref="CF, 223", cost=1000, essence=.05, capacity=1, avail=8, legality=RESTRICTED, subtype='CylimbAcc', rulebook='Chrome Flesh')
 CYBERLIMB_OP = Augmentation('Cyberlimb Optimisation', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], subtype='CylimbAcc', category='Optimisation', rulebook='Chrome Flesh')
-CYBERLIMB_OP_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
-CYBERLIMB_OP_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
-CYBERLIMB_OP_KALENJIN = Augmentation('Kalenjin (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=RUNNING)
-CYBERLIMB_OP_KUROKO = Augmentation('Kuroko (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=DISGUISE)
-CYBERLIMB_OP_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PISTOLS)
-CYBERLIMB_OP_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
-CYBERLIMB_OP_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
-CYBERLIMB_OP_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation, rulebook='Chrome Flesh')', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
+CYBERLIMB_OP_EVO_ATLANTEAN = Augmentation('Evo Atlantean (Cyberlimb Optimisation', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=SWIMMING)
+CYBERLIMB_OP_FUCHI_VIRTUOSO = Augmentation('Fuchi Virtuoso (Cyberlimb Optimisation', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PERFORMANCE)
+CYBERLIMB_OP_KALENJIN = Augmentation('Kalenjin (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=RUNNING)
+CYBERLIMB_OP_KUROKO = Augmentation('Kuroko (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=DISGUISE)
+CYBERLIMB_OP_MUNDEN_QUICKDRAW = Augmentation('Munden QuickDraw (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=PISTOLS)
+CYBERLIMB_OP_SPINRAD_NEVERREST = Augmentation('Spinrad NeverRest (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=GYMNASTICS)
+CYBERLIMB_OP_THE_GREATEST = Augmentation('The Greatest (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=UNARMED_COMBAT)
+CYBERLIMB_OP_YANKEE_PITCHER = Augmentation('Yankee Pitcher (Cyberlimb Optimisation)', rulebook='Chrome Flesh', page_ref="CF, 87", cost=["Limb", "+", 2000], essence="-", capacity=2, avail=["Limb", "+", 2], category='Optimisation', subtype='CylimbAcc', skill=THROWING_WEAPONS)
 DIGIGRADE_LEGS = Augmentation("Digigrade_legs", page_ref="CF, 223", cost=["Leg", "+", 5000], essence=["Leg", "+", 0.25], capacity=4, avail=["Leg", "+", 4], subtype='CylimbAcc', rulebook='Chrome Flesh')
 GRAPPLE_HAND = Augmentation("Grapple_hand", page_ref="CF, 223", cost=2000, essence=.45, capacity=10, avail=12, legality=RESTRICTED, subtype='CylimbAcc', rulebook='Chrome Flesh')
 IMPROVED_SYNTHSKIN_1_4 = Augmentation("Improved_synthskin_1_4", page_ref="CF, 223", cost=["Rating", "*", 5000], essence="-", capacity=["Rating", "*", 2], avail=["Rating", "*", 4], subtype='CylimbAcc', rulebook='Chrome Flesh')
@@ -2832,6 +2843,7 @@ TROLL_EYES = Augmentation("Troll_eyes", page_ref='CF, 229', cost=1000, essence=.
 VOCAL_RANGE_ENHANCER = Augmentation("Vocal_range_enhancer", page_ref='CF, 229', cost=10000, essence=.1, avail=8, subtype='Bioware', rulebook='Chrome Flesh')
 VOCAL_RANGE_EXPANDER = Augmentation("Vocal_range_expander", page_ref='CF, 229', cost=30000, essence=.2, avail=12, legality=RESTRICTED, subtype='Bioware', rulebook='Chrome Flesh')
 # CULTURED BIOWARE
+"""
 BOOSTED_REFLEXES = Augmentation("Boosted_reflexes", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
 CEREBELLUM_BOOSTER_1_2 = Augmentation("Cerebellum_booster_1_2", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
 KNOWLEDGE_INFUSION = Augmentation("Knowledge_infusion", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
@@ -2850,5 +2862,5 @@ REPRODUCTIVE_REPLACEMENT_MALE = Augmentation("Reproductive_replacement_male", pa
 REPRODUCTIVE_REPLACEMENT_FEMALE = Augmentation("Reproductive_replacement_female", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
 TRAUMA_DAMPER_1_4 = Augmentation("Trauma_damper_1_4", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
 TREMOR_REDUCER_1_3 = Augmentation("Tremor_reducer_1_3", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-
+"""
 

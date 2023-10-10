@@ -30,6 +30,8 @@ def get_item(item: Core.Gear=None, item_pool_id=None):
         item.rating = get_item_rating(item)
     if hasattr(item, "avail"):
         item.avail = get_item_avail(item)
+    if hasattr(item, "capacity"):
+        item.capacity = get_item_capacity(item)
     return item
 
 
