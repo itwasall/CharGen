@@ -2843,24 +2843,72 @@ TROLL_EYES = Augmentation("Troll_eyes", page_ref='CF, 229', cost=1000, essence=.
 VOCAL_RANGE_ENHANCER = Augmentation("Vocal_range_enhancer", page_ref='CF, 229', cost=10000, essence=.1, avail=8, subtype='Bioware', rulebook='Chrome Flesh')
 VOCAL_RANGE_EXPANDER = Augmentation("Vocal_range_expander", page_ref='CF, 229', cost=30000, essence=.2, avail=12, legality=RESTRICTED, subtype='Bioware', rulebook='Chrome Flesh')
 # CULTURED BIOWARE
+BOOSTED_REFLEXES = Augmentation("Boosted_reflexes", page_ref='CF, 231', cost=10000, essence=1, avail=8, legality=RESTRICTED, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+CEREBELLUM_BOOSTER_1_2 = Augmentation("Cerebellum_booster_1_2", page_ref='CF, 231', cost=["Rating", "*", 50000], essence=["Rating", "*", 0.2], avail=["Rating", "*", 8], subtype='Cultured Bioware', rulebook='Chrome Flesh')
+KNOWLEDGE_INFUSION = Augmentation("Knowledge_infusion", page_ref='CF, 231', cost=2000, essence=0.1, avail=12, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT = Augmentation("Limb_replacement", page_ref='CF, 231', cost=2000, essence=0.2, avail=6, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_FINGER = Augmentation("Limb_replacement_finger", page_ref='CF, 231', cost=2000, essence=0, avail=4 subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_TOE = Augmentation("Limb_replacement_toe", page_ref='CF, 231', cost=2000, essence=0, avail=4, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_HAND = Augmentation("Limb_replacement_hand", page_ref='CF, 231', cost=20000, essence=0, avail=8, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_FOOT = Augmentation("Limb_replacement_foot", page_ref='CF, 231', cost=20000, essence=0, avail=8, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_HALF_ARM = Augmentation("Limb_replacement_half_arm", page_ref='CF, 231', cost=40000, essence=0, avail=12, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_HALF_LEG = Augmentation("Limb_replacement_half_leg", page_ref='CF, 231', cost=40000, essence=0, avail=12, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_FULL_ARM = Augmentation("Limb_replacement_full_arm", page_ref='CF, 231', cost=80000, essence=0, avail=12, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+LIMB_REPLACEMENT_FULL_LEG = Augmentation("Limb_replacement_full_leg", page_ref='CF, 231', cost=80000, essence=0, avail=12, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+NEURO_RETENTION_ENHANCE = Augmentation("Neuro_retention_enhance", page_ref='CF, 231', cost=10000, essence=0.1, avail=4, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+RECEPTION_ENHANCER = Augmentation("Reception_enhancer", page_ref='CF, 231', cost=10000, essence=0.2, avail=4, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+REPRODUCTIVE_REPLACEMENT_MALE = Augmentation("Reproductive_replacement_male", page_ref='CF, 231', cost=8000, essence=0.1, avail=8, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+REPRODUCTIVE_REPLACEMENT_FEMALE = Augmentation("Reproductive_replacement_female", page_ref='CF, 231', cost=20000, essence=0.3, avail=4, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+TRAUMA_DAMPER_1_4 = Augmentation("Trauma_damper_1_4", page_ref='CF, 231', cost=["Rating", "*", 4000], essence=["Rating", "*", 0.1], avail=["Rating", "*", 4], legality=RESTRICTED, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+TREMOR_REDUCER_1_3 = Augmentation("Tremor_reducer_1_3", page_ref='CF, 231', cost=["Rating", "*", 10000], essence=["Rating", "*", 0.1], avail=["Rating", "*", 6], subtype='Cultured Bioware', rulebook='Chrome Flesh')
+# BIO-WEAPONS
+CLAWS = Augmentation("Claws", page_ref='CF, 122', cost=500, essence=0.1, avail=4, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+CLAWS_RETRACTABLE = Augmentation("Claws_retractable", page_ref='CF, 122', cost=1000, essence=.15, avail=6, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+ELECTRICAL_DISCHARGE = Augmentation("Electrical_discharge", page_ref='CF, 122', cost=10000, essence=.3, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+FANGS = Augmentation("Fangs", page_ref='CF, 122', cost=500, essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+FANS_RETRACTABLE = Augmentation("Fans_retractable", page_ref='CF, 122', cost=1000, essence=.15, avail=6, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+HORNS = Augmentation("Horns", page_ref='CF, 122', cost=,500 essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+MUZZLE = Augmentation("Muzzle", page_ref='CF, 122', cost=2000, essence=.3, avail=8, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+SPRAYER = Augmentation("Sprayer", page_ref='CF, 122', cost=4000, essence=.25, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+STINGER_TINY = Augmentation("Stinger_tiny", page_ref='CF, 122', cost=250, essence=.05, avail=8, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+STINGER_MEDIUM = Augmentation("Stinger_medium", page_ref='CF, 122', cost=2000, essence=.1, avail=8, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+STINGER_LARGE = Augmentation("Stinger_large", page_ref='CF, 122', cost=8000, essence=.2, avail=12, legality=FORBIDDEN, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+STRIKING_CALLUS = Augmentation("Striking_callus", page_ref='CF, 122', cost=250, essence=.05, avail=2, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+TUSK_SMALL = Augmentation("Tusk_small", page_ref='CF, 122', cost=100, essence=0, avail=2, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+TUSK_MEDIUM = Augmentation("Tusk_medium", page_ref='CF, 122', cost=500, essence=.1, avail=4, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+TUSK_LARGE = Augmentation("Tusk_large", page_ref='CF, 122', cost=1000, essence=.2, avail=8, legality=RESTRICTED, subtype='Bio-Weaponary', rulebook='Chrome Flesh')
+# SYMBIONT
+CLEANER_LEECH = Augmentation("Cleaner_leech", page_ref='CF, 124', cost=100, essence=0, avail=4, subtype='Symbiont', rulebook='Chrome Flesh')
+BOOSTER_ENDOSONT = Augmentation("Booster_endosont", page_ref='CF, 124', cost=10000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
+DIGESTER_ENDOSONT = Augmentation("Digester_endosont", page_ref='CF, 124', cost=10000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
+ELECTRORECEPTOR_ENDOSONT = Augmentation("Electroreceptor_endosont", page_ref='CF, 124', cost=10000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
+GUT_FLORA_ALLERGY_RESISTANCE_MILD = Augmentation("Gut_flora_allergy_resistance_mild", page_ref='CF, 124', cost=10000, essence=.2, avail=8, subtype='Symbiont', rulebook='Chrome Flesh')
+GUT_FLORA_ALLERGY_RESISTANCE_MODERATE = Augmentation("Gut_flora_allergy_resistance_moderate", page_ref='CF, 124', cost=30000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
+GUT_FLORA_ALLERGY_RESISTANCE_SEVERE = Augmentation("Gut_flora_allergy_resistance_severe", page_ref='CF, 124', cost=50000, essence=.2, avail=16, subtype='Symbiont', rulebook='Chrome Flesh')
+GUT_FLORA_LACTOSE_INTOLERANCE = Augmentation("Gut_flora_lactose_intolerance", page_ref='CF, 124', cost=50, essence=0, avail=2, subtype='Symbiont', rulebook='Chrome Flesh')
+MENDOR_ENDOSONT = Augmentation("Mendor_endosont", page_ref='CF, 124', cost=30000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
+SLIMWORM = Augmentation("Slimworm", page_ref='CF, 124', cost=1000, essence=.2, avail=4, subtype='Symbiont', rulebook='Chrome Flesh')
+STALWART_ENDOSONTALWART_ENDOSONT = Augmentation("Stalwart_endosont", page_ref='CF, 124', cost=10000, essence=.2, avail=12, subtype='Symbiont', rulebook='Chrome Flesh')
 """
-BOOSTED_REFLEXES = Augmentation("Boosted_reflexes", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-CEREBELLUM_BOOSTER_1_2 = Augmentation("Cerebellum_booster_1_2", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-KNOWLEDGE_INFUSION = Augmentation("Knowledge_infusion", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT = Augmentation("Limb_replacement", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_FINGER = Augmentation("Limb_replacement_finger", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_TOE = Augmentation("Limb_replacement_toe", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_HAND = Augmentation("Limb_replacement_hand", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_FOOT = Augmentation("Limb_replacement_foot", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_HALF_ARM = Augmentation("Limb_replacement_half_arm", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_HALF_LEG = Augmentation("Limb_replacement_half_leg", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_FULL_ARM = Augmentation("Limb_replacement_full_arm", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-LIMB_REPLACEMENT_FULL_LEG = Augmentation("Limb_replacement_full_leg", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-NEURO_RETENTION_ENHANCE = Augmentation("Neuro_retention_enhance", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-RECEPTION_ENHANCER = Augmentation("Reception_enhancer", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-REPRODUCTIVE_REPLACEMENT_MALE = Augmentation("Reproductive_replacement_male", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-REPRODUCTIVE_REPLACEMENT_FEMALE = Augmentation("Reproductive_replacement_female", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-TRAUMA_DAMPER_1_4 = Augmentation("Trauma_damper_1_4", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
-TREMOR_REDUCER_1_3 = Augmentation("Tremor_reducer_1_3", page_ref='CF, 231', cost=, essence=, avail=, legality=, subtype='Cultured Bioware', rulebook='Chrome Flesh')
+# HARD NANOWARE SYSTEMS
+ANIT_RAD
+CONTROL_RIG_BOOSTER
+IMPLANT_MEDIC
+NANITE_HUTNERS
+MARKERS
+NANOTATTOOS_HARD
+TAGGANTS
+TRAUMA_CONTROL_SYSTEM
+# SOFT NANOWARE SYSTEMS
+ANTI_TOX
+CARCERAND_PLUS
+NANOSYMBIOTES
+NANTIDOTES
+NANOTATTOOS_SOFT
+NEURAL_AMPLIFIER_LEARNING_STIMULUS
+NEURAL_AMPLIFIER_LIMBIC
+NEURAL_AMPLIFIER_NEOCORTICAL
+NEURAL_AMPLIFIER_RECALL
+O_CELLS
+OXYRUSH
 """
-
