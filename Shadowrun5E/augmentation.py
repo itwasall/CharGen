@@ -46,13 +46,15 @@ def get_augmentation(ch: Core.Character, aug_type=None, aug_bodyloc=None):
     match aug_type:
         case 'Cyberware':
             if aug_bodyloc is None:
-                aug_bodyloc = random.choice('Earware', 'Eyeware', 'Headware', 'Bodyware')
+                aug_bodyloc = random.choice(
+                        'Earware', 'Eyeware', 'Headware', 'Bodyware')
                 ch = get_augmentation_regular(ch, essence_budget, aug_bodyloc)
             elif aug_bodyloc in ['Earware', 'Eyeware', 'Headware']:
                 ch = get_augmentation_regular(ch, essence_budget, aug_bodyloc)
         case 'Cyberlimbs':
             if aug_bodyloc is None:
-                aug_bodyloc = random.choice(['Hand', 'Foot', 'Lower Arm', 'Lower Leg', 'Full Arm', 'Full Leg'])
+                aug_bodyloc = random.choice([
+                    'Hand', 'Foot', 'Lower Arm', 'Lower Leg', 'Full Arm', 'Full Leg'])
                 ch = get_augmentation_cyberlimb(ch, essence_budget, aug_bodyloc)
             else:
                 ch = get_augmentation_cyberlimb(ch, aug_bodyloc)
@@ -64,7 +66,9 @@ def get_augmentation(ch: Core.Character, aug_type=None, aug_bodyloc=None):
     return
 
 
-def get_augmentation_regular(ch: Core.Character, ess: int, aug_bodyloc) -> Core.Character:
+def get_augmentation_regular(ch: Core.Character, 
+                             ess: int, 
+                             aug_bodyloc) -> Core.Character:
     if aug_bodyloc == 'Eyeware' and random.randint(1,2) == 1:
         RETINAL_ENHANCEMENT = True
     elif aug_bodyloc == 'Earware' and random.randint(1, 2) == 1:
@@ -84,8 +88,10 @@ def get_augmentation_regular(ch: Core.Character, ess: int, aug_bodyloc) -> Core.
         ch.Augmentations['Ears'].name += " (Inner Ear Enhancement)"
         ch.Essence.value -= ch.Augmentations['Ears'].essence
         return ch
-    aug_base = Item.get_item(random.choice([i for i in Core.AugmentationCore.items if hasattr(i, "rating") and i.subtype == aug_bodyloc]))
-    aug_options = [i for i in Core.Augmentation.items if i.subtype == aug_bodyloc]
+    aug_base = Item.get_item(random.choice([
+        i for i in Core.AugmentationCore.items if hasattr(i, "rating") and i.subtype == aug_bodyloc]))
+    aug_options = [
+            i for i in Core.Augmentation.items if i.subtype == aug_bodyloc]
     catchall = 0
     while aug_base.capacity > 0 or catchall < 10:
         new_aug = Item.get_item(random.choice(aug_options))
@@ -102,15 +108,23 @@ def get_augmentation_regular(ch: Core.Character, ess: int, aug_bodyloc) -> Core.
             catchall += 1
             continue
     
-    aug_bodyloc_dict = {'Earware': 'Ears', 'Eyeware': 'Eyes', 'Bodyware': 'Body', 'Headware': 'Head'}
+    aug_bodyloc_dict = {
+            'Earware': 'Ears', 
+            'Eyeware': 'Eyes', 
+            'Bodyware': 'Body', 
+            'Headware': 'Head'}
     bodyl = aug_bodyloc_dict[aug_bodyloc]
     ch.Augmentations[bodyl] = aug_base
     ch.Essence.value -= ch.Augmentations[bodyl].essence
     return ch
 
 
-def get_augmentation_cyberlimb(ch: Core.Character, ess:int, aug_bodyloc) -> Core.AugmentationCore:
-    cyberlimb_base = random.choice([i for i in Core.AugmentationCore.items if i.subtype == 'Cyberlimbs' and i.location == aug_bodyloc])
+def get_augmentation_cyberlimb(ch: Core.Character, 
+                               ess:int, 
+                               aug_bodyloc) -> Core.AugmentationCore:
+    cyberlimb_base = random.choice([
+        i for i in Core.AugmentationCore.items if 
+        i.subtype == 'Cyberlimbs' and i.location == aug_bodyloc])
     return cyberlimb_base
 
 
@@ -149,7 +163,8 @@ def format_augmentations(ch: Core.Character, compact=False):
 if __name__ == "__main__":
     import char_shadowrun_5e as Run
     x, _, _ = Run.generate_character()
-    eyeware_example = get_augmentation(x, aug_type='Cyberware', aug_bodyloc='Eyeware')
+    eyeware_example = get_augmentation(
+            x, aug_type='Cyberware', aug_bodyloc='Eyeware')
     format_augmentations(x)
 
     cyberlimb_example = get_augmentation(x, aug_type='Cyberlimbs')

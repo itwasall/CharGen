@@ -14,10 +14,14 @@ COST_ALREADY_ROLLED = False
 
 
 def attrAsDict(_class):
-    return {i: _class.__getattribute__(i) for i in dir(_class) if not i.startswith("__") and i != 'items'}
+    return {i: _class.__getattribute__(i) for i in dir(
+        _class) if not i.startswith("__") and i != 'items'}
 
 
-def get_item(item: Core.Gear=None, item_pool_id=None, variable_lock=False, mod_chance=50):
+def get_item(item: Core.Gear=None,
+             item_pool_id=None,
+             variable_lock=False,
+             mod_chance=50):
     item_pool = get_item_pool(item_pool_id)
     if not item_pool is None:
         item = random.choice(item_pool)
@@ -83,7 +87,8 @@ def get_item(item: Core.Gear=None, item_pool_id=None, variable_lock=False, mod_c
     if hasattr(item, "mods"):
         if item.mods is not None:
             return_item.mods = item.mods
-        elif item.mods is None or (len(item.mods) == 0 and random.randint(1, 100) > mod_chance):
+        elif item.mods is None or (
+                len(item.mods) == 0 and random.randint(1, 100) > mod_chance):
             return_item.mods = get_item_mod(item)
         else:
             return_item.mods = item.mods
@@ -93,12 +98,15 @@ def get_item(item: Core.Gear=None, item_pool_id=None, variable_lock=False, mod_c
 def get_item_pool(item_pool_id: str) -> list[Core.Gear]:
     match item_pool_id:
         case "Locksmith":
-            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
+            item_pool = [
+                    i for i in Core.Electronics.items if hasattr(i, "subtype") and
                          i.subtype == "B&E Gear"]
             return item_pool
         case "Hardware":
-            item_pool = [i for i in Core.Electronics.items if hasattr(i, "subtype") and
-                         i.subtype in ["Commlink", "Cyberdeck", "Accessories", "RFID Tags"]]
+            item_pool = [
+                    i for i in Core.Electronics.items if hasattr(i, "subtype") and
+                         i.subtype in [
+                             "Commlink", "Cyberdeck", "Accessories", "RFID Tags"]]
             return item_pool
 
 
@@ -115,7 +123,8 @@ def get_item_cost(item: Core.Gear, arg=-1, **kwargs):
             return x
         return list_handler(item.cost, item, **kwargs)
     else:
-        raise ValueError(f'{item.name} has bad cost data\n{item.cost}\n{type(item.cost)}')
+        raise ValueError(
+                f'{item.name} has bad cost data\n{item.cost}\n{type(item.cost)}')
 
 
 def get_item_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
@@ -130,7 +139,8 @@ def get_item_rating(item: Core.Gear, max_rating=DEFAULT_MAX_RATING, **kwargs):
             item.rating[2] == max_rating
         return list_handler(item.rating, item, max_rating)
     else:
-        raise ValueError(f'{item.name} has bad rating data\n{item.rating}\n{type(item.rating)}')
+        raise ValueError(
+                f'{item.name} has bad rating data\n{item.rating}\n{type(item.rating)}')
 
 
 def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs):
@@ -143,12 +153,14 @@ def get_item_avail(item: Core.Gear, max_avail=DEFAULT_MAX_AVAILABILITY, **kwargs
     elif isinstance(item.avail, list):
         return list_handler(item.avail, item, max_avail, **kwargs)
     else:
-        raise ValueError(f'{item.name} has bad avail data\n{item.avail}\n{type(item.avail)}')
+        raise ValueError(
+                f'{item.name} has bad avail data\n{item.avail}\n{type(item.avail)}')
 
 
 def get_item_capacity(item: Core.Gear, arg=-1, **kwargs):
     """
-        If item has capacity (e.g. Cybereyes), then calculate it here if it's a variance
+        If item has capacity (e.g. Cybereyes), then calculate it here 
+        if it's a variance
     """
     if not hasattr(item, "capacity"):
         return 1
@@ -161,8 +173,11 @@ def get_item_capacity(item: Core.Gear, arg=-1, **kwargs):
             return list_handler(item.capacity, item, arg, **kwargs)
         return list_handler(item.capacity, item, **kwargs)
     else:
-        raise ValueError(f'{item.name} has bad capacity data\n{item.capacity}\n{type(item.capacity)}')
+        value_error_string = "".join([f"{item.name} has bad capacity data\n",
+                                     f"{item.capacity}\n",
+                                     f"{type(item.capacity)}"])
 
+        raise ValueError(value_error_string)
 
 
 def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
@@ -183,22 +198,28 @@ def get_item_essence(item: Core.Gear, arg=-1, **kwargs):
         return Decimal(x) * Decimal(1)
 
     else:
-        raise ValueError(f'{item.name} has bad essence data\n{item.essence}\n{type(item.essence)}')
+        value_error_string = "".join([f"{item.name} has bad essence data\n",
+                                     f"{item.essence}\n",
+                                     f"{type(item.essence)}"])
+        raise ValueError(value_error_string)
 
 
 def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
     if not hasattr(item, "force") or not hasattr(item, "category"):
         return item
-
-    # An items "Force" value can be within a range of values relative to the characters
-    #   'Magic' attribute value. However some values (typically that equal to the magic
-    #   attribute value) are more common than others so the horrible bit of math here
-    #   is just that.
+    """
+    An items "Force" value can be within a range of values relative to the 
+    characters 'Magic' attribute value. 
+    However some values (typically that equal to the magic attribute value) 
+    are more common than others so the horrible bit of math here is just that.
+    """
     match item.category:
         case "Spell":
             try:
                 ranges = [i for i in range(1, ch.Magic.value * 2 + 1)]
-                range_probs = [abs(i-len(ranges)+1) if abs(i) > (len(ranges)/2)-1 else 0 for i in ranges]
+                range_probs = [
+                        abs(i-len(ranges)+1) if abs(i) > (
+                            len(ranges)/2)-1 else 0 for i in ranges]
             except AttributeError:
                 return 1
             force = random.choices(ranges, range_probs)[0]
@@ -206,12 +227,15 @@ def get_item_force(item: Core.Gear, ch: Core.Character) -> Core.Gear:
             upper_bound = max(ch.Skills[item.skill.name], ch.Magic.value)
             try:
                 ranges = [i for i in range(1, upper_bound + 1)]
-                range_probs = [i+1 if idx < len(ranges) - 1 else i-1 for idx, i in enumerate(ranges)]
+                range_probs = [
+                        i+1 if idx < len(ranges) - 1 else
+                        i-1 for idx, i in enumerate(ranges)]
             except AttributeError:
                 return 1
             force = random.choices(ranges, range_probs)[0]
         case _:
-            force = random.choice([ch.Magic.value - 2, ch.Magic.value - 1, ch.Magic.value])
+            force = random.choice([
+                ch.Magic.value - 2, ch.Magic.value - 1, ch.Magic.value])
             
     return force
 
@@ -222,16 +246,19 @@ def get_item_mod(item: Core.Gear, m=None):
             if m is not None:
                 weapon_mod = m
             else:
-                weapon_mod = random.choice([i for i in Core.FirearmAccessory.items if hasattr(i, "requires") and i.requires[1] == "Firearm"])
+                weapon_mod = random.choice([
+                    i for i in Core.FirearmAccessory.items if hasattr(i, "requires") and i.requires[1] == "Firearm"])
             item.mods = weapon_mod
             if isinstance(weapon_mod.cost, list):
                 item.cost = get_item_cost(item) + get_item_cost(weapon_mod, item)
             else:
                 item.cost = item.cost + weapon_mod.cost
             if hasattr(item, "legality") and hasattr(weapon_mod, "legality"):
-                if weapon_mod.legality == Core.FORBIDDEN or item.legality == Core.FORBIDDEN:
+                if weapon_mod.legality == Core.FORBIDDEN or \
+                        item.legality == Core.FORBIDDEN:
                     item.legality = Core.FORBIDDEN
-                elif weapon_mod.legality == Core.RESTRICTED or item.legaliy == Core.RESTRICTED:
+                elif weapon_mod.legality == Core.RESTRICTED or \
+                        item.legaliy == Core.RESTRICTED:
                     item.legality = Core.RESTRICTED
             if not hasattr(item, "legality") and hasattr(weapon_mod, "legality"):
                 item.legality = weapon_mod.legality
@@ -241,7 +268,9 @@ def get_item_mod(item: Core.Gear, m=None):
             if m is not None:
                 armor_mod = m
             else:
-                armor_mod = random.choice([i for i in Core.ArmorModification.items if hasattr(i, "requires") and i.requires[1] == "Armor"])
+                armor_mod = random.choice(
+                        [i for i in Core.ArmorModification.items if 
+                         hasattr(i, "requires") and i.requires[1] == "Armor"])
             item.mods = armor_mod
             if isinstance(armor_mod.cost, list):
                 item.cost = get_item_cost(item) + get_item_cost(armor_mod, item)
@@ -252,9 +281,13 @@ def get_item_mod(item: Core.Gear, m=None):
             if m is not None:
                 aug_mod = m
             else:
-                aug_mod = random.choice([i for i in Core.Augmentation.items if not hasattr(i, "base") and i.subtype == item.subtype])
+                aug_mod = random.choice(
+                        [i for i in Core.Augmentation.items if
+                         not hasattr(i, "base") and i.subtype == item.subtype])
             while aug_mod.name in [i.name for i in item.mods]:
-                aug_mod = random.choice([i for i in Core.Augmentation.items if not hasattr(i, "base") and i.subtype == item.subtype])
+                aug_mod = random.choice(
+                        [i for i in Core.Augmentation.items if 
+                         not hasattr(i, "base") and i.subtype == item.subtype])
             aug_mod.rating = get_item_rating(aug_mod)
             aug_mod.capacity = get_item_capacity(aug_mod)
             aug_mod.cost = get_item_cost(aug_mod)
@@ -290,9 +323,11 @@ def get_sensor(arg=-1):
     if arg != -1:
         pass
     else:
-        sensor_housing = random.choice([Core.HANDHELD_HOUSING, Core.WALL_MOUNTED_HOUSING])
+        sensor_housing = random.choice(
+                [Core.HANDHELD_HOUSING, Core.WALL_MOUNTED_HOUSING])
         if isinstance(sensor_housing.capacity, list):
-            sensor_housing.capacity = list_handler(sensor_housing.capacity, sensor_housing)
+            sensor_housing.capacity = list_handler(
+                    sensor_housing.capacity, sensor_housing)
         sensor_type = random.choice([Core.SENSOR_ARRAY, Core.SENSOR_SINGLE])
         sensor_type.rating = list_handler(sensor_type.rating, sensor_type)
 
@@ -300,14 +335,20 @@ def get_sensor(arg=-1):
         if sensor_type == Core.SENSOR_ARRAY:
             for i in range(sensor_type.rating):
                 if random.randint(0, i) < sensor_type.rating / 2:
-                    x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+                    x = random.choice(
+                            [f"{k}: (Range: {d})" if d != 0 else 
+                             f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
                     while x in sensor_functions:
-                        x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+                        x = random.choice(
+                                [f"{k}: (Range: {d})" if d != 0 else 
+                                 f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
                     sensor_functions.append(x)
                 else:
                     pass
         else:
-            x = random.choice([f"{k}: (Range: {d})" if d != 0 else f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
+            x = random.choice([
+                f"{k}: (Range: {d})" if d != 0 else 
+                f"{k}" for k, d in Core.SENSOR_FUNCTIONS.items()])
             sensor_functions.append(x)
     sensor = Core.Sensor(sensor_type, sensor_housing, sensor_functions)
     
@@ -316,12 +357,15 @@ def get_sensor(arg=-1):
 
 def get_cyberdeck(item: Core.Electronics = None):
     if item is None or (hasattr(item, "category") and item.subtype != "Cyberdeck"):
-        item = random.choice([i for i in Core.Electronics.items if hasattr(i, "category") and i.subtype == "Cyberdeck"])
+        item = random.choice(
+                [i for i in Core.Electronics.items if 
+                 hasattr(i, "category") and i.subtype == "Cyberdeck"])
     program_count = int(item.programs)
     item.programs = []
     for idx in range(program_count):
         if idx == 0:
-            new_program = random.choice([i for i in Core.Software.items if i.category == 'Common'])
+            new_program = random.choice(
+                    [i for i in Core.Software.items if i.category == 'Common'])
             item.programs.append(new_program)
             continue
         else:
@@ -332,7 +376,8 @@ def get_cyberdeck(item: Core.Electronics = None):
                     break
     item.attack = Core.Attribute("Attack", item.attributes[0], matrix=True)
     item.sleaze = Core.Attribute("Sleaze", item.attributes[1], matrix=True)
-    item.data_processing = Core.Attribute("Data Processing", item.attributes[2], matrix=True)
+    item.data_processing = Core.Attribute(
+            "Data Processing", item.attributes[2], matrix=True)
     item.firewall = Core.Attribute("Firewall", item.attributes[3], matrix=True)
     print("CYBERDECK GET")
     print(item.attack)
@@ -345,27 +390,37 @@ def get_weapon(skill=None, no_mod=False, **kwargs):
         # Generate random weapon from all weapons
         pass
     elif skill == "Automatics":
-        pool = [p for p in Core.Firearm.items if p.subtype in ['Assault Rifle', 'Machine Pistol', 'Submachine Gun']]
+        pool = [p for p in Core.Firearm.items if
+                p.subtype in ['Assault Rifle', 'Machine Pistol', 'Submachine Gun']]
     elif skill == "Pistols":
-        pool = [p for p in Core.Firearm.items if p.subtype in [ 'Light Pistol', 'Heavy Pistol', 'Machine Pistol', 'Hold-Out', 'Taser']]
+        pool = [p for p in Core.Firearm.items if
+                p.subtype in [ 'Light Pistol', 'Heavy Pistol', 
+                              'Machine Pistol', 'Hold-Out', 'Taser']]
     elif skill == "Heavy Weapons":
-        pool = [p for p in Core.Firearm.items if p.subtype in [ 'Sniper Rifle', 'Shotgun', 'Machine Gun', 'Cannon/Launcher' ]]
+        pool = [p for p in Core.Firearm.items if 
+                p.subtype in [ 'Sniper Rifle', 'Shotgun', 
+                              'Machine Gun', 'Cannon/Launcher' ]]
     elif skill == "Archery":
-        pool = [p for p in Core.ProjectileWeapon.items if p.subtype in ["Bows", "Crossbow"]]
+        pool = [p for p in Core.ProjectileWeapon.items if
+                p.subtype in ["Bows", "Crossbow"]]
         no_mod = True
     elif skill == 'Blades':
-        pool = [p for p in Core.MeleeWeapon.items if p.subtype == "Blade"]
+        pool = [p for p in Core.MeleeWeapon.items if
+                p.subtype == "Blade"]
         no_mod = True
     elif skill == 'Clubs':
-        pool = [p for p in Core.MeleeWeapon.items if p.subtype == "Club"]
+        pool = [p for p in Core.MeleeWeapon.items if
+                p.subtype == "Club"]
         no_mod = True
     elif skill == 'Throwing Weapons':
-        pool = [p for p in Core.ProjectileWeapon.items if p.subtype == "Throwing Weapons"]
+        pool = [p for p in Core.ProjectileWeapon.items if
+                p.subtype == "Throwing Weapons"]
         no_mod = True
 
     for pool_item in pool:
         pool_item.avail = get_item_avail(pool_item)
-    new_weapon = random.choice([i for i in pool if i.avail <= DEFAULT_MAX_AVAILABILITY])
+    new_weapon = random.choice([i for i in pool if
+                                i.avail <= DEFAULT_MAX_AVAILABILITY])
     if not no_mod and random.randint(1, 100) >= 40:
         new_weapon = get_item_mod(new_weapon)
     return get_item(new_weapon)
@@ -378,9 +433,11 @@ def get_armor(clothing=False, **kwargs):
         if random.randint(1, 100) >= 20:
             new_armor = get_item_mod(new_armor)
     else:
-        new_armor = random.choice([i for i in Core.Armor.items if not hasattr(i, "requires") and i.avail <= 12])
+        new_armor = random.choice([i for i in Core.Armor.items if
+                                   not hasattr(i, "requires") and i.avail <= 12])
         for armor in Core.Armor.items:
-            if hasattr(armor, "requires") and armor.requires == new_armor and random.randint(1, 100) >= 30:
+            if hasattr(armor, "requires") and \
+                    armor.requires == new_armor and random.randint(1, 100) >= 30:
                 new_armor_bonus = armor
     
     if new_armor_bonus is not None:
@@ -390,13 +447,17 @@ def get_armor(clothing=False, **kwargs):
 
 def get_vehicle(skill = None, **kwargs):
     if skill == "Pilot Groud Craft":
-        valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_GROUND_CRAFT]
+        valid_vehicles = [i for i in Core.Vehicle.items if
+                          i.skill_req == Core.PILOT_GROUND_CRAFT]
     elif skill == "Pilot Aircraft":
-        valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_AIRCRAFT]
+        valid_vehicles = [i for i in Core.Vehicle.items if
+                          i.skill_req == Core.PILOT_AIRCRAFT]
     elif skill == "Pilot Walker":
-        valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_WALKER]
+        valid_vehicles = [i for i in Core.Vehicle.items if
+                          i.skill_req == Core.PILOT_WALKER]
     elif skill == "Pilot Watercraft":
-        valid_vehicles = [i for i in Core.Vehicle.items if i.skill_req == Core.PILOT_WATERCRAFT]
+        valid_vehicles = [i for i in Core.Vehicle.items if
+                          i.skill_req == Core.PILOT_WATERCRAFT]
     else:
         valid_vehicles = [i for i in Core.Vehicle.items]
 
@@ -416,22 +477,30 @@ def get_vehicle(skill = None, **kwargs):
     if "any" in kwargs:
         vehicle = random.choice(valid_vehicles)
     else:
-        vehicle = random.choice([i for i in valid_vehicles if i.subtype==random.choice(veh_types)])
+        vehicle = random.choice([i for i in valid_vehicles if
+                                 i.subtype==random.choice(veh_types)])
     return get_item(vehicle)
 
 
 def get_augmentation(bioware=False, cyberlimb=False, **kwargs):
     if bioware:
-        item = random.choice([i for i in Core.Augmentation.items if i.subtype in ['Bioware', 'Cultured Bioware']])
+        item = random.choice([i for i in Core.Augmentation.items if
+                              i.subtype in ['Bioware', 'Cultured Bioware']])
     elif cyberlimb:
-        item = random.choice([i for i in Core.Augmentation.items if i.subtype == 'Cyberlimbs'])
+        item = random.choice([i for i in Core.Augmentation.items if 
+                              i.subtype == 'Cyberlimbs'])
         item.rating = 1
     else:
-        cyberware_location = random.choice(['Headware', 'Earware', 'Eyeware', 'Bodyware'])
+        cyberware_location = random.choice(
+                ['Headware', 'Earware', 'Eyeware', 'Bodyware'])
         if cyberware_location in ['Bodyware', 'Headware']:
-            item = random.choice([i for i in Core.Augmentation.items if i.subtype == cyberware_location])
+            item = random.choice(
+                    [i for i in Core.Augmentation.items if
+                     i.subtype == cyberware_location])
         else:
-            item = random.choice([i for i in Core.Augmentation.items if i.subtype == cyberware_location and hasattr(i, 'base')])
+            item = random.choice([i for i in Core.Augmentation.items if
+                                  i.subtype == cyberware_location and 
+                                  hasattr(i, 'base')])
     item.grade = get_augmentation_grade(item)
     item.rating = get_item_rating(item)
     item.cost = get_item_cost(item)
@@ -445,7 +514,9 @@ def get_augmentation(bioware=False, cyberlimb=False, **kwargs):
     return item
 
 
-def get_augmentation_grade(item: Core.Augmentation, grade=None, grades=DEFAULT_AUG_GRADES, **kwargs):
+def get_augmentation_grade(item: Core.Augmentation,
+                           grade=None,
+                           grades=DEFAULT_AUG_GRADES, **kwargs):
     if "rating" in kwargs:
         item.rating = kwargs['rating']
     if grade is None:
@@ -461,11 +532,11 @@ def get_fake_license(item=None, license_type=None) -> Core.Electronics:
     if type(item) == Core.Firearm:
         license_type = "Gun"
     if type(item) == Core.MeleeWeapon:
-        if hasattr(item,"subtype") and item.subtype == 'Blade' and random.randint(
-                1, 100) >= 70:
+        if hasattr(item,"subtype") and item.subtype == 'Blade' and \
+                random.randint(1, 100) >= 70:
             license_type = "Blade"
-        elif hasattr(item,"subtype") and item.subtype == 'Club' and random.randint(
-                1, 100) >= 70:
+        elif hasattr(item,"subtype") and item.subtype == 'Club' and \
+                random.randint(1, 100) >= 70:
             license_type = "Club"
     if item is not None and license_type is None:
         if hasattr(item, "subtype"):
@@ -475,7 +546,13 @@ def get_fake_license(item=None, license_type=None) -> Core.Electronics:
         else:
             license_type = item.name
     license_rating = random.choices([1, 2, 3, 4, 5, 6], [2, 3, 3, 5, 3, 1])[0]
-    return Core.Electronics(f"Fake License ({license_type})", cost=(license_rating * 200), page_ref=443, rating=license_rating, avail=[license_rating * 3], legality=Core.FORBIDDEN, subtype="Identification")
+    return Core.Electronics(f"Fake License ({license_type})", 
+                            cost=(license_rating * 200), 
+                            page_ref=443, 
+                            rating=license_rating, 
+                            avail=[license_rating * 3], 
+                            legality=Core.FORBIDDEN, 
+                            subtype="Identification")
 
 
 def list_handler(l: list, item, arg=-1, **kwargs):
@@ -500,13 +577,20 @@ def list_handler(l: list, item, arg=-1, **kwargs):
         # Catches if item doesn't have rating attribute
         if not hasattr(item, "rating"):
             if hasattr(item, "requires") and item.requires[0] == 'Category':
-                rand_req = random.choice([i for i in Core.Gear.items if i.category == item.requires[1]])
+                rand_req = random.choice(
+                        [i for i in Core.Gear.items if 
+                         i.category == item.requires[1]])
                 r1 = get_item_rating(rand_req, **kwargs)
             elif hasattr(item, "requires") and item.requires[0] == 'Subtype':
-                random_req = random.choice([i for i in Core.Gear.items if i.subtype == item.requires[1]])
+                random_req = random.choice(
+                        [i for i in Core.Gear.items if 
+                         i.subtype == item.requires[1]])
                 r1 = get_item_rating(random_req, **kwargs)
             else:
-                raise AttributeError(f"{item.name} has no 'rating' attribute despite mention in {l}")
+                attribute_error_string = "".join([f"{item.name} has no 'rating ",
+                                                  "attribute despite mention in",
+                                                  "{l}"])
+                raise AttributeError(attribute_error_string)
         # If item.rating is an integar, pass that on
         elif isinstance(item.rating, int):
             r1 = item.rating
@@ -525,30 +609,40 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
     elif l[0] == "Capacity":
         if not hasattr(item, "capacity"):
-            raise AttributeError(f"Item has no 'capacity' attribute despite mention in {l}")
+            raise AttributeError(
+                    f"Item has no 'capacity' attribute despite mention in {l}")
         if arg != -1 and arg < item.capacity[2] and arg > item.capacity[0]:
             r1 = arg
         elif arg != -1:
-            raise ValueError(f"{arg} is outside the capacity of {item.capacity[0]} - {item.capacity[2]}")
+            value_error_string = "".join([f"{arg} is outside the capacity of ",
+                                          "{item.capacity[0]} - {item.capacity[2]"])
+            raise ValueError(value_error_string)
         else:
             r1 = random.choice(range(item.capacity[0], item.capacity[2]))
 
     elif l[0] == "WeaponCost":
         if not hasattr(item, "requires"):
-            raise AttributeError(f"{item.name} has a dependant cost variable but nothing to depend on!")
+            attribute_error_string = "".join([f"{item.name} has a dependant cost",
+                                              "variable but nothing to depeond on!"])
+            raise AttributeError(attribute_error_string)
         if arg != -1 and isinstance(arg, Core.Firearm):
             r1 = get_item_cost(arg)
         elif "random" in kwargs:
             if hasattr(item, "requires") and item.requires[0] == 'Category':
-                r1 = get_item_cost([i for i in Core.Gear.items if i.category == item.requires[1]])
+                r1 = get_item_cost([
+                    i for i in Core.Gear.items if i.category == item.requires[1]])
             elif hasattr(item, "requires") and item.requires[0] == 'Subtype':
-                r1 = get_item_cost([i for i in Core.Gear.items if i.subtype == item.requires[1]])
+                r1 = get_item_cost([
+                    i for i in Core.Gear.items if i.subtype == item.requires[1]])
         else:
             raise ValueError("WeaponCost fuckery")
 
     elif l[0] == "ArmorRating":
         if not hasattr(item, "requires"):
-            raise AttributeError(f"{item.name} has a dependant cost variable but nothing to depend on!")
+            attribute_error_string = "".join([f"{item.name} has a dependant cost",
+                                              " variable but nothing to depend",
+                                              " on!"])
+            raise AttributeError(attribute_error_string)
         if arg != -1 and isinstance(arg, Core.Armor):
             r1 = arg.armor_rating
         else:
@@ -557,27 +651,36 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
     elif l[0] == "CommlinkCost":
         if not hasattr(item, "requires"):
-            raise AttributeError(f"{item.name} has a dependant cost vairable but nothing to depend on!")
+            attribute_error_string = "".join([f"{item.name} has a dependant cost",
+                                              " variable but nothing to depend",
+                                              " on!"])
+            raise AttributeError(attribute_error_string)
         if arg != -1 and isinstance(arg, Core.Electronics):
             if arg.subtype == "Commlink":
                 r1 = arg.cost
 
     elif l[0] == "DeckCost":
         if not hasattr(item, "requires"):
-            raise AttributeError(f"{item.name} has a dependant cost vairable but nothing to depend on!")
+            attribute_error_string = "".join([f"{item.name} has a dependant cost",
+                                              " variable but nothing to depend",
+                                              " on!"])
+            raise AttributeError(attribute_error_rating)
         if arg != -1 and isinstance(arg, Core.Electronics):
             if arg.subtype == "Cyberdeck":
                 r1 = arg.cost
 
     elif l[0] == "Category":
-        cond_list = [i for i in Core.Gear.items if hasattr(i, "category") and i.category == l[1]]
+        cond_list = [i for i in Core.Gear.items if 
+                     hasattr(i, "category") and i.category == l[1]]
         if arg != -1 and arg in cond_list:
             return arg
         else:
             return random.choice(cond_list)
 
     elif l[0] == "Subtype":
-        cond_list = [i for i in Core.Gear.items if hasattr(i, "subtype") and i.subtype == l[1]]
+        cond_list = [
+                i for i in Core.Gear.items if 
+                hasattr(i, "subtype") and i.subtype == l[1]]
         if arg != -1 and arg in cond_list:
             return arg
         else:
@@ -586,7 +689,10 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
     elif l[0] == "Force":
         if not hasattr(item, "force"):
-            raise AttributeError(f"Item {item} has a 'Force' list handler with no 'Force' attribute")
+            attribute_error_string = "".join([f"Item {item} has a 'Force' list",
+                                              " handler but with no 'Force'",
+                                              " attribute"])
+            raise AttributeError(attribute_error_string)
         r1 = item.force
 
         
@@ -597,10 +703,14 @@ def list_handler(l: list, item, arg=-1, **kwargs):
 
     match l[1]:
         case "+":
-            if (isinstance(r1, int) or isinstance(r1, float)) and (isinstance(l[2], int) or isinstance(l[2], float)):
+            if (isinstance(r1, int) or \
+                    isinstance(r1, float)) and \
+                    (isinstance(l[2], int) or isinstance(l[2], float)):
                 return r1 + l[2]
         case "*":
-            if (isinstance(r1, int) or isinstance(r1, float)) and (isinstance(l[2], int) or isinstance(l[2], float)):
+            if (isinstance(r1, int) or \
+                    isinstance(r1, float)) and \
+                    (isinstance(l[2], int) or isinstance(l[2], float)):
                 return r1 * l[2]
 
 
