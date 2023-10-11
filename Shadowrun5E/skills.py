@@ -101,7 +101,7 @@ def skills_remove_magic_resonance(ch: Core.Character,
             if skill in Core.MAGIC_SKILLS:
                 return skills_remove_aspected_magician(ch, skill_list, group_list, skill)
             else:
-                continue
+                pass
         usable_magic_group = random.choice(Core.MAGIC_SKILL_GROUPS)
         for magic_skill_group in Core.MAGIC_SKILL_GROUPS:
             if magic_skill_group != usable_magic_group:
@@ -338,12 +338,114 @@ def get_language_knowledge_skills(ch: Core.Character) -> None:
         knowledge_points -= knowl_skill_amt
     return
 
+
+def karma_spend_raise_skill(ch: Core.Character,
+                            k: Core.KarmaLogger,
+                            karma_budget: int
+                            ) -> (Core.Character, Core.KarmaLogger, int):
+    try:
+        skill_to_raise = random.choice(
+            [i for i in ch.Skills if
+             ch.Skills[i].rating < 6])
+        karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][
+            ch.Skills[skill_to_raise].rating + 1]
+        # print(Core.KARMA_SKILL_COSTS['Active'][ch.Skills[
+        # 'Active'][skill_to_raise].rating + 1])
+        if karma_cost_skill_raise > karma_budget:
+            return (ch, k, karma_budget)
+        else:
+            ch.Skills[skill_to_raise].rating += 1
+            karma_budget -= karma_cost_skill_raise
+            s1 = ch.Skills[skill_to_raise].name
+            s2 = ch.Skills[skill_to_raise].rating
+            k.append(
+                f'(EX) {s1} has been increased to {s2}.' +
+                f'Costing {karma_cost_skill_raise}.' +
+                f'\n   {karma_budget} is Karma total.')
+    except IndexError:
+        return (ch, k, karma_budget)
+    return (ch, k, karma_budget)
+
+
+def karma_spend_raise_skill_group(ch: Core.Character,
+                                  k: Core.KarmaLogger,
+                                  karma_budget: int
+                                  ) -> (Core.Character, Core.KarmaLogger, int):
+    try:
+        skill_group_to_raise = random.choice(list(set([ch.Skills[
+            s].group for s in ch.Skills if
+            hasattr(ch.Skills[s], 'group') and
+            ch.Skills[s].group is not False])))
+        skills_in_skill_group = [
+            s for s in ch.Skills if ch.Skills[
+                s].group == skill_group_to_raise]
+        karma_cost_skill_group_raise = Core.KARMA_SKILL_COSTS[
+            'Active Group'][ch.Skills[
+                skills_in_skill_group[0]].rating+1]
+        if karma_cost_skill_group_raise > karma_budget:
+            pass
+        else:
+            for skill in skills_in_skill_group:
+                ch.Skills[skill].rating += 1
+            karma_budget -= karma_cost_skill_group_raise
+            s1 = skill_group_to_raise
+            s2 = ch.Skills[
+                skills_in_skill_group[0]].rating
+            k.append(
+                f'(EX) {s1} skills have been increased to {s2}.' +
+                f'Costing {karma_cost_skill_group_raise}.' +
+                f'\n   {karma_budget} is Karma total.')
+    except IndexError:
+        pass
+    return (ch, k, karma_budget)
+
+def karma_spend_new_skill(ch: Core.Character,
+                          k: Core.KarmaLogger,
+                          karma_budget: int
+                          ) -> (Core.Character, Core.KarmaLogger, int):
+        unskilled = [s for s in Core.ACTIVE_SKILLS if
+                     s.name not in list(ch.Skills.keys())]
+        new_skill = random.choice(unskilled)
+        ch.Skills[new_skill.name] = new_skill
+        ch.Skills[new_skill.name].rating += 1
+        karma_budget -= 1
+        k.append(
+            f'(EX) {new_skill.name} has been acquired as new skill.' +
+            f'Costing 1\n   {karma_budget} is Karma Total')
+        return (ch, k, karma_budget)
+
+
+def karma_spend_new_skill_specialisation(
+        ch: Core.Character,
+        k: Core.KarmaLogger,
+        karma_budget: int
+        ) -> (Core.Character, Core.KarmaLogger, int):
+        skills_for_spec = [s for s in ch.Skills.keys() if ch.Skills[s].rating > 3 and
+                           isinstance(ch.Skills[s].spec, list)]
+        if len(skills_for_spec) == 0:
+            skills_for_spec = [s for s in ch.Skills.keys() if ch.Skills[s].rating > 2 and
+                           isinstance(ch.Skills[s].spec, list)]
+        if len(skills_for_spec) == 0:
+            pass
+        try:
+            skill_for_spec = random.choice(skills_for_spec)
+            new_spec = random.choice(ch.Skills[skill_for_spec].spec)
+        except IndexError:
+            return(ch, k, karma_budget)
+        ch.Skills[skill_for_spec].spec = new_spec
+        karma_budget -= 1
+        k.append(
+            f'EX \'{new_spec}\' specialisation chosen for ' +
+            f'{skill_for_spec}. Costing 1\n   {karma_budget} ' +
+            f'is Karama Total')
+        return (ch, k, karma_budget)
+
+
 if __name__ == "__main__":
     x = Core.Character
     x.MagicResoUser = None
     x.Magic, x.Resonance = None, None
     tbl = {'Skills': [28, 2]}
-    get_skills(x, 
-               tbl)
+    get_skills(x, tbl)
     print(x.Skills)
     
