@@ -2992,13 +2992,13 @@ ARES_ONE_MONOSWORD = MeleeWeapon('Ares_one_monosword', page_ref='R&G, 19', cost=
 COUGAR_FINEBLADES_SHORT = MeleeWeapon('Cougar_fineblades_short', page_ref='R&G, 20', cost=350, avail=5, legality=R, subtype="Blade", rulebook="Run & Gun")
 COUGAR_FINEBLADES_LONG = MeleeWeapon('Cougar_fineblades_long', page_ref='R&G, 20', cost=600, avail=7, legality=R, subtype="Blade", rulebook="Run & Gun")
 # CLUBS
-MAUL_STUN_STAFF = MeleeWeapon('Maul Stun Staff', page_ref='R&G, 20', cost=1000, avail=8, legality=R, subtype="Club", rulebook"Run & Gun")
+MAUL_STUN_STAFF = MeleeWeapon('Maul Stun Staff', page_ref='R&G, 20', cost=1000, avail=8, legality=R, subtype="Club", rulebook="Run & Gun")
 """
     FIREARMS 
 """
 # TASERS
-CAVALIER_SAFEGUARD = Firearm("Cavalier_safeguard", page_ref='R&G, 30', cost=275, avail="-", legality=, subtype='Taser', rulebook="Run & Gun")
-TIFFANI_DEFINANCE_PROTECTOR = Firearm("Tiffani_definance_protector", page_ref='R&G, 30', cost=300, avail=2, legality=, subtype='Taser', rulebook="Run & Gun")
+CAVALIER_SAFEGUARD = Firearm("Cavalier_safeguard", page_ref='R&G, 30', cost=275, avail="-", subtype='Taser', rulebook="Run & Gun")
+TIFFANI_DEFINANCE_PROTECTOR = Firearm("Tiffani_definance_protector", page_ref='R&G, 30', cost=300, avail=2, subtype='Taser', rulebook="Run & Gun")
 # HOLD-OUTS
 FICHETTI_TIFFANI_SELF_DEFENDER_2075 = Firearm("Fichetti_tiffani_self_defender_2075", page_ref='R&G, 30', cost=350, avail=3, legality=R, subtype='Hold-Out', rulebook="Run & Gun")
 # LIGHT PISTOLS
@@ -3006,32 +3006,32 @@ FICHETTI_EXECUTIVE_ACTION = Firearm("Fichetti_executive_action", page_ref='R&G, 
 SHIAWASE_ARMS_PUZZLER = Firearm("Shiawase_arms_puzzler", page_ref='R&G, 30', cost=900, avail=14, legality=R, subtype='Light Pistol', rulebook="Run & Gun")
 NITAMA_SPORTER = Firearm("Nitama_sporter", page_ref='R&G, 30', cost=300, avail=10, legality=R, subtype='Light Pistol', rulebook="Run & Gun")
 # HEAVY PISTOLS
-CAVALIER_DEPUTY = Firearm("Cavalier_deputy", page_ref='R&G, 30', cost=225  avail=3, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
+CAVALIER_DEPUTY = Firearm("Cavalier_deputy", page_ref='R&G, 30', cost=225, avail=3, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
 PSK_3_COLLAPSIBLE_HEAVY_PISTOL = Firearm("Psk_3_collapsible_heavy_pistol", page_ref='R&G, 30', cost=1050, avail=16, legality=F, subtype='Heavy Pistol', rulebook="Run & Gun")
-SAVALETTE_GUARDIAN = Firearm("Savalette_guardian", page_ref='R&G, 30', cost=870  avail=6, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
+SAVALETTE_GUARDIAN = Firearm("Savalette_guardian", page_ref='R&G, 30', cost=870, avail=6, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
 ONOTARI_ARMS_VIOLATOR = Firearm("Onotari_arms_violator", page_ref='R&G, 30', cost=550,  avail=7, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
 # MACHINE PISTOLS
 PPSK_4_COLLAPSIBLE_MACHINE_PISTOL = Firearm("Ppsk_4_collapsible_machine_pistol", page_ref='R&G, 30', cost=2800, avail=17, legality=F, subtype='Machine Pistol', rulebook="Run & Gun")
-ONOTARI_ARMS_EQUALIZER = Firearm("Onotari_arms_equalizer", page_ref='R&G, 30', cost=750  avail=7, legality=R, subtype='Machine Pistol', rulebook="Run & Gun")
-ULTIMAX_70 = Firearm("Ultimax_70", page_ref='R&G, 30', cost=800  avail=7, legality=R, subtype='Machine Pistol', rulebook="Run & Gun")
+ONOTARI_ARMS_EQUALIZER = Firearm("Onotari_arms_equalizer", page_ref='R&G, 30', cost=750, avail=7, legality=R, subtype='Machine Pistol', rulebook="Run & Gun")
+ULTIMAX_70 = Firearm("Ultimax_70", page_ref='R&G, 30', cost=800, avail=7, legality=R, subtype='Machine Pistol', rulebook="Run & Gun")
 # SUBMACHINE GUNS
 ARES_EXECUTOR = Firearm("Ares_executor", page_ref='R&G, 30', cost=1000, avail=14, legality=F, subtype='Submachine Gun', rulebook="Run & Gun")
 HK_URBAN_COMBAT = Firearm("Hk_urban_combat", page_ref='R&G, 30', cost=2300, avail=16, legality=F, subtype='Submachine Gun', rulebook="Run & Gun")
 # ASSAULT RIFLES
-AK_98 = Firearm("Ak_98", page_ref='R&G, 30', cost=1250  avail=8, legality=F, subtype='Assault Rifle', rulebook="Run & Gun")
+AK_98 = Firearm("Ak_98", page_ref='R&G, 30', cost=1250, avail=8, legality=F, subtype='Assault Rifle', rulebook="Run & Gun")
 ARES_HVAR = Firearm("Ares_hvar", page_ref='R&G, 30', cost=2400, avail=11, legality=F, subtype='Assault Rifle', rulebook="Run & Gun")
 HK_XM30 = Firearm("Hk_xm30", page_ref='R&G, 30', cost=4500, avail=15, legality=F, subtype='Assault Rifle', rulebook="Run & Gun")
 NISSAN_OPTIMUM_II = Firearm("Nissan_optimum_ii", page_ref='R&G, 30', cost=2300, avail=10, legality=F, subtype='Assault Rifle', rulebook="Run & Gun")
 # SNIPER RIFLES
 TERRACOTTA_ARMS_AM_47 = Firearm("Terracotta_arms_am_47", page_ref='R&G, 30', cost=35000, avail=14, legality=F, subtype='Sniper Rifle', rulebook="Run & Gun")
 ONOTARI_ARMS_JP_K50 = Firearm("Onotari_arms_jp_k50", page_ref='R&G, 30', cost=12500, avail=13, legality=F, subtype='Sniper Rifle', rulebook="Run & Gun")
-PINOEER_60 = Firearm("Pinoeer_60", page_ref='R&G, 30', cost=500  avail=2, legality=R, subtype='Sniper Rifle', rulebook="Run & Gun")
+PINOEER_60 = Firearm("Pinoeer_60", page_ref='R&G, 30', cost=500, avail=2, legality=R, subtype='Sniper Rifle', rulebook="Run & Gun")
 BARRET_MODEL_122 = Firearm("Barret_model_122", page_ref='R&G, 30', cost=38500, avail=20, legality=F, subtype='Sniper Rifle', rulebook="Run & Gun")
 # SHOTGUNS
 AUTO_ASSAULT_12 = Firearm("Auto_assault_12", page_ref='R&G, 30', cost=1800, avail=18, legality=F, subtype='Shotgun', rulebook="Run & Gun")
 MOSSBERG_AM_CMDT = Firearm("Mossberg_am_cmdt", page_ref='R&G, 30', cost=1400, avail=12, legality=F, subtype='Shotgun', rulebook="Run & Gun")
 FRANCHI_SPAS_24 = Firearm("Franchi_spas_24", page_ref='R&G, 30', cost=1050, avail=12, legality=F, subtype='Shotgun', rulebook="Run & Gun")
-REMINGTON_990 = Firearm("Remington_990", page_ref='R&G, 30', cost=950  avail=6, legality=R, subtype='Shotgun', rulebook="Run & Gun")
+REMINGTON_990 = Firearm("Remington_990", page_ref='R&G, 30', cost=950, avail=6, legality=R, subtype='Shotgun', rulebook="Run & Gun")
 # MACHINE GUNS
 GE_VINDICATOR_MINI_GUN = Firearm("Ge_vindicator_mini_gun", page_ref='R&G, 30', cost=6000, avail=24, legality=F, subtype='Machine Gun', rulebook="Run & Gun")
 SA_NEMESIS = Firearm("Sa_nemesis", page_ref='R&G, 30', cost=6500, avail=16, legality=F, subtype='Machine Gun', rulebook="Run & Gun")
