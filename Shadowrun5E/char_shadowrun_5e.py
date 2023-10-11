@@ -69,7 +69,7 @@ def generate_character(karma_logging = True) -> Core.Character:
     add_contacts(character, karma_log)
     get_gear(character, nuyen)
     leftover_karma(character, karma_log)
-    # print_shit(character, nuyen, karma_log)
+    # print(karma_log)
     return character, nuyen, karma_log
 
 
@@ -243,12 +243,22 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
         However the total sum of positive qualities cannot exceed 25, and
             the total sum of negative qualities cannot exceed -25
     """
+    def make_karma_message(polarity, quality, total_karma, polarity_karma):
+        karma_message = [
+                f'{polarity} {quality.name} has been bought. ', 
+                f'Costing {quality.cost}\n   {total_karma} is Karma total',
+                f'\n{polarity} karma is at {polarity_karma}']
+        return karma_message
+
     ch.Qualities = {}
+    ch.Qualities['Incompetent'] = Core.INCOMPETENT
     total_karma = 25
     positive_karma, negative_karma = 0, 0
     k.append(f'Beginning karma logging.\n   {total_karma} is Karma total')
-    NEGATIVE_TOO_HIGH, POSITIVE_TOO_HIGH = False, False
-    quality_weights = [1 for _ in Core.Quality.items]
+    NEGATIVE_CAP, POSITIVE_CAP = False, False
+    quality_list = [i for i in Core.Quality.items]
+    resolve_quality_list(ch, quality_list)
+    quality_weights = [1 for _ in quality_list]
     inc = 0
     while total_karma > 0 and inc < 100:
         inc += 1
@@ -258,45 +268,39 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
         if (total_karma < 10 and random.randint(0, 1) == 1) or \
                 total_karma <= 0:
             break
-        ROLL_QUALITY = random.choices(Core.Quality.items, quality_weights)[0]
+        ROLL_QUALITY = random.choices(quality_list, quality_weights)[0]
         # If a quality in the same group has already been taken, continue
         # (SEE DATA)
-        if hasattr(ROLL_QUALITY, "group"):
-            if ROLL_QUALITY.group in [d.group for d in ch.Qualities.values() if
-                                    hasattr(d, "group")]:
-                continue
+        if hasattr(ROLL_QUALITY, "group") and ROLL_QUALITY.group in [
+                d.group for d in ch.Qualities.values() if hasattr(d, "group")]:
+            continue
         # Negative qualities cannot total more than ABS(25)
-        if hasattr(ROLL_QUALITY, "negative"):
-            if negative_karma + ROLL_QUALITY.cost > 25:
-                NEGATIVE_TOO_HIGH = True
-                continue
-                # continue
-        # Positive qualities cannot total more than ABS(25)
-        elif positive_karma + ROLL_QUALITY.cost > 25:
-            POSITIVE_TOO_HIGH = True
+        if hasattr(ROLL_QUALITY, "negative"
+                   ) and negative_karma + ROLL_QUALITY.cost > 25:
+            NEGATIVE_CAP = True
             continue
             # continue
-        if total_karma - ROLL_QUALITY.cost < 0 or (
-                NEGATIVE_TOO_HIGH and not POSITIVE_TOO_HIGH) or (
-                POSITIVE_TOO_HIGH and not NEGATIVE_TOO_HIGH):
+        # Positive qualities cannot total more than ABS(25)
+        elif positive_karma + ROLL_QUALITY.cost > 25:
+            POSITIVE_CAP = True
+            continue
+            # continue
+        if (total_karma - ROLL_QUALITY.cost < 0) or  (
+                NEGATIVE_CAP != POSITIVE_CAP):
             continue
         if hasattr(ROLL_QUALITY, "negative"):
             negative_karma += ROLL_QUALITY.cost
             total_karma += ROLL_QUALITY.cost
-            k.append(f'(NEG) {ROLL_QUALITY.name} has been bought.' +
-                     f'Costing {ROLL_QUALITY.cost}.' +
-                     f'\n   {total_karma} is Karma total.' +
-                     f'\nNegative Karma is at {negative_karma}')
+            k.append(make_karma_message(
+                'NEG', ROLL_QUALITY, total_karma, negative_karma))
         else:
             positive_karma += ROLL_QUALITY.cost
             total_karma -= ROLL_QUALITY.cost
-            k.append(f'(POS) {ROLL_QUALITY.name} has been bought.' +
-                     f'Costing {ROLL_QUALITY.cost}.' +
-                     f'\n   {total_karma} is Karma total.' +
-                     f'\nPositive Karma is at {positive_karma}')
+            k.append(make_karma_message(
+                'POS', ROLL_QUALITY, total_karma, positive_karma))
 
         # Pretty output & roll for quality specific params here
-        ROLL_QUALITY = resolve_quality(ROLL_QUALITY, ch)
+        ROLL_QUALITY = resolve_quality_level(ROLL_QUALITY, ch)
 
         ch.Qualities[ROLL_QUALITY.name] = ROLL_QUALITY
         if hasattr(ROLL_QUALITY, "quantity"):
@@ -304,14 +308,24 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
                 ch.Qualities[ROLL_QUALITY.name].level += 1
             else:
                 ch.Qualities[ROLL_QUALITY.name].level = 1
-            quality_weights[Core.Quality.items.index(ROLL_QUALITY)] += 10
-        if NEGATIVE_TOO_HIGH and POSITIVE_TOO_HIGH:
+            quality_weights[quality_list.index(ROLL_QUALITY)] += 10
+        if NEGATIVE_CAP and POSITIVE_CAP:
             break
     # print(ch.Qualities)
     return
 
 
-def resolve_quality(q: Core.Quality, ch: Core.Character) -> Core.Quality:
+def resolve_quality_list(ch: Core.Character, quality_list) -> list[Core.Quality]:
+    if ch.Metatype.name == 'Human':
+        quality_list.pop(quality_list.index(Core.HUMAN_LOOKING))
+    elif ch.Metatype.name == 'Elf':
+        quality_list.pop(quality_list.index(Core.ELF_POSER))
+    elif ch.Metatype.name == 'Ork':
+        quality_list.pop(quality_list.index(Core.ORK_POSER))
+
+
+
+def resolve_quality_level(q: Core.Quality, ch: Core.Character) -> Core.Quality:
     """
         For qualities that have multiple levels or are a generic title meant
             for something more specific, then those levels/specificities are
@@ -501,6 +515,7 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
                  f'Loyalty: {loyalty_cost} | ' +
                  f'Total: {CONTACT_ROLL.connection + loyalty_cost}' +
                  f'\n   {karma} is remaining bonus karma')
+        ch.Contacts[CONTACT_ROLL.name] = {'Contact': CONTACT_ROLL, 'Connection': CONTACT_ROLL.connection, 'Loyalty': loyalty_cost}
     return
 
 
@@ -598,10 +613,16 @@ def format_skills(character_skills, compact=False) -> None:
         non_grouped_skills = OrderedDict(sorted(non_grouped_skills.items(), key=lambda t: t[0]))
         print("--> Non-Grouped Skills")
         for rating in non_grouped_skills.keys():
-            print(f'{rating}: ', ", ".join(non_grouped_skills[rating]))
+            if rating == -1:
+                print(f'Unaware:', ", ".join(non_grouped_skills[rating]))
+            else:
+                print(f'{rating}: ', ", ".join(non_grouped_skills[rating]))
 
         for group in groups.keys():
-            print(f"--> {group} Skill Group: {groups[group]}")
+            if groups[group] < 0:
+                print(f"--> {group} Skill Group: Unaware")
+            else:
+                print(f"--> {group} Skill Group: {groups[group]}")
 
 
 
@@ -746,7 +767,19 @@ def format_gear(ch: Core.Character, item_compact=True, compact=False):
     if len(gear_licenses) > 0:
         print(f"Fake licenses: {[i.name.split('Fake License (')[1][:-1] for i in gear_licenses if i.name != 'Fake License (None)']}")
 
-        
+
+def format_contacts(ch: Core.Character, compact=True):
+    print("===\nCONTACTS")
+    if len(ch.Contacts.keys()) > 0:
+        if compact:
+            for i in ch.Contacts:
+                x = ch.Contacts[i]
+                y = ch.Contacts[i]['Contact']
+                print(y.name, "Connection:", x['Connection'], "Loyalty:", x['Loyalty'])
+        else:
+            raise NotImplemented
+    else:
+        print("NONE")
 
 
 def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True, compact=False):
@@ -775,6 +808,7 @@ def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True, compact=F
     #    print(karma_log)
     format_skills(ch.Skills, compact)
     format_gear(ch, compact=False)
+    format_contacts(ch)
     print("===\nOTHER STATS:")
     print(f'Armor Rating: {ch.Armor}')
     print("===\nNUYEN: ")
@@ -785,7 +819,7 @@ if __name__ == "__main__":
     # In like 1% of cases the program hangs, this is to temporarily tackle that
     #   before I find and fix the issue
     x, nuyen, karma_log = generate_character()
-    print_shit(x, nuyen, karma_log, compact=True)
+    print_shit(x, nuyen, karma_log, compact=False)
     # p = multiprocessing.Process(target=generate_character)
     # p.start()
     # p.join(5)

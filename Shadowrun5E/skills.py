@@ -30,7 +30,9 @@ def get_skills(
     groups = [group for group in Core.SkillGroup.items]
     weight_skills = [1 for _ in skills]
     weight_groups = [1 for _ in groups]
-
+    ch, skills, groups, weight_skills, weight_groups = resolve_skills_qualities(
+            ch, skills, groups, weight_skills, weight_groups
+            )
     skill_list = {}
     group_list = {}
     for idx, i in enumerate(skills):
@@ -346,9 +348,8 @@ def karma_spend_raise_skill(ch: Core.Character,
     try:
         skill_to_raise = random.choice(
             [i for i in ch.Skills if
-             ch.Skills[i].rating < 6])
-        karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][
-            ch.Skills[skill_to_raise].rating + 1]
+             ch.Skills[i].rating < 6 and ch.Skills[i].rating > 1])
+        karma_cost_skill_raise = Core.KARMA_SKILL_COSTS['Active'][ch.Skills[skill_to_raise].rating + 1]
         # print(Core.KARMA_SKILL_COSTS['Active'][ch.Skills[
         # 'Active'][skill_to_raise].rating + 1])
         if karma_cost_skill_raise > karma_budget:
@@ -362,7 +363,7 @@ def karma_spend_raise_skill(ch: Core.Character,
                 f'(EX) {s1} has been increased to {s2}.' +
                 f'Costing {karma_cost_skill_raise}.' +
                 f'\n   {karma_budget} is Karma total.')
-    except IndexError:
+    except IndexError | KeyError:
         return (ch, k, karma_budget)
     return (ch, k, karma_budget)
 
@@ -395,8 +396,8 @@ def karma_spend_raise_skill_group(ch: Core.Character,
                 f'(EX) {s1} skills have been increased to {s2}.' +
                 f'Costing {karma_cost_skill_group_raise}.' +
                 f'\n   {karma_budget} is Karma total.')
-    except IndexError:
-        pass
+    except:
+        return (ch, k, karma_budget)
     return (ch, k, karma_budget)
 
 def karma_spend_new_skill(ch: Core.Character,
@@ -439,6 +440,32 @@ def karma_spend_new_skill_specialisation(
             f'{skill_for_spec}. Costing 1\n   {karma_budget} ' +
             f'is Karama Total')
         return (ch, k, karma_budget)
+
+
+def resolve_skills_qualities(ch: Core.Character, 
+                             skill_list: list,
+                             group_list: list,
+                             weight_skills: list,
+                             weight_groups: list):
+    if 'Juryrigger' in ch.Qualities:
+        for idx, skill in enumerate(skill_list):
+            if "Mechanic" in skill.name:
+                weight_skills[idx] += 10
+    if 'Incompetent' in ch.Qualities:
+        incompetent_skill_group = random.choice(group_list)
+        for skill in incompetent_skill_group.skills:
+            ch.Skills[skill.name] = skill
+            ch.Skills[skill.name].rating = -1
+            ch.Skills[skill.name].group = incompetent_skill_group.name
+            weight_skills.pop(skill_list.index(skill))
+            skill_list.pop(skill_list.index(skill))
+        weight_groups.pop(group_list.index(incompetent_skill_group))
+        group_list.pop(group_list.index(incompetent_skill_group))
+        skill
+
+    return ch, skill_list, group_list, weight_skills, weight_groups
+
+
 
 
 if __name__ == "__main__":

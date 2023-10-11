@@ -41,7 +41,7 @@ def check_rating(rating) -> bool:
             Rating 7: 95%
             Rating 8: 98%
     """
-    rating_roll_ratio = {1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
+    rating_roll_ratio = {-1: 101, 0: 101, 1: 83, 2: 66, 3: 50, 4: 25, 5: 15, 6: 10, 7: 5, 8: 2}
     if random.randint(1, 100) >= rating_roll_ratio[rating]: 
         return False
     return True
