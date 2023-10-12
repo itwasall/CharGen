@@ -815,37 +815,44 @@ def format_contacts(out, ch: Core.Character, compact=True):
 
 
 def format_other_stats(out, ch: Core.Character) -> None:
-    out.append(f"--- Initiative")
-    def char_length_formatter(attr):
+    other_stat_list = [ch.Initiative, 
+                 ch.InitiativeAstral,
+                 ch.InitiativeMatrixAR, 
+                 ch.InitiativeMatrixVRHot, 
+                 ch.InitiativeMatrixVRCold, 
+                 ch.ConditionalMonitorStun, 
+                 ch.ConditionalMonitorOverflow, 
+                 ch.ConditionalMonitorPhysical]
+    for attr in other_stat_list:
         if attr < 10:
-                return f"0{attr}"
+               other_stat_list[other_stat_list.index(attr)] = f"0{attr}"
         else:
-            return attr
-    ch.Initiative = char_length_formatter(ch.Initiative)
-    ch.InitiativeAstral = char_length_formatter(ch.InitiativeAstral)
-    if ch.InitiativeMatrixAR < 10:
-        ch.InitiativeMatrixAR = f"0{ch.InitiativeMatrixAR}"
-    if ch.InitiativeMatrixVRHot < 10:
-        ch.InitiativeMatrixVRHot = f"0{ch.InitiativeMatrixVRHot}"
-    if ch.InitiativeMatrixVRCold < 10:
-        ch.InitiativeMatrixVRCold = f"0{ch.InitiativeMatrixVRCold}"
-    if ch.ConditionalMonitorPhysical < 10:
-        ch.ConditionalMonitorPhysical= f"0{ch.ConditionalMonitorPhysical}"
-    if ch.ConditionalMonitorStun < 10:
-        ch.ConditionalMonitorStun = f"0{ch.ConditionalMonitorStun}"
-    if ch.ConditionalMonitorOverflow< 10:
-        ch.ConditionalMonitorOverflow = f"0{ch.ConditionalMonitorOverflow}"
-    out.append(f" {ch.Initiative}: Initiative")
-    out.append(f" {ch.InitiativeAstral}: Astral Initiative")
-    out.append(f" {ch.InitiativeMatrixAR}: Matirx Initiative (AR)")
-    out.append(f" {ch.InitiativeMatrixVRHot}: Matirx Initiative (VR Hot)")
-    out.append(f" {ch.InitiativeMatrixVRCold}: Matirx Initiative (VR Cold)")
-    out.append(f"---------------------|-----------------------")
-    out.append(f" Inherent Limits     | Condittion Monitor ")
-    out.append(f"---------------------|-----------------------")
-    out.append(f"   Mental Limit: {ch.LimitMental}   | {ch.ConditionalMonitorPhysical} Physical Condition Monitor:")
-    out.append(f" Physical Limit: {ch.LimitPhysical}   | {ch.ConditionalMonitorStun} Stun Condition Monitor")
-    out.append(f"   Social Limit: {ch.LimitSocial}   |  {ch.ConditionalMonitorOverflow} Overflow Condition Monitor:")
+            pass
+
+#    ch.Initiative = zero_fill(ch.Initiative)
+ #   ch.InitiativeAstral = zero_fill(ch.InitiativeAstral)
+ #   ch.InitiativeMatrixAR = zero_fill(ch.InitiativeMatrixAR)
+ #   ch.InitiativeMatrixVRHot = zero_fill(ch.InitiativeMatrixVRHot)
+ #   ch.InitiativeMatrixVRCold = zero_fill(ch.InitiativeMatrixVRCold)
+ #   ch.ConditionalMonitorPhysical= zero_fill(ch.ConditionalMonitorPhysical)
+ #   ch.ConditionalMonitorStun = zero_fill(ch.ConditionalMonitorStun)
+ #   ch.ConditionalMonitorOverflow = zero_fill(ch.ConditionalMonitorOverflow)
+
+    out.append(f"---------------------------------------------")
+    out.append(f"    Initiative")
+    out.append(f"---------------------------------------------")
+    out.append(f"       Initiative   | {ch.Initiative}")
+    out.append(f"        Matrix AR   | {ch.InitiativeMatrixAR}")
+    out.append(f"  Matrix VR (Hot)   | {ch.InitiativeMatrixVRHot}")
+    out.append(f" Matrix VR (Cold)   | {ch.InitiativeMatrixVRCold}")
+    out.append(f"           Astral   | {ch.InitiativeAstral}")
+    out.append("")
+    out.append(f"------------------------------------------")
+    out.append(f" Inherent  Limits   | Condition Monitor ")
+    out.append(f"--------------------|---------------------")
+    out.append(f"    Mental Limit: {ch.LimitMental} | Physical: {ch.ConditionalMonitorPhysical}")
+    out.append(f"  Physical Limit: {ch.LimitPhysical} |     Stun: {ch.ConditionalMonitorStun}")
+    out.append(f"    Social Limit: {ch.LimitSocial} | Overflow: {ch.ConditionalMonitorOverflow}")
 
 
 
@@ -940,8 +947,10 @@ if __name__ == "__main__":
         elif i in ["q", "Q", "n", "N", "exit", "no", "No", "NO"]:
             print(" _*~^~*~^~*:  Today's not the day choomer :*~^~*~^~*_ ")
             print(" <.*~-*.> TOOL MADE BY github.com/itwasall <.*-~*.> ")
+
+
     def argument_parse():
-        if sys.argv[1] in ['-h', '--help'] or len(sys.argv) <= 1:
+        if len(sys.argv) <= 1 or sys.argv[1] in ['-h', '--help']:
             print("char_shadowrun_5e.py\n    USAGE: python3 char_shadowrun_5e.py [options] -f [filename]")
             print("        OPTIONS:")
             print("                 -q --quick: Skips all my cool ascii text I whipped up and writes to file as quickly as possible")

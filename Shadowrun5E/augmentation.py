@@ -2,171 +2,132 @@ import data as Core
 import item as Item
 import random
 
-"""
-    THE PLAN
 
-    FOR -WARE:
-        Spawn AugmentationCore.items item
-        Roll Augmentation items with matching subtype until limit is met.
-        Limits include:
-            - Hitting Essence Value (e.g. 1, 2, 6)
-            - Hitting Capacity Value
+def get_augmentation(ch: Core.Character):
+    """
+        Augmentation Rules
 
-        FOR HEADWARE: 
-            ANY augs must be installed to either cyberlimbs (if applicable) or a control rig
-                Installing headware to cyberlimbs costs capacity
-                Installing headware to control rig costs essence
-        FOR EYEWARE:
-            ALL augs must be installed as retinal enchancements to the natural eye or to cybereyes 
-                Installing eyeware as retinal enhancements costs Essence
-                Installing eyeware to cybereyes costs Capacity
-                All augs are installed for both eyes.
-        FOR EARWARE:
-            ALL augs must be installed as enhancements to the natrual inner ear or to cyberears
-                Installing earware as inner ear enhancements costs Essence
-                Installing earware to cyberears costs Capacity
-                All augs are installed for both ears.
-        FOR BODYWARE: 
-            NO central core unit to install mods into. If applicable, some bodyware can be installed into cyberlimbs
-                Installing bodyware to cyberlimbs costs Capacity
-                Installing bodyware costs Essence
+        HEADWARE:
+        - Base Unit -> Control Rig
+        - Cost essence to install into Control Rig
+        - If applicable, can cost capacity to install into Cyberlimb
 
-"""
+        EYEWARE:
+        - Base Unit -> Cybereyes
+        - Cost capacity to install into Cybereyes
+        - Installing Cybereyes revokes any vision enhancements granted
+            via metatype or other means
+        - Can cost essence to install as Retinal Modifications
 
+        EARWARE:
+        - Base Unit -> Cyberears
+        - Cost capacity to install into Cyberears
+        - Can cost essence to install directly to inner ear
 
-def get_augmentation(ch: Core.Character, aug_type=None, aug_bodyloc=None):
-    essence_budget = get_essence_budget(ch)
-    print(f'Character Essence attribute is {ch.Essence.value}\nEssence budget is {essence_budget}')
-    augmentation_routine =['Cyberware', 'Bioware', 'Cyberlimb']
-    if aug_type is None:
-        aug_type = random.choice(augmentation_routine)
-    if essence_budget <= 0:
-        print(f"essence budget 0 or negative: {essence_budget}")
-        return
-    match aug_type:
-        case 'Cyberware':
-            if aug_bodyloc is None:
-                aug_bodyloc = random.choice(
-                        'Earware', 'Eyeware', 'Headware', 'Bodyware')
-                ch = get_augmentation_regular(ch, essence_budget, aug_bodyloc)
-            elif aug_bodyloc in ['Earware', 'Eyeware', 'Headware']:
-                ch = get_augmentation_regular(ch, essence_budget, aug_bodyloc)
-        case 'Cyberlimbs':
-            if aug_bodyloc is None:
-                aug_bodyloc = random.choice([
-                    'Hand', 'Foot', 'Lower Arm', 'Lower Leg', 'Full Arm', 'Full Leg'])
-                ch = get_augmentation_cyberlimb(ch, essence_budget, aug_bodyloc)
-            else:
-                ch = get_augmentation_cyberlimb(ch, aug_bodyloc)
-        case 'Bioware':
-            print("TODO")
-            aug=None
-        case _:
-            raise ValueError(f"Incorrect aug_type! ({aug_type})")
+        BODYWARE:
+        - Base Unit -> None
+        - Cost essence to install directly
+        - Can cost capacity to install into Cyberlimb
+
+        CYBERLIMBS:
+        - Have their own Strength & Agility ratings starting at 3/3
+        - The Strength & Agility ratings can only be upgraed by cyberlimb
+            enhancements (cyberlimb exclusive modifications) and not by
+            other augmentations installed
+        - Strength & Agility can only be upgraded up to characters respective
+            attribute *limit*
+        - Add +1 to Physical Condition Monitor Per Limb
+            (Not applicable to hands or feet, or half limbs)
+        - Can have cyberweapons installed to them
+
+    """
+    ch.Augmentations = {
+            'Head': None, 'Eyes': None, 'Ears': None, 
+            'Body': None, 'Hand': None, 'Foot': None, 
+            'Fingers': None, 'Toes': None, 'Lower Arm': None, 
+            'Lower Leg': None, 'Full Arm': None, 'Full Leg': None,
+            'Torso': None, 'Skull': None
+            }
     return
 
 
-def get_augmentation_regular(ch: Core.Character, 
-                             ess: int, 
-                             aug_bodyloc) -> Core.Character:
-    if aug_bodyloc == 'Eyeware' and random.randint(1,2) == 1:
-        RETINAL_ENHANCEMENT = True
-    elif aug_bodyloc == 'Earware' and random.randint(1, 2) == 1:
-        INNER_EAR_ENHANCEMENT = True
-    else:
-        RETINAL_ENHANCEMENT = False
-        INNER_EAR_ENHANCEMENT = False
+def get_eyeware(
+        ch: Core.Character) -> Core.AugmentationCore | Core.Augmentation:
+    eyeware = [i for i in 
+                    Core.Augmentation.items + Core.AugmentationCore.items if
+                    i.subtype == 'Eyeware']
+    pass
 
-    aug_options = [i for i in Core.Augmentation.items if i.subtype == aug_bodyloc]
-    if RETINAL_ENHANCEMENT:
-        ch.Augmentations['Eyes'] = random.choice(aug_options)
-        ch.Augmentations['Eyes'].name += " (Retinal Enhancement)"
-        ch.Essence.value -= ch.Augmentations['Eyes'].essence
-        return ch
-    elif INNER_EAR_ENHANCEMENT:
-        ch.Augmentations['Ears'] = random.choice(aug_options)
-        ch.Augmentations['Ears'].name += " (Inner Ear Enhancement)"
-        ch.Essence.value -= ch.Augmentations['Ears'].essence
-        return ch
-    aug_base = Item.get_item(random.choice([
-        i for i in Core.AugmentationCore.items if hasattr(i, "rating") and i.subtype == aug_bodyloc]))
-    aug_options = [
-            i for i in Core.Augmentation.items if i.subtype == aug_bodyloc]
-    catchall = 0
-    while aug_base.capacity > 0 or catchall < 10:
-        new_aug = Item.get_item(random.choice(aug_options))
-        if hasattr(new_aug, "capacity"):
-            if aug_base.capacity < new_aug.capacity:
-                catchall += 1
-                continue
-            if new_aug in aug_base.mods:
-                catchall += 1
-                continue
-            aug_base.mods.append(new_aug)
-            aug_base.capacity -= new_aug.capacity
-        else:
-            catchall += 1
-            continue
+
+def get_remove_racial_bonus(
+        ch: Core.character, 
+        cyberware: Core.AugmentationCore):
+    WE_WILL_KNOW_WHEN_WE_WILL_KNOW = 0
+    if (isinstance(ch.Metatype.racial_bonus, list)):
+        racial_bonus = ch.Metatype.racial_bonus
+        if cyberware.subtype == "Eyes":
+            if 'Low Light Level' in racial_bonus:
+                racial_bonus.pop(racial_bonus.index('Low Light Level'))
+            elif 'Thermographic Visin' in racial_bonus:
+                racial_bonus.pop(racial_bonus.index('Low Light Level'))
+        if cyberware.subtype == 'Bodyware':
+            if 'Dermal Amor' in racial_bonus:
+                racial_bonus.pop(racial_bonus.index('Dermal Armor'))
     
-    aug_bodyloc_dict = {
-            'Earware': 'Ears', 
-            'Eyeware': 'Eyes', 
-            'Bodyware': 'Body', 
-            'Headware': 'Head'}
-    bodyl = aug_bodyloc_dict[aug_bodyloc]
-    ch.Augmentations[bodyl] = aug_base
-    ch.Essence.value -= ch.Augmentations[bodyl].essence
-    return ch
 
 
-def get_augmentation_cyberlimb(ch: Core.Character, 
-                               ess:int, 
-                               aug_bodyloc) -> Core.AugmentationCore:
-    cyberlimb_base = random.choice([
-        i for i in Core.AugmentationCore.items if 
-        i.subtype == 'Cyberlimbs' and i.location == aug_bodyloc])
-    return cyberlimb_base
 
-
-def get_essence_budget(ch: Core.Character):
-    if ch.Magic is not None or ch.Resonance is not None:
-        quarter_essence = ch.Essence.value / 4
-        if quarter_essence > 1:
-            return quarter_essence
-        else:
-            return 0
+def get_cyberlimb(ch: Core.Character, bodypart: None):
+    if bodypart is None or bodypart not in ch.Augmentations.keys():
+        bodypart = random.choice([
+            'Hand', 'Foot', 'Lower Arm', 'Lower Leg', 'Full Arm', 'Full Leg',
+            'Skull', 'Torso'])
+    cyberlimb = random.choice(
+            [i for i in Core.AugmentationCore if 
+             i.subtype == 'Cyberlimb' and i.location == bodypart ])
+    cyberlimb.Strength = Core.Attribute('Strength', value=3)
+    cyberlimb.Agility = Core.Attribute('Agility', value=3)
+    increase_attrs_by = random.choice([None, 'A little', 'A lot'])
+    if increase_attrs_by is None:
+        pass
     else:
-        aug_counts = {}
-        for d in ch.Augmentations.values():
-            if type(d) in aug_counts:
-                aug_counts[type(d)] += 1
-            else:
-                aug_counts[type(d)] = 1
-        return ch.Essence.value
+        focused_attrs_are = random.choice(['Strength', 'Agility', 'Both'])
+        cyberlimb = get_cyberlimb_customisation(
+                ch, cyberlimb, increase_attrs_by, focused_attrs_are)    
 
 
-def format_augmentations(ch: Core.Character, compact=False):
-    if compact:
-        return str(f"Augmentations: {x.Augmentations}")
 
-    print("===\nAUGMENTATIONS")
-    
-    no_augs = []
-    for key, value in x.Augmentations.items():
-        if x.Augmentations[key] is None:
-            no_augs.append(key)
-        else:
-            print(f"{key} - {value}")
+def get_cyberlimb_customisation(ch: Core.Character,
+                                cyberlimb: Core.AugmentationCore,
+                                amt: str,
+                                focus: str) -> Core.AugmentationCore:
+    match increase_attrs_by:
+        case 'A little':
+            max_stregnth_custom = int(ch.Strength.limit / 2)
+            max_agility_custom = int (ch.Agility.limit / 2)
+        case 'A lot':
+            max_stregnth_custom = ch.Strength.limit - 3
+            max_agility_custom = ch.Agility.limit - 3
+        case _:
+            pass
 
-    if len(no_augs) > 0:
-        print(f"No augs in {', '.join(no_augs)}")
-if __name__ == "__main__":
-    import char_shadowrun_5e as Run
-    x, _, _ = Run.generate_character()
-    eyeware_example = get_augmentation(
-            x, aug_type='Cyberware', aug_bodyloc='Eyeware')
-    format_augmentations(x)
+    match focus:
+        case 'Strength':
+            max_agility_custom = int( round( max_agility_custom / 4))
+        case 'Agility':
+            max_stregnth_custom = int( round( max_strength_custom / 4))
+        case 'Both' | _:
+            pass
 
-    cyberlimb_example = get_augmentation(x, aug_type='Cyberlimbs')
+    while (cyberlimb.avail <= 12 
+           or ch.Nuyen > 0 
+           or cyberlimb.Strength.value < ch.Strength.limit
+           or cyberlimb.Agility.value < ch.Agility.limit):
+        
+        pass
+    return cyberlimb
 
-    format_augmentations(x)
+
+def check_augmentation_elligability(ch: Core.Character):
+    if ch.MagicResoUser is not None:
+        return False
