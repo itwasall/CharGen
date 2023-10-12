@@ -3178,4 +3178,38 @@ SNAKE_MESH_SOCKS = Armor("Snake_mesh_socks", page_ref='R&G, 210', cost=50, avail
 SPACESUIT = Armor("Spacesuit", page_ref='R&G, 210', cost=12000, avail=16, armor_rating=12, rulebook="Run & Gun")
 SURVIVAL_BLADE = Armor("Survival_blade", page_ref="R&G, 210", cost=["Rating", "*", 2000], avail=["Rating", "*", 3], armor_rating=4, rulebook="Run & Gun")
 
-
+"""
+    STREET GRIMOIRE
+"""
+"""
+    MAGIC ITEMS
+"""
+# MagicItem Cost Avail Legality Skill MaterialCost
+AGHEXHEX = MagicItem("Aghexhex", cost=["Force", "*", 500], avail=8, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_FICTUS = MagicItem("Aqua_fictus", cost=1000, avail=8, skill=ALCHEMY, material_cost=850, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_FORTIS = MagicItem("Aqua_fortis", cost=50, avail=4, skill=ALCHEMYY, material_cost=43, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_REGIA = MagicItem("Aqua_regia", cost=100, avail=5, skill=ALCHEMY, material_cost=85, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_VITAE = MagicItem("Aqua_vitae", cost=15, avail=1, skill=ALCHEMY, material_cost=13, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_POWDER = MagicItem("Aqua_powder", cost=120, avail=4, skill=ALCHEMY, material_cost=70, page_ref='SG, 218', rulebook="Street Grimoire")
+BDND = MagicItem("Bdnd", cost=["Force", "*", 500], avail=8, page_ref='SG, 218', rulebook="Street Grimoire")
+FAB_1 = MagicItem("Fab_1", cost=50, avail=8, page_ref='SG, 218', rulebook="Street Grimoire")
+FAB_2 = MagicItem("Fab_2", cost=["Force", "*", 50], avail=16, legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+FAB_3 = MagicItem("Fab_3", cost=["Force", "*", 25000], avail=20, legality=F, page_ref='SG, 218', rulebook="Street Grimoire")
+FETISH = MagicItem("Fetish", cost=2000, avail=4, skill=ARTIFICING, material_cost=1700, page_ref='SG, 218', rulebook="Street Grimoire")
+GOVI = MagicItem("Govi", cost=["Force", "*", 50], avail=["Force", "*", 1], page_ref='SG, 218', rulebook="Street Grimoire")
+HAND_OF_GLORY = MagicItem("Hand_of_glory", cost=["Force", "*", 1500], avail=["ForceSquared", "*", 1], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+LOTS_CURSE = MagicItem("Lots_curse", cost=["Force", "*", 1000], avail=14, legality=F, page_ref='SG, 218', rulebook="Street Grimoire")
+MAGECUFF = MagicItem("Magecuff", cost=1000, avail=5, page_ref='SG, 218', rulebook="Street Grimoire")
+MAGEMASK = MagicItem("Magemask", cost=200, avail=2, legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+MANA_SENSITIVE_FILM_PLATE = MagicItem("Mana_sensitive_film_plate", cost=25, avail=4, skill=ARTIFICING, material_cost=21, page_ref='SG, 218', rulebook="Street Grimoire")
+MORTIS_OPTIGRAM = MagicItem("Mortis_optigram", cost=3000, avail=6, skill=ARTIFICING, material_cost=2550, page_ref='SG, 218', rulebook="Street Grimoire")
+MYSTIC_CUFF = MagicItem("Mystic_cuff", cost=["Force", "*", 200], avail=["Force","*",1], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+MYSTIC_JACKET = MagicItem("Mystic_jacket", cost=["Force", "*", 500], avail=["Force","*",1], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+MYSTIC_MASK = MagicItem("Mystic_mask", cost=["Force", "*", 400], avail=["Force","*",1], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+QUICKSILVER_CAMERA = MagicItem("Quicksilver_camera", cost=2500, avail=4, skill=ARTIFICING, material_cost=2125, page_ref='SG, 218', rulebook="Street Grimoire")
+SAGE = MagicItem("Sage", cost=["Force", "*", 800], avail=["Force", "*", 6], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+SHOFAR = MagicItem("Shofar", cost=["Force", "*", 800], avail=["Force", "*", 1], page_ref='SG, 218', rulebook="Street Grimoire")
+SPIRIT_STRENGTH = MagicItem("Spirit_strength", cost=["Force", "*", 3000], avail=["Force", "*", 6], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+SYMBOLIC_LINK = MagicItem("Symbolic_link", cost=0, avail=0, skill=ARTIFICING, page_ref='SG, 218', rulebook="Street Grimoire")
+WITCHS_MOSS = MagicItem("Witchs_moss", cost=["Force", "*", 1600], avail=["Force", "*", 6], legality=R, page_ref='SG, 218', rulebook="Street Grimoire")
+ 
