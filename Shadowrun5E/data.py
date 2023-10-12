@@ -2,7 +2,7 @@ import random
 
 class Attribute:
 
-    def __init__(self, name, value: int = 0,  limit: int = 6, matrix=False):
+    def __init__(self, name, value: int = 0,slimit: int = 6, matrix=False):
         self.name = name
         self.value = value
         self.limit = limit
@@ -157,12 +157,12 @@ class Character:
         self.Armor = 0
         self.Cyberdeck = None
         self.Augmentations = {
-            'Head': None,       'Ears': None,
-            'Eyes': None,       'Body': None,
-            'Hand': None,       'Foot': None,
-            'Lower Arm': None,  'Lower Leg': None,
-            'Full Arm': None,   'Full Leg': None,
-            'Finger': None,     'Toe': None
+            'Head': None,s     'Ears': None,
+            'Eyes': None,s     'Body': None,
+            'Hand': None,s     'Foot': None,
+            'Lower Arm': None,s'Lower Leg': None,
+            'Full Arm': None,s 'Full Leg': None,
+            'Finger': None,s   'Toe': None
         }
         self.Vehicle = None
         self.Spells = None
@@ -2112,7 +2112,7 @@ RECICLADORE = Contact('Recicladore', metatype='Troll', sex='Male', age='Middle-a
 RENT_A_COP = Contact('Rent-a-Cop', metatype='Human', sex='Male', age='Young', connection=1, type='Personal Favor', payment='Service (drek jobs)', hobbies_vice='Nothing of Interest', personal_life='Single', attr_values=[5, 3, 3, 3, 4, 3, 3, 2, 6, 2], condition_mon=[11,10], limits=[5, 5, 4], skills={ETIQUETTE: [3, 'Street'], INTIMIDATION: 3, PERCEPTION: 3, PILOT_GROUND_CRAFT: 2, PISTOLS: 2}, knowledge_skills={'Gang Identification': 3, 'Local Cheap Food': 4, 'Security Systems': 2,'Street Rumors': 3})
 ROCKSTAR = Contact('Rockstar', metatype='Human', sex='Female', age='Young', connection=4, type='Networking', payment='Service (free-labor job)', hobbies_vice='Nothing of Interest', personal_life='Divorced', attr_values=[3, 5, 3, 3, 4, 2, 3, 5, 6, 2], condition_mon=[10,10], limits=[4, 4, 7], skills={CLUBS: 2, COMPUTER: 3, ETIQUETTE: [4, 'Media'], NEGOTIATION: 4, PERCEPTION: 4, PERFORMANCE: [5, 'Singing'], PILOT_GROUND_CRAFT: 3, STEALTH: 4}, knowledge_skills={'(Language)': 3, 'Music Industry': 3, 'Musical Instruments': 3, 'Street Rumors': 2})
 SAFEHOUSE_MASTER = Contact('Safehouse Master', metatype='Dwarf', sex='Male', age='Middle-aged', connection=3, type='Support', payment='Cash (corporate scrip)', hobbies_vice='Entertainment (music)', personal_life='In a Relationship', attr_values=[5, 3, 3, 5, 5, 3, 3, 4, 6, 1], condition_mon=[1,11], limits=[6, 5, 7], skills={COMPUTER: 3, ETIQUETTE: [3, 'Corp'], FIRST_AID: 3, LEADERSHIP: 3, NEGOTIATION: 2, PERCEPTION: 4, PISTOLS: 3, STEALTH: 2}, knowledge_skills={'(City) Knowledge': 2, 'Corporate Politics': 3, '(Language)': 3, 'Security Systems': 4})
-SCIPT_KIDDIE = Contact('Script Kiddie', metatype='Human', sex='Female', age='Young', connection=2, type='Networking', payment='Cash (credstick) ', hobbies_vice='Entertainment (action trideos)', personal_life='Single', attr_values=[2, 2, 4, 3, 4, 5, 4, 3, 6, 2], condition_mon=[9,10], limits=[4, 6, 6], skills={COMPUTER: 3, CYBERCOMBAT: 1, ELECTRONIC_WARFARE: 4, ETIQUETTE: [2, 'Matri'],  HACKING: 3, HARDWARE: 2, NEGOTIATION: 2}, knowledge_skills={'(City) Knowledge': 3, 'Decker Hangouts': 4, 'Malware': 3, 'Street Rumors': 4, 'Trideos': 4})
+SCIPT_KIDDIE = Contact('Script Kiddie', metatype='Human', sex='Female', age='Young', connection=2, type='Networking', payment='Cash (credstick) ', hobbies_vice='Entertainment (action trideos)', personal_life='Single', attr_values=[2, 2, 4, 3, 4, 5, 4, 3, 6, 2], condition_mon=[9,10], limits=[4, 6, 6], skills={COMPUTER: 3, CYBERCOMBAT: 1, ELECTRONIC_WARFARE: 4, ETIQUETTE: [2, 'Matri'],sHACKING: 3, HARDWARE: 2, NEGOTIATION: 2}, knowledge_skills={'(City) Knowledge': 3, 'Decker Hangouts': 4, 'Malware': 3, 'Street Rumors': 4, 'Trideos': 4})
 SPRAWL_GANGER = Contact('Sprawl Ganger', metatype='Ork', sex='Male', age='Young', connection=1, type='Networking', payment='Cash (credstick)', hobbies_vice='Personal Grooming (shoes)', personal_life='Single', attr_values=[6, 3, 5, 5, 4, 3, 3, 2, 6, 1], condition_mon=[11,10], limits=[7, 5, 5], skills={CLUBS: 2, PERCEPTION: 3, PISTOLS: 3, SURVIVAL: 3, UNARMED_COMBAT: 3}, knowledge_skills={'(City) Knowledge': 3, 'Gang Territory': 3})
 SQUATTER = Contact('Squatter', metatype='Human', sex='Male', age='Middle-aged', connection=1, type='Support', payment='Barter (hobby/vice items)', hobbies_vice='Social Habit (alcohol)', personal_life='None of Your Damn Business!', attr_values=[4, 3, 3, 3, 4, 3, 4, 2, 6, 2], condition_mon=[10,10], limits=[5, 5, 5], skills={BLADES: 2, CON: 1, ETIQUETTE: [3, 'Street'], INTIMIDATION: 1, PERCEPTION: 3, SNEAKING: 3}, knowledge_skills={'(City) Knowledge': 3, 'Drugs': 2, 'Dumpster Diving': 3, 'Gang Identification': 3, 'Street Rumors': 2})
 USED_CAR_SALESMAN = Contact('Used Car Salesman', metatype='Human', sex='Male', age='Middle-aged', connection=2, type='Swag', payment='Barter (items for the profession)', hobbies_vice='Nothing of Interest', personal_life='In a Relationship', attr_values=[3, 3, 3, 3, 4, 3, 3, 4, 6, 2], condition_mon=[10,10], limits=[4, 5, 6], skills={AUTOMOTIVE_MECHANIC: 3, CON: 5, ETIQUETTE: [4, 'Street'], NEGOTIATION: 6, PERCEPTION: 3}, knowledge_skills={'Cars': 4, 'Grid Guide': 4, 'Street Rumors': 4})
@@ -2719,10 +2719,10 @@ ATTENTION_COPROCESSOR = Augmentation('Attention Coprocessor', page_ref='CF, 223'
 CHIPJACK = Augmentation('Chipjack', page_ref='CF, 223', cost=["Rating", "*", 1000], rating=[1, "to", 6], capacity="-", avail=["Rating", "*", 2], subtype="Headware", rulebook='Chrome Flesh')
 DREAM_LINK = Augmentation("Dream Link", page_ref='CF, 223', cost=1000, essence=0.1, capacity="-", avail=8, subtype="Headware", rulebook='Chrome Flesh')
 FALSE_FACE = Augmentation("False Face", page_ref='CF, 223', cost=20000, essence=0.5, capacity=8, avail=12, legality=R, cyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
-KNOWLEDGE_HARDWIRES_1_6 = Augmentation("Knowledge_hardwires_1_6", page_ref='CF, 223', cost=["Rating", "*", 2000], rating=[1, "to", 6], essence=["Rating", "*", 0.05], capacity="-", avail=["Rating", "*", 1],  subtype="Headware", rulebook='Chrome Flesh')
+KNOWLEDGE_HARDWIRES_1_6 = Augmentation("Knowledge_hardwires_1_6", page_ref='CF, 223', cost=["Rating", "*", 2000], rating=[1, "to", 6], essence=["Rating", "*", 0.05], capacity="-", avail=["Rating", "*", 1],ssubtype="Headware", rulebook='Chrome Flesh')
 MATH_SPU = Augmentation("Math_spu", page_ref='CF, 223', cost=2000, essence=0.1, capacity=1, avail=8, cyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
 ORIENTATION_SYSTEM = Augmentation("Orientation_system", page_ref='CF, 223', cost=500, essence=0.2, capacity=1, avail=4, cyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
-RADAR_SENSOR_1_4 = Augmentation("Radar_sensor_1_4", page_ref='CF, 223', cost=["Rating", "*", 4000], rating=[1, "to", 4], essence=["Rating", "*", 0.25], capacity=["Rating", "*", 1], avail=["Rating", "*", 3],  cyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
+RADAR_SENSOR_1_4 = Augmentation("Radar_sensor_1_4", page_ref='CF, 223', cost=["Rating", "*", 4000], rating=[1, "to", 4], essence=["Rating", "*", 0.25], capacity=["Rating", "*", 1], avail=["Rating", "*", 3],scyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
 SYNTHLINK = Augmentation("Synthlink", page_ref='CF, 223', cost=1000, essence=0.1, capacity=1, avail=4, cyberlimbs=True, subtype="Headware", rulebook='Chrome Flesh')
 VISUALIZER = Augmentation("Visualizer", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, subtype="Headware", rulebook='Chrome Flesh')
 VOICE_MASK = Augmentation("Voice_mask", page_ref='CF, 223', cost=2000, essence=0.1, capacity="-", avail=8, legality=F, subtype="Headware", rulebook='Chrome Flesh')
@@ -3023,7 +3023,7 @@ NITAMA_SPORTER = Firearm("Nitama_sporter", page_ref='R&G, 30', cost=300, avail=1
 CAVALIER_DEPUTY = Firearm("Cavalier_deputy", page_ref='R&G, 30', cost=225, avail=3, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
 PSK_3_COLLAPSIBLE_HEAVY_PISTOL = Firearm("Psk_3_collapsible_heavy_pistol", page_ref='R&G, 30', cost=1050, avail=16, legality=F, subtype='Heavy Pistol', rulebook="Run & Gun")
 SAVALETTE_GUARDIAN = Firearm("Savalette_guardian", page_ref='R&G, 30', cost=870, avail=6, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
-ONOTARI_ARMS_VIOLATOR = Firearm("Onotari_arms_violator", page_ref='R&G, 30', cost=550,  avail=7, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
+ONOTARI_ARMS_VIOLATOR = Firearm("Onotari_arms_violator", page_ref='R&G, 30', cost=550,savail=7, legality=R, subtype='Heavy Pistol', rulebook="Run & Gun")
 # MACHINE PISTOLS
 PPSK_4_COLLAPSIBLE_MACHINE_PISTOL = Firearm("Ppsk_4_collapsible_machine_pistol", page_ref='R&G, 30', cost=2800, avail=17, legality=F, subtype='Machine Pistol', rulebook="Run & Gun")
 ONOTARI_ARMS_EQUALIZER = Firearm("Onotari_arms_equalizer", page_ref='R&G, 30', cost=750, avail=7, legality=R, subtype='Machine Pistol', rulebook="Run & Gun")
@@ -3126,7 +3126,7 @@ SECURITY_ARMOR_HEAVY = Armor("Security_armor_heavy", page_ref='R&G, 210', cost=2
 SECURITY_ARMOR_HELMET = Armor("Security_armor_helmet", page_ref='R&G, 210', cost=5000, avail=8, legality=R, armor_rating=3, bonus="+", rulebook="Run & Gun")
 SWAT_ARMOR = Armor("Swat_armor", page_ref='R&G, 210', cost=8000, avail=16, legality=R, armor_rating=15, rulebook="Run & Gun")
 SWAT_ARMOR_HELMET = Armor("Swat_armor_helmet", page_ref='R&G, 210', cost=1500, avail=10, legality=R, armor_rating=3, bonus="+", rulebook="Run & Gun")
-ACE_OF_CLUBS = Armor("Ace_of_clubs", page_ref='R&G, 210',  cost=1000, avail=6, armor_rating=7, rulebook="Run & Gun")
+ACE_OF_CLUBS = Armor("Ace_of_clubs", page_ref='R&G, 210',scost=1000, avail=6, armor_rating=7, rulebook="Run & Gun")
 ACE_OF_COINS = Armor("Ace_of_coins", page_ref='R&G, 210', cost=2100, avail=4, armor_rating=7, rulebook="Run & Gun")
 ACE_OF_CUPS = Armor("Ace_of_cups", page_ref='R&G, 210', cost=1600, avail=6, armor_rating=9, rulebook="Run & Gun")
 ACE_OF_DIAMONDS = Armor("Ace_of_diamonds", page_ref='R&G, 210', cost=1400, avail=8, armor_rating=8, rulebook="Run & Gun")
