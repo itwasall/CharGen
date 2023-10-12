@@ -3052,8 +3052,8 @@ MITSUBISHI_YAKUSOKU_MRL = Firearm("Mitsubishi_yakusoku_mrl", page_ref='R&G, 30',
     FIREARM ACCESSORIES
 """
 ADVANCED_SAFETY_SYSTEM_BASE = FirearmAccessory("Advanced Safety System Base", page_ref='R&G, 209', cost=600, avail=4, rulebook="Run & Gun")
-ADVANCED_SAFETY_SYSTEM_IMMOBILIZE = FirearmAccessory("Advanced Safety Sysem Immobilise", page_ref='R&G, 209' cost=700, avail6, rulebook="Run & Gun")
-ADVANCED_SAFETY_SYSTEM_SELF_DESTRUCT = FirearmAccessory("Advanced_safety_system_self_destruct", page_ref='R&G, 209', cost=800, avail=6, legality=, rulebook="Run & Gun")
+ADVANCED_SAFETY_SYSTEM_IMMOBILIZE = FirearmAccessory("Advanced Safety Sysem Immobilise", page_ref='R&G, 209', cost=700, avail=6, rulebook="Run & Gun")
+ADVANCED_SAFETY_SYSTEM_SELF_DESTRUCT = FirearmAccessory("Advanced_safety_system_self_destruct", page_ref='R&G, 209', cost=800, avail=6, rulebook="Run & Gun")
 ADVANCED_SAFETY_SYSTEM_EXPLOSIVE_SELF_DESTRUCT = FirearmAccessory("Advanced_safety_system_explosive_self_destruct", page_ref='R&G, 209', cost=1100, avail=11, legality=F, rulebook="Run & Gun")
 ADVANCED_SAFETY_SYSTEM_ELECTRO_SHOCKER = FirearmAccessory("Advanced_safety_system_electro_shocker", page_ref='R&G, 209', cost=950, avail=6, legality=R, rulebook="Run & Gun")
 BAYONET = FirearmAccessory("Bayonet", page_ref='R&G, 209', cost=50, avail=4, legality=R, rulebook="Run & Gun")
@@ -3100,7 +3100,7 @@ BATTLE_ARMOR_MEDIUM = Armor("Battle_armor_medium", page_ref='R&G, 210', cost=200
 BATTLE_ARMOR_HEAVY = Armor("Battle_armor_heavy", page_ref='R&G, 210', cost=25000, avail=22, legality=F, armor_rating=20, rulebook="Run & Gun")
 BATTLE_ARMOR_HELMET = Armor("Battle_armor_helmet", page_ref='R&G, 210', cost=10000, avail=8, legality=F, armor_rating=3, bonus="+", rulebook="Run & Gun") 
 MURDER_ARMOR = Armor("Murder_armor", page_ref='R&G, 210', cost=5000, avail=12, legality=R, armor_rating=13, rulebook="Run & Gun")
-MURDER_ARMOR_GOREPACK = Armor("Murder_armor_gorepack", page_ref='R&G, 210', cost=200, avail=8, legality=R, armor_rating=., bonus="+", rulebook="Run & Gun")
+MURDER_ARMOR_GOREPACK = Armor("Murder_armor_gorepack", page_ref='R&G, 210', cost=200, avail=8, legality=R, armor_rating=0, bonus="+", rulebook="Run & Gun")
 PADDED_LEATHER = Armor("Padded_leather", page_ref='R&G, 210', cost=600, avail=8, armor_rating=7, rulebook="Run & Gun")
 RIOT_CONTROL_ARMOR = Armor("Riot_control_armor", page_ref='R&G, 210', cost=5000, avail=10, legality=R, armor_rating=14, rulebook="Run & Gun")
 RIOT_CONTROL_HELMET = Armor("Riot_control_helmet", page_ref='R&G, 210', cost=1000, avail=6, legality=R, armor_rating=2, bonus="+", rulebook="Run & Gun")
@@ -3176,6 +3176,6 @@ MCT_EE_SUIT = Armor("Mct_ee_suit", page_ref='R&G, 210', cost=2500, avail=10, arm
 POLAR_SURVIVAL_SUIT = Armor("Polar_survival_suit", page_ref='R&G, 210', cost=2000, avail=8, armor_rating=6, rulebook="Run & Gun")
 SNAKE_MESH_SOCKS = Armor("Snake_mesh_socks", page_ref='R&G, 210', cost=50, avail=6, armor_rating=2, bonus="+", rulebook="Run & Gun")
 SPACESUIT = Armor("Spacesuit", page_ref='R&G, 210', cost=12000, avail=16, armor_rating=12, rulebook="Run & Gun")
-SURVIVAL_BLADE = Armor("Survival_blade" cost=["R, page_ref='R&G, 210',ating", "*", 2000], avail=["Rating", "*", 3], armor_rating=4, rulebook="Run & Gun")
+SURVIVAL_BLADE = Armor("Survival_blade", page_ref="R&G, 210", cost=["Rating", "*", 2000], avail=["Rating", "*", 3], armor_rating=4, rulebook="Run & Gun")
 
 

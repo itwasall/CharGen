@@ -434,7 +434,8 @@ def get_armor(clothing=False, **kwargs):
             new_armor = get_item_mod(new_armor)
     else:
         new_armor = random.choice([i for i in Core.Armor.items if
-                                   not hasattr(i, "requires") and i.avail <= 12])
+                                   not hasattr(i, "requires") and 
+                                   isinstance(i.avail, int) and i.avail <= 12])
         for armor in Core.Armor.items:
             if hasattr(armor, "requires") and \
                     armor.requires == new_armor and random.randint(1, 100) >= 30:
