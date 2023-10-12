@@ -12,6 +12,7 @@ KARMA_LOG = False
 
 
 def generate_character(karma_logging = True) -> Core.Character:
+    out = []
     if karma_logging:
         karma_log = Core.KarmaLogger()
     # STEP 1: CONCEPT
@@ -31,7 +32,7 @@ def generate_character(karma_logging = True) -> Core.Character:
     Attributes.roll_stats(character, attribute_points)
     highest_attrs = Attributes.get_highest_attr(character)
     # STEP 3: MAGIC/RESONANCE
-    resolve_magic_resonance(character, magic_reso, priority_table)
+    resolve_magic_resonance(out, character, magic_reso, priority_table)
     roll_special_stats(character, metatype, special_attribute_points)
     character.redo_attr()
     # STEP 3.5: DETERMING NON-MAGIC/RESONANCE CHAR BUILD CHOICES
@@ -43,13 +44,13 @@ def generate_character(karma_logging = True) -> Core.Character:
         build = random.choices(alt_builds, [1, 1, 1, 5])
         if build == 'Decker':
             ch.IS_DECKER = True
-            print('Character is decker')
+            out.append('Character is decker')
         elif build == 'Rigger':
             ch.IS_RIGGER = True
-            print('Character is rigger')
+            out.append('Character is rigger')
         elif build == 'Face':
             ch.IS_FACE = True
-            print('Character is face')
+            out.append('Character is face')
     skill_builds = {'IS_DECKER': IS_DECKER,
                     'IS_RIGGER': IS_RIGGER, 'IS_FACE': IS_FACE}
     # STEP 4: QUALITIES
@@ -61,6 +62,8 @@ def generate_character(karma_logging = True) -> Core.Character:
     if character.MagicResoUser == "Adept":
         get_adept_powers(character, character.Magic.value)
 
+            
+
     """
         dealing with this later
     """
@@ -68,9 +71,10 @@ def generate_character(karma_logging = True) -> Core.Character:
     #    character = resolve_specific_skill(character, Core.EXOTIC_MELEE_WEAPON)
     add_contacts(character, karma_log)
     get_gear(character, nuyen)
-    leftover_karma(character, karma_log)
-    # print(karma_log)
-    return character, nuyen, karma_log
+    leftover_karma(out, character, karma_log)
+    #out.append(karma_log)
+    calculate_remaining_stats(character)
+    return out, character, nuyen, karma_log
 
 
 def get_priorities(character: Core.Character, defaults=None) -> dict:
@@ -103,7 +107,7 @@ def get_priorities(character: Core.Character, defaults=None) -> dict:
     return selected_items
 
 
-def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
+def resolve_magic_resonance(out, ch: Core.Character, tbl, priority_table) -> None:
     """
         If a character weilds magic or is a technomancer,
             give them the relevant stats and abilities here.
@@ -112,7 +116,7 @@ def resolve_magic_resonance(ch: Core.Character, tbl, priority_table) -> None:
         return
     _type = random.choice(list(tbl.keys()))
     ch.MagicResoUser = str(_type)
-    # print(f'Uh oh! Looks like you\'re a {ch.MagicResoUser}')
+    #out.append(f'Uh oh! Looks like you\'re a {ch.MagicResoUser}')
 
     def get_special_attribute(ch, tbl, attr):
         match attr:
@@ -311,7 +315,7 @@ def get_qualities(ch: Core.Character, k: Core.KarmaLogger) -> None:
             quality_weights[quality_list.index(ROLL_QUALITY)] += 10
         if NEGATIVE_CAP and POSITIVE_CAP:
             break
-    # print(ch.Qualities)
+    #out.append(ch.Qualities)
     return
 
 
@@ -389,7 +393,7 @@ def get_gear(ch: Core.Character, nuyen: int) -> None:
     return
 
 
-def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
+def leftover_karma(out, ch: Core.Character, k: Core.KarmaLogger) -> None:
     """
         If there is any leftover karma points after spending on qualities,
             spent it here
@@ -415,13 +419,13 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
             magic_value -= 1
         power_points = random.randint(1, ch.Magic.value) 
         karma_budget -= power_points * 5
-        print(f'{ch.MagicResoUser} has {power_points} to spend on powers\nCosts {power_points*5}')
+        out.append(f'{ch.MagicResoUser} has {power_points} to spend on powers\nCosts {power_points*5}')
         get_adept_powers(ch, power_points)
 
     while karma_budget > 7:
         item = random.choice(karma_options)
         # item = 'New Skill Specialisation'
-        # print(item)
+        #out.append(item)
         match item:
             case 'Raise Attribute':
                 try:
@@ -436,7 +440,7 @@ def leftover_karma(ch: Core.Character, k: Core.KarmaLogger) -> None:
                         continue
                     else:
                         karma_budget -= karma_attr_raise
-                    # print(karma_attr_raise)
+                    #out.append(karma_attr_raise)
                     r = raised_attr.value
                     k.append(
                         f'(EX) {raised_attr.name} has been increased to {r}.' +
@@ -519,15 +523,51 @@ def add_contacts(ch: Core.Character, k: Core.KarmaLogger) -> None:
     return
 
 
-def buy_gear(ch: Core.Character, nuyen: int) -> None:
+def buy_gear(out, ch: Core.Character, nuyen: int) -> None:
     vehicle_skill_ratings = [
         i.rating for i in ch.Skills.values() if
         i in Core.VEHICLE_SKILLS]
-    print(vehicle_skill_ratings)
+    out.append(vehicle_skill_ratings)
     return
 
 
+def roll_dice(dicestring) -> int:
+    throws, sides = dicestring.split('d')
+    return sum([random.randint(1, int(sides)) for _ in range(int(throws))])
+
+
+def calculate_remaining_stats(ch: Core.Character) -> None:
+    ch.LivingPersonaAttack = Core.Attribute(
+            'Living Persona: Attack', value=ch.Charisma.value)
+    ch.LivingPersonaDataProcessing = Core.Attribute(
+            'Living Persona: Data Processing', value=ch.Logic.value)
+    if ch.Resonance is not None:
+        ch.LivingPersonaDeviceRating = Core.Attribute(
+                'Living Persona: Device Rating', value=ch.Resonance.value)
+    else:
+        ch.LivingPersonaDeviceRating = None
+    ch.LivingPersonaFirewall = Core.Attribute(
+            'Living Persona: Firewall', value=ch.Willpower.value)
+    ch.LivingPersonaSleaze = Core.Attribute(
+            'Living Persona: Sleaze', value=ch.Intuition.value)
+
+    ch.Initiative = ch.Intuition.value + ch.Reaction.value + roll_dice('1d6')
+    ch.InitiativeAstral = (ch.Intuition.value * 2) + roll_dice('3d6')
+    ch.InitiativeMatrixAR = ch.Intuition.value + ch.Reaction.value + roll_dice('1d6')
+    ch.InitiativeMatrixVRCold = (ch.LivingPersonaDataProcessing.value + ch.Intuition.value) + roll_dice('3d6')
+    ch.InitiativeMatrixVRHot = (ch.LivingPersonaDataProcessing.value + ch.Intuition.value) + roll_dice('4d6')
+
+    ch.LimitMental = round(((ch.Logic.value * 2) + ch.Intuition.value + ch.Willpower.value) / 3)
+    ch.LimitPhysical = round(((ch.Strength.value * 2) + ch.Body.value + ch.Essence.value) / 3)
+    ch.LimitSocial = round(((ch.Charisma.value * 2) + ch.Willpower.value + ch.Essence.value) / 3)
+
+    ch.ConditionalMonitorPhysical = round(ch.Body.value / 2) + 8
+    ch.ConditionalMonitorStun =  round(ch.Willpower.value / 2) + 8
+    ch.ConditionalMonitorOverflow = ch.Body.value
+
+
 def alt_generate_character():
+    out = []
     character = Core.Character()
     if not character:
         pass
@@ -557,11 +597,11 @@ def alt_generate_character():
         selected_items['MagicResonance'] = Core.PRIORITY_TABLE_FLIPPED[
             'MagicResonance']['E']
         table_choices.pop(table_choices.index('E'))
-    print(character_focus)
-    print(selected_items['MagicResonance'])
+    out.append(character_focus)
+    out.append(selected_items['MagicResonance'])
 
 
-def format_skills(character_skills, compact=False) -> None:
+def format_skills(out, character_skills, compact=False) -> None:
     """
         Print skills in different ways.
         First way is to group them by their group, then their rank (the latter
@@ -571,24 +611,24 @@ def format_skills(character_skills, compact=False) -> None:
     """
     output_by_group = {'Non-Grouped': {}}
 
-    def format_skills_specialisations(compact = False):
+    def format_skills_specialisations(out, compact = False):
         if compact:
-            print(f"===\nSPECIALISATIONS\n{[{character_skills[s].name: character_skills[s].spec} for s in character_skills.keys() if isinstance( character_skills[s].spec, str)]}")
+            out.append(f"===\nSPECIALISATIONS\n{[{character_skills[s].name: character_skills[s].spec} for s in character_skills.keys() if isinstance( character_skills[s].spec, str)]}")
             return
         spec_skills = [{character_skills[s].name: character_skills[s].spec} for
                        s in character_skills.keys() if isinstance(
                            character_skills[s].spec, str)]
         if len(spec_skills) == 0:
             return 
-        print("====")
-        print("SPECIALISATIONS")
+        out.append("====")
+        out.append("SPECIALISATIONS")
         for i in spec_skills:
             for k, d in i.items():
-                print(f'{d}   ({k})')
+                out.append(f'{d}   ({k})')
 
-    def format_skills_group_rating(compact=False):
-        print("====")
-        print("ACTIVE SKILLS")
+    def format_skills_group_rating(out, compact=False):
+        out.append("====")
+        out.append("ACTIVE SKILLS")
 
         non_grouped_skills = {}
         groups = {}
@@ -611,23 +651,23 @@ def format_skills(character_skills, compact=False) -> None:
                 non_grouped_skills[d.rating].append(skill_name_formatted)
 
         non_grouped_skills = OrderedDict(sorted(non_grouped_skills.items(), key=lambda t: t[0]))
-        print("--> Non-Grouped Skills")
+        out.append("--> Non-Grouped Skills")
         for rating in non_grouped_skills.keys():
             if rating == -1:
-                print(f'Unaware:', ", ".join(non_grouped_skills[rating]))
+               out.append(f'Unaware: {", ".join(non_grouped_skills[rating])}')
             else:
-                print(f'{rating}: ', ", ".join(non_grouped_skills[rating]))
+               out.append(f'{rating}: {", ".join(non_grouped_skills[rating])}')
 
         for group in groups.keys():
             if groups[group] < 0:
-                print(f"--> {group} Skill Group: Unaware")
+               out.append(f"--> {group} Skill Group: Unaware")
             else:
-                print(f"--> {group} Skill Group: {groups[group]}")
+               out.append(f"--> {group} Skill Group: {groups[group]}")
 
 
 
 
-    def format_skills_attribute():
+    def format_skills_attribute(out):
         output_by_attr = {
             'Body': None, 'Agility': None, 'Strength': None, 'Reaction': None,
             'Logic': None, 'Willpower': None, 'Intuition': None,
@@ -644,41 +684,42 @@ def format_skills(character_skills, compact=False) -> None:
         output_by_attr = {attr: [s for s in character_skills.keys() if
                           character_skills[s].attribute.name == attr] for
                           attr in character_skill_attributes}
-        print("===")
-        print("    by Attribute:")
-        print("===")
+        out.append("===")
+        out.append("    by Attribute:")
+        out.append("===")
         sorted(output_by_attr)
 
         for attr in output_by_attr.keys():
-            print(f'---> {attr}')
-            print(", ".join(
+            out.append(f'---> {attr}')
+            out_list = (", ".join(
                [f'{skill} ({character_skills[skill].rating})' for
                 skill in output_by_attr[attr]]))
+            out.append(out_list)
 
-    format_skills_group_rating()
-    format_skills_specialisations()
+    format_skills_group_rating(out)
+    format_skills_specialisations(out)
     return
 
 
-def format_qualities(ch: Core.Character, compact=False) -> None:
+def format_qualities(out, ch: Core.Character, compact=False) -> None:
     qual = ch.Qualities
     good_quals = ", ".join([i for i in qual.keys() if not hasattr(qual[i], 'negative')])
     bad_quals = ", ".join([i for i in qual.keys() if hasattr(qual[i], 'negative')])
-    print("====")
-    print('QUALITIES:')
+    out.append("====")
+    out.append('QUALITIES:')
     if compact:
         if len(good_quals) > 0:
-            print('--->  Positive:', [i for i in good_quals])
+            out.append(f'--->  Positive: {[i for i in good_quals]}')
         if len(bad_quals) > 0:
-            print('--->  Negative:', [i for i in bad_quals])
+            out.append(f'--->  Negative: {[i for i in bad_quals]}')
         return
     if len(good_quals) > 0:
-        print('--->  Positive:\n', good_quals)
+        out.append(f'--->  Positive:\n {good_quals}')
     if len(bad_quals) > 0:
-        print('--->  Negative:\n', bad_quals)
+        out.append(f'--->  Negative:\n {bad_quals}')
 
 
-def format_attributes(ch: Core.Character, compact=False) -> None:
+def format_attributes(out, ch: Core.Character, compact=False) -> None:
     attr = ch.AttributesCore
     apv = {} # apv == attr_print_values
     for attr in ch.AttributesPhysical:
@@ -699,131 +740,226 @@ def format_attributes(ch: Core.Character, compact=False) -> None:
         else:
             spaces = " ".join(["" for i in range(11-len(attr.name))])
             apv[attr.name] = f"{attr.name}{spaces}{attr.value} "
-    print("====")
-    print("ATTRIBUTES:")
+    out.append("====")
+    out.append("ATTRIBUTES:")
     if compact:
         if ch.Magic is not None:
-            print(apv['Body'], apv['Agility'], apv["Reaction"],
-                  apv['Strength'], apv['Willpower'], apv['Logic'],
-                  apv['Intuition'], apv['Charisma'], apv['Edge'],
-                  apv['Essence'], apv['Magic'])
+            out.append(f"{apv['Body']}, {apv['Agility']}, {apv['Reaction']}, {apv['Strength']}, {apv['Willpower']}, {apv['Logic']}, {apv['Intuition']}, {apv['Charisma']}, {apv['Edge']}, {apv['Essence']}, {apv['Magic']}")
         elif ch.Resonance is not None:
-            print(apv['Body'], apv['Agility'], apv["Reaction"], 
-                  apv['Strength'], apv['Willpower'], apv['Logic'],
-                  apv['Intuition'], apv['Charisma'], apv['Edge'], 
-                  apv['Essence'], apv['Resonance'])
+            out.append(f"{apv['Body']}, {apv['Agility']}, {apv['Reaction']}, {apv['Strength']}, {apv['Willpower']}, {apv['Logic']}, {apv['Intuition']}, {apv['Charisma']}, {apv['Edge']}, {apv['Essence']}, {apv['Resonance']}")
         else:
-            print(apv['Body'], apv['Agility'], apv["Reaction"], 
-                  apv['Strength'], apv['Willpower'], apv['Logic'],
-                  apv['Intuition'], apv['Charisma'], apv['Edge'], 
-                  apv['Essence'])
+            out.append(f"{apv['Body']}, {apv['Agility']}, {apv['Reaction']}, {apv['Strength']}, {apv['Willpower']}, {apv['Logic']}, {apv['Intuition']}, {apv['Charisma']}, {apv['Edge']}, apv['Essence']")
         return
-    print(" Physical     | Mental       | Special ")
-    print("--------------|--------------|------------")
-    print("", apv['Body'], "|", apv['Willpower'], "|", apv["Edge"])
-    print("", apv['Agility'], "|", apv['Logic'], "|", apv["Essence"])
+    out.append(" Physical     | Mental       | Special ")
+    out.append("--------------|--------------|------------")
+    out.append(f" {apv['Body']} | {apv['Willpower']} | {apv['Edge']}")
+    out.append(f" {apv['Agility']} | {apv['Logic']} | {apv['Essence']}")
     if ch.Magic is not None:
-        print("", apv['Reaction'], "|", apv['Intuition'], "|", apv["Magic"])
+        out.append(f" {apv['Reaction']} | {apv['Intuition']} | {apv['Magic']}")
     elif ch.Resonance is not None:
-        print("", apv['Reaction'], "|", apv['Intuition'], "|", apv["Resonance"])
+        out.append(f" {apv['Reaction']} | {apv['Intuition']} | {apv['Resonance']}")
     else:
-        print("", apv['Reaction'], "|", apv['Intuition'], "|")
-    print("", apv['Strength'], "|", apv['Charisma'], "|")
+        out.append(f" {apv['Reaction']} | {apv['Intuition']} | ")
+    out.append(f" {apv['Strength']} | {apv['Charisma']} | ")
 
 
-def format_table(list_name, l: list, compact=False):
-    print(f"===\n{list_name}")
+def format_table(out, list_name, l: list, compact=False):
+    out.append(f"===\n{list_name}")
     if compact:
-        print([i for i in l])
+        out.append([i for i in l])
         return
     l = [i.__repr__() for i in l]
     longest_item = 0
     for i in l:
         if len(i) > longest_item:
             longest_item = len(i)
-    print("".join(["-" for _ in range(2*longest_item+1)]))
+    out.append("".join(["-" for _ in range(2*longest_item+1)]))
     spaces = lambda x: " ".join(["" for i in range((longest_item+1)-len(x))])
     for i in range(len(l)):
         if i % 2 == 0:
             try:
-                print("", f"{l[i]}{spaces(l[i])}", "|", f"{l[i+1]}{spaces(l[i+1])}")
+                out.append(f" {l[i]}{spaces(l[i])}  |  {l[i+1]}{spaces(l[i+1])}")
             except IndexError:
-                print("", f"{l[i]}{spaces(l[i])}", "|")
+                out.append(f" {l[i]}{spaces(l[i])}  |")
         else:
             pass
 
 
-def format_gear(ch: Core.Character, item_compact=True, compact=False):
+def format_gear(out, ch: Core.Character, item_compact=True, compact=False):
     if compact:
-        print(f"===\nGEAR\n{[(type(i), i.name) for i in ch.Gear]}")
+        out.append(f"===\nGEAR\n{[(type(i), i.name) for i in ch.Gear]}")
         return
     gear_licenses = []
-    print("===\nGEAR")
+    out.append("===\nGEAR")
     for item in ch.Gear:
         if "Fake License" in item.name:
             gear_licenses.append(item)
         else:
-            Item.item_format(item, compact=item_compact)
+            out = Item.item_format(out, item, compact=item_compact)
     if len(gear_licenses) > 0:
-        print(f"Fake licenses: {[i.name.split('Fake License (')[1][:-1] for i in gear_licenses if i.name != 'Fake License (None)']}")
+        out.append(f"Fake licenses: {[i.name.split('Fake License (')[1][:-1] for i in gear_licenses if i.name != 'Fake License (None)']}")
 
 
-def format_contacts(ch: Core.Character, compact=True):
-    print("===\nCONTACTS")
+def format_contacts(out, ch: Core.Character, compact=True):
+    out.append("===\nCONTACTS")
     if len(ch.Contacts.keys()) > 0:
         if compact:
             for i in ch.Contacts:
                 x = ch.Contacts[i]
                 y = ch.Contacts[i]['Contact']
-                print(y.name, "Connection:", x['Connection'], "Loyalty:", x['Loyalty'])
+                out.append(f'{y.name}  Connection: {x["Connection"]} Loyalty: {x["Loyalty"]}')
         else:
             raise NotImplemented
     else:
-        print("NONE")
+        out.append("NONE")
 
 
-def print_shit(ch: Core.Character, nuyen, karma_log, attr_format=True, compact=False):
-    print('Metatype  : ', ch.Metatype.name)
+def format_other_stats(out, ch: Core.Character) -> None:
+    out.append(f"--- Initiative")
+    def char_length_formatter(attr):
+        if attr < 10:
+                return f"0{attr}"
+        else:
+            return attr
+    ch.Initiative = char_length_formatter(ch.Initiative)
+    ch.InitiativeAstral = char_length_formatter(ch.InitiativeAstral)
+    if ch.InitiativeMatrixAR < 10:
+        ch.InitiativeMatrixAR = f"0{ch.InitiativeMatrixAR}"
+    if ch.InitiativeMatrixVRHot < 10:
+        ch.InitiativeMatrixVRHot = f"0{ch.InitiativeMatrixVRHot}"
+    if ch.InitiativeMatrixVRCold < 10:
+        ch.InitiativeMatrixVRCold = f"0{ch.InitiativeMatrixVRCold}"
+    if ch.ConditionalMonitorPhysical < 10:
+        ch.ConditionalMonitorPhysical= f"0{ch.ConditionalMonitorPhysical}"
+    if ch.ConditionalMonitorStun < 10:
+        ch.ConditionalMonitorStun = f"0{ch.ConditionalMonitorStun}"
+    if ch.ConditionalMonitorOverflow< 10:
+        ch.ConditionalMonitorOverflow = f"0{ch.ConditionalMonitorOverflow}"
+    out.append(f" {ch.Initiative}: Initiative")
+    out.append(f" {ch.InitiativeAstral}: Astral Initiative")
+    out.append(f" {ch.InitiativeMatrixAR}: Matirx Initiative (AR)")
+    out.append(f" {ch.InitiativeMatrixVRHot}: Matirx Initiative (VR Hot)")
+    out.append(f" {ch.InitiativeMatrixVRCold}: Matirx Initiative (VR Cold)")
+    out.append(f"---------------------|-----------------------")
+    out.append(f" Inherent Limits     | Condittion Monitor ")
+    out.append(f"---------------------|-----------------------")
+    out.append(f"   Mental Limit: {ch.LimitMental}   | {ch.ConditionalMonitorPhysical} Physical Condition Monitor:")
+    out.append(f" Physical Limit: {ch.LimitPhysical}   | {ch.ConditionalMonitorStun} Stun Condition Monitor")
+    out.append(f"   Social Limit: {ch.LimitSocial}   |  {ch.ConditionalMonitorOverflow} Overflow Condition Monitor:")
+
+
+
+
+def print_shit(out, ch: Core.Character, nuyen, karma_log, attr_format=True, compact=False):
+    out.append(f'Metatype  : {ch.Metatype.name}')
     if attr_format:
-        format_attributes(ch, compact)
+        format_attributes(out, ch, compact)
     else:
-        print('Attributes: ')
-        print('  Physical: ', ch.AttributesPhysical)
-        print('    Mental: ', ch.AttributesMental)
-        print('   Special: ', [i for i in ch.AttributesSpecial if i is not None])
-    format_qualities(ch)
+        out.append('Attributes:out,  ')
+        out.append(f'  Physical: {ch.AttributesPhysical}')
+        out.append(f'    Mental: {ch.AttributesMental}')
+        out.append(f'   Special: {[i for i in ch.AttributesSpecial if i is not None]}')
+    format_qualities(out, ch)
     if ch.MagicResoUser is not None and ch.MagicResoUser != 'Technomancer':
-        print('Awakened:', ch.MagicResoUser)
+        out.append(f'Awakened: {ch.MagicResoUser}')
     if ch.Spells is not None:
-        format_table("SPELLS", ch.Spells, compact)
+        format_table(out, "SPELLS", ch.Spells, compact)
     if ch.AdeptPowers is not None:
-        format_table("ADEPT POWERS", ch.AdeptPowers, compact)
+        format_table(out, "ADEPT POWERS", ch.AdeptPowers, compact)
     if ch.ComplexForms is not None:
-        format_table("COMPLEX FORMS", ch.ComplexForms, compact)
-        print(0)
-    # print("character karma is ", ch.Karma)
-    # print(nuyen)
-    # print('Karma logs:')
+        format_table(out, "COMPLEX FORMS", ch.ComplexForms, compact)
+    #out.append("character karma is ", ch.Karma)
+    #out.append(nuyen)
+    #out.append('Karma logs:')
     # if KARMA_LOG:
-    #    print(karma_log)
-    format_skills(ch.Skills, compact)
-    format_gear(ch, compact=False)
-    format_contacts(ch)
-    print("===\nOTHER STATS:")
-    print(f'Armor Rating: {ch.Armor}')
-    print("===\nNUYEN: ")
-    print(ch.Nuyen)
+    #   out.append(karma_log)
+    format_skills(out, ch.Skills, compact)
+    format_gear(out, ch, compact=False)
+    format_contacts(out, ch)
+    out.append("===\nOTHER STATS:")
+    out.append(f'Armor Rating: {ch.Armor}')
+    format_other_stats(out, ch)
+    out.append("===\nNUYEN: ")
+    out.append(ch.Nuyen)
+    return out
 
 if __name__ == "__main__":
-    # Kills process if charater generation takes too long
-    # In like 1% of cases the program hangs, this is to temporarily tackle that
-    #   before I find and fix the issue
-    x, nuyen, karma_log = generate_character()
-    print_shit(x, nuyen, karma_log, compact=False)
-    # p = multiprocessing.Process(target=generate_character)
-    # p.start()
-    # p.join(5)
-    # if p.is_alive():
-    #     print("running too long, killing process")
-    #     p.terminate()
-    #    p.join()
+    import sys, time
+    def quick_exec(filename):
+        out, x, nuyen, karma_log = generate_character()
+        out = print_shit(out, x, nuyen, karma_log, compact=False)
+        with open(filename, "wt") as f:
+            for line in out:
+                f.write(f"{line}\n")
+        f.close()
+
+    def quick_exec_print():
+        out, x, nuyen, karma_log = generate_character()
+        out = print_shit(out, x, nuyen, karma_log, compact=False)
+        for i in out:
+            print(i)
+
+
+    def main_routine(filename):
+        print("\n")
+        print(" ^-~*~-* WELCOME TO THE SHADOWRUN 5TH EDITION *-~*~-^ ")
+        print(" ^-~*~.~*~-^  RANDOM CHARACTER GENERATOR  ^-~*~.~*~-^ ")
+        print("")
+        time.sleep(1)
+        print("    ######## THIS TOOL IS INCOMPLETE ########    ")
+        time.sleep(1)
+        i = input("!!!== Press {Enter} to Begin Character Generation ==!!!")
+        if i in ["", "y", "Y"]:
+            print("--> Beginning Charcter Generation...")
+            time.sleep(2)
+            # Kills process if charater generation takes too long
+            # In like 1% of cases the program hangs, this is to temporarily tackle that
+            #   before I find and fix the issue
+            out, x, nuyen, karma_log = generate_character()
+            print("--> Charcter Generation Completed...")
+            time.sleep(2)
+            out = print_shit(out, x, nuyen, karma_log, compact=False)
+            print("--> Text Formatting Completed...\n")
+            print(f"--> Writing Character Data to {filename}...")
+            print("")
+            with open(filename, "wt") as f:
+                for line in out:
+                    f.write(f"{line}\n")
+            f.close()
+            time.sleep(2)
+            print(f"--> Written Character to {filename}!")
+            print("")
+            print(" <.*~-*.> TOOL MADE BY github.com/itwasall <.*-~*.> ")
+            # p = multiprocessing.Process(target=generate_character)
+            # p.start()
+            # p.join(5)
+            # if p.is_alive():
+            #    out.append("running too long, killing process")
+            #     p.terminate()
+            #    p.join()
+        elif i in ["q", "Q", "n", "N", "exit", "no", "No", "NO"]:
+            print(" _*~^~*~^~*:  Today's not the day choomer :*~^~*~^~*_ ")
+            print(" <.*~-*.> TOOL MADE BY github.com/itwasall <.*-~*.> ")
+    def argument_parse():
+        if sys.argv[1] in ['-h', '--help'] or len(sys.argv) <= 1:
+            print("char_shadowrun_5e.py\n    USAGE: python3 char_shadowrun_5e.py [options] -f [filename]")
+            print("        OPTIONS:")
+            print("                 -q --quick: Skips all my cool ascii text I whipped up and writes to file as quickly as possible")
+            print("                 -p --print: Prints all data to console. If no -f --filename argument is provided, nothing is written to disk")
+            return
+        elif '--print' in sys.argv or '-p' in sys.argv:
+            if '-f' not in sys.argv:
+                quick_exec_print()
+                return
+            else:
+                quick_exec(sys.argv[sys.argv.index('-f') + 1])
+                return
+        if '-f' not in sys.argv:
+            raise IndexError("Please give a filename with the '-f' argument!")
+        if '-q' in sys.argv or '--quick' in sys.argv:
+            quick_exec(sys.argv[sys.argv.index('-f') + 1])
+        main_routine(sys.argv[sys.argv.index('-f') + 1])
+
+    argument_parse()
+
+

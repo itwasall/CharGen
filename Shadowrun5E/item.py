@@ -715,24 +715,25 @@ def list_handler(l: list, item, arg=-1, **kwargs):
                 return r1 * l[2]
 
 
-def item_format(item: Core.Gear=None, compact=False):
+def item_format(out, item: Core.Gear=None, compact=False):
     if item.__class__ == Core.Attribute:
         software = item.programs
         name = item.name
         attributes   = f' {item.attack} | {item.data_processing.value} {item.data_processing.name}'
         attributes_2 = f' {item.sleaze} | {item.firewall.value} {item.firewall.name}'
         if not compact:
-            print("--- Cyberdeck ---")
-            print(name)
-            print("--> Attributes    ")
-            print(attributes)
-            print(attributes_2)
-            print("--> Software")
-            print(", ".join([i.name for i in software]))
+            out.append("--- Cyberdeck ---")
+            out.append(name)
+            out.append("--> Attributes    ")
+            out.append(attributes)
+            out.append(attributes_2)
+            out.append("--> Software")
+            out.append(f'{", ".join([i.name for i in software])}')
         else:
-            print(f"> Cyberdeck: {item.name} A: {item.attack.value}, S: {item.sleaze.value}, DP: {item.data_processing.value}, F: {item.firewall.value}")
+            out.append(f"> Cyberdeck: {item.name} A: {item.attack.value}, S: {item.sleaze.value}, DP: {item.data_processing.value}, F: {item.firewall.value}")
     else:
-        print(item)
+        out.append(item)
+    return out
 
 
 if __name__ == "__main__":

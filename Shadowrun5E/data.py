@@ -99,8 +99,16 @@ class Character:
         self.Edge = None
         self.Magic = None
         self.Resonance = None
+        self.LivingPersonaAttack = None
+        self.LivingPersonaDataProcessing = None
+        self.LivingPersonaDeviceRating = None
+        self.LivingPersonaFirewall = None
+        self.LivingPersonaSleaze = None
+        self.ReputationNotoriety = None
         self.Initiative = None
         self.InitiativeMatrix = None
+        self.InitiativeMatrixVRCold = None
+        self.InitiativeMatrixVRHot = None
         self.InitiativeAstral = None
         self.Composure = None
         self.JudgeIntentions = None
@@ -128,13 +136,17 @@ class Character:
         self.Nuyen = None
         self.Licences = None
         self.Other = None
+        # Conditional Monitor 
+        self.ConditionalMonitorPhysical = None
+        self.ConditionalMonitorStun = None
+        self.ConditionalMonitorOverflow = None
+
         # Core Combat Info
         self.PhysicalArmor = None
         self.WeaponPrimaryRanged = None
         self.WeaponPrimaryMelee = None
         self.DmgTrackPhysical = None
         self.DmgTrackStun = None
-        self.Overflow = None
         # Qualities
         self.Qualities = None
         # Contacts
