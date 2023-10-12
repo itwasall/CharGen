@@ -3187,7 +3187,7 @@ SURVIVAL_BLADE = Armor("Survival_blade", page_ref="R&G, 210", cost=["Rating", "*
 # MagicItem Cost Avail Legality Skill MaterialCost
 AGHEXHEX = MagicItem("Aghexhex", cost=["Force", "*", 500], avail=8, page_ref='SG, 218', rulebook="Street Grimoire")
 AQUA_FICTUS = MagicItem("Aqua_fictus", cost=1000, avail=8, skill=ALCHEMY, material_cost=850, page_ref='SG, 218', rulebook="Street Grimoire")
-AQUA_FORTIS = MagicItem("Aqua_fortis", cost=50, avail=4, skill=ALCHEMYY, material_cost=43, page_ref='SG, 218', rulebook="Street Grimoire")
+AQUA_FORTIS = MagicItem("Aqua_fortis", cost=50, avail=4, skill=ALCHEMY, material_cost=44, page_ref='SG, 218', rulebook="Street Grimoire")
 AQUA_REGIA = MagicItem("Aqua_regia", cost=100, avail=5, skill=ALCHEMY, material_cost=85, page_ref='SG, 218', rulebook="Street Grimoire")
 AQUA_VITAE = MagicItem("Aqua_vitae", cost=15, avail=1, skill=ALCHEMY, material_cost=13, page_ref='SG, 218', rulebook="Street Grimoire")
 AQUA_POWDER = MagicItem("Aqua_powder", cost=120, avail=4, skill=ALCHEMY, material_cost=70, page_ref='SG, 218', rulebook="Street Grimoire")
