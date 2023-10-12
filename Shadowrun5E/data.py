@@ -157,12 +157,12 @@ class Character:
         self.Armor = 0
         self.Cyberdeck = None
         self.Augmentations = {
-            'Head': None,s     'Ears': None,
-            'Eyes': None,s     'Body': None,
-            'Hand': None,s     'Foot': None,
-            'Lower Arm': None,s'Lower Leg': None,
-            'Full Arm': None,s 'Full Leg': None,
-            'Finger': None,s   'Toe': None
+            'Head': None, 'Ears': None,
+            'Eyes': None, 'Body': None,
+            'Hand': None, 'Foot': None,
+            'Lower Arm': None, 'Lower Leg': None,
+            'Full Arm': None, 'Full Leg': None,
+            'Finger': None, 'Toe': None
         }
         self.Vehicle = None
         self.Spells = None
@@ -3126,7 +3126,7 @@ SECURITY_ARMOR_HEAVY = Armor("Security_armor_heavy", page_ref='R&G, 210', cost=2
 SECURITY_ARMOR_HELMET = Armor("Security_armor_helmet", page_ref='R&G, 210', cost=5000, avail=8, legality=R, armor_rating=3, bonus="+", rulebook="Run & Gun")
 SWAT_ARMOR = Armor("Swat_armor", page_ref='R&G, 210', cost=8000, avail=16, legality=R, armor_rating=15, rulebook="Run & Gun")
 SWAT_ARMOR_HELMET = Armor("Swat_armor_helmet", page_ref='R&G, 210', cost=1500, avail=10, legality=R, armor_rating=3, bonus="+", rulebook="Run & Gun")
-ACE_OF_CLUBS = Armor("Ace_of_clubs", page_ref='R&G, 210',scost=1000, avail=6, armor_rating=7, rulebook="Run & Gun")
+ACE_OF_CLUBS = Armor("Ace_of_clubs", page_ref='R&G, 211', scost=1000, avail=6, armor_rating=7, rulebook="Run & Gun")
 ACE_OF_COINS = Armor("Ace_of_coins", page_ref='R&G, 210', cost=2100, avail=4, armor_rating=7, rulebook="Run & Gun")
 ACE_OF_CUPS = Armor("Ace_of_cups", page_ref='R&G, 210', cost=1600, avail=6, armor_rating=9, rulebook="Run & Gun")
 ACE_OF_DIAMONDS = Armor("Ace_of_diamonds", page_ref='R&G, 210', cost=1400, avail=8, armor_rating=8, rulebook="Run & Gun")
