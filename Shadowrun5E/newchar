@@ -1,0 +1,68 @@
+Metatype  : Human
+====
+ATTRIBUTES:
+ Physical     | Mental       | Special 
+--------------|--------------|------------
+ Body      3  | Willpower 4  | Edge      3 
+ Agility   4  | Logic     3  | Essence   6 
+ Reaction  1  | Intuition 2  | Magic     6 
+ Strength  1  | Charisma  2  | 
+====
+QUALITIES:
+--->  Positive:
+ Blandess, Exceptional Attribute, Will to Live
+--->  Negative:
+ Incompetent, Severe Allergy (Grass)
+Awakened: Magician
+===
+SPELLS
+-----------------------------------
+ Animate            |  Radiation_burst  
+ Slay_elf           |  CRANK            
+ Detect individual  |  Punch            
+ Chaotic World      |
+====
+ACTIVE SKILLS
+--> Non-Grouped Skills
+Unaware: Cybertechnology
+1: Escape Artist, Blades, Locksmith, Artisan, Cybercombat
+2: Summoning, Academic Knowledge
+3: Archery, Exotic Melee Weapon
+4: Automatics
+6: Exotic Ranged Weapon
+--> Biotech Skill Group: Unaware
+===
+GEAR
+[Electronics/Identification] Fake SIN(p.443)
+[Electronics/Commlink] Sony Emporer(p.439)
+[Electronics/Commlink] Sim Module Hot Sim(p.439)
+[Electronics/Commlink_] Sim Module(p.439)
+(Clothing) Clothing (p. 436)
+[Firearm/Machine Pistol] Steyr TMP /w Bipod(p.427)
+[ProjectileWeapon/Crossbow] Heavy Crossbow(p.421)
+[Melee Weapon/Blade] Katana(p.421)
+Fake licenses: []
+===
+CONTACTS
+Cybernetic Technician  Connection: 4 Loyalty: 2
+===
+OTHER STATS:
+Armor Rating: 0
+---------------------------------------------
+    Initiative
+---------------------------------------------
+       Initiative   | 5
+        Matrix AR   | 5
+  Matrix VR (Hot)   | 19
+ Matrix VR (Cold)   | 12
+           Astral   | 13
+
+------------------------------------------
+ Inherent  Limits   | Condition Monitor 
+--------------------|---------------------
+    Mental Limit: 4 | Physical: 10
+  Physical Limit: 4 |     Stun: 10
+    Social Limit: 5 | Overflow: 3
+===
+NUYEN: 
+6100

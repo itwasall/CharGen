@@ -954,7 +954,8 @@ if __name__ == "__main__":
             print("char_shadowrun_5e.py\n    USAGE: python3 char_shadowrun_5e.py [options] -f [filename]")
             print("        OPTIONS:")
             print("                 -q --quick: Skips all my cool ascii text I whipped up and writes to file as quickly as possible")
-            print("                 -p --print: Prints all data to console. If no -f --filename argument is provided, nothing is written to disk")
+            print("                 -p --print: Prints all data to console. \n\
+                             If no -f --filename argument is provided, nothing is written to disk")
             return
         elif '--print' in sys.argv or '-p' in sys.argv:
             if '-f' not in sys.argv:
@@ -963,7 +964,7 @@ if __name__ == "__main__":
             else:
                 quick_exec(sys.argv[sys.argv.index('-f') + 1])
                 return
-        if '-f' not in sys.argv:
+        if '-f' not in sys.argv and '--filename' not in sys.argv:
             raise IndexError("Please give a filename with the '-f' argument!")
         if '-q' in sys.argv or '--quick' in sys.argv:
             quick_exec(sys.argv[sys.argv.index('-f') + 1])
