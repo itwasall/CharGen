@@ -908,35 +908,34 @@ if __name__ == "__main__":
 
 
     def main_routine(filename):
-        print("\n")
-        print(" ^-~*~-* WELCOME TO THE SHADOWRUN 5TH EDITION *-~*~-^ ")
-        print(" ^-~*~.~*~-^  RANDOM CHARACTER GENERATOR  ^-~*~.~*~-^ ")
-        print("")
-        time.sleep(1)
-        print("    ######## THIS TOOL IS INCOMPLETE ########    ")
-        time.sleep(1)
-        i = input("!!!== Press {Enter} to Begin Character Generation ==!!!")
+        print("--------------------------------------------------------")
+        print("| ^-~*~-* WELCOME TO THE SHADOWRUN 5TH EDITION *-~*~-^ |")
+        print("| ^-~*~-*    RANDOM CHARACTER GENERATOR        *-~*~-^ |")
+        print("|                                                      |")
+        print("| ^-~*~-*      THIS TOOL IS NOT FINISHED       *-~*~-^ |")
+        print("|     Press Enter to Begin Character Generation        |")
+        i = input("--------------------------------------------------------")
         if i in ["", "y", "Y"]:
-            print("--> Beginning Charcter Generation...")
-            time.sleep(2)
+            print("--> Beginning Charcter Generation...                 ")
+            time.sleep(1)
             # Kills process if charater generation takes too long
             # In like 1% of cases the program hangs, this is to temporarily tackle that
             #   before I find and fix the issue
             out, x, nuyen, karma_log = generate_character()
-            print("--> Charcter Generation Completed...")
-            time.sleep(2)
+            print("--> Charcter Generation Completed...                 ")
             out = print_shit(out, x, nuyen, karma_log, compact=False)
-            print("--> Text Formatting Completed...\n")
-            print(f"--> Writing Character Data to {filename}...")
+            print("--> Text Formatting Completed...                     ")
+            print(f"--> Writing Character Data to {filename}...          ")
             print("")
             with open(filename, "wt") as f:
                 for line in out:
                     f.write(f"{line}\n")
             f.close()
-            time.sleep(2)
-            print(f"--> Written Character to {filename}!")
+            print(f"--> Written Character to {filename}!                 ")
+            print("--------------------------------------------------------")
+            print("| ^-~*~-*   TOOL MADE BY github.com/itwasall   *-~*~-^ |")
+            print("--------------------------------------------------------")
             print("")
-            print(" <.*~-*.> TOOL MADE BY github.com/itwasall <.*-~*.> ")
             # p = multiprocessing.Process(target=generate_character)
             # p.start()
             # p.join(5)
@@ -945,8 +944,10 @@ if __name__ == "__main__":
             #     p.terminate()
             #    p.join()
         elif i in ["q", "Q", "n", "N", "exit", "no", "No", "NO"]:
-            print(" _*~^~*~^~*:  Today's not the day choomer :*~^~*~^~*_ ")
-            print(" <.*~-*.> TOOL MADE BY github.com/itwasall <.*-~*.> ")
+            print("| ^-~*~-*      Today's not the day choomer     *-~*~-^ |")
+            print("| ^-~*~-*   TOOL MADE BY github.com/itwasall   *-~*~-^ |")
+            print("--------------------------------------------------------")
+            print("")
 
 
     def argument_parse():
